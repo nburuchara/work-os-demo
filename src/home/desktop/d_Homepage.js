@@ -1,10 +1,11 @@
 import React,{Component} from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
+import Popup from './d_Env_Selection_Popup'
 
 const Styles = styled.div `
     
-        // - - - - - - FULL PAGE - - - - - - //
+        // - - - - - -  FULL PAGE - - - - - - //
 
 .fullPage {
     width: 100%;
@@ -34,7 +35,7 @@ const Styles = styled.div `
     width: 83.75%;
 }
 
-        // - - - LEFT PANE - - - //
+        // - - - -  LEFT PANE - - - //
 
     // - HEADER - //
 
@@ -43,6 +44,7 @@ const Styles = styled.div `
     margin-left: 10%;
     font-family: Poppins;
     font-size: 90%;
+    margin-bottom: 5%;
 }
 
 .leftPaneHeader img {
@@ -56,13 +58,71 @@ const Styles = styled.div `
     // - ENVIRONMENT SELECTION DROPDOWN - //
 
 .envSelectDropdown {
-    
+    padding: 2%;
+    margin-left: 9%;
+    margin-right: 9%;
+    background-color: #fefefe;
+    border: 0.85px solid #909397;
+    border-radius: 6px;
 }
 
 .envSelectDropdownElements:after {
     content: "";
     clear: both;
     display: table;
+}
+
+.envSelectDropdownIcon {
+    float: left;
+    text-align: center;
+    width: 12%;
+}
+
+.envSelectDropdownTitle {
+    float: left;
+    text-align: left;
+    width: 73%;
+}
+
+.envSelectDropdownClicker {
+    float: left;
+    text-align: center;
+    width: 15%;
+}
+
+    // # SELCTION ICON # 
+
+.envSelectDropdownIcon img {
+    margin-top: 12.5%;
+    width: 80%;
+}
+
+    // # TITLE # 
+
+.envSelectDropdownTitle p {
+    margin-top: 3%;
+    margin-bottom: 0px;
+    margin-left: 4%;
+    font-size: 85%;
+    font-family: rubik;
+    font-weight: bold;
+}
+
+    // # DROPDOWN CLICKER ICON #
+
+.envSelectDropdownClicker img {
+    margin-top: 18%;
+    width: 50%;
+    margin-left: 2.5%;
+    cursor: pointer;
+}
+
+.envSelectDropdownClickerIcon {
+    transition: transform 0.3s ease; /* Add transition for transform property */
+}
+
+.envSelectDropdownClickerRotated {
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees */
 }
 
 
@@ -74,12 +134,13 @@ export default class DesktopHome extends Component {
         this.state = {
                 //* - - LEFT PANE HEADER - - *//
             leftPaneSettingsIconHovered: false,
-            leftPaneSettingsIcon: "/assets/left_pane_setting.png"
+            leftPaneSettingsIcon: "/assets/left_pane_setting.png",
+            envSelectDropdownClickerIcon: false,
         }
     }
 
     renderDesktopView = () => {
-        const { leftPaneSettingsIcon, leftPaneSettingsIconHovered } = this.state;
+        const { leftPaneSettingsIcon, leftPaneSettingsIconHovered, envSelectDropdownClickerIcon } = this.state;
         return(
             <div className='fullPage'>
                 <div className='pageSetup'>
@@ -99,13 +160,22 @@ export default class DesktopHome extends Component {
                         <div className='envSelectDropdown'>
                             <div className='envSelectDropdownElements'>
                                 <div className='envSelectDropdownIcon'>
-
+                                    <img src='/assets/staging_icon.png'/>
                                 </div>
                                 <div className='envSelectDropdownTitle'>
-
+                                    <p>Staging</p>
+                                </div>
+                                <div className='envSelectDropdownClicker'>
+                                    <img 
+                                    className={envSelectDropdownClickerIcon ? 'envSelectDropdownClickerIcon envSelectDropdownClickerRotated' : 'envSelectDropdownClickerIcon'}
+                                    src='/assets/env_select_dropdown.png'
+                                    alt='img not available'
+                                    onClick={this.envSelectDropdownClickerClicked}
+                                    />
                                 </div>
                             </div>
                         </div>
+                        <Popup/>
                     </div>
 
                     {/* - - RIGHT SIDE PANE  */}
@@ -127,6 +197,13 @@ export default class DesktopHome extends Component {
     leftPaneSettingsIconLeave = () => {
         this.setState({ leftPaneSettingsIconHovered: false, leftPaneSettingsIcon: '/assets/left_pane_setting.png' });
     };
+
+    envSelectDropdownClickerClicked = () => {
+        this.setState(prevState => ({
+            envSelectDropdownClickerIcon: !prevState.envSelectDropdownClickerIcon,
+            // showWork: !prevState.showWork
+        }));
+    }
 
     renderLargerDesktopView = () => {
 
