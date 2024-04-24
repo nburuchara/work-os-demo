@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 import Popup from './d_Env_Selection_Popup'
 import { CSSTransition } from 'react-transition-group';
+import Sidepane from './d_Menu_Sidepane';
 
 const Styles = styled.div `
     
@@ -126,59 +127,6 @@ const Styles = styled.div `
     transform: rotate(180deg); /* Rotate the arrow 180 degrees */
 }
 
-    // - MENU OPTIONS - //
-
-.menu-option-cell {
-    all: unset;
-    background-color: #E8E8EA;
-    margin-left: 10%;
-    width: 80%;
-    margin-top: 3%;
-    border-radius: 7px;
-    padding-left: 2%;
-}
-
-.menu-option {
-    margin-top: 5%;
-}
-
-.menu-option:after {
-    content: "";
-    clear: both;
-    display: after;
-}
-
-.menu-option-icon {
-    float: left;
-    text-align: right;
-    width: 8.5%;
-}
-
-.menu-option-title {
-    float: left;
-    text-align: left;
-    width: 91.5%;
-}
-
-    // # ICON
-
-.menu-option-icon img {
-    margin-top: 4%;
-    width: 14px;
-    height: 14px;
-}
-
-    // # TITLE
-
-.menu-option-title p {
-    margin-left: 5%;
-    margin-top: 0%;
-    margin-bottom: 6%;
-    font-family: rubik;
-    font-size: 90%;
-    font-weight: bold;
-}
-
 
 `
 
@@ -191,6 +139,7 @@ export default class DesktopHome extends Component {
             leftPaneSettingsIcon: "/assets/left_pane_setting.png",
             envSelectDropdownClickerOpen: false,
             envSelectDropdownVisible: false,
+
         }
     }
 
@@ -237,20 +186,9 @@ export default class DesktopHome extends Component {
                         </div>
                         <Popup isVisibleProp={envSelectDropdownVisible}/>
 
-                    {/* - - - -  SIDE PANE OPTIONS - - - */}
+                    {/* - - - - MENU SIDE PANE OPTIONS - - - */}
 
-                        <div className='menu-options'>
-                            <button className='menu-option-cell'>
-                                <div className='menu-option'>
-                                    <div className='menu-option-icon'>
-                                        <img src='/assets/overview_icon_color.png' alt='img not available'/>
-                                    </div>
-                                    <div className='menu-option-title'>
-                                        <p>Overview</p>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
+                    <Sidepane/>
 
                     </div>
 
