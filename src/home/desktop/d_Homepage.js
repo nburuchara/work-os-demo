@@ -126,6 +126,59 @@ const Styles = styled.div `
     transform: rotate(180deg); /* Rotate the arrow 180 degrees */
 }
 
+    // - MENU OPTIONS - //
+
+.menu-option-cell {
+    all: unset;
+    background-color: #E8E8EA;
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 3%;
+    border-radius: 7px;
+    padding-left: 2%;
+}
+
+.menu-option {
+    margin-top: 5%;
+}
+
+.menu-option:after {
+    content: "";
+    clear: both;
+    display: after;
+}
+
+.menu-option-icon {
+    float: left;
+    text-align: right;
+    width: 8.5%;
+}
+
+.menu-option-title {
+    float: left;
+    text-align: left;
+    width: 91.5%;
+}
+
+    // # ICON
+
+.menu-option-icon img {
+    margin-top: 4%;
+    width: 14px;
+    height: 14px;
+}
+
+    // # TITLE
+
+.menu-option-title p {
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 6%;
+    font-family: rubik;
+    font-size: 90%;
+    font-weight: bold;
+}
+
 
 `
 
@@ -147,7 +200,9 @@ export default class DesktopHome extends Component {
             <div className='fullPage'>
                 <div className='pageSetup'>
 
-                    {/* - - LEFt SIDE PANE  */}
+                        {/* - - - - - - LEFT SIDE PANE - - - - - - */}
+                        
+                    {/* - - - -  HEADER - - - */}
 
                     <div className='leftPane'>
                         <div style={{display: "flex", justifyContent: "space-between"}} className='leftPaneHeader'>
@@ -159,10 +214,13 @@ export default class DesktopHome extends Component {
                             alt='img not available'
                             />
                         </div>
+
+                    {/* - - - -  ENV. SELECT DROPDOWN - - - */}
+
                         <div className='envSelectDropdown'>
                             <div className='envSelectDropdownElements'>
                                 <div className='envSelectDropdownIcon'>
-                                    <img src='/assets/staging_icon.png'/>
+                                    <img src='/assets/staging_icon.png' alt='img not available'/>
                                 </div>
                                 <div className='envSelectDropdownTitle'>
                                     <p>Staging</p>
@@ -178,6 +236,22 @@ export default class DesktopHome extends Component {
                             </div>
                         </div>
                         <Popup isVisibleProp={envSelectDropdownVisible}/>
+
+                    {/* - - - -  SIDE PANE OPTIONS - - - */}
+
+                        <div className='menu-options'>
+                            <button className='menu-option-cell'>
+                                <div className='menu-option'>
+                                    <div className='menu-option-icon'>
+                                        <img src='/assets/overview_icon_color.png' alt='img not available'/>
+                                    </div>
+                                    <div className='menu-option-title'>
+                                        <p>Overview</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
                     </div>
 
                     {/* - - RIGHT SIDE PANE  */}

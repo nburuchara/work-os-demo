@@ -184,7 +184,7 @@ class Popup extends Component {
                     </div>
                     <div className='popup-option'>
                         <div className='popup-option-icon'>
-                            <img src='/assets/staging_icon.png'/>
+                            <img src='/assets/staging_icon.png' alt='img not available'/>
                         </div>
                         <div className='popup-option-desc'>
                             <p>Staging</p>
@@ -194,7 +194,7 @@ class Popup extends Component {
                     </div>
                     <div className='popup-option'>
                         <div className='popup-option-icon'>
-                            <img src='/assets/production_icon.png'/>
+                            <img src='/assets/production_icon.png' alt='img not available'/>
                         </div>
                         <div className='popup-option-desc'>
                             <p>Production</p>
@@ -206,7 +206,7 @@ class Popup extends Component {
                             <span style={{marginLeft: "2.5%", padding: '2%', paddingBottom: "3%"}} className='popup-option-desc-text'><label style={{paddingBottom: "2%"}}>Learn more about pricing</label></span> 
                         </div>
                         <div className='popup-footer-icon'>
-                            <img src='/assets/external_link_color.png'/>
+                            <img src='/assets/external_link_color.png' alt='img not available'/>
                         </div>
                     </div>
                 </div>
