@@ -22,11 +22,18 @@ export default class MobileHome extends Component {
     }
 
     render () {
+
+        const smallPhoneQuery = `(min-width: 320px) and (max-width: 413px)`
+        
         return (
             <Styles>
-                <div className='fullPage'>
 
-                </div>
+                 {/*  - - RENDER SMALL PHONE VIEW - - */}
+
+                 <MediaQuery query={smallPhoneQuery}>
+                    {this.renderSmallPhoneView()}
+                </MediaQuery>
+
             </Styles>
         )
     }

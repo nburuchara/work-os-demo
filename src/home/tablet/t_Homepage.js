@@ -22,11 +22,30 @@ export default class TabletHome extends Component {
     }
 
     render () {
+
+        const largestTabletMediaQuery = `(min-width: 981px) and (max-width: 1075px)`; 
+        const largeTabletMediaQuery = `(min-width: 886px) and (max-width: 980px)`; 
+        const tabletMediaQuery = `(min-width: 792px) and (max-width: 885px)`; 
+
         return (
             <Styles>
-                <div className='fullPage'>
 
-                </div>
+                {/*  - - RENDER TABLET VIEWS - - */}
+                
+                <MediaQuery query={tabletMediaQuery}>
+                    {this.renderTabletView()}
+                </MediaQuery>
+
+                
+                <MediaQuery query={largeTabletMediaQuery}>
+                    {this.renderLargeTabletView()}
+                </MediaQuery>
+
+                
+                <MediaQuery query={largestTabletMediaQuery}>
+                    {this.renderLargestTabletView()}
+                </MediaQuery>
+
             </Styles>
         )
     }
