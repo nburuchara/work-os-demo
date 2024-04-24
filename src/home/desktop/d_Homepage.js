@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 import Popup from './d_Env_Selection_Popup'
+import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div `
     
@@ -135,12 +136,13 @@ export default class DesktopHome extends Component {
                 //* - - LEFT PANE HEADER - - *//
             leftPaneSettingsIconHovered: false,
             leftPaneSettingsIcon: "/assets/left_pane_setting.png",
-            envSelectDropdownClickerIcon: false,
+            envSelectDropdownClickerOpen: false,
+            envSelectDropdownVisible: false,
         }
     }
 
     renderDesktopView = () => {
-        const { leftPaneSettingsIcon, leftPaneSettingsIconHovered, envSelectDropdownClickerIcon } = this.state;
+        const {leftPaneSettingsIconHovered, envSelectDropdownClickerOpen, envSelectDropdownVisible} = this.state;
         return(
             <div className='fullPage'>
                 <div className='pageSetup'>
@@ -167,7 +169,7 @@ export default class DesktopHome extends Component {
                                 </div>
                                 <div className='envSelectDropdownClicker'>
                                     <img 
-                                    className={envSelectDropdownClickerIcon ? 'envSelectDropdownClickerIcon envSelectDropdownClickerRotated' : 'envSelectDropdownClickerIcon'}
+                                    className={envSelectDropdownClickerOpen ? 'envSelectDropdownClickerIcon envSelectDropdownClickerRotated' : 'envSelectDropdownClickerIcon'}
                                     src='/assets/env_select_dropdown.png'
                                     alt='img not available'
                                     onClick={this.envSelectDropdownClickerClicked}
@@ -175,7 +177,7 @@ export default class DesktopHome extends Component {
                                 </div>
                             </div>
                         </div>
-                        <Popup/>
+                        <Popup isVisibleProp={envSelectDropdownVisible}/>
                     </div>
 
                     {/* - - RIGHT SIDE PANE  */}
@@ -200,8 +202,8 @@ export default class DesktopHome extends Component {
 
     envSelectDropdownClickerClicked = () => {
         this.setState(prevState => ({
-            envSelectDropdownClickerIcon: !prevState.envSelectDropdownClickerIcon,
-            // showWork: !prevState.showWork
+            envSelectDropdownClickerOpen: !prevState.envSelectDropdownClickerOpen,
+            envSelectDropdownVisible: !prevState.envSelectDropdownVisible,
         }));
     }
 
