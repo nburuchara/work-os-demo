@@ -1,9 +1,25 @@
 import React,{Component} from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
-import Popup from './d_Env_Selection_Popup'
+import Popup from './d_Home_Components/d_Env_Selection_Popup'
 import { CSSTransition } from 'react-transition-group';
-import Sidepane from './d_Menu_Sidepane';
+import Sidepane from './d_Home_Components/d_Menu_Sidepane';
+import DesktopOverview from './d_Home_Pages/d_Overview/d_Overview';
+import DesktopWorkspace from './d_Home_Pages/d_Workspace/d_Workspace';
+import DesktopOrganizations from './d_Home_Pages/d_Organizations/d_Organizations'
+import DesktopUsers from './d_Home_Pages/d_Users/d_Users'
+import DesktopAuthentication from './d_Home_Pages/d_Authentication/d_Authentication'
+import DesktopDirectorySync from './d_Home_Pages/d_Directory_Sync/d_Directory_Sync'
+import DesktopRoles from './d_Home_Pages/d_Roles/d_Roles'
+import DesktopAuditLogs from './d_Home_Pages/d_Audit_Logs/d_Audit_Logs'
+import DesktopBranding from './d_Home_Pages/d_Branding/d_Branding'
+import DesktopDomains from './d_Home_Pages/d_Domains/d_Domains'
+import DesktopRedirects from './d_Home_Pages/d_Redirects/d_Redirects'
+import DesktopAPIKeys from './d_Home_Pages/d_API_Keys/d_API_Keys'
+import DesktopAPILogs from './d_Home_Pages/d_API_Logs/d_API_Logs'
+import DesktopWebhooks from './d_Home_Pages/d_Webhooks/d_Webhooks'
+import DesktopEvents from './d_Home_Pages/d_Events/d_Events';
+import DesktopTestSSO from './d_Home_Pages/d_Test_SSO/d_Test_SSO';
 
 const Styles = styled.div `
     
@@ -32,9 +48,10 @@ const Styles = styled.div `
 }
 
 .rightPane {
+    // height: 100vh;
     float: left;
     text-align: center;
-    width: 83.75%;
+    width: 82.75%;
 }
 
         // - - - -  LEFT PANE - - - //
@@ -134,11 +151,31 @@ export default class DesktopHome extends Component {
     constructor (props) {
         super(props)
         this.state = {
-                //* - - LEFT PANE HEADER - - *//
+                //* - - LEFT SIDEPANE HEADER - - *//
+
             leftPaneSettingsIconHovered: false,
             leftPaneSettingsIcon: "/assets/left_pane_setting.png",
             envSelectDropdownClickerOpen: false,
             envSelectDropdownVisible: false,
+
+                //* - - LEFT SIDEPANE MENU PAGES - - *//
+
+            overview_page: true,
+            workspace_page: false,
+            organizations_page: false,
+            users_page: false,
+            authentication_page: false,
+            directorySync_page: false,
+            roles_page: false,
+            auditLogs_page: false,
+            branding_page: false,
+            domains_page: false,
+            redirects_page: false,
+            apiKeys_page: false,
+            apiLogs_page: false,
+            webhooks_page: false,
+            events_page: false,
+            testSSO_page: false
 
         }
     }
@@ -188,14 +225,29 @@ export default class DesktopHome extends Component {
 
                     {/* - - - - MENU SIDE PANE OPTIONS - - - */}
 
-                    <Sidepane/>
+                        <Sidepane receiveMenuOptionClicked={this.handleMenuOptionClicked}/>
 
                     </div>
 
                     {/* - - RIGHT SIDE PANE  */}
                 
                     <div className='rightPane'>
-                        
+                        {this.state.overview_page && <DesktopOverview/>}
+                        {this.state.workspace_page && <DesktopWorkspace/>}
+                        {this.state.organizations_page && <DesktopOrganizations/>}
+                        {this.state.users_page && <DesktopUsers/>}
+                        {this.state.authentication_page && <DesktopAuthentication/>}
+                        {this.state.directorySync_page && <DesktopDirectorySync/>}
+                        {this.state.roles_page && <DesktopRoles/>}
+                        {this.state.auditLogs_page && <DesktopAuditLogs/>}
+                        {this.state.branding_page && <DesktopBranding/>}
+                        {this.state.domains_page && <DesktopDomains/>}
+                        {this.state.redirects_page && <DesktopRedirects/>}
+                        {this.state.apiKeys_page && <DesktopAPIKeys/>}
+                        {this.state.apiLogs_page && <DesktopAPILogs/>}
+                        {this.state.webhooks_page && <DesktopWebhooks/>}
+                        {this.state.events_page && <DesktopEvents/>}
+                        {this.state.testSSO_page && <DesktopTestSSO/>}
                     </div>
                 </div>
             </div>
@@ -218,6 +270,20 @@ export default class DesktopHome extends Component {
             envSelectDropdownVisible: !prevState.envSelectDropdownVisible,
         }));
     }
+
+    handleMenuOptionClicked = (menuOption, prevMenuOption) => {
+        this.setState({
+            [`${prevMenuOption}_page`]: false,
+        }, () => {
+            this.setState({
+                [`${menuOption}_page`]: true,
+            })
+        })
+        console.log(`Option: ${menuOption}_page`)
+        console.log(`Prev Menu Option: ${prevMenuOption}_page`)
+    }
+
+        //* - - MORE DESKTOP VIEWS - - *//
 
     renderLargerDesktopView = () => {
 

@@ -78,8 +78,6 @@ const Styles = styled.div `
 
 `
 
-//* Highlighted Icon Color: #2E2EFF
-
 export default class Sidepane extends Component {
     constructor(props) {
         super(props)
@@ -158,10 +156,14 @@ export default class Sidepane extends Component {
 
             //* - - - - - MENU OPTIONS FUNCTIONS - - - - - *//
 
-        //* - "GENERAL" OPTIONS - *//
+        //* - - TRANSITIONING UI - - *//
 
+    menuOptionClicked = (optionSelected) => {
+        this.props.receiveMenuOptionClicked(optionSelected, this.state.selectedMenuOption);
+    }
     clearPreviouslySelected = (currentlySelected) => {
         if (this.state.selectedMenuOption !== currentlySelected) {
+            this.menuOptionClicked(currentlySelected)
             this.setState({
                 [`${this.state.selectedMenuOption}BgColor`]: "transparent",
                 [`${this.state.selectedMenuOption}FontWeight`]: "normal",
@@ -177,6 +179,8 @@ export default class Sidepane extends Component {
         }
     }
 
+        //* - "GENERAL" OPTIONS - *//
+
     overviewOptionEnter = () => {this.setState({overviewHovered: true, overviewBgColor: "#E8E8EA"});}
     overviewOptionLeave = () => {if (this.state.selectedMenuOption !== 'overview') {this.setState({overviewHovered: false, overviewBgColor: "transparent"});}}
     
@@ -187,17 +191,14 @@ export default class Sidepane extends Component {
     usersOptionEnter = () => {this.setState({usersHovered: true, usersBgColor: "#E8E8EA"});}
     usersOptionLeave = () => {if (this.state.selectedMenuOption !== 'users') {this.setState({usersHovered: false, usersBgColor: "transparent"});}}
    
-
         //* - CONFIGURATION OPTIONS - *//
 
     authenticationOptionEnter = () => {this.setState({authenticationHovered: true, authenticationBgColor: "#E8E8EA"});}
     authenticationOptionLeave = () => {if (this.state.selectedMenuOption !== 'authentication') {this.setState({authenticationHovered: false, authenticationBgColor: "transparent"});}}
 
-    
     directorySyncOptionEnter = () => {this.setState({directorySyncHovered: true, directorySyncBgColor: "#E8E8EA"});}
     directorySyncOptionLeave = () => {if (this.state.selectedMenuOption !== 'directorySync') {this.setState({directorySyncHovered: false, directorySyncBgColor: "transparent"});}}
 
-    
     rolesOptionEnter = () => {this.setState({rolesHovered: true, rolesBgColor: "#E8E8EA"});}
     rolesOptionLeave = () => {if (this.state.selectedMenuOption !== 'roles') {this.setState({rolesHovered: false, rolesBgColor: "transparent"});}}
     
@@ -206,7 +207,6 @@ export default class Sidepane extends Component {
     
     brandingOptionEnter = () => {this.setState({brandingHovered: true, brandingBgColor: "#E8E8EA"});}
     brandingOptionLeave = () => {if (this.state.selectedMenuOption !== 'branding') {this.setState({brandingHovered: false, brandingBgColor: "transparent"});}}
-
     
     domainsOptionEnter = () => {this.setState({domainsHovered: true, domainsBgColor: "#E8E8EA"});}
     domainsOptionLeave = () => {if (this.state.selectedMenuOption !== 'domains') {this.setState({domainsHovered: false, domainsBgColor: "transparent"});}}
