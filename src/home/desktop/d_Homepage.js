@@ -46,7 +46,7 @@ const Styles = styled.div `
     margin-left: 10%;
     font-family: Poppins;
     font-size: 90%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .leftPaneHeader img {

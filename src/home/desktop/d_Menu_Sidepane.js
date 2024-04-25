@@ -7,7 +7,7 @@ const Styles = styled.div `
     // - - - - - - MENU OPTIONS - - - - - - - //
 
 .menu-options {
-    margin-top: 2.75%;
+    margin-top: 3.9%;
 }
 
 .menu-option-cell {
@@ -73,6 +73,7 @@ const Styles = styled.div `
     font-size: 75%;
     font-family: poppins;
     margin-bottom: 0px;
+    font-weight: bold;
 }
 
 `
@@ -84,71 +85,71 @@ export default class Sidepane extends Component {
         super(props)
         this.state = {
 
-            selectedMenuOption: "Overview",
+            selectedMenuOption: "overview",
 
                 //* - "GENERAL" - *//
 
-            overviewClicked: true,
+            overviewHovered: true,
             overviewBgColor: "#E8E8EA",
             overviewFontWeight: "bold",
 
-            organizationsClicked: false,
+            organizationsHovered: false,
             organizationsBgColor: "transparent",
             organizationsFontWeight: "normal",
 
-            usersClicked: false,
+            usersHovered: false,
             usersBgColor: "transparent",
             usersFontWeight: "normal",
 
                 //* - CONFIG - *//
 
-            authenticationClicked: false,
+            authenticationHovered: false,
             authenticationBgColor: "transparent",
             authenticationFontWeight: "normal",
 
-            directorySyncClicked: false,
+            directorySyncHovered: false,
             directorySyncBgColor: "transparent",
             directorySyncFontWeight: "normal",
 
-            rolesClicked: false,
+            rolesHovered: false,
             rolesBgColor: "transparent",
             rolesFontWeight: "normal",
 
-            auditLogsClicked: false,
+            auditLogsHovered: false,
             auditLogsBgColor: "transparent",
             auditLogsFontWeight: "normal",
 
-            brandingClicked: false,
+            brandingHovered: false,
             brandingBgColor: "transparent",
             brandingFontWeight: "normal",
 
-            domainsClicked: false,
+            domainsHovered: false,
             domainsBgColor: "transparent",
             domainsFontWeight: "normal",
 
                 //* - DEVELOPER - *//
 
-            redirectsClicked: false,
+            redirectsHovered: false,
             redirectsBgColor: "transparent",
             redirectsFontWeight: "normal",
 
-            apiKeysClicked: false,
+            apiKeysHovered: false,
             apiKeysBgColor: "transparent",
             apiKeysFontWeight: "normal",
 
-            apiLogsClicked: false,
+            apiLogsHovered: false,
             apiLogsBgColor: "transparent",
             apiLogsFontWeight: "normal",
 
-            webhooksClicked: false,
+            webhooksHovered: false,
             webhooksBgColor: "transparent",
             webhooksFontWeight: "normal",
 
-            eventsClicked: false,
+            eventsHovered: false,
             eventsBgColor: "transparent",
             eventsFontWeight: "normal",
 
-            testSSOClicked: false,
+            testSSOHovered: false,
             testSSOBgColor: "transparent",
             testSSOFontWeight: "normal"
 
@@ -159,56 +160,76 @@ export default class Sidepane extends Component {
 
         //* - "GENERAL" OPTIONS - *//
 
-    overviewOptionEnter = () => {this.setState({overviewClicked: true, overviewBgColor: "#E8E8EA"});}
-    overviewOptionLeave = () => {if (this.state.selectedMenuOption !== 'Overview') {this.setState({overviewClicked: false, overviewBgColor: "transparent"});}}
+    clearPreviouslySelected = (currentlySelected) => {
+        if (this.state.selectedMenuOption !== currentlySelected) {
+            this.setState({
+                [`${this.state.selectedMenuOption}BgColor`]: "transparent",
+                [`${this.state.selectedMenuOption}FontWeight`]: "normal",
+                [`${this.state.selectedMenuOption}Hovered`]: false,
+            }, () => {
+                this.setState({
+                    selectedMenuOption: currentlySelected,
+                    [`${currentlySelected}BgColor`]: "#E8E8EA",
+                    [`${currentlySelected}FontWeight`]: "bold",
+                    [`${currentlySelected}Hovered`]: true,
+                })
+            })
+        }
+    }
 
-    organizationsOptionEnter = () => {this.setState({organizationsClicked: true, organizationsBgColor: "#E8E8EA"});}
-    organizationsOptionLeave = () => {if (this.state.selectedMenuOption !== 'Organizations') {this.setState({organizationsClicked: false, organizationsBgColor: "transparent"});}}
+    overviewOptionEnter = () => {this.setState({overviewHovered: true, overviewBgColor: "#E8E8EA"});}
+    overviewOptionLeave = () => {if (this.state.selectedMenuOption !== 'overview') {this.setState({overviewHovered: false, overviewBgColor: "transparent"});}}
+    
 
-    usersOptionEnter = () => {this.setState({usersClicked: true, usersBgColor: "#E8E8EA"});}
-    usersOptionLeave = () => {if (this.state.selectedMenuOption !== 'Users') {this.setState({usersClicked: false, usersBgColor: "transparent"});}}
+    organizationsOptionEnter = () => {this.setState({organizationsHovered: true, organizationsBgColor: "#E8E8EA"});}
+    organizationsOptionLeave = () => {if (this.state.selectedMenuOption !== 'organizations') {this.setState({organizationsHovered: false, organizationsBgColor: "transparent"});}}
+
+    usersOptionEnter = () => {this.setState({usersHovered: true, usersBgColor: "#E8E8EA"});}
+    usersOptionLeave = () => {if (this.state.selectedMenuOption !== 'users') {this.setState({usersHovered: false, usersBgColor: "transparent"});}}
+   
 
         //* - CONFIGURATION OPTIONS - *//
 
-    authenticationOptionEnter = () => {this.setState({authenticationClicked: true, authenticationBgColor: "#E8E8EA"});}
-    authenticationOptionLeave = () => {if (this.state.selectedMenuOption !== 'Authentication') {this.setState({authenticationClicked: false, authenticationBgColor: "transparent"});}}
-    
-    directorySyncOptionEnter = () => {this.setState({directorySyncClicked: true, directorySyncBgColor: "#E8E8EA"});}
-    directorySyncOptionLeave = () => {if (this.state.selectedMenuOption !== 'Directory Sync') {this.setState({directorySyncClicked: false, directorySyncBgColor: "transparent"});}}
-    
-    rolesOptionEnter = () => {this.setState({rolesClicked: true, rolesBgColor: "#E8E8EA"});}
-    rolesOptionLeave = () => {if (this.state.selectedMenuOption !== 'Roles') {this.setState({rolesClicked: false, rolesBgColor: "transparent"});}}
-    
-    auditLogsOptionEnter = () => {this.setState({auditLogsClicked: true, auditLogsBgColor: "#E8E8EA"});}
-    auditLogsOptionLeave = () => {if (this.state.selectedMenuOption !== 'Audit Logs') {this.setState({auditLogsClicked: false, auditLogsBgColor: "transparent"});}}
-    
-    brandingOptionEnter = () => {this.setState({brandingClicked: true, brandingBgColor: "#E8E8EA"});}
-    brandingOptionLeave = () => {if (this.state.selectedMenuOption !== 'Branding') {this.setState({brandingClicked: false, brandingBgColor: "transparent"});}}
-    
-    domainsOptionEnter = () => {this.setState({domainsClicked: true, domainsBgColor: "#E8E8EA"});}
-    domainsOptionLeave = () => {if (this.state.selectedMenuOption !== 'Domains') {this.setState({domainsClicked: false, domainsBgColor: "transparent"});}}
-    
+    authenticationOptionEnter = () => {this.setState({authenticationHovered: true, authenticationBgColor: "#E8E8EA"});}
+    authenticationOptionLeave = () => {if (this.state.selectedMenuOption !== 'authentication') {this.setState({authenticationHovered: false, authenticationBgColor: "transparent"});}}
 
-        //* - DEVELOPERS OPTIONS - *//
+    
+    directorySyncOptionEnter = () => {this.setState({directorySyncHovered: true, directorySyncBgColor: "#E8E8EA"});}
+    directorySyncOptionLeave = () => {if (this.state.selectedMenuOption !== 'directorySync') {this.setState({directorySyncHovered: false, directorySyncBgColor: "transparent"});}}
 
-    redirectsOptionEnter = () => {this.setState({redirectsClicked: true, redirectsBgColor: "#E8E8EA"});}
-    redirectsOptionLeave = () => {if (this.state.selectedMenuOption !== 'Redirects') {this.setState({redirectsClicked: false, redirectsBgColor: "transparent"});}}
     
-    apiKeysOptionEnter = () => {this.setState({apiKeysClicked: true, apiKeysBgColor: "#E8E8EA"});}
-    apiKeysOptionLeave = () => {if (this.state.selectedMenuOption !== 'API Keys') {this.setState({apiKeysClicked: false, apiKeysBgColor: "transparent"});}}
+    rolesOptionEnter = () => {this.setState({rolesHovered: true, rolesBgColor: "#E8E8EA"});}
+    rolesOptionLeave = () => {if (this.state.selectedMenuOption !== 'roles') {this.setState({rolesHovered: false, rolesBgColor: "transparent"});}}
     
-    apiLogsOptionEnter = () => {this.setState({apiLogsClicked: true, apiLogsBgColor: "#E8E8EA"});}
-    apiLogsOptionLeave = () => {if (this.state.selectedMenuOption !== 'API Logs') {this.setState({apiLogsClicked: false, apiLogsBgColor: "transparent"});}}
+    auditLogsOptionEnter = () => {this.setState({auditLogsHovered: true, auditLogsBgColor: "#E8E8EA"});}
+    auditLogsOptionLeave = () => {if (this.state.selectedMenuOption !== 'auditLogs') {this.setState({auditLogsHovered: false, auditLogsBgColor: "transparent"});}}
+    
+    brandingOptionEnter = () => {this.setState({brandingHovered: true, brandingBgColor: "#E8E8EA"});}
+    brandingOptionLeave = () => {if (this.state.selectedMenuOption !== 'branding') {this.setState({brandingHovered: false, brandingBgColor: "transparent"});}}
+
+    
+    domainsOptionEnter = () => {this.setState({domainsHovered: true, domainsBgColor: "#E8E8EA"});}
+    domainsOptionLeave = () => {if (this.state.selectedMenuOption !== 'domains') {this.setState({domainsHovered: false, domainsBgColor: "transparent"});}}
+
+        //* - DEVELOPER OPTIONS - *//
+
+    redirectsOptionEnter = () => {this.setState({redirectsHovered: true, redirectsBgColor: "#E8E8EA"});}
+    redirectsOptionLeave = () => {if (this.state.selectedMenuOption !== 'redirects') {this.setState({redirectsHovered: false, redirectsBgColor: "transparent"});}}
+    
+    apiKeysOptionEnter = () => {this.setState({apiKeysHovered: true, apiKeysBgColor: "#E8E8EA"});}
+    apiKeysOptionLeave = () => {if (this.state.selectedMenuOption !== 'apiKeys') {this.setState({apiKeysHovered: false, apiKeysBgColor: "transparent"});}}
+    
+    apiLogsOptionEnter = () => {this.setState({apiLogsHovered: true, apiLogsBgColor: "#E8E8EA"});}
+    apiLogsOptionLeave = () => {if (this.state.selectedMenuOption !== 'apiLogs') {this.setState({apiLogsHovered: false, apiLogsBgColor: "transparent"});}}
    
-    webhooksOptionEnter = () => {this.setState({webhooksClicked: true, webhooksBgColor: "#E8E8EA"});}
-    webhooksOptionLeave = () => {if (this.state.selectedMenuOption !== 'Webhooks') {this.setState({webhooksClicked: false, webhooksBgColor: "transparent"});}}
+    webhooksOptionEnter = () => {this.setState({webhooksHovered: true, webhooksBgColor: "#E8E8EA"});}
+    webhooksOptionLeave = () => {if (this.state.selectedMenuOption !== 'webhooks') {this.setState({webhooksHovered: false, webhooksBgColor: "transparent"});}}
     
-    eventsOptionEnter = () => {this.setState({eventsClicked: true, eventsBgColor: "#E8E8EA"});}
-    eventsOptionLeave = () => {if (this.state.selectedMenuOption !== 'Events') {this.setState({eventsClicked: false, eventsBgColor: "transparent"});}}
+    eventsOptionEnter = () => {this.setState({eventsHovered: true, eventsBgColor: "#E8E8EA"});}
+    eventsOptionLeave = () => {if (this.state.selectedMenuOption !== 'events') {this.setState({eventsHovered: false, eventsBgColor: "transparent"});}}
     
-    testSSOOptionEnter = () => {this.setState({testSSOClicked: true, testSSOBgColor: "#E8E8EA"});}
-    testSSOOptionLeave = () => {if (this.state.selectedMenuOption !== 'Test SSO') {this.setState({testSSOClicked: false, testSSOBgColor: "transparent"});}}
-    
+    testSSOOptionEnter = () => {this.setState({testSSOHovered: true, testSSOBgColor: "#E8E8EA"});}
+    testSSOOptionLeave = () => {if (this.state.selectedMenuOption !== 'testSSO') {this.setState({testSSOHovered: false, testSSOBgColor: "transparent"});}}
     
     render () {
         
@@ -220,12 +241,13 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("overview")}
                     onMouseEnter={this.overviewOptionEnter}
                     onMouseLeave={this.overviewOptionLeave}
                     style={{backgroundColor: this.state.overviewBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.overviewClicked ? '/assets/left_pane_overview_icon_color.png' : '/assets/left_pane_overview_icon.png'} alt='img not available'/>
+                                <img src={this.state.overviewHovered ? '/assets/left_pane_overview_icon_color.png' : '/assets/left_pane_overview_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.overviewFontWeight}}>Overview</p>
@@ -233,12 +255,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("organizations")}
                     onMouseEnter={this.organizationsOptionEnter}
                     onMouseLeave={this.organizationsOptionLeave}
                     style={{backgroundColor: this.state.organizationsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.organizationsClicked ? '/assets/left_pane_organizations_icon_color.png' : '/assets/left_pane_organizations_icon.png'} alt='img not available'/>
+                                <img src={this.state.organizationsHovered ? '/assets/left_pane_organizations_icon_color.png' : '/assets/left_pane_organizations_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.organizationsFontWeight}}>Organizations</p>
@@ -246,12 +269,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("users")}
                     onMouseEnter={this.usersOptionEnter}
                     onMouseLeave={this.usersOptionLeave}
                     style={{backgroundColor: this.state.usersBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.usersClicked ? '/assets/left_pane_users_icon_color.png' : '/assets/left_pane_users_icon.png'} alt='img not available'/>
+                                <img src={this.state.usersHovered ? '/assets/left_pane_users_icon_color.png' : '/assets/left_pane_users_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.usersFontWeight}}>Users</p>
@@ -266,12 +290,13 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("authentication")}
                     onMouseEnter={this.authenticationOptionEnter}
                     onMouseLeave={this.authenticationOptionLeave}
                     style={{backgroundColor: this.state.authenticationBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.authenticationClicked ? '/assets/left_pane_authentication_icon_color.png' : '/assets/left_pane_authentication_icon.png'} alt='img not available'/>
+                                <img src={this.state.authenticationHovered ? '/assets/left_pane_authentication_icon_color.png' : '/assets/left_pane_authentication_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.authenticationFontWeight}}>Authentication</p>
@@ -279,12 +304,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("directorySync")}
                     onMouseEnter={this.directorySyncOptionEnter}
                     onMouseLeave={this.directorySyncOptionLeave}
                     style={{backgroundColor: this.state.directorySyncBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.directorySyncClicked ? '/assets/left_pane_directory_sync_icon_color.png' : '/assets/left_pane_directory_sync_icon.png'} alt='img not available'/>
+                                <img src={this.state.directorySyncHovered ? '/assets/left_pane_directory_sync_icon_color.png' : '/assets/left_pane_directory_sync_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.directorySyncFontWeight}}>Directory Sync</p>
@@ -292,12 +318,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("roles")}
                     onMouseEnter={this.rolesOptionEnter}
                     onMouseLeave={this.rolesOptionLeave}
                     style={{backgroundColor: this.state.rolesBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.rolesClicked ? '/assets/left_pane_roles_icon_color.png' : '/assets/left_pane_roles_icon.png'} alt='img not available'/>
+                                <img src={this.state.rolesHovered ? '/assets/left_pane_roles_icon_color.png' : '/assets/left_pane_roles_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.rolesFontWeight}}>Roles</p>
@@ -305,12 +332,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("auditLogs")}
                     onMouseEnter={this.auditLogsOptionEnter}
                     onMouseLeave={this.auditLogsOptionLeave}
                     style={{backgroundColor: this.state.auditLogsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.auditLogsClicked ? '/assets/left_pane_audit_logs_icon_color.png' : '/assets/left_pane_audit_logs_icon.png'} alt='img not available'/>
+                                <img src={this.state.auditLogsHovered ? '/assets/left_pane_audit_logs_icon_color.png' : '/assets/left_pane_audit_logs_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.auditLogsFontWeight}}>Audit Logs</p>
@@ -318,12 +346,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("branding")}
                     onMouseEnter={this.brandingOptionEnter}
                     onMouseLeave={this.brandingOptionLeave}
                     style={{backgroundColor: this.state.brandingBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.brandingClicked ? '/assets/left_pane_branding_icon_color.png' : '/assets/left_pane_branding_icon.png'} alt='img not available'/>
+                                <img src={this.state.brandingHovered ? '/assets/left_pane_branding_icon_color.png' : '/assets/left_pane_branding_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.brandingFontWeight}}>Branding</p>
@@ -331,12 +360,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("domains")}
                     onMouseEnter={this.domainsOptionEnter}
                     onMouseLeave={this.domainsOptionLeave}
                     style={{backgroundColor: this.state.domainsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.domainsClicked ? '/assets/left_pane_domains_icon_color.png' : '/assets/left_pane_domains_icon.png'} alt='img not available'/>
+                                <img src={this.state.domainsHovered ? '/assets/left_pane_domains_icon_color.png' : '/assets/left_pane_domains_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.domainsFontWeight}}>Domains</p>
@@ -351,12 +381,13 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("redirects")}
                     onMouseEnter={this.redirectsOptionEnter}
                     onMouseLeave={this.redirectsOptionLeave}
                     style={{backgroundColor: this.state.redirectsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.redirectsClicked ? '/assets/left_pane_redirects_icon_color.png' : '/assets/left_pane_redirects_icon.png'} alt='img not available'/>
+                                <img src={this.state.redirectsHovered ? '/assets/left_pane_redirects_icon_color.png' : '/assets/left_pane_redirects_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.redirectsFontWeight}}>Redirects</p>
@@ -364,12 +395,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("apiKeys")}
                     onMouseEnter={this.apiKeysOptionEnter}
                     onMouseLeave={this.apiKeysOptionLeave}
                     style={{backgroundColor: this.state.apiKeysBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.apiKeysClicked ? '/assets/left_pane_api_keys_icon_color.png' : '/assets/left_pane_api_keys_icon.png'} alt='img not available'/>
+                                <img src={this.state.apiKeysHovered ? '/assets/left_pane_api_keys_icon_color.png' : '/assets/left_pane_api_keys_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.apiKeysFontWeight}}>API Keys</p>
@@ -377,12 +409,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("apiLogs")}
                     onMouseEnter={this.apiLogsOptionEnter}
                     onMouseLeave={this.apiLogsOptionLeave}
                     style={{backgroundColor: this.state.apiLogsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.apiLogsClicked ? '/assets/left_pane_api_logs_icon_color.png' : '/assets/left_pane_api_logs_icon.png'} alt='img not available'/>
+                                <img src={this.state.apiLogsHovered ? '/assets/left_pane_api_logs_icon_color.png' : '/assets/left_pane_api_logs_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.apiLogsFontWeight}}>API Logs</p>
@@ -390,12 +423,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("webhooks")}
                     onMouseEnter={this.webhooksOptionEnter}
                     onMouseLeave={this.webhooksOptionLeave}
                     style={{backgroundColor: this.state.webhooksBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.webhooksClicked ? '/assets/left_pane_webhooks_icon_color.png' : '/assets/left_pane_webhooks_icon.png'} alt='img not available'/>
+                                <img src={this.state.webhooksHovered ? '/assets/left_pane_webhooks_icon_color.png' : '/assets/left_pane_webhooks_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.webhooksFontWeight}}>Webhooks</p>
@@ -403,12 +437,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("events")}
                     onMouseEnter={this.eventsOptionEnter}
                     onMouseLeave={this.eventsOptionLeave}
                     style={{backgroundColor: this.state.eventsBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.eventsClicked ? '/assets/left_pane_events_icon_color.png' : '/assets/left_pane_events_icon.png'} alt='img not available'/>
+                                <img src={this.state.eventsHovered ? '/assets/left_pane_events_icon_color.png' : '/assets/left_pane_events_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.eventsFontWeight}}>Events</p>
@@ -416,12 +451,13 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
+                    onClick={() => this.clearPreviouslySelected("testSSO")}
                     onMouseEnter={this.testSSOOptionEnter}
                     onMouseLeave={this.testSSOOptionLeave}
                     style={{backgroundColor: this.state.testSSOBgColor}} className='menu-option-cell'>
                         <div className='menu-option'>
                             <div className='menu-option-icon'>
-                                <img src={this.state.testSSOClicked ? '/assets/left_pane_test_sso_icon_color.png' : '/assets/left_pane_test_sso_icon.png'} alt='img not available'/>
+                                <img src={this.state.testSSOHovered ? '/assets/left_pane_test_sso_icon_color.png' : '/assets/left_pane_test_sso_icon.png'} alt='img not available'/>
                             </div>
                             <div className='menu-option-title'>
                                 <p style={{fontWeight: this.state.testSSOFontWeight}}>Test SSO</p>
