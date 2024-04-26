@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import styled from 'styled-components'
 import MediaQuery from 'react-responsive'
 import Popup from './d_Home_Components/d_Env_Selection_Popup'
-import { CSSTransition } from 'react-transition-group';
 import Sidepane from './d_Home_Components/d_Menu_Sidepane';
 import DesktopOverview from './d_Home_Pages/d_Overview/d_Overview';
 import DesktopWorkspace from './d_Home_Pages/d_Workspace/d_Workspace';
@@ -52,7 +51,7 @@ const Styles = styled.div `
     // height: 100vh;
     float: left;
     text-align: center;
-    width: 83.55%;
+    width: 82%;
 }
 
         // - - - -  LEFT PANE - - - - //
@@ -259,7 +258,7 @@ export default class DesktopHome extends Component {
                         {this.state.webhooks_page && <DesktopWebhooks/>}
                         {this.state.events_page && <DesktopEvents/>}
                         {this.state.testSSO_page && <DesktopTestSSO/>}
-                        
+
                     </div>
                 </div>
             </div>

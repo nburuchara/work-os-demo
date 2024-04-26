@@ -286,9 +286,9 @@ export default class Sidepane extends Component {
 
                     {/* - - CONFIGURATION MENU OPTIONS - - */}
 
-                <p className='configurationHeader'>CONFIGURATION</p>
+                <p style={{marginBottom: "0px"}} className='configurationHeader'>CONFIGURATION</p>
 
-                <div className='menu-options'>
+                <div style={{marginTop: '1%'}} className='menu-options'>
                     <button 
                     onClick={() => this.updateMenuOptionUI("authentication")}
                     onMouseEnter={this.authenticationOptionEnter}
@@ -379,7 +379,7 @@ export default class Sidepane extends Component {
 
                 <p className='configurationHeader'>DEVELOPER</p>
 
-                <div className='menu-options'>
+                <div style={{marginTop: '1%'}} className='menu-options'>
                     <button 
                     onClick={() => this.updateMenuOptionUI("redirects")}
                     onMouseEnter={this.redirectsOptionEnter}

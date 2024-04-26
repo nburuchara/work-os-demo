@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
+import HelpPopup from './d_Right_Pane_Header_Components/d_Help_Popup'
 
 const Styles = styled.div `
 
@@ -7,7 +8,7 @@ const Styles = styled.div `
         // - - - - - - RIGHT PANE HEADER - - - - - - //
 
 .rightPaneHeader {
-    margin-top: 1.5%;
+    margin-top: 0.75%;
 }
 
 .rightPaneHeader:after {
@@ -32,6 +33,10 @@ const Styles = styled.div `
 
 .rightPaneRightSide {
     
+}
+
+.rightPaneRightSide button {
+    cursor: pointer;
 }
 
 .rightPaneRightSide:after {
@@ -62,16 +67,12 @@ const Styles = styled.div `
     float: left;
     text-align: center;
     width: 10%;
-    height: 3vh;
-    background-color: black;
 }
 
 .rightSideCol5 {
     float: left;
     text-align: center;
     width: 10%;
-    height: 3vh;
-    background-color: red;
 }
 
     // - HELP BUTTON - //
@@ -101,15 +102,15 @@ const Styles = styled.div `
     width: 90%;
     border: 1px solid transparent;
     border-radius: 8px;
-    padding: 4%;
+    padding: 3%;
 }
 
     // # ICON
 
 .rightSideCol1Icon img {
-    margin-top: 15%;
-    width: 16px;
-    height: 16px;
+    margin-top: 16%;
+    width: 15px;
+    height: 15px;
 }
 
     // # TEXT
@@ -150,15 +151,16 @@ const Styles = styled.div `
     width: 90%;
     border: 1px solid transparent;
     border-radius: 8px;
-    padding: 1.25%;
+    padding: 1%;
+    padding-right: 5%;
 }
 
     // # ICON
 
 .rightSideCol2Icon img {
-    margin-top: 12.5%;
-    width: 19px;
-    height: 19px;
+    margin-top: 11.5%;
+    width: 18px;
+    height: 18px;
 }
 
     // # TEXT
@@ -166,7 +168,7 @@ const Styles = styled.div `
 .rightSideCol2Text p {
     margin-top: 5.5%;
     font-family: poppins;
-    font-size: 104%;
+    font-size: 100%;
     // margin-left: 2%;
     margin-bottom: 0px;
 }
@@ -190,7 +192,6 @@ const Styles = styled.div `
     float: left;
     text-align: left;
     width: 68%;
-    height: 3vh;
 }
 
 // # BUTTON CONTAINER
@@ -199,26 +200,83 @@ const Styles = styled.div `
     width: 90%;
     border: 1px solid transparent;
     border-radius: 8px;
-    padding: 3%;
+    padding: 2.5%;
+    padding-left: 7.5%;
 }
 
     // # ICON
 
 .rightSideCol3Icon img {
-    margin-top: 17%;
-    width: 17px;
-    height: 17px;
+    margin-top: 21%;
+    width: 16.25px;
+    height: 16.25px;
 }
 
     // # TEXT
 
 .rightSideCol3Text p {
-    margin-top: 5%;
+    margin-top: 7.5%;
     font-family: poppins;
-    font-size: 105%;
+    font-size: 100%;
     margin-left: 2%;
     margin-bottom: 0px;
 }
+
+        // - TOGGLE THEME BUTTON - //
+
+    // # BUTTON CONTAINER
+
+.rightSideCol4 button {
+    margin-top: 3.5%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding-left: 12.5%;
+    padding-right: 11%;
+}
+
+    // # ICON
+
+.rightSideCol4 img {
+    width: 16.85px;
+    height: 16.85px;
+    margin-top: 15.5%;
+}
+
+.toggleThemeIcon {
+    transition: transform 0.3s ease; /* Add transition for transform property */
+}
+
+.toggleThemeIconRotated {
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+}
+
+        // - USER NAME BUTTON - //
+
+    // # BUTTON CONTAINER
+
+.rightSideCol5 button {
+    margin-top: 3.5%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 12.5%;
+    padding-left: 21%;
+    padding-right: 20%;
+    margin-right: 2.5%;
+    background-color: #5e626a;
+}
+
+.rightSideCol5 button:hover {
+    background-color: #2e2eff;
+}
+
+
+.rightSideCol5 h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 100%;
+    color: white;
+}
+
 
 `
 
@@ -227,7 +285,56 @@ export default class Header extends Component {
         super()
         this.state = {
 
+                //* - - HELP / FEEDBACK / DOCS BUTTONS - - *//
+
+            helpBgColor: "transparent",
+            helpTxtColor: "#5e626a",
+            feedbackBgColor: "transparent",
+            feedbackTxtColor: "#5e626a",
+            docsBgColor: "transparent",
+            docsTxtColor: "#5e626a",
+            helpBtnHovered: false,
+            feedbackBtnHovered: false,
+            docsBtnHovered: false,
+
+                //* - - TOGGLE THEME / USER PROFILE BUTTONS - - *//
+
+            toggleThemeHovered: false,
+            toggleThemeBtnBgColor: "",
+
         }
+    }
+
+    helpBtnEnter = () => {
+        this.setState({helpBtnHovered: true, helpTxtColor: "#2e2eff", helpBgColor: "#E7E7E7"})
+    }
+
+    helpBtnLeave = () => {
+        this.setState({helpBtnHovered: false, helpTxtColor: "#5e626a", helpBgColor: "transparent"})
+    }
+
+    feedbackBtnEnter = () => {
+        this.setState({feedbackBtnHovered: true, feedbackTxtColor: "#2e2eff", feedbackBgColor: "#E7E7E7"})
+    }
+
+    feedbackBtnLeave = () => {
+        this.setState({feedbackBtnHovered: false, feedbackTxtColor: "#5e626a", feedbackBgColor: "transparent"})
+    }
+
+    docsBtnEnter = () => {
+        this.setState({docsBtnHovered: true, docsTxtColor: "#2e2eff", docsBgColor: "#E7E7E7"})
+    }
+
+    docsBtnLeave = () => {
+        this.setState({docsBtnHovered: false, docsTxtColor: "#5e626a", docsBgColor: "transparent"})
+    }
+
+    toggleThemeEnter = () => {
+        this.setState({toggleThemeHovered: true, toggleThemeBtnBgColor: "#E7E7E7"})
+    }
+
+    toggleThemeLeave = () => {
+        this.setState({toggleThemeHovered: false, toggleThemeBtnBgColor: ""})
     }
 
     render () {
@@ -239,40 +346,64 @@ export default class Header extends Component {
                     </div>
                     <div className='rightPaneRightSide'>
                         <div className='rightSideCol1'>
-                            <button>
+                            <button
+                            style={{backgroundColor: this.state.helpBgColor}}
+                            onMouseEnter={this.helpBtnEnter}
+                            onMouseLeave={this.helpBtnLeave}
+                            >
                                 <div className='rightSideCol1Icon'>
-                                    <img src='/assets/right_pane_header_help_icon.png' alt='img not available'/>
+                                    <img src={this.state.helpBtnHovered ? '/assets/right_pane_header_help_icon_color.png' : '/assets/right_pane_header_help_icon.png'} alt='img not available'/>
                                 </div>
                                 <div className='rightSideCol1Text'>
-                                    <p>Help</p>
+                                    <p style={{color: this.state.helpTxtColor}}>Help</p>
                                 </div>
                             </button>
+                            <HelpPopup/>
                         </div>
                         <div className='rightSideCol2'>
-                            <button>
+                            <button
+                            style={{backgroundColor: this.state.feedbackBgColor}}
+                            onMouseEnter={this.feedbackBtnEnter}
+                            onMouseLeave={this.feedbackBtnLeave}
+                            >
                                 <div className='rightSideCol2Icon'>
-                                    <img src='/assets/right_pane_header_feedback_icon.png' alt='img not available'/>
+                                    <img src={this.state.feedbackBtnHovered ? '/assets/right_pane_header_feedback_icon_color.png' : '/assets/right_pane_header_feedback_icon.png'} alt='img not available'/>
                                 </div>
                                 <div className='rightSideCol2Text'>
-                                    <p>Feedback</p>
+                                    <p style={{color: this.state.feedbackTxtColor}}>Feedback?</p>
                                 </div>
                             </button>
                         </div>
                         <div className='rightSideCol3'>
-                            <button>
+                            <button
+                            style={{backgroundColor: this.state.docsBgColor}}
+                            onMouseEnter={this.docsBtnEnter}
+                            onMouseLeave={this.docsBtnLeave}
+                            >
                                 <div className='rightSideCol3Icon'>
-                                    <img src='/assets/right_pane_header_docs_icon.png' alt='img not available'/>
+                                    <img src={this.state.docsBtnHovered ? '/assets/right_pane_header_docs_icon_color.png' : '/assets/right_pane_header_docs_icon.png'} alt='img not available'/>
                                 </div>
                                 <div className='rightSideCol3Text'>
-                                    <p>Docs</p>
+                                    <p style={{color: this.state.docsTxtColor}}>Docs</p>
                                 </div>
                             </button>
                         </div>
                         <div className='rightSideCol4'>
-                            <img src='/assets/right_pane_header_theme_icon.png' alt='img not available'/>
+                            <button
+                            className='userProfileBtn'
+                            style={{backgroundColor: this.state.toggleThemeBtnBgColor}}
+                            onMouseEnter={this.toggleThemeEnter}
+                            onMouseLeave={this.toggleThemeLeave}
+                            >
+                                <img 
+                                className={this.state.toggleThemeHovered ? 'toggleThemeIcon toggleThemeIconRotated' : 'toggleThemeIcon'}
+                                src={this.state.toggleThemeHovered ? '/assets/right_pane_header_theme_icon_color.png' : '/assets/right_pane_header_theme_icon.png'} alt='img not available'/>
+                            </button>
                         </div> 
                         <div className='rightSideCol5'>
-
+                            <button>
+                                <h2>N</h2>
+                            </button>
                         </div>
                     </div>
                 </div>
