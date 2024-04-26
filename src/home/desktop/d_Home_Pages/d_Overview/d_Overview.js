@@ -3,6 +3,20 @@ import styled from 'styled-components'
 
 const Styles = styled.div `
 
+    // - - - - - - - PARENT CONTAINER - - - - - - - //
+
+    // - - PAGE HEADER - - //
+
+.pageHeader {
+    text-align: left;
+    margin-left: 5%;
+    // margin-top: 7.25%;
+}
+
+.pageHeader h1 {
+    margin-
+}
+
 `
 
 export default class DesktopOverview extends Component {
@@ -13,10 +27,18 @@ export default class DesktopOverview extends Component {
         }
     }
 
+    componentDidMount = () => {
+        
+    }
+
     render () {
         return (
             <Styles>
-                
+                <div className='parent_container'>
+                    <div className='pageHeader'>
+                        <h1 className=''>Getting Started</h1>
+                    </div>
+                </div>
             </Styles>
         )
     }

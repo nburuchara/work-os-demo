@@ -20,6 +20,7 @@ import DesktopAPILogs from './d_Home_Pages/d_API_Logs/d_API_Logs'
 import DesktopWebhooks from './d_Home_Pages/d_Webhooks/d_Webhooks'
 import DesktopEvents from './d_Home_Pages/d_Events/d_Events';
 import DesktopTestSSO from './d_Home_Pages/d_Test_SSO/d_Test_SSO';
+import RightPaneHeader from './d_Home_Components/d_Right_Pane_Header'
 
 const Styles = styled.div `
     
@@ -51,10 +52,10 @@ const Styles = styled.div `
     // height: 100vh;
     float: left;
     text-align: center;
-    width: 82.75%;
+    width: 83.55%;
 }
 
-        // - - - -  LEFT PANE - - - //
+        // - - - -  LEFT PANE - - - - //
 
     // - HEADER - //
 
@@ -144,6 +145,9 @@ const Styles = styled.div `
     transform: rotate(180deg); /* Rotate the arrow 180 degrees */
 }
 
+        // - - - -  RIGHT PANE - - - - //
+
+
 
 `
 
@@ -229,9 +233,16 @@ export default class DesktopHome extends Component {
 
                     </div>
 
-                    {/* - - RIGHT SIDE PANE  */}
+                        {/* - - - - - - RIGHT SIDE PANE - - - - - - */}
                 
                     <div className='rightPane'>
+
+                        {/* - - - - TOP RIGHT HEADER - - - - - */}
+                        
+                        <RightPaneHeader/>
+
+                        {/* - - - - MENU PAGES - - - - - */}
+                        
                         {this.state.overview_page && <DesktopOverview/>}
                         {this.state.workspace_page && <DesktopWorkspace/>}
                         {this.state.organizations_page && <DesktopOrganizations/>}
@@ -248,6 +259,7 @@ export default class DesktopHome extends Component {
                         {this.state.webhooks_page && <DesktopWebhooks/>}
                         {this.state.events_page && <DesktopEvents/>}
                         {this.state.testSSO_page && <DesktopTestSSO/>}
+                        
                     </div>
                 </div>
             </div>

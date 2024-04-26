@@ -156,14 +156,14 @@ export default class Sidepane extends Component {
 
             //* - - - - - MENU OPTIONS FUNCTIONS - - - - - *//
 
-        //* - - TRANSITIONING UI - - *//
+        //* - - UPDATES PAGE & MENU OPTIONS UI - - *//
 
-    menuOptionClicked = (optionSelected) => {
+    updatePageUI = (optionSelected) => {
         this.props.receiveMenuOptionClicked(optionSelected, this.state.selectedMenuOption);
     }
-    clearPreviouslySelected = (currentlySelected) => {
+    updateMenuOptionUI = (currentlySelected) => {
         if (this.state.selectedMenuOption !== currentlySelected) {
-            this.menuOptionClicked(currentlySelected)
+            this.updatePageUI(currentlySelected)
             this.setState({
                 [`${this.state.selectedMenuOption}BgColor`]: "transparent",
                 [`${this.state.selectedMenuOption}FontWeight`]: "normal",
@@ -179,7 +179,7 @@ export default class Sidepane extends Component {
         }
     }
 
-        //* - "GENERAL" OPTIONS - *//
+        //* - UPDATES "GENERAL" OPTIONS HOVERING UI  - *//
 
     overviewOptionEnter = () => {this.setState({overviewHovered: true, overviewBgColor: "#E8E8EA"});}
     overviewOptionLeave = () => {if (this.state.selectedMenuOption !== 'overview') {this.setState({overviewHovered: false, overviewBgColor: "transparent"});}}
@@ -191,7 +191,7 @@ export default class Sidepane extends Component {
     usersOptionEnter = () => {this.setState({usersHovered: true, usersBgColor: "#E8E8EA"});}
     usersOptionLeave = () => {if (this.state.selectedMenuOption !== 'users') {this.setState({usersHovered: false, usersBgColor: "transparent"});}}
    
-        //* - CONFIGURATION OPTIONS - *//
+        //* - UPDATES CONFIGURATION OPTIONS HOVERING UI - *//
 
     authenticationOptionEnter = () => {this.setState({authenticationHovered: true, authenticationBgColor: "#E8E8EA"});}
     authenticationOptionLeave = () => {if (this.state.selectedMenuOption !== 'authentication') {this.setState({authenticationHovered: false, authenticationBgColor: "transparent"});}}
@@ -211,7 +211,7 @@ export default class Sidepane extends Component {
     domainsOptionEnter = () => {this.setState({domainsHovered: true, domainsBgColor: "#E8E8EA"});}
     domainsOptionLeave = () => {if (this.state.selectedMenuOption !== 'domains') {this.setState({domainsHovered: false, domainsBgColor: "transparent"});}}
 
-        //* - DEVELOPER OPTIONS - *//
+        //* - UPDATES DEVELOPER OPTIONS HOVERING UI - *//
 
     redirectsOptionEnter = () => {this.setState({redirectsHovered: true, redirectsBgColor: "#E8E8EA"});}
     redirectsOptionLeave = () => {if (this.state.selectedMenuOption !== 'redirects') {this.setState({redirectsHovered: false, redirectsBgColor: "transparent"});}}
@@ -241,7 +241,7 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("overview")}
+                    onClick={() => this.updateMenuOptionUI("overview")}
                     onMouseEnter={this.overviewOptionEnter}
                     onMouseLeave={this.overviewOptionLeave}
                     style={{backgroundColor: this.state.overviewBgColor}} className='menu-option-cell'>
@@ -255,7 +255,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("organizations")}
+                    onClick={() => this.updateMenuOptionUI("organizations")}
                     onMouseEnter={this.organizationsOptionEnter}
                     onMouseLeave={this.organizationsOptionLeave}
                     style={{backgroundColor: this.state.organizationsBgColor}} className='menu-option-cell'>
@@ -269,7 +269,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("users")}
+                    onClick={() => this.updateMenuOptionUI("users")}
                     onMouseEnter={this.usersOptionEnter}
                     onMouseLeave={this.usersOptionLeave}
                     style={{backgroundColor: this.state.usersBgColor}} className='menu-option-cell'>
@@ -290,7 +290,7 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("authentication")}
+                    onClick={() => this.updateMenuOptionUI("authentication")}
                     onMouseEnter={this.authenticationOptionEnter}
                     onMouseLeave={this.authenticationOptionLeave}
                     style={{backgroundColor: this.state.authenticationBgColor}} className='menu-option-cell'>
@@ -304,7 +304,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("directorySync")}
+                    onClick={() => this.updateMenuOptionUI("directorySync")}
                     onMouseEnter={this.directorySyncOptionEnter}
                     onMouseLeave={this.directorySyncOptionLeave}
                     style={{backgroundColor: this.state.directorySyncBgColor}} className='menu-option-cell'>
@@ -318,7 +318,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("roles")}
+                    onClick={() => this.updateMenuOptionUI("roles")}
                     onMouseEnter={this.rolesOptionEnter}
                     onMouseLeave={this.rolesOptionLeave}
                     style={{backgroundColor: this.state.rolesBgColor}} className='menu-option-cell'>
@@ -332,7 +332,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("auditLogs")}
+                    onClick={() => this.updateMenuOptionUI("auditLogs")}
                     onMouseEnter={this.auditLogsOptionEnter}
                     onMouseLeave={this.auditLogsOptionLeave}
                     style={{backgroundColor: this.state.auditLogsBgColor}} className='menu-option-cell'>
@@ -346,7 +346,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("branding")}
+                    onClick={() => this.updateMenuOptionUI("branding")}
                     onMouseEnter={this.brandingOptionEnter}
                     onMouseLeave={this.brandingOptionLeave}
                     style={{backgroundColor: this.state.brandingBgColor}} className='menu-option-cell'>
@@ -360,7 +360,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("domains")}
+                    onClick={() => this.updateMenuOptionUI("domains")}
                     onMouseEnter={this.domainsOptionEnter}
                     onMouseLeave={this.domainsOptionLeave}
                     style={{backgroundColor: this.state.domainsBgColor}} className='menu-option-cell'>
@@ -381,7 +381,7 @@ export default class Sidepane extends Component {
 
                 <div className='menu-options'>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("redirects")}
+                    onClick={() => this.updateMenuOptionUI("redirects")}
                     onMouseEnter={this.redirectsOptionEnter}
                     onMouseLeave={this.redirectsOptionLeave}
                     style={{backgroundColor: this.state.redirectsBgColor}} className='menu-option-cell'>
@@ -395,7 +395,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("apiKeys")}
+                    onClick={() => this.updateMenuOptionUI("apiKeys")}
                     onMouseEnter={this.apiKeysOptionEnter}
                     onMouseLeave={this.apiKeysOptionLeave}
                     style={{backgroundColor: this.state.apiKeysBgColor}} className='menu-option-cell'>
@@ -409,7 +409,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("apiLogs")}
+                    onClick={() => this.updateMenuOptionUI("apiLogs")}
                     onMouseEnter={this.apiLogsOptionEnter}
                     onMouseLeave={this.apiLogsOptionLeave}
                     style={{backgroundColor: this.state.apiLogsBgColor}} className='menu-option-cell'>
@@ -423,7 +423,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("webhooks")}
+                    onClick={() => this.updateMenuOptionUI("webhooks")}
                     onMouseEnter={this.webhooksOptionEnter}
                     onMouseLeave={this.webhooksOptionLeave}
                     style={{backgroundColor: this.state.webhooksBgColor}} className='menu-option-cell'>
@@ -437,7 +437,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("events")}
+                    onClick={() => this.updateMenuOptionUI("events")}
                     onMouseEnter={this.eventsOptionEnter}
                     onMouseLeave={this.eventsOptionLeave}
                     style={{backgroundColor: this.state.eventsBgColor}} className='menu-option-cell'>
@@ -451,7 +451,7 @@ export default class Sidepane extends Component {
                         </div>
                     </button>
                     <button 
-                    onClick={() => this.clearPreviouslySelected("testSSO")}
+                    onClick={() => this.updateMenuOptionUI("testSSO")}
                     onMouseEnter={this.testSSOOptionEnter}
                     onMouseLeave={this.testSSOOptionLeave}
                     style={{backgroundColor: this.state.testSSOBgColor}} className='menu-option-cell'>
