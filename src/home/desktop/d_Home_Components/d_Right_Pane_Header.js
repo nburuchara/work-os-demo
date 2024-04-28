@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import HelpPopup from './d_Right_Pane_Header_Components/d_Help_Popup'
 import FeedbackPopup from './d_Right_Pane_Header_Components/d_Feedback_Popup'
+import DocsPopup from './d_Right_Pane_Header_Components/d_Docs_Popup'
 
 const Styles = styled.div `
 
@@ -137,13 +138,13 @@ const Styles = styled.div `
 .rightSideCol2Icon {
     float: left;
     text-align: center;
-    width: 30%;
+    width: 25%;
 }
 
 .rightSideCol2Text {
     float: left;
     text-align: left;
-    width: 70%;
+    width: 75%;
 }
 
 // # BUTTON CONTAINER
@@ -153,7 +154,7 @@ const Styles = styled.div `
     border: 1px solid transparent;
     border-radius: 8px;
     padding: 1%;
-    padding-right: 12.5%;
+    padding-right: 1.5%;
     padding-bottom: 1.5%;
 }
 
@@ -168,7 +169,7 @@ const Styles = styled.div `
     // # TEXT
 
 .rightSideCol2Text p {
-    margin-top: 5.5%;
+    margin-top: 4.35%;
     font-family: poppins;
     font-size: 100%;
     // margin-left: 2%;
@@ -360,8 +361,9 @@ export default class Header extends Component {
                                     <p style={{color: this.state.helpTxtColor}}>Help</p>
                                 </div>
                             </button>
-                            <HelpPopup/>
+                            {/* <HelpPopup/> */}
                             {/* <FeedbackPopup/> */}
+                            <DocsPopup/>
                         </div>
                         <div className='rightSideCol2'>
                             <button

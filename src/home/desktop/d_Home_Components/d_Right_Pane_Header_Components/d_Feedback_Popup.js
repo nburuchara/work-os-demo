@@ -116,6 +116,22 @@ const Styles = styled.div  `
     cursor: not-allowed !important;
 }
 
+    // - - FEEDBACK CONFIRMATION - - //
+
+.feedbackConfirmation h5 {
+    font-family: poppins;
+    margin-top: 19%;
+    margin-bottom: 19%;
+}
+
+.feedbackConfirmation button {
+    width: 85% !important;
+    font-weight: bold !important;
+    background-color: #6363f1 !important;
+    font-family: poppins;
+    color: white;
+}
+
 `
 
 export default class Popup extends Component {
@@ -124,11 +140,30 @@ export default class Popup extends Component {
         this.state = {
             showFeedbackTextarea: true,
             showFeedbackLoading: false,
+            showFeedbackConfirmation: false,
 
             textareaBorderColor: "#ccc",
             textareaBorderSize: "1px",
             feedbackErrMsg: ""
         }
+    }
+
+    sendFeedbackBtnClicked = () => {
+        this.setState({
+            showFeedbackTextarea: false,
+            showFeedbackLoading: true
+        }, () => {
+            setTimeout(() => {
+                this.setState({
+                    showFeedbackLoading: false,
+                    showFeedbackConfirmation: true
+                });
+            }, 2500);
+        });
+    }
+
+    closeFeedbackBox = () => {
+        //* close feedback box ('Cancel' & 'Close')
     }
 
     render () {
@@ -151,22 +186,27 @@ export default class Popup extends Component {
                                 />
                                 <p className='textarea-err-msg'>{this.state.feedbackErrMsg}</p>
                                 <div className='textarea-buttons'>
-                                    <button id='feedbackCancelBtn' style={{paddingBottom: "1%", backgroundColor: "#fff", fontWeight: "bold", color: "#5e626a", border: "0.5px solid #5e626a"}}>Cancel</button>
-                                    <button id='feedbackSendBtn'>Send</button>
+                                    <button 
+                                    onClick={this.closeFeedbackBox}
+                                    id='feedbackCancelBtn' 
+                                    style={{paddingBottom: "1%", backgroundColor: "#fff", fontWeight: "bold", color: "#5e626a", border: "0.5px solid #5e626a"}}>Cancel</button>
+                                    <button 
+                                    onClick={this.sendFeedbackBtnClicked}
+                                    id='feedbackSendBtn'>Send</button>
                                 </div>
                             </div>
                            
                         }
                         {this.state.showFeedbackLoading && 
                             <div>
-                                <div style={{marginTop: "20%", marginBottom: "20%"}}>
+                                <div style={{marginTop: "19%", marginBottom: "19%"}}>
                                     <ColorRing
                                     visible={true}
                                     height="30"
                                     width="30"
                                     ariaLabel="color-ring-loading"
-                                    // wrapperStyle={{}}
-                                    // wrapperClass="color-ring-wrapper"
+                                    wrapperStyle={{}}
+                                    wrapperClass="color-ring-wrapper"
                                     colors={['#6363f1', '#6363f1', '#6363f1', '#6363f1', '#6363f1', '#6363f1']}
                                     />
                                 </div>
@@ -178,8 +218,11 @@ export default class Popup extends Component {
                             </div>
                         } 
                         {this.state.showFeedbackConfirmation && 
-                            <div>
-                                <h5></h5>
+                            <div className='feedbackConfirmation'>
+                                <h5>Thanks for sharing your feedback!</h5>
+                                <button
+                                onClick={this.closeFeedbackBox}
+                                >Close</button>
                             </div>
                         }
                     </div>
