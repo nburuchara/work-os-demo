@@ -77,27 +77,42 @@ const Styles = styled.div  `
 .popup-docs-search-icon {
     float: left;
     text-align: center;
-    width: 10%;
-    background-color: black;
+    width: 8%;
 }
 
 .popup-docs-search-text {
     float: left;
     text-align: center;
-    width: 90%;
-    background-color: red;
-    height: 2vh;
+    width: 92%;
 }
+
+    // # BUTTON 
+    
+.popup-docs-search button {
+    width: 100%;
+    padding: 0.1em;
+}
+
     // # ICON
 
 .popup-docs-search-icon img {
-    width: 100%;
+    margin-top: 25%;
+    width: 75%;
+    margin-left: 2.5px;
 }
 
-    // # SEARCH TEXT BAR
+    // # INPUT
 
 .popup-docs-search-text input {
-    width: 85%;
+    margin-top: 1%;
+    width: 94.5%;
+    font-size: 1em;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.popup-docs-search-text input:focus {
+    outline: none;
 }
 
 
@@ -137,18 +152,20 @@ export default class Popup extends Component {
                     <div className='popup-container'>
                         <div className='popup-docs-header'>
                             <div className='popup-docs-search'>
-                                <div className='popup-docs-search-icon'>
-                                    <img src='/assets/docs_popup_search_icon.png' alt='no img available'/>
-                                </div>
-                                <div className='popup-docs-search-text'>
-                                    <input
-                            
-                                    />
-                                </div>
+                                <button>
+                                    <div className='popup-docs-search-icon'>
+                                        <img src='/assets/docs_popup_search_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='popup-docs-search-text'>
+                                        <input
+                                
+                                        />
+                                    </div>
+                                </button>
                             </div>
                             <div className='popup-docs-see-all-btn'>
                                 <button
-                                >See all</button>
+                                >All docs</button>
                             </div>
                         </div>
                     </div>
