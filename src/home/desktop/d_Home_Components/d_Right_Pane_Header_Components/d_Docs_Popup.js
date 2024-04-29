@@ -133,6 +133,7 @@ const Styles = styled.div  `
     padding-top: 15%;
     padding-left: 15%;
     padding-right: 12%;
+    cursor: pointer !important;
 }
 
 .popup-docs-search-close-icon span:hover  {
@@ -328,11 +329,11 @@ export default class Popup extends Component {
         for (let option of ResultsData) {
             this.trie.insert(option.name.toLowerCase());
         }
+        document.addEventListener('click', this.handleClickOutside);
     }
 
     componentWillUnmount() {
         document.removeEventListener('click', this.handleClickOutside);
-        document.addEventListener('click', this.handleClickOutside);
     }
 
     handleClickOutside = (e) => {
@@ -344,16 +345,17 @@ export default class Popup extends Component {
     clearSearchBar = () => {
         this.setState({
             searchedData: "",
-            searchCloseBtn: false
+            searchCloseBtn: false,
+            searchBarInFocus: true
         })
         this.inputRef.current.focus(); // Keep the input in focus
     }
 
     searchBarClicked = () => {
+        this.inputRef.current.focus();
         this.setState({
             searchBarInFocus: true
         })
-        this.inputRef.current.focus();
     }
 
     groupBy = (array, key) => {
@@ -474,7 +476,7 @@ export default class Popup extends Component {
                                 style={{border: searchBarInFocus ? "1px solid #cccccc" : "1px solid transparent", cursor: "text"}}
                                 >
                                     <div className='popup-docs-search-icon'>
-                                        <img src='/assets/docs_popup_search_icon.png' alt='no img available'/>
+                                        <img onClick={this.searchBarClicked} src='/assets/docs_popup_search_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='popup-docs-search-text'>
                                         <input
@@ -487,7 +489,7 @@ export default class Popup extends Component {
                                         onClick={this.searchBarClicked}
                                         />
                                     </div>
-                                    <div className='popup-docs-search-close-icon'>
+                                    <div onClick={this.searchBarClicked} className='popup-docs-search-close-icon'>
                                         {searchCloseBtn && 
                                             <span
                                             onClick={this.clearSearchBar}
