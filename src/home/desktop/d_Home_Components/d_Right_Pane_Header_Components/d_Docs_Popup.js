@@ -132,13 +132,94 @@ const Styles = styled.div  `
     // - - SEARCH RESULTS - - //
 
 .searchResults {
-    width: 75%;
-    height: auto;
+    overflow-y: auto;
+    width: 95%;
+    height: 85%;
     border: 1px solid #cccccc;
-    margin-top: 1.5%;
     border-radius: 7px;
+    padding: 2%;
+    margin-top: 1.5%;
 }
 
+    // - SEARCH RESULT CELL - //
+
+.searchResultCell {
+    text-align: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchResultCell p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: poppins;
+    // margin-bottom: 
+}
+
+.searchResultOption {
+    padding-top: 2%;
+    margin-bottom: 2%;
+    font-size: 88.5%;
+}
+
+.searchResultCategory {
+    font-size: 76%;
+    padding-bottom: 3%;
+}
+
+    // - CODE SNIPPET SEARCH RESULT - //
+
+.codeSnippetResult {
+    text-align: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.codeSnippetResult:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.codeSnippetCommand {
+    float: left;
+    text-align: left;
+    width: 12%;
+}
+
+.codeSnippetLine {
+    float: left;
+    text-align: left;
+    width: 88%;
+}
+
+    // # COMMAND 
+
+.codeSnippetCommand span {
+    font-size: 30%;
+    padding: 12%;
+    // margin-top: 50%;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+    // # LINE
+
+.codeSnippetLine p {
+    margin-top: 0px;
+    // margin-left: ;
+    font-family: poppins;
+    // margin-bottom: 7%;
+    font-size: 72.5%;
+}
 
 `
 
@@ -195,7 +276,10 @@ export default class Popup extends Component {
             searchedData: "",
             filteredOptions: [], // Use imported options
             isSearchLoading: false,
-            resultsFound: false
+            resultsFound: false,
+            hoveredResultId: null,
+            commandBgColor: "transparent",
+            commandTxtColor: "transparent"
         }
         this.trie = new Trie(); // Initialize the trie
     }
@@ -216,6 +300,14 @@ export default class Popup extends Component {
 
     handleSearchChange = (e) => {
         const searchInput = e.target.value.toLowerCase();
+    
+    // Clear previous timeout
+    clearTimeout(this.searchTimeout);
+
+    this.setState({searchedData: e.target.value, isSearchLoading: true})
+    
+    // Set a new timeout to execute after 500ms
+    this.searchTimeout = setTimeout(() => {
         if (searchInput.trim() === "") {
             // Reset filteredOptions and loading state
             this.setState({
@@ -226,40 +318,79 @@ export default class Popup extends Component {
             });
         } else {
             // Show loading screen and start search
-            this.setState({ isSearchLoading: true, searchedData: e.target.value}, () => {
-                setTimeout(() => {
-                    const filteredOptions = ResultsData.filter(option => {
-                        const words = option.name.toLowerCase().split(" ");
-                        return words.some(word => word.startsWith(searchInput));
-                    });
+            this.setState({ isSearchLoading: true, searchedData: searchInput }, () => {
+                // Perform search logic
+                const filteredOptions = ResultsData.filter(option => {
+                    const words = option.name.toLowerCase().split(" ");
+                    return words.some(word => word.startsWith(searchInput));
+                });
 
-                    const resultsFound = filteredOptions.length > 0; // Check if any results were found
+                const resultsFound = filteredOptions.length > 0; // Check if any results were found
 
-                    const groupedResults = this.groupBy(filteredOptions, 'category');
-                
-                    // Construct trie for each category
-                    const trieByCategory = {};
-                    Object.entries(groupedResults).forEach(([category, options]) => {
-                        trieByCategory[category] = new Trie();
-                        options.forEach(option => {
-                            trieByCategory[category].insert(option.name.toLowerCase());
-                        });
+                const highlightedOptions = filteredOptions.map(option => ({
+                    ...option,
+                    highlightedName: this.highlightMatchedCharacters(option, searchInput)
+                }));
+
+                const groupedResults = this.groupBy(highlightedOptions, 'category');
+
+                // Construct trie for each category
+                const trieByCategory = {};
+                Object.entries(groupedResults).forEach(([category, options]) => {
+                    trieByCategory[category] = new Trie();
+                    options.forEach(option => {
+                        trieByCategory[category].insert(option.name.toLowerCase());
                     });
-                    
-                    this.setState({
-                        trieByCategory,
-                        groupedOptions: groupedResults,
-                        filteredOptions,
-                        isSearchLoading: false, // Hide loading screen
-                        resultsFound: resultsFound
-                    });
-                }, 1000); // Simulated delay of 1 second
+                });
+
+                // Update state after search logic is complete
+                this.setState({
+                    trieByCategory,
+                    groupedOptions: groupedResults,
+                    filteredOptions: highlightedOptions,
+                    isSearchLoading: false, // Hide loading screen
+                    resultsFound: resultsFound
+                });
             });
         }
+    }, 500); // Set debounce delay to 500ms
     };
 
+    highlightMatchedCharacters(option, searchInput, isSearchLoading) {
+        const name = option.name.toLowerCase();
+        const searchRegex = new RegExp(`\\b${searchInput}`, 'i');
+        const match = name.match(searchRegex);
+        
+        if (!isSearchLoading && searchInput && match) {
+            // Match found and search input is not empty and not loading
+            const startIndex = match.index;
+            const endIndex = startIndex + searchInput.length;
+            const highlightedName = (
+                <span>
+                    {option.name.substring(0, startIndex)}
+                    <span style={{ fontWeight: "bold", color: "#2e2eff" }}>
+                        {option.name.substring(startIndex, endIndex)}
+                    </span>
+                    {option.name.substring(endIndex)}
+                </span>
+            );
+            return highlightedName;
+        } else {
+            // No match found or search input is empty or loading
+            return option.name;
+        }
+    }
+
+    currentSearchedCellEnter = (resultId) => {
+        this.setState({ hoveredResultId: resultId });
+    }
+
+    currentSearchedCellLeave = () => {
+        this.setState({ hoveredResultId: null });
+    }
+
     render () {
-        const { isSearchLoading, groupedOptions, resultsFound } = this.state;
+        const { isSearchLoading, groupedOptions, resultsFound, hoveredResultId } = this.state;
         const searchInput = this.state.searchedData.trim().toLowerCase();
         return (
             <Styles>
@@ -301,17 +432,52 @@ export default class Popup extends Component {
                                 }
                                 {!isSearchLoading && resultsFound && 
                                     Object.entries(groupedOptions).map(([category, options]) => (
-                                        // alert(options),
-                                        <div key={category}>
-                                            <h2>{category}</h2>
+                                        <div style={{borderBottom: "1px solid #ccc", paddingTop: "3.5%", paddingBottom: "3.5%"}} key={category}>
                                             {options.map(option => (
-                                                <div key={option.id}>{option.name}</div>
+                                                <div>
+                                                    {category !== "Code Snippet" ? 
+                                                    (
+                                                        <div 
+                                                        onMouseEnter={() => this.currentSearchedCellEnter(option.id)}
+                                                        onMouseLeave={this.currentSearchedCellLeave}
+                                                        style={{backgroundColor: hoveredResultId === option.id ? "#F0F1FF" : "transparent", color: hoveredResultId === option.id ? "#1C1C8E" : "black"}} 
+                                                        className='searchResultCell' 
+                                                        key={option.id}>
+                                                            <p className='searchResultOption'>{option.highlightedName}</p>
+                                                            <p className='searchResultCategory'>{category}</p>
+                                                        </div>
+                                                    ) : (
+                                                        <div 
+                                                        onMouseEnter={() => this.currentSearchedCellEnter(option.id)}
+                                                        onMouseLeave={this.currentSearchedCellLeave}
+                                                        style={{backgroundColor: hoveredResultId === option.id ? "#F0F1FF" : "transparent", color: hoveredResultId === option.id ? "#1C1C8E" : "black"}} 
+                                                        className='codeSnippetResult'>
+                                                            <div className='codeSnippetCommand'>
+                                                                <span style={{
+                                                                    backgroundColor: option.command !== "DELETE" ? option.command === "GET" ? "#e6f4fe" : "#d8eaed" : "#feeaed",
+                                                                    color: option.command !== "DELETE" ? option.command === "GET" ? "#0072dd"  : "#00815c" : "#cf375b"
+                                                                }}>{option.command}</span>
+                                                            </div>
+                                                            <div 
+                                                            className='codeSnippetLine' 
+                                                            key={option.id}>
+                                                                <p 
+                                                                style={{marginLeft: option.command !== "DELETE" ? option.command === "GET" ? "0px" : "3%" : "7%"}}
+                                                                className='searchResultOption'>/{option.highlightedName}</p>
+                                                                {/* <p className='searchResultCategory'>{category}</p> */}
+                                                            </div>
+                                                        </div>
+                                                    ) }
+                                                    
+                                                </div>
                                             ))}
                                         </div>
                                     ))
                                 }
                                 {!isSearchLoading && !resultsFound && 
-                                    <p>no results found</p>
+                                    <div>
+                                        <p>no results found</p>
+                                    </div>
                                 }
                             </div>
                         )}
