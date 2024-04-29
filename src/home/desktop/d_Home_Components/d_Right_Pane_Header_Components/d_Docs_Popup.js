@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group';
+import DocsSearchResults from './d_Docs_Search_Results_Popup'
+import ResultsData from "./d_Docs_Results"; // Import options from separate file
 
 const Styles = styled.div  `
 
         // - - - - - - POPUP CONTAINER - - - - - - //
 
 .popup-container {
-    // height: 40vh;
+    height: 40vh;
     position: absolute;
     width: 22.4%;
     background-color: white;
@@ -89,8 +91,8 @@ const Styles = styled.div  `
     // # BUTTON 
     
 .popup-docs-search button {
-    width: 100%;
-    padding: 0.1em;
+    width: 100% !important;
+    padding: 0.1em !important;
 }
 
     // # ICON
@@ -115,32 +117,150 @@ const Styles = styled.div  `
     outline: none;
 }
 
-
-
     // - POPUP SEE ALL BUTTON - //
 
 .popup-docs-see-all-btn button {
-    width: 90%;
-    background-color: #6363f1;
+    width: 90% !important;
+    background-color: #6363f1 !important;
     color: white;
-    padding: 5%;
+    padding: 5% !important;
     font-family: poppins;
     font-size: 70%;
     font-weight: bold;
 }
 
+    // - - SEARCH RESULTS - - //
+
+.searchResults {
+    width: 75%;
+    height: auto;
+    border: 1px solid #cccccc;
+    margin-top: 1.5%;
+    border-radius: 7px;
+}
+
 
 `
+
+class TrieNode {
+    constructor() {
+        this.children = {};
+        this.isEndOfWord = false;
+    }
+}
+
+class Trie {
+    constructor() {
+        this.root = new TrieNode();
+    }
+
+    insert(word) {
+        let current = this.root;
+        for (let char of word) {
+            if (!current.children[char]) {
+                current.children[char] = new TrieNode();
+            }
+            current = current.children[char];
+        }
+        current.isEndOfWord = true;
+    }
+
+    search(word) {
+        let current = this.root;
+        for (let char of word) {
+            if (!current.children[char]) {
+                return false;
+            }
+            current = current.children[char];
+        }
+        return current.isEndOfWord;
+    }
+
+    startsWith(prefix) {
+        let current = this.root;
+        for (let char of prefix) {
+            if (!current.children[char]) {
+                return false;
+            }
+            current = current.children[char];
+        }
+        return true;
+    }
+}
 
 export default class Popup extends Component {
     constructor() {
         super()
         this.state = {
+            searchedData: "",
+            filteredOptions: [], // Use imported options
+            isSearchLoading: false,
+            resultsFound: false
+        }
+        this.trie = new Trie(); // Initialize the trie
+    }
 
+    componentDidMount() {
+        // Populate the trie with options data
+        for (let option of ResultsData) {
+            this.trie.insert(option.name.toLowerCase());
         }
     }
 
+    groupBy = (array, key) => {
+        return array.reduce((result, currentValue) => {
+            (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
+            return result;
+        }, {});
+    }
+
+    handleSearchChange = (e) => {
+        const searchInput = e.target.value.toLowerCase();
+        if (searchInput.trim() === "") {
+            // Reset filteredOptions and loading state
+            this.setState({
+                searchedData: "",
+                filteredOptions: [],
+                isSearchLoading: false,
+                resultsFound: false
+            });
+        } else {
+            // Show loading screen and start search
+            this.setState({ isSearchLoading: true, searchedData: e.target.value}, () => {
+                setTimeout(() => {
+                    const filteredOptions = ResultsData.filter(option => {
+                        const words = option.name.toLowerCase().split(" ");
+                        return words.some(word => word.startsWith(searchInput));
+                    });
+
+                    const resultsFound = filteredOptions.length > 0; // Check if any results were found
+
+                    const groupedResults = this.groupBy(filteredOptions, 'category');
+                
+                    // Construct trie for each category
+                    const trieByCategory = {};
+                    Object.entries(groupedResults).forEach(([category, options]) => {
+                        trieByCategory[category] = new Trie();
+                        options.forEach(option => {
+                            trieByCategory[category].insert(option.name.toLowerCase());
+                        });
+                    });
+                    
+                    this.setState({
+                        trieByCategory,
+                        groupedOptions: groupedResults,
+                        filteredOptions,
+                        isSearchLoading: false, // Hide loading screen
+                        resultsFound: resultsFound
+                    });
+                }, 1000); // Simulated delay of 1 second
+            });
+        }
+    };
+
     render () {
+        const { isSearchLoading, groupedOptions, resultsFound } = this.state;
+        const searchInput = this.state.searchedData.trim().toLowerCase();
         return (
             <Styles>
                 {/* <CSSTransition
@@ -158,7 +278,10 @@ export default class Popup extends Component {
                                     </div>
                                     <div className='popup-docs-search-text'>
                                         <input
-                                
+                                        id='searchedData'
+                                        type="text"
+                                        value={this.state.searchedData}
+                                        onChange={this.handleSearchChange}
                                         />
                                     </div>
                                 </button>
@@ -168,6 +291,30 @@ export default class Popup extends Component {
                                 >All docs</button>
                             </div>
                         </div>
+                        {/* <DocsSearchResults/> */}
+                        {searchInput !== "" && (
+                            <div className='searchResults'>
+                                {isSearchLoading && 
+                                    <div>
+                                        <p>Loading...</p>
+                                    </div>
+                                }
+                                {!isSearchLoading && resultsFound && 
+                                    Object.entries(groupedOptions).map(([category, options]) => (
+                                        // alert(options),
+                                        <div key={category}>
+                                            <h2>{category}</h2>
+                                            {options.map(option => (
+                                                <div key={option.id}>{option.name}</div>
+                                            ))}
+                                        </div>
+                                    ))
+                                }
+                                {!isSearchLoading && !resultsFound && 
+                                    <p>no results found</p>
+                                }
+                            </div>
+                        )}
                     </div>
                 {/* </CSSTransition> */}
             </Styles>
