@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import HelpPopup from './d_Right_Pane_Header_Components/d_Help_Popup'
 import FeedbackPopup from './d_Right_Pane_Header_Components/d_Feedback_Popup'
 import DocsPopup from './d_Right_Pane_Header_Components/d_Docs_Popup'
+import DocsSelected from './d_Right_Pane_Header_Components/d_Docs_Selected_Popup'
 
 const Styles = styled.div `
 
@@ -10,6 +11,7 @@ const Styles = styled.div `
         // - - - - - - RIGHT PANE HEADER - - - - - - //
 
 .rightPaneHeader {
+    width: 100%;
     margin-top: 0.75%;
 }
 
@@ -309,7 +311,7 @@ export default class Header extends Component {
     }
 
     helpBtnEnter = () => {
-        this.setState({helpBtnHovered: true, helpTxtColor: "#2e2eff", helpBgColor: "#E7E7E7"})
+        this.setState({helpBtnHovered: true, helpTxtColor: "#2e2eff", helpBgColor: "#F6F7FF"})
     }
 
     helpBtnLeave = () => {
@@ -317,7 +319,7 @@ export default class Header extends Component {
     }
 
     feedbackBtnEnter = () => {
-        this.setState({feedbackBtnHovered: true, feedbackTxtColor: "#2e2eff", feedbackBgColor: "#E7E7E7"})
+        this.setState({feedbackBtnHovered: true, feedbackTxtColor: "#2e2eff", feedbackBgColor: "#F6F7FF"})
     }
 
     feedbackBtnLeave = () => {
@@ -325,7 +327,7 @@ export default class Header extends Component {
     }
 
     docsBtnEnter = () => {
-        this.setState({docsBtnHovered: true, docsTxtColor: "#2e2eff", docsBgColor: "#E7E7E7"})
+        this.setState({docsBtnHovered: true, docsTxtColor: "#2e2eff", docsBgColor: "#F6F7FF"})
     }
 
     docsBtnLeave = () => {
@@ -333,7 +335,7 @@ export default class Header extends Component {
     }
 
     toggleThemeEnter = () => {
-        this.setState({toggleThemeHovered: true, toggleThemeBtnBgColor: "#E7E7E7"})
+        this.setState({toggleThemeHovered: true, toggleThemeBtnBgColor: "#F6F7FF"})
     }
 
     toggleThemeLeave = () => {
@@ -345,7 +347,8 @@ export default class Header extends Component {
             <Styles>
                 <div className='rightPaneHeader'>
                     <div className='rightPaneLeftSide'>
-                        <p></p>
+                        {/* Don't remove */}
+                        <p></p> 
                     </div>
                     <div className='rightPaneRightSide'>
                         <div className='rightSideCol1'>
@@ -411,6 +414,9 @@ export default class Header extends Component {
                             </button>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <DocsSelected/>
                 </div>
             </Styles>
         )

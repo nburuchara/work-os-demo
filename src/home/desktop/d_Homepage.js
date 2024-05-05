@@ -20,6 +20,7 @@ import DesktopWebhooks from './d_Home_Pages/d_Webhooks/d_Webhooks'
 import DesktopEvents from './d_Home_Pages/d_Events/d_Events';
 import DesktopTestSSO from './d_Home_Pages/d_Test_SSO/d_Test_SSO';
 import RightPaneHeader from './d_Home_Components/d_Right_Pane_Header'
+import DocsSelectedPopup from './d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Selected_Popup'
 
 const Styles = styled.div `
     
@@ -239,6 +240,7 @@ export default class DesktopHome extends Component {
                         {/* - - - - TOP RIGHT HEADER - - - - - */}
                         
                         <RightPaneHeader/>
+
 
                         {/* - - - - MENU PAGES - - - - - */}
                         

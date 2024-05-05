@@ -1,23 +1,26 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
+import APIReference from '../../d_Home_Pages/d_Documentation_Demo/d_API_Reference'
 
 const Styles = styled.div  `
 
         // - - - - - - POPUP CONTAINER - - - - - - //
 
 .popup-container {
+    margin-left: 44.8%;
     // margin-top: 2%;
-    height: 20vh !important;
+    height: 70vh !important;
     position: absolute;
-    width: 68% !important;
+    width: 35.5% !important;
     background-color: white;
     border: 0.5px solid #cccd43 !important; 
     border-radius: 7px;
     padding: 0.75%;
     z-index: 999; /* Set a negative z-index to position it under other elements */
-    margin-top: 2%;
-    margin-left: 0.5% !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 6px 20px 0 rgba(0, 0, 0, 0.0) !important;
+    margin-top: 0.45%;
+    margin-right: 0.5% !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07) !important;
+    overflow: scroll;
 }
 
     // - - POPUP CONTAINER ANIMATION - - //
@@ -59,7 +62,7 @@ export default class Popup extends Component {
         return (
             <Styles>
                 <div className='popup-container'>
-
+                    <APIReference/>
                 </div>
             </Styles>
         )

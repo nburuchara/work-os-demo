@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group';
-import DocsSearchResults from './d_Docs_Search_Results_Popup'
+import DocsSelected from './d_Docs_Selected_Popup'
 import ResultsData from "./d_Docs_Results"; // Import options from separate file
+import GetExport from '../../d_Home_Pages/d_Documentation_Demo/d_Get_Export';
 
 const Styles = styled.div  `
 
@@ -19,7 +20,7 @@ const Styles = styled.div  `
     z-index: 999; /* Set a negative z-index to position it under other elements */
     margin-top: 0.5%;
     margin-left: 0.5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
     // - - POPUP CONTAINER ANIMATION - - //
@@ -42,13 +43,17 @@ const Styles = styled.div  `
 }
 
 .dialog-slide-exit-active {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
     transition: transform 500ms, opacity 500ms;
 }
 
 
     // - - POPUP HEADER - - //
+
+.popup-docs-header {
+    padding-bottom: 1.5%;
+}
 
 .popup-docs-header:after {
     content: "";
@@ -94,7 +99,7 @@ const Styles = styled.div  `
     width: 7%;
 }
 
-    // # BUTTON 
+    // # BUTTON CONTAINER
     
 .popup-docs-search button {
     cursor: text !important;
@@ -111,7 +116,7 @@ const Styles = styled.div  `
     margin-left: 2.5px;
 }
 
-    // # INPUT
+    // # TEXT INPUT
 
 .popup-docs-search-text input {
     margin-top: 1%;
@@ -123,6 +128,10 @@ const Styles = styled.div  `
 
 .popup-docs-search-text input:focus {
     outline: none;
+}
+
+.popup-docs-search-text input::placeholder {
+    color: #43474C;
 }
 
     // # CLOSE ICON & SPAN 
@@ -201,7 +210,7 @@ const Styles = styled.div  `
     cursor: pointer;
 }
 
-    // - CODE SNIPPET SEARCH RESULT - //
+    // - SEARCH RESULTS (CODE SNIPPETS)  - //
 
 .codeSnippetResult {
     text-align: left;
@@ -231,7 +240,12 @@ const Styles = styled.div  `
     width: 88%;
 }
 
-    // # COMMAND 
+.codeSnippetLineNoCommand {
+    // width: 100%;
+    
+}
+
+    // # COMMAND (GET/POST/DELETE) 
 
 .codeSnippetCommand span {
     font-size: 30%;
@@ -241,7 +255,7 @@ const Styles = styled.div  `
     font-weight: bold;
 }
 
-    // # LINE
+    // # CODE LINE TEXT
 
 .codeSnippetLine p {
     margin-top: 0px;
@@ -256,7 +270,201 @@ const Styles = styled.div  `
     margin-top: 0px;
     font-family: poppins;
     font-size: 72.5%;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis;
 }
+
+    // - - DOCS HOMESCREEN - - //
+
+.popup-docs-homescreen {
+    height: 90%;
+    overflow: scroll;
+    text-align: left;
+    margin-left: 0.75%;
+}
+
+.popup-docs-homescreen h4 {
+    font-size: 90%;
+    margin-top: 3%;
+    margin-bottom: 0.5%;
+    font-family: poppins;
+}
+
+.popup-docs-homescreen h5 {
+    font-size: 80%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: poppins;
+    color: #2e2eff;
+}
+
+    // - DOCS HOMESCREEN DROPDOWN - //
+
+.popup-docs-homescreen-dropdown {
+    width: 99%;
+}
+
+.popup-docs-homescreen-dropdown:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.popup-docs-homescreen-dropdown-title {
+    float: left;
+    text-align: left;
+    width: 90%;
+}
+
+.popup-docs-homescreen-dropdown-icon {
+    float: left;
+    text-align: left;
+    width: 10%;
+}
+
+    // # TEXT (TITLE)
+
+.popup-docs-homescreen-dropdown-title h4 {
+  
+}
+
+    // # ICON (ARROW)
+
+.popup-docs-homescreen-dropdown-icon img {
+    margin-top: 38.5%;
+    margin-left: 10%;
+    width: 50%;
+    cursor: pointer;
+}
+
+.popup-docs-dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.popup-docs-dropdown-arrow-rotated {
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+}
+
+    // # DROPDOWN SELECTION
+
+.popup-eocs-homescreen-dropdown-selection {
+    z-index: -1;
+}
+
+.popup-docs-homescreen-dropdown-selection p {
+    margin-top: 2%;
+    margin-bottom: 0px;
+    font-size: 75%;
+    color: #5e626a;
+    font-family: rubik;
+    font-weight: bold;
+}
+
+.popup-docs-homescreen-dropdown-selection h5 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 80%;
+}
+
+.popup-docs-homescreen-dropdown-selection h5::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Adjust thickness of underline */
+    background-color: #2e2eff; /* Adjust color of underline */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Animation transition */
+}
+
+.popup-docs-homescreen-dropdown-selection h5:hover::before {
+    width: 102%; /* Expand underline to cover text */
+}
+
+    // - POPUP DOCS HOMESCREEN SEPARATOR - //
+
+.popup-docs-home-separator {
+    width: 95%;
+    border-bottom: 1px solid #ccc;
+    margin-top: 2.5%;
+    transition: transform 0.5s ease; /* Add transition for smooth animation */
+    transform-origin: top; /* Set the transform origin */
+}
+    
+.slide-down {
+    transform: translateY(10vh); /* Slide the element down by its own height */
+}
+
+
+    // - DOCS HOMESCREEN OPTION (TO SELECT) - //
+
+.popup-docs-homescreen-option {
+    width: 94.5%;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 3%;
+    padding-right: 0.25%;
+}
+
+.popup-docs-homescreen-option:hover {
+    background-color: #F6F7FF;
+    // color: #1C1C8E;
+}
+
+.popup-docs-homescreen-option:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.popup-docs-homescreen-option-icon {
+    float: left;
+    text-align: center;
+    width: 20%;
+}
+
+.popup-docs-homescreen-option-title {
+    float: left;
+    text-align: left;
+    width: 80%;
+}
+
+    // # ICON / BUTTON CONTAINER
+
+.popup-docs-homescreen-option-icon button {
+    margin-top: 14.5% !important;
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.popup-docs-homescreen-option-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+    // # TEXT
+
+.popup-docs-homescreen-option-title p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: poppins;
+}
+
+.docs-homescreen-option-title {
+    font-weight: bold;
+    padding-top: 2.75%;
+    font-size: 77.5%;
+}
+
+.docs-homescreen-option-subtitle {
+    padding-right: 2%;
+    line-height: 1.2em;
+    padding-bottom: 5%;
+    font-size: 70%;
+} 
 
 `
 
@@ -310,6 +518,28 @@ export default class Popup extends Component {
     constructor() {
         super()
         this.state = {
+
+            //* - - POPUP HOMESCREEN - - *//
+
+            showDocsPopupHomescreen: true,
+            docsPopupDropdownClicked: false,
+            docsSelectionMenu: false,
+            userManagementTxtColor: "#2e2eff",
+            standAloneApisTxtColor: "black",
+            eventsWebhooksTxtColor: "black",
+            resourcesTxtColor: "black",
+            docsPopupHomeSeparator: true,
+            authKitLogoHovered: false,
+            enterpriseAuthHovered: false,
+            emailAndPasswordLogoHovered: false,
+            socialLoginLogoHovered: false,
+            multifactorAuthLogoHovered: false,
+            magicAuthLogoHovered: false,
+            justInTimeLogoHovered: false,
+            directoryLogoHovered: false,
+
+            //* - - SEARCH BAR - - *//
+
             searchedData: "",
             searchCloseBtn: false,
             filteredOptions: [], // Use imported options
@@ -318,7 +548,11 @@ export default class Popup extends Component {
             hoveredResultId: null,
             commandBgColor: "transparent",
             commandTxtColor: "transparent",
-            searchBarInFocus: false
+            searchBarInFocus: false,
+
+            //* - - DEMO DOCUMENTATION - - *//
+
+            showGetExportDocs: false
         }
         this.trie = new Trie(); // Initialize the trie
         this.inputRef = React.createRef();
@@ -346,7 +580,8 @@ export default class Popup extends Component {
         this.setState({
             searchedData: "",
             searchCloseBtn: false,
-            searchBarInFocus: true
+            searchBarInFocus: true,
+            showDocsPopupHomescreen: true
         })
         this.inputRef.current.focus(); // Keep the input in focus
     }
@@ -371,7 +606,7 @@ export default class Popup extends Component {
     // Clear previous timeout
     clearTimeout(this.searchTimeout);
 
-    this.setState({searchedData: e.target.value, isSearchLoading: true, searchCloseBtn: true})
+    this.setState({searchedData: e.target.value, isSearchLoading: true, searchCloseBtn: true, showDocsPopupHomescreen: false})
     
         // Set a new timeout to execute after 500ms
         this.searchTimeout = setTimeout(() => {
@@ -382,7 +617,8 @@ export default class Popup extends Component {
                     searchCloseBtn: false,
                     filteredOptions: [],
                     isSearchLoading: false,
-                    resultsFound: false
+                    resultsFound: false,
+                    showDocsPopupHomescreen: true
                 });
             } else {
                 // Show loading screen and start search
@@ -457,9 +693,54 @@ export default class Popup extends Component {
         this.setState({ hoveredResultId: null });
     }
 
+    docsDropdownClicked = () => {
+        this.setState(prevState => ({
+            docsPopupDropdownClicked: !prevState.docsPopupDropdownClicked,
+            docsSelectionMenu: !prevState.docsSelectionMenu,
+            docsPopupHomeSeparator: !prevState.docsPopupHomeSeparator
+        }));
+    }
+
+    authKitLogoEnter = () => {this.setState({authKitLogoHovered: true})}
+
+    authKitLogoLeave = () => {this.setState({authKitLogoHovered: false})}
+
+    enterpriseAuthLogoEnter = () => {this.setState({enterpriseAuthHovered: true})}
+
+    enterpriseAuthLogoLeave = () => {this.setState({enterpriseAuthHovered: false})}
+
+    emailAndPasswordEnter = () => {this.setState({emailAndPasswordLogoHovered: true})}
+
+    emailAndPasswordLeave = () => {this.setState({emailAndPasswordLogoHovered: false})}
+
+    socialLoginEnter = () => {this.setState({socialLoginLogoHovered: true})}
+
+    socialLoginLeave = () => {this.setState({socialLoginLogoHovered: false})}
+
+    multifactorAuthEnter = () => {this.setState({multifactorAuthLogoHovered: true})}
+
+    multifactorAuthLeave = () => {this.setState({multifactorAuthLogoHovered: false})}
+
+    magicAuthEnter = () => {this.setState({magicAuthLogoHovered: true})}
+
+    magicAuthLeave = () => {this.setState({magicAuthLogoHovered: false})}
+
+    justInTimeEnter = () => {this.setState({justInTimeLogoHovered: true})}
+
+    justInTimLeave = () => {this.setState({justInTimeLogoHovered: false})}
+
+    directoryEnter = () => {this.setState({directoryLogoHovered: true})}
+
+    directoryLeave = () => {this.setState({directoryLogoHovered: false})}
+
     render () {
+            //* - POPUP SEARCH BAR VARS - *//
         const { isSearchLoading, groupedOptions, resultsFound, hoveredResultId, searchCloseBtn, searchBarInFocus} = this.state;
         const searchInput = this.state.searchedData.trim().toLowerCase();
+
+            //* - POPUP HOMESCREEN VARS - *//
+        const { docsPopupDropdownClicked, authKitLogoHovered, enterpriseAuthHovered, emailAndPasswordLogoHovered, socialLoginLogoHovered, multifactorAuthLogoHovered, magicAuthLogoHovered, justInTimeLogoHovered, directoryLogoHovered} = this.state;
+
         return (
             <Styles>
                 {/* <CSSTransition
@@ -569,10 +850,8 @@ export default class Popup extends Component {
                                                                     </div>
                                                                 </div>
                                                             )}
-                                                            
                                                         </div>
                                                     )}
-                                                    
                                                 </div>
                                             ))}
                                         </div>
@@ -585,6 +864,190 @@ export default class Popup extends Component {
                                 }
                             </div>
                         )}
+                        {this.state.showDocsPopupHomescreen && 
+                            <div className='popup-docs-homescreen'>
+
+                                        {/* - - - - - USER MANAGEMENT - - - - - */}
+
+                                <div className='popup-docs-homescreen-dropdown'>
+                                    <div className='popup-docs-homescreen-dropdown-title'><h4>User Management</h4></div>
+                                    <div className='popup-docs-homescreen-dropdown-icon'>
+                                        <img 
+                                        onClick={this.docsDropdownClicked}
+                                        className={docsPopupDropdownClicked ? 'popup-docs-dropdown-arrow popup-docs-dropdown-arrow-rotated' : 'popup-docs-dropdown-arrow'}
+                                        src='/assets/env_select_dropdown.png' alt='no img available'/>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={this.state.docsSelectionMenu}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div className='popup-docs-homescreen-dropdown-selection'>
+                                        <div style={{width: "95%", borderBottom: "1px solid #2e2eff", marginTop: "1%"}}></div>
+                                        <p>Browse docs:</p>
+                                        <div><h5 className='popup-dropdown-user-management' style={{color: this.state.userManagementTxtColor}}>User Management</h5></div>
+                                        <div><h5 className='popup-dropdown-standalone-apis' style={{color: this.state.standAloneApisTxtColor}}>Standalone APIs</h5></div>
+                                        <div><h5 className='popup-dropdown-events-webhooks' style={{color: this.state.eventsWebhooksTxtColor}}>Events and webhooks</h5></div>
+                                        <div><h5 className='popup-dropdown-resources' style={{color: this.state.resourcesTxtColor}}>Resources</h5></div>
+                                        <div style={{width: "95%", borderBottom: "1px solid #2e2eff", marginTop: "2.5%"}}></div>
+                                    </div>
+                                    
+                                </CSSTransition>
+                                
+                                {this.state.docsPopupHomeSeparator && 
+                                    <div className={`popup-docs-home-separator ${this.state.docsPopupHomeSeparator ? '' : 'slide-down'}`}></div>
+                                } 
+
+                                    {/* - - - AUTHENTICATION - - -  */}
+
+                                <h5>Authentication</h5>
+
+                                    {/* - AUTH KIT - */}
+
+                                <div 
+                                onMouseEnter={this.authKitLogoEnter}
+                                onMouseLeave={this.authKitLogoLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: authKitLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img src={authKitLogoHovered ? '/assets/docs_popup_authkit_icon_color.png' : '/assets/docs_popup_authkit_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>AuthKit</p>
+                                        <p className='docs-homescreen-option-subtitle'>Fully customizable for authentication at any size.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - ENTERPRISE AUTH - */}
+
+                                <div 
+                                onMouseEnter={this.enterpriseAuthLogoEnter}
+                                onMouseLeave={this.enterpriseAuthLogoLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: enterpriseAuthHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img src={enterpriseAuthHovered ? '/assets/left_pane_authentication_icon_color.png' : '/assets/docs_popup_enterprise_auth_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Enterprise auth</p>
+                                        <p className='docs-homescreen-option-subtitle'>Single sign-on with email verification, identity linking, and auth policies.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - EMAIL AND PASSWORD - */}
+
+                                <div 
+                                onMouseEnter={this.emailAndPasswordEnter}
+                                onMouseLeave={this.emailAndPasswordLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: emailAndPasswordLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img src={emailAndPasswordLogoHovered ? '/assets/docs_popup_email_password_icon_color.png' : '/assets/docs_popup_email_password_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Email + Password</p>
+                                        <p className='docs-homescreen-option-subtitle'>Simple and secure sign-in experience for your users.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - SOCIAL LOGIN - */}
+
+                                <div 
+                                onMouseEnter={this.socialLoginEnter}
+                                onMouseLeave={this.socialLoginLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: socialLoginLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img style={{width: "25px", height: "25px"}} src={socialLoginLogoHovered ? '/assets/docs_popup_social_login_icon_color.png' : '/assets/docs_popup_social_login_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Social Login</p>
+                                        <p className='docs-homescreen-option-subtitle'>Authenticate users with providers like Google or Microsoft OAuth.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - MULTI-FACTOR AUTHENTICATION - */}
+
+                                <div 
+                                onMouseEnter={this.multifactorAuthEnter}
+                                onMouseLeave={this.multifactorAuthLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: multifactorAuthLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img src={multifactorAuthLogoHovered ? '/assets/docs_popup_multi_auth_icon_color.png' : '/assets/docs_popup_multi_auth_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Multi-Factor Auth</p>
+                                        <p className='docs-homescreen-option-subtitle'>Unlock additional authentication factors such as TOTP or SMS.</p>
+                                    </div>
+                                </div>
+                                
+                                {/* - MAGIC AUTH - */}
+
+                                <div 
+                                onMouseEnter={this.magicAuthEnter}
+                                onMouseLeave={this.magicAuthLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: magicAuthLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img style={{width: "25px", height: "25px"}} src={magicAuthLogoHovered ? '/assets/docs_popup_magic_auth_icon_color.png' : '/assets/docs_popup_magic_auth_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Magic Auth</p>
+                                        <p className='docs-homescreen-option-subtitle'>Allow passwordless sign-in with a six-digit code sent via email.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - - - PROVISIONING - - -  */}
+
+                                    <h5>Provisioning</h5>
+
+                                    {/* - JUST-IN-TIME - */}
+
+                                <div 
+                                onMouseEnter={this.justInTimeEnter}
+                                onMouseLeave={this.justInTimLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: justInTimeLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img src={justInTimeLogoHovered ? '/assets/docs_popup_just_in_time_icon_color.png' : '/assets/docs_popup_just_in_time_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Just-in-Time</p>
+                                        <p className='docs-homescreen-option-subtitle'>Automatically create user accounts during the first authentication.</p>
+                                    </div>
+                                </div>
+
+                                    {/* - DIRECTORY - */}
+
+                                <div 
+                                onMouseEnter={this.directoryEnter}
+                                onMouseLeave={this.directoryLeave}
+                                className='popup-docs-homescreen-option'>
+                                    <div className='popup-docs-homescreen-option-icon'>
+                                        <button style={{border: directoryLogoHovered ? "1px solid #ccc" : "1px solid transparent" }}>
+                                            <img style={{width: "25px", height: "25px"}} src={directoryLogoHovered ? '/assets/docs_popup_directory_icon_color.png' : '/assets/docs_popup_directory_icon.png' } alt='no img available'/>
+                                        </button>
+                                    </div>
+                                    <div className='popup-docs-homescreen-option-title'>
+                                        <p className='docs-homescreen-option-title'>Directory</p>
+                                        <p className='docs-homescreen-option-subtitle'>Create and manage user accounts synced from a directory source.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                        {this.state.showGetExportDocs && <GetExport/>}
                     </div>
                 {/* </CSSTransition> */}
             </Styles>

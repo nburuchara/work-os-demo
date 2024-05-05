@@ -4,16 +4,27 @@ const results = [
 
   //* - CODE SNIPPETS - *//
 
-  { id: 1, name: "auth/factors/:id", category: "Code Snippet", command: "DELETE"},
-  { id: 2, name: "auth/factors/:id", category: "Code Snippet", command: "GET"},
-  { id: 3, name: "auth/factors/:id/verify", category: "Code Snippet", command: "POST"},
-  { id: 4, name: "auth/factors/:id/challenge", category: "Code Snippet", command: "POST"},
-  { id: 5, name: "auth/factors/enroll", category: "Code Snippet", command: "POST"},
-  { id: 6, name: "authentication_challenge", category: "Code Snippet", command: ""},
-  { id: 7, name: "authentication_factor", category: "Code Snippet", command: ""},
-  { id: 8, name: "audit_logs/exports/:id", category: "Code Snippet", command: "GET"},
-  { id: 9, name: "audit_logs/exports/", category: "Code Snippet", command: "POST"},
-  { id: 10, name: "audit_logs_export", category: "Code Snippet", command: ""},
+  // { id: 1, name: "auth/factors/:id", category: "Code Snippet", command: "DELETE"},
+  // { id: 2, name: "auth/factors/:id", category: "Code Snippet", command: "GET"},
+  // { id: 3, name: "auth/factors/:id/verify", category: "Code Snippet", command: "POST"},
+  // { id: 4, name: "auth/factors/:id/challenge", category: "Code Snippet", command: "POST"},
+  // { id: 5, name: "auth/factors/enroll", category: "Code Snippet", command: "POST"},
+  // { id: 6, name: "authentication_challenge", category: "Code Snippet", command: ""},
+  // { id: 7, name: "authentication_factor", category: "Code Snippet", command: ""},
+  // { id: 8, name: "audit_logs/exports/:id", category: "Code Snippet", command: "GET"},
+  // { id: 9, name: "audit_logs/exports/", category: "Code Snippet", command: "POST"},
+  // { id: 10, name: "audit_logs_export", category: "Code Snippet", command: ""},
+
+  { id: 1, name: "auditLogs.getExport()", category: "Code Snippet", command: ""},
+  { id: 2, name: "auditLogs.createExport()", category: "Code Snippet", command: ""},
+  { id: 3, name: "auditLogs.createEvent()", category: "Code Snippet", command: ""},
+  { id: 4, name: "authkitMiddleware()", category: "Code Snippet", command: ""},
+  { id: 5, name: "interface AuditLogExport", category: "Code Snippet", command: ""},
+  { id: 6, name: "userManagement.authenticateWithOrganizationSelection()", category: "Code Snippet", command: ""},
+  { id: 7, name: "userManagement.authenticateWithTotp()", category: "Code Snippet", command: ""},
+  { id: 8, name: "userManagement.authenticateWithEmailVerification()", category: "Code Snippet", command: ""},
+  { id: 9, name: "userManagement.authenticateWithRefreshToken()", category: "Code Snippet", command: ""},
+  { id: 10, name: "userManagement.authenticateWithMagicAuth()", category: "Code Snippet", command: ""},
 
   //* - USER MANAGEMENT - *//
 
