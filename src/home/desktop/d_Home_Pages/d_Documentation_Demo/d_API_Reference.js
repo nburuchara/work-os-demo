@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
+import { hover } from '@testing-library/user-event/dist/hover'
 
 const Styles = styled.div `
 
@@ -161,7 +162,6 @@ const Styles = styled.div `
     text-align: left;
     width: 65%;
 }
-
     // # ICON
 
 .demo-docs-language-icon img {
@@ -177,6 +177,50 @@ const Styles = styled.div `
     font-size: 100%;
     margin-bottom: 0px;
     margin-top: 10%;
+}
+
+    // - CONTACT US (Client Library) - //
+
+.client-library-contact-us:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    //! - - Testing the API - - !//
+
+.testing-the-api-info-box {
+    background-color: #ededf1;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+.testing-the-api-info-box img {
+    width: 2.75%;
+    margin-left: 0.5%;
+    vertical-align: middle;
+    padding-bottom: 0.5%;
+    cursor: pointer;
+}
+
+.testing-the-api-info-box p {
+    color: #656971;
+    font-size: 67.5%;
+}
+
+.testing-the-api-info-box label {
+    color: #2c333b;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    //! - - API Keys - - !//
+
+.api-keys span {
+    background-color: #ededf1;
+    color: #2c333b;
+    font-family: inconsolata;
+    padding: 0.4%;
+    border-radius: 5px;
 }
 
 `
@@ -226,6 +270,12 @@ export default class APIReference extends Component {
                 })
             })
         }
+    }
+
+    toggleDropdown = (id) => {
+        this.setState(prevState => ({
+          isOpen: !prevState.isOpen,
+        }));
     }
 
     render () {
@@ -373,23 +423,37 @@ export default class APIReference extends Component {
                                 </button>
                             </div>
                         </div>
-                        <p style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label>Contact us</label> to request and SDK!</p>
+                        <p style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
                         <p>Install the SDK using the command below.</p>
                         <CodeSnippetStruct
                         id={0}
                         headerTabs={2}
-                        requestResponse={false}
-                        multiDoubleHeaders={true}
                         snippet="Install the WorkOS SDK"
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}
                         />
-                        {/* <CodeSnippetStruct 
+                        
+                    </div>
+                    <div className='demo-docs-separator'></div>
+                    <div className='demo-docs-section'>
+                        <h1>Testing the API</h1>
+                        <p>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
+                        <div className='testing-the-api-info-box'>
+                            <p><span style={{marginRight: "2%"}}><img src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/></span>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
+                        </div>
+                    </div>
+                    <div className='demo-docs-separator'></div>
+                    <div className='demo-docs-section'>
+                        <div className='api-keys'>
+                            <h1>API Keys</h1>
+                            <p>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
+                        </div>
+                        <CodeSnippetStruct 
                         id={1}
                         headerTabs={0}
                         snippet="Set API Key" 
                         updateSelectedLang={this.newLangSelected}
-                        selectedLang={this.state.currentSelectedLanguage}/> */}
+                        selectedLang={this.state.currentSelectedLanguage}/>
                     </div>
                 </div>
             </Styles>

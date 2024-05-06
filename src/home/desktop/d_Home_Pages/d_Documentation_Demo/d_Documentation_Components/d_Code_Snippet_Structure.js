@@ -5,6 +5,7 @@ import CodeSnippets from './CodeSnippets'
 
 const DropdownContainer = styled.div`
   position: relative;
+  z-index: 2;
 `;
 
 const SelectButtonRequest = styled.button`
@@ -246,6 +247,45 @@ const Styles = styled.div `
   margin-bottom: 0px !important;
 }
 
+  // - - REPLACE API POPUP - - //
+
+.replace-api-popup {
+  height: auto !important;
+  position: absolute;
+  width: 35.5% !important;
+  background-color: white;
+  border: 0.5px solid #cccd43 !important; 
+  border-radius: 7px;
+  padding: 1.5%;
+  z-index: 2; /* Set a negative z-index to position it under other elements */
+  margin-top: 0%;
+  // margin-right: 0.5% !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07) !important;
+  // overflow: scroll;
+}
+
+.replace-api-popup span {
+  background-color: #ededf1;
+}
+
+.replace-api-popup img {
+  width: 5%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.replace-api-popup p {
+  padding-top: 3% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  font-size: 65% !important;
+}
+
+.replace-api-popup label:hover {
+  text-decoration: underline:
+  cursor: pointer;
+}
+
 `
 
 export default class CodeSnippet extends Component {
@@ -260,6 +300,9 @@ export default class CodeSnippet extends Component {
             tab1Selected: true,
             tab2Selected: false,
             isOpen: false,
+            replaceApiPopup: false,
+            replaceApiClientPopup:false,
+            apiLabelHovered: false,
             selectedOption: null,
             prevLangSelected: "",
             showJSONTab: false,
@@ -301,8 +344,12 @@ export default class CodeSnippet extends Component {
 
     handleClickOutside = (event) => {
       const dropdownContainer = document.getElementById('dropdown-container');
-      if (dropdownContainer && !dropdownContainer.contains(event.target)) {
-          this.setState({ isOpen: false });
+      const button = document.getElementById('dropdown-button'); // Add id to the button
+
+      // Check if the click occurred outside the dropdown container and the button,
+      // unless toggleDropdown was clicked (isOpen remains true in that case)
+      if (dropdownContainer && button && !dropdownContainer.contains(event.target) && !button.contains(event.target) && !this.state.isOpen) {
+        this.setState({ isOpen: false });
       }
     }
 
@@ -314,14 +361,13 @@ export default class CodeSnippet extends Component {
       this.setState({copySnippetHovered: false})
     }
 
-    toggleDropdown = () => {
+    toggleDropdown = (id) => {
       this.setState(prevState => ({
-        isOpen: !prevState.isOpen
+        isOpen: !prevState.isOpen,
       }));
     }
   
     selectOption = (option, id, language) => {
-      console.log(option)
       this.setState({
         selectedOption: option,
         selectedDropdownLanguage: language,
@@ -369,12 +415,36 @@ export default class CodeSnippet extends Component {
       }
     }
 
+    handleApiKeyEnter = (event) => {
+      const target = event.target;
+      const skRegex = /sk_\w+/; // Regular expression to match "sk_..." pattern
+      const clientRegex = /^client_\w+/; // Regular expression to match "client_..." pattern at the beginning of the string
+      if (skRegex.test(target.innerText)) {
+        this.setState({
+          replaceApiPopup: true,
+          replaceApiClientPopup: false
+        });
+        
+      } else if (clientRegex.test(target.innerText)) {
+        this.setState({
+          replaceApiClientPopup: true,
+          replaceApiPopup: false
+        })
+      }
+    }    
+
+    handleApiKeyLeave = () => {
+     this.setState({replaceApiPopup: false, replaceApiClientPopup: false})
+    }
+
+    handleApiLabelEnter = () => {this.setState({apiLabelHovered: true})}
+
+    handleApiLabelLeave = () => {this.setState({apiLabelHovered: false})}
     render () {
 
-        const { tab1Selected, tab2Selected, requestSelected, responseSelected, isOpen, selectedOption, options } = this.state;
+        const { tab1Selected, tab2Selected, requestSelected, isOpen, selectedOption, options, replaceApiPopup, replaceApiClientPopup,  apiLabelHovered } = this.state;
         const { id, snippet } = this.props;
         const selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
-        console.log(selectedSnippet)
 
         if (!selectedSnippet) {
           return <div>Snippet not found.</div>;
@@ -386,7 +456,7 @@ export default class CodeSnippet extends Component {
         console.log(codeForSelectedLang)
     
         if (!codeForSelectedLang) {
-          return <div>Code snippet not available for selected language.</div>;
+          return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.state.selectedDropdownLanguage}</label>.</p></div>;
         }
 
         return (
@@ -445,8 +515,8 @@ export default class CodeSnippet extends Component {
                       </div>
                       <div className='code-snippet-language' id="dropdown-container">
                         {requestSelected && 
-                          <DropdownContainer>
-                            <SelectButtonRequest onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
+                          <DropdownContainer id={`dropdown-container-${this.props.id}`}>
+                            <SelectButtonRequest id="dropdown-button" onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
                             <DropdownContent isOpen={isOpen}>
                               {options.map(option => (
                                 <DropdownItem
@@ -473,15 +543,32 @@ export default class CodeSnippet extends Component {
                         onMouseEnter={this.codeSnippetCopyEnter}
                         onMouseLeave={this.codeSnippetCopyLeave}
                         style={{backgroundColor: this.state.copySnippetHovered ? "#e9e9f0": "transparent"}}>
-                            <img src='/assets/demo_doc_copy_icon.png' alt='no img available'/>
+                            <span><img src='/assets/demo_doc_copy_icon.png' alt='no img available'/></span>
                         </button>
                       </div>
                     </div>
                     <div className='code-snippet-body'>
+                        {replaceApiPopup && 
+                          <div className='replace-api-popup'>
+                            <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
+                            <p>Replace this with your secret key found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
+                          </div>
+                        }
+                        {replaceApiClientPopup && 
+                          <div className='replace-api-popup'>
+                            <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
+                            <p>Replace this with your client ID found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
+                          </div>
+                        }
                       <div>
                         {codeForSelectedLang.map((line, index) => (
                             <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap' }}>
-                              <p style={{fontSize: "70%", fontFamily: "inconsolata"}} dangerouslySetInnerHTML={{ __html: line }}></p>
+                              <p 
+                              style={{fontSize: "70%", fontFamily: "inconsolata"}} 
+                              dangerouslySetInnerHTML={{ __html: line }}
+                              onClick={this.handleApiKeyEnter}
+                              >
+                              </p>
                             </pre>
                         ))}
                       </div>
