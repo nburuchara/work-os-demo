@@ -14,7 +14,7 @@ const Styles = styled.div  `
     width: 35.5% !important;
     background-color: white;
     border: 0.5px solid #cccd43 !important; 
-    border-radius: 7px;
+    border-radius: 9px;
     padding: 0.75%;
     z-index: 999; /* Set a negative z-index to position it under other elements */
     margin-top: 0.45%;

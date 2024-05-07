@@ -21,6 +21,11 @@ const Styles = styled.div `
     font-size: 120%;
 }
 
+.demo-docs-section h3 {
+    font-size: 95%;
+    font-family: poppins;
+}
+
 .demo-docs-section p {
     font-family: poppins;
     font-size: 90%;
@@ -223,6 +228,48 @@ const Styles = styled.div `
     border-radius: 5px;
 }
 
+    //! - - Errors - - !//
+
+.errors {
+    border-bottom: 1px solid #ccc;
+}
+
+.errors-cell {
+    border-top: 1px solid #ccc;
+    padding: 3%;
+}
+
+.errors-cell span {
+    padding: 1%;
+    font-size: 75%;
+    font-weight: bold;
+    border-radius: 30px;
+    font-family: rubik;
+    margin-right: 5%;
+}
+
+.errors-cell label {
+    font-family: poppins;
+    font-size: 70%;
+    margin-top: 5%;
+    color: #5e626a;
+}
+
+.inline-errors-cell-span {
+    padding: 0px !important;
+    font-size: 100%  !important;
+    font-weight: normal  !important;
+    border-radius: 0px  !important;
+    font-family: poppins  !important;
+    margin-right: 0px  !important;
+    color: #6363f1;
+}
+
+.inline-errors-cell-span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 `
 
 export default class APIReference extends Component {
@@ -247,6 +294,13 @@ export default class APIReference extends Component {
             yarnSelected: false,
             bundlerSelected: false,
             gradleSelected: false,
+
+            //* - - ERRORS - - *//
+
+            error_2xx: true,
+            error_4xx: true,
+            error_5xx: true,
+            
         }
     }
 
@@ -281,6 +335,7 @@ export default class APIReference extends Component {
     render () {
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
+        const {error_2xx, error_4xx, error_5xx} = this.state;
         return(
             <Styles>
                 <div className='demo-docs-container'>
@@ -425,6 +480,7 @@ export default class APIReference extends Component {
                         </div>
                         <p style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
                         <p>Install the SDK using the command below.</p>
+
                         <CodeSnippetStruct
                         id={0}
                         headerTabs={2}
@@ -448,10 +504,66 @@ export default class APIReference extends Component {
                             <h1>API Keys</h1>
                             <p>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
                         </div>
+
                         <CodeSnippetStruct 
                         id={1}
                         headerTabs={0}
                         snippet="Set API Key" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+                        
+                        <p>You can view and manage your API keys in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                        <h3>Secure your API Keys</h3>
+                        <div className='api-keys'>
+                            <p>API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with <span>sk_</span>.</p>
+                        </div>
+                        <h3>In Staging</h3>
+                        <p>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
+                        <h3>In Production</h3>
+                        <p>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
+                    </div>
+                    <div className='demo-docs-separator'></div>
+                    <div className='demo-docs-section'>
+                        <h1>Errors</h1>
+                        <p>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
+                        <div className='errors'>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_2xx ? "#d8eaed" : "", color: error_2xx ? "#00815c" : ""}}>200</span><label>Successful request.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>400</span><label>The request was not acceptable. Check that the parameters were correct.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>401</span><label>The API key used was invalid.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>403</span><label>The API key used did not have the correct permissions.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>404</span><label>The resource was not found.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label>Validation failed for the request. Check that the parameters were correct.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label>Too many requests. Refer to the <span className='inline-errors-cell-span'>Rate Limits</span> section.</label>
+                            </div>
+                            <div className='errors-cell'>
+                                <span style={{backgroundColor: error_5xx ? "#feeaed" : "", color: error_2xx ? "#ce3358" : ""}}>5xx</span><label>Indicates an error with WorkOS servers</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='demo-docs-separator'></div>
+                    <div className='demo-docs-section'>
+                        <h1>Pagination</h1>
+                        <div className='api-keys'>
+                            <p>Many top-level resources have support for bulk fetches via list API methods. For instance, you can <label className='demo-docs-hyperlink'>list connections</label>, <label className='demo-docs-hyperlink'>list directory users</label>, and <label className='demo-docs-hyperlink'>list directory groups</label>. These list API methods share a common structure, taking at least these four parameters: <span>limit</span>, <span>order</span>, <span>after</span>, and  <span>before</span></p>
+                            <p>WorkOS utilizes pagination via the <span>after</span> and <span>before</span> Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.</p>
+                        </div>
+                        <CodeSnippetStruct 
+                        id={2}
+                        headerTabs={0}
+                        snippet="Pagination" 
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}/>
                     </div>

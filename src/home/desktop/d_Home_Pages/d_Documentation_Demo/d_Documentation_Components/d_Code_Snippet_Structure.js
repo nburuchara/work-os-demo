@@ -239,7 +239,7 @@ const Styles = styled.div `
 .code-snippet-body p {
   margin-top: 1.25% !important;
   margin-bottom: 1.25% !important;
-  font-size: 85% !important;
+  font-size: 78% !important;
 }
 
 .code-snippet-body pre {
@@ -252,7 +252,8 @@ const Styles = styled.div `
 .replace-api-popup {
   height: auto !important;
   position: absolute;
-  width: 35.5% !important;
+  width: auto !important;
+  max-width: 48.5% !important;
   background-color: white;
   border: 0.5px solid #cccd43 !important; 
   border-radius: 7px;
@@ -278,12 +279,22 @@ const Styles = styled.div `
   padding-top: 3% !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  font-size: 65% !important;
+  font-size: 70% !important;
 }
 
 .replace-api-popup label:hover {
   text-decoration: underline:
   cursor: pointer;
+}
+
+  // - - SELECTED API EXPLAINER POPUP - - //
+
+.selected-api-explainer span {
+  background-color: transparent;
+}
+
+.selected-api-explainer p {
+  font-size: 80% !important;
 }
 
 `
@@ -319,7 +330,12 @@ export default class CodeSnippet extends Component {
               {id: 'dotnet', lang:'.NET'}
             ],
             showRequestCode: false,
-            showReponseCode: false
+            showReponseCode: false,
+
+            //* - - API HYPERLINKS - - *//
+            secretKeyApiPopup: false,
+            apiExplainerPopup: false,
+            currentApiExplainer: ""
         }
     }
 
@@ -380,7 +396,7 @@ export default class CodeSnippet extends Component {
 
     requestCallClicked = () => {
       if (this.state.showJSONTab === true) {
-        this.setState({requestSelected: true})
+        this.setState({requestSelected: true, showJSONTab: false})
       }
       this.setState({
         tab1Selected: true,
@@ -391,7 +407,7 @@ export default class CodeSnippet extends Component {
     }
 
     responseCallClicked = (secondLang) => {
-      if (secondLang === "" || secondLang === undefined) {
+      if (secondLang === "Response") {
         this.setState({
           tab1Selected: false,
           tab2Selected: true,
@@ -419,32 +435,59 @@ export default class CodeSnippet extends Component {
       const target = event.target;
       const skRegex = /sk_\w+/; // Regular expression to match "sk_..." pattern
       const clientRegex = /^client_\w+/; // Regular expression to match "client_..." pattern at the beginning of the string
+      const listRegex = /\blist\b/;
+      const listConnectionRegex = /^listConnection\w+/; // Regular expression to match "listConnection..." pattern at the beginning of the string
+      const list_connectionRegex = /\blist_connections\w*/; // Regular expression to match "list_connection..." pattern at the beginning of the string
+      const list_metadataRegex = /\blist_metadata\w*/; // Regular expression to match "list_metadata..." pattern at the beginning of the string
+      const current_pageRegex = /\bcurrent_page\w*/; // Regular expression to match "current_page..." pattern at the beginning of the string
+      const responseRegex = /\bresponse\b/; // Regular expression to match "response..." pattern at the beginning of the string
       if (skRegex.test(target.innerText)) {
-        this.setState({
-          replaceApiPopup: true,
-          replaceApiClientPopup: false
-        });
-        
+        this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
       } else if (clientRegex.test(target.innerText)) {
-        this.setState({
-          replaceApiClientPopup: true,
-          replaceApiPopup: false
-        })
+        this.setState({replaceApiClientPopup: true, replaceApiPopup: false, secretKeyApiPopup: false, apiExplainerPopup: false})
+      } else if (listConnectionRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: "listConnection",replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (list_connectionRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `list_connections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (listRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `list_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (list_metadataRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `list_metadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (current_pageRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `current_page_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (responseRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `response_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
       }
     }    
 
     handleApiKeyLeave = () => {
-     this.setState({replaceApiPopup: false, replaceApiClientPopup: false})
+     this.setState({replaceApiPopup: false, replaceApiClientPopup: false, secretKeyApiPopup: false, apiExplainerPopup: false})
+    }
+
+    scrollToApiPopup = () => {
+      const element = document.getElementById('code-snippet-body');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     handleApiLabelEnter = () => {this.setState({apiLabelHovered: true})}
 
     handleApiLabelLeave = () => {this.setState({apiLabelHovered: false})}
+
+
     render () {
 
         const { tab1Selected, tab2Selected, requestSelected, isOpen, selectedOption, options, replaceApiPopup, replaceApiClientPopup,  apiLabelHovered } = this.state;
         const { id, snippet } = this.props;
         const selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
+        const { secretKeyApiPopup, apiExplainerPopup, currentApiExplainer } = this.state;
 
         if (!selectedSnippet) {
           return <div>Snippet not found.</div>;
@@ -453,7 +496,15 @@ export default class CodeSnippet extends Component {
         const selectedLang = this.props.selectedLang.toLowerCase(); // Assuming selectedLang is in lowercase
         const codeForSelectedLang = selectedSnippet.code[selectedLang];
 
-        console.log(codeForSelectedLang)
+        let selectedApiExplainer = ""
+        
+        if (currentApiExplainer !== "") {
+          selectedApiExplainer = selectedSnippet.apiEpxlainers[currentApiExplainer]
+        }
+        
+        // if (!selectedApiExplainer) {
+        //   return <div><p>No API explanation</p></div>
+        // }
     
         if (!codeForSelectedLang) {
           return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.state.selectedDropdownLanguage}</label>.</p></div>;
@@ -549,13 +600,27 @@ export default class CodeSnippet extends Component {
                     </div>
                     <div className='code-snippet-body'>
                         {replaceApiPopup && 
-                          <div className='replace-api-popup'>
+                          <div id="code-snippet-body" className='replace-api-popup'>
                             <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
-                            <p>Replace this with your secret key found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
+                            {secretKeyApiPopup && <p>Replace this with your secret key found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>}
+                            {apiExplainerPopup && 
+                              <div className='selected-api-explainer'>
+                                {selectedApiExplainer.map((line, index) => {
+                                  return(
+                                    <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap' }}>
+                                      <p 
+                                      style={{fontSize: "80%", fontFamily: "inconsolata"}} 
+                                      dangerouslySetInnerHTML={{ __html: line }}>
+                                      </p>
+                                    </pre>
+                                  )
+                                })}
+                              </div>
+                            }
                           </div>
                         }
                         {replaceApiClientPopup && 
-                          <div className='replace-api-popup'>
+                          <div id="code-snippet-body" className='replace-api-popup'>
                             <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
                             <p>Replace this with your client ID found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
                           </div>
@@ -564,7 +629,7 @@ export default class CodeSnippet extends Component {
                         {codeForSelectedLang.map((line, index) => (
                             <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap' }}>
                               <p 
-                              style={{fontSize: "70%", fontFamily: "inconsolata"}} 
+                              style={{fontSize: "60%", fontFamily: "inconsolata"}} 
                               dangerouslySetInnerHTML={{ __html: line }}
                               onClick={this.handleApiKeyEnter}
                               >
