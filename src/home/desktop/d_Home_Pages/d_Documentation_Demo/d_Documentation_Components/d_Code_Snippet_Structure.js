@@ -255,13 +255,13 @@ const Styles = styled.div `
   width: auto !important;
   max-width: auto !important;
   background-color: white;
-  border: 0.5px solid #cccd43 !important; 
+  border: 0.5px solid #6363f1 !important; 
   border-radius: 7px;
   padding: 1.5%;
   z-index: 2; /* Set a negative z-index to position it under other elements */
   margin-top: 0%;
   // margin-right: 0.5% !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
   // overflow: scroll;
 }
 
@@ -517,7 +517,7 @@ export default class CodeSnippet extends Component {
         const selectedLang = this.props.selectedLang.toLowerCase(); // Assuming selectedLang is in lowercase
         const codeForSelectedLang = selectedSnippet.code[selectedLang];
 
-        let selectedApiExplainer = ""
+        let selectedApiExplainer = null
         
         if (currentApiExplainer !== "") {
           selectedApiExplainer = selectedSnippet.apiEpxlainers[currentApiExplainer]
@@ -528,7 +528,7 @@ export default class CodeSnippet extends Component {
         // }
     
         if (!codeForSelectedLang) {
-          return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.state.selectedDropdownLanguage}</label>.</p></div>;
+          return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.props.selectedLang.charAt(0).toUpperCase() + this.props.selectedLang.slice(1)}</label>.</p></div>;
         }
 
         return (

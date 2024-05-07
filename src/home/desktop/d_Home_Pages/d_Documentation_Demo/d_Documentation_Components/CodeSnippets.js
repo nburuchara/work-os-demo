@@ -140,7 +140,7 @@ const codeSnippets = [
           // Add more languages and their respective lines of code
         },
     },
-    { //* Request Response
+    { //* Pagination
         id: 2,
         title: "Pagination",
         doubleHeaders: {
@@ -358,7 +358,34 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">22</span> };'
           ],
           json: [
-            '// testing'
+            '<span style="color: #8b8d98;">1</span> {',
+            '<span style="color: #8b8d98;">2</span>   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> [',
+            '<span style="color: #8b8d98;">3</span>     {',
+            '<span style="color: #8b8d98;">4</span>       <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection"</span>,',
+            '<span style="color: #8b8d98;">5</span>       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+            '<span style="color: #8b8d98;">6</span>       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+            '<span style="color: #8b8d98;">7</span>       <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"GoogleOAuth"</span>,',
+            '<span style="color: #8b8d98;">8</span>       <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp"</span>,',
+            '<span style="color: #8b8d98;">9</span>       <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+            '<span style="color: #8b8d98;">10</span>      <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+            '<span style="color: #8b8d98;">11</span>      <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:08:33.155Z"</span>',
+            '<span style="color: #8b8d98;">12</span>    },',
+            '<span style="color: #8b8d98;">13</span>    {',
+            '<span style="color: #8b8d98;">14</span>      <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection"</span>,',
+            '<span style="color: #8b8d98;">15</span>      <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01E2NPPCT7XQ2MVVYDHWGK1WN4"</span>,',
+            '<span style="color: #8b8d98;">16</span>      <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+            '<span style="color: #8b8d98;">17</span>      <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"OktaSAML"</span>,',
+            '<span style="color: #8b8d98;">18</span>      <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Example Co"</span>,',
+            '<span style="color: #8b8d98;">19</span>      <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+            '<span style="color: #8b8d98;">20</span>      <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:09:33.155Z"</span>,',
+            '<span style="color: #8b8d98;">21</span>      <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:10:33.155Z"</span>',
+            '<span style="color: #8b8d98;">22</span>    },',
+            '<span style="color: #8b8d98;">23</span>  ],',
+            '<span style="color: #8b8d98;">24</span>  <span style="color: #0072dd;">"list_metadata"</span><span style="color: #ce3559;">:</span> {',
+            '<span style="color: #8b8d98;">25</span>    <span style="color: #0072dd;">"before"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01E2NPPCT7XQ2MVVYDHWGK1WN4"</span>,',
+            '<span style="color: #8b8d98;">26</span>    <span style="color: #0072dd;">"after"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">null</span>',
+            '<span style="color: #8b8d98;">27</span>   }',
+            '<span style="color: #8b8d98;">28</span> }',
           ]
         },
         apiEpxlainers: {

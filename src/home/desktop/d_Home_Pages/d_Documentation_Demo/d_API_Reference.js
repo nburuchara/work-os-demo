@@ -567,6 +567,10 @@ export default class APIReference extends Component {
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}/>
                     </div>
+                    <div className='demo-docs-separator'></div>
+                    <div className='demo-docs-section'>
+                        <h1>rest of the docs ...</h1>
+                    </div>
                 </div>
             </Styles>
         )
