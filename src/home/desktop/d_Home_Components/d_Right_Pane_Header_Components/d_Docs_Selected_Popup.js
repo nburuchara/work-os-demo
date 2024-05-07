@@ -20,7 +20,6 @@ const Styles = styled.div  `
     margin-top: 0.45%;
     margin-right: 0.5% !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07) !important;
-    overflow: scroll;
 }
 
     // - - POPUP CONTAINER ANIMATION - - //
@@ -48,20 +47,25 @@ const Styles = styled.div  `
     transition: transform 500ms, opacity 500ms;
 }
 
+    // - - DOCS SIDEBAR - - //
+
+
 `
 
 export default class Popup extends Component {
     constructor() {
         super() 
         this.state = {
-
+           scrollEnabled: false
         }
     }
 
     render () {
+        const { scrollEnabled } = this.state;
+
         return (
             <Styles>
-                <div className='popup-container'>
+                <div style={{overflow: scrollEnabled ? "scroll" : "hidden"}} className='popup-container'>
                     <APIReference/>
                 </div>
             </Styles>
