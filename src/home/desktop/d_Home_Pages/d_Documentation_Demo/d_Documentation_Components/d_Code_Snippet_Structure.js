@@ -253,7 +253,7 @@ const Styles = styled.div `
   height: auto !important;
   position: absolute;
   width: auto !important;
-  max-width: 48.5% !important;
+  max-width: auto !important;
   background-color: white;
   border: 0.5px solid #cccd43 !important; 
   border-radius: 7px;
@@ -270,7 +270,8 @@ const Styles = styled.div `
 }
 
 .replace-api-popup img {
-  width: 5%;
+  width: 12px;
+  height: 12px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
@@ -436,20 +437,28 @@ export default class CodeSnippet extends Component {
       const skRegex = /sk_\w+/; // Regular expression to match "sk_..." pattern
       const clientRegex = /^client_\w+/; // Regular expression to match "client_..." pattern at the beginning of the string
       const listRegex = /\blist\b/;
-      const listConnectionRegex = /^listConnection\w+/; // Regular expression to match "listConnection..." pattern at the beginning of the string
+      const listConnectionRegex = /\blistConnection\w*/; // Regular expression to match "listConnection..." pattern at the beginning of the string
       const list_connectionRegex = /\blist_connections\w*/; // Regular expression to match "list_connection..." pattern at the beginning of the string
+      const ListConnectionRegex = /\bListConnections\w*/; // Regular expression to match "ListConnection..." pattern at the beginning of the string
       const list_metadataRegex = /\blist_metadata\w*/; // Regular expression to match "list_metadata..." pattern at the beginning of the string
+      const ListMetadataRegex = /\bListMetadata\w*/; // Regular expression to match "ListMetadata..." pattern at the beginning of the string
+      const listMetadataRegex = /\blistMetadata\w*/; // Regular expression to match "listMetadata..." pattern at the beginning of the string
       const current_pageRegex = /\bcurrent_page\w*/; // Regular expression to match "current_page..." pattern at the beginning of the string
+      const currentPageRegex = /\bcurrentPage\w*/; // Regular expression to match "currentPage..." pattern at the beginning of the string
       const responseRegex = /\bresponse\b/; // Regular expression to match "response..." pattern at the beginning of the string
+      
       if (skRegex.test(target.innerText)) {
         this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
       } else if (clientRegex.test(target.innerText)) {
         this.setState({replaceApiClientPopup: true, replaceApiPopup: false, secretKeyApiPopup: false, apiExplainerPopup: false})
       } else if (listConnectionRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: "listConnection",replaceApiPopup: true,secretKeyApiPopup: false
+        this.setState({currentApiExplainer: `listConnections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
       } else if (list_connectionRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `list_connections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (ListConnectionRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `ListConnections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
       } else if (listRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `list_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
@@ -463,7 +472,19 @@ export default class CodeSnippet extends Component {
       } else if (responseRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `response_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (ListMetadataRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `ListMetadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (currentPageRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `currentPage_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (listMetadataRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `listMetadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
       }
+      setTimeout(() => {
+        this.scrollToApiPopup()
+      }, 500)
     }    
 
     handleApiKeyLeave = () => {
