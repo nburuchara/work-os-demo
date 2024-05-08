@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
 import { hover } from '@testing-library/user-event/dist/hover'
 import { CSSTransition } from 'react-transition-group';
+import SidebarOptions from './Documentation_Menu_Options'
 
 const Styles = styled.div `
 
@@ -407,6 +408,7 @@ export default class APIReference extends Component {
             mOption2Gap: "40px",
             mOption3Gap: "80px",
             mOption4Gap: "120px",
+            selectedMenuOption: "",
 
             //* - - COPY BUTTON (for 1st code snippet) - - *//
             
@@ -480,6 +482,21 @@ export default class APIReference extends Component {
         } 
     }
 
+    renderObjects = (objects) => {
+        return objects.map(obj => (
+            <div key={obj.id}>
+              <h5>Name: {obj.levelName}</h5>
+              {/* Recursively render children */}
+              {obj.sections && obj.sections.length > 0 && (
+                
+                <div style={{ marginLeft: '0px' }}>
+                  {this.renderObjects(obj.sections)}
+                </div>
+              )}
+            </div>
+        ));
+    }
+
     render () {
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
@@ -492,14 +509,15 @@ export default class APIReference extends Component {
                             <img src='/assets/workos_logo_icon.png' alt='no img available'/>
                             <h5>Quick Access Docs</h5>
                         </div>
-                        {menuSubsections && 
+                        {/* {menuSubsections && 
                             <div className='demo-docs-sidebar-subsections'> 
                                 <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
                                 <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
                                 <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
                                 <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
                             </div>
-                        }
+                        } */}
+                        {this.renderObjects(SidebarOptions)}
                     </div>
                     <div className='demo-docs-container'>
                         <div className='demo-docs-section'>
