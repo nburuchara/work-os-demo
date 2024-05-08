@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
 import { hover } from '@testing-library/user-event/dist/hover'
+import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div `
 
@@ -31,11 +32,96 @@ const Styles = styled.div `
 
 .demo-docs-sidebar-logo h5 {
     margin-top: 0px;
+    margin-bottom: 6%;
     color: #2e2eff;
     margin-left: 3%;
 }
-        
 
+    // - - SIDEBAR SUBSECTIONS - - //
+
+.demo-docs-sidebar-subsections {
+    border-top: 1px solid #ccc;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    position: relative;
+}
+
+.demo-docs-sidebar-subsections p {
+    font-size: 75%;
+    // font-family: poppins;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 4%;
+    padding-left: 2%;
+}
+
+.demo-docs-sidebar-subsections label:hover {
+    text-decoration: underline;
+    text-decoration-color: #6363f1;
+    cursor: pointer;
+}   
+
+.demo-docs-sidebar-subsections div {
+    background-color: ;
+    padding: 0.95%;
+    border-radius: 8px;
+    width: 90%;
+    margin-top: 3.5%;
+    transition: top 5s ease;
+}
+
+.demo-docs-sidebar-subsections div:hover {
+    background-color: #ECEDFE;
+}
+
+/* CSS Transition Definitions */
+.dialog-slide-enter {
+    transform: translateY(10%) !important;
+    opacity: 0 !important;
+}
+
+.dialog-slide-enter-active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.dialog-slide-exit {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.dialog-slide-exit-active {
+    transform: translateY(20%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.menuOption1 {
+    position: absolute;
+    top: 0px;
+    transition: top 0.75s ease !important; /* Add transition for smooth movement */
+}
+
+.menuOption2 {
+    position: absolute;
+    top: 40px;
+    transition: top 0.75s ease !important; /* Add transition for smooth movement */
+}
+
+.menuOption3 {
+    position: absolute;
+    top: 80px;
+    transition: top 0.75s ease !important; /* Add transition for smooth movement */
+}
+
+.menuOption4 {
+    position: absolute;
+    top: 120px;
+    transition: top 0.75s ease !important; /* Add transition for smooth movement */
+}
+        
         // - - - - - - DEMO DOCS CONTAINER - - - - - - //
 
 .demo-docs-container {
@@ -313,6 +399,14 @@ export default class APIReference extends Component {
 
             showDocsMenu: true,
             menuSubsections: true,
+            menuOption1: false,
+            menuOption2: false,
+            menuOption3: false,
+            menuOption4: false,
+            mOption1Gap: "0px",
+            mOption2Gap: "40px",
+            mOption3Gap: "80px",
+            mOption4Gap: "120px",
 
             //* - - COPY BUTTON (for 1st code snippet) - - *//
             
@@ -373,11 +467,24 @@ export default class APIReference extends Component {
         }));
     }
 
+    menuOptionClicked = (option) => {
+        for (let i = 1; i <= 4; i++) {
+            this.setState({
+                [`mOption${i}Gap`]: "0px"
+            })
+            if (option === i) {
+                this.setState({
+                    [`menuOption${i}`]: true 
+                })
+            }
+        } 
+    }
+
     render () {
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
         const {error_2xx, error_4xx, error_5xx} = this.state;
-        const { menuSubsections } = this.state;
+        const { menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
         return(
             <Styles>
                     <div className='demo-docs-sidebar'>
@@ -386,8 +493,11 @@ export default class APIReference extends Component {
                             <h5>Quick Access Docs</h5>
                         </div>
                         {menuSubsections && 
-                            <div>
-                                <button></button>
+                            <div className='demo-docs-sidebar-subsections'> 
+                                <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
+                                <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
+                                <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
+                                <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
                             </div>
                         }
                     </div>
