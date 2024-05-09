@@ -11,6 +11,7 @@ const Styles = styled.div `
         // - - - - - - DEMO DOCS SIDEBAR - - - - - //
 
 .demo-docs-sidebar {
+    transition: top 0.75s ease;
     position: absolute; 
     bottom: 0; 
     height: auto;
@@ -23,11 +24,13 @@ const Styles = styled.div `
 }
 
 .demo-docs-sidebar-logo {
+    position: sticky;
     text-align: left;
     margin-left: 8%;
 }
 
 .demo-docs-sidebar-logo img {
+    position: sticky;
     margin-top: 8%;
     width: 60%;
 }
@@ -94,6 +97,30 @@ const Styles = styled.div `
 }
 
 .dialog-slide-exit-active {
+    transform: translateY(20%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+
+/* CSS Transition Definitions */
+.docs-side-panel-enter {
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+}
+
+.docs-side-panel-enter-active {
+    transform: translate(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.docs-side-panel-exit {
+    transform: translateX(-50%) !important;
+    opacity: 1 !important;
+}
+
+.docs-side-panel-exit-active {
     transform: translateY(20%) !important;
     opacity: 0 !important;
     transition: transform 500ms, opacity 500ms !important;
@@ -389,11 +416,11 @@ const Styles = styled.div `
 }   
 
 
-        // - - - - - - DEMO DOCS SEAERCH BAR - - - - - //
+        // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
 .demo-docs-search-bar {
+    transition: top 0.5s ease;
     float: right;
-    width: auto; // shrinks to 62% when sidepane is open
     position: sticky;
     top: 0;
     z-index: 5;
@@ -421,7 +448,6 @@ const Styles = styled.div `
     text-align: right;
     width: 17%;
     margin-right: 2%;
-    padding-top: 0.7%;
 }
 
 .demo-docs-search-bar-btns:after {
@@ -436,11 +462,12 @@ const Styles = styled.div `
     width: 33.3%;
 }
 
+    // - - DOCK SEARCH BAR - - //
+
 
     // # INPUT 
 
 .demo-docs-search-bar-input input {
-    width: 75%;
     padding: 1%;
     margin-right: 2.5%;
     border: 1px solid #ccc;
@@ -464,6 +491,12 @@ const Styles = styled.div `
     cursor: pointer;
 }
 
+    // - - DOCK BUTTONS - - //
+
+.demo-docs-search-bar-btns img {
+    cursor: pointer;
+}
+
 `
 
 export default class APIReference extends Component {
@@ -471,9 +504,22 @@ export default class APIReference extends Component {
         super()
         this.state = {
 
+            //* - - SEARCH BAR - - *//
+
+            menuDocsHovered: false,
+            externalDocsHovered: false,
+            exitDocsHovered: false,
+            dockSearchBarWidth: "97.5%",
+            dockMenuBtnsPaddingTop: "0.7%",
+            dockSearchBarInputWidth: "75%",
+            dockMenuBtnWidth: "43%",
+            dockExternalBtnWidth: "34.5%",
+            dockExitBtnWidth: "45.5%",
+
             //* - - SIDEBAR - - *//
 
-            showDocsMenu: true,
+            showDocsMenu: false,
+            sidePaneWidth: "0%", //* - - Goes to 35%
             menuSubsections: true,
             menuOption1: false,
             menuOption2: false,
@@ -554,63 +600,116 @@ export default class APIReference extends Component {
             })
         }, 500)
     }
+
+    menuDocsEnter = () => { this.setState({menuDocsHovered: true}) }
+
+    menuDocsLeave = () => { this.setState({menuDocsHovered: false}) }
+
+    externalDocsEnter = () => { this.setState({ externalDocsHovered: true }) }
+
+    externalDocsLeave = () => { this.setState({ externalDocsHovered: false }) }
     
+    exitDocsEnter = () => { this.setState({exitDocsHovered: true}) }
+
+    exitDocsLeave = () => { this.setState({exitDocsHovered: false}) }
+
+    dockMenuBtnClicked = () => {
+        this.props.sidePanelOpened()
+        this.setState((prevState) => ({
+            showDocsMenu: !prevState.showDocsMenu,
+        }), () => {
+            setTimeout(() => {
+                this.setState((prevState) => ({
+                    sidePaneWidth: prevState.showDocsMenu ? "35%" : "0%", // Expand/collapse side panel
+                    dockSearchBarWidth: prevState.showDocsMenu ? "61%" : "97.75%", // Shrink/expand search bar
+                    dockMenuBtnsPaddingTop: prevState.showDocsMenu ? "0.15%" : "0.7%", // Adjust padding as needed
+                    dockSearchBarInputWidth: prevState.showDocsMenu ? "70%" : "75%", // Adjust input width as needed
+                    dockMenuBtnWidth: prevState.showDocsMenu ? "54%" : "43%", // Adjust button width as needed
+                    dockExternalBtnWidth: prevState.showDocsMenu ? "45.5%" : "34.5%", // Adjust external button width as needed
+                    dockExitBtnWidth: prevState.showDocsMenu ? "56.5%" : "45.5%", // Adjust exit button width as needed
+                }));
+            }, )
+        });
+    }
+
+    
+
     render () {
 
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
-        const {error_2xx, error_4xx, error_5xx} = this.state;
-        const { menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
-      
+        const { error_2xx, error_4xx, error_5xx } = this.state;
+        const { showDocsMenu, sidePaneWidth, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
+        const { menuDocsHovered, externalDocsHovered, exitDocsHovered, dockSearchBarWidth, dockMenuBtnsPaddingTop, dockSearchBarInputWidth, dockMenuBtnWidth, dockExternalBtnWidth, dockExitBtnWidth } = this.state
         return(
             <Styles>
-                    {/* <div className='demo-docs-sidebar'>
-                        <div className='demo-docs-sidebar-logo'>
-                            <img src='/assets/workos_logo_icon.png' alt='no img available'/>
-                            <h5>Quick Access Docs</h5>
-                        </div>
-                        <div style={{borderBottom: "1px solid #ccc", marginLeft: "5%", marginRight: "5%"}}></div>
-                        <div style={{width: "100%", height: "100%", overflow: "scroll", position: "relative"}}>
-                            {menuSubsections && 
-                                <div className='demo-docs-sidebar-subsections'> 
-                                    <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
-                                    <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
-                                    <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
-                                    <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                    {/* {showDocsMenu &&  */}
+                        <CSSTransition
+                        in={this.state.showDocsMenu}
+                        timeout={500}
+                        classNames="docs-side-panel"
+                        unmountOnExit
+                        >
+                            <div style={{width: sidePaneWidth}} className='demo-docs-sidebar'>
+                                <div className='demo-docs-sidebar-logo'>
+                                    <img src='/assets/workos_logo_icon.png' alt='no img available'/>
+                                    <h5 style={{color: showDocsMenu ? "#2e2eff" : "transparent"}}>Quick Access Docs</h5>
                                 </div>
-                            }
+                                <div style={{borderBottom: "1px solid #ccc", marginLeft: "5%", marginRight: "5%"}}></div>
+                                <div style={{width: "100%", height: "88.75%", bottom: 0, overflow: "scroll", position: "relative"}}>
+                                    {menuSubsections && 
+                                        <div className='demo-docs-sidebar-subsections'> 
+                                            <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
+                                            <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
+                                            <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
+                                            <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                                        </div>
+                                    }
 
-                            <CSSTransition
-                            in={this.state.resourcesDropdown}
-                            timeout={500}
-                            classNames="dialog-slide"
-                            unmountOnExit
-                            >
-                            <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                <NestedDropdown menuItems={SidebarOptions} />
+                                    <CSSTransition
+                                    in={this.state.resourcesDropdown}
+                                    timeout={500}
+                                    classNames="dialog-slide"
+                                    unmountOnExit
+                                    >
+                                    <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                        <NestedDropdown menuItems={SidebarOptions} />
+                                    </div>
+                                    </CSSTransition>
+                                </div>
                             </div>
-                            </CSSTransition>
-                        </div>
-                    </div> */}
-                    <div className='demo-docs-search-bar'>
+                        </CSSTransition>
+                    {/* } */}
+                    <div style={{width: dockSearchBarWidth}} className='demo-docs-search-bar'>
                         <div className='demo-docs-search-bar-input'>
                             <input
+                            style={{width: dockSearchBarInputWidth}}
                             placeholder='Search the docs...'
                             />
                             <button>Search</button>
                         </div>
-                        <div className='demo-docs-search-bar-btns'>
+                        <div style={{paddingTop: dockMenuBtnsPaddingTop}} className='demo-docs-search-bar-btns'>
                             <div className='dd-search-bar-btn'>
                                 {/* GO TO NEW WINDOW DOCS */}
-                                <span><img style={{width: "43%"}} src='/assets/docs_search_bar_menu_icon_color.png' alt='no img available'/></span>
+                                <span><img
+                                onClick={this.dockMenuBtnClicked}
+                                onMouseEnter={this.menuDocsEnter}
+                                onMouseLeave={this.menuDocsLeave}
+                                style={{width: dockMenuBtnWidth, paddingBottom: "2%"}} src= {menuDocsHovered ? '/assets/docs_search_bar_menu_icon_color.png' : '/assets/docs_search_bar_menu_icon.png' } alt='no img available'/></span>
                             </div>
                             <div className='dd-search-bar-btn'>
                                 {/* MINIMIZE DOCS */}
-                                <span><img style={{width: "34.5%", paddingBottom: "7.5%"}} src='/assets/docs_search_bar_external_link_icon_color.png' alt='no img available'/></span>
+                                <span><img
+                                onMouseEnter={this.externalDocsEnter}
+                                onMouseLeave={this.externalDocsLeave} 
+                                style={{width: dockExternalBtnWidth, paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
                             </div>
                             <div className='dd-search-bar-btn'>
                                 {/* CLOSE DOCS */}
-                                <span><img style={{width: "42.5%"}} src='/assets/docs_search_bar_exit_icon_color.png' alt='no img available'/></span>
+                                <span><img 
+                                onMouseEnter={this.exitDocsEnter}
+                                onMouseLeave={this.exitDocsLeave}
+                                style={{width: dockExitBtnWidth}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
                             </div>
                         </div>
                     </div>

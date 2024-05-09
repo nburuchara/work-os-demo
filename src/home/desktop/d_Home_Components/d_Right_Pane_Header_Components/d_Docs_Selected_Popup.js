@@ -62,13 +62,21 @@ export default class Popup extends Component {
         }
     }
 
+    handleSidePanelOpened = () => {
+        this.setState((prevState) => ({
+            scrollEnabled: !prevState.scrollEnabled,
+        }))
+    }
+        
+    
+
     render () {
         const { scrollEnabled } = this.state;
 
         return (
             <Styles>
                 <div style={{overflow: scrollEnabled ? "scroll" : "hidden"}} className='popup-container'>
-                    <APIReference/>
+                    <APIReference sidePanelOpened={this.handleSidePanelOpened}/>
                 </div>
             </Styles>
         )

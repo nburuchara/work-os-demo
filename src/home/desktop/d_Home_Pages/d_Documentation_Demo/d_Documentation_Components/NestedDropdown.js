@@ -9,6 +9,7 @@ const Styles2 = styled.div `
 .nested-dropdown {
     text-align: left;
     margin-left: 5%;
+    height: 100%;
 }
 
 .nested-dropdown p {
