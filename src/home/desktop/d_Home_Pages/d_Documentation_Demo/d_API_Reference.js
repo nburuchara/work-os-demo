@@ -116,12 +116,12 @@ const Styles = styled.div `
 }
 
 .docs-side-panel-exit {
-    transform: translateX(-50%) !important;
-    opacity: 1 !important;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .docs-side-panel-exit-active {
-    transform: translateY(20%) !important;
+    transform: translateX(-10%) !important;
     opacity: 0 !important;
     transition: transform 500ms, opacity 500ms !important;
 }
@@ -497,6 +497,30 @@ const Styles = styled.div `
     cursor: pointer;
 }
 
+
+/* CSS Transition Definitions */
+.mini-search-bar-enter {
+    transform: translateX(20%) !important;
+    opacity: 0 !important;
+}
+
+.mini-search-bar-enter-active {
+    transform: translate(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.mini-search-bar-exit {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mini-search-bar-exit-active {
+    transform: translateX(5%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
 `
 
 export default class APIReference extends Component {
@@ -506,6 +530,8 @@ export default class APIReference extends Component {
 
             //* - - SEARCH BAR - - *//
 
+            showLargeSearchBar: true,
+            showMiniSearchBar: false,
             menuDocsHovered: false,
             externalDocsHovered: false,
             exitDocsHovered: false,
@@ -615,21 +641,32 @@ export default class APIReference extends Component {
 
     dockMenuBtnClicked = () => {
         this.props.sidePanelOpened()
-        this.setState((prevState) => ({
-            showDocsMenu: !prevState.showDocsMenu,
-        }), () => {
-            setTimeout(() => {
-                this.setState((prevState) => ({
-                    sidePaneWidth: prevState.showDocsMenu ? "35%" : "0%", // Expand/collapse side panel
-                    dockSearchBarWidth: prevState.showDocsMenu ? "61%" : "97.75%", // Shrink/expand search bar
-                    dockMenuBtnsPaddingTop: prevState.showDocsMenu ? "0.15%" : "0.7%", // Adjust padding as needed
-                    dockSearchBarInputWidth: prevState.showDocsMenu ? "70%" : "75%", // Adjust input width as needed
-                    dockMenuBtnWidth: prevState.showDocsMenu ? "54%" : "43%", // Adjust button width as needed
-                    dockExternalBtnWidth: prevState.showDocsMenu ? "45.5%" : "34.5%", // Adjust external button width as needed
-                    dockExitBtnWidth: prevState.showDocsMenu ? "56.5%" : "45.5%", // Adjust exit button width as needed
-                }));
-            }, )
-        });
+        if(this.state.showDocsMenu === false) {
+            this.setState((prevState) => ({
+                showDocsMenu: !prevState.showDocsMenu,
+                showLargeSearchBar: !prevState.showLargeSearchBar,
+                menuDocsHovered: !prevState.menuDocsHovered
+            }), () => {
+                setTimeout(() => {
+                    this.setState((prevState) => ({
+                        showMiniSearchBar: !prevState.showMiniSearchBar
+                    }))
+                }, 500)
+            })
+        } else {
+            this.setState((prevState) => ({
+                showDocsMenu: !prevState.showDocsMenu,
+                showMiniSearchBar: !prevState.showMiniSearchBar,
+                menuDocsHovered: !prevState.menuDocsHovered
+            }), () => {
+                setTimeout(() => {
+                    this.setState((prevState) => ({
+                        showLargeSearchBar: !prevState.showLargeSearchBar
+                    }))
+                }, 500)
+            })
+        }
+
     }
 
     
@@ -650,7 +687,7 @@ export default class APIReference extends Component {
                         classNames="docs-side-panel"
                         unmountOnExit
                         >
-                            <div style={{width: sidePaneWidth}} className='demo-docs-sidebar'>
+                            <div style={{width: "35%"}} className='demo-docs-sidebar'>
                                 <div className='demo-docs-sidebar-logo'>
                                     <img src='/assets/workos_logo_icon.png' alt='no img available'/>
                                     <h5 style={{color: showDocsMenu ? "#2e2eff" : "transparent"}}>Quick Access Docs</h5>
@@ -680,39 +717,87 @@ export default class APIReference extends Component {
                             </div>
                         </CSSTransition>
                     {/* } */}
-                    <div style={{width: dockSearchBarWidth}} className='demo-docs-search-bar'>
-                        <div className='demo-docs-search-bar-input'>
-                            <input
-                            style={{width: dockSearchBarInputWidth}}
-                            placeholder='Search the docs...'
-                            />
-                            <button>Search</button>
+
+                    <CSSTransition
+                    in={this.state.showLargeSearchBar}
+                    timeout={500}
+                    classNames="docs-side-panel"
+                    unmountOnExit
+                    >
+                        <div style={{width: dockSearchBarWidth}} className='demo-docs-search-bar'>
+                            <div className='demo-docs-search-bar-input'>
+                                <input
+                                style={{width: dockSearchBarInputWidth}}
+                                placeholder='Search the docs...'
+                                />
+                                <button>Search</button>
+                            </div>
+                            <div style={{paddingTop: dockMenuBtnsPaddingTop}} className='demo-docs-search-bar-btns'>
+                                <div className='dd-search-bar-btn'>
+                                    {/* GO TO NEW WINDOW DOCS */}
+                                    <span><img
+                                    onClick={this.dockMenuBtnClicked}
+                                    onMouseEnter={this.menuDocsEnter}
+                                    onMouseLeave={this.menuDocsLeave}
+                                    style={{width: dockMenuBtnWidth, paddingBottom: "2%"}} src= {menuDocsHovered ? '/assets/docs_search_bar_menu_icon_color.png' : '/assets/docs_search_bar_menu_icon.png' } alt='no img available'/></span>
+                                </div>
+                                <div className='dd-search-bar-btn'>
+                                    {/* MINIMIZE DOCS */}
+                                    <span><img
+                                    onMouseEnter={this.externalDocsEnter}
+                                    onMouseLeave={this.externalDocsLeave} 
+                                    style={{width: dockExternalBtnWidth, paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
+                                </div>
+                                <div className='dd-search-bar-btn'>
+                                    {/* CLOSE DOCS */}
+                                    <span><img 
+                                    onMouseEnter={this.exitDocsEnter}
+                                    onMouseLeave={this.exitDocsLeave}
+                                    style={{width: dockExitBtnWidth}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
+                                </div>
+                            </div>
                         </div>
-                        <div style={{paddingTop: dockMenuBtnsPaddingTop}} className='demo-docs-search-bar-btns'>
-                            <div className='dd-search-bar-btn'>
-                                {/* GO TO NEW WINDOW DOCS */}
-                                <span><img
-                                onClick={this.dockMenuBtnClicked}
-                                onMouseEnter={this.menuDocsEnter}
-                                onMouseLeave={this.menuDocsLeave}
-                                style={{width: dockMenuBtnWidth, paddingBottom: "2%"}} src= {menuDocsHovered ? '/assets/docs_search_bar_menu_icon_color.png' : '/assets/docs_search_bar_menu_icon.png' } alt='no img available'/></span>
+                    </CSSTransition>
+                    <CSSTransition
+                    in={this.state.showMiniSearchBar}
+                    timeout={500}
+                    classNames="mini-search-bar"
+                    unmountOnExit
+                    >
+                        <div style={{width: "61%"}} className='demo-docs-search-bar'>
+                            <div className='demo-docs-search-bar-input'>
+                                <input
+                                style={{width: "70%"}}
+                                placeholder='Search the docs...'
+                                />
+                                <button>Search</button>
                             </div>
-                            <div className='dd-search-bar-btn'>
-                                {/* MINIMIZE DOCS */}
-                                <span><img
-                                onMouseEnter={this.externalDocsEnter}
-                                onMouseLeave={this.externalDocsLeave} 
-                                style={{width: dockExternalBtnWidth, paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
-                            </div>
-                            <div className='dd-search-bar-btn'>
-                                {/* CLOSE DOCS */}
-                                <span><img 
-                                onMouseEnter={this.exitDocsEnter}
-                                onMouseLeave={this.exitDocsLeave}
-                                style={{width: dockExitBtnWidth}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
+                            <div style={{paddingTop: "0.15%"}} className='demo-docs-search-bar-btns'>
+                                <div className='dd-search-bar-btn'>
+                                    {/* GO TO NEW WINDOW DOCS */}
+                                    <span><img
+                                    onClick={this.dockMenuBtnClicked}
+                                    onMouseEnter={this.menuDocsEnter}
+                                    onMouseLeave={this.menuDocsLeave}
+                                    style={{width: '54%', paddingBottom: "2%"}} src= {menuDocsHovered ? '/assets/docs_search_bar_menu_icon_color.png' : '/assets/docs_search_bar_menu_icon.png' } alt='no img available'/></span>
+                                </div>
+                                <div className='dd-search-bar-btn'>
+                                    {/* MINIMIZE DOCS */}
+                                    <span><img
+                                    onMouseEnter={this.externalDocsEnter}
+                                    onMouseLeave={this.externalDocsLeave} 
+                                    style={{width: "45.5%", paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
+                                </div>
+                                <div className='dd-search-bar-btn'>
+                                    {/* CLOSE DOCS */}
+                                    <span><img 
+                                    onMouseEnter={this.exitDocsEnter}
+                                    onMouseLeave={this.exitDocsLeave}
+                                    style={{width: "56.5%"}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </CSSTransition>
                     <div className='demo-docs-container'>
                         <div className='demo-docs-section'>
                             <h1 style={{fontSize: "150%", paddingTop: '7%'}}>API Reference</h1>
