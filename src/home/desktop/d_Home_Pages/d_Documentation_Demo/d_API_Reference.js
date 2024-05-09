@@ -4,6 +4,7 @@ import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Struc
 import { hover } from '@testing-library/user-event/dist/hover'
 import { CSSTransition } from 'react-transition-group';
 import SidebarOptions from './Documentation_Menu_Options'
+import NestedDropdown from './d_Documentation_Components/NestedDropdown'
 
 const Styles = styled.div `
 
@@ -19,6 +20,7 @@ const Styles = styled.div `
     background-color: #f9f9fb;
     z-index: 1;
     border-right: 1px solid #ccc; 
+    overflow: scroll;
 }
 
 .demo-docs-sidebar-logo {
@@ -409,6 +411,10 @@ export default class APIReference extends Component {
             mOption3Gap: "80px",
             mOption4Gap: "120px",
             selectedMenuOption: "",
+            menuOptionsDepth: 1,
+            currentObject: null,
+            selectedValue: '', // Initially no item is selected
+            openSubmenus: {}, // Keep track of open submenus
 
             //* - - COPY BUTTON (for 1st code snippet) - - *//
             
@@ -463,12 +469,6 @@ export default class APIReference extends Component {
         }
     }
 
-    toggleDropdown = (id) => {
-        this.setState(prevState => ({
-          isOpen: !prevState.isOpen,
-        }));
-    }
-
     menuOptionClicked = (option) => {
         for (let i = 1; i <= 4; i++) {
             this.setState({
@@ -481,27 +481,83 @@ export default class APIReference extends Component {
             }
         } 
     }
+    
 
-    renderObjects = (objects) => {
-        return objects.map(obj => (
-            <div key={obj.id}>
-              <h5>Name: {obj.levelName}</h5>
-              {/* Recursively render children */}
-              {obj.sections && obj.sections.length > 0 && (
-                
-                <div style={{ marginLeft: '0px' }}>
-                  {this.renderObjects(obj.sections)}
+    handleSelectionChange = (value) => {
+        this.setState({ selectedValue: value });
+      }
+    
+      toggleSubmenu = (index) => {
+        this.setState(prevState => ({
+          openSubmenuIndexes: {
+            ...prevState.openSubmenuIndexes,
+            [index]: !prevState.openSubmenuIndexes[index] // Toggle submenu state
+          }
+        }));
+      }
+
+      renderMenuItems = (items, parentIndex = null) => {
+        const { openSubmenuIndexes } = this.state;
+      
+        return items.map((item, index) => {
+          const itemIndex = parentIndex !== null ? `${parentIndex}-${index}` : `${index}`;
+      
+          return (
+            <div key={itemIndex} className="menu-item">
+              <div onClick={() => this.toggleSubmenu(itemIndex)} className="menu-label">
+                {item.label} {item.submenu && (openSubmenuIndexes[itemIndex] ? '▲' : '▼')}
+              </div>
+              {item.submenu && openSubmenuIndexes[itemIndex] && (
+                <div className="submenu">
+                  {this.renderMenuItems(item.submenu, itemIndex)}
                 </div>
               )}
             </div>
-        ));
-    }
+          );
+        });
+      }
 
     render () {
+        const menuItems = [
+            {
+              label: 'Item 1',
+              value: 'item1'
+            },
+            {
+              label: 'Item 2',
+              value: 'item2',
+              submenu: [
+                {
+                  label: 'Subitem 1',
+                  value: 'subitem1',
+                  submenu: [
+                    {
+                      label: 'Sub-subitem 1',
+                      value: 'subsubitem1'
+                    },
+                    {
+                      label: 'Sub-subitem 2',
+                      value: 'subsubitem2'
+                    }
+                  ]
+                },
+                {
+                  label: 'Subitem 2',
+                  value: 'subitem2'
+                }
+              ]
+            },
+            {
+              label: 'Item 3',
+              value: 'item3'
+            }
+          ];
+
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
         const {error_2xx, error_4xx, error_5xx} = this.state;
         const { menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
+        const { selectedValue, openSubmenuIndex } = this.state;
         return(
             <Styles>
                     <div className='demo-docs-sidebar'>
@@ -517,7 +573,11 @@ export default class APIReference extends Component {
                                 <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
                             </div>
                         } */}
-                        {this.renderObjects(SidebarOptions)}
+                       
+                       <div className="dropdown-menu">
+                        <NestedDropdown menuItems={SidebarOptions} />
+                        </div>
+                        {/* {this.renderObjects(SidebarOptions, this.state.menuOptionsDepth)} */}
                     </div>
                     <div className='demo-docs-container'>
                         <div className='demo-docs-section'>

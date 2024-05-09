@@ -5,7 +5,7 @@ const docs_sidebar_options = [
         sections: [
             {
                 id: 0,
-                levelName: "apiReference",
+                levelName: "API Reference",
                 sections: [
                     { 
                         id: 0,
@@ -78,22 +78,27 @@ const docs_sidebar_options = [
                                 levelName: "Organization",
                                 sections: [
                                     {
+                                        id: 0,
                                         levelName: "Get an Organizations",
                                         sections: []
                                     },
                                     {
+                                        id: 1,
                                         levelName: "List Organizations",
                                         sections: [],
                                     },
                                     {
+                                        id: 2,
                                         levelName: "Create an Organization",
                                         sections: []
                                     },
                                     {
+                                        id: 3,
                                         levelName: "Update an Organization",
                                         sections: []
                                     },
                                     {
+                                        id: 4,
                                         levelName: "Delete an Organization",
                                         sections: []
                                     },
@@ -120,22 +125,27 @@ const docs_sidebar_options = [
                                 levelName: 'User',
                                 sections: [
                                     {
+                                        id: 0,
                                         levelName: "Get a User",
                                         sections: []
                                     },
                                     {
+                                        id: 1,
                                         levelName: "List Users",
                                         sections: []
                                     },
                                     {
+                                        id: 2,
                                         levelName: "Create a User",
                                         sections: []
                                     },
                                     {
+                                        id: 3,
                                         levelName: "Update a User",
                                         sections: []
                                     },
                                     {
+                                        id: 4,
                                         levelName: "Delete a User",
                                         sections: []
                                     },
