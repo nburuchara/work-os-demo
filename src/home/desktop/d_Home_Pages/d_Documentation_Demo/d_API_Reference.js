@@ -483,75 +483,7 @@ export default class APIReference extends Component {
     }
     
 
-    handleSelectionChange = (value) => {
-        this.setState({ selectedValue: value });
-      }
-    
-      toggleSubmenu = (index) => {
-        this.setState(prevState => ({
-          openSubmenuIndexes: {
-            ...prevState.openSubmenuIndexes,
-            [index]: !prevState.openSubmenuIndexes[index] // Toggle submenu state
-          }
-        }));
-      }
-
-      renderMenuItems = (items, parentIndex = null) => {
-        const { openSubmenuIndexes } = this.state;
-      
-        return items.map((item, index) => {
-          const itemIndex = parentIndex !== null ? `${parentIndex}-${index}` : `${index}`;
-      
-          return (
-            <div key={itemIndex} className="menu-item">
-              <div onClick={() => this.toggleSubmenu(itemIndex)} className="menu-label">
-                {item.label} {item.submenu && (openSubmenuIndexes[itemIndex] ? '▲' : '▼')}
-              </div>
-              {item.submenu && openSubmenuIndexes[itemIndex] && (
-                <div className="submenu">
-                  {this.renderMenuItems(item.submenu, itemIndex)}
-                </div>
-              )}
-            </div>
-          );
-        });
-      }
-
     render () {
-        const menuItems = [
-            {
-              label: 'Item 1',
-              value: 'item1'
-            },
-            {
-              label: 'Item 2',
-              value: 'item2',
-              submenu: [
-                {
-                  label: 'Subitem 1',
-                  value: 'subitem1',
-                  submenu: [
-                    {
-                      label: 'Sub-subitem 1',
-                      value: 'subsubitem1'
-                    },
-                    {
-                      label: 'Sub-subitem 2',
-                      value: 'subsubitem2'
-                    }
-                  ]
-                },
-                {
-                  label: 'Subitem 2',
-                  value: 'subitem2'
-                }
-              ]
-            },
-            {
-              label: 'Item 3',
-              value: 'item3'
-            }
-          ];
 
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
@@ -565,19 +497,20 @@ export default class APIReference extends Component {
                             <img src='/assets/workos_logo_icon.png' alt='no img available'/>
                             <h5>Quick Access Docs</h5>
                         </div>
-                        {/* {menuSubsections && 
+
+                        {menuSubsections && 
                             <div className='demo-docs-sidebar-subsections'> 
                                 <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
                                 <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
                                 <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
                                 <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
                             </div>
-                        } */}
-                       
-                       <div className="dropdown-menu">
-                        <NestedDropdown menuItems={SidebarOptions} />
+                        }
+                        <div style={{marginTop: "50px"}} className="dropdown-menu">
+                            <NestedDropdown menuItems={SidebarOptions} />
                         </div>
-                        {/* {this.renderObjects(SidebarOptions, this.state.menuOptionsDepth)} */}
+                        
+        
                     </div>
                     <div className='demo-docs-container'>
                         <div className='demo-docs-section'>
