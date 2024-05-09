@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { CSSTransition } from 'react-transition-group';
 
 const Styles2 = styled.div `
 
@@ -15,12 +16,13 @@ const Styles2 = styled.div `
     cursor: pointer;
 }
 
-
     // - - NESTED MENU OPTION - - //
 
 .menu-option {
     cursor: pointer; /* Change cursor to pointer on hover */
     padding: 2.5%;
+    padding-left: 3%;
+    padding-right: 3%;
     border-radius: 7px;
 }
 
@@ -33,6 +35,31 @@ const Styles2 = styled.div `
 .menu-option-active {
     background-color: #ECEDFE; /* Change background color for active (clicked) state */
     font-weight: bold; /* Make text bold for active (clicked) state */
+}
+
+    // - NESTED MENU OPTIONS ANIMATION - //
+
+/* CSS Transition Definitions */
+.nested-menu-enter {
+    transform: translateY(10%) !important;
+    opacity: 0 !important;
+}
+
+.nested-menu-enter-active {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.nested-menue-exit {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.nested-menu-exit-active {
+    transform: translateY(20%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
 }
 
 
@@ -57,25 +84,23 @@ class NestedDropdown extends Component {
 handleItemClick = (index) => {
     const { activeIndices } = this.state;
 
-    // Check if the clicked item is already active
-    const isActive = activeIndices.includes(index);
-
-    if (isActive) {
-        // If the clicked item is active, deselect it and collapse the menu
-        const updatedActiveIndices = activeIndices.filter((activeIndex) => activeIndex !== index);
-        this.setState({ activeIndices: updatedActiveIndices });
+    // Toggle the clicked item's active state
+    const itemIndex = activeIndices.indexOf(index);
+    if (itemIndex !== -1) {
+        // If the clicked item is already active, deselect it and collapse if it's clicked again
+        activeIndices.splice(itemIndex, 1);
     } else {
-        // If the clicked item is not active, select it and collapse other items with the same parent
-        const updatedActiveIndices = [...activeIndices, index];
+        // Otherwise, select the clicked item
+        activeIndices.push(index);
 
         // Collapse other items with the same parent
         const parentIndex = this.getParentIndex(index);
-        const collapsedIndices = updatedActiveIndices.filter((activeIndex) => {
+        const updatedActiveIndices = activeIndices.filter((activeIndex) => {
             const activeParentIndex = this.getParentIndex(activeIndex);
             return activeParentIndex !== parentIndex || activeIndex === index;
         });
 
-        this.setState({ activeIndices: collapsedIndices });
+        this.setState({ activeIndices: updatedActiveIndices });
     }
 };
 
@@ -91,7 +116,7 @@ getParentIndex = (index) => {
   
 
   // Function to get the hierarchy level of an item by its index
-  getHierarchyLevel = (index) => {
+getHierarchyLevel = (index) => {
     const { menuItems } = this.props;
     const getItemLevel = (items, targetIndex, level = 0) => {
       for (const item of items) {
@@ -108,7 +133,7 @@ getParentIndex = (index) => {
       return -1;
     };
     return getItemLevel(menuItems, index);
-  };
+};
 
   handleMouseEnter = () => { }
 
@@ -132,13 +157,22 @@ getParentIndex = (index) => {
                     {activeIndices.includes(item.id) && item.sections && (
                         <img src='/assets/docs_sidebar_nested_icon.png' style={{ width: "5%", marginTop: "5%", marginLeft: "5%"}} />
                     )}
-                    {activeIndices.includes(item.id) && item.sections && (
-                        <NestedDropdown
-                            menuItems={item.sections}
-                            activeIndices={activeIndices} // Pass activeIndices to nested components
-                            handleItemClick={this.handleItemClick} // Pass handleItemClick to nested components
-                        />
-                    )}
+                    <CSSTransition
+                    in={activeIndices.includes(item.id) && item.sections}
+                    timeout={500}
+                    classNames="nested-menu"
+                    unmountOnExit
+                    >   
+                        <div>
+                            {activeIndices.includes(item.id) && item.sections && (
+                                <NestedDropdown
+                                    menuItems={item.sections}
+                                    activeIndices={activeIndices} // Pass activeIndices to nested components
+                                    handleItemClick={this.handleItemClick} // Pass handleItemClick to nested components
+                                />
+                            )}
+                        </div>
+                    </CSSTransition>
                 </p>
             ))}
         </div>

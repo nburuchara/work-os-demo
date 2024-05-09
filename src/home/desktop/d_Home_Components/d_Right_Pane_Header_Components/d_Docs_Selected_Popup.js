@@ -20,6 +20,8 @@ const Styles = styled.div  `
     margin-top: 0.45%;
     margin-right: 0.5% !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07) !important;
+    display: flex;
+    flex-direction: column;
 }
 
     // - - POPUP CONTAINER ANIMATION - - //
@@ -47,8 +49,8 @@ const Styles = styled.div  `
     transition: transform 500ms, opacity 500ms;
 }
 
-    // - - DOCS SIDEBAR - - //
-
+   
+    
 
 `
 
@@ -56,7 +58,7 @@ export default class Popup extends Component {
     constructor() {
         super() 
         this.state = {
-           scrollEnabled: false
+           scrollEnabled: true
         }
     }
 

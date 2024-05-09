@@ -8,19 +8,18 @@ import NestedDropdown from './d_Documentation_Components/NestedDropdown'
 
 const Styles = styled.div `
 
-
         // - - - - - - DEMO DOCS SIDEBAR - - - - - //
 
 .demo-docs-sidebar {
     position: absolute; 
     bottom: 0; 
+    height: auto;
     top: 0; /* Align to the top of the viewport */
     left: 0; /* Align to the left of the viewport */
     width: 35%; /* Set the width as desired */
     background-color: #f9f9fb;
     z-index: 1;
     border-right: 1px solid #ccc; 
-    overflow: scroll;
 }
 
 .demo-docs-sidebar-logo {
@@ -43,7 +42,6 @@ const Styles = styled.div `
     // - - SIDEBAR SUBSECTIONS - - //
 
 .demo-docs-sidebar-subsections {
-    border-top: 1px solid #ccc;
     margin-left: 5%;
     margin-right: 5%;
     text-align: left;
@@ -80,7 +78,7 @@ const Styles = styled.div `
 
 /* CSS Transition Definitions */
 .dialog-slide-enter {
-    transform: translateY(10%) !important;
+    transform: translateY(40%) !important;
     opacity: 0 !important;
 }
 
@@ -391,6 +389,81 @@ const Styles = styled.div `
 }   
 
 
+        // - - - - - - DEMO DOCS SEAERCH BAR - - - - - //
+
+.demo-docs-search-bar {
+    float: right;
+    width: auto; // shrinks to 62% when sidepane is open
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 1%;
+    background-color: #f9f9fb;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.demo-docs-search-bar:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.demo-docs-search-bar-input {
+    float: left; 
+    text-align: left;
+    width: 80%;
+    border-right: 1px solid #ccc;
+}
+
+.demo-docs-search-bar-btns {
+    float: right;
+    text-align: right;
+    width: 17%;
+    margin-right: 2%;
+    padding-top: 0.7%;
+}
+
+.demo-docs-search-bar-btns:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.dd-search-bar-btn {
+    float: left;
+    text-align: right;
+    width: 33.3%;
+}
+
+
+    // # INPUT 
+
+.demo-docs-search-bar-input input {
+    width: 75%;
+    padding: 1%;
+    margin-right: 2.5%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.demo-docs-search-bar-input input {
+    outline: none;
+}
+    // # BUTTON
+
+.demo-docs-search-bar-input button {
+    padding: 0.75%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: poppins;
+    font-size: 70%;
+    cursor: pointer;
+}
+
 `
 
 export default class APIReference extends Component {
@@ -410,11 +483,6 @@ export default class APIReference extends Component {
             mOption2Gap: "40px",
             mOption3Gap: "80px",
             mOption4Gap: "120px",
-            selectedMenuOption: "",
-            menuOptionsDepth: 1,
-            currentObject: null,
-            selectedValue: '', // Initially no item is selected
-            openSubmenus: {}, // Keep track of open submenus
 
             //* - - COPY BUTTON (for 1st code snippet) - - *//
             
@@ -480,41 +548,75 @@ export default class APIReference extends Component {
                 })
             }
         } 
+        setTimeout(() => {
+            this.setState({
+                resourcesDropdown: true
+            })
+        }, 500)
     }
     
-
     render () {
 
         const { codeSnippet1CopyHovered } = this.state;
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
         const {error_2xx, error_4xx, error_5xx} = this.state;
         const { menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
-        const { selectedValue, openSubmenuIndex } = this.state;
+      
         return(
             <Styles>
-                    <div className='demo-docs-sidebar'>
+                    {/* <div className='demo-docs-sidebar'>
                         <div className='demo-docs-sidebar-logo'>
                             <img src='/assets/workos_logo_icon.png' alt='no img available'/>
                             <h5>Quick Access Docs</h5>
                         </div>
+                        <div style={{borderBottom: "1px solid #ccc", marginLeft: "5%", marginRight: "5%"}}></div>
+                        <div style={{width: "100%", height: "100%", overflow: "scroll", position: "relative"}}>
+                            {menuSubsections && 
+                                <div className='demo-docs-sidebar-subsections'> 
+                                    <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
+                                    <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
+                                    <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
+                                    <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                                </div>
+                            }
 
-                        {menuSubsections && 
-                            <div className='demo-docs-sidebar-subsections'> 
-                                <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
-                                <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
-                                <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
-                                <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                            <CSSTransition
+                            in={this.state.resourcesDropdown}
+                            timeout={500}
+                            classNames="dialog-slide"
+                            unmountOnExit
+                            >
+                            <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                <NestedDropdown menuItems={SidebarOptions} />
                             </div>
-                        }
-                        <div style={{marginTop: "50px"}} className="dropdown-menu">
-                            <NestedDropdown menuItems={SidebarOptions} />
+                            </CSSTransition>
                         </div>
-                        
-        
+                    </div> */}
+                    <div className='demo-docs-search-bar'>
+                        <div className='demo-docs-search-bar-input'>
+                            <input
+                            placeholder='Search the docs...'
+                            />
+                            <button>Search</button>
+                        </div>
+                        <div className='demo-docs-search-bar-btns'>
+                            <div className='dd-search-bar-btn'>
+                                {/* GO TO NEW WINDOW DOCS */}
+                                <span><img style={{width: "43%"}} src='/assets/docs_search_bar_menu_icon_color.png' alt='no img available'/></span>
+                            </div>
+                            <div className='dd-search-bar-btn'>
+                                {/* MINIMIZE DOCS */}
+                                <span><img style={{width: "34.5%", paddingBottom: "7.5%"}} src='/assets/docs_search_bar_external_link_icon_color.png' alt='no img available'/></span>
+                            </div>
+                            <div className='dd-search-bar-btn'>
+                                {/* CLOSE DOCS */}
+                                <span><img style={{width: "42.5%"}} src='/assets/docs_search_bar_exit_icon_color.png' alt='no img available'/></span>
+                            </div>
+                        </div>
                     </div>
                     <div className='demo-docs-container'>
                         <div className='demo-docs-section'>
-                            <h1 style={{fontSize: "150%"}}>API Reference</h1>
+                            <h1 style={{fontSize: "150%", paddingTop: '7%'}}>API Reference</h1>
                             <p>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
                             <p><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
                             <div className='demo-docs-code-container'>

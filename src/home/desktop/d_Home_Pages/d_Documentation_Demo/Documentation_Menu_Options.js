@@ -222,7 +222,7 @@ const docs_sidebar_options = [
                             },
                             {
                                 id: 4,
-                                levelName: "Organization authentication required",
+                                levelName: "Organization auth. required",
                             }
                         ]
                     },
