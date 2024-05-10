@@ -74,13 +74,6 @@ class NestedDropdown extends Component {
     };
   }
 
-//   handleItemClick = (index) => {
-//     this.setState(prevState => ({
-//       activeIndices: prevState.activeIndices.includes(index)
-//         ? prevState.activeIndices.filter(i => i !== index)
-//         : [...prevState.activeIndices, index]
-//     }));
-//   };
 
 handleItemClick = (index) => {
     const { activeIndices } = this.state;
@@ -113,9 +106,6 @@ getParentIndex = (index) => {
     return indexString.substring(0, indexString.lastIndexOf('-'));
 };
   
-  
-  
-
   // Function to get the hierarchy level of an item by its index
 getHierarchyLevel = (index) => {
     const { menuItems } = this.props;
@@ -136,11 +126,11 @@ getHierarchyLevel = (index) => {
     return getItemLevel(menuItems, index);
 };
 
-  handleMouseEnter = () => { }
+handleMouseEnter = () => { }
 
-  handleMouseLeave = () => { }
+handleMouseLeave = () => { }
 
-  renderMenuItems = (menuItems, level = 0) => {
+renderMenuItems = (menuItems, level = 0) => {
     const { activeIndices } = this.state;
 
     return (
@@ -178,7 +168,7 @@ getHierarchyLevel = (index) => {
             ))}
         </div>
     );
-  };
+};
 
   render() {
     const { menuItems } = this.props;

@@ -24,6 +24,7 @@ const Styles = styled.div  `
     flex-direction: column;
 }
 
+
     // - - POPUP CONTAINER ANIMATION - - //
 
 /* CSS Transition Definitions */
@@ -55,28 +56,73 @@ const Styles = styled.div  `
 `
 
 export default class Popup extends Component {
-    constructor() {
-        super() 
+    constructor(props) {
+        super(props) 
         this.state = {
            scrollEnabled: true
         }
+
+        this.popupContainerRef = React.createRef();
+        this.sidebarPanelRef = React.createRef();
     }
 
-    handleSidePanelOpened = () => {
-        this.setState((prevState) => ({
-            scrollEnabled: !prevState.scrollEnabled,
-        }))
+
+    componentDidMount() {
+        const popupContainer = this.popupContainerRef.current;
+        if (popupContainer) {
+            popupContainer.addEventListener('scroll', this.handleScroll);
+        }
     }
+
+    componentWillUnmount() {
+        const popupContainer = this.popupContainerRef.current;
+        if (popupContainer) {
+            popupContainer.removeEventListener('scroll', this.handleScroll);
+        }
+    }
+
+    handleScroll = () => {
+        const popupContainer = this.popupContainerRef.current;
+        const scrollTop = popupContainer.scrollTop;
+        const sidebarPanel = this.sidebarPanelRef.current;
+        if (sidebarPanel) {
+            sidebarPanel.style.top = `${scrollTop}px`;
+        }
+    };
+
+
+    handleSidePanelOpened = () => {
+        const container = this.popupContainerRef.current;
+        if (container) {
+            // Check if we're not already at the top of the container
+            if (container.scrollTop > 0) {
+                // If not, decrement the scrollTop value by 10 pixels
+                container.scrollTop -= 1;
+            }
+        }
+    
+        this.setState((prevState) => ({
+            // scrollEnabled: !prevState.scrollEnabled
+        }))
+    };
+    
+    scrollToTopOfPopup = () => {
+        const element = document.getElementById('popup-container-header');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    
         
     
 
     render () {
         const { scrollEnabled } = this.state;
-
         return (
             <Styles>
-                <div style={{overflow: scrollEnabled ? "scroll" : "hidden"}} className='popup-container'>
-                    <APIReference sidePanelOpened={this.handleSidePanelOpened}/>
+                <div ref={this.popupContainerRef} className='popup-container' style={{overflow: scrollEnabled ? "auto" : "hidden"}}>
+                    {/* <span id='popup-container-header'></span> */}
+                    <APIReference sidebarPanelRef={this.sidebarPanelRef} sidePanelOpened={this.handleSidePanelOpened}/>
                 </div>
             </Styles>
         )

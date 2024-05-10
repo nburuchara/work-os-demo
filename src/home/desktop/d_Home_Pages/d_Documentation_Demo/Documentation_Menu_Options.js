@@ -130,7 +130,8 @@ const docs_sidebar_options = [
                         levelName: "Identity",
                         sections: [
                             {
-                                levelName: "List identities",
+                                id: 0,
+                                levelName: 'List identities',
                             }
                         ]
                     },
@@ -425,7 +426,7 @@ const docs_sidebar_options = [
                                 levelName: "Get a Directory User",
                             },
                             {
-                                id: 0,
+                                id: 1,
                                 levelName: "List Directory Users",
                             }
                         ]
