@@ -172,17 +172,29 @@ const Styles = styled.div `
 .demo-docs-section h1 {
     font-family: poppins;
     margin-bottom: 2%;
-    font-size: 100%;
+    font-size: 120%;
+}
+
+.demo-docs-section-sidebar-h1 {
+    font-size: 100% !important;
 }
 
 .demo-docs-section h3 {
-    font-size: 84%;
+    font-size: 95%;
     font-family: poppins;
+}
+
+.demo-docs-section-sidebar-h3 {
+    font-size: 84%;
 }
 
 .demo-docs-section p {
     font-family: poppins;
-    font-size: 80%;
+    font-size: 90%;
+}
+
+.demo-docs-section-sidebar-p {
+    font-size: 80% !important;
 }
 
     // - DEMO DOCS HYPERLINK (EXTERNAL LINK) - //
@@ -210,6 +222,7 @@ const Styles = styled.div `
     cursor: pointer;
 }
 
+
     // - DEMO DOCS CODE CONTAINER - //
 
 .demo-docs-code-container {
@@ -228,39 +241,62 @@ const Styles = styled.div `
     border-bottom: 1px solid #ccc;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
+    margin-bottom: 0%;
 }
 
 .demo-docs-code-container-header h5 {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     margin-left: 2%;
-    font-size: 75%;
+    font-size: 100%;
+}
+
+.demo-docs-code-container-sidebar-h5 {
+    padding-top: 3% !important;
+    padding-bottom: 3% !important;
+    font-size: 75% !important;
 }
 
     // # HEADER (BUTTON CONTAINER)
 
 .demo-docs-code-container-header span {
-    margin-top: 1.5%;
+    margin-top: 0.75%;
     height: 60%;
     width: 5%;
-    margin-right: 2.5%;
+    margin-right: 1.5%;
     border-radius: 50%;
     border: 2px solid transparent; 
     cursor: pointer;
-    padding-left: 0.75%;
-    padding-right: 0.75%;
-    padding-top: 0.25%;
-    padding-bottom: 0.25%;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.demo-docs-code-container-sidebar-span {
+    width: 5% !important;
+    margin-top: 1.5% !important;
+    padding-left: 0.75% !important;
+    padding-right: 0.75% !important;
+    padding-top: 0.25% !important;
+    padding-bottom: 0.25% !important;
+    margin-right: 2.5% !important;
 }
 
     // # HEADER (COPY ICON)
     
 .demo-docs-code-container-header img {
     margin-top: 10%;
-    margin-left: 10%;
-    width: 80.5%;
+    margin-left: 17.5%;
+    width: 65.5%;
+}
+
+.demo-docs-code-container-header-sidebar-img {
+    margin-top: 5% !important;
+    margin-left: 10% !important;
+    width: 85.5% !important;
 }
 
     // # BODY 
@@ -269,19 +305,27 @@ const Styles = styled.div `
     font-family: inconsolata;
     margin-left: 2%;
     margin-top: 2%;
-    padding-top: 1.5%;
-    padding-bottom: 3.5%;
+    padding-top: 1%;
+    padding-bottom: 2.5%;
     margin-bottom: 0px;
+}
+
+.demo-docs-code-container-body-sidebar-p {
+    padding-top: 1.5% !important;
+    padding-bottom: 3.5% !important;
 }
 
     // - DEMO DOCS SEPARATOR - //
 
 .demo-docs-separator {
-    // text-align: right;
     // margin-top: 10%;
     // margin-bottom: 6.75%;
-    // width: 64%;
-    // border-bottom: 2px solid transparent;
+    // width: 80%;
+    // border-bottom: 2px solid #ccc;
+}
+
+.demo-docs-separator-sidebar {
+
 }
 
     // - DEMO DOCS LANGUAGES - //
@@ -343,9 +387,13 @@ const Styles = styled.div `
 .demo-docs-language-text p {
     font-family: poppins;
     padding-bottom: 7.5%;
-    font-size: 75%;
+    font-size: 100%;
     margin-bottom: 0px;
     margin-top: 10%;
+}
+
+.demo-docs-langauge-text-sidebar-p {
+    font-size: 75% !important;
 }
 
     // - CONTACT US (Client Library) - //
@@ -422,18 +470,34 @@ const Styles = styled.div `
 
 .errors-cell {
     border-top: 1px solid #ccc;
-    padding: 3%;
-    margin-top: 2%;
+    padding: 2%;
+    margin-bottom: 0.5%;
+}
+
+.errors-cell-sidebar {
+    border-top: 1px solid #ccc;
+    padding: 3% !important;
+    margin-top: 2% !important;
 }
 
 .errors-cell span {
-    padding: 1.75%;
+    padding: 1%;
     font-size: 70%;
     font-weight: bold;
     border-radius: 30px;
     font-family: rubik;
     margin-right: 5%;
 }
+
+.errors-cell-sidebar-span {
+    font-weight: bold;
+    font-family: rubik;
+    margin-right: 5%;
+    border-radius: 30px;
+    padding: 1.5% !important;
+    font-size: 75% !important;
+}
+
 
 .errors-cell label {
     font-family: poppins;
@@ -797,6 +861,11 @@ export default class APIReference extends Component {
             error_2xx: true,
             error_4xx: true,
             error_5xx: true,
+
+            //* - - ADJUSTABLE DIMENSIONS - - *//
+
+            sidebarMenuClicked: false,
+
         }
 
         this.trie = new Trie(); // Initialize the trie
@@ -864,8 +933,7 @@ export default class APIReference extends Component {
                 showDocsMenu: !prevState.showDocsMenu,
                 showLargeSearchBar: !prevState.showLargeSearchBar,
                 menuDocsHovered: !prevState.menuDocsHovered,
-                docsCodeBlur: "0px",
-                docsContentBlur: "0px"
+                sidebarMenuClicked: true
             }), () => {
                 setTimeout(() => {
                     this.setState((prevState) => ({
@@ -880,8 +948,7 @@ export default class APIReference extends Component {
                 showDocsMenu: !prevState.showDocsMenu,
                 showMiniSearchBar: !prevState.showMiniSearchBar,
                 menuDocsHovered: !prevState.menuDocsHovered,
-                docsCodeBlur: "0px",
-                docsContentBlur: "0px"
+                sidebarMenuClicked: false
             }), () => {
                 setTimeout(() => {
                     this.setState((prevState) => ({
@@ -1022,6 +1089,9 @@ export default class APIReference extends Component {
         const { isSearchLoading, groupedOptions, resultsFound, hoveredResultId, searchCloseBtn, searchBarInFocus} = this.state;
         const searchInput = this.state.searchedData.trim().toLowerCase();
 
+            //* - UI ADJUSTABLE VARS - *//
+        const { sidebarMenuClicked } = this.state;
+        
         return(
             <Styles>
                         {/* - - SIDE PANEL - -  */}
@@ -1317,29 +1387,30 @@ export default class APIReference extends Component {
                     </CSSTransition>
                     
                     <div style={{filter: `blur(${this.state.docsCodeBlur})`}} className='demo-docs-container'>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1 style={{fontSize: "120%", paddingTop: '0%'}}>API Reference</h1>
-                            <p>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
-                            <p><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
                             <div className='demo-docs-code-container'>
                                 <div style={{display: "flex", justifyContent: "space-between"}} className='demo-docs-code-container-header'>
-                                    <h5>API Base URL</h5>
+                                    <h5 className={sidebarMenuClicked ? "demo-docs-code-container-sidebar-h5" : ""}>API Base URL</h5>
                                     <span 
+                                    className={sidebarMenuClicked ? "demo-docs-code-container-sidebar-span" : ""}
                                     onMouseEnter={this.codeSnippet1CopyEnter}
                                     onMouseLeave={this.codeSnippet1CopyLeave}
                                     style={{backgroundColor: codeSnippet1CopyHovered ? "#e9e9f0": "transparent"}}>
-                                        <img src='/assets/demo_doc_copy_icon.png' alt='no img available'/>
+                                        <img className={sidebarMenuClicked ? "demo-docs-code-container-header-sidebar-img" : ""} src='/assets/demo_doc_copy_icon.png' alt='no img available'/>
                                     </span>
                                 </div>
                                 <div className='demo-docs-code-container-body'>
-                                    <p>https://api.workos.com</p>
+                                    <p className={sidebarMenuClicked ? "demo-docs-code-container-body-sidebar-p" : ""}>https://api.workos.com</p>
                                 </div>
                             </div>
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1>Client libraries</h1>
-                            <p>WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.</p>
+                        <div className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}}className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Client libraries</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.</p>
                             <div className='demo-docs-languages'>
                                 <div className='demo-docs-language'>
                                     <button 
@@ -1347,10 +1418,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: javascriptSelected || yarnSelected ? "0 0 0 2px #6363f1" : "none", border: javascriptSelected || yarnSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{marginTop: "15%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
+                                                <img style={{marginTop: sidebarMenuClicked ? "15%" : "0%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6.5%"}}>Node.js</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Node.js</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1361,10 +1432,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: rubySelected || bundlerSelected ? "0 0 0 2px #6363f1" : "none", border: rubySelected || bundlerSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{width: "43%", paddingBottom: "5%", marginTop: "30%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='no img available'/>
+                                                <img style={{width: "43%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6%"}}>Ruby</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%", fontSize: sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""}}>Ruby</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1375,10 +1446,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: laravelSelected ? "0 0 0 2px #6363f1" : "none", border: laravelSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{width: "50%", paddingBottom: "5%", marginTop: "30%"}} src='/assets/docs_api_reference_laravel_language_icon.png' alt='no img available'/>
+                                                <img style={{width: "50%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_laravel_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6.5%"}}>Laravel</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Laravel</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1389,10 +1460,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: pythonSelected ? "0 0 0 2px #6363f1" : "none", border: pythonSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: "27%"}} src='/assets/docs_api_reference_python_language_icon.png' alt='no img available'/>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "27%" : "17%"}} src='/assets/docs_api_reference_python_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6%"}}>Python</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Python</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1408,7 +1479,7 @@ export default class APIReference extends Component {
                                                 <img style={{width: "77.5%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "0px"}}>PHP</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "0px"}}>PHP</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1419,10 +1490,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: goSelected ? "0 0 0 2px #6363f1" : "none", border: goSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{width: "78%", marginTop: "15%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='no img available'/>
+                                                <img style={{width: "78%", marginTop: sidebarMenuClicked ? "15%" : "7.5%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "2%"}}>Go</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "2%"}}>Go</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1433,10 +1504,10 @@ export default class APIReference extends Component {
                                     style={{boxShadow: javaSelected || gradleSelected ? "0 0 0 2px #6363f1" : "none", border: javaSelected || gradleSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: "22%"}} src='/assets/docs_api_reference_java_language_icon.png' alt='no img available'/>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "22%" : "17%"}} src='/assets/docs_api_reference_java_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6%"}}>Java</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Java</p>
                                             </div>
                                         </div>
                                     </button>
@@ -1447,113 +1518,116 @@ export default class APIReference extends Component {
                                     style={{boxShadow: dotnetSelected ? "0 0 0 2px #6363f1" : "none", border: dotnetSelected ? "1px solid transparent" : "1px solid #ccc" }}>
                                         <div className='demo-docs-language-container'>
                                             <div className='demo-docs-language-icon'>
-                                                <img style={{marginTop: "18%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='no img available'/>
+                                                <img style={{marginTop: sidebarMenuClicked ? "18%" : "10%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='no img available'/>
                                             </div>
                                             <div className='demo-docs-language-text'>
-                                                <p style={{marginBottom: "6.3%"}}>.NET</p>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.3%"}}>.NET</p>
                                             </div>
                                         </div>
                                     </button>
                                 </div>
                             </div>
-                            <p style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
-                            <p>Install the SDK using the command below.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""} style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Install the SDK using the command below.</p>
 
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}
                             />
                             
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1>Testing the API</h1>
-                            <p>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
+                        <div className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the API</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
                             <div className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
-                                    <img src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
                                 </div>
                                
                             </div>
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
+                        <div className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <div className='api-keys'>
-                                <h1>API Keys</h1>
-                                <p>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
+                                <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API Keys</h1>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
                             </div>
 
                             <CodeSnippetStruct 
                             id={1}
                             headerTabs={0}
+                            sideBarOpen={sidebarMenuClicked}
                             snippet="Set API Key" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
                             
-                            <p>You can view and manage your API keys in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
-                            <h3>Secure your API Keys</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view and manage your API keys in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Secure your API Keys</h3>
                             <div className='api-keys'>
-                                <p>API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with <span>sk_</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with <span>sk_</span>.</p>
                             </div>
-                            <h3>In Staging</h3>
-                            <p>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
-                            <h3>In Production</h3>
-                            <p>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Staging</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Production</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1>Errors</h1>
+                        <div className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Errors</h1>
                             <p>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
-                            <div className='errors'>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_2xx ? "#d8eaed" : "", color: error_2xx ? "#00815c" : ""}}>200</span><label>Successful request.</label>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "2%" : "0%"}} className='errors'>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_2xx ? "#d8eaed" : "", color: error_2xx ? "#00815c" : ""}}>200</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Successful request.</label>
                                 </div>
-                                <div className='errors-cell' style={{display: "flex", alignItems: "flex-start"}}>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>400</span><label style={{marginTop: "0px"}}>The request was not acceptable. Check that the parameters were correct.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"} style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>400</span><label style={{marginTop: sidebarMenuClicked ? "0px" : "1%", fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>The request was not acceptable. Check that the parameters were correct.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>401</span><label>The API key used was invalid.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>401</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>The API key used was invalid.</label>
                                 </div>
-                                <div className='errors-cell' style={{display: "flex", alignItems: "flex-start"}}>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>403</span><label style={{marginTop: "0px"}}>The API key used did not have the correct permissions.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"} style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>403</span><label style={{marginTop: sidebarMenuClicked ? "0px" : "1%", fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>The API key used did not have the correct permissions.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>404</span><label>The resource was not found.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>404</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>The resource was not found.</label>
                                 </div>
-                                <div className='errors-cell'  style={{display: "flex", alignItems: "flex-start"}}>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label style={{marginTop: "0px"}}>Validation failed for the request. Check that the parameters were correct.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}  style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label style={{marginTop: sidebarMenuClicked ? "0px" : "1%", fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Validation failed for the request. Check that the parameters were correct.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label>Too many requests. Refer to the <span className='inline-errors-cell-span'>Rate Limits</span> section.</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Too many requests. Refer to the <span className='inline-errors-cell-span'>Rate Limits</span> section.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_5xx ? "#feeaed" : "", color: error_2xx ? "#ce3358" : ""}}>5xx</span><label>Indicates an error with WorkOS servers</label>
+                                <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_5xx ? "#feeaed" : "", color: error_2xx ? "#ce3358" : ""}}>5xx</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Indicates an error with WorkOS servers</label>
                                 </div>
                             </div>
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1>Pagination</h1>
+                        <div className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Pagination</h1>
                             <div className='api-keys'>
-                                <p>Many top-level resources have support for bulk fetches via list API methods. For instance, you can <label className='demo-docs-hyperlink'>list connections</label>, <label className='demo-docs-hyperlink'>list directory users</label>, and <label className='demo-docs-hyperlink'>list directory groups</label>. These list API methods share a common structure, taking at least these four parameters: <span>limit</span>, <span>order</span>, <span>after</span>, and  <span>before</span></p>
-                                <p>WorkOS utilizes pagination via the <span>after</span> and <span>before</span> Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Many top-level resources have support for bulk fetches via list API methods. For instance, you can <label className='demo-docs-hyperlink'>list connections</label>, <label className='demo-docs-hyperlink'>list directory users</label>, and <label className='demo-docs-hyperlink'>list directory groups</label>. These list API methods share a common structure, taking at least these four parameters: <span>limit</span>, <span>order</span>, <span>after</span>, and  <span>before</span></p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS utilizes pagination via the <span>after</span> and <span>before</span> Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.</p>
                             </div>
                             <CodeSnippetStruct 
                             id={2}
                             headerTabs={0}
+                            sideBarOpen={sidebarMenuClicked}
                             snippet="Pagination" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
                         </div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
-                        <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-section'>
-                            <h1>rest of the docs ...</h1>
+                        <div  className='demo-docs-separator'></div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>rest of the docs ...</h1>
                         </div>
                     </div>
             </Styles>

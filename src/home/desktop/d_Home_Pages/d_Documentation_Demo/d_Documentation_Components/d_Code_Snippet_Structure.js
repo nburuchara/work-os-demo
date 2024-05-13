@@ -133,11 +133,18 @@ const Styles = styled.div `
   // # HEADER LANGUAGE 
 
 .code-snippet-language p {
+  text-align: left !important;
+  margin-left: 20% !important;
+  font-size: 70% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.code-snippet-language-sidebar-p {
   text-align: right !important;
   margin-left: 0% !important;
   font-size: 60% !important;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+
 }
   
   // # HEADER (BUTTON CONTAINER)
@@ -145,20 +152,31 @@ const Styles = styled.div `
 .code-snippet-copy button {
     padding: 2%;
     margin-left: 2.5%;
-    margin-top: 19.5% !important;
+    margin-top: 8.5%;
     height: 70% !important;
-    width: 72% !important;
+    width: 55%;
+    padding-top: 10%;
     margin-right: 19% !important;
     border-radius: 50% !important;
     border: 2px solid transparent!important; 
     cursor: pointer !important;
 }
 
+.code-snippet-copy-sidebar-button {
+  width: 72% !important;
+  margin-top: 19.5% !important;
+  padding-top: 0% !important;
+}
+
     // # HEADER (COPY ICON)
     
 .code-snippet-copy img {
-    margin-top: 20% !important;
+    margin-top: 0%;
     width: 62.5% !important;
+}
+
+.code-snippet-copy-sidebar-img {
+  margin-top: 20% !important;
 }
 
   // - - CODE DOUBLE HEADER - - //
@@ -196,18 +214,25 @@ const Styles = styled.div `
   // # REQUEST (BUTTON) CONTAINER
 
 .code-header-request button {
-  width: 100%;
-  margin-top: 8.5%;
-  padding-top: 5%;
-  margin-left: 4%;
-  padding-bottom: 5%;
+  width: 90%;
+  margin-top: 6.5%;
+  padding: 2%;
   font-family: poppins;
-  font-size: 65.5%;
+  font-size: 75%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.code-header-request-sidebar-button {
+  width: 100% !important;
+  margin-top: 8.5% !important;
+  padding-top: 5% !important;
+  margin-left: 4% !important;
+  padding-bottom: 5% !important;
+  font-size: 65.5% !important;
 }
 
 .code-header-request button:hover {
@@ -217,18 +242,25 @@ const Styles = styled.div `
   // # RESPONSE (BUTTON) CONTAINER
 
 .code-header-response button {
-  width: 100%;
-  margin-top: 8.5%;
-  padding-top: 5%;
-  margin-left: 4%;
-  padding-bottom: 5%;
+  width: 90%;
+  margin-top: 6.5%;
+  padding: 2%;
   font-family: poppins;
-  font-size: 65.5%;
+  font-size: 75%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.code-header-response-sidebar-button {
+  width: 100% !important;
+  margin-top: 8.5% !important;
+  padding-top: 5% !important;
+  margin-left: 4% !important;
+  padding-bottom: 5% !important;
+  font-size: 65.5% !important;
 }
 
 .code-header-response button:hover {
@@ -248,9 +280,14 @@ const Styles = styled.div `
 }
 
 .code-snippet-body p {
-  margin-top: 1.25% !important;
-  margin-bottom: 1.25% !important;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   font-size: 80% !important;
+}
+
+.code-snippet-body-sidebar-p {
+  margin-top: 1% !important;
+  margin-bottom: 1% !important;
 }
 
 .code-snippet-body pre {
@@ -517,7 +554,7 @@ export default class CodeSnippet extends Component {
     render () {
 
         const { tab1Selected, tab2Selected, requestSelected, isOpen, selectedOption, options, replaceApiPopup, replaceApiClientPopup,  apiLabelHovered } = this.state;
-        const { id, snippet } = this.props;
+        const { id, snippet, sideBarOpen } = this.props;
         const selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
         const { secretKeyApiPopup, apiExplainerPopup, currentApiExplainer } = this.state;
 
@@ -548,11 +585,12 @@ export default class CodeSnippet extends Component {
                     <div className='code-snippet-header'>
                       <div className='code-snippet-title'>
                         {selectedSnippet && selectedSnippet.doubleHeaders && selectedSnippet.doubleHeaders[this.props.selectedLang.toLowerCase()] ? (
-                          <div className='code-double-header'>
+                          <div style={{width: sideBarOpen ? "60%" : "47.5%"}} className='code-double-header'>
                             <div 
                             style={{borderBottom: tab1Selected ? "2px solid #2e2eff" : "1px solid transparent"}}
                             className='code-header-request'>
                               <button
+                              className={sideBarOpen ? "code-header-request-sidebar-button" : ""}
                               style={{fontWeight: tab1Selected ? "bold" : "normal" , color: tab1Selected ? "#000" : "#5e626a" }}
                               onClick={this.requestCallClicked}
                               >
@@ -574,6 +612,7 @@ export default class CodeSnippet extends Component {
                             style={{borderBottom: tab2Selected ? "2px solid #2e2eff" : "1px solid transparent"}}
                             className='code-header-response'>
                               <button
+                              className={sideBarOpen ? "code-header-response-sidebar-button" : ""}
                               style={{fontWeight: tab2Selected ? "bold" : "normal" , color: tab2Selected ? "#000" : "#5e626a" }}
                               onClick={() => this.responseCallClicked(selectedSnippet.doubleHeaders[this.props.selectedLang.toLowerCase()][0].lang2)}
                               >
@@ -593,17 +632,17 @@ export default class CodeSnippet extends Component {
                             </div>
                           </div>
                         ) : (
-                          <h5>{this.props.snippet}</h5>
+                          <h5 style={{ fontSize: sideBarOpen ? "75%" : "100%", paddingTop: sideBarOpen ? "2%": "0%" , paddingBottom: sideBarOpen ? "2%" : "0%"}}>{this.props.snippet}</h5>
                         )}
                       </div>
-                      <div className='code-snippet-language' id="dropdown-container">
+                      <div style={{paddingTop: sideBarOpen ? "0.85%" : "0%"}} className='code-snippet-language' id="dropdown-container">
                         {requestSelected && 
                           <DropdownContainer id={`dropdown-container-${this.props.id}`}>
                             <SelectButtonRequest style={{fontSize: "70%"}} id="dropdown-button" onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
-                            <DropdownContent style={{width: "115%"}} isOpen={isOpen}>
+                            <DropdownContent style={{width: sideBarOpen ? "135%" : "100%"}} isOpen={isOpen}>
                               {options.map(option => (
                                 <DropdownItem
-                                  style={{paddingRight: "2.5px"}}
+                                  style={{paddingRight: sideBarOpen ? "5px": "0%"}}
                                   key={option.id}
                                   onClick={() => this.selectOption(option, option.id, option.lang)}
                                 >
@@ -612,7 +651,7 @@ export default class CodeSnippet extends Component {
                                     alt="no img available"
                                     isSelected={selectedOption && selectedOption.id === option.id}
                                   />
-                                  <p>{option.lang}</p>
+                                  <p className={sideBarOpen ? "code-snippet-language-sidebar-p" : ""}>{option.lang}</p>
                                 </DropdownItem>
                               ))}
                             </DropdownContent>
@@ -622,12 +661,13 @@ export default class CodeSnippet extends Component {
                           <SelectButtonResponse>JSON</SelectButtonResponse>
                         }
                       </div>
-                      <div className='code-snippet-copy'>
+                      <div style={{float: sideBarOpen ? "right" : "left", textAlign: sideBarOpen ? "right" : "center"}} className='code-snippet-copy'>
                         <button 
+                        className={sideBarOpen ? "code-snippet-copy-sidebar-button" : ""}
                         onMouseEnter={this.codeSnippetCopyEnter}
                         onMouseLeave={this.codeSnippetCopyLeave}
                         style={{backgroundColor: this.state.copySnippetHovered ? "#e9e9f0": "transparent"}}>
-                            <span><img src='/assets/demo_doc_copy_icon.png' alt='no img available'/></span>
+                            <span><img className={sideBarOpen ? "code-snippet-copy-sidebar-img" : ""} src='/assets/demo_doc_copy_icon.png' alt='no img available'/></span>
                         </button>
                       </div>
                     </div>
@@ -662,6 +702,7 @@ export default class CodeSnippet extends Component {
                         {codeForSelectedLang.map((line, index) => (
                             <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow:"scroll"}}>
                               <p 
+                              className={sideBarOpen ? "code-snippet-body-sidebar-p" : ""}
                               style={{fontSize: "60%", fontFamily: "inconsolata"}} 
                               dangerouslySetInnerHTML={{ __html: line }}
                               onClick={this.handleApiKeyEnter}
