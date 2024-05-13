@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import APIReference from '../../d_Home_Pages/d_Documentation_Demo/d_API_Reference'
+import APIReference from '../../d_Home_Pages/d_Documentation_Demo/Resources_Docs/d_API_Reference'
 
 const Styles = styled.div  `
 

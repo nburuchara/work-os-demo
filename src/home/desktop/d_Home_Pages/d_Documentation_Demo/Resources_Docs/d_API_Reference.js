@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
+import CodeSnippetStruct from '../d_Documentation_Components/d_Code_Snippet_Structure'
 import { hover } from '@testing-library/user-event/dist/hover'
 import { CSSTransition } from 'react-transition-group';
-import SidebarOptions from './Documentation_Menu_Options'
-import NestedDropdown from './d_Documentation_Components/NestedDropdown'
-import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
+import SidebarOptions from './Resources_Docs_Options'
+import NestedDropdown from '../d_Documentation_Components/NestedDropdown'
+import ResultsData from "../../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
 
 const Styles = styled.div `
 
