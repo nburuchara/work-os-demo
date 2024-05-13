@@ -109,12 +109,13 @@ const Styles = styled.div `
   text-align: right;
   width: 20%;
   position: relative;
+  padding-top: 0.85%;
   display: inline-block;
 }
 
 .code-snippet-copy {
-  float: left;
-  text-align: center;
+  float: right;
+  text-align: right;
   width: 10%;
 }
 
@@ -124,14 +125,17 @@ const Styles = styled.div `
     margin-top: 3%;
     margin-bottom: 3%;
     margin-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 75%;
 }
 
   // # HEADER LANGUAGE 
 
 .code-snippet-language p {
-  text-align: left !important;
-  margin-left: 20% !important;
-  font-size: 70% !important;
+  text-align: right !important;
+  margin-left: 0% !important;
+  font-size: 60% !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
@@ -140,10 +144,11 @@ const Styles = styled.div `
 
 .code-snippet-copy button {
     padding: 2%;
-    margin-top: 9.5% !important;
+    margin-left: 2.5%;
+    margin-top: 19.5% !important;
     height: 70% !important;
-    width: 55% !important;
-    // margin-right: 2% !important;
+    width: 72% !important;
+    margin-right: 19% !important;
     border-radius: 50% !important;
     border: 2px solid transparent!important; 
     cursor: pointer !important;
@@ -160,7 +165,7 @@ const Styles = styled.div `
 
 
 .code-double-header {
-  width: 47.5%;
+  width: 60%;
   height: 100%;
 }
 
@@ -191,11 +196,13 @@ const Styles = styled.div `
   // # REQUEST (BUTTON) CONTAINER
 
 .code-header-request button {
-  width: 90%;
-  margin-top: 5.5%;
-  padding: 4%;
+  width: 100%;
+  margin-top: 8.5%;
+  padding-top: 5%;
+  margin-left: 4%;
+  padding-bottom: 5%;
   font-family: poppins;
-  font-size: 75%;
+  font-size: 62.5%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;
@@ -210,11 +217,13 @@ const Styles = styled.div `
   // # RESPONSE (BUTTON) CONTAINER
 
 .code-header-response button {
-  width: 90%;
-  margin-top: 5.5%;
-  padding: 4%;
+  width: 100%;
+  margin-top: 8.5%;
+  padding-top: 5%;
+  margin-left: 4%;
+  padding-bottom: 5%;
   font-family: poppins;
-  font-size: 75%;
+  font-size: 62.5%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;
@@ -231,6 +240,8 @@ const Styles = styled.div `
 .code-snippet-body {
   border: 1px solid #ccc;
   padding: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   border-radius: 10px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
@@ -239,7 +250,7 @@ const Styles = styled.div `
 .code-snippet-body p {
   margin-top: 1.25% !important;
   margin-bottom: 1.25% !important;
-  font-size: 78% !important;
+  font-size: 80% !important;
 }
 
 .code-snippet-body pre {
@@ -588,10 +599,11 @@ export default class CodeSnippet extends Component {
                       <div className='code-snippet-language' id="dropdown-container">
                         {requestSelected && 
                           <DropdownContainer id={`dropdown-container-${this.props.id}`}>
-                            <SelectButtonRequest id="dropdown-button" onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
-                            <DropdownContent isOpen={isOpen}>
+                            <SelectButtonRequest style={{fontSize: "70%"}} id="dropdown-button" onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
+                            <DropdownContent style={{width: "115%"}} isOpen={isOpen}>
                               {options.map(option => (
                                 <DropdownItem
+                                  style={{paddingRight: "2.5px"}}
                                   key={option.id}
                                   onClick={() => this.selectOption(option, option.id, option.lang)}
                                 >
@@ -648,7 +660,7 @@ export default class CodeSnippet extends Component {
                         }
                       <div>
                         {codeForSelectedLang.map((line, index) => (
-                            <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap' }}>
+                            <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow:"scroll"}}>
                               <p 
                               style={{fontSize: "60%", fontFamily: "inconsolata"}} 
                               dangerouslySetInnerHTML={{ __html: line }}

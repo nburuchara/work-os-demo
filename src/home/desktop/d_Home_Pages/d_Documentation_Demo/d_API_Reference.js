@@ -213,7 +213,7 @@ const Styles = styled.div `
     // - DEMO DOCS CODE CONTAINER - //
 
 .demo-docs-code-container {
-    height: 9vh;
+    height: auto;
     width: 92.5%;
     border: 1px solid #ccc;
     border-radius: 12px;
@@ -233,27 +233,34 @@ const Styles = styled.div `
 .demo-docs-code-container-header h5 {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     margin-left: 2%;
+    font-size: 75%;
 }
 
     // # HEADER (BUTTON CONTAINER)
 
-.demo-docs-code-container-header button {
-    margin-top: 0.8%;
-    height: 80%;
-    width: 6%;
-    margin-right: 2%;
+.demo-docs-code-container-header span {
+    margin-top: 1.5%;
+    height: 60%;
+    width: 5%;
+    margin-right: 2.5%;
     border-radius: 50%;
     border: 2px solid transparent; 
     cursor: pointer;
+    padding-left: 0.75%;
+    padding-right: 0.75%;
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
 }
 
     // # HEADER (COPY ICON)
     
 .demo-docs-code-container-header img {
-    margin-top: 20%;
-    width: 108.5%;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80.5%;
 }
 
     // # BODY 
@@ -262,6 +269,8 @@ const Styles = styled.div `
     font-family: inconsolata;
     margin-left: 2%;
     margin-top: 2%;
+    padding-top: 1.5%;
+    padding-bottom: 3.5%;
     margin-bottom: 0px;
 }
 
@@ -387,16 +396,18 @@ const Styles = styled.div `
 
 .errors {
     border-bottom: 1px solid #ccc;
+    padding-bottom: 2%;
 }
 
 .errors-cell {
     border-top: 1px solid #ccc;
     padding: 3%;
+    margin-top: 2%;
 }
 
 .errors-cell span {
-    padding: 1%;
-    font-size: 75%;
+    padding: 1.75%;
+    font-size: 70%;
     font-weight: bold;
     border-radius: 30px;
     font-family: rubik;
@@ -405,7 +416,7 @@ const Styles = styled.div `
 
 .errors-cell label {
     font-family: poppins;
-    font-size: 70%;
+    font-size: 60%;
     margin-top: 5%;
     color: #5e626a;
 }
@@ -1292,12 +1303,12 @@ export default class APIReference extends Component {
                             <div className='demo-docs-code-container'>
                                 <div style={{display: "flex", justifyContent: "space-between"}} className='demo-docs-code-container-header'>
                                     <h5>API Base URL</h5>
-                                    <button 
+                                    <span 
                                     onMouseEnter={this.codeSnippet1CopyEnter}
                                     onMouseLeave={this.codeSnippet1CopyLeave}
                                     style={{backgroundColor: codeSnippet1CopyHovered ? "#e9e9f0": "transparent"}}>
                                         <img src='/assets/demo_doc_copy_icon.png' alt='no img available'/>
-                                    </button>
+                                    </span>
                                 </div>
                                 <div className='demo-docs-code-container-body'>
                                     <p>https://api.workos.com</p>
@@ -1476,20 +1487,20 @@ export default class APIReference extends Component {
                                 <div className='errors-cell'>
                                     <span style={{backgroundColor: error_2xx ? "#d8eaed" : "", color: error_2xx ? "#00815c" : ""}}>200</span><label>Successful request.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>400</span><label>The request was not acceptable. Check that the parameters were correct.</label>
+                                <div className='errors-cell' style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>400</span><label style={{marginTop: "0px"}}>The request was not acceptable. Check that the parameters were correct.</label>
                                 </div>
                                 <div className='errors-cell'>
                                     <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>401</span><label>The API key used was invalid.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>403</span><label>The API key used did not have the correct permissions.</label>
+                                <div className='errors-cell' style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>403</span><label style={{marginTop: "0px"}}>The API key used did not have the correct permissions.</label>
                                 </div>
                                 <div className='errors-cell'>
                                     <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>404</span><label>The resource was not found.</label>
                                 </div>
-                                <div className='errors-cell'>
-                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label>Validation failed for the request. Check that the parameters were correct.</label>
+                                <div className='errors-cell'  style={{display: "flex", alignItems: "flex-start"}}>
+                                    <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label style={{marginTop: "0px"}}>Validation failed for the request. Check that the parameters were correct.</label>
                                 </div>
                                 <div className='errors-cell'>
                                     <span style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label>Too many requests. Refer to the <span className='inline-errors-cell-span'>Rate Limits</span> section.</label>
