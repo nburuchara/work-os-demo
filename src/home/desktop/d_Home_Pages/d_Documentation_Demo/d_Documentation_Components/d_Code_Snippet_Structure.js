@@ -202,7 +202,7 @@ const Styles = styled.div `
   margin-left: 4%;
   padding-bottom: 5%;
   font-family: poppins;
-  font-size: 62.5%;
+  font-size: 65.5%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;
@@ -223,7 +223,7 @@ const Styles = styled.div `
   margin-left: 4%;
   padding-bottom: 5%;
   font-family: poppins;
-  font-size: 62.5%;
+  font-size: 65.5%;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid transparent;

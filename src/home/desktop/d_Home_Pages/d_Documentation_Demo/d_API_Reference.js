@@ -356,6 +356,7 @@ const Styles = styled.div `
 }
 
     //! - - Testing the API - - !//
+    
 
 .testing-the-api-info-box {
     background-color: #ededf1;
@@ -363,17 +364,37 @@ const Styles = styled.div `
     border-radius: 8px;
 }
 
+.testing-the-api-info-box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.api-info-box-img {
+    float: left;
+    text-align: center;
+    width: 10%;
+}
+
+.api-info-box-text {
+    float: left;
+    text-align: left;
+    width: 90%;
+}
+
 .testing-the-api-info-box img {
-    width: 2.75%;
+    width: 55.5%;
     margin-left: 0.5%;
     vertical-align: middle;
     padding-bottom: 0.5%;
+    margin-top: 7.5%;
     cursor: pointer;
 }
 
 .testing-the-api-info-box p {
     color: #656971;
-    font-size: 67.5%;
+    font-size: 64.5%;
+    margin-top: 1%;
 }
 
 .testing-the-api-info-box label {
@@ -1452,7 +1473,13 @@ export default class APIReference extends Component {
                             <h1>Testing the API</h1>
                             <p>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
                             <div className='testing-the-api-info-box'>
-                                <p><span style={{marginRight: "2%"}}><img src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/></span>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
+                                <div className='api-info-box-img'>
+                                    <img src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
+                                </div>
+                               
                             </div>
                         </div>
                         <div style={{filter: `blur(${this.state.docsContentBlur})`}} className='demo-docs-separator'></div>
