@@ -8,22 +8,6 @@ const DropdownContainer = styled.div`
   z-index: 2;
 `;
 
-const SelectButtonRequest = styled.button`
-  background-color: transparent;
-  margin-top: 5%;
-  border: none;
-  padding: 5%;
-  padding-left: 8.5%;
-  padding-right: 8.5%;
-  cursor: pointer;
-  font-family: poppins;
-  border-radius: 7px;
-  font-size: 75%;
-  &:hover {
-    background-color: #eaeaef;
-  }
-`;
-
 const SelectButtonResponse = styled.button`
   background-color: transparent;
   margin-top: 5%;
@@ -475,7 +459,7 @@ export default class CodeSnippet extends Component {
           tab2Selected: true,
           prevLangSelected: this.props.selectedLang
         }, () => {
-          this.props.updateSelectedLang(secondLang.toLowerCase())
+          this.props.updateSelectedLang(secondLang.toLowerCase().replace(/[^\w]/g, ''))
         })
       }
     }
@@ -553,8 +537,24 @@ export default class CodeSnippet extends Component {
 
     render () {
 
+      const SelectButtonRequest = styled.button`
+          background-color: transparent;
+          margin-top: 5%;
+          border: none;
+          padding: 5%;
+          padding-left: 8.5%;
+          padding-right: 8.5%;
+          cursor:  ${this.props.dropdownDisabledAndHidden ? "default" : "pointer"};
+          font-family: poppins;
+          border-radius: 7px;
+          font-size: 75%;
+          &:hover {
+            background-color: ${this.props.dropdownDisabledAndHidden ? "transparent" : "#eaeaef"} ;
+          }
+      `;
+
         const { tab1Selected, tab2Selected, requestSelected, isOpen, selectedOption, options, replaceApiPopup, replaceApiClientPopup,  apiLabelHovered } = this.state;
-        const { id, snippet, sideBarOpen } = this.props;
+        const { id, snippet, sideBarOpen, dropdownDisabledAndHidden } = this.props;
         const selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
         const { secretKeyApiPopup, apiExplainerPopup, currentApiExplainer } = this.state;
 
@@ -638,7 +638,7 @@ export default class CodeSnippet extends Component {
                       <div style={{paddingTop: sideBarOpen ? "0.85%" : "0%"}} className='code-snippet-language' id="dropdown-container">
                         {requestSelected && 
                           <DropdownContainer id={`dropdown-container-${this.props.id}`}>
-                            <SelectButtonRequest style={{fontSize: "70%"}} id="dropdown-button" onClick={this.toggleDropdown}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
+                            <SelectButtonRequest style={{fontSize: "70%", color: dropdownDisabledAndHidden ? "transparent" : "black"}} id="dropdown-button" onClick={this.toggleDropdown} disabled={this.props.dropdownDisabled ? true : false}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
                             <DropdownContent style={{width: sideBarOpen ? "135%" : "100%"}} isOpen={isOpen}>
                               {options.map(option => (
                                 <DropdownItem

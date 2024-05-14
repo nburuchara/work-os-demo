@@ -1,4 +1,6 @@
 const codeSnippets = [
+
+      //! - - API REFERENCE - - !//
     { //* Install the WorkOS SDK 
       id: 0,
         title: "Install the WorkOS SDK",
@@ -64,6 +66,7 @@ const codeSnippets = [
           ]
         }
     },
+    
     { //* Set API Key
         id: 1,
         title: "Set API Key",
@@ -140,6 +143,7 @@ const codeSnippets = [
           // Add more languages and their respective lines of code
         },
     },
+
     { //* Pagination
         id: 2,
         title: "Pagination",
@@ -564,8 +568,100 @@ const codeSnippets = [
             ')'
           ]
         }
+    },
+
+           //! - - USER MANAGEMENT - - !//
+    { //* Install dependencies
+      id: 3,
+      title: "Install dependencies",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Node SDK", lang2: "Next.js"}
+        ],
+        nextjs: [
+          {lang1: "Node SDK", lang2: "Next.js"}
+        ]
+      },
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/node'
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/node'
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/authkit-nextjs'
+        ]
+      }
+    },
+
+    { //* Environment Variables (Node)
+      id: 4,
+      title: "Environment variables",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
+        ]
+      }
+    },
+
+    { //* Environment Variables (Next.js)
+      id: 5,
+      title: "Environment variables",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
+        ]
+      }
+    },
+
+    { //* Generate a strong password
+      id: 6,
+      title: "Generate a strong password",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">24</span>',
+        ]
+      }
+    },
+
+    { //* Redirect users to AuthKit
+      id: 7,
+      title: "Redirect users to AuthKit",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Node SDK", lang2: "Next.js"}
+        ],
+        nextjs: [
+          {lang1: "Node SDK", lang2: "Next.js"}
+        ]
+      },
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">const</span> express <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'express\');',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">const</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'@workos-inc/node\'</span>);',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> <span style="color: #148a68;">const</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">express</span>();',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(process.env.<span style="color: #0072dd;">WORKOS_API_KEY</span>);',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">const</span> clientId <span style="color: #ce3559;">=</span> process.env.<span style="color: #0072dd;">WORKOS_CLIENT_ID</span>;',
+          '<span style="color: #8b8d98;">8</span> ',
+          '<span style="color: #8b8d98;">9</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">10</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">11</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">12</span> ',
+          '<span style="color: #8b8d98;">13</span> ',
+        ],
+        nextjs: [
+          ''
+        ]
+      }
     }
-      // Add more code snippets as needed
 ]
 
 export default codeSnippets;

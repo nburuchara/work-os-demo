@@ -210,18 +210,28 @@ const Styles = styled.div `
 
 .demo-docs-hyperlink:hover {
     text-decoration: underline;
-    color: #6363f1;
+    // color: #6363f1;
     cursor: pointer;
 }
 
     // # ICON
 
+.demo-docs-hyperlink-icon {
+    all: unset !important;
+}
+
 .demo-docs-hyperlink-icon img {
     width: 2.75%;
     margin-left: 0.5%;
-    vertical-align: middle;
-    padding-bottom: 0.5%;
-    cursor: pointer;
+    vertical-align: middle !important;
+    padding-bottom: 0.5% !important;
+    cursor: pointer !important;
+    margin-top: 0px !important;
+}
+
+.demo-docs-hyperlink-icon-sidebar-img {
+    width: 4% !important;
+    margin-left: 1.5% !important;
 }
 
 
@@ -523,6 +533,135 @@ const Styles = styled.div `
     cursor: pointer;
 }   
 
+
+    //! - - Labeled Header - - !//
+
+.labeled-header {
+    margin-top: 6.5%;
+}
+
+.labeled-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.label-tag {
+    float: left;
+    text-align: center;
+    width: 7.5%;
+    padding-top: 0.75%;
+}
+
+.label-desc {
+    float: left;
+    text-align: left;
+    width: 92.5%;
+}
+
+    // # LABELED TAG
+
+.label-tag span {
+    background-color: #e6e6eb;
+    padding: 13%;
+    padding-right: 28%;
+    padding-left: 28%;
+    border-radius: 45%;
+    font-weight: bold;
+}
+
+.label-tag-sidebar-span {
+    padding-right: 37% !important; 
+    padding-left: 37% !important;
+}
+
+    // # LABELED DESC
+
+.label-desc h1 {
+    margin-top: 0px !important;
+    margin-left: 2.5%;
+}
+
+    //! - - Image in docs - - !//
+
+.enlargable-image-container {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    border: 15px solid #e6e6eb;
+}
+    
+    .enlargable-image-container.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50vw; /* Set width to 75% of viewport width */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 5;
+    border-radius: 8px;
+    border: 30px solid #e6e6eb;
+}
+    
+.image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+    //! - - Two tab selection - - !//
+
+.two-tab-selection {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 3%;
+}
+
+.two-tab-selection:after { 
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.two-tab-selection-tab {
+    float: left;
+    text-align: center;
+    width: 20%;
+}
+
+.two-tab-selection-sidebar-tab {
+    float: left;
+    text-align: center;
+    width: 30%;
+}
+
+    // # BUTTONS
+
+.two-tab-selection-tab button {
+    background-color: transparent;
+    margin-bottom: 5%;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    padding: 3%;
+    font-size: 75%;
+    font-family: poppins;
+    padding-left: 10%;
+    padding-right: 10%;
+    cursor: pointer;
+    color: #5e626a;
+}
+
+.two-tab-selection-sidebar-tab button {
+    background-color: transparent;
+    margin-bottom: 5%;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    padding: 3%;
+    font-size: 75%;
+    font-family: poppins;
+    padding-left: 10%;
+    padding-right: 10%;
+    cursor: pointer;
+    color: #5e626a;
+}
 
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
