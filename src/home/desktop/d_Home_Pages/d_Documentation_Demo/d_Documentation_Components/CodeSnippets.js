@@ -643,7 +643,7 @@ const codeSnippets = [
       },
       code: {
         javascript: [
-          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">const</span> express <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'express\');',
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">const</span> express <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'express\'</span>);',
           '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">const</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'@workos-inc/node\'</span>);',
           '<span style="color: #8b8d98;">3</span> ',
           '<span style="color: #8b8d98;">4</span> <span style="color: #148a68;">const</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">express</span>();',
@@ -665,3 +665,4 @@ const codeSnippets = [
 ]
 
 export default codeSnippets;
+

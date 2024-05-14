@@ -564,8 +564,8 @@ const Styles = styled.div `
 .label-tag span {
     background-color: #e6e6eb;
     padding: 13%;
-    padding-right: 28%;
-    padding-left: 28%;
+    padding-right: 27%;
+    padding-left: 27%;
     border-radius: 45%;
     font-weight: bold;
 }
@@ -591,7 +591,7 @@ const Styles = styled.div `
     border: 15px solid #e6e6eb;
 }
     
-    .enlargable-image-container.enlarged {
+.enlargable-image-container.enlarged {
     position: fixed;
     top: 50%;
     left: 50%;

@@ -84,7 +84,7 @@ export default class UserManagement extends Component {
                 <div className='demo-docs-container'>
                     <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section' >
                         <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
-                        <p style={{fontSize: sidebarMenuClicked ? "105%" : "110%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
+                        <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
                     </div>
                     <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                         <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -92,7 +92,7 @@ export default class UserManagement extends Component {
                         <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
                         <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
                         <ul>
-                            <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
+                            <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
                             <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your WorkOS <label className='demo-docs-hyperlink'>API Key</label> and <label className='demo-docs-hyperlink'>Client ID</label>.</p></li>
                         </ul>
                     </div>
@@ -107,7 +107,7 @@ export default class UserManagement extends Component {
                         </div>
                         <p>Let's add the necessary dependencies and configuration in your WorkOS Dashboard.</p>
                         <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install dependencies</h3>
-                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you're using Next.js, you can use the <label className='demo-docs-hyperlink'>authkit-nextjs</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> library. The Next.js library is the fastest way to get AuthKit and <label className='demo-docs-hyperlink'>Impersonation</label> working in your Next.js application with full session management.</p>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you're using Next.js, you can use the <label className='demo-docs-hyperlink'>authkit-nextjs</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> library. The Next.js library is the fastest way to get AuthKit and <label className='demo-docs-hyperlink'>Impersonation</label> working in your Next.js application with full session management.</p>
                         <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively you can use one of the several native SDKs that WorkOS provides. This guide will use the popular Node.js SDK.</p>
                      
                         <CodeSnippetStruct 
@@ -121,7 +121,7 @@ export default class UserManagement extends Component {
                         
                         <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure a redirect URI</h3>
                         <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A redirect URI is a callback endpoint that WorkOS will redirect to after a user has authenticated. This endpoint will exchange the authorization code returned by WorkOS for an authenticated <label className='demo-docs-hyperlink'>User object</label>. We’ll be creating this endpoint in the next step.</p>
-                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can set a redirect URI in the <i>Redirects</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img src='/assets/external_link_color.png' alt='no img available'/></span> – be sure not to include wildcard subdomains or query parameters.</p>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can set a redirect URI in the <i>Redirects</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> – be sure not to include wildcard subdomains or query parameters.</p>
 
         
                         <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
