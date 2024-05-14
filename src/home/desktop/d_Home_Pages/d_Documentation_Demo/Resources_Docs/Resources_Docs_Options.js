@@ -598,14 +598,308 @@ const docs_sidebar_options = [
     {
         id: 1,
         levelName: "Integrations",
+        sections: [
+            {
+                id: 0,
+                levelName: "SAML",
+            },
+            {
+                id: 1,
+                levelName: "SCIM"
+            },
+            {
+                id: 2,
+                levelName: "SFTP"
+            },
+            {
+                id: 3,
+                levelName: "OpenID Connect"
+            },
+            {
+                id: 4,
+                levelName: "Access People HR",
+            },
+            {
+                id: 5,
+                levelName: "ADP OpenID Connect"
+            },
+            {
+                id: 6,
+                levelName: "AuthO"
+            },
+            {
+                id: 7,
+                levelName: "AWS Cognito"
+            },
+            {
+                id: 8,
+                levelNamee: "Bamboo HR"
+            },
+            {
+                id: 9,
+                levelName: "Breathe HR"
+            },
+            {
+                id: 10,
+                levelName: "Bubble Plugin"
+            },
+            {
+                id: 11,
+                levelName: "CAS SAML"
+            },
+            {
+                id: 12,
+                levelName: "Cezanne HR"
+            },
+            {
+                id: 13,
+                levelName: "ClassLink"
+            },
+            {
+                id: 14,
+                levelName: "Cloudflare"
+            },
+            {
+                id: 15,
+                levelName: "CyberArk SAML"
+            },
+            {
+                id: 16,
+                levelName: "CyberArk SCIM"
+            },
+            {
+                id: 17,
+                levelName: "Duo"
+            },
+            {
+                id: 18,
+                levelName: "Entra ID SAML (fka Azure AD)"
+            },
+            {
+                id: 19,
+                levelName: "Entra ID SCIM (fka Azure AD)"
+            },
+            {
+                id: 20,
+                levelName: "Firebase"
+            },
+            {
+                id: 21,
+                levelName: "Fourth"
+            },
+            {
+                id: 22,
+                levelName: "GitHub OAuth"
+            },
+            {
+                id: 23,
+                levelName: "Google Directory Sync"
+            },
+            {
+                id: 24,
+                levelName: "Google OAuth"
+            },
+            {
+                id: 25,
+                levelName: "Google SAML"
+            },
+            {
+                id: 26,
+                levelName: "HiBob"
+            },
+            {
+                id: 27,
+                levelName: "JumpCloud SAML"
+            },
+            {
+                id: 28,
+                levelName: "JumpCloud SCIM"
+            },
+            {
+                id: 29,
+                levelName: "Keycloak"
+            },
+            {
+                id: 30,
+                levelName: "Last Pass"
+            },
+            {
+                id: 31,
+                levelName: "Login.gov OpenID Connect"
+            },
+            {
+                id: 32,
+                levelName: "Microsoft AD FS SAML"
+            },
+            {
+                id: 33,
+                levelName: "Microsoft OAuth"
+            },
+            {
+                id: 34,
+                levelName: "miniOrange"
+            },
+            {
+                id: 35,
+                levelName: "NetIQ"
+            },
+            {
+                id: 36,
+                levelName: "NextAuth.js"
+            },
+            {
+                id: 37,
+                levelName: "Okta SAML"
+            },
+            {
+                id: 38,
+                levelName: "Okta SCIM"
+            },
+            {
+                id: 39,
+                levelName: "OneLogin SAML"
+            },
+            {
+                id: 40,
+                levelName: "OneLogin SCIM"
+            },
+            {
+                id: 41,
+                levelName: "Oracle SAML"
+            },
+            {
+                id: 42,
+                levelName: "PingFederate SAML"
+            },
+            {
+                id: 43,
+                levelName: "PingFederate SCIM"
+            },
+            {
+                id: 44,
+                levelName: "PingOne SAML"
+            },
+            {
+                id: 45,
+                levelName: "React Native Expo"
+            },
+            {
+                id: 46,
+                levelName: "Rippling SAML"
+            },
+            {
+                id: 47,
+                levelName: "Rippling SCIM"
+            },
+            {
+                id: 48,
+                levelName: "Salesforce"
+            },
+            {
+                id: 49,
+                levelName: "Shibboleth Generic SAML"
+            },
+            {
+                id: 50,
+                levelName: "Shibboleth Unsolicited SAML"
+            },
+            {
+                id: 51,
+                levelName: "SimpleSAMLphp"
+            },
+            {
+                id: 52,
+                levelName: "Supabase"
+            },
+            {
+                id: 53,
+                levelName: "VMWare"
+            },
+            {
+                id: 54,
+                levelName: "Workday"
+            },
+        ]
     },
     {
         id: 2,
-        levelName: "Migrate to WorkOS"
+        levelName: "Migrate to WorkOS",
+        sections: [
+            {
+                id: 0,
+                levelName: "AuthO"
+            },
+            {
+                id: 1,
+                levelName: "AWS Cognito"
+            },
+            {
+                id: 2,
+                levelName: "Firebase"
+            },
+            {
+                id: 3,
+                levelName: "Other Services"
+            },
+            {
+                id: 4,
+                levelName: "Single Sign-On"
+            }
+        ]
     },
     {
         id: 3,
-        levelName: "SDKs"
+        levelName: "SDKs",
+        sections: [
+            {
+                id: 0,
+                levelName: "Node.js"
+            },
+            {
+                id: 1,
+                levelName: "Go",
+            },
+            {
+                id: 2,
+                levelName: "Ruby"
+            },
+            {
+                id: 3,
+                levelName: "Python"
+            },
+            {
+                id: 4,
+                levelName: "PHP"
+            },
+            {
+                id: 5,
+                levelName: "Laravel"
+            },
+            {
+                id: 6,
+                levelName: "Java"
+            },
+            {
+                id: 7,
+                levelName: ".NET"
+            },
+            {
+                id: 8,
+                levelName: "Elixir"
+            },
+            {
+                id: 9,
+                levelName: "Django"
+            },
+            {
+                id: 10,
+                levelName: "OmniAuth"
+            },
+            {
+                id: 11,
+                levelName: "Ueberauth"
+            }
+        ]
     },
     {
         id: 4,

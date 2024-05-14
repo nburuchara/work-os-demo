@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import APIReference from '../../d_Home_Pages/d_Documentation_Demo/Resources_Docs/d_API_Reference'
+import DocsNavigationMenu from '../../d_Home_Pages/d_Documentation_Demo/d_Docs_Navigation'
 
 const Styles = styled.div  `
 
@@ -122,7 +123,7 @@ export default class Popup extends Component {
             <Styles>
                 <div ref={this.popupContainerRef} className='popup-container' style={{overflow: scrollEnabled ? "auto" : "hidden"}}>
                     {/* <span id='popup-container-header'></span> */}
-                    <APIReference sidebarPanelRef={this.sidebarPanelRef} sidePanelOpened={this.handleSidePanelOpened}/>
+                    <DocsNavigationMenu sidebarPanelRef={this.sidebarPanelRef} sidePanelOpened={this.handleSidePanelOpened}/>
                 </div>
             </Styles>
         )

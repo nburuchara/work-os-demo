@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group';
 import DocsSelected from './d_Docs_Selected_Popup'
 import ResultsData from "./d_Docs_Results"; // Import options from separate file
-import GetExport from '../../d_Home_Pages/d_Documentation_Demo/d_Get_Export';
 
 const Styles = styled.div  `
 
@@ -1047,7 +1046,6 @@ export default class Popup extends Component {
 
                             </div>
                         }
-                        {this.state.showGetExportDocs && <GetExport/>}
                     </div>
                 {/* </CSSTransition> */}
             </Styles>

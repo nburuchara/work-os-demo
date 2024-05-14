@@ -199,9 +199,17 @@ const docs_sidebar_options = [
     {
         id: 4,
         levelName: "Domain Verification",
-        // sections: 
+        sections: [
+            {
+                id: 0,
+                levelName: "Quick Start"
+            },
+            {
+                id: 1,
+                levelName: "API"
+            }
+        ]
     }
-    
 ]
 
 export default docs_sidebar_options;
