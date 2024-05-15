@@ -260,18 +260,144 @@ export default class UserManagement extends Component {
                             </div>
                         </div>
 
+                        {usingNode && 
+                            <div>
+                                <CodeSnippetStruct 
+                                id={8}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Callback endpoint" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            </div>
+                        }
+                        {usingNextJs && 
+                            <div>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Next.js middleware</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> is required to determine which routes require authentication.</p>
+                                <CodeSnippetStruct 
+                                id={9}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="middleware.ts" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+
+                                <div className='api-keys'>
+                                    <p>Make sure this route matches the <span>WORKOS_REDIRECT_URI</span> environment variable and the configured redirect URI in your WorkOS Dashboard.</p>
+                                </div>
+
+                                <CodeSnippetStruct 
+                                id={10}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="/app/callback/route.ts" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            </div>
+                        }
+
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Validate the authentication flow</h3>
+                        <p>Navigate to the <label className='demo-docs-hyperlink'>authentication endpoint</label> we created and sign up for an account. You can then sign in with the newly created credentials and see the user listed in the <i>Users</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                   
+                        <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <img src='/assets/usr_mgmt_docs_validate_auth_flow_img.avif' alt="Enlargable" className="image" />
+                        </div>
+                    </div>
+                    <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        
+                        <div className='labeled-header'>
+                            <div className='label-tag'>
+                                <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                            </div>
+                            <div className='label-desc'>
+                                <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Handle the user session</h1>
+                            </div>
+                        </div>
+
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to integrate session management with WorkOS:</p>
+                        
+                        <div className='labeled-header'>
+                            <div className='label-tag'>
+                                <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                            </div>
+                            <div className='label-desc'>
+                                <div className='api-keys'>
+                                    <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Using <span>authkit-nextjs</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='api-keys'>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If using the <span>authkit-nextjs</span> library, session management is handled for you. No further integration is required.</p>
+                        </div>
+
+                        <div className='labeled-header'>
+                            <div className='label-tag'>
+                                <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                            </div>
+                            <div className='label-desc'>
+                                <div className='api-keys'>
+                                    <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Manually</h3>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to persist the authenticated state of the user in the application, we need to store and access a session.</p>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For illustration purposes we’ll be using a <label className='demo-docs-hyperlink'>JSON Web Token (JWT)</label> to store the authenticated user in a short lived cookie, though your approach may differ depending on the application's specific requirements.</p>
+                    
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a session password</h3>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, generate a unique password to seal the session with.</p>
+
                         <CodeSnippetStruct 
-                        id={8}
+                        id={11}
                         headerTabs={0}
                         dropdownDisabled={true}
                         sideBarOpen={sidebarMenuClicked}
-                        snippet="Callback endpoint" 
+                        snippet="Create a session password" 
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}/>
 
-                   </div>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then add it to the environment variables file.</p>
+
+                        <CodeSnippetStruct 
+                        id={12}
+                        headerTabs={0}
+                        dropdownDisabled={true}
+                        dropdownDisabledAndHidden={true}
+                        sideBarOpen={sidebarMenuClicked}
+                        snippet="Environment variables" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Save the encrypted session</h3>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, update the callback to seal the access and refresh token. The access token is a JWT which is used to check if the session is still valid. If it isn't, the refresh token is used to attempt to retrieve a new access token.</p>
+
+                        <CodeSnippetStruct 
+                        id={13}
+                        headerTabs={0}
+                        dropdownDisabled={true}
+                        sideBarOpen={sidebarMenuClicked}
+                        snippet="Encrypt session" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, use middleware to specify which routes should be protected. If the session has expired, use the refresh token to attempt to generate a new one.</p>
+                    
+                        <CodeSnippetStruct 
+                        id={14}
+                        headerTabs={0}
+                        dropdownDisabled={true}
+                        sideBarOpen={sidebarMenuClicked}
+                        snippet="Secure route with middleware" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
 
 
+                    </div>    
+                        
                 </div>
             </Styles>
         )

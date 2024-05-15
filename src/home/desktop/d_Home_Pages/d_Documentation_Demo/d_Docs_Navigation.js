@@ -470,6 +470,8 @@ const Styles = styled.div `
     color: #2c333b;
     font-family: inconsolata;
     padding: 0.4%;
+    padding-left: 1%;
+    padding-right: 1%;
     border-radius: 5px;
 }
 
@@ -534,7 +536,7 @@ const Styles = styled.div `
 }   
 
 
-    //! - - Labeled Header - - !//
+    //! - - Labeled Header && Subheader - - !//
 
 .labeled-header {
     margin-top: 6.5%;
@@ -569,6 +571,7 @@ const Styles = styled.div `
     border-radius: 45%;
     font-weight: bold;
 }
+
 
 .label-tag-sidebar-span {
     padding-right: 37% !important; 

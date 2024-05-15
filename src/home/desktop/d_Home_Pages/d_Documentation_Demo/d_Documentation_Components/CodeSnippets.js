@@ -28,10 +28,16 @@ const codeSnippets = [
           javascript: [
             '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/node'
           ],
+          npm: [
+            '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/node'
+          ],
           yarn: [
             '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">yarn add</span> @workos-inc/node'
           ],
           ruby: [
+            '<span style="color: #8b8d98;">$</span> gem <span style="color: #5854c6;">install</span> workos'
+          ],
+          terminal: [
             '<span style="color: #8b8d98;">$</span> gem <span style="color: #5854c6;">install</span> workos'
           ],
           bundler: [
@@ -56,14 +62,21 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">4</span>     &lt<span style="color: #0072dd;">version</span>&gt{version}&lt/<span style="color: #0072dd;">version</span>>',
             '<span style="color: #8b8d98;">5</span> &lt/<span style="color: #0072dd;">dependency</span>>'
           ],
+          maven: [
+            '<span style="color: #8b8d98;">1</span> <<span style="color: #0072dd;">dependency</span>>',
+            '<span style="color: #8b8d98;">2</span>     &lt<span style="color: #0072dd;">groupId</span>&gtcom.workos&lt/<span style="color: #0072dd;">groupId</span>>',
+            '<span style="color: #8b8d98;">3</span>     &lt<span style="color: #0072dd;">artifactId</span>&gtworkos&lt/<span style="color: #0072dd;">artifactId</span>>',
+            '<span style="color: #8b8d98;">4</span>     &lt<span style="color: #0072dd;">version</span>&gt{version}&lt/<span style="color: #0072dd;">version</span>>',
+            '<span style="color: #8b8d98;">5</span> &lt/<span style="color: #0072dd;">dependency</span>>'
+          ],
           gradle: [
-            '1 dependencies {',
-            '2     implementation \'com.workos:workos:VERSION\'',
-            '3 }'
+            '<span style="color: #8b8d98;">1</span> dependencies {',
+            '<span style="color: #8b8d98;">2</span>     implementation <span style="color: #143465;">\'com.workos:workos:VERSION\'</span>',
+            '<span style="color: #8b8d98;">3</span> }'
           ],
           dotnet: [
             '<span style="color: #8b8d98;">$</span> nuget <span style="color: #5854c6;">install</span> WorkOS.net'
-          ]
+          ],
         }
     },
     
@@ -80,7 +93,31 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">2</span> ',
             '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
           ],
+          npm: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          ],
+          yarn: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          ],
           ruby: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> WorkOS.configure do <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
+            '<span style="color: #8b8d98;">4</span> \tconfig.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">end</span>',
+          ],
+          terminal: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> WorkOS.configure do <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
+            '<span style="color: #8b8d98;">4</span> \tconfig.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">end</span>',
+          ],
+          bundler: [
             '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
             '<span style="color: #8b8d98;">2</span> ',
             '<span style="color: #8b8d98;">3</span> WorkOS.configure do <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
@@ -137,9 +174,19 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">2</span> ',
             '<span style="color: #8b8d98;">3</span> <span style="color: #5854c6;">WorkOS</span> work_os <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");'
           ],
+          maven: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #5854c6;">WorkOS</span> work_os <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");'
+          ],
+          gradle: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #5854c6;">WorkOS</span> work_os <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");'
+          ],
           dotnet : [
             '<span style="color: #8b8d98;">1</span> WorkOS.<span style="color: #5854c6;">SetApiKey</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");'
-          ]
+          ],
           // Add more languages and their respective lines of code
         },
     },
@@ -203,7 +250,79 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">16</span>      after <span style="color: #ce3559;">=</span> list.listMetadata.after;',
             '<span style="color: #8b8d98;">17</span> };',
           ],
+          npm: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+            '<span style="color: #8b8d98;">4</span> ',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">let</span> list <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>({ limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'desc\'</span> });',
+            '<span style="color: #8b8d98;">6</span> <span style="color: #148a68;">let</span> connections <span style="color: #ce3559;">=</span> list.data;',
+            '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">let</span> after <span style="color: #ce3559;">=</span> list.listMetadata.after;',
+            '<span style="color: #8b8d98;">8</span> ',
+            '<span style="color: #8b8d98;">9</span> <span style="color: #148a68;">while</span> (after) {',
+            '<span style="color: #8b8d98;">10</span>     list <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>({',
+            '<span style="color: #8b8d98;">11</span>         limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>,',
+            '<span style="color: #8b8d98;">12</span>         after<span style="color: #ce3559;">:</span> after,',
+            '<span style="color: #8b8d98;">13</span>         order<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'desc\'</span>,',
+            '<span style="color: #8b8d98;">14</span>      )};',
+            '<span style="color: #8b8d98;">15</span>      connections <span style="color: #ce3559;">=</span> connections.<span style="color: #5854c6;">concat</span>(list.data);',
+            '<span style="color: #8b8d98;">16</span>      after <span style="color: #ce3559;">=</span> list.listMetadata.after;',
+            '<span style="color: #8b8d98;">17</span> };',
+          ],
+          yarn: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+            '<span style="color: #8b8d98;">4</span> ',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">let</span> list <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>({ limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'desc\'</span> });',
+            '<span style="color: #8b8d98;">6</span> <span style="color: #148a68;">let</span> connections <span style="color: #ce3559;">=</span> list.data;',
+            '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">let</span> after <span style="color: #ce3559;">=</span> list.listMetadata.after;',
+            '<span style="color: #8b8d98;">8</span> ',
+            '<span style="color: #8b8d98;">9</span> <span style="color: #148a68;">while</span> (after) {',
+            '<span style="color: #8b8d98;">10</span>     list <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>({',
+            '<span style="color: #8b8d98;">11</span>         limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>,',
+            '<span style="color: #8b8d98;">12</span>         after<span style="color: #ce3559;">:</span> after,',
+            '<span style="color: #8b8d98;">13</span>         order<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'desc\'</span>,',
+            '<span style="color: #8b8d98;">14</span>      )};',
+            '<span style="color: #8b8d98;">15</span>      connections <span style="color: #ce3559;">=</span> connections.<span style="color: #5854c6;">concat</span>(list.data);',
+            '<span style="color: #8b8d98;">16</span>      after <span style="color: #ce3559;">=</span> list.listMetadata.after;',
+            '<span style="color: #8b8d98;">17</span> };',
+          ],
           ruby: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> WorkOS.configure <span style="color: #148a68;">do</span> <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
+            '<span style="color: #8b8d98;">4</span>     config.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">end</span>',
+            '<span style="color: #8b8d98;">6</span> ',
+            '<span style="color: #8b8d98;">7</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list</span> <span style="color: #ce3559;">=</span> WorkOS::<span style="color: #0072dd;">SSO</span>.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_connections</span>(limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"desc"</span>)',
+            '<span style="color: #8b8d98;">8</span> connections <span style="color: #ce3559;">=</span> connections.data',
+            '<span style="color: #8b8d98;">9</span> after <span style="color: #ce3559;">=</span> connections.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_metadata</span>[<span style="color: #143465;">"after"</span>]',
+            '<span style="color: #8b8d98;">10</span> ',
+            '<span style="color: #8b8d98;">11</span> <span style="color: #148a68;">until</span> after.<span style="color: #148a68;">nil</span><span style="color: #ce3559;">?</span>',
+            '<span style="color: #8b8d98;">12</span>     <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">current_page</span> <span style="color: #ce3559;">=</span> WorkOS::SSO.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_connections</span>(after<span style="color: #ce3559;">:</span> after, limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"desc"</span>)',
+            '<span style="color: #8b8d98;">13</span>     connections <span style="color: #ce3559;">=</span> connections.concat(current_page.data)',
+            '<span style="color: #8b8d98;">14</span>     after <span style="color: #ce3559;">=</span> current_page.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_metadata</span>[<span style="color: #143465;">"after"</span>]',
+            '<span style="color: #8b8d98;">15</span> <span style="color: #148a68;">end</span>',
+          ],
+          terminal: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
+            '<span style="color: #8b8d98;">2</span> ',
+            '<span style="color: #8b8d98;">3</span> WorkOS.configure <span style="color: #148a68;">do</span> <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
+            '<span style="color: #8b8d98;">4</span>     config.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+            '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">end</span>',
+            '<span style="color: #8b8d98;">6</span> ',
+            '<span style="color: #8b8d98;">7</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list</span> <span style="color: #ce3559;">=</span> WorkOS::<span style="color: #0072dd;">SSO</span>.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_connections</span>(limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"desc"</span>)',
+            '<span style="color: #8b8d98;">8</span> connections <span style="color: #ce3559;">=</span> connections.data',
+            '<span style="color: #8b8d98;">9</span> after <span style="color: #ce3559;">=</span> connections.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_metadata</span>[<span style="color: #143465;">"after"</span>]',
+            '<span style="color: #8b8d98;">10</span> ',
+            '<span style="color: #8b8d98;">11</span> <span style="color: #148a68;">until</span> after.<span style="color: #148a68;">nil</span><span style="color: #ce3559;">?</span>',
+            '<span style="color: #8b8d98;">12</span>     <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">current_page</span> <span style="color: #ce3559;">=</span> WorkOS::SSO.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_connections</span>(after<span style="color: #ce3559;">:</span> after, limit<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">100</span>, order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"desc"</span>)',
+            '<span style="color: #8b8d98;">13</span>     connections <span style="color: #ce3559;">=</span> connections.concat(current_page.data)',
+            '<span style="color: #8b8d98;">14</span>     after <span style="color: #ce3559;">=</span> current_page.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_metadata</span>[<span style="color: #143465;">"after"</span>]',
+            '<span style="color: #8b8d98;">15</span> <span style="color: #148a68;">end</span>',
+          ],
+          bundler: [
             '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">require</span> "workos"',
             '<span style="color: #8b8d98;">2</span> ',
             '<span style="color: #8b8d98;">3</span> WorkOS.configure <span style="color: #148a68;">do</span> <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
@@ -317,6 +436,48 @@ const codeSnippets = [
             '<span style="color: #8b8d98;">20</span> }'
           ],
           java: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+            '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">SsoApi</span>.<span style="color: #5854c6;">ListConnectionsOptions</span>;',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">ConnectionList</span>;',
+            '<span style="color: #8b8d98;">4</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">java</span>.<span style="color: #5854c6;">util</span>.<span style="color: #5854c6;">list</span>;',
+            '<span style="color: #8b8d98;">5</span> ',
+            '<span style="color: #8b8d98;">6</span> <span style="color: #5854c6;">ListConnectionsOptions</span> options <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">ListConnectionsOptions</span>();',
+            '<span style="color: #8b8d98;">7</span> options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"limit"</span>, <span style="color: #143465;">"100"</span>);',
+            '<span style="color: #8b8d98;">8</span> options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"order"</span>, <span style="color: #143465;">"desc"</span>);',
+            '<span style="color: #8b8d98;">9</span> ',
+            '<span style="color: #8b8d98;">10</span> <span style="color: #5854c6;">ConnectionList</span> list <span style="color: #ce3559;">=</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>(options);',
+            '<span style="color: #8b8d98;">11</span> <span style="color: #5854c6;">String</span> after <span style="color: #ce3559;">=</span> list.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listMetadata</span>.after;',
+            '<span style="color: #8b8d98;">12</span> <span style="color: #5854c6;">List</span> connections <span style="color: #ce3559;">=</span> list.data;',
+            '<span style="color: #8b8d98;">13</span> ',
+            '<span style="color: #8b8d98;">14</span> <span style="color: #148a68;">while</span> (after <span style="color: #ce3559;">!=</span> <span style="color: #148a68;">null</span>) {',
+            '<span style="color: #8b8d98;">15</span>     options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"after"</span>, <span style="color: #143465;">"after"</span>);',
+            '<span style="color: #8b8d98;">16</span>     <span style="color: #5854c6;">ConnectionList</span> currentPage <span style="color: #ce3559;">=</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>(options);',
+            '<span style="color: #8b8d98;">17</span>     after <span style="color: #ce3559;">=</span> currentPage.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listMetadata</span>.after;',
+            '<span style="color: #8b8d98;">18</span>     connections.add(currentPage.data);',
+            '<span style="color: #8b8d98;">19</span> }'
+          ],
+          maven: [
+            '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+            '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">SsoApi</span>.<span style="color: #5854c6;">ListConnectionsOptions</span>;',
+            '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">ConnectionList</span>;',
+            '<span style="color: #8b8d98;">4</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">java</span>.<span style="color: #5854c6;">util</span>.<span style="color: #5854c6;">list</span>;',
+            '<span style="color: #8b8d98;">5</span> ',
+            '<span style="color: #8b8d98;">6</span> <span style="color: #5854c6;">ListConnectionsOptions</span> options <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">ListConnectionsOptions</span>();',
+            '<span style="color: #8b8d98;">7</span> options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"limit"</span>, <span style="color: #143465;">"100"</span>);',
+            '<span style="color: #8b8d98;">8</span> options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"order"</span>, <span style="color: #143465;">"desc"</span>);',
+            '<span style="color: #8b8d98;">9</span> ',
+            '<span style="color: #8b8d98;">10</span> <span style="color: #5854c6;">ConnectionList</span> list <span style="color: #ce3559;">=</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>(options);',
+            '<span style="color: #8b8d98;">11</span> <span style="color: #5854c6;">String</span> after <span style="color: #ce3559;">=</span> list.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listMetadata</span>.after;',
+            '<span style="color: #8b8d98;">12</span> <span style="color: #5854c6;">List</span> connections <span style="color: #ce3559;">=</span> list.data;',
+            '<span style="color: #8b8d98;">13</span> ',
+            '<span style="color: #8b8d98;">14</span> <span style="color: #148a68;">while</span> (after <span style="color: #ce3559;">!=</span> <span style="color: #148a68;">null</span>) {',
+            '<span style="color: #8b8d98;">15</span>     options.<span style="color: #5854c6;">put</span>(<span style="color: #143465;">"after"</span>, <span style="color: #143465;">"after"</span>);',
+            '<span style="color: #8b8d98;">16</span>     <span style="color: #5854c6;">ConnectionList</span> currentPage <span style="color: #ce3559;">=</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listConnections</span>(options);',
+            '<span style="color: #8b8d98;">17</span>     after <span style="color: #ce3559;">=</span> currentPage.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listMetadata</span>.after;',
+            '<span style="color: #8b8d98;">18</span>     connections.add(currentPage.data);',
+            '<span style="color: #8b8d98;">19</span> }'
+          ],
+          gradle: [
             '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
             '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">SsoApi</span>.<span style="color: #5854c6;">ListConnectionsOptions</span>;',
             '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">ConnectionList</span>;',
@@ -597,6 +758,9 @@ const codeSnippets = [
         ],
         nextjs: [
           '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/authkit-nextjs'
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">npm install</span> @workos-inc/authkit-nextjs'
         ]
       }
     },
@@ -606,6 +770,18 @@ const codeSnippets = [
       title: "Environment variables",
       code: {
         javascript: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
+        ],
+        openssl: [
           '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
           '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
         ]
@@ -622,6 +798,27 @@ const codeSnippets = [
           '<span style="color: #8b8d98;">></span> ',
           '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
           '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
         ]
       }
     },
@@ -631,6 +828,15 @@ const codeSnippets = [
       title: "Generate a strong password",
       code: {
         javascript: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">24</span>',
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">24</span>',
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">24</span>',
+        ],
+        nextjs: [
           '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">24</span>',
         ]
       }
@@ -821,6 +1027,30 @@ const codeSnippets = [
           '<span style="color: #8b8d98;">20</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
           '<span style="color: #8b8d98;">21</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
           '<span style="color: #8b8d98;">22</span> });',
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">const</span> express <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'express\'</span>);',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">const</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">require</span>(<span style="color: #143465;">\'@workos-inc/node\'</span>);',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> <span style="color: #148a68;">const</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">express</span>();',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(process.env.<span style="color: #0072dd;">WORKOS_API_KEY</span>);',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">const</span> clientId <span style="color: #ce3559;">=</span> process.env.<span style="color: #0072dd;">WORKOS_CLIENT_ID</span>;',
+          '<span style="color: #8b8d98;">8</span> ',
+          '<span style="color: #8b8d98;">9</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">10</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">11</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">12</span> ',
+          '<span style="color: #8b8d98;">13</span>   <span style="color: #148a68;">const</span> { <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">user</span> } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authenticateWithCode</span>({',
+          '<span style="color: #8b8d98;">14</span>     code,',
+          '<span style="color: #8b8d98;">15</span>     clientId,',
+          '<span style="color: #8b8d98;">16</span>   });',
+          '<span style="color: #8b8d98;">17</span> ',
+          '<span style="color: #8b8d98;">18</span>   <span style="color: #8b8d98;">// Use the information in `user` for further business logic.</span>',
+          '<span style="color: #8b8d98;">19</span> ',
+          '<span style="color: #8b8d98;">20</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
+          '<span style="color: #8b8d98;">21</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
+          '<span style="color: #8b8d98;">22</span> });',
         ]
       },
       apiEpxlainers: {
@@ -850,6 +1080,19 @@ const codeSnippets = [
           '  updatedAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
           '}'
         ],
+        user_nextjs: [
+          '<span style="color: #148a68;">interface</span> <span style="color: #5854c6;">User</span> {',
+          '  object<span style="color: #ce3559;">:</span> <span style="color: #143465;">"user"</span>;',
+          '  id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  email<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  firstName<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  lastName<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  emailVerified<span style="color: #ce3559;">:</span> <span style="color: #148a68;">boolean</span>;',
+          '  profilePictureUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  createdAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  updatedAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
         authenticateWithCode_javascript: [
           'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
           '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -867,7 +1110,503 @@ const codeSnippets = [
           '}'
         ],
         authenticateWithCode_nodesdk: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        authenticateWithCode_nextjs: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        authenticateWithCode_openssl: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ]
+      }
+    },
 
+    { //* middleware.ts
+      id: 9,
+      title: "middleware.ts",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { authkitMiddleware } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'@workos-inc/authkit-nextjs\'</span>;',
+          '<span style="color: #8b8d98;">2</span> ',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">export default</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authKitMiddleware</span>();',
+          '<span style="color: #8b8d98;">4</span> ',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #8b8d98;">// Match against pages that require authentication</span>',
+          '<span style="color: #8b8d98;">6</span> <span style="color: #8b8d98;">// Leave this out if you want authentication on every page in your application</span>',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">export const</span> config <span style="color: #ce3559;">=</span> { matcher: [<span style="color: #143465;">\'/\'</span>] };'
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { authkitMiddleware } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'@workos-inc/authkit-nextjs\'</span>;',
+          '<span style="color: #8b8d98;">2</span> ',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">export default</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authKitMiddleware</span>();',
+          '<span style="color: #8b8d98;">4</span> ',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #8b8d98;">// Match against pages that require authentication</span>',
+          '<span style="color: #8b8d98;">6</span> <span style="color: #8b8d98;">// Leave this out if you want authentication on every page in your application</span>',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #148a68;">export const</span> config <span style="color: #ce3559;">=</span> { matcher: [<span style="color: #143465;">\'/\'</span>] };'
+        ]
+      },
+      apiEpxlainers: {
+        authKitMiddleware_javascript: [
+          '<span style="color: #5854c6;">authkitMiddleware</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  debug<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">boolean</span>;',
+          '}) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">NextMiddleware</span>'
+        ],
+        authKitMiddleware_nextjs: [
+          '<span style="color: #5854c6;">authkitMiddleware</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  debug<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">boolean</span>;',
+          '}) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">NextMiddleware</span>'
+        ]
+      }
+    },
+
+    { //* /app/callback/route.ts
+      id: 10,
+      title: "/app/callback/route.ts",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { handleAuth } <span style="color: #148a68;">from</span> \'@workos-inc/authkit-nextjs\';',
+          '<span style="color: #8b8d98;">2</span> ',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #8b8d98;">// Redirect the user to `/` after successful sign in</span>',
+          '<span style="color: #8b8d98;">4</span> <span style="color: #8b8d98;">// The redirect can be customized: `handleAuth({ returnPathname: \'/foo\' })`</span>',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">export const</span> <span style="color: #0072dd;">GET</span> <span style="color: #ce3559;">=</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">handleAuth</span>();',
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { handleAuth } <span style="color: #148a68;">from</span> \'@workos-inc/authkit-nextjs\';',
+          '<span style="color: #8b8d98;">2</span> ',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #8b8d98;">// Redirect the user to `/` after successful sign in</span>',
+          '<span style="color: #8b8d98;">4</span> <span style="color: #8b8d98;">// The redirect can be customized: `handleAuth({ returnPathname: \'/foo\' })`</span>',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">export const</span> <span style="color: #0072dd;">GET</span> <span style="color: #ce3559;">=</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">handleAuth</span>();',
+        ]
+      },
+      apiEpxlainers: {
+        handleAuth_javascript: [
+          '<span style="color: #5854c6;">handleAuth</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  returnPathname<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">Function</span>'
+        ],
+        handleAuth_nextjs: [
+          '<span style="color: #5854c6;">handleAuth</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  returnPathname<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">Function</span>'
+        ]
+      }
+    },
+    
+    { //* Create a session password
+      id: 11,
+      title: "Create a session password",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "OpenSSL", lang2: "Node SDK"}
+        ],
+        openssl: [
+          {lang1: "OpenSSL", lang2: "Node SDK"}
+        ],
+        nodesdk: [
+          {lang1: "OpenSSL", lang2: "Node SDK"}
+        ],
+        nextjs: [
+          {lang1: "OpenSSL", lang2: "Node SDK"}
+        ]
+      },
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">64</span>'
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">$</span> openssl rand -base64 <span style="color: #0072dd;">64</span>'
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> <span style="color: #5854c6;">node</span> -e <span style="color: #143465;">"console.log(require(\'crypto\').randomBytes(64).toString(\'base64\'));"</span>'
+        ]
+      }
+    },
+
+    { //* Environment Variables (Handling sessions manually)
+      id: 12,
+      title: "Environment variables",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<div style="background-color: #e6f7ed; border: 1px solid #c3e8d7;"><span style="color: #8b8d98;">></span> WORKOS_COOKIE_PASSWORD<span style="color: #ce3559;">=</span><span style="color: #143465;">\'&ltyour password&gt\'</span></div>'
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<div style="background-color: #e6f7ed; border: 1px solid #c3e8d7;"><span style="color: #8b8d98;">></span> WORKOS_COOKIE_PASSWORD<span style="color: #ce3559;">=</span><span style="color: #143465;">\'&ltyour password&gt\'</span></div>'
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<div style="background-color: #e6f7ed; border: 1px solid #c3e8d7;"><span style="color: #8b8d98;">></span> WORKOS_COOKIE_PASSWORD<span style="color: #ce3559;">=</span><span style="color: #143465;">\'&ltyour password&gt\'</span></div>'
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">$</span> WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
+          '<span style="color: #8b8d98;">></span> ',
+          '<div style="background-color: #e6f7ed; border: 1px solid #c3e8d7;"><span style="color: #8b8d98;">></span> WORKOS_COOKIE_PASSWORD<span style="color: #ce3559;">=</span><span style="color: #143465;">\'&ltyour password&gt\'</span></div>'
+        ]
+      }
+    },
+
+    { //* Encrypt session
+      id: 13,
+      title: "Encrypt session",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> cookieParser <span style="color: #148a68;">from</span> <span style="color: #143465;">\'cookie-parser\'</span>;',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> { sealData, unsealData } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'iron-session\'</span>;',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> app.<span style="color: #5854c6;">use</span>(<span style="color: #5854c6;">cookieParser</span>());',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">7</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">8</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">9</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> { user, accessToken, refreshToken, impersonator } = </div>',
+          '<span style="color: #8b8d98;">11</span>     <span style="color: #148a68;">await</span> workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authenticateWithCode</span>({',
+          '<span style="color: #8b8d98;">12</span>       code,',
+          '<span style="color: #8b8d98;">13</span>       clientId,',
+          '<span style="color: #8b8d98;">14</span>     });',
+          '<span style="color: #8b8d98;">15</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// The refreshToken should never be accesible publicly,</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// hence why we encrypt it in the cookie session.</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Alternatively you could persist the refresh token in a backend database</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> encryptedSession <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">sealData</span>(</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { accessToken, refreshToken, user, impersonator },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { password<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_COOKIE_PASSWORD</span> },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   );</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span> </div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Store the session in a cookie</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   res.<span style="color: #5854c6;">cookie</span>(\'wos-session\', encryptedSession, {</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     path<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'/\'</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     httpOnly<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     secure<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     sameSite<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'lax\'</span>,</div>',
+          '<div style="background-color: #e6f7ed; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   });</div>',
+          '<span style="color: #8b8d98;">31</span> ',
+          '<span style="color: #8b8d98;">32</span>   <span style="color: #8b8d98;">// Use the information in `user` for further business logic.</span>',
+          '<span style="color: #8b8d98;">33</span> ',
+          '<span style="color: #8b8d98;">34</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
+          '<span style="color: #8b8d98;">35</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
+          '<span style="color: #8b8d98;">36</span> });',
+        ],
+        nextjs: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> cookieParser <span style="color: #148a68;">from</span> <span style="color: #143465;">\'cookie-parser\'</span>;',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> { sealData, unsealData } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'iron-session\'</span>;',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> app.<span style="color: #5854c6;">use</span>(<span style="color: #5854c6;">cookieParser</span>());',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">7</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">8</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">9</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> { user, accessToken, refreshToken, impersonator } = </div>',
+          '<span style="color: #8b8d98;">11</span>     <span style="color: #148a68;">await</span> workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authenticateWithCode</span>({',
+          '<span style="color: #8b8d98;">12</span>       code,',
+          '<span style="color: #8b8d98;">13</span>       clientId,',
+          '<span style="color: #8b8d98;">14</span>     });',
+          '<span style="color: #8b8d98;">15</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// The refreshToken should never be accesible publicly,</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// hence why we encrypt it in the cookie session.</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Alternatively you could persist the refresh token in a backend database</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> encryptedSession <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">sealData</span>(</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { accessToken, refreshToken, user, impersonator },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { password<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_COOKIE_PASSWORD</span> },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   );</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span> </div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Store the session in a cookie</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   res.<span style="color: #5854c6;">cookie</span>(\'wos-session\', encryptedSession, {</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     path<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'/\'</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     httpOnly<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     secure<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     sameSite<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'lax\'</span>,</div>',
+          '<div style="background-color: #e6f7ed; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   });</div>',
+          '<span style="color: #8b8d98;">31</span> ',
+          '<span style="color: #8b8d98;">32</span>   <span style="color: #8b8d98;">// Use the information in `user` for further business logic.</span>',
+          '<span style="color: #8b8d98;">33</span> ',
+          '<span style="color: #8b8d98;">34</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
+          '<span style="color: #8b8d98;">35</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
+          '<span style="color: #8b8d98;">36</span> });',
+        ],
+        nodesdk: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> cookieParser <span style="color: #148a68;">from</span> <span style="color: #143465;">\'cookie-parser\'</span>;',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> { sealData, unsealData } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'iron-session\'</span>;',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> app.<span style="color: #5854c6;">use</span>(<span style="color: #5854c6;">cookieParser</span>());',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">7</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">8</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">9</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> { user, accessToken, refreshToken, impersonator } = </div>',
+          '<span style="color: #8b8d98;">11</span>     <span style="color: #148a68;">await</span> workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authenticateWithCode</span>({',
+          '<span style="color: #8b8d98;">12</span>       code,',
+          '<span style="color: #8b8d98;">13</span>       clientId,',
+          '<span style="color: #8b8d98;">14</span>     });',
+          '<span style="color: #8b8d98;">15</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// The refreshToken should never be accesible publicly,</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// hence why we encrypt it in the cookie session.</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Alternatively you could persist the refresh token in a backend database</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> encryptedSession <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">sealData</span>(</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { accessToken, refreshToken, user, impersonator },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { password<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_COOKIE_PASSWORD</span> },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   );</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span> </div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Store the session in a cookie</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   res.<span style="color: #5854c6;">cookie</span>(\'wos-session\', encryptedSession, {</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     path<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'/\'</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     httpOnly<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     secure<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     sameSite<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'lax\'</span>,</div>',
+          '<div style="background-color: #e6f7ed; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   });</div>',
+          '<span style="color: #8b8d98;">31</span> ',
+          '<span style="color: #8b8d98;">32</span>   <span style="color: #8b8d98;">// Use the information in `user` for further business logic.</span>',
+          '<span style="color: #8b8d98;">33</span> ',
+          '<span style="color: #8b8d98;">34</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
+          '<span style="color: #8b8d98;">35</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
+          '<span style="color: #8b8d98;">36</span> });',
+        ],
+        openssl: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> cookieParser <span style="color: #148a68;">from</span> <span style="color: #143465;">\'cookie-parser\'</span>;',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">import</span> { sealData, unsealData } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'iron-session\'</span>;',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> app.<span style="color: #5854c6;">use</span>(<span style="color: #5854c6;">cookieParser</span>());',
+          '<span style="color: #8b8d98;">5</span> ',
+          '<span style="color: #8b8d98;">6</span> app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">\'/callback\'</span>, <span style="color: #148a68;">async</span> (req, res) <span style="color: #ce3559;">=></span> {',
+          '<span style="color: #8b8d98;">7</span>   <span style="color: #8b8d98;">// The authorization code returned by AuthKit</span>',
+          '<span style="color: #8b8d98;">8</span>   <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> req.query.code;',
+          '<span style="color: #8b8d98;">9</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> { user, accessToken, refreshToken, impersonator } = </div>',
+          '<span style="color: #8b8d98;">11</span>     <span style="color: #148a68;">await</span> workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">authenticateWithCode</span>({',
+          '<span style="color: #8b8d98;">12</span>       code,',
+          '<span style="color: #8b8d98;">13</span>       clientId,',
+          '<span style="color: #8b8d98;">14</span>     });',
+          '<span style="color: #8b8d98;">15</span> ',
+          '<div style="background-color: #e6f7ed; border-top: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// The refreshToken should never be accesible publicly,</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// hence why we encrypt it in the cookie session.</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Alternatively you could persist the refresh token in a backend database</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #148a68;">const</span> encryptedSession <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">sealData</span>(</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { accessToken, refreshToken, user, impersonator },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     { password<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_COOKIE_PASSWORD</span> },</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   );</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span> </div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   <span style="color: #8b8d98;">// Store the session in a cookie</span></div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>   res.<span style="color: #5854c6;">cookie</span>(\'wos-session\', encryptedSession, {</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     path<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'/\'</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     httpOnly<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     secure<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,</div>',
+          '<div style="background-color: #e6f7ed;"><span style="color: #8b8d98;">+</span>     sameSite<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'lax\'</span>,</div>',
+          '<div style="background-color: #e6f7ed; border-bottom: 1px solid #c3e8d7;"><span style="color: #8b8d98;">+</span>   });</div>',
+          '<span style="color: #8b8d98;">31</span> ',
+          '<span style="color: #8b8d98;">32</span>   <span style="color: #8b8d98;">// Use the information in `user` for further business logic.</span>',
+          '<span style="color: #8b8d98;">33</span> ',
+          '<span style="color: #8b8d98;">34</span>   <span style="color: #8b8d98;">// Redirect the user to the homepage</span>',
+          '<span style="color: #8b8d98;">35</span>   res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/\'</span>);',
+          '<span style="color: #8b8d98;">36</span> });',
+        ]
+      },
+      apiEpxlainers: {
+        authenticateWithCode_javascript: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        authenticateWithCode_nodesdk: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        authenticateWithCode_nextjs: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        authenticateWithCode_openssl: [
+          'userManagement.<span style="color: #5854c6;">authenticateWithCode</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  clientId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  code<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  invitationCode<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  ipAddress<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  user<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">User</span>;',
+          '  organizationId<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  accessToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  refreshToken<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  authenticationMethod<span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Password"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GitHubOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"GoogleOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MicrosoftOAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"MagicAuth"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"Impersonation"</span>;',
+          '  impersonator<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ]
+      }
+    },
+
+    { //* Secure route with middleware
+      id: 14,
+      title: "Secure route with middleware",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #8b8d98;">// Javascript Object Signing and Encryption (JOSE)</span>',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #8b8d98;">// https://www.npmjs.com/package/jose</span>',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">import</span> { createRemoteJWKSet, jwtVerify } from <span style="color: #143465;">\'jose\'</span>;',
+          '<span style="color: #8b8d98;">4</span> ',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #148a68;">const</span< clientId <span style="color: #ce3559;">=</span> process.env.<span style="color: #0072dd;">WORKOS_CLIENT_ID</span>;',
+          '<span style="color: #8b8d98;">6</span> ',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #8b8d98;">// Set the JWKS URL. This is used to verify if the JWT is still valid</span>',
+          '<span style="color: #8b8d98;">8</span> <span style="color: #148a68;">const</span> <span style="color: #0072dd;">JWKS</span> <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">createRemoteJWKSet</span>(',
+          '<span style="color: #8b8d98;">9</span>   <span style="color: #148a68;">new</span> <span style="color: #5854c6;">URL</span>(workos.userManagement.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getJwksUrl</span>(clientId)),',
+          '<span style="color: #8b8d98;">10</span> );',
+          '<span style="color: #8b8d98;">11</span> ',
+          '<span style="color: #8b8d98;">12</span> <span style="color: #8b8d98;">// Auth middleware function</span>',
+          '<span style="color: #8b8d98;">13</span> <span style="color: #148a68;">async function</span> <span style="color: #5854c6;">withAuth</span>(req, res, next) {',
+          '<span style="color: #8b8d98;">14</span>   <span style="color: #8b8d98;">// First, attempt to get the session from the cookie</span>',
+          '<span style="color: #8b8d98;">15</span>   <span style="color: #148a68;">const</span> session <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">getSessionFromCookie</span>>req.cookies);',
+          '<span style="color: #8b8d98;">16</span> ',
+          '<span style="color: #8b8d98;">17</span>   <span style="color: #8b8d98;">// If no session, redirect the user to the login page</span>',
+          '<span style="color: #8b8d98;">18</span>   <span style="color: #148a68;">if</span> (<span style="color: #ce3559;">!</span>session) {',
+          '<span style="color: #8b8d98;">19</span>     <span style="color: #148a68;">return</span> res.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">\'/login\'</span>);',
+          '<span style="color: #8b8d98;">20</span>   }',
+          '<span style="color: #8b8d98;">21</span> ',
+          '<span style="color: #8b8d98;">22</span> ',
+          '<span style="color: #8b8d98;">23</span> ',
+          '<span style="color: #8b8d98;">24</span> ',
+          '<span style="color: #8b8d98;">25</span> ',
+          '<span style="color: #8b8d98;">26</span> ',
+          '<span style="color: #8b8d98;">27</span> ',
+          '<span style="color: #8b8d98;">28</span> ',
+          '<span style="color: #8b8d98;">29</span> ',
+          '<span style="color: #8b8d98;">30</span> ',
+          '<span style="color: #8b8d98;">31</span> ',
+          '<span style="color: #8b8d98;">32</span> ',
+          '<span style="color: #8b8d98;">33</span> ',
+          '<span style="color: #8b8d98;">34</span> ',
+          '<span style="color: #8b8d98;">35</span> ',
+          '<span style="color: #8b8d98;">36</span> ',
+          '<span style="color: #8b8d98;">37</span> ',
+          '<span style="color: #8b8d98;">38</span> ',
+          '<span style="color: #8b8d98;">39</span> ',
+          '<span style="color: #8b8d98;">40</span> ',
+          '<span style="color: #8b8d98;">41</span> ',
+          '<span style="color: #8b8d98;">42</span> ',
+          '<span style="color: #8b8d98;">43</span> ',
+          '<span style="color: #8b8d98;">44</span> ',
+          '<span style="color: #8b8d98;">45</span> ',
+          '<span style="color: #8b8d98;">46</span> ',
+          '<span style="color: #8b8d98;">47</span> ',
+          '<span style="color: #8b8d98;">48</span> ',
+          '<span style="color: #8b8d98;">49</span> ',
+          '<span style="color: #8b8d98;">50</span> ',
+          '<span style="color: #8b8d98;">50</span> ',
+          '<span style="color: #8b8d98;">51</span> ',
+          '<span style="color: #8b8d98;">52</span> ',
+          '<span style="color: #8b8d98;">53</span> ',
+          '<span style="color: #8b8d98;">54</span> ',
+          '<span style="color: #8b8d98;">55</span> ',
+          '<span style="color: #8b8d98;">56</span> ',
+          '<span style="color: #8b8d98;">57</span> ',
+          '<span style="color: #8b8d98;">58</span> ',
+          '<span style="color: #8b8d98;">59</span> ',
+          '<span style="color: #8b8d98;">60</span> ',
+          '<span style="color: #8b8d98;">61</span> ',
+          '<span style="color: #8b8d98;">62</span> ',
+          '<span style="color: #8b8d98;">63</span> ',
+          '<span style="color: #8b8d98;">64</span> ',
+          '<span style="color: #8b8d98;">65</span> ',
+          '<span style="color: #8b8d98;">66</span> ',
+          '<span style="color: #8b8d98;">67</span> ',
+          '<span style="color: #8b8d98;">68</span> ',
+          '<span style="color: #8b8d98;">69</span> ',
+          '<span style="color: #8b8d98;">70</span> ',
+          '<span style="color: #8b8d98;">71</span> ',
+          '<span style="color: #8b8d98;">72</span> ',
+          '<span style="color: #8b8d98;">73</span> ',
+          '<span style="color: #8b8d98;">74</span> ',
+          '<span style="color: #8b8d98;">75</span> ',
+          '<span style="color: #8b8d98;">76</span> ',
+          '<span style="color: #8b8d98;">77</span> ',
+          '<span style="color: #8b8d98;">78</span> ',
+          '<span style="color: #8b8d98;">79</span> ',
+          '<span style="color: #8b8d98;">80</span> ',
+          '<span style="color: #8b8d98;">81</span> ',
+          '<span style="color: #8b8d98;">82</span> ',
+          '<span style="color: #8b8d98;">83</span> ',
+          '<span style="color: #8b8d98;">84</span> ',
+          '<span style="color: #8b8d98;">85</span> ',
         ]
       }
     }

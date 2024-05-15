@@ -264,14 +264,15 @@ const Styles = styled.div `
 }
 
 .code-snippet-body p {
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1.5;
   font-size: 80% !important;
 }
 
 .code-snippet-body-sidebar-p {
-  margin-top: 1% !important;
-  margin-bottom: 1% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .code-snippet-body pre {
@@ -312,6 +313,7 @@ const Styles = styled.div `
   padding-top: 3% !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
+  line-height: 1 !important;
   font-size: 70% !important;
 }
 
@@ -483,7 +485,9 @@ export default class CodeSnippet extends Component {
       const getUserRegex = /\bgetUser\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
       const getSignInUrlRegex = /\bgetSignInUrl\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
       const signOutRegex = /\bsignOut\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
-      const authenticateWithCodeRegex = /\bauthenticateWithCode\w*/; // Regular expression to match "authenticateWithCode" pattern at the beginning of the string
+      const authenticateWithCodeRegex = /\bauthenticateWithCode\w*/; // Regular expression to match "authenticateWithCode.." pattern at the beginning of the string
+      const authKitMiddlewareRegex = /\bauthKitMiddleware\w*/; // Regular expression to match "authKitMiddleware.." pattern at the beginning of the string
+      const handleAuthRegex =  /\bhandleAuth\w*/; // Regular expression to match "handleAuth.." pattern at the beginning of the string
       
       if (skRegex.test(target.innerText)) {
         this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
@@ -537,6 +541,12 @@ export default class CodeSnippet extends Component {
       } else if (authenticateWithCodeRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `authenticateWithCode_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (authKitMiddlewareRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `authKitMiddleware_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (handleAuthRegex) {
+        this.setState({currentApiExplainer: `handleAuth_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
       }
       setTimeout(() => {
         this.scrollToApiPopup()
@@ -579,15 +589,18 @@ export default class CodeSnippet extends Component {
 
         const { tab1Selected, tab2Selected, requestSelected, isOpen, selectedOption, options, replaceApiPopup, replaceApiClientPopup,  apiLabelHovered } = this.state;
         const { id, snippet, sideBarOpen, dropdownDisabledAndHidden } = this.props;
-        const selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
+        let selectedSnippet = CodeSnippets.find((item) => item.id === id && item.title === snippet);
         const { secretKeyApiPopup, apiExplainerPopup, currentApiExplainer } = this.state;
 
         if (!selectedSnippet) {
           return <div>Snippet not found.</div>;
         }
     
-        const selectedLang = this.props.selectedLang.toLowerCase(); // Assuming selectedLang is in lowercase
-        const codeForSelectedLang = selectedSnippet.code[selectedLang];
+        let selectedLang = this.props.selectedLang.toLowerCase(); // Assuming selectedLang is in lowercase
+        if (selectedSnippet.code[selectedLang] === undefined) {selectedLang = this.state.prevLangSelected}
+        let codeForSelectedLang = selectedSnippet.code[selectedLang];
+
+        console.log(`component: ${snippet} ${codeForSelectedLang}`)
 
         let selectedApiExplainer = null
         
@@ -601,7 +614,7 @@ export default class CodeSnippet extends Component {
     
         if (!codeForSelectedLang) {
           return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.props.selectedLang.charAt(0).toUpperCase() + this.props.selectedLang.slice(1)}</label>.</p></div>;
-        }
+        } 
 
         return (
             <Styles>
