@@ -285,7 +285,7 @@ const Styles = styled.div `
   height: auto !important;
   position: absolute;
   width: auto !important;
-  max-width: auto !important;
+  max-width: 65% !important;
   background-color: white;
   border: 0.5px solid #6363f1 !important; 
   border-radius: 7px;
@@ -294,7 +294,7 @@ const Styles = styled.div `
   margin-top: 0%;
   // margin-right: 0.5% !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
-  // overflow: scroll;
+  overflowX: scroll;
 }
 
 .replace-api-popup span {
@@ -468,7 +468,8 @@ export default class CodeSnippet extends Component {
       const target = event.target;
       const skRegex = /sk_\w+/; // Regular expression to match "sk_..." pattern
       const clientRegex = /^client_\w+/; // Regular expression to match "client_..." pattern at the beginning of the string
-      const listRegex = /\blist\b/;
+      const listRegex = /\blist\w*/; // Regular expression to match "list..." pattern at the beginning of the string
+      const userRegex = /\buser\w*/; // Regular expression to match "user..." pattern at the beginning of the string
       const listConnectionRegex = /\blistConnection\w*/; // Regular expression to match "listConnection..." pattern at the beginning of the string
       const list_connectionRegex = /\blist_connections\w*/; // Regular expression to match "list_connection..." pattern at the beginning of the string
       const ListConnectionRegex = /\bListConnections\w*/; // Regular expression to match "ListConnection..." pattern at the beginning of the string
@@ -478,6 +479,11 @@ export default class CodeSnippet extends Component {
       const current_pageRegex = /\bcurrent_page\w*/; // Regular expression to match "current_page..." pattern at the beginning of the string
       const currentPageRegex = /\bcurrentPage\w*/; // Regular expression to match "currentPage..." pattern at the beginning of the string
       const responseRegex = /\bresponse\b/; // Regular expression to match "response..." pattern at the beginning of the string
+      const getAuthorizationUrlRegex = /\bgetAuthorizationUrl\w*/; // Regular expression to match "getAuthorizationUrl" pattern at the beginning of the string
+      const getUserRegex = /\bgetUser\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
+      const getSignInUrlRegex = /\bgetSignInUrl\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
+      const signOutRegex = /\bsignOut\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
+      const authenticateWithCodeRegex = /\bauthenticateWithCode\w*/; // Regular expression to match "authenticateWithCode" pattern at the beginning of the string
       
       if (skRegex.test(target.innerText)) {
         this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
@@ -512,6 +518,24 @@ export default class CodeSnippet extends Component {
         }, () => { this.setState({apiExplainerPopup: true})})
       } else if (listMetadataRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `listMetadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (getAuthorizationUrlRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `getAuthorizationUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (getUserRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `getUser_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (getSignInUrlRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `getSignInUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (signOutRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `signOut_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (userRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `user_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (authenticateWithCodeRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `authenticateWithCode_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
       }
       setTimeout(() => {

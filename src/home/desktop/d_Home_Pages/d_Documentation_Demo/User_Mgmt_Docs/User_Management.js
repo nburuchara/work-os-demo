@@ -228,7 +228,50 @@ export default class UserManagement extends Component {
                         snippet="Redirect users to AuthKit" 
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}/>
+
+                        <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                            <div className='api-info-box-img'>
+                                <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                            </div>
+                            <div className='api-info-box-text'>
+                                <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>WorkOS will redirect to your <label className='demo-docs-hyperlink'>Redirect URI</label> if there is an issue generating an authorization URL. Read our <label className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
+                            </div>
+                        </div>
+
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Add a callback endpoint</h3>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, let’s add the callback endpoint (referenced in <label className='demo-docs-hyperlink'>Configure a redirect URI</label>) which will exchange the authorization code (valid for 10 minutes) for an authenticated User object.</p>
+                   
+                        <div className='two-tab-selection'>
+                            <div style={{borderBottom: usingNode ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                <button
+                                onClick={this.usingNodeClicked}
+                                onMouseEnter={this.usingNodeEnter}
+                                onMouseLeave={this.usingNodeLeave}
+                                style={{fontWeight: usingNode ? "bold" : "normal", backgroundColor: usingNodeHovered ? "#e6e6eb": ""}}
+                                >Using Node</button>
+                            </div>
+                            <div style={{borderBottom: usingNextJs ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                <button
+                                onClick={this.usingNextJsClicked}
+                                onMouseEnter={this.usingNextJsEnter}
+                                onMouseLeave={this.usingNextJsLeave}
+                                style={{fontWeight: usingNextJs ? "bold" : "normal", backgroundColor: usingNextJsHovered ? "#e6e6eb" : ""}}
+                                >Using Next.js</button>
+                            </div>
+                        </div>
+
+                        <CodeSnippetStruct 
+                        id={8}
+                        headerTabs={0}
+                        dropdownDisabled={true}
+                        sideBarOpen={sidebarMenuClicked}
+                        snippet="Callback endpoint" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+
                    </div>
+
+
                 </div>
             </Styles>
         )
