@@ -454,7 +454,7 @@ const Styles = styled.div `
 .testing-the-api-info-box p {
     color: #656971;
     font-size: 64.5%;
-    margin-top: 1%;
+    margin-top: 1.4% !important;
 }
 
 .testing-the-api-info-box label {
@@ -761,13 +761,13 @@ const Styles = styled.div `
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-right: 2%;
-    border-bottom: 3px solid #6363f1;
+    border-bottom: 4px solid #6363f1;
 }
 
 .example-app-container:hover {
     cursor: pointer;
-    border: 1.5px solid #ccc;
-    border-bottom: 3px solid #6363f1;
+    border: 1px solid #999999;
+    border-bottom: 4px solid #999999;
 }
 
     // # IMG
@@ -800,6 +800,7 @@ const Styles = styled.div `
 
     //! - - Migrations Container - - !//
 
+
 .migrations-container:after {
     content: "";
     clear: both;
@@ -807,20 +808,274 @@ const Styles = styled.div `
 }
 
 .migration-container {
+    height: 20.5vh;
     float: left;
-    text-align: left;
+    text-align: center;
     width: 40%;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-right: 5%;
+    margin-bottom: 3.5%;
 }
 
-.migrations-container:hover {
+.migration-sidebar-container {
+    height: 17.5vh;
+    float: left;
+    text-align: center;
+    width: 46%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 3%;
+    margin-bottom: 3.5%;
+}
+
+.migration-container:hover {
     cursor: pointer;
-    border: 1.5px solid #ccc;
-    border-bottom: 3px solid #6363f1;
+    border: 1px solid #999999;
 }
 
+    // # IMG
+
+.migration-container img {
+    width: 100%;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+.migration-sidebar-container img {
+    width: 100%;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+    // # HEADER
+
+.migration-container h5 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1.5%;
+    text-align: left;
+}
+
+.migration-sidebar-container h5 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1.5%;
+    text-align: left;
+    font-size: 80%;
+}
+
+.migration-container-see-all-h5 {
+    text-align: center !important;
+    margin-top: 5% !important;
+}
+
+    // # TEXT
+
+.migration-container p {
+    margin-top: 0px;
+    margin-left: 1.5%;
+    margin-right: 2.5%;
+    font-size: 65%;
+    text-align: left;
+    color: #5e626a;
+}
+
+
+.migration-sidebar-container p {
+    margin-top: 0px;
+    margin-left: 1.5%;
+    margin-right: 2.5%;
+    font-size: 57.5%;
+    text-align: left;
+}
+
+.migration-container-see-all-p {
+    text-align: center !important;
+    margin-top: 2% !important;
+}
+
+    // # BUTTON IMG
+
+.migration-container button {
+    height: 27%;
+    width: 24%;
+    background-color: #ccccc;
+    margin-top: 15%;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.migration-sidebar-container button {
+    height: 27%;
+    width: 30%;
+    background-color: #ccccc;
+    margin-top: 20.25%;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.migration-container-see-all-img {
+    width: 70% !important;
+}
+
+    //! - - SSO Create Connection Manually Btns - - !//
+
+.sso-manual-btns-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sso-manual-btn-container {
+    height: 10.5vh;
+    float: left;
+    text-align: center;
+    width: 46%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 3%;
+    margin-bottom: 3.5%;
+}
+
+.sso-manual-btn-container:hover {
+    cursor: pointer;
+    border: 1px solid #999999;
+}
+
+.sso-manual-btn-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sso-manual-sidebar-btn-container {
+    height: 8vh;
+    float: left;
+    text-align: center;
+    width: 46%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 3%;
+    margin-bottom: 3.5%;
+}
+
+.sso-manual-sidebar-btn-container:hover {
+    cursor: pointer;
+    border: 1px solid #999999;
+}
+
+.sso-manual-sidebar-btn-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.sso-manual-btn-text {
+    float: left;
+    text-align: left;
+    width: 75%;
+}
+
+.sso-manual-btn-sidebar-text {
+    float: left;
+    text-align: left;
+    width: 75%;
+}
+
+.sso-manual-btn-logo {
+    float: left;
+    text-align: center;
+    width: 25%;
+    // border-left: 1px solid black;
+}
+
+.sso-manual-btn-sidebar-logo {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+    // - SSO MANUAL BTN ELEMENTS - //
+
+    // # TITLE (of btn)
+
+.sso-manual-btn-text h4 {
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 5.5%;
+    margin-bottom: 1%;
+    font-size: 85%;
+}
+
+.sso-manual-btn-sidebar-text h4 {
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 5.5%;
+    margin-bottom: 1%;
+    font-size: 50%;
+}
+
+    // # SUBTEXT (of btn)
+
+.sso-manual-btn-text p {
+    text-align: left;
+    margin-left: 5.5%;
+    margin-top: 1%;
+    font-size: 70%;
+}
+
+.sso-manual-btn-sidebar-text p {
+    text-align: left;
+    margin-left: 5.5%;
+    margin-top: 1%;
+    font-size: 20% !important;
+    margin-right: 2%;
+}
+
+    // # BUTTON & LOGO IMG (of btn)
+
+
+.sso-manual-btn-logo button {
+    width: 75%;
+    margin-right: 15%;
+    margin-top: 35%;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    background-color: #ccccc;
+}
+
+
+.sso-manual-btn-sidebar-logo button {
+    width: 80%;
+    margin-right: 15%;
+    margin-top: 35%;
+    border-radius: 9px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    background-color: #ccccc;
+}
+
+
+.sso-manual-btn-logo img {
+    width: 80%;
+    padding-top: 25%;
+    padding-bottom: 15%;
+}
+
+
+.sso-manual-btn-sidebar-logo img {
+    width: 90%;
+    padding-top: 35%;
+    padding-bottom: 25%;
+}
 
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
