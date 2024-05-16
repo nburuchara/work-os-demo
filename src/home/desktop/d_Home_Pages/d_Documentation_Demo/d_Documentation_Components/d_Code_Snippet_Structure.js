@@ -488,6 +488,8 @@ export default class CodeSnippet extends Component {
       const authenticateWithCodeRegex = /\bauthenticateWithCode\w*/; // Regular expression to match "authenticateWithCode.." pattern at the beginning of the string
       const authKitMiddlewareRegex = /\bauthKitMiddleware\w*/; // Regular expression to match "authKitMiddleware.." pattern at the beginning of the string
       const handleAuthRegex =  /\bhandleAuth\w*/; // Regular expression to match "handleAuth.." pattern at the beginning of the string
+      const authenticateWithRefreshTokenRegex =  /\bauthenticateWithRefreshToken\w*/; // Regular expression to match "authenticateWithRefreshToken.." pattern at the beginning of the string
+      const getJwksUrlRegex =  /\bgetJwksUrl\w*/; // Regular expression to match "getJwksUrl.." pattern at the beginning of the string
       
       if (skRegex.test(target.innerText)) {
         this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
@@ -544,8 +546,14 @@ export default class CodeSnippet extends Component {
       } else if (authKitMiddlewareRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `authKitMiddleware_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (handleAuthRegex) {
+      } else if (handleAuthRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `handleAuth_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (authenticateWithRefreshTokenRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `authenticateWithRefreshToken_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (getJwksUrlRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `getJwksUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
       }
       setTimeout(() => {

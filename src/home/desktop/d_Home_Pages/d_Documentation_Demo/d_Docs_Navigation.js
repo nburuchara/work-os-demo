@@ -666,6 +666,162 @@ const Styles = styled.div `
     color: #5e626a;
 }
 
+    //! - - Next Section of Docs Container - - !//
+
+.demo-next-section-container {
+    margin-top: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.demo-next-section-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.demo-next-section-container-left {
+    float: left;
+    text-align: left;
+    width: 75%;
+}
+
+.demo-next-section-container-right {
+    float: left;
+    text-align: center;
+    width: 20%;
+    border-left: 1px solid black;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.demo-next-section-container-sidebar-right {
+    float: left;
+    text-align: center;
+    width: 20%;
+    border-left: 1px solid black;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+    // # LEFT CONTAINER HEADER & TEXT
+
+.demo-next-section-container-left h4 {
+    margin-bottom: 0px;
+    margin-left: 2.5%;
+}
+
+.demo-next-section-container-left-sidebar-h4 {
+    font-size: 80% !important;
+}
+
+.demo-next-section-container-left-sidebar-p {
+    font-size: 30% !important;
+}
+
+.demo-next-section-container-left p { 
+    margin-top: 1%;
+    margin-left: 2.5%;
+    font-size: 73%;
+    margin-right: 2.5%;
+}
+
+
+    // # RIGHT CONTAINER TEXT
+
+
+.demo-next-section-container-right p {
+    padding-bottom: 3%;
+    margin-left: 8%;
+}
+
+.demo-next-section-container-right-sidebar-p {
+    font-size: 70% !important;
+    margin-left: 6% !important;
+}
+
+.demo-next-section-container-right-sidebar-img {
+    // width: 200% !important !important;
+}
+
+    //! - - Example Apps Container - - !//
+
+.example-apps-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.example-app-container {
+    float: left;
+    text-align: left;
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 2%;
+    border-bottom: 3px solid #6363f1;
+}
+
+.example-app-container:hover {
+    cursor: pointer;
+    border: 1.5px solid #ccc;
+    border-bottom: 3px solid #6363f1;
+}
+
+    // # IMG
+
+.example-app-container img {
+    width: 15%;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+    // # LANGUAGE (SUBHEADER)
+
+.example-app-container p {
+    margin-top: 15%;
+    font-size: 60%;
+    color: #5e626a;
+    margin-left: 5%;
+    margin-bottom: 0px;
+}
+    // # APP NAME (HEADER)
+
+.example-app-container h5 {
+    font-size: 60%;
+    margin-left: 5%;
+    margin-top: 0px;
+    margin-bottom: 8%;
+    margin-right: 5%;
+}
+
+
+    //! - - Migrations Container - - !//
+
+.migrations-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.migration-container {
+    float: left;
+    text-align: left;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.migrations-container:hover {
+    cursor: pointer;
+    border: 1.5px solid #ccc;
+    border-bottom: 3px solid #6363f1;
+}
+
+
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
 .demo-docs-search-bar {
