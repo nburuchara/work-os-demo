@@ -24,7 +24,8 @@ export default class UserManagement extends Component {
             socialLogin: false,
             multiFactorAuth: false,
             magicAuth: false,
-            usersAndOrganizations: true,
+            usersAndOrganizations: false,
+            sessions: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -83,7 +84,7 @@ export default class UserManagement extends Component {
     render () {
 
             //* - USR MGMG SECTIONS VAR(S) - *//
-        const { gettingStarted, exampleApps, authKit, emailDomains, branding, migrations, singleSignOn, emailAndPassword, socialLogin, multiFactorAuth, magicAuth, usersAndOrganizations } = this.state;
+        const { gettingStarted, exampleApps, authKit, emailDomains, branding, migrations, singleSignOn, emailAndPassword, socialLogin, multiFactorAuth, magicAuth, usersAndOrganizations, sessions } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -1246,8 +1247,69 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods, including OAuth and SSO. This unifying interface simplifies how your application considers the authenticity of your users.</p>
                         
 
-                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Email verification</h3>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Domain-captured users</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user’s email domain matches an organization domain, they will <label className='demo-docs-hyperlink'>automatically be considered verified</label> and will not need to go through the email verification flow.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Organizations</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations represent both a collection of users that your customer’s IT admin has control over and a workspace within which members collaborate. Organizations are a first-class concept in WorkOS and support a suite of features around organizational management.</p>
+                       
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Organization memberships</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization contains users as members. Organization membership allows you to model organizations as "workspaces" and user’s access to them with memberships.</p>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS organization memberships are designed to be flexible, and support any B2B app model. For example:</p>
+                       
+                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                                <img src='/assets/users_org_img2.png' alt="Enlargable" className="image" />
+                            </div>
+
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Multiple Workspaces:</strong> A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly one organization.</p></li>
+                               
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. <strong>WorkOS User Management supports both</strong>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Organization access</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It’s common for users to create resources in B2B applications. You can use the organization as a container for these resources, so that access is dependent on a user’s access to the organization.</p>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This means when a user leaves an organization and is no longer a member, the data remains with the organization and not the user. Organizations provide the level of data ownership that B2B applications structure around.</p>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While organization membership conveys the most basic form of access, you can attach more granular role information per member within your own application’s database.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Membership management</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Beyond manually adding or removing users to and from organizations as members, users can be automatically <label className='demo-docs-hyperlink'>Just-in-Time (JIT) provisioned</label> into a <label className='demo-docs-hyperlink'>domain-verified</label> organization if their email address matches the verified domain. This allows customers to quickly onboard teammates.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can also invite <label className='demo-docs-hyperlink'>individuals to organizations</label>, regardless of their email domain. This is handy for contractors within a company, or a collection of people without a shared domain.</p>
+
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Sessions</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn more about integrating sessions.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                {sessions && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sessions</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn more about integrating sessions.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs in to your app, a user session is created. Along with the <label className='demo-docs-hyperlink'>User object</label>, a successful authentication response will include an access token and refresh token. Your application can use these tokens to ensure that the user’s session is still active. </p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each user session can be viewed from within the WorkOS dashboard:</p>
                         </div>
                     </div>
                 }
