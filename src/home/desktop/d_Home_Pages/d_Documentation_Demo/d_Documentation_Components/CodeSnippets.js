@@ -738,6 +738,7 @@ const codeSnippets = [
     },
 
            //! - - USER MANAGEMENT - - !//
+
     { //* Install dependencies
       id: 3,
       title: "Install dependencies",
@@ -2050,7 +2051,49 @@ const codeSnippets = [
           '<span style="color: #8b8d98;">8</span> });',
         ]
       }
+    },
+
+    { //* Examples
+      id: 16,
+      title: "",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #8b8d98;">// extract sessionId from access token</span>',
+          '<span style="color: #8b8d98;">2</span> <span style="color: #148a68;">const</span> sessionId <span style="color: #ce3559;">=</span> jose.<span style="color: #5854c6;">decodeJwt</span>(session.accessToken).sid;',
+          '<span style="color: #8b8d98;">3</span> ',
+          '<span style="color: #8b8d98;">4</span> <span style="color: #8b8d98;">// delete app session cookie</span>',
+          '<span style="color: #8b8d98;">5</span> <span style="color: #5854c6;">cookies</span>().<span style="color: #5854c6;">delete</span>(<span style="color: #143465;">\'my-app-sesssion\'</span>);',
+          '<span style="color: #8b8d98;">6</span> ',
+          '<span style="color: #8b8d98;">7</span> <span style="color: #8b8d98;">// redirect to logout endpoint</span>',
+          '<span style="color: #8b8d98;">8</span> <span style="color: #8b8d98;">// (the user will be redirected to your app homepage url</span>',
+          '<span style="color: #8b8d98;">9</span> <span style="color: #8b8d98;">//  after the logout completes)</span>',
+          '<span style="color: #8b8d98;">10</span> <span style="color: #5854c6;">redirect</span>(workos.userManagement.<span style="color: #5854c6;">getLogoutUrl</span>({ sessionId }));',
+        ]
+      }
+    },
+
+    { //* Impersonation component
+      id: 17,
+      title: "Impersonation component",
+      code: {
+        javascript: [
+          '<span style="color: #8b8d98;">1</span> <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">Impersonation</span> } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'@workos-inc/authkit-nextjs\'</span>;',
+          '<span style="color: #8b8d98;">2</span> ',
+          '<span style="color: #8b8d98;">3</span> <span style="color: #148a68;">export default function</span> <span style="color: #5854c6;">RootLayout</span>({ children }) {',
+          '<span style="color: #8b8d98;">4</span>   <span style="color: #148a68;">return</span> (',
+          '<span style="color: #8b8d98;">5</span>     <span style="color: #ce3559;">&lt</span>html lang=<span style="color: #143465;">"en"</span><span style="color: #ce3559;">&gt</span>',
+          '<span style="color: #8b8d98;">6</span>       <span style="color: #ce3559;">&lt</span>body<span style="color: #ce3559;">&gt</span>',
+          '<span style="color: #8b8d98;">7</span>         <span style="color: #ce3559;">&lt</span><span style="color: #5854c6;">Impersonation</span> <span style="color: #ce3559;">/&gt</span>',
+          '<span style="color: #8b8d98;">8</span>         {children}',
+          '<span style="color: #8b8d98;">9</span>       <span style="color: #ce3559;">&lt/</span>body<span style="color: #ce3559;">&gt</span>',
+          '<span style="color: #8b8d98;">10</span>    <span style="color: #ce3559;">&lt/</span>html<span style="color: #ce3559;">&gt</span>',
+          '<span style="color: #8b8d98;">11</span>   );',
+          '<span style="color: #8b8d98;">12</span> }',
+        ]
+      }
     }
+
+
 ]
 
 export default codeSnippets;

@@ -714,7 +714,7 @@ const Styles = styled.div `
 }
 
 .demo-next-section-container-left-sidebar-h4 {
-    font-size: 80% !important;
+    font-size: 75% !important;
 }
 
 .demo-next-section-container-left-sidebar-p {

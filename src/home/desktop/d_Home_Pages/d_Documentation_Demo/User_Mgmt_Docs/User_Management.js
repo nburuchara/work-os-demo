@@ -25,14 +25,23 @@ export default class UserManagement extends Component {
             multiFactorAuth: false,
             magicAuth: false,
             usersAndOrganizations: false,
-            sessions: true,
+            sessions: false,
+            invitations: false,
+            emailVerification: false,
+            domainCapture: false,
+            identityLinking: false,
+            jitProvisioning: false,
+            roles: false,
+            directoryProvisioning: false,
+            organizationPolicies: false,
+            impersonation: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
             codeSnippet1CopyHovered: false,
 
                 //* - IMAGE - *//
-            enlarged: false,
+            enlargedImageId: null, // No image is enlarged initially
 
                 //* - TWO TABS - *//
             usingNode: true,
@@ -62,9 +71,9 @@ export default class UserManagement extends Component {
         }
     }
 
-    toggleEnlarged = () => {
+    toggleEnlarged = (imageId) => {
         this.setState(prevState => ({
-          enlarged: !prevState.enlarged
+            enlargedImageId: prevState.enlargedImageId === imageId ? null : imageId
         }));
     };
 
@@ -84,7 +93,9 @@ export default class UserManagement extends Component {
     render () {
 
             //* - USR MGMG SECTIONS VAR(S) - *//
-        const { gettingStarted, exampleApps, authKit, emailDomains, branding, migrations, singleSignOn, emailAndPassword, socialLogin, multiFactorAuth, magicAuth, usersAndOrganizations, sessions } = this.state;
+        const { gettingStarted, exampleApps, authKit, emailDomains, branding, migrations, singleSignOn, 
+            emailAndPassword, socialLogin, multiFactorAuth, magicAuth, usersAndOrganizations, sessions, 
+            invitations, emailVerification, domainCapture, identityLinking, jitProvisioning, roles, directoryProvisioning, organizationPolicies, impersonation } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -97,7 +108,7 @@ export default class UserManagement extends Component {
 
             //* - CODE SNIPPET VAR(S) - *//
         const  { codeSnippet1CopyHovered } = this.state;
-        
+
         return (
             <Styles>
                 {gettingStarted && 
@@ -144,7 +155,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can set a redirect URI in the <i>Redirects</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> – be sure not to include wildcard subdomains or query parameters.</p>
 
             
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img1' className={`enlargable-image-container ${this.state.enlargedImageId === 'img1' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img1')}>
                                 <img src='/assets/usr_mgmt_docs_redirects_img.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -322,7 +333,7 @@ export default class UserManagement extends Component {
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Validate the authentication flow</h3>
                             <p>Navigate to the <label className='demo-docs-hyperlink'>authentication endpoint</label> we created and sign up for an account. You can then sign in with the newly created credentials and see the user listed in the <i>Users</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                     
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img2' className={`enlargable-image-container ${this.state.enlargedImageId === 'img2' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img2')}>
                                 <img src='/assets/usr_mgmt_docs_validate_auth_flow_img.avif' alt="Enlargable" className="image" />
                             </div>
                         </div>
@@ -482,7 +493,7 @@ export default class UserManagement extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Customizable <label className='demo-docs-hyperlink'>domains</label> and <label className='demo-docs-hyperlink'>branding</label>.</p></li>
                             </ul>
                         
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
                                 <img src='/assets/auth_kit_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -491,7 +502,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit sits outside of your application code. When a user initiates a sign-in request, your application redirects them to the AuthKit URL. The user then completes the authentication process with WorkOS before being returned to the application.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your application will exchange the resulting authorization code to retrieve an authenticated <label className='demo-docs-hyperlink'>User object</label> and handle the session.</p>
                         
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img4' className={`enlargable-image-container ${this.state.enlargedImageId === 'img4' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img4')}>
                                 <img src='/assets/authkit_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -509,7 +520,7 @@ export default class UserManagement extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication Methods</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports all of the authentication methods available in WorkOS User Management and will automatically adjust the available options depending on the configured methods in the <i>Authentication</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                             
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img5' className={`enlargable-image-container ${this.state.enlargedImageId === 'img5' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img5')}>
                                 <img src='/assets/authkit_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -598,7 +609,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With the Production environment selected, navigate to the <i>Domains</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img6' className={`enlargable-image-container ${this.state.enlargedImageId === 'img6' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img6')}>
                                 <img src='/assets/email_domains_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -612,7 +623,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the <i>Add Domain</i> button and enter the domain you would like to use for sending emails.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img7' className={`enlargable-image-container ${this.state.enlargedImageId === 'img7' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img7')}>
                                 <img src='/assets/email_domains_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -626,7 +637,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will be prompted to create 3 CNAME records with your DNS provider. After creating these DNS records, click <i>Verify</i> now.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img8' className={`enlargable-image-container ${this.state.enlargedImageId === 'img8' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img8')}>
                                 <img src='/assets/email_domains_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -675,20 +686,20 @@ export default class UserManagement extends Component {
                             </ul>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The AuthKit preview will update in real-time as you make changes and accurately reflect the available authentication methods, giving you a clear picture of the authentication experience with AuthKit.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img9' className={`enlargable-image-container ${this.state.enlargedImageId === 'img9' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img9')}>
                                 <img src='/assets/branding_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Appearance</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports both light and dark mode; each brand configuration option is split across both so that they can be configured independently. You can enforce a specific appearance, or allow the user's OS system settings to determine which to use.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The corner radius applied to UI elements can also be configured; a lower value will result in a more formal aesthetic while a higher value has a more rounded, playful feel.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img10' className={`enlargable-image-container ${this.state.enlargedImageId === 'img10' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img10')}>
                                 <img src='/assets/branding_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assets</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom brand assets to display in AuthKit, transactional emails, and the <label className='demo-docs-hyperlink'>Admin Portal</label></p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img11' className={`enlargable-image-container ${this.state.enlargedImageId === 'img11' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img11')}>
                                 <img src='/assets/branding_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -702,7 +713,7 @@ export default class UserManagement extends Component {
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo style</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Either the logo or the logo icon can be displayed in AuthKit. To select which to use, click the logo in the AuthKit preview after uploading both assets.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img12' className={`enlargable-image-container ${this.state.enlargedImageId === 'img12' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img12')}>
                                 <img src='/assets/branding_img4.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -717,12 +728,12 @@ export default class UserManagement extends Component {
                             </ul>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Other colors used in the UI, like the focus outline, hover styles, or borders, are created automatically based on the four colors you provide, ensuring a consistent look and feel.</p>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img13' className={`enlargable-image-container ${this.state.enlargedImageId === 'img13' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img13')}>
                                 <img src='/assets/branding_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy</h1>
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img14' className={`enlargable-image-container ${this.state.enlargedImageId === 'img14' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img14')}>
                                 <img src='/assets/branding_img6.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -821,7 +832,7 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <i>Authentication</i> settings section in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and enable Single Sign-On.</p>
                         
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img15' className={`enlargable-image-container ${this.state.enlargedImageId === 'img15' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img15')}>
                                 <img src='/assets/sso_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -838,14 +849,14 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To confirm your Single Sign-On integration works correctly you can use the Test Identity Provider to simulate login flows end-to-end. Your staging environment includes a default Test Organization and active SSO connection configured with the Test Identity Provider.</p>
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img16' className={`enlargable-image-container ${this.state.enlargedImageId === 'img16' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img16')}>
                                 <img src='/assets/sso_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Getting Started</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log into the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and navigate to the Test SSO page to get started with the Test IdP. This page outlines a number of different SSO scenarios you can follow and provides all the necessary information to complete the tests.</p>
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img17' className={`enlargable-image-container ${this.state.enlargedImageId === 'img17' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img17')}>
                                 <img src='/assets/sso_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -884,7 +895,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get started, you will need to <label className='demo-docs-hyperlink'>create an organization</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> in the WorkOS Dashboard. Organizations in WorkOS represent your customer, so by creating an organization, you can test your SSO connection the way your customers will experience it.</p>
 
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img18' className={`enlargable-image-container ${this.state.enlargedImageId === 'img18' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img18')}>
                                 <img src='/assets/sso_img4.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -902,7 +913,7 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img19' className={`enlargable-image-container ${this.state.enlargedImageId === 'img19' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img19')}>
                                 <img src='/assets/sso_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -910,7 +921,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To complete the integration, you’ll have to also create an account with the identity provider you want to test with. After you have signed up with an identity provider of your choice, follow the corresponding Admin Portal instructions from the setup link. Once done, you can start testing your SSO integration with that identity provider.</p>
 
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img20' className={`enlargable-image-container ${this.state.enlargedImageId === 'img20' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img20')}>
                                 <img src='/assets/sso_img6.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -985,8 +996,7 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
                         
-                        </div>
-                        
+                        </div>              
                     </div>
                 }
                 {emailAndPassword &&
@@ -1017,7 +1027,7 @@ export default class UserManagement extends Component {
                         
                             <p className={sidebarMenuClicked? "demo-docs-section-sidebar-p" : ""}>AuthKit will enforce these within the sign up and password reset flows.</p>
                         
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img21' className={`enlargable-image-container ${this.state.enlargedImageId === 'img21' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img21')}>
                                 <img src='/assets/email_pwd_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -1066,7 +1076,7 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configuration can be supplied via the <i>Authentication</i> section of the<label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. WorkOS provides integration guides for common providers such as <label className='demo-docs-hyperlink'>Google</label>, <label className='demo-docs-hyperlink'>Microsoft</label>, and <label className='demo-docs-hyperlink'>GitHub</label>.</p>
                         
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img22' className={`enlargable-image-container ${this.state.enlargedImageId === 'img22' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img22')}>
                                 <img src='/assets/social_login_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -1081,7 +1091,7 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After a provider has been configured and enabled, it will appear as a sign in option on the AuthKit authentication page.</p>
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img23' className={`enlargable-image-container ${this.state.enlargedImageId === 'img23' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img23')}>
                                 <img src='/assets/social_login_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -1131,11 +1141,11 @@ export default class UserManagement extends Component {
                             </div>
 
 
-                            <div style={{marginTop: "5%"}} className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img24' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img24' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img24')}>
                                 <img src='/assets/mfa_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div style={{marginTop: "5%"}} className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img25' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img25' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img25')}>
                                 <img src='/assets/mfa_img2.avif' alt="Enlargable" className="image" />
                             </div>
                         </div>
@@ -1185,15 +1195,15 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>One-time-use codes expire after <strong>10 minutes</strong>.</p>
 
 
-                            <div style={{marginTop: "5%"}} className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img26' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img26' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img26')}>
                                 <img src='/assets/magic_auth_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div style={{marginTop: "5%"}} className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img27' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img27' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img27')}>
                                 <img src='/assets/magic_auth_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div style={{marginTop: "5%"}} className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img28' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img28' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img28')}>
                                 <img src='/assets/magic_auth_img3.avif' alt="Enlargable" className="image" />
                             </div>
                             
@@ -1233,7 +1243,7 @@ export default class UserManagement extends Component {
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Authentication methods</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There may be multiple authentication methods on a single user object, such as <label className='demo-docs-hyperlink'>Email + Password</label> or <label className='demo-docs-hyperlink'>OAuth</label>. A user can sign in with any of the authentication methods associated with them, as long as you have enabled those authentication methods in the WorkOS Dashboard.</p>
 
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img29' className={`enlargable-image-container ${this.state.enlargedImageId === 'img29' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img29')}>
                                 <img src='/assets/users_org_img1.png' alt="Enlargable" className="image" />
                             </div>
 
@@ -1259,15 +1269,13 @@ export default class UserManagement extends Component {
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS organization memberships are designed to be flexible, and support any B2B app model. For example:</p>
                        
-                            <div className={`enlargable-image-container ${enlarged ? 'enlarged' : ''}`} onClick={this.toggleEnlarged}>
+                            <div id='img29.5' className={`enlargable-image-container ${this.state.enlargedImageId === 'img29.5' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img29.5')}>
                                 <img src='/assets/users_org_img2.png' alt="Enlargable" className="image" />
                             </div>
-
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Multiple Workspaces:</strong> A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly one organization.</p></li>
-                               
                             </ul>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. <strong>WorkOS User Management supports both</strong>.</p>
@@ -1305,11 +1313,696 @@ export default class UserManagement extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sessions</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn more about integrating sessions.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs in to your app, a user session is created. Along with the <label className='demo-docs-hyperlink'>User object</label>, a successful authentication response will include an access token and refresh token. Your application can use these tokens to ensure that the user’s session is still active. </p>
                         
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each user session can be viewed from within the WorkOS dashboard:</p>
+                        
+                            <div id='img30' className={`enlargable-image-container ${this.state.enlargedImageId === 'img30' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img30')}>
+                                <img src='/assets/sessions_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Users</i> and select a user. Then, switch to <i>Sessions</i> tab and click on a user session to get more information.</p>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating Sessions</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Successful authentication responses will include both an access token and a refresh token. The access token should be stored as a secure cookie in the user’s browser and should be validated by the backend on each request. The refresh token should be persisted on your backend. Once the access token has expired, a new one can be obtained using the refresh token.</p>
+                        
+                            <div id='img31' className={`enlargable-image-container ${this.state.enlargedImageId === 'img31' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img31')}>
+                                <img src='/assets/sessions_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Access Token</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you're using <label className='demo-docs-hyperlink'>Next SDK</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, all the work of validating access tokens and refreshing expired tokens is handled for you (more framework support coming soon). Read on for details about how token handling works.</p>
+                        
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The access token is a JSON Web Token (JWT), which should be validated on each request using a library like jose. The signing <label className='demo-docs-hyperlink'>JWKS</label> can be found at <span>http://api.workos.com/sso/jwks/&lt;clientId&gt;</span>. The JWT includes the following claims:</p>
+                            
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sub</span>: the WorkOS user id</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iss</span>: <span>https://api.workos.com/</span>the session ID (used for signing out)</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
+                                </ul>
+                            
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Refresh Token</h3>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Refresh tokens should be persisted on the backend in, for instance, a database, cache, or secure http-only cookie. A new access token can be obtained by using the <label className='demo-docs-hyperlink'>authenticate with refresh token</label> endpoint. If the session is still active, a new access token and refresh token will be returned. Refresh tokens are single use, so be sure to replace the old refresh token with the newly generated one.</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signing Out</h3>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs out of your app, the following steps should occur:</p>
+                            
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get the session id (<span>sid</span> claim) out of the access token.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Delete the user’s app session.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user will be redirected back to the URL configured as your <i>App homepage URL</i></p></li>
+                                </ul>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Example</h3>
+
+                            <CodeSnippetStruct 
+                            id={16}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuring Sessions</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Using the WorkOS dashboard you can configure how Sessions work in your integration. You’ll find the settings in the <i>Authentication</i> section.</p>
+
+                            <div id='img32' className={`enlargable-image-container ${this.state.enlargedImageId === 'img32' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img32')}>
+                                <img src='/assets/sessions_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Maximum session length:</strong> the user will need to sign in again.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Access token duration:</strong> Your backend can verify the access token on each request (see the <label className='demo-docs-hyperlink'>Integrating Sessions</label> section above). It’s recommended to keep the access token duration short so that changes in the session are quickly reflected in your app.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, make sure to review your settings in the <i>Redirect</i> section:</p>
+
+                            <div id='img33' className={`enlargable-image-container ${this.state.enlargedImageId === 'img33' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img33')}>
+                                <img src='/assets/sessions_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>App homepage URL:</strong> Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.</p></li>
+                            </ul>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Invitations</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Easily add users as members to an organization.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {invitations && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Invitations</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easily add users as members to an organization.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations are a way of adding a specific user as a member to an organization. They provide a flow for end-users to engage in collaboration that takes into consideration security and user choice.</p>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>The invitation flow</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each invitation is for a specific email address to a specific organization. Invitations are for both new users and existing users.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each invitation is a two step process:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The inviter expresses intent for someone to join an organization.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The invitee chooses to join that organization.</p></li>
+                            </ul>
+
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Inviting new users</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If an invitation is created for an email address that does not yet exist, an email is sent to that user with a link to sign up for your application and join the organization. </p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As part of signing up, they automatically join the organization. If a user is invited to multiple organizations, they only join the organization for which they clicked the invitation email for, indicating intent to join that specific organization.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Inviting existing users</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If an invitation is for an existing user, clicking the link in the email and signing in adds the user as a member to the organization. If the user is already signed-in, you can use the invitation code to validate that the signed-in user is eligible to use the invitation, by querying the <label className='demo-docs-hyperlink'>Invitation API</label>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This offers choice for the end-user so that they aren’t automatically added to organizations that may be attempting phishing attacks.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Application-wide invitations</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations do not have to be specific to an organization. An invitation sent without specifying an organization is an invitation to join the application. This allows your existing users help grow your application by inviting peers organically.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When sign-up is disabled, users cannot register for a new account through <label className='demo-docs-hyperlink'>AuthKit</label> or the <label className='demo-docs-hyperlink'>API</label>. When a valid invitation code is present in the sign-in flow, registration is opened up both in AuthKit and the API so that a new user may sign up. This lets you model your application as a closed-registration invitation-only system.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sending invitations</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations can be sent programmatically by your application with the <label className='demo-docs-hyperlink'>Invitation API</label>, or viewed and manually created in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+
+                            <div id='img34' className={`enlargable-image-container ${this.state.enlargedImageId === 'img34' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img34')}>
+                                <img src='/assets/invitations_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Email Verification</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn more about the email verification process.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {emailVerification && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email Verification</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn more about the email verification process.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification is a process in which a new user must validate ownership of their email inbox before they can access the application, ensuring authenticity of inbox ownership.</p>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>The email verification flow</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verification is a two-step process:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A user signs up to your application and an email is sent with a verification code.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user inputs the verification code to complete the sign-up process.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods including <label className='demo-docs-hyperlink'>OAuth</label> and <label className='demo-docs-hyperlink'>SSO</label>. This unifying interface simplifies how your application considers the authenticity of your users.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email verification is always on</strong> to ensure that verified users are always returned to your application.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user's email domain matches a <label className='demo-docs-hyperlink'>verified domain</label> attached to the organization they are attempting to join, they will automatically be considered verified and will not need to complete the email verification process.</p>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>AuthKit</label> automatically handles email verification out of the box. When a user signs up via the hosted sign-up form, AuthKit will automatically send the verification email, prompt the user to input the code and route them through the authentication process before they gain access to the application.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Domain Capture</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Understanding domain verification and domain-captured users.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {domainCapture && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Capture</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Understanding domain verification and domain-captured users.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain capture is a set of controls the IT admin of an organization can apply to everything related to its organizational resources on WorkOS. This currently enables <label className='demo-docs-hyperlink'>provisioning of new users</label> into an organization, but will soon support organization-level control of authentication and user membership policies.</p>
+                        
+                            <div id='img35' className={`enlargable-image-container ${this.state.enlargedImageId === 'img35' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img35')}>
+                                <img src='/assets/domain_capture_img1.png' alt="Enlargable" className="image" />
+                            </div>
+                        
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain Verification</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Everything starts by verifying a domain. Domain verification requires an IT admin to perform tasks that prove access to a domain’s configuration that only owners of the domain can have. This might include adding a TXT DNS record, verifying access to an administrator email inbox, or modifying a webpage on the domain’s website.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a set of <label className='demo-docs-hyperlink'>APIs and Admin Portal flows</label> for the whole verification process. The result of a domain verification is that a domain is marked as verified for the specific organization that initiated the verification, and the organization becomes <i>domain-verified</i>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Proof of ownership</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Proof of ownership of the domain is a shortcut to proving that the IT admin has access to do everything else on the domain, including creation of email inboxes, accessing password-reset emails, and deletion of email accounts. When an organization has verified a domain, that organization has proven they have access to control every resource on that domain.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Manually adding a verified domain</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verified domains may also be added via the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> without the need to have an IT admin complete the formal verification process.</p>
+
+                            <div id='img36' className={`enlargable-image-container ${this.state.enlargedImageId === 'img36' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img36')}>
+                                <img src='/assets/domain_capture_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This is a useful shortcut if the IT admin has already proven ownership of the domain in another context and you do not want to enforce explicit domain verification.</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Domain uniqueness</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Only one organization can successfully verify a given domain. The alternative would create ambiguity as to which organization has ultimate control over resources on that domain.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you find that a customer is trying to verify a domain that has already been verified, you should intermediate between the two organizations and identify which should assume ultimate control over the domain.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once a domain is verified, all existing and future users with email addresses of that domain are considered <i>domain-captured users</i>. The organization that verified that domain now controls all of those users and can <label className='demo-docs-hyperlink'>automatically provision</label> users signing in with that organizations email domain.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain-captured users will automatically be considered verified and will not need to go through the <label className='demo-docs-hyperlink'>email verification</label> process.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The organization can also <label className='demo-docs-hyperlink'>enforce specific authentication methods</label> on its domain-captured users.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Identity Linking</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Automatic deduplication of user credentials across identity providers.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {identityLinking && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Identity Linking</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Automatic deduplication of user credentials across identity providers.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users have unique email addresses, because each user’s access to their inbox represents ultimate access to all of their credentials and thus services they control. The <label className='demo-docs-hyperlink'>User object</label> unifies all of the identities they use so that your application does not have to consider different identity systems.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identity linking is the process in which WorkOS safely deduplicates various credentials across identity providers to offer a single, unified user interface. It does this by using the <strong>email address</strong> as the unique identifier and access to the email inbox as the source of truth.</p>
+                        
+                            <div id='img37' className={`enlargable-image-container ${this.state.enlargedImageId === 'img37' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img37')}>
+                                <img src='/assets/identity_linking_img1.png' alt="Enlargable" className="image" />
+                            </div>
+                        
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Credentials</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A credential is an authentication method in a specific identity provider. For example, WorkOS offers a <label className='demo-docs-hyperlink'>password credential</label> for users to authenticate with. In this case, WorkOS is the identity provider and password is the authentication method.</p>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Google OAuth</label> is another credential, where Google is the identity provider and OAuth is the authentication method. </p>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users may use multiple types of authentication methods based on preference, perhaps because one is more convenient to use on one of their devices, or they simply didn’t remember which method they used in the past.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Email verification</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS ensures all user emails are unique via an <label className='demo-docs-hyperlink'>email verification process</label>. By default, email verification is required by all users for authentication to succeed. This ensures that verified users are always returned to your application.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs in with a new credential for the first time, e.g. they sign in through Google OAuth despite already having a password account, WorkOS will safely attach the new credential to the existing user. This is only performed if WorkOS can verify that the user has access to the email inbox referenced by that credential.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS considers it a <strong>security risk if the user cannot verify their email access</strong>. For some identity providers, a credential with an email address does not guarantee access to that inbox.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS does not complete the authentication flow when a new identity cannot be safely linked to an existing user to ensure account takeover risks are minimized.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an IT admin <label className='demo-docs-hyperlink'>verifies a domain for their organization</label>, it means they have access to create email inboxes. Thus, a verified domain implies the ability to verify all users with that email domain.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In practice, when a domain is verified and an SSO connection is configured, users who sign in through an organization’s IdP are automatically considered email verified if the domain matches. This shortcut reduces friction for your end users.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Users who sign-in through SSO with an email address that is not a verified domain, are not considered verified and will have go through the <label className='demo-docs-hyperlink'>email verification</label> process.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SSO identity linking</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Not only can a user have multiple credentials, they may also have multiple SSO credentials. This might happen when a user works with multiple organizations that require SSO authentication for all members. In this case, there is still only one <label className='demo-docs-hyperlink'>User object</label>, but they would choose which organization’s SSO IdP to use when authenticating.</p>
+
+                            <div id='img38' className={`enlargable-image-container ${this.state.enlargedImageId === 'img38' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img38')}>
+                                <img src='/assets/identity_linking_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The email verification safety still applies. When the user signs-in for the first time through an SSO IdP where the user’s email address is not captured by the organizations verified domain, the user is asked to verify their email before the SSO credential is linked to their account.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users not captured by an organization’s verified domain <strong>must be invited to the organization</strong> before they have access via SSO for the first time. This applies to non-domain-captured and <label className='demo-docs-hyperlink'>domain-captured</label> users on domains of other organizations.</p>
+                        
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>An <label className='demo-docs-hyperlink'>invitation</label> ensures that the authentication flow gives the user an opportunity to go to the SSO’s identity provider.</p>
+                                </div>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>JIT Provisioning</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Provision organization membership using Just-In-Time user provisioning.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                }
+                {jitProvisioning && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>JIT Provisioning</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Provision organization membership using Just-In-Time user provisioning.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning automatically assigns user membership to an organization when a user authenticates for the first time. It is helpful to provide access to an organization’s resources without manual entry of all users by the IT admin.</p>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured user provisioning</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Domain-captured</label> users can be automatically added as members to an organization using JIT provisioning. This is useful when your application or a specific organization wants to automatically gather a set of individuals to the same workspace based on email domain.</p>
+                        
+                            <div id='img39' className={`enlargable-image-container ${this.state.enlargedImageId === 'img39' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img39')}>
+                                <img src='/assets/jit_prov_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SSO provisioning</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user who hasn’t signed in previously through their SSO IdP enters their email into the sign-in form, WorkOS APIs detects that their email domain matches the domain of the organization and offers authentication through SSO. This user is then JIT provisioned, and future sign in attempts detect that this user belongs to the organization.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This will not work for guests, who are members of an organization but are not <label className='demo-docs-hyperlink'>domain-captured</label> by the organization.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Guest provisioning</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an IT admin adds a guest email address that does not match the organization’s domain to their SSO IdP, the guest cannot sign in for the very first time through the IdP because WorkOS doesn’t have an association of this email address to the organization.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An example scenario is an IT admin who wants to gate all contractor access through their IdP (to provide access revocation across applications) but the contractor wishes to use their own email address.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Invitations</label> can be used to enable this scenario. By inviting the contractor to the organization, the authentication flow will detect a possible SSO connection and offer authentication through the SSO IdP when signing in.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>domain-captured</label> user of one domain-verified organization that requires SSO may be a guest of another domain-verified organization that also requires SSO. If the user is a member of both organizations, that user has two SSO credentials, and will need to choose which organization to access at sign-in time before being redirected to the corresponding IdP.</p>
+
+                            <div id='img40' className={`enlargable-image-container ${this.state.enlargedImageId === 'img40' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img40')}>
+                                <img src='/assets/jit_prov_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Disabling JIT provisioning</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT membership provisioning can be disabled, if for example the IT admin wants only select individuals to have access to the organization.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When JIT provisioning is off for a domain-verified organization, new users with matching email addresses cannot be created in a self-serve manner.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Turning off JIT provisioning disables user provisioning for new users. This may be useful when an organization wants to limit access to its workspace. <label className='demo-docs-hyperlink'>Invitations</label> can be used to allow specific email addresses to sign up and be provisioned.</p>
+                        
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Roles</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Manage and assign roles to users.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {roles && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Roles</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Manage and assign roles to users.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A role represents a logical grouping of permissions, defining access control levels for users within your application. Roles are identified by a unique, immutable slug and are assigned to usersthrough  <label className='demo-docs-hyperlink'>organization memberships</label>.</p>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Roles</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Roles can be created and managed in the Roles section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                        
+
+                            <div id='img41' className={`enlargable-image-container ${this.state.enlargedImageId === 'img41' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img41')}>
+                                <img  src='/assets/roles_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Default role</h3>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Role configuration occurs at the environment level. Each environment is seeded with a default <span>member</span> role, which is automatically assigned to every organization member. This default role cannot be deleted, but any role can be set as the default.</p>
+                            
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to set default roles or other role configurations at the organization level, please <label className='demo-docs-hyperlink'>contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+                            
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Assign roles</h3>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organization memberships require a role. Every user with an organization membership is automatically assigned the default role when added to an organization. This role can be edited.</p>
+                            </div>
+
+                            <div id='img42' className={`enlargable-image-container ${this.state.enlargedImageId === 'img42' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img42')}>
+                                <img  src='/assets/roles_img2.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can retrieve the role slug from the user's <label className='demo-docs-hyperlink'>organization membership object</label> to determine their access level and capabilities within your application.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Delete roles</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When roles are deleted, all organization memberships are reassigned to the default role. Role deletion happens asynchronously, so there may be a slight delay between deleting a role and updating all organization memberships.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>To migrate from one default role to another, set the new default role and delete the old one. All users will then be reassigned to the new default role.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Role-aware sessions</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs into your app, a <label className='demo-docs-hyperlink'>user session</label> is initiated. The authentication response includes an access token, a JSON Web Token (JWT), with the "role" claim indicating the organization membership's role for that session.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Directory Provisioning</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Manage users and organization memberships via directory sync providers.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {directoryProvisioning && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Directory Provisioning</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Manage users and organization memberships via directory sync providers.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in preview. Please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team's WorkOS Slack channel if you would like Directory Provisioning enabled.</p>
+                                </div>
+                            </div>
+                           
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory provisioning gives an IT admin full control over access to an organization’s resources, without relying on manual entry. Users from a directory are pre-provisioned and managed by their <label className='demo-docs-hyperlink'>Identity Provider</label>.</p>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial Configuration</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Directory Sync</label> integration will need to be configured for every domain, i.e. organization, that wants to source users and organization memberships via directory provisioning. Directories can be set up via the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> with <label className='demo-docs-hyperlink'>Setup Links</label>. You can also <label className='demo-docs-hyperlink'>integrate the Admin Portal with your app</label> to generate links to configure directories.</p>
+                        
+                        
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Supported directory providers</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The following directory sync providers are supported with directory provisioning:</p>
+                        
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Okta SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID (Azure AD) SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Google Workspace</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>OneLogin SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>CyberArk SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>PingFederate SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JumpCloud SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rippling SCIM</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generic SCIM</p></li>
+                            </ul>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>If you are interested in directory provisioning support from a directory sync provider not listed above, please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team's WorkOS Slack channel.</p>
+                                </div>
+                            </div>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provision users from a directory</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When directory provisioning is enabled and a directory sync provider integration is set up, <label className='demo-docs-hyperlink'>domain-captured</label> users from the directory sync provider will be provisioned and added as members to the organization.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users with email addresses that do not match the organization’s domain will be sent an <label className='demo-docs-hyperlink'>invitation</label> to join the organization. On successful authentication, an organization membership will be added for these users.</p>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Manage users from a directory</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once directory provisioning is set up for an organization, any additional users, updates to current users, and de-provisioning events will flow through to user management.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Domain-captured</label> users will be fully managed by the directory, and updates to attributes will supersede updates from SSO, the API or manually in the dashboard.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users with email addresses that do not match the organization’s domain will not be fully managed by the directory, and SSO, API or manual updates in the dashboard will persist.</p>
+                        
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user is de-provisioned in the directory, the corresponding organization membership will become inactive and the <label className='demo-docs-hyperlink'>status for the membership</label> will be <span>inactive</span>. De-provisioning will not automatically delete users or organization memberships.</p>
+                            
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is re-provisioned in the directory, the corresponding organization membership will be reactivated and the <label className='demo-docs-hyperlink'>status for the membership</label> will be <span>active</span>. The organization membership's pre-existing role will be retained.</p>
+                            </div>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+                            <strong><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>I am using directory provisioning, but some directory users aren't being provisioned in user management. Why would a directory user not be provisioned in user management?</p></strong>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory users need to have a primary email address to be provisioned in user management. So if the directory user is missing a primary email, they won't be provisioned. Additionally, if the primary email of a directory user is shared by another directory user, only one will be provisioned in user management, as emails are unique to user management users.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Organization Authentication Policies</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Customize available authentication methods per organization.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                {organizationPolicies && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Organization Policies</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customize available authentication methods per organization.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While your application provides a set of authentication methods, certain organizations may want to restrict their users to a subset of those methods for customized security constraints. These organization-level customizations can be configured on the organization page in the Dashboard.</p>
+                        
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Controls for domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an organization has a verified domain, the organization has full control over the authentication methods for its <label className='demo-docs-hyperlink'>domain-captured users.</label> The organization can enable any subset of the authentication methods that your application enables at the environment level.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, if the <label className='demo-docs-hyperlink'>MFA setting</label> for the environment is set to Optional, meaning that users who choose to enroll in MFA would get challenged at authentication time, an organization can require its domain-captured users to enroll in MFA.</p>
+                        
+                            <div id='img43' className={`enlargable-image-container ${this.state.enlargedImageId === 'img43' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img43')}>
+                                <img  src='/assets/org_policies_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Requiring SSO by default</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an SSO connection is first setup on an organization, all non-SSO authentication methods for the organization are automatically disabled. It’s usually the case that an IT admin that sets up SSO wants that to be the only method of authentication. If an organization wants additional methods enabled, they can be manually turned on.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Controls for domain-captured users</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user is domain-captured, their own organization can enforce specific authentication controls on them. The organizations the user may be a <label className='demo-docs-hyperlink'>guest member</label> of does not have the same set of controls for guests, as it may conflict with the controls of the domain-capturing organization.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization may only require that its guest members authenticate through its own SSO connection. When this is enabled, guest members would login as they normally do, and upon <label className='demo-docs-hyperlink'>selecting this organization</label> to log into, the user would be prompted to sign-in at the organization’s SSO IdP. This acts as a secondary authentication method that this organization controls.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations may also require that its guests enroll in MFA.</p>
+                        
+                            <div id='img44' className={`enlargable-image-container ${this.state.enlargedImageId === 'img44' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img44')}>
+                                <img  src='/assets/org_policies_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Impersonation</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to sign into your application as one of your users.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                {impersonation && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Impersonation</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to sign into your application as one of your users.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Impersonation allows administrators and support team members to assume the identity of any of your users, allowing them to reproduce or debug issues the user may be having in your application. The ability to see the application in an identical state as the user helps to greatly speed up the support process.</p>
+                        
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enabling impersonation</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Since impersonation allows any member of your WorkOS team to bypass the normal authentication flow for a user, it is not enabled by default in any of your environments. You must have the<strong>Admin</strong> role in order to enable impersonation for an environment.</p>
+                        
+                            <div id='img45' className={`enlargable-image-container ${this.state.enlargedImageId === 'img45' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img45')}>
+                                <img  src='/assets/impersonation_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Authentication → User Impersonation</i> and select <i>Configure</i> to enable impersonation for your current environment.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Using impersonation</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To impersonate one of your users, navigate to <i>Users</i>, select the user you'd like to impersonate, and under <i>Danger Zone</i> select <i>Impersonate User</i>.</p>
+                        
+                            <div id='img46' className={`enlargable-image-container ${this.state.enlargedImageId === 'img46' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img46')}>
+                                <img  src='/assets/impersonation_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will be prompted for the reason your are impersonating the user. It is optional to provide a reason in staging environments, and required in production. The reason will be recorded internally on the <span>session.created</span> event that is emitted whenever impersonation is used.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If the user is a member of more than one organization, you will also need to choose which of these organizations you will be signing-into as the user. You can read more about users and organizations in our <label className='demo-docs-hyperlink'>dedicated guide</label>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, click <i>Impersonate</i> user to start an impersonation session, redirecting your browser to your application's callback endpoint with an authorization code for the impersonated user. You can read more about how to implement a callback endpoint in our <label className='demo-docs-hyperlink'>Quick Start guide</label>.</p>
+                        
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Impersonation sessions automatically expire after 60 minutes.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Be aware that impersonating a user usually generally gives the same level of access as that user, allowing the impersonator to see the user's information. If your application contains sensitive user data, see the <label className='demo-docs-hyperlink'>Integrating impersonation</label> section about how to customize your application when using impersonation.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Auditing impersonation usage</h1>
+                                
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User sessions that were initiated via impersonation will be clearly marked as such when viewing their details in the WorkOS Dashboard. Additionally, WorkOS emits a <span>session.created</span> event which you can view under the events for the user, or listen for in your application via the <label className='demo-docs-hyperlink'>events API</label>.</p>
+                            </div>
+
+                            <div id='img47' className={`enlargable-image-container ${this.state.enlargedImageId === 'img47' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img47')}>
+                                <img  src='/assets/impersonation_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>session.created</span> event has an <span>impersonator</span> field that contains information about the mpersonation session, like the <span>email</span> of your team member who performed the impersonation, along with their <span>reason</span> for doing so.</p>
+                            </div>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating impersonation</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>No additional code is required to start using impersonation once you have integrated with WorkOS. However, many developers may want to augment their application's behavior when your team members are impersonating one of your users.</p>
+
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The response from the <label className='demo-docs-hyperlink'>Authenticate with Code API</label> will include an additional <span>impersonator</span> field when the resulting session was created via impersonation, containg the impersonator's <span>email</span> and <span>reason</span> for using impersonation. Similarly, the <span>access_token</span> will include an <span>act</span> claim with the impersonator's <span>email</span>. Your application can use either in order to trigger impersonation-specific behavior.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A common enhancement is to change the appearance of the application in order to make it obvious to the viewer they are currently impersonating one of your users, such as a "Staff Bar" displayed at the top of the viewport. You may also want to restrict access to sensitive views or redact certain fields in your application.</p>
+
+
+                            <div className='api-keys'>
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Impersonation with <span>authkit-nextjs</span></h3>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If using the <span>authkit-nextjs</span> <label className='demo-docs-hyperlink'>library</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, impersonation can be easily added by using the provided helper component.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After completing the setup instructions in the <label className='demo-docs-hyperlink'>quick start</label> guide, add the Impersonation component to your app code.</p>
+
+                            <CodeSnippetStruct 
+                            id={17}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Impersonation component" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The above will automatically render a visually distinct frame on your page with an option to hide it or stop the impersonation session.</p>
+
+                            <div id='img48' className={`enlargable-image-container ${this.state.enlargedImageId === 'img48' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img48')}>
+                                <img  src='/assets/impersonation_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
                     </div>
                 }
@@ -1317,3 +2010,5 @@ export default class UserManagement extends Component {
         )
     }
 }
+
+//* IMAGE 47 (latest)
