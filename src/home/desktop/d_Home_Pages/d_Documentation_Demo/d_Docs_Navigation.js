@@ -8,6 +8,7 @@ import NestedDropdown from './d_Documentation_Components/NestedDropdown'
 import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
 import APIReference from './Resources_Docs/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
+import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
 
 const Styles = styled.div `
 
@@ -627,7 +628,7 @@ const Styles = styled.div `
 .two-tab-selection-tab {
     float: left;
     text-align: center;
-    width: 20%;
+    width: 30%;
 }
 
 .two-tab-selection-sidebar-tab {
@@ -644,7 +645,7 @@ const Styles = styled.div `
     border-radius: 7px;
     border: 1px solid transparent;
     padding: 3%;
-    font-size: 75%;
+    font-size: 70%;
     font-family: poppins;
     padding-left: 10%;
     padding-right: 10%;
@@ -658,7 +659,7 @@ const Styles = styled.div `
     border-radius: 7px;
     border: 1px solid transparent;
     padding: 3%;
-    font-size: 75%;
+    font-size: 55%;
     font-family: poppins;
     padding-left: 10%;
     padding-right: 10%;
@@ -1077,6 +1078,97 @@ const Styles = styled.div `
     padding-bottom: 25%;
 }
 
+
+    //! - - Simple Table - - !//
+
+.simple-table {
+    border-top: 1px solid #ccc;
+}
+
+.simple-table:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.simple-sidebar-table {
+    border-top: 1px solid #ccc;
+}
+
+.simple-sidebar-table:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.simple-table-left {
+    float: left;
+    text-align: left;
+    width: 15%;
+    padding-top: 1.5%;
+}
+
+.simple-table-sidebar-left {
+    float: left;
+    text-align: left;
+    width: 25%; 
+    padding-top: 2.5%;
+}
+
+.simple-table-right {
+    float: left;
+    text-align: left;
+    width: 85%;
+    padding-top: 1.5%;
+}
+
+.simple-table-sidebar-right {
+    float: left;
+    text-align: left;
+    width: 75%; 
+    padding-top: 2.5%;
+}
+
+    // # LEFT TEXT
+
+.simple-table-left h5 {
+    margin-top: 5%;
+    font-size: 67.5%;
+    color: #2e2eff;
+}
+
+.simple-table-left h5:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.simple-table-sidebar-left h5 {
+    margin-top: 5%;
+    font-size: 67.5%;
+    color: #2e2eff;
+}
+
+.simple-table-sidebar-left h5:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    // # RIGHT TEXT
+
+.simple-table-right p {
+    margin-top: 0.75%;
+    font-size: 65%;
+    margin-right: 5%;
+    margin-left: 0.5%;
+}
+
+.simple-table-sidebar-right p {
+    margin-top: 1%;
+    font-size: 65%;
+    margin-right: 5%;
+    margin-left: 0.5%;
+}
+
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
 .demo-docs-search-bar {
@@ -1410,7 +1502,8 @@ export default class DocsNavigationMenu extends Component {
             //* - - DOCUMENTATION PAGES - - *//
 
             showDocsHome: false,
-            showUserManagementDoc: true,
+            showUserManagementDoc: false,
+            showStandAloneApis: true,
             showAPIReference: false,
 
         }
@@ -1613,8 +1706,8 @@ export default class DocsNavigationMenu extends Component {
         const { sidebarMenuClicked } = this.state;
         
             //* - DOUMENTATION PAGES VARS - *//
-        const { showDocsHome, showUserManagementDoc, showAPIReference } = this.state;
-        const { usrMgmtScrollID } = this.state;
+        const { showDocsHome, showUserManagementDoc, showStandAloneApis, showAPIReference } = this.state;
+        const { usrMgmtScrollID, standaloneApisScrollID } = this.state;
         return(
             <Styles>
                         {/* - - SIDE PANEL - -  */}
@@ -1951,6 +2044,7 @@ export default class DocsNavigationMenu extends Component {
                         </div>
                     }
                     {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID}/>}
+                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID}/>}
                     {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>}
                     
 

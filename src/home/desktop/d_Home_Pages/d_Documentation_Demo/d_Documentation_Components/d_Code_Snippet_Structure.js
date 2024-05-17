@@ -267,12 +267,14 @@ const Styles = styled.div `
   margin-top: 0px;
   margin-bottom: 0px;
   line-height: 1.5;
-  font-size: 80% !important;
+  font-size: 80%;
 }
 
 .code-snippet-body-sidebar-p {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
+  font-size: 65% !important;
+  line-height: 1.75 !important;
 }
 
 .code-snippet-body pre {
@@ -313,7 +315,7 @@ const Styles = styled.div `
   padding-top: 3% !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  line-height: 1 !important;
+  line-height: 1.25 !important;
   font-size: 70% !important;
 }
 
@@ -331,6 +333,47 @@ const Styles = styled.div `
 .selected-api-explainer p {
   font-size: 80% !important;
 }
+
+.code-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-line {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.line-number {
+  width: 3%; /* Adjust width as needed */
+  padding-right: 1%;
+  text-align: right;
+  user-select: none; /* Prevent selecting line numbers */
+  font-family: 'inconsolata';
+  font-size: 80% !important; /* Match the font size */
+  margin-top: 0px; /* Match p tag margin */
+  margin-bottom: 0px; /* Match p tag margin */
+  line-height: 1.5; /* Match line height */
+  color: grey;
+}
+
+.line-number-sidebar {
+  width: 4%; /* Adjust width as needed */
+  padding-right: 1%;
+  text-align: right;
+  user-select: none; /* Prevent selecting line numbers */
+  font-family: 'inconsolata';
+  font-size: 80% !important; /* Match the font size */
+  margin-top: 0px; /* Match p tag margin */
+  margin-bottom: 0px; /* Match p tag margin */
+  line-height: 1.5; /* Match line height */
+  color: grey;
+}
+
+.line-content {
+  flex: 1; /* Allow content to take up remaining space */
+}
+
 
 `
 
@@ -576,6 +619,11 @@ export default class CodeSnippet extends Component {
 
     handleApiLabelLeave = () => {this.setState({apiLabelHovered: false})}
 
+    extractIdentifier = (line) => {
+        // Regular expression to match the initial sequence of non-whitespace characters
+        const match = line.match(/^\S+/);
+        return match ? match[0] : '';
+    }
 
     render () {
 
@@ -743,8 +791,8 @@ export default class CodeSnippet extends Component {
                             <p>Replace this with your client ID found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
                           </div>
                         }
-                      <div>
-                        {codeForSelectedLang.map((line, index) => (
+                      <div className='code-editor'>
+                        {/* {codeForSelectedLang.map((line, index) => (
                             <pre key={index} style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow:"scroll"}}>
                               <p 
                               className={sideBarOpen ? "code-snippet-body-sidebar-p" : ""}
@@ -754,7 +802,28 @@ export default class CodeSnippet extends Component {
                               >
                               </p>
                             </pre>
-                        ))}
+                        ))} */}
+                        {codeForSelectedLang.map((line, index) => {
+                          // Extract the initial sequence of non-whitespace characters
+                          const identifier = this.extractIdentifier(line);
+                          // Remove the identifier from the line content
+                          const lineContent = line.substring(identifier.length);
+
+                          return (
+                            <div key={index} className="code-line">
+                              <div className={sideBarOpen ? "line-number-sidebar" : "line-number"}>{identifier}</div>
+                              <pre className="line-content" style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow: 'scroll' }}>
+                                <p
+                                  id={`code-line-${index}`}
+                                  className={sideBarOpen ? 'code-snippet-body-sidebar-p' : ''}
+                                  style={{ fontSize: '80%', fontFamily: 'inconsolata', marginTop: '0px', marginBottom: '0px', lineHeight: '1.5' }}
+                                  dangerouslySetInnerHTML={{ __html: lineContent }}
+                                  onClick={this.handleApiKeyEnter}
+                                />
+                              </pre>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                 </div>

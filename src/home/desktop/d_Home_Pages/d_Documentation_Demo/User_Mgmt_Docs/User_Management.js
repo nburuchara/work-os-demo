@@ -12,8 +12,7 @@ export default class UserManagement extends Component {
         this.state = {
 
                 //* - USER MGMT SECTIONS - *//
-
-            gettingStarted: false,
+            gettingStarted: true,
             exampleApps: false,
             authKit: false,
             emailDomains: false,
@@ -34,7 +33,7 @@ export default class UserManagement extends Component {
             roles: false,
             directoryProvisioning: false,
             organizationPolicies: false,
-            impersonation: true,
+            impersonation: false,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
