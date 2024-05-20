@@ -511,121 +511,72 @@ export default class CodeSnippet extends Component {
 
     handleApiKeyEnter = (event) => {
       const target = event.target;
-      const skRegex = /sk_\w+/; // Regular expression to match "sk_..." pattern
-      const clientRegex = /^client_\w+/; // Regular expression to match "client_..." pattern at the beginning of the string
-      const listRegex = /\blist\w*/; // Regular expression to match "list..." pattern at the beginning of the string
-      const userRegex = /\buser\w*/; // Regular expression to match "user..." pattern at the beginning of the string
-      const listConnectionRegex = /\blistConnection\w*/; // Regular expression to match "listConnection..." pattern at the beginning of the string
-      const list_connectionRegex = /\blist_connections\w*/; // Regular expression to match "list_connection..." pattern at the beginning of the string
-      const ListConnectionRegex = /\bListConnections\w*/; // Regular expression to match "ListConnection..." pattern at the beginning of the string
-      const list_metadataRegex = /\blist_metadata\w*/; // Regular expression to match "list_metadata..." pattern at the beginning of the string
-      const ListMetadataRegex = /\bListMetadata\w*/; // Regular expression to match "ListMetadata..." pattern at the beginning of the string
-      const listMetadataRegex = /\blistMetadata\w*/; // Regular expression to match "listMetadata..." pattern at the beginning of the string
-      const current_pageRegex = /\bcurrent_page\w*/; // Regular expression to match "current_page..." pattern at the beginning of the string
-      const currentPageRegex = /\bcurrentPage\w*/; // Regular expression to match "currentPage..." pattern at the beginning of the string
-      const responseRegex = /\bresponse\b/; // Regular expression to match "response..." pattern at the beginning of the string
-      const getAuthorizationUrlRegex = /\bgetAuthorizationUrl\w*/; // Regular expression to match "getAuthorizationUrl" pattern at the beginning of the string
-      const getUserRegex = /\bgetUser\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
-      const getSignInUrlRegex = /\bgetSignInUrl\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
-      const signOutRegex = /\bsignOut\w*/; // Regular expression to match "getUser" pattern at the beginning of the string
-      const authenticateWithCodeRegex = /\bauthenticateWithCode\w*/; // Regular expression to match "authenticateWithCode.." pattern at the beginning of the string
-      const authKitMiddlewareRegex = /\bauthKitMiddleware\w*/; // Regular expression to match "authKitMiddleware.." pattern at the beginning of the string
-      const handleAuthRegex =  /\bhandleAuth\w*/; // Regular expression to match "handleAuth.." pattern at the beginning of the string
-      const authenticateWithRefreshTokenRegex =  /\bauthenticateWithRefreshToken\w*/; // Regular expression to match "authenticateWithRefreshToken.." pattern at the beginning of the string
-      const getJwksUrlRegex =  /\bgetJwksUrl\w*/; // Regular expression to match "getJwksUrl.." pattern at the beginning of the string
-      const authorizationUrllRegex =  /\bauthorization_url\w*/; // Regular expression to match "authorization_url.." pattern at the beginning of the string
-      const get_authorization_urllRegex =  /\bget_authorization_url\w*/; // Regular expression to match "get_authorization_url.." pattern at the beginning of the string
-      const LoginRegex =  /\bLogin\w*/; // Regular expression to match "Login.." pattern at the beginning of the string
-      const GetAuthorizationURLRegex =  /\bGetAuthorizationUrl\w*/; // Regular expression to match "GetAuthorizationURL.." pattern at the beginning of the string
-      const profileRegex =  /\bprofile\w*/; // Regular expression to match "profile.." pattern at the beginning of the string
-      const getProfileAndTokenRegex = /\bgetProfileAndToken\w*/; // Regular expression to match "getProfileAndToken.." pattern at the beginning of the string
-      
-      if (skRegex.test(target.innerText)) {
-        this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
-      } else if (clientRegex.test(target.innerText)) {
-        this.setState({replaceApiClientPopup: true, replaceApiPopup: false, secretKeyApiPopup: false, apiExplainerPopup: false})
-      } else if (listConnectionRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `listConnections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (list_connectionRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `list_connections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (ListConnectionRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `ListConnections_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (listRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `list_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (list_metadataRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `list_metadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (current_pageRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `current_page_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (responseRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `response_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (ListMetadataRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `ListMetadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (currentPageRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `currentPage_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (listMetadataRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `listMetadata_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (getAuthorizationUrlRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `getAuthorizationUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (getUserRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `getUser_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (getSignInUrlRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `getSignInUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (signOutRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `signOut_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (userRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `user_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (authenticateWithCodeRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `authenticateWithCode_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (authKitMiddlewareRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `authKitMiddleware_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (handleAuthRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `handleAuth_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (authenticateWithRefreshTokenRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `authenticateWithRefreshToken_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (getJwksUrlRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `getJwksUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (authorizationUrllRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `authorization_url_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (get_authorization_urllRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `get_authorization_url_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (LoginRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `Login_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (GetAuthorizationURLRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `GetAuthorizationURL_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (profileRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `profile_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
-      } else if (getProfileAndTokenRegex.test(target.innerText)) {
-        this.setState({currentApiExplainer: `getProfileAndToken_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
-        }, () => { this.setState({apiExplainerPopup: true})})
+      const regexPatterns = {
+        skRegex: /sk_\w+/,
+        clientRegex: /client_\w+/,
+        listRegex: /\blist\w*/,
+        userRegex: /\buser\w*/,
+        listConnectionRegex: /\blistConnection\w*/,
+        list_connectionRegex: /\blist_connections\w*/,
+        ListConnectionRegex: /\bListConnections\w*/,
+        list_metadataRegex: /\blist_metadata\w*/,
+        ListMetadataRegex: /\bListMetadata\w*/,
+        listMetadataRegex: /\blistMetadata\w*/,
+        current_pageRegex: /\bcurrent_page\w*/,
+        currentPageRegex: /\bcurrentPage\w*/,
+        responseRegex: /\bresponse\b/,
+        getAuthorizationUrlRegex: /\bgetAuthorizationUrl\w*/,
+        getUserRegex: /\bgetUser\w*/,
+        getSignInUrlRegex: /\bgetSignInUrl\w*/,
+        signOutRegex: /\bsignOut\w*/,
+        authenticateWithCodeRegex: /\bauthenticateWithCode\w*/,
+        authKitMiddlewareRegex: /\bauthKitMiddleware\w*/,
+        handleAuthRegex: /\bhandleAuth\w*/,
+        authenticateWithRefreshTokenRegex: /\bauthenticateWithRefreshToken\w*/,
+        getJwksUrlRegex: /\bgetJwksUrl\w*/,
+        authorizationUrllRegex: /\bauthorization_url\w*/,
+        get_authorization_urllRegex: /\bget_authorization_url\w*/,
+        LoginRegex: /\bLogin\w*/,
+        GetAuthorizationURLRegex: /\bGetAuthorizationUrl\w*/,
+        profile_and_tokenRegex: /\bprofile_and_token\w*/, // 
+        profileAndTokenRegex: /\bprofileAndToken\w*/,
+        GetProfileAndTokenRegex: /\bGetProfileAndToken\w*/,
+        profileRegex: /\bprofile\w*/,
+        getProfileAndTokenRegex: /\bgetProfileAndToken\w*/,
+        get_profile_and_tokenRegex: /\bget_profile_and_token\w*/,
+      };
+    
+      const matchingPattern = Object.keys(regexPatterns).find((key) => regexPatterns[key].test(target.innerText));
+    
+      if (matchingPattern) {
+        const currentApiExplainer = matchingPattern.replace('Regex', '') + `_${this.props.selectedLang}`;
+
+            // Check if the matching pattern is for profile_and_token_assignment
+        if (matchingPattern === 'profile_and_token_assignmentRegex') {
+          // Check if SSO is present in the target innerText
+          console.log("did we get special matching pattern?")
+          if (/\bSSO\./.test(target.innerText)) {
+            console.log("did we get inner special matching pattern")
+            currentApiExplainer = 'SSO_profile_and_token_ruby'; // Change the explainer name accordingly
+          }
+        }
+
+        this.setState({ 
+          currentApiExplainer,
+          replaceApiPopup: true,
+          secretKeyApiPopup: matchingPattern === 'skRegex',
+          replaceApiClientPopup: matchingPattern === 'clientRegex',
+          apiExplainerPopup: !['skRegex', 'clientRegex'].includes(matchingPattern)
+        }, () => {
+          if (this.state.apiExplainerPopup) {
+            this.setState({ apiExplainerPopup: true });
+          }
+        });
       }
+    
       setTimeout(() => {
-        this.scrollToApiPopup()
-      }, 500)
+        this.scrollToApiPopup();
+      }, 500);
     }    
 
     handleApiKeyLeave = () => {
@@ -828,35 +779,35 @@ export default class CodeSnippet extends Component {
                             </pre>
                         ))} */}
                         {codeForSelectedLang.map((line, index) => {
-          // Use a regular expression to match the first character
-          const match = line.match(/^(\d+|[^a-zA-Z0-9\s])/);
-          const firstCharacters = match ? match[0] : '';
-          // Remove the matched characters from the line content
-          const lineContent = line.substring(firstCharacters.length);
+                          // Use a regular expression to match the first character
+                          const match = line.match(/^(\d+|[^a-zA-Z0-9\s])/);
+                          const firstCharacters = match ? match[0] : '';
+                          // Remove the matched characters from the line content
+                          const lineContent = line.substring(firstCharacters.length);
 
-          // Check if the line contains the specific style
-          const containsSpecificStyle = line.includes('background-color: #e6f7ed;');
+                          // Check if the line contains the specific style
+                          const containsSpecificStyle = line.includes('background-color: #e6f7ed;');
 
-          // Apply the same background color if the specific style is found
-          const backgroundColorStyle = containsSpecificStyle ? { backgroundColor: '#e6f7ed' } : {};
+                          // Apply the same background color if the specific style is found
+                          const backgroundColorStyle = containsSpecificStyle ? { backgroundColor: '#e6f7ed' } : {};
 
-          return (
-            <div key={index} className="code-line" style={{ display: 'flex', ...backgroundColorStyle }}>
-              <div className="line-number" style={{ width: '30px', ...backgroundColorStyle }}>
-                {firstCharacters}
-              </div>
-              <pre className="line-content" style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow: 'scroll', flex: 1 }}>
-                <p
-                  id={`code-line-${index}`}
-                  className={sideBarOpen ? 'code-snippet-body-sidebar-p' : ''}
-                  style={{ fontSize: '80%', fontFamily: 'inconsolata', marginTop: '0px', marginBottom: '0px', lineHeight: '1.5' }}
-                  dangerouslySetInnerHTML={{ __html: lineContent }}
-                  onClick={this.handleApiKeyEnter}
-                />
-              </pre>
-            </div>
-          );
-        })}
+                          return (
+                            <div key={index} className="code-line" style={{ display: 'flex', ...backgroundColorStyle }}>
+                              <div className="line-number" style={{ width: '30px', ...backgroundColorStyle }}>
+                                {firstCharacters}
+                              </div>
+                              <pre className="line-content" style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow: 'scroll', flex: 1 }}>
+                                <p
+                                  id={`code-line-${index}`}
+                                  className={sideBarOpen ? 'code-snippet-body-sidebar-p' : ''}
+                                  style={{ fontSize: '80%', fontFamily: 'inconsolata', marginTop: '0px', marginBottom: '0px', lineHeight: '1.5' }}
+                                  dangerouslySetInnerHTML={{ __html: lineContent }}
+                                  onClick={this.handleApiKeyEnter}
+                                />
+                              </pre>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                 </div>
