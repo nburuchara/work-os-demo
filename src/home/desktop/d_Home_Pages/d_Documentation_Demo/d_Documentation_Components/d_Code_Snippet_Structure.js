@@ -345,7 +345,7 @@ const Styles = styled.div `
 }
 
 .line-number {
-  width: 3%; /* Adjust width as needed */
+  width: 3% !important; /* Adjust width as needed */
   padding-right: 1%;
   text-align: right;
   user-select: none; /* Prevent selecting line numbers */
@@ -358,7 +358,7 @@ const Styles = styled.div `
 }
 
 .line-number-sidebar {
-  width: 4%; /* Adjust width as needed */
+  width: 4% !important; /* Adjust width as needed */
   padding-right: 1%;
   text-align: right;
   user-select: none; /* Prevent selecting line numbers */
@@ -533,6 +533,12 @@ export default class CodeSnippet extends Component {
       const handleAuthRegex =  /\bhandleAuth\w*/; // Regular expression to match "handleAuth.." pattern at the beginning of the string
       const authenticateWithRefreshTokenRegex =  /\bauthenticateWithRefreshToken\w*/; // Regular expression to match "authenticateWithRefreshToken.." pattern at the beginning of the string
       const getJwksUrlRegex =  /\bgetJwksUrl\w*/; // Regular expression to match "getJwksUrl.." pattern at the beginning of the string
+      const authorizationUrllRegex =  /\bauthorization_url\w*/; // Regular expression to match "authorization_url.." pattern at the beginning of the string
+      const get_authorization_urllRegex =  /\bget_authorization_url\w*/; // Regular expression to match "get_authorization_url.." pattern at the beginning of the string
+      const LoginRegex =  /\bLogin\w*/; // Regular expression to match "Login.." pattern at the beginning of the string
+      const GetAuthorizationURLRegex =  /\bGetAuthorizationUrl\w*/; // Regular expression to match "GetAuthorizationURL.." pattern at the beginning of the string
+      const profileRegex =  /\bprofile\w*/; // Regular expression to match "profile.." pattern at the beginning of the string
+      const getProfileAndTokenRegex = /\bgetProfileAndToken\w*/; // Regular expression to match "getProfileAndToken.." pattern at the beginning of the string
       
       if (skRegex.test(target.innerText)) {
         this.setState({replaceApiPopup: true, secretKeyApiPopup: true, replaceApiClientPopup: false, apiExplainerPopup: false});
@@ -597,6 +603,24 @@ export default class CodeSnippet extends Component {
         }, () => { this.setState({apiExplainerPopup: true})})
       } else if (getJwksUrlRegex.test(target.innerText)) {
         this.setState({currentApiExplainer: `getJwksUrl_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (authorizationUrllRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `authorization_url_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (get_authorization_urllRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `get_authorization_url_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (LoginRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `Login_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (GetAuthorizationURLRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `GetAuthorizationURL_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (profileRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `profile_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
+        }, () => { this.setState({apiExplainerPopup: true})})
+      } else if (getProfileAndTokenRegex.test(target.innerText)) {
+        this.setState({currentApiExplainer: `getProfileAndToken_${this.props.selectedLang}`,replaceApiPopup: true,secretKeyApiPopup: false
         }, () => { this.setState({apiExplainerPopup: true})})
       }
       setTimeout(() => {
@@ -804,26 +828,35 @@ export default class CodeSnippet extends Component {
                             </pre>
                         ))} */}
                         {codeForSelectedLang.map((line, index) => {
-                          // Extract the initial sequence of non-whitespace characters
-                          const identifier = this.extractIdentifier(line);
-                          // Remove the identifier from the line content
-                          const lineContent = line.substring(identifier.length);
+          // Use a regular expression to match the first character
+          const match = line.match(/^(\d+|[^a-zA-Z0-9\s])/);
+          const firstCharacters = match ? match[0] : '';
+          // Remove the matched characters from the line content
+          const lineContent = line.substring(firstCharacters.length);
 
-                          return (
-                            <div key={index} className="code-line">
-                              <div className={sideBarOpen ? "line-number-sidebar" : "line-number"}>{identifier}</div>
-                              <pre className="line-content" style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow: 'scroll' }}>
-                                <p
-                                  id={`code-line-${index}`}
-                                  className={sideBarOpen ? 'code-snippet-body-sidebar-p' : ''}
-                                  style={{ fontSize: '80%', fontFamily: 'inconsolata', marginTop: '0px', marginBottom: '0px', lineHeight: '1.5' }}
-                                  dangerouslySetInnerHTML={{ __html: lineContent }}
-                                  onClick={this.handleApiKeyEnter}
-                                />
-                              </pre>
-                            </div>
-                          );
-                        })}
+          // Check if the line contains the specific style
+          const containsSpecificStyle = line.includes('background-color: #e6f7ed;');
+
+          // Apply the same background color if the specific style is found
+          const backgroundColorStyle = containsSpecificStyle ? { backgroundColor: '#e6f7ed' } : {};
+
+          return (
+            <div key={index} className="code-line" style={{ display: 'flex', ...backgroundColorStyle }}>
+              <div className="line-number" style={{ width: '30px', ...backgroundColorStyle }}>
+                {firstCharacters}
+              </div>
+              <pre className="line-content" style={{ fontFamily: 'inconsolata', whiteSpace: 'pre-wrap', overflow: 'scroll', flex: 1 }}>
+                <p
+                  id={`code-line-${index}`}
+                  className={sideBarOpen ? 'code-snippet-body-sidebar-p' : ''}
+                  style={{ fontSize: '80%', fontFamily: 'inconsolata', marginTop: '0px', marginBottom: '0px', lineHeight: '1.5' }}
+                  dangerouslySetInnerHTML={{ __html: lineContent }}
+                  onClick={this.handleApiKeyEnter}
+                />
+              </pre>
+            </div>
+          );
+        })}
                       </div>
                     </div>
                 </div>

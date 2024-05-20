@@ -474,6 +474,7 @@ const Styles = styled.div `
     padding-left: 1%;
     padding-right: 1%;
     border-radius: 5px;
+    font-weight: normal;
 }
 
     //! - - Errors - - !//
@@ -1504,7 +1505,7 @@ export default class DocsNavigationMenu extends Component {
             showDocsHome: false,
             showUserManagementDoc: false,
             showStandAloneApis: true,
-            showAPIReference: false,
+            showAPIReference: false ,
 
         }
         this.trie = new Trie(); // Initialize the trie

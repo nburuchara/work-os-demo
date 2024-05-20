@@ -393,14 +393,63 @@ export default class StandaloneAPIs extends Component {
                                     id={18}
                                     headerTabs={0}
                                     sideBarOpen={sidebarMenuClicked}
-                                    snippet="Authentication endpoint" 
+                                    snippet="Authentication Endpoint" 
                                     updateSelectedLang={this.newLangSelected}
                                     selectedLang={this.state.currentSelectedLanguage}/>
                         
                                 </div>
                             }
 
+                            {usingOption2 && 
+                                <div>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also use the connection parameter for SAML or OIDC connections when authenticating a user by their connection ID.</p>
 
+                                    <CodeSnippetStruct 
+                                    id={19}
+                                    headerTabs={0}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Authentication Endpoint" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                
+                                </div>
+                            }
+
+                            {usingOption3 && 
+                                <div>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The provider parameter is used for OAuth connections which are configured at the environment level.</p>
+
+                                    <div style={{marginTop: "5%", marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                        <div className='api-info-box-img'>
+                                            <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                        </div>
+                                        <div className='api-info-box-text'>
+                                            <div className='api-keys'>
+                                                <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The supported <span style={{backgroundColor: "#dfdfe7"}}>provider</span> values are <span style={{backgroundColor: "#dfdfe7"}}>GoogleOAuth</span>, <span style={{backgroundColor: "#dfdfe7"}}>MicrosoftOAuth</span>, and <span style={{backgroundColor: "#dfdfe7"}}>GitHubOAuth</span>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <CodeSnippetStruct 
+                                    id={20}
+                                    headerTabs={0}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Authentication Endpoint" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                </div>
+                            }
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If there is an issue generating an authorization URL, WorkOS will return the redirect URI as is. Read the <label className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
+
+                            <CodeSnippetStruct 
+                            id={21}
+                            headerTabs={0}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Callback Endpoint" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+                            
                         </div>
                     </div>
                 }

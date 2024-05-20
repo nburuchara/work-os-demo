@@ -633,7 +633,7 @@ const docs_sidebar_options = [
             },
             {
                 id: 8,
-                levelNamee: "Bamboo HR"
+                levelName: "Bamboo HR"
             },
             {
                 id: 9,
