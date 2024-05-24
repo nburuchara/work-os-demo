@@ -760,6 +760,7 @@ const Styles = styled.div `
     float: left;
     text-align: left;
     width: 30%;
+    height: 14vh;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-right: 2%;
