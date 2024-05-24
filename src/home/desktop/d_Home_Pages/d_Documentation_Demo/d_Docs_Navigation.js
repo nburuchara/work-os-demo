@@ -1171,6 +1171,180 @@ const Styles = styled.div `
     margin-left: 0.5%;
 }
 
+//! - - Sign In UX - - !//
+
+.sign-in-ux {
+    margin-top: 5%;
+    margin: auto; 
+    padding: 3%;
+    width: 57.5%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.sign-in-sidebar-ux {
+    margin-top: 5%;
+    margin: auto; 
+    padding: 3%;
+    width: 90.5%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+}
+
+.sign-in-ux h1 {
+    margin-top: 2%;
+}
+
+.sign-in-ux p {
+    margin-bottom: 2%;
+    font-size: 80%;
+}
+
+.sign-in-ux-err { 
+    margin-top: 1%;
+    color: #ca244d;
+}
+
+.sign-in-ux input {
+    width: 91%;
+    padding: 4%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.sign-in-ux-input-confirmed {
+    width: 91%;
+    padding: 4%;
+    border-radius: 8px;
+    border: 2px solid #ccc !important;
+    outline: none;
+    pointer-events: none;
+    background-color: #EEEEEE !important;
+    -webkit-user-select: none !important; /* Safari */
+    -moz-user-select: none !important;    /* Firefox */
+    -ms-user-select: none !important;     /* Internet Explorer/Edge */
+    user-select: none !important;         /* Non-prefixed version, supported by modern browsers */
+}
+
+.sign-in-ux-input-confirmed:focus {
+    // border: 2px solid #ccc !important;
+    // // outline: none;
+    // background-color: #E4E4E4 !important;
+}
+
+.sign-in-ux-fail {
+    background-color: #feeaed;
+    border: 1px solid  #e592a3 !important;
+}
+
+.sign-in-ux-fail:focus {
+    border: 2px solid #e592a3 !important;
+    border-color: #e592a3 !important;
+    outline: none;
+}
+
+.sign-in-sidebar-ux input {
+    width: 91%;
+    padding: 4%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.sign-in-ux input:focus {
+    border: 2px solid #9c9ef0;
+    border-color: #9c9ef0;
+    outline: none;
+}
+
+.sign-in-sidebar-ux input:focus {
+    border: 2px solid #9c9ef0;
+    border-color: #9c9ef0;
+    outline: none;
+}
+
+.sign-in-ux button {
+    margin-top: 5%;
+    width: 100%;
+    padding: 3%;
+    background-color: #6363f1;
+    font-family: poppins;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid #6363f1;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.sign-in-ux-btn-2 {
+    margin-top: 5% !important;
+    width: 100%;
+    padding: 3%;
+    background-color: white !important;
+    font-family: poppins;
+    color: #000 !important;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid #ccc !important;
+    margin-bottom: 5%;
+}
+
+
+
+.sign-in-ux-success-btn {
+    margin-top: 5% !important;
+    width: 100%;
+    padding: 3%;
+    background-color: #cccc !important;
+    font-family: poppins;
+    color: #5e626a !important;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid #cccc !important;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.sign-in-ux-btn-2:hover {
+    border: 1px solid #999999 !important;
+}
+
+.sign-in-sidebar-ux button {
+    margin-top: 7.5%;
+    width: 100%;
+    padding: 3%;
+    background-color: #6363f1;
+    font-family: poppins;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid #6363f1;
+    margin-bottom: 5%;
+}
+
+.separator-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .line {
+    flex-grow: 1;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0px;
+  }
+  
+  .or-text {
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+
+
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
 .demo-docs-search-bar {

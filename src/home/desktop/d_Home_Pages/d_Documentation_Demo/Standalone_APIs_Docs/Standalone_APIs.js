@@ -14,7 +14,8 @@ export default class StandaloneAPIs extends Component {
                 //* - STANDALONE APIS SECTIONS - *//
             gettingStarted: false,
             testSSO: false,
-            exampleApps: true,
+            exampleApps: false,
+            signInUX: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -39,11 +40,48 @@ export default class StandaloneAPIs extends Component {
             gradleSelected: false,
 
                 //* - THREE TAB OPTIONS - *//
-
             usingOption1: true,
             usingOption2: false,
             usingOption3: false,
 
+                //* - SIGN IN UX COMPONENTS - *// 
+            showSignIn1: true,
+            showSignIn2: true,
+            showSignIn3: true,
+            showSignedIn1: false,
+            showSignedIn2: false,
+            showSignedIn3: false,
+            email1Empty: false,
+            email2Empty: false,
+            email13mpty: false,
+            password1Empty: false,
+            password2Empty: false,
+            password3Empty: false,
+            sampleEmail1: "",
+            sampleEmail2: "",
+            sampleEmail3: "",
+            sampleEmail1Err: "",
+            sampleEmail2Err: "",
+            sampleEmail3Err: "",
+            showSampleEmail1Err: false,
+            showSampleEmail2Err: false,
+            showSampleEmail3Err: false,
+            showSamplePassword1Err: false,
+            showSamplePassword2Err: false,
+            showSamplePassword3Err: false,
+            samplePassword1Err: "",
+            samplePassword2Err: "",
+            samplePassword3Err: "",
+            samplePassword1: "",
+            samplePassword2: "",
+            samplePassword3: "",
+            login1Successful: false,
+            login2Successful: false,
+            login3Successful: false,
+            login1Hide: true,
+            login2Hide: false,
+            showEmail2Input: true,
+            showEmail2Confirmed: false
         }
     }
 
@@ -85,11 +123,233 @@ export default class StandaloneAPIs extends Component {
     usingOption1Clicked = () => { this.setState({usingOption1: true, usingOption2: false, usingOption3: false}) }
     usingOption2Clicked = () => { this.setState({usingOption1: false, usingOption2: true, usingOption3: false}) }
     usingOption3Clicked = () => { this.setState({usingOption1: false, usingOption2: false, usingOption3: true}) }
+
+    handleChange = (event, input) => {
+
+        const capitalizedInput = input.charAt(0).toUpperCase() + input.slice(1);
+
+        this.setState({
+            [event.target.id] : event.target.value,
+        })
+        if (event.target.value !== '') {
+            this.setState ({
+                [`${input}Empty`]: false,
+                [`showSample${capitalizedInput}Err`]: false
+            })
+        }
+    }
+
+    isValidEmail = (email) => {
+        // Regular expression for validating email addresses
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    continueBtn1Clicked = () => {
+
+        if (this.state.sampleEmail1 === "") {
+            this.setState({
+                email1Empty: true,
+                showSampleEmail1Err: true,
+                sampleEmail1Err: "Email is required"
+            })
+        } else if (!this.isValidEmail(this.state.sampleEmail1)) {
+            this.setState({
+                email1Empty: true,
+                showSampleEmail1Err: true,
+                sampleEmail1Err: "Email should be valid"
+            })
+        }
+
+        if (this.state.login1Hide === true) {
+            if (this.state.samplePassword1 === "") {
+                this.setState({
+                    password1Empty: true,
+                    showSamplePassword1Err: true,
+                    samplePassword1Err: "Password is required"
+                })
+            }
+
+            if (this.state.sampleEmail1 !== "" && this.isValidEmail(this.state.sampleEmail1) && this.state.samplePassword1 !== "") {
+                this.setState({
+                    login1Successful: true
+                }, () => {
+                    setTimeout(() => {
+                        this.setState({
+                            login1Successful: false,
+                            showSignIn1: false,
+                            showSignedIn1: true
+                        })
+                    }, 1000)
+                })
+            }
+        } else {
+            if (this.state.sampleEmail1 !== "" && this.isValidEmail(this.state.sampleEmail1)) {
+                this.setState({
+                    login1Successful: true
+                }, () => {
+                    setTimeout(() => {
+                        this.setState({
+                            login1Successful: false,
+                            showSignIn1: true,
+                            login1Hide: true
+                        })
+                    }, 1000)
+                })
+            }
+        }
+
+
+        
+    }
+
+    continueBtn2Clicked = () => {
+
+        if (this.state.sampleEmail2 === "") {
+            this.setState({
+                email2Empty: true,
+                showSampleEmail2Err: true,
+                sampleEmail2Err: "Email is required"
+            })
+        } else if (!this.isValidEmail(this.state.sampleEmail2)) {
+            this.setState({
+                email2Empty: true,
+                showSampleEmail2Err: true,
+                sampleEmail2Err: "Email should be valid"
+            })
+        }
+
+        if (this.state.login2Hide === false) {
+            if (this.state.sampleEmail2 !== "" && this.isValidEmail(this.state.sampleEmail2)) {
+                this.setState({
+                    login2Successful: true
+                }, () => {
+                    setTimeout(() => {
+                        this.setState({
+                            login2Successful: false,
+                            showEmail2Input: false,
+                            showEmail2Confirmed: true,
+                            login2Hide: true,
+                        })
+                    }, 1000)
+                })
+            }
+        } else {
+
+            if (this.state.samplePassword2 === "") {
+                this.setState({
+                    password2Empty: true,
+                    showSamplePassword2Err: true,
+                    samplePassword2Err: "Password is required"
+                })
+            }
+
+            if (this.state.sampleEmail2 !== "" && this.isValidEmail(this.state.sampleEmail2) && this.state.samplePassword2 !== "") {
+                this.setState({
+                    login2Successful: true
+                }, () => {
+                    setTimeout(() => {
+                        this.setState({
+                            login2Successful: false,
+                            showSignIn2: false,
+                            showSignedIn2: true
+                        })
+                    }, 1000)
+                })
+            }
+        }
+
+        
+
+        
+    }
+
+    continueBtn3Clicked = () => {
+        if (this.state.sampleEmail3 === "") {
+            this.setState({
+                email3Empty: true,
+                showSampleEmail3Err: true,
+                sampleEmail3Err: "Email is required"
+            })
+        } else if (!this.isValidEmail(this.state.sampleEmail3)) {
+            this.setState({
+                email3Empty: true,
+                showSampleEmail3Err: true,
+                sampleEmail3Err: "Email should be valid"
+            })
+        }
+
+        if (this.state.samplePassword3 === "") {
+            this.setState({
+                password3Empty: true,
+                showSamplePassword3Err: true,
+                samplePassword3Err: "Password is required"
+            })
+        }
+
+        if (this.state.sampleEmail3 !== "" && this.isValidEmail(this.state.sampleEmail3) && this.state.samplePassword3 !== "") {
+            this.setState({
+                login3Successful: true
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        login3Successful: false,
+                        showSignIn3: false,
+                        showSignedIn3: true
+                    })
+                }, 1000)
+            })
+        }
+
+
+    }
+
+    startOver1Clicked = () => {
+        this.setState({
+            login1Successful: false,
+            showSignIn1: true,
+            login1Hide: true,
+            sampleEmail1: "",
+            samplePassword1: "",
+            showSignedIn1: false
+        })
+    }
+
+    startOver2Clicked = () => {
+        this.setState({
+            login2Successful: false,
+            showSignIn2: true,
+            showEmail2Input: true,
+            showEmail2Confirmed: false,
+            sampleEmail2: "",
+            samplePassword2: "",
+            login2Hide: false,
+            showSignedIn2: false
+        })
+    }
+
+    startOver3Clicked = () => {
+        this.setState({
+            login3Successful: false,
+            showSignIn3: true,
+            sampleEmail3: "",
+            samplePassword3: "",
+            showSignedIn3: false
+        })
+    }
+
+    useSingleSignOnClicked = () => {
+        this.setState({
+            login1Hide: false
+        })
+    }
+ 
+
     
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps } = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -102,6 +362,10 @@ export default class StandaloneAPIs extends Component {
 
                 //* - THREE TAB SELECTION VAR(S) - *//
         const { usingOption1, usingOption2, usingOption3, usingOption1Hovered, usingOption2Hovered, usingOption3Hovered } = this.state;
+
+                //* - - SIGN IN UX VAR(S) - - *//
+        const { showSignIn1, showSignedIn1, email1Empty, password1Empty, showSampleEmail1Err, showSamplePassword1Err, login1Successful, login1Hide,
+                showSignIn2, showSignedIn2, email2Empty, password2Empty, showSampleEmail2Err, showSamplePassword2Err, login2Successful, login2Hide, showEmail2Input, showEmail2Confirmed, showSignIn3, showSignedIn3, email3Empty, password3Empty, showSampleEmail3Err, showSamplePassword3Err, login3Successful} = this.state;
 
         return(
             <Styles>
@@ -750,16 +1014,239 @@ export default class StandaloneAPIs extends Component {
                                     <h5>Java SSO app</h5>
                                 </div>
                                 <div className='example-app-container'>
-                                <img src='/assets/docs_api_reference_php_langauage_icon.png' alt='img not available'/>
-                                    <p>github.com</p>
-                                    <h5>Next.js AuthKit app</h5>
+                                <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "11%"}}>github.com</p>
+                                    <h5>PHP SSO app</h5>
                                 </div>
                                 <div className='example-app-container'>
-                                    <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_java_language_icon.png' alt='img not available'/>
-                                    <p style={{marginTop: "11%"}}>github.com</p>
-                                    <h5>Java User Management app</h5>
+                                    <img style={{width: "20%", marginTop: "4%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='img not available'/>
+                                    <p >github.com</p>
+                                    <h5>.NET SSO app</h5>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                }
+                {signInUX && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sign-In UX</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>User experience considerations for Single Sign-On.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that we’ve seen how the Single Sign-On (SSO) APIs work, you may want to consider how to best integrate this new flow in the sign-in experience for your users. This guide will walk you through a few different approaches you could take in your application:</p>
+
+                            <ul>
+                                {/* <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS Account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li> */}
+
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Separate SSO flow</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Separate email and password fields</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Auto-hide the password field</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Throughout this guide, let’s consider the following scenario:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You are building an app called <i>Demo App</i></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization named <i>Foo Corp</i> is using Single Sign-On with Okta as the <label className='demo-docs-hyperlink'>IdP</label></p></li>
+                            </ul>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Implementing SSO with WorkOS</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance on UX best practices when integrating SSO with the standalone API. You might instead consider <label className='demo-docs-hyperlink'>WorkOS User Management</label> with AuthKit, a complete authentication platform which handles all of the UX complexity for you.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Separate SSO flow</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A basic approach would be to create a link or button on your login page with a <strong>Sign in with SSO</strong> or <strong>Use Single Sign-On</strong> option. This method differentiates the flows for the user explicitly.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may still look up the domain if they try to sign in with their corporate email and redirect them to the appropriate flow too – see the demo below as an example.</p>
+
+                            {showSignIn1 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sign in to Demo App</h1>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email</strong></p>
+                                    <input
+                                    id='sampleEmail1'
+                                    value={this.state.sampleEmail1}
+                                    className={email1Empty ? 'sign-in-ux-fail' : ''}
+                                    placeholder='Enter email address'
+                                    onChange={(event) => this.handleChange(event, 'email1')}
+                                    />
+                                    {showSampleEmail1Err && <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.sampleEmail1Err}</p>
+                                    }
+                                    {login1Hide && 
+                                        <div>
+                                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Password</strong></p>
+                                            <input
+                                            // style={{marginBottom: "2.5%"}}
+                                            id='samplePassword1'
+                                            className={password1Empty ? 'sign-in-ux-fail' : ''}
+                                            value={this.state.samplePassword1}
+                                            type='password'
+                                            placeholder='Enter password'
+                                            onChange={(event) => this.handleChange(event, 'password1')}
+                                            />
+                                            {showSamplePassword1Err &&
+                                                <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.samplePassword1Err}</p>
+                                            }
+                                        </div>
+                                    }
+                                    <button
+                                    style={{marginTop: "7.5%"}}
+                                    className={login1Successful ? "sign-in-ux-success-btn" : ""}
+                                    onClick={this.continueBtn1Clicked}
+                                    >Continue</button>
+                                    {login1Hide && 
+                                        <div>
+                                            <div className="separator-container">
+                                                <div className="line"></div>
+                                                <p className="or-text">or</p>
+                                                <div className="line"></div>
+                                            </div>
+                                            <button
+                                            onClick={this.useSingleSignOnClicked}
+                                            className={login1Successful ? "sign-in-ux-success-btn" : "sign-in-ux-btn-2"} 
+                                            >Use Single Sign-On</button>
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            {showSignedIn1 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 style={{textAlign: "center"}}>You are signed in</h1>
+                                    <button
+                                    onClick={this.startOver1Clicked}
+                                    className='sign-in-ux-btn-2'
+                                    >Start over</button>
+                                </div>
+                            }
+
+                            <p style={{textAlign: "center", fontSize: "80%", marginBottom: "7.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing with credentials, then using Single Sign-On with any <strong>@foo-corp.com</strong> email.</i></p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As this adds yet another button, one thing to be mindful with this approach is the <label className='demo-docs-hyperlink'>NASCAR problem</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> where a cluster of 3rd party branded buttons creates both visual noise and confusion. Consider only offering a couple of options that are relevant to your user base.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Separate email and password fields</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Instead of asking users for their email and password in one screen, you could first ask them for their email. This method gives you an opportunity to check if a particular domain is SSO-enabled and redirect the user to the appropriate SSO flow. It is a very popular approach employed by many applications (including WorkOS itself, Apple, and Google).</p>
+
+                            {showSignIn2 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sign in to Demo App</h1>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email</strong></p>
+                                    {showEmail2Input && 
+                                        <input
+                                        id='sampleEmail2'
+                                        value={this.state.sampleEmail2}
+                                        className={email2Empty ? 'sign-in-ux-fail' : ''}
+                                        placeholder='Enter email address'
+                                        onChange={(event) => this.handleChange(event, 'email2')}
+                                        />
+                                    }
+                                    {showEmail2Confirmed && 
+                                        <input
+                                        id='sampleEmail2'
+                                        value={this.state.sampleEmail2}
+                                        className='sign-in-ux-input-confirmed'
+                                        placeholder='Enter email address'
+                                        />
+                                    }
+                                    {showSampleEmail2Err && <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.sampleEmail2Err}</p>
+                                    }
+
+                                    
+                                    {login2Hide && 
+                                        <div>
+                                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Password</strong></p>
+                                        
+                                            <input
+                                            // style={{marginBottom: "2.5%"}}
+                                            id='samplePassword2'
+                                            className={password2Empty ? 'sign-in-ux-fail' : ''}
+                                            value={this.state.samplePassword2}
+                                            type='password'
+                                            placeholder='Enter password'
+                                            onChange={(event) => this.handleChange(event, 'password2')}
+                                            />
+                                        
+                                            {showSamplePassword2Err &&
+                                                <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.samplePassword2Err}</p>
+                                            }
+                                        </div>
+                                    }
+                                    <button
+                                    className={login2Successful ? "sign-in-ux-success-btn" : ""}
+                                    onClick={this.continueBtn2Clicked}
+                                    >Continue</button>
+                                </div>
+                            }
+
+                            {showSignedIn2 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 style={{textAlign: "center"}}>You are signed in</h1>
+                                    <button
+                                    onClick={this.startOver2Clicked}
+                                    className='sign-in-ux-btn-2'
+                                    >Start over</button>
+                                </div>
+                            }
+
+                            <p style={{textAlign: "center", fontSize: "80%", marginBottom: "7.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing in with any <strong>@foo-corp.com</strong> email vs. credentials.</i></p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Auto-hide the password field</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, as an extension to the previous approach, you can automatically hide the password field if the user’s domain is SSO-enabled. This feature is a bit more complicated to implement, but provides a more seamless experience for users.</p>
+
+                            {showSignIn3 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sign in to Demo App</h1>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email</strong></p>
+                                    <input
+                                    id='sampleEmail3'
+                                    value={this.state.sampleEmail3}
+                                    className={email3Empty ? 'sign-in-ux-fail' : ''}
+                                    placeholder='Enter email address'
+                                    onChange={(event) => this.handleChange(event, 'email3')}
+                                    />
+                                    {showSampleEmail3Err && <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.sampleEmail3Err}</p>
+                                    }
+
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Password</strong></p>
+                                    
+                                    <input
+                                    // style={{marginBottom: "2.5%"}}
+                                    id='samplePassword3'
+                                    className={password3Empty ? 'sign-in-ux-fail' : ''}
+                                    value={this.state.samplePassword3}
+                                    type='password'
+                                    placeholder='Enter password'
+                                    onChange={(event) => this.handleChange(event, 'password3')}
+                                    />
+                                    {showSamplePassword3Err &&
+                                        <p className='sign-in-ux-err' style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>{this.state.samplePassword3Err}</p>
+                                    }
+
+                                    <button
+                                    className={login3Successful ? "sign-in-ux-success-btn" : ""}
+                                    onClick={this.continueBtn3Clicked}
+                                    >Continue</button>
+
+                                </div>
+                            }
+
+                            {showSignedIn3 && 
+                                <div className={sidebarMenuClicked ? 'sign-in-sidebar-ux' : 'sign-in-ux'}>
+                                    <h1 style={{textAlign: "center"}}>You are signed in</h1>
+                                    <button
+                                    onClick={this.startOver3Clicked}
+                                    className='sign-in-ux-btn-2'
+                                    >Start over</button>
+                                </div>
+                            }
+
+                            <p style={{textAlign: "center", fontSize: "80%", marginBottom: "5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing in with any <strong>@foo-corp.com</strong> email vs. credentials.</i></p>
+
                         </div>
                     </div>
                 }
@@ -768,4 +1255,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 55 (latest)
+//* IMAGE 56 (latest)
