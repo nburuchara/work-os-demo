@@ -537,7 +537,7 @@ export default class CodeSnippet extends Component {
         authorizationUrllRegex: /\bauthorization_url\w*/,
         get_authorization_urllRegex: /\bget_authorization_url\w*/,
         LoginRegex: /\bLogin\w*/,
-        GetAuthorizationURLRegex: /\bGetAuthorizationUrl\w*/,
+        GetAuthorizationURLRegex: /\bGetAuthorizationURL\w*/,
         profile_and_tokenRegex: /\bprofile_and_token\w*/, // 
         profileAndTokenRegex: /\bprofileAndToken\w*/,
         GetProfileAndTokenRegex: /\bGetProfileAndToken\w*/,

@@ -15,8 +15,8 @@ export default class StandaloneAPIs extends Component {
             gettingStarted: false,
             testSSO: false,
             exampleApps: false,
-            signInUX: true,
-            loginFlows: false,
+            signInUX: false,
+            loginFlows: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -1279,8 +1279,86 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn the differences between SP‑initiated and IdP‑initiated SSO.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label> focus on setting up Service Provider (SP)-initiated SSO. In these scenarios, when a user attempts to login, they navigate to an application (a service provider) and are then redirected to the Identity Provider (IdP) for authentication, via the WorkOS API.</p>
+                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, most users are able to start the process from the Identity Provider itself. Organizations will often provide an IdP dashboard where employees can select any of the eligible applications that they can access via the IdP, similar to the screenshot below. Clicking on a tile results in an IdP-initiated login flow, since the user initiates the login from the Identity Provider, not the application.</p>
+                        
+                            <div id='img56' className={`enlargable-image-container ${this.state.enlargedImageId === 'img56' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img56')}>
+                                <img  src='/assets/login_flows_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+                        
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                        <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SP-initiated SSO</h1>
+                        
+                        <div className='api-keys'>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With an SP-initiated login flow, the user begins the authentication process from your application. You can control where the user will be redirected after login by specifying the <span>redirectURI</span> parameter when making the <label className='demo-docs-hyperlink'>Get Authorization URL</label> call. Additionally, this call can take an optional state parameter – this parameter will be returned in the callback after authentication, where your application can use it to verify the validity of the response or to pass any state from the originating session. One common practice is to route requests from different Organizations to a single Redirect URI, but instead utilize the <span>state</span> parameter to deep link users into the application after the authentication is completed.</p>
+                        </div>
+
+                        <CodeSnippetStruct 
+                        id={22}
+                        headerTabs={0}
+                        sideBarOpen={sidebarMenuClicked}
+                        snippet="Get Authorization URL Call" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>IdP-initiated SSO</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you follow the instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label>, IdP-initiated login flows will automatically be available, and users will be able to find a tile for your application within their IdP, similar to the screenshot above. Clicking on the tile will send an IdP-initiated SSO response to your application’s callback endpoint.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure IdP-initiated SSO</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, since IdP-initiated flows do not generate a customized authorization URL the way SP-initiated flows do, there is no way to dynamically pass the <span>redirectURI</span> and <span>state</span> parameters to your application’s callback. By default, users will be redirected to the default Redirect URI upon a successful login. However, IdP Administrators can customize the redirect destination by configuring a default <span>RelayState</span> in the IdP, and including a <span>redirect_uri</span> parameter in it. The URI must be specified in the format of a URL parameter: <span>redirect_uri=uri</span>, and the URI must be one of the Redirect URIs specified in your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Any other values in the IdP’s <span>RelayState</span> will be ignored and discarded.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your application will also be able to retrieve the <label className='demo-docs-hyperlink'>Profile object</label> for the user upon successful authentication. If your IdP is unable to provide a <span>redirect_uri</span> in its default <span>RelayState</span>, or if you would like to generate a custom redirect URI for each user after they sign in, you can use the <label className='demo-docs-hyperlink'>Profile object</label> to dynamically generate a redirect URI.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={23}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Example Profile" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Profile object includes the <label className='demo-docs-hyperlink'>connection_id</label> which identifies the connection that the profile is associated with in WorkOS. We recommend using the connection information for routing requests in an IdP-Initiated flow.</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Disable IdP-initiated SSO (Beta)</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>We have recently added Beta support for fully disabling IdP-initiated SSO logins for a connection. Once disabled, any attempted IdP-initiated requests will fail with an <span>idp_initiated_sso_disabled</span> error.</p>
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Disabling IdP-initiated SSO is currently in invite-only beta, please reach out to <label className='demo-docs-hyperlink'>WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> if you’d like to use it or learn more about it.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For applications that need to support IdP-initiated workflows, but would like to mitigate the security risks of unsolicited SAML responses, WorkOS recommends the following:</p>
+
+                            <div className='api-keys'>
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Disable IdP-initiated SSO for your connection.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Adjust your callback method to capture the <span>idp_initiated_sso_disabled</span> error.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start a new SP-initiated request from the callback when the error is detected.</p></li>
+                                </ul>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The error callback will include the connection and organization ID’s, which can be used to request a new authorization URL for the SP-initiated request. The new request will generally be transparent to the user, as they are already logged in to the Identity Provider.</p>
+
+                        </div>
+
                     </div>
                 }
             </Styles>
