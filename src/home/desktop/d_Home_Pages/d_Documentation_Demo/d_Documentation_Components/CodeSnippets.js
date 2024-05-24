@@ -2684,7 +2684,7 @@ const codeSnippets = [
 
     { //* Authentication endpoint (Using connection ID)
       id: 19,
-      title: "Authentication endpoint",
+      title: "Authentication Endpoint",
       doubleHeaders: {
         javascript: [
           {lang1: "Next.js", lang2: "Express"}
@@ -3199,7 +3199,7 @@ const codeSnippets = [
 
     { //* Authentication endpoint (Using provider)
       id: 20,
-      title: "Authentication endpoint",
+      title: "Authentication Endpoint",
       doubleHeaders: {
         javascript: [
           {lang1: "Next.js", lang2: "Express"}
@@ -4119,6 +4119,85 @@ const codeSnippets = [
           '32 ',
           '33         <span style="color: #148a68;">return</span> <span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">"/"</span>);',
           '34 });',
+        ],
+        java: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+          '2 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">Profile</span>;',
+          '3 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">sso</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">ProfileAndToken</span>;',
+          '4 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">io</span>.<span style="color: #5854c6;">javalin</span>.<span style="color: #5854c6;">Javalin</span>;',
+          '5 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">java</span>.<span style="color: #5854c6;">util</span>.<span style="color: #5854c6;">Map</span>;',
+          '6 ',
+          '7 public class <span style="color: #5854c6;">Application</span> {',
+          '8   <span style="color: #148a68;">public static void</span> <span style="color: #5854c6;">main</span>(<span style="color: #5854c6;">String</span>[] args) {',
+          '9     <span style="color: #5854c6;">Map</span><<span style="color: #5854c6;">String</span>, <span style="color: #5854c6;">String</span>> env <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">System</span>.<span style="color: #5854c6;">getenv</span>();',
+          '10     <span style="color: #5854c6;">Javalin</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">Javalin</span>.<span style="color: #5854c6;">create</span>().<span style="color: #5854c6;">start</span>(<span style="color: #0072dd;">7001</span>);',
+          '11     <span style="color: #5854c6;">WorkOS</span> workos <span style="color: #ce3559;">=</span> new <span style="color: #5854c6;">WorkOS</span>(env.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>));',
+          '12     <span style="color: #5854c6;">String</span> clientId <span style="color: #ce3559;">=</span> env.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">"WORKOS_CLIENT_ID"</span>);',
+          '13 ',
+          '14     app.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">"/callback"</span>, ctx <span style="color: #ce3559;">-></span> {',
+          '15       <span style="color: #5854c6;">String</span> code <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">queryParam</span>(<span style="color: #143465;">"code"</span>);',
+          '16       <span style="color: #5854c6;">ProfileAndToken</span> profileAndToken <span style="color: #ce3559;">=</span> workos.sso.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getProfileAndToken</span>(code, clientId);',
+          '17 ',
+          '18       <span style="color: #5854c6;">Profile</span> profile <span style="color: #ce3559;">=</span> profileAndToken.profile;',
+          '19 ',
+          '20       <span style="color: #8b8d98;">// Use the Test Organization ID to get started. Replace it with</span>',
+          '21       <span style="color: #8b8d98;">// the user’s real organization ID when you finish the integration.</span>',
+          '22       <span style="color: #5854c6;">String</span> organization = <span style="color: #143465;">"org_test_idp"</span>;',
+          '23 ',
+          '24       <span style="color: #8b8d98;">// Validate that this profile belongs to the organization used for authentication</span>',
+          '25       <span style="color: #148a68;">if</span> (profile.organizationId <span style="color: #ce3559;">!=</span> organization) {',
+          '26         ctx.<span style="color: #5854c6;">json</span>(<span style="color: #143465;">"Unauthorized"</span>).<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">401</span>)',
+          '27       }',
+          '28 ',
+          '29       <span style="color: #8b8d98;">// Use the information in `profile` for further business logic.</span>',
+          '30 ',
+          '31       ctx.<span style="color: #5854c6;">redirect</span>(<span style="color: #143465;">"/"</span>);',
+          '32     });',
+          '33   }',
+          '34 }',
+        ],
+        dotnet: [
+          '1 ',
+          '2 ',
+          '3 ',
+          '4 ',
+          '5 ',
+          '6 ',
+          '7 ',
+          '8 ',
+          '9 ',
+          '10 ',
+          '11 ',
+          '12 ',
+          '13 ',
+          '14 ',
+          '15 ',
+          '16 ',
+          '17 ',
+          '18 ',
+          '19 ',
+          '20 ',
+          '21 ',
+          '22 ',
+          '23 ',
+          '24 ',
+          '25 ',
+          '26 ',
+          '27 ',
+          '28 ',
+          '29 ',
+          '30 ',
+          '31 ',
+          '32 ',
+          '33 ',
+          '34 ',
+          '35 ',
+          '36 ',
+          '37 ',
+          '38 ',
+          '39 ',
+          '40 ',
+          '41 ',
         ]
       },
       apiEpxlainers: {
@@ -4261,6 +4340,9 @@ const codeSnippets = [
         getProfileAndToken_laravel: [
           '$sso<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getProfileAndToken</span>(<span style="color: #148a68;">string</span> $code)<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">ProfileAndToken</span>'
         ],
+        getProfileAndToken_java: [
+          '<span style="color: #5854c6;">ProfileAndToken</span> sso.<span style="color: #5854c6;">getProfileAndToken</span>(<span style="color: #148a68;">String</span> code, <span style="color: #148a68;">String</span> clientId)'
+        ]
       }
     }
 
