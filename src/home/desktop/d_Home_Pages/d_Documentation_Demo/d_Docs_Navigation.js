@@ -1106,7 +1106,7 @@ const Styles = styled.div `
 .simple-table-left {
     float: left;
     text-align: left;
-    width: 15%;
+    width: 20%;
     padding-top: 1.5%;
 }
 
@@ -1120,7 +1120,7 @@ const Styles = styled.div `
 .simple-table-right {
     float: left;
     text-align: left;
-    width: 85%;
+    width: 80%;
     padding-top: 1.5%;
 }
 
@@ -1161,7 +1161,7 @@ const Styles = styled.div `
     margin-top: 0.75%;
     font-size: 65%;
     margin-right: 5%;
-    margin-left: 0.5%;
+    margin-left: 1.5%;
 }
 
 .simple-table-sidebar-right p {

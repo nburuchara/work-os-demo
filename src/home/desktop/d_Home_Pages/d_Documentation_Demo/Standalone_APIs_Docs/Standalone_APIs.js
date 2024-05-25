@@ -16,7 +16,10 @@ export default class StandaloneAPIs extends Component {
             testSSO: false,
             exampleApps: false,
             signInUX: false,
-            loginFlows: true,
+            loginFlows: false,
+            redirectURIs: false,
+            signingCertificates: false,
+            jitProvisioning: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -350,7 +353,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows } = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -1357,8 +1360,271 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The error callback will include the connection and organization ID’s, which can be used to request a new authorization URL for the SP-initiated request. The new request will generally be transparent to the user, as they are already logged in to the Identity Provider.</p>
 
-                        </div>
 
+                            <CodeSnippetStruct 
+                            id={24}
+                            headerTabs={0}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Callback Endpoint with IdP-Initiated error support" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+                            
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Redirect URIs</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn what a redirect URI is and how it relates to Service Provider and Identity Provider initiated login flows.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {redirectURIs && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Redirect URIs</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn what a redirect URI is and how it relates to Service Provider and Identity Provider initiated login flows.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With a <label className='demo-docs-hyperlink'>WorkOS Service Provider (SP) initiated login flow</label>, there are a series of exchanges that take place between a Service Provider (your application), WorkOS, and the IdP that’s being used to authenticate the user as shown in the diagram below. The <label className='demo-docs-hyperlink'>Redirect URI</label> is the location to which the user gets returned to after successfully completing the authentication with their Identity <label className='demo-docs-hyperlink'>Provider (IdP)</label>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With an Identity Provider (IdP) initiated login flow, the approach is similar but the user will begin the login flow by clicking on the tile within their IdP platform instead of from your application.</p>
+
+
+                            <div id='img57' className={`enlargable-image-container ${this.state.enlargedImageId === 'img57' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img57')}>
+                                <img  src='/assets/redirect_uri_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In WorkOS Production Environments, the Redirect URI to your application must use HTTPS, however, Redirect URIs that use HTTP and localhost are allowed in Sandbox Environments.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There should be at least one redirect URI configured and selected as a default for a WorkOS There should be at least one redirect URI configured and selected as a default for a WorkOS <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page in the WorkOS dashboard. If you try to route the authorization flow to a Redirect URI that is not yet defined in the Dashboard it will result in an error and users will be unable to sign in, so it’s important to define them in the dashboard first.</p>
+
+                            <div id='img58' className={`enlargable-image-container ${this.state.enlargedImageId === 'img58' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img58')}>
+                                <img  src='/assets/redirect_uri_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Redirect URI can also be included directly in the Get Authorization URL call as a redirect_uri parameter. When the Redirect URI is set in this fashion, it will override the default Redirect URI that is set in the WorkOS Dashboard.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Wildcard characters</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports using wildcard characters in Redirect URIs for staging environments.</p>
+                        
+                            <div id='img59' className={`enlargable-image-container ${this.state.enlargedImageId === 'img59' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img59')}>
+                                <img  src='/assets/redirect_uri_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>*</span> symbol can be used as a wildcard for subdomains; however, it must be used in accordance with the following rules in order to properly function.</p>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The protocol of the URL <strong>must</strong> be either <span>http:</span> or <span>https:</span>. For example, <span>com.example.app://*.example.com</span> will not work. </p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The wildcard <strong>must</strong> be located in a subdomain within the hostname component. For example, <span>http://*.com</span> will not work.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The wildcard <strong>must</strong> be located in the subdomain which is furthest from the root domain. For example, <span>https://sub.*.example.com</span> will not work.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The URL <strong>must not</strong> contain more than one wildcard. For example, <span>https://*.*.example.com</span> will not work.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A wildcard character <strong>may</strong> be prefixed and/or suffixed with additional valid hostname characters. For example, <span>https://prefix-*-suffix.example.com</span> will work.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A URL with a valid wildcard <strong>will not</strong> match a URL more than one subdomain level in place of the wildcard. For example, <span>https://*.example.com</span> will not work with <span>https://sub1.sub2.example.com</span>.</p></li>
+                                </ul>
+
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+                        
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Signing Certificates</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Verify the authenticity of SAML responses and requests.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                {signingCertificates && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Signing Certificates</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Verify the authenticity of SAML responses and requests.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>SAML signing certificates are X.509 certificates used in SAML responses to allow the <label className='demo-docs-hyperlink'>Service Provider (SP)</label> to verify the authenticity of a SAML response. Some <label className='demo-docs-hyperlink'>Identity Providers (IdP’s)</label> may require or provide the option to use a SAML signing certificate for the SAML request as well. In these cases the IdP verifies the authenticity of the SAML request.</p>
+                        
+                            <div id='img60' className={`enlargable-image-container ${this.state.enlargedImageId === 'img60' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img60')}>
+                                <img  src='/assets/sign_certificates_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>SAML response signing certificates are generated by your customer’s IdP and must then be uploaded to WorkOS manually or using a monitored metadata URL. Your customer can either upload the certificate themselves via the Admin Portal, or you can upload it for them via the WorkOS Dashboard if your customer provides it to you.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Unlike SAML response signing, for request signing you will need to provide your customer with a metadata URL called the SP metadata URL. Your customer will then upload the SP metadata URL to their IdP, where it will either be monitored for updates automatically made by WorkOS, or it will be manually updated by your customer in their IdP.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SAML Response Signing Certificate</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the IdP sends a SAML response, the SP must verify the authenticity of the response, and that it has not been tampered with by an unauthorized third party. The SAML response signing certificate allows the SP to perform this verification.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sample scenario</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider the fictional SaaS company <i>HireOS</i>, which offers recruiting software to other businesses. <i>HireOS</i> is an online application that allows its customers to track leads, candidates, and interviews. <i>HireOS</i> is referred to as the SP by SAML.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now let’s consider <i>HireOS‘</i> newest enterprise customer: <i>Enterprise Corp</i>. <i>Enterprise Corp</i> is a large enterprise company that wants to use <i>HireOS</i> to manage their recruiting. <i>Enterprise Corp</i> IT Admins need recruiters and other employees who will use <i>HireOS</i> to log in using <i>Enterprise Corp</i>‘s identity provider, Okta. Okta is one of many companies known as an IdP to SAML.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Verifying the SAML response</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After identifying the user – whether from the SAML request or from IdP initiated SSO – Okta SAML will generate the SAML response, which includes SAML assertions, the X.509 certificate, and the signature value. Upon receiving the response from Okta SAML, <i>HireOS</i> will verify that the response came from Okta SAML by decrypting the signature, using the public key on the X.509 certificate, and checking if the hash values match.</p>
+
+                            <div id='img61' className={`enlargable-image-container ${this.state.enlargedImageId === 'img61' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img61')}>
+                                <img  src='/assets/sign_certificates_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Planning considerations</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When planning your SAML integration, there are a few things to consider related to SAML response signing certificates.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Certificate expiration</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your SAML response signing certificate will eventually expire and must be kept up to date in order to maintain service. Your certificate’s expiration time will vary, but typically, response certificates are valid anywhere from 1-5 years. If your certificate is uploaded in the WorkOS Dashboard, you can see when it expires by going to Organizations, selecting the Organization, and then clicking on the Connection containing the response certificate. If your company has a shared Slack channel with WorkOS, we will help ensure that your SAML response signing certificates stay up to date by automatically sending a notification before a certificate expires.</p>
+
+                            <div id='img63' className={`enlargable-image-container ${this.state.enlargedImageId === 'img63' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img63')}>
+                                <img  src='/assets/sign_certificates_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Monitored metadata versus manual upload</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two options to upload your response certificate to a Connection, both of which can be done either in the WorkOS Dashboard, or by your customer using the Admin Portal.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Monitored metadata</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To streamline this process, you can instead choose to upload a metadata URL to WorkOS that we will automatically keep updated as metadata changes. If your customer’s IdP refreshes a certificate, WorkOS will automatically pull in the updated metadata. Your customer can upload a metadata URL to the Admin Portal during setup. Alternatively, they can provide it to your to manually upload via the Dashboard.</p>
+
+                            <div id='img64' className={`enlargable-image-container ${this.state.enlargedImageId === 'img64' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img64')}>
+                                <img  src='/assets/sign_certificates_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Manual upload</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>SP metadata such as the Entity ID, IdP SSO URL, and SAML response signing certificate can be uploaded manually through the Dashboard or the Admin Portal. This may be done either by uploading an XML metadata file, or by individually inputting metadata values. When metadata becomes out of date, such as an X.509 certificate expiring, new information must manually be uploaded. If you would like to upload the data for your customer, they must first send the relevant metadata to you. You can then upload it via the WorkOS Dashboard by navigating to the Organization and selecting the specific Connection.</p>
+
+                            <div id='img65' className={`enlargable-image-container ${this.state.enlargedImageId === 'img65' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img65')}>
+                                <img  src='/assets/sign_certificates_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SAML Request Signing Certificate</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the SP sends a SAML request, the IdP must verify that the request is actually coming from the SP and has not been tampered with by an unauthorized third party. IdP’s choose to handle this verification in different ways, and some use a SAML request signing certificate. Microsoft AD FS SAML uses a relying party trust, which is similar to a SAML request signing certificate, and the concepts covered in this article are applicable. In WorkOS, Connections that take advantage of a request certificate will expose an SP metadata URL that can be sent to the IdP in order to give it access to the signing certificate.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sample scenario</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once again, let’s consider the fictional SaaS company <i>HireOS</i>, which offers recruiting software to other businesses. <i>HireOS</i> is referred to as the SP by SAML.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>HireOS‘</i> newest enterprise customer is called <i>Enterprise Corp</i>. <i>Enterprise Corp</i> IT Admins need recruiters and other employees who will use HireOS to log in using <i>Enterprise Corp</i>‘s identity provider, Okta. Okta is one of many companies known as an IdP to SAML.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Verifying the SAML request</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In SP initiated SSO, <i>HireOS</i> will first send a SAML request to Okta SAML. If a request certificate is being used, then the X.509 certificate along with a signing signature will be attached to the request. Upon receiving the request, Okta SAML will verify that the request came from HireOS by decrypting the signature using the public key on the X.509 certificate and confirming the hash values match.</p>
+
+                            <div id='img66' className={`enlargable-image-container ${this.state.enlargedImageId === 'img66' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img66')}>
+                                <img  src='/assets/sign_certificates_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Planning considerations</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When planning your SAML integration, there are a few things to consider related to SAML request signing certificates.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Certificate expiration</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your SAML request signing certificate will eventually expire and must be kept up to date in order to maintain service. WorkOS will automatically update the request signing certificate on the SP metadata URL before it expires. It is up to your customer and their IdP to either monitor the SP metadata URL, or manually keep it up to date. If your company has a shared Slack channel with WorkOS, you will automatically be notified when the X.509 certificate on the SP metadata URL is updated, so that you can check with your customer that they have the latest metadata.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Monitored metadata versus manual upload</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are potentially two options for your customer to upload SP metadata, and will vary based on their IdP. In both cases, you will need to provide your customer with the SP metadata URL, which can be found in the WorkOS Dashboard by going to Organizations, selecting the Organization, and then selecting the Connection.</p>
+
+                            <div id='img67' className={`enlargable-image-container ${this.state.enlargedImageId === 'img67' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img67')}>
+                                <img  src='/assets/sign_certificates_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Monitored metadata</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To streamline this process, your customer instead may choose to monitor our SP metadata URL. Their IdP will regularly check our URL for updates to the metadata. When WorkOS makes an update, such as refreshing an X.509 certificate that is expiring soon, their IdP will automatically make the change.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Manual upload</h3>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customer can manually download the SP metadata document from the URL, extract the certificate, and upload it to their IdP. When the certificate is getting ready to expire, they can repeat this process to give their IdP the most up to date certificate.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>JIT Provisioning</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to provision users in your app using Just-In-Time user provisioning.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {jitProvisioning && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Just-In-Time User Provisioning</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to provision users in your app using Just-In-Time user provisioning.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User provisioning is the process of creating a user account and associated identity information. There are various ways for an application to provision users. This guide explores user provisioning strategies and offers a deep dive into SSO-based just-in-time (JIT) user provisioning.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>User provisioning</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Provisioning is the process of creating a user and setting attributes for them inside an app.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>JIT user provisioning</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Just-in-time user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role don’t exist until the app creates them – just-in-time.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Identity</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>An identity is a collection of attributes associated with a user or entity in an identity provider. For example, an identity includes at least one unique identifier, such as id, and user profile attributes, such as name and email.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Role</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A primitive in your app that defines specific permissions for the users. Roles are often defined as an ability or a job title, for example, “Editor” or “Accountant”.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>User provisioning strategies</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User provisioning is the process of creating a user account with associated identity data in your app. Your app needs to determine a unique identifier for an identity, create a unique account for that user, and link the identity profile attributes to that user’s account. There are many strategies to provision users in an app, but the main three are:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Self-registration</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Provisioning users via <label className='demo-docs-hyperlink'>Directory Sync</label></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning via SSO</p></li>
+                            </ol>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The type of provisioning needed will depend on your app’s architecture and level of enterprise feature support:</p>
+
+                        </div>
                     </div>
                 }
             </Styles>
@@ -1366,4 +1632,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 56 (latest)
+//* IMAGE 67 (latest)

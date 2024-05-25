@@ -534,8 +534,8 @@ export default class CodeSnippet extends Component {
         handleAuthRegex: /\bhandleAuth\w*/,
         authenticateWithRefreshTokenRegex: /\bauthenticateWithRefreshToken\w*/,
         getJwksUrlRegex: /\bgetJwksUrl\w*/,
+        get_authorization_urlRegex: /\bget_authorization_url\w*/,
         authorizationUrllRegex: /\bauthorization_url\w*/,
-        get_authorization_urllRegex: /\bget_authorization_url\w*/,
         LoginRegex: /\bLogin\w*/,
         GetAuthorizationURLRegex: /\bGetAuthorizationURL\w*/,
         profile_and_tokenRegex: /\bprofile_and_token\w*/, // 
