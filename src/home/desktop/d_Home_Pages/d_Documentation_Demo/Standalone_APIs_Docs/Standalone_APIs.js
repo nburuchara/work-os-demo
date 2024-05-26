@@ -19,7 +19,10 @@ export default class StandaloneAPIs extends Component {
             loginFlows: false,
             redirectURIs: false,
             signingCertificates: false,
-            jitProvisioning: true,
+            jitProvisioning: false,
+            launchChecklist: false,
+            faqForItTeams: false,
+            samlSecurity: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -85,7 +88,18 @@ export default class StandaloneAPIs extends Component {
             login1Hide: true,
             login2Hide: false,
             showEmail2Input: true,
-            showEmail2Confirmed: false
+            showEmail2Confirmed: false,
+
+                //* - LAUNCH CHECKLIST COMPONENTS - *//
+
+            launchCheck1: false,
+            launchCheck2: false,
+            launchCheck3: false,
+            launchCheck4: false,
+            launchCheck5: false,
+            launchCheck6: false,
+            launchCheck7: false,
+            launchCheck8: false,
         }
     }
 
@@ -348,12 +362,16 @@ export default class StandaloneAPIs extends Component {
         })
     }
  
-
+    checklistClicked = (num) => {
+        this.setState((prevState) => ({
+            [`launchCheck${num}`]: !prevState[`launchCheck${num}`]
+        }));
+    }
     
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, } = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -370,6 +388,8 @@ export default class StandaloneAPIs extends Component {
                 //* - - SIGN IN UX VAR(S) - - *//
         const { showSignIn1, showSignedIn1, email1Empty, password1Empty, showSampleEmail1Err, showSamplePassword1Err, login1Successful, login1Hide,
                 showSignIn2, showSignedIn2, email2Empty, password2Empty, showSampleEmail2Err, showSamplePassword2Err, login2Successful, login2Hide, showEmail2Input, showEmail2Confirmed, showSignIn3, showSignedIn3, email3Empty, password3Empty, showSampleEmail3Err, showSamplePassword3Err, login3Successful} = this.state;
+
+        const { launchCheck1, launchCheck2, launchCheck3, launchCheck4, launchCheck5, launchCheck6, launchCheck7, launchCheck8 } = this.state;
 
         return(
             <Styles>
@@ -1623,6 +1643,362 @@ export default class StandaloneAPIs extends Component {
                             </ol>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The type of provisioning needed will depend on your app’s architecture and level of enterprise feature support:</p>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Strategy</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Description</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Usage</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Self-registration</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Users fill out a registration form to create an account in the app</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>For users that don’t have an SSO service, usually the first authentication mechanism built in an app</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Pre-provisioning users</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Use a service like Directory Sync to create users in the app</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Required by large enterprises to automatically provision users</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>JIT provisioning	</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Create a user account when a user signs in via SSO for the first time</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Leverage user identity from an SSO provider to create an account in your app</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is JIT provisioning?</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning creates a user account with associated identity information when a user authenticates via SSO for the first time. IT admins often use JIT provisioning to quickly set up accounts in an app. Typically, apps that implement only SSO will have JIT provisioning support as the alternative is self-registration by individual users or manual entry of all users by the IT admin.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sample scenario</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider the fictional SaaS company <i>HireOS</i>, which offers recruiting software to other businesses. <i>HireOS</i> is an online app allowing customers to track leads, candidates, and interviews.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>HireOS</i> has integrated SSO using WorkOS and supports JIT provisioning. For example, a <i>HireOS</i> customer would like their users to have accounts automatically provisioned in <i>HireOS</i> when they first log in. The customer’s IT admin will only need to assign the users to the <i>HireOS</i> SAML app in their identity provider. When users log into <i>HireOS</i> via SSO, they will have accounts created in <i>HireOS</i>, just in time.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A usual account setup flow using JIT provisioning follows these steps:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An IT admin self-registers via username and password to create a team account in <i>HireOS</i>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin configures the <i>HireOS</i> team account to use SSO as the authentication mechanism.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin enables JIT provisioning for this team account by clicking the “Enable JIT Provisioning” checkbox.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin adds the users that should get access to <i>HireOS</i> to the app in the identity provider.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user logs into <i>HireOS</i> with the correct email domain and authenticates via SSO, HireOS creates the user account upon successful first-time login.</p></li>
+                            </ol>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>JIT provisioning with WorkOS SSO</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user authenticates to your app via SSO for the first time, and JIT provisioning is enabled, your app provisions a new user account. You can create the account by saving the identity information (the WorkOS SSO profile) directly on your app’s user account. Or, you can create a separate identity from the WorkOS SSO profile related to this new user account. This logic allows users to have multiple identities if your app supports several login methods per user.</p>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use the WorkOS SSO profile <span>id</span> attribute as the unique identifier for this identity from WorkOS. WorkOS ensures the profile is unique per SSO connection via the <span>idp_id</span>. In addition, your app can use either the <span>connection_id</span> or <span>organization_id</span> to tie the identity to a team account.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={25}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="SSO user profile" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may want to grant new users roles in your application via JIT provisioning. For more information on mapping role data between the IdP and your app, see the <label className='demo-docs-hyperlink'>Mapping Roles</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> guide.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>New account creation</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When your app receives a WorkOS SSO profile, it is standard to perform the following series of checks:</p>
+
+
+                            <div className='api-keys'>
+                                <ol>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Find an identity with the profile <span>id</span> or <span>idp_id</span>. If found, log in the corresponding user. </p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you cannot find an identity, try to find a user with the same <span>email</span> as the profile. If found, create an identity for the user and log them in.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Otherwise, create a new identity using the WorkOS SSO profile, create a new user, and associate this identity with the user account.</p></li>
+                                </ol>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Linking an existing user</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If an admin adds SSO authentication to their team account after they’ve had users register, your app can link these new SSO identities to the current user accounts, just-in-time.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A linking field (e.g. <span>email</span>) should be established to find a current user with the incoming WorkOS SSO Profile. Then, the identity information can be linked with the existing user account via a persistent identifier in case of an email change later.</p>
+
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Launch Checklist</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Make sure you’re ready to take your app to production.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {launchChecklist && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Launch Checklist</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Make sure you’re ready to take your app to production.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implement complementary enterprise features</h1>
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrate the WorkOS <label className='demo-docs-hyperlink'>Admin Portal</label> to enable your users to onboard and set up SSO themselves. </p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ntegrate the WorkOS Directory Sync API for automatic user updating, provisioning, and deprovisioning.</p></li>
+                            </ul>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Before you start</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an IP Allowlist</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS makes use of Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for redirect requests, you can use the IP Ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Go-live checklist</h1>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('1')} style={{backgroundColor: launchCheck1 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck1 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Implement an SSO UI/UX. See our guide for ideas – <label className='demo-docs-hyperlink'>UI/UXBest Practices for IdP & SP-Initiated SSO</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('2')} style={{backgroundColor: launchCheck2 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck2 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test the end-to-end SSO experience in your Staging environment.</p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('3')} style={{backgroundColor: launchCheck3 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck3 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Unlock your Production environment by adding your billing information</p>
+                                </div>
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Only enterprise connections in your Production environment will be charged. OAuth connections in Production will be free.</p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('4')} style={{backgroundColor: launchCheck4 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck4 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set your Production Client’s ID and API Key as environment variables</p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('5')} style={{backgroundColor: launchCheck5 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck5 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Secure your Production Project’s API key</p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('6')} style={{backgroundColor: launchCheck6 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck6 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configure production redirect URI(s) in your Product Project. Verify the default redirect URI is correct</p>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('7')} style={{backgroundColor: launchCheck7 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck7 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <div className='api-keys'>
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Ensure that your application can receive redirects from WorkOS Depending on your network architecture, you may need to allowlist incoming redirect traffic from <span>api.workos.com.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='checklist'>
+                                <div className='checklist-icon'>
+                                    <button onClick={() => this.checklistClicked('8')} style={{backgroundColor: launchCheck8 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck8 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
+                                </div>
+                                <div className='checklist-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add Connections for your customers in the Production Environment</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How should an application handle the first time a user authenticates using WorkOS?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is authenticating to your application for the first time via SSO and doesn’t have an account, you can implement just-in-time provisioning to create a user when authentication is complete.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also leverage <label className='demo-docs-hyperlink'>Directory Sync</label> to pre-provision users with API endpoints or webhooks. In this case, the user will already be created in your application when they authenticate for the first time.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can we add SSO authentication for a current user in an application?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is authenticating to your application via SSO, but already has an account (with username/password for example), you can “upgrade” them to SSO. Usually the emails are the same for both methods of authentication, so you can match on email address. Once SSO via WorkOS is enabled, you can restrict users to sign in with only SSO.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How does WorkOS manage user attributes from an identity provider?</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS normalizes user attributes so you can expect known values such as <span>id</span>, <span>email</span>,<span>firstName</span>, and <span>lastName</span>. You will still receive all of the attributes sent by your identity provider in the <span>raw_attributes</span> object.</p>
+                            
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Is the user attribute mapping configurable in WorkOS?</h3>
+                            
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes. For example, let’s say the <span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</span> attribute contains the user email rather than the <span>surname</span> as the attribute name suggests. In these edge cases, WorkOS will identify any attributes that are misconfigured and recommend correct mapping in the “Attribute Mapper“ section of the “Connection info” page.</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>What does the “Allow Profiles Outside Organization” option do?</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By default, WorkOS restricts user profiles for SAML Connections to profiles that have email domains that are in the set of <label className='demo-docs-hyperlink'>User Email Domains</label> on the Organization.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enabling this option removes this restriction and allows user profiles with any email address to sign in through Connections under this Organization.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If this option is enabled, your code can not exclusively trust the returned <span>email</span> attribute on user profiles to be a verified email address. Instead, you must use the <span>organization_id</span> or <span>connection_id</span> in order to verify that the profile belongs to whom it claims.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>What does “There are 0 profiles awaiting reconciliation” refer to?</h3>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This refers to the number of user profiles that have inconsistent attribute mappings, and that need to be updated in order to successfully authenticate.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How do I integrate WorkOS SSO with my native mobile application?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When it comes to mobile applications, our typical advice in implementing SSO authentication goes like this:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generate the authentication URL and route the user to a browser or browser fragment in order to authenticate.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The end user authenticates via the native UI of their IdP within that browser.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upon successful authentication, deep-link the user back into your native application.</p></li>
+                            </ol>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>FAQ for IT teams</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Answers to common questions from your customer’s IT team.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                }
+                {faqForItTeams && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>FAQ for IT teams</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Answers to common questions from your customer’s IT team.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is WorkOS?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS is a software company that provides a suite of products to make an app enterprise-ready. These products include Single Sign-On, Directory Sync, and User Management, among others.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate WorkOS services into their apps in order to provide a secure authentication and user provisioning experience. It’s trusted by companies like Webflow, Plaid, Vercel, and many others.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What data does WorkOS store?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For Single Sign-On, WorkOS stores the user profile from the identity provider. This includes the user’s name, email and IP address.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For Directory Sync, WorkOS will store the data that the identity provider sends. The shape and content of that data is at the discretion of the identity provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information, view our <label className='demo-docs-hyperlink'>Privacy Policy</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How do developer apps communicate with WorkOS?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate with WorkOS using its Rest API and the related SDKs. You can find a list of all WorkOS API endpoints in the <label className='demo-docs-hyperlink'>API reference.</label></p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What IP addresses does WorkOS use?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS uses Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for the WorkOS API, you can use the IP ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes, WorkOS is compliant with all the above and regularly undergoes penetration testing.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Is WorkOS GDPR compliant?</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes, WorkOS is GDPR compliant. Reach out to <label className='demo-docs-hyperlink'>support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to request deletion of data.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>SAML Security</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn about additional SAML features that WorkOS supports.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {samlSecurity && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>SAML requests and responses each have their own unique confidentiality and integrity features. To use <label className='demo-docs-hyperlink'>SAML</label> with WorkOS, the only requirement is that the Identity Provider (<label className='demo-docs-hyperlink'>IdP</label>) signs the assertions within the SAML authentication response.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, you may have customers that have stricter configuration requirements or you may simply want to raise the security bar by following recommendations. This document details what security features are available, how they can benefit you, your customer and their identity provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The parties involved in a SAML authentication request and response flow are:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>dentity Provider</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
+                            </ul>
 
                         </div>
                     </div>

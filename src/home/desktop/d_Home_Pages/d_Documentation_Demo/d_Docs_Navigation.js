@@ -1293,8 +1293,6 @@ const Styles = styled.div `
     margin-bottom: 5%;
 }
 
-
-
 .sign-in-ux-success-btn {
     margin-top: 5% !important;
     width: 100%;
@@ -1344,6 +1342,147 @@ const Styles = styled.div `
     white-space: nowrap;
   }
 
+    //! - - Complex table - - !//
+
+
+  // - COMPLEX TABLE HEADER - //
+
+.complex-table-header {
+    background-color: #f8f8fb;
+    padding-top: 2.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 0.75px solid #cccc;
+}
+
+.complex-table-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.complex-table-sidebar-header:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.c-table-header1 {
+    float: left;
+    width: 20%;
+    text-align: left;
+}
+
+.c-table-header2 {
+    float: left;
+    width: 35%;
+    text-align: left;
+}
+
+.c-table-header3 {
+    float: left;
+    width: 45%;
+    text-align: left;
+}
+
+    // # TABLE HEADERS
+
+.complex-table-header h5 {
+    margin-left: 7.5%;
+    margin-bottom: 6%;
+    margin-top: 0px;
+    font-size: 75%;
+}
+
+    // - COMPLEX TABLE ROW - //
+
+.complex-table {
+    border-left: 0.75px solid #ccc;
+    border-right: 0.75px solid #ccc;
+    border-bottom: 0.75px solid #ccc;
+}
+
+.complex-table:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.complex-table-sidebar-cell:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.c-table-cell1 {
+    float: left;
+    width: 20%;
+    text-align: left;
+}
+
+.c-table-cell2 {
+    float: left;
+    width: 35%;
+    text-align: left;
+}
+
+.c-table-cell3 {
+    float: left;
+    width: 45%;
+    text-align: left;
+}
+
+.complex-table p { 
+    font-size: 65%;
+    margin-left: 7.5%;
+    margin-right: 5%;
+
+}
+
+
+    //! - - CHECKLIST - - !//
+
+.checklist:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.checklist-icon {
+    float: left;
+    text-align: left;
+    width: 6%;
+}
+
+.checklist-text {
+    float: left;
+    text-align: left;
+    width: 94%;
+}
+
+    // # CHECKLIST ICON
+
+.checklist-icon button {
+    margin-top: 7%;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    border: 0.5px solid #5e626a;
+    padding: 0px;
+    border-radius: 3px;
+    box-shadow: inset 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
+
+.checklist-icon img {
+    width: 75%;
+    margin-bottom: 2%;
+}
+
+    // # CHECKLIST TEXT
+
+.checklist p {
+    margin-top: 0px;
+}
 
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 

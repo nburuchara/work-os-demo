@@ -5662,6 +5662,28 @@ const codeSnippets = [
           '}',
         ],
       }
+    },
+
+    {
+      id: 25,
+      title: "SSO user profile",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"profile"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"prof_01DMC79VCBZ0NY2099737PSVF1"</span>,',
+          '4   <span style="color: #0072dd;">"connection_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '5   <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"OktaSAML"</span>,',
+          '6   <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+          '7   <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '8   <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Todd"</span>,',
+          '9   <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Rundgren"</span>,',
+          '10   <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"00u1a0ufowBJlzPlk357"</span>,',
+          '11   <span style="color: #0072dd;">"groups"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Admins"</span>, <span style="color: #143465;">"Developers"</span>, <span style="color: #143465;">"Engineering"</span>],',
+          '12   <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '13 }',
+        ]
+      }
     }
 
 ]

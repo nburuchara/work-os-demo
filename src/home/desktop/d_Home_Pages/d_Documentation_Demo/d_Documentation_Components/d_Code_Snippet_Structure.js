@@ -706,7 +706,7 @@ export default class CodeSnippet extends Component {
                       <div style={{paddingTop: sideBarOpen ? "0.85%" : "0%"}} className='code-snippet-language' id="dropdown-container">
                         {requestSelected && 
                           <DropdownContainer id={`dropdown-container-${this.props.id}`}>
-                            <SelectButtonRequest style={{fontSize: "70%", color: dropdownDisabledAndHidden ? "transparent" : "black"}} id="dropdown-button" onClick={this.toggleDropdown} disabled={this.props.dropdownDisabled ? true : false}>{this.state.selectedDropdownLanguage}</SelectButtonRequest>
+                            {this.props.showOnlyJSONTab !== true ? <SelectButtonRequest style={{fontSize: "70%", color: dropdownDisabledAndHidden ? "transparent" : "black"}} id="dropdown-button" onClick={this.toggleDropdown} disabled={this.props.dropdownDisabled ? true : false}>{this.state.selectedDropdownLanguage}</SelectButtonRequest> : ""}
                             <DropdownContent style={{width: sideBarOpen ? "135%" : "100%"}} isOpen={isOpen}>
                               {options.map(option => (
                                 <DropdownItem
@@ -726,6 +726,9 @@ export default class CodeSnippet extends Component {
                           </DropdownContainer>
                         }
                         {this.state.showJSONTab && 
+                          <SelectButtonResponse>JSON</SelectButtonResponse>
+                        }
+                        {this.props.showOnlyJSONTab && 
                           <SelectButtonResponse>JSON</SelectButtonResponse>
                         }
                       </div>
