@@ -1773,7 +1773,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Launch Checklist</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Make sure you’re ready to take your app to production.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implement complementary enterprise features</h1>
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrate the WorkOS <label className='demo-docs-hyperlink'>Admin Portal</label> to enable your users to onboard and set up SSO themselves. </p></li>
@@ -1936,7 +1936,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>FAQ for IT teams</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Answers to common questions from your customer’s IT team.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is WorkOS?</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS is a software company that provides a suite of products to make an app enterprise-ready. These products include Single Sign-On, Directory Sync, and User Management, among others.</p>
@@ -1982,7 +1982,7 @@ export default class StandaloneAPIs extends Component {
                 }
                 {samlSecurity && 
                     <div className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
                         </div>
@@ -1995,10 +1995,180 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The parties involved in a SAML authentication request and response flow are:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>dentity Provider</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identity Provider</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Service Provider (<label className='demo-docs-hyperlink'>SP</label>)</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User Agent, i.e. a browser</p></li>
                             </ul>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SP to IdP security features</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SAML authentication request is a way for the SP to request confirmation that the user they’re presented with is who they’re claiming to be. It is relayed to the IdP via the user agent.</p>
+
+                            <div id='img68' className={`enlargable-image-container ${this.state.enlargedImageId === 'img68' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img68')}>
+                                <img  src='/assets/saml_secrity_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>SAML request signing</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To address the opportunity to spoof or tamper with a SAML request to the IdP, the IdP may require that all SP’s sign the request. To accommodate this there needs to be a pre-existing relationship between the SP and IdP where a key-pair is shared. The IdP holds the public key (for verifying the request) and the SP holds the private key (for signing the request).</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS recommends SAML request signing, this is especially important in cases where HTTPS is terminated or interrupted prior to reaching the IdP.</p>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All of our requests embed the <span>&lt;IssueInstant&gt;</span> timestamp to allow the IdP to reject stale requests, however to mitigate tamper of this value request signing must be used. (See <label className='demo-docs-hyperlink'>SAML 2.0 Security Considerations</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> sections 5.2.1.2, 6.5.1 for more detail).</p>
+                            </div>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Supported by WorkOS</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Enabled by default</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Usage recommendation</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Yes</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>No</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Use with any IdP that supports it</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports SAML request signing for all compatible connection types. Please <label className='demo-docs-hyperlink'>contact WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>IdP to SP security features</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SAML response is an XML document provided by an IdP containing details about a user so that an SP can authenticate them. It is relayed to the SP via the user agent.</p>
+
+                            <div id='img69' className={`enlargable-image-container ${this.state.enlargedImageId === 'img69' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img69')}>
+                                <img  src='/assets/saml_secrity_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For reference in understanding the following features, below is a simplified hierarchy of the XML elements in a SAML Response:</p>
+
+                            <CodeSnippetStruct 
+                            id={26}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="SAML response" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signed response assertions</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This is required by WorkOS for all SAML connections. It is a core requirement for SAML IdPs to implement as of SAML 2.0 (see <label className='demo-docs-hyperlink'>SAML 2.0 Profiles</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> section 4.1.3.5).</p>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Supported by WorkOS</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Enabled by default</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Usage recommendation</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Yes</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Yes</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>All WorkOS SAML connections must use it</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Signed response assertions are enabled in the setup steps when you create a <label className='demo-docs-hyperlink'>SAML connection</label>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signed response message envelope</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This is the complete signature over the SAML response payload. In combination with an assertion signature it will provide additional integrity protection and is recommended by WorkOS (For details on threats addressed see <label className='demo-docs-hyperlink'>SAML Security Considerations</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> sections 7.1.1.6, 7.1.1.7).</p>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Supported by WorkOS</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Enabled by default</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Usage recommendation</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Yes</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>No</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Use with any IdP that supports it</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please <label className='demo-docs-hyperlink'>SAML Security Considerations</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable encrypted response assertion.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Encrypted response attributes</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The attribute statement is a sub-element of the assertion, some or all of the attributes in the statement can be encrypted as part of the SAML authentication protocol.</p>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Supported by WorkOS</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Enabled by default</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Usage recommendation</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>No</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>No</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Use <strong>encrypted assertions</strong> instead</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS does not currently support encrypted response attributes. It is recommended to use assertion encryption to envelope all the attributes if confidentiality is required.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Directory Sync</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Build frictionless onboarding for organizations with real‑time user provisioning and deprovisioning.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -2008,4 +2178,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 67 (latest)
+//* IMAGE 69 (latest)

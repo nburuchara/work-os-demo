@@ -5664,7 +5664,7 @@ const codeSnippets = [
       }
     },
 
-    {
+    { //* SSO user profile
       id: 25,
       title: "SSO user profile",
       code: {
@@ -5682,6 +5682,24 @@ const codeSnippets = [
           '11   <span style="color: #0072dd;">"groups"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Admins"</span>, <span style="color: #143465;">"Developers"</span>, <span style="color: #143465;">"Engineering"</span>],',
           '12   <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
           '13 }',
+        ]
+      }
+    },
+
+    { //* SAML response
+      id: 26,
+      title: "SAML response",
+      code: {
+        javascript: [
+          '1 &lt<span style="color: #0072dd;">Response</span>&gt',
+          '2   &lt<span style="color: #0072dd;">Assertion</span>&gt',
+          '3     &lt<span style="color: #0072dd;">AttributeStatement</span>&gt',
+          '4        &lt<span style="color: #0072dd;">Attribute</span>&gt',
+          '5          &lt<span style="color: #0072dd;">AttributeValue</span>&gt...&lt/<span style="color: #0072dd;">AttributeValue</span>&gt',
+          '6        &lt/<span style="color: #0072dd;">Attribute</span>&gt',
+          '7     &lt/<span style="color: #0072dd;">AttributeStatement</span>&gt',
+          '8   &lt/<span style="color: #0072dd;">Assertion</span>&gt',
+          '9 &lt/<span style="color: #0072dd;">Response</span>&gt',
         ]
       }
     }
