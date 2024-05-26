@@ -22,7 +22,9 @@ export default class StandaloneAPIs extends Component {
             jitProvisioning: false,
             launchChecklist: false,
             faqForItTeams: false,
-            samlSecurity: true,
+            samlSecurity: false,
+            directorySync: true,
+            quickStartDirectorySync: false,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -371,7 +373,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -1982,7 +1984,7 @@ export default class StandaloneAPIs extends Component {
                 }
                 {samlSecurity && 
                     <div className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
                         </div>
@@ -2173,9 +2175,176 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 }
+                {directorySync && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations use company directories and HRIS systems to manage users and enforce their access to organization resources. Directories enable IT admins to activate and deactivate accounts, create groups that inform access rules, accelerate adoption of new tools, and more.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>ULM</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>User Lifecycle Management (or ULM) is the process of managing a user’s access to an app. This occurs from app onboarding until they are removed from an app. ULM is also commonly referred to as identity provisioning.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>SCIM</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>System for Cross-domain Identity Management (or SCIM) is an open standard for managing automated user and group provisioning. It’s a standard that many directory providers interface with.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>HRIS</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A Human Resources Information System (or HRIS) is software designed to maintain, manage, and process detailed employee information and human resources-related policies. Examples include: Workday, HiBob, BambooHR, etc.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>User Deprovisioning</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Deprovisioning is the process of removing a user from an app.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is Directory Sync?</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync is a set of developer-friendly APIs and IT admin tools that allows you to implement enterprise-grade User Lifecycle Management (ULM) into your existing app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ULM allows IT admins to centrally provision and deprovision users from their directory provider. A directory provider is the source of truth for your enterprise customer’s user and group lists. Directory Sync sends automatic updates to your app for changes to directories, groups, users, or access rules.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Common directory providers include: <label className='demo-docs-hyperlink'>Microsoft Active Directory</label>, <label className='demo-docs-hyperlink'>Okta</label>, <label className='demo-docs-hyperlink'>Workday</label>, and <label className='demo-docs-hyperlink'>Google Workspace</label>. See the full list of supported directory providers on the <label className='demo-docs-hyperlink'>integrations</label> page.</p>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Why use Directory Sync?</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ULM increases the security of your app and makes it easier for your customers to use your app. ULM is most often implemented using <label className='demo-docs-hyperlink'>SCIM</label>. SCIM requests are sent between directory providers and your app to inform you of changes to a user’s identity. Changes can include:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Provisioning an identity for a user (account creation)</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user’s attribute has changed (account update)</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Deprovisioning a user from your app (account deletion)</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each directory provider implements SCIM differently. Implementing SCIM is often a challenging process and can introduce security vulnerabilities into your app. Directory Sync hides this complexity, so you can focus on building core product features in your app.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What your customer experiences</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s take a look at two different user provisioning scenarios.</p>
+
+                            <div className='dos-donts'>
+                                <div className='dos-donts-icon'>
+                                    <button style={{backgroundColor: "#ffdae0", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "17.5%" : "", border: "2px solid #ffdae0"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_donts_icon.png' alt='no img available'/></button>
+                                </div>
+                                <div className='dos-donts-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Your app doesn’t use Directory Sync</strong></p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Without ULM, your customers have to manually add, update, and remove users from your app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Imagine a scenario where your customer has purchased your software and onboards a new employee to your app. Your customer would have to do the following:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin provisions the employee in their directory provider (<i>if they use</i> one) and manually in your app.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All employee information has to be set manually in both the directory provider and manually in your app.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin has to manually provision a login method for the employee; through either SSO (<i>if they use an identity provider</i>) or a self-registration page.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The IT admin sends the invite link to their employee. Often initiating a back and forth via either email, messaging app, or IT helpdesk ticket.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The employee has to proceed with the registration method and can then use your app.</p></li>
+                            </ol>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All future changes to this employee’s data and access are manually entered by the IT admin. This is error prone and can lead to security vulnerabilities where users get unauthorized access to resources.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As your customers adopt more cloud software, these manual processes do not scale well. Manual input error can lead to the source of truth (directory) drifting from your app’s state. As a result, ULM has become a table stakes product requirement for enterprises.</p>
+
+                            <div className='dos-donts'>
+                                <div className='dos-donts-icon'>
+                                    <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "17.5%" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                </div>
+                                <div className='dos-donts-text'>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Your app uses Directory Sync</strong></p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app supports ULM via Directory Sync, the IT admin can provision this employee from one place:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add the employee to their directory provider.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Assign the employee to your app with the appropriate role once; via the directory provider admin page.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Optional.</strong> Have the employee go through a password setup if they are not using an identity provider (SSO).</p></li>
+                            </ol>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync makes this integration easy by providing APIs your app interfaces with. All updates for this directory will automatically be sent to your app from WorkOS.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API overview</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Directory</label>, <label className='demo-docs-hyperlink'>directory group</label>, and <label className='demo-docs-hyperlink'>directory user</label> are the main components your app interfaces with.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory</h3>
+
+                            <div id='img70' className={`enlargable-image-container ${this.state.enlargedImageId === 'img70' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img70')}>
+                                <img  src='/assets/directory_sync_img1.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory is the source of truth for your customer’s user and group lists.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports dozens of integrations including SCIM. Directory updates are delivered to you via webhooks. Your app stores a mapping between your customer and their directory. This allows you to maintain your app in sync with the directory provider used by your customer.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can enable self-service Directory Sync setup for your customers using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory group</h3>
+
+                            <div id='img71' className={`enlargable-image-container ${this.state.enlargedImageId === 'img71' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img71')}>
+                                <img  src='/assets/directory_sync_img2.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory group is a collection of users within an organization who have been provisioned with access to your app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are mapped from directory provider groups. Directory groups are most often used to categorize a collection of users based on shared traits. i.e. Grouping software developers at a company under an “Engineering” group.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory user</h3>
+
+                            <div id='img72' className={`enlargable-image-container ${this.state.enlargedImageId === 'img72' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img72')}>
+                                <img  src='/assets/directory_sync_img3.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory user is a person or entity within an organization who has been provisioned with access to your app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can belong to multiple directory groups. Users have <label className='demo-docs-hyperlink'>attributes</label> associated with them. These attributes can be configured for your app’s needs.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Quick Start</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Set up a directory, install the SDK, and integrate Directory Sync.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {quickStartDirectorySync && 
+                    <div></div>
+                }
             </Styles>
         )
     }
 }
 
-//* IMAGE 69 (latest)
+//* IMAGE 72 (latest)

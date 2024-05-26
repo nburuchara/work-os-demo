@@ -1484,6 +1484,48 @@ const Styles = styled.div `
     margin-top: 0px;
 }
 
+    //! - - Do's and Don'ts headers - - !//
+
+.dos-donts:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.dos-donts-icon {
+    float: left;
+    text-align: left;
+    width: 6%;
+}
+
+.dos-donts-text {
+    float: left;
+    text-align: left;
+    width: 94%;
+}
+
+    // # CHECKLIST ICON
+
+.dos-donts-icon button {
+    margin-top: 4%;
+    background-color: white;
+    height: 18px;
+    width: 18px;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.dos-donts-icon img {
+    width: 95%;
+    margin-top: 5%;
+}
+
+    // # CHECKLIST TEXT
+
+.dos-donts p {
+    margin-top: 0px;
+}
+
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 
 .demo-docs-search-bar {
