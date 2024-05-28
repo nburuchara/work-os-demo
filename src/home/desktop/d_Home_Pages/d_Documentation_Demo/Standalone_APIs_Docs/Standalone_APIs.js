@@ -24,7 +24,11 @@ export default class StandaloneAPIs extends Component {
             faqForItTeams: false,
             samlSecurity: false,
             directorySync: false,
-            quickStartDirectorySync: true,
+            quickStartDirectorySync: false,
+            exampleAppsDirectorySync: false,
+            handleInactieUsers: false,
+            understandingEvents: true,
+
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -93,7 +97,6 @@ export default class StandaloneAPIs extends Component {
             showEmail2Confirmed: false,
 
                 //* - LAUNCH CHECKLIST COMPONENTS - *//
-
             launchCheck1: false,
             launchCheck2: false,
             launchCheck3: false,
@@ -102,6 +105,13 @@ export default class StandaloneAPIs extends Component {
             launchCheck6: false,
             launchCheck7: false,
             launchCheck8: false,
+
+                //* - TWO TAB OPTIONS - //*
+
+            usingLifecycle: true,
+            usingLifecycleHovered: false,
+            usingPayload: false,
+            usingPayloadHovered: false
         }
     }
 
@@ -369,11 +379,20 @@ export default class StandaloneAPIs extends Component {
             [`launchCheck${num}`]: !prevState[`launchCheck${num}`]
         }));
     }
+
+    usingLifecycleEnter = () => { this.setState({usingLifecycleHovered: true}) }
+    usingLifecycleLeave = () => { this.setState({usingLifecycleHovered: false}) }
+    
+    usingPayloadEnter = () => { this.setState({usingPayloadHovered: true}) }
+    usingPayloadLeave = () => { this.setState({usingPayloadHovered: false}) }
+
+    usingLifecycleClicked = () => { this.setState({usingLifecycle: true, usingPayload: false}) }
+    usingPayloadClicked = () => { this.setState({usingLifecycle: false, usingPayload: true}) }
     
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -391,7 +410,11 @@ export default class StandaloneAPIs extends Component {
         const { showSignIn1, showSignedIn1, email1Empty, password1Empty, showSampleEmail1Err, showSamplePassword1Err, login1Successful, login1Hide,
                 showSignIn2, showSignedIn2, email2Empty, password2Empty, showSampleEmail2Err, showSamplePassword2Err, login2Successful, login2Hide, showEmail2Input, showEmail2Confirmed, showSignIn3, showSignedIn3, email3Empty, password3Empty, showSampleEmail3Err, showSamplePassword3Err, login3Successful} = this.state;
 
+                //* - - LAUNCH CHECKLIST VAR(S) - - *//
         const { launchCheck1, launchCheck2, launchCheck3, launchCheck4, launchCheck5, launchCheck6, launchCheck7, launchCheck8 } = this.state;
+
+                //* - - TWO TAB SELECTION VAR(S) - - *//
+        const { usingLifecycle, usingLifecycleHovered, usingPayload, usingPayloadHovered } = this.state;
 
         return(
             <Styles>
@@ -2764,9 +2787,777 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 }
+                {exampleAppsDirectorySync && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View sample Directory Sync apps for each SDK.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:</p>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img style={{width: "20%", marginTop: "5%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "12%"}}>github.com</p>
+                                    <h5>Node.js Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img style={{width: "14%"}} src='/assets/docs_example_apps_typescript_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>TypeScript Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "12%", marginTop: "8%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "17%"}}>github.com</p>
+                                    <h5>Ruby Directory Sync app</h5>
+                                </div>
+                            </div>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img src='/assets/flask-logo.svg' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Python Flask Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img src='/assets/docs_example_apps_django_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Python Django Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "11%"}}>github.com</p>
+                                    <h5>Go Directory Sync app</h5>
+                                </div>
+                            </div>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img src='/assets/docs_api_reference_java_language_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Java Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "11%"}}>github.com</p>
+                                    <h5>PHP Directory Sync app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "20%", marginTop: "4%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='img not available'/>
+                                    <p >github.com</p>
+                                    <h5>.NET Directory Sync app</h5>
+                                </div>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Handle Inactive Users</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn why inactive users are deleted from directories by default and how to configure this behavior.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                }
+                {handleInactieUsers && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Handle Inactive Users</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn why inactive users are deleted from directories by default and how to configure this behavior.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Traditionally, user provisioning involves the ingestion of user information from various providers (either through SCIM or non-SCIM integrations). This process typically includes categorizing users into states such as <span>active</span>, or <span>inactive</span> as provided by the IdP data source.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, the challenge arises when businesses need to handle these <span>inactive</span> users differently based on their unique operational and security requirements. Some developers may prefer a security-first approach, automatically deleting these users to enhance data security, while others may opt to retain this information for reactivation processes or comprehensive directory management.</p>
+                            </div>
+                    
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuration</h1>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To provide improved security and customizability, you can choose how <span>inactive</span> users are handled during the provisioning process. Here is an overview of the two options available:</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Secure flow (default)</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By selecting this option, customers can opt for a security-focused workflow. Any user marked as <span>inactive</span> will be automatically deleted from the directory, resulting in cleaner and potentially more secure data. This approach reduces the data footprint and minimizes potential security risks associated with unused accounts.</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Custom management flow</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, customers can choose to maintain the existing flow, keeping the <span>inactive</span> users in the directory. This approach supports reactivation processes and ensures a comprehensive view of the directory, allowing for easier reintegration of users when needed.</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Contact <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> to enable custom management flow for your environment.</p>
+                                </div>
+                            </div>
+
+                            <div id='img73' className={`enlargable-image-container ${this.state.enlargedImageId === 'img73' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img73')}>
+                                <img  src='/assets/handle_inactive_usr_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Weighing the tradeoffs</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both options offer distinct advantages, and the right choice depends on your organization’s unique needs and security posture:</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Security vs. flexibility</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The automatic deletion option prioritizes data security by minimizing the data footprint, while the customized management option provides flexibility for reactivation flows and comprehensive directory oversight.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Compliance and regulations</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Depending on industry regulations and compliance requirements, one option may align better with your organization’s obligations.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Operational efficiency</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider how each option impacts operational efficiency using WorkOS to handle a set of the computation for you.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Reactivation</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is temporarily removed, does the same user information need to be retained when they return? A new directory user will be created by default on return, whereas using the <span>inactive</span> user will retain the same information on reactivation.</p>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Understanding Events</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Understand the lifecycle of the events that occur in Directory Sync.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {understandingEvents &&
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Understanding the Events Lifecycle</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Understand the lifecycle of the events that occur in Directory Sync.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync events represent actions performed within directory providers. For example, an action could mean an IT admin assigning a user to your app or modifying a user group assigned to your app. These actions form the basis of user lifecycle management (ULM).</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides information about these actions through a set of structured events. This reference guide will cover the events Directory Sync produces and what they mean. To learn about how to handle these events on your side, see the data syncing guide.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Directory events</h1>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.activated</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when you or your customer have successfully created a connection between WorkOS and your customer’s directory provider.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img74' className={`enlargable-image-container ${this.state.enlargedImageId === 'img74' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img74')}>
+                                    <img  src='/assets/undrstanding_events_img1.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={31}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dsync.activated</span> is triggered if you manually create the directory connection in the <label className='demo-docs-hyperlink'>Developer Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, or your customer sets the connection up using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The directory ID identifies a connection with the directory of a particular customer. Your app should save it and associate the directory ID with the corresponding organization ID.</p>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.deleted</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when a Directory Sync connection is deleted in WorkOS, thus tearing down the link between your customer’s directory provider and your app.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img75' className={`enlargable-image-container ${this.state.enlargedImageId === 'img75' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img75')}>
+                                    <img  src='/assets/undrstanding_events_img2.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={32}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A connection can be deleted through the Admin Portal, <label className='demo-docs-hyperlink'>Developer Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, or <label className='demo-docs-hyperlink'>WorkOS API</label>. At this point your app should remove the association between the corresponding organization and its directory, as it no longer exists. Directories, users, and groups are typically deleted if your app offboards a customer altogether.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When receiving a <span>dsync.deleted</span> event, you can ignore the connection’s <span>state</span> attribute, since it indicates the state before the deletion occurs. When a directory is deleted in WorkOS, a sole <span>dsync.deleted</span> event is sent.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a <span>dsync.deleted</span> event is received, it indicates that the users and groups in that directory have been deleted in WorkOS. You can process the <span>dsync.deleted</span> event accordingly in your application, removing the organization’s groups and its users from your application or marking them as deleted. <span>dsync.user.deleted</span> and <span>dsync.group.deleted</span> events will not be sent for the deleted directory.</p>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Directory user events</h1>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.user.created</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when an IT admin creates a user using their directory provider. It is standard to create and provision the user in your app when you receive this event.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img76' className={`enlargable-image-container ${this.state.enlargedImageId === 'img76' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img76')}>
+                                    <img  src='/assets/undrstanding_events_img3.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={33}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+                               
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can add this user to your users table in your app and associate them with the directory ID and organization ID. You can begin to engage with the user at this point, e.g., send the user a “Getting Started” email.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>During the initial sync of any directory, you will receive a <span>dsync.user.created</span> event for each existing user in the directory.</p>
+
+                            </div>
+
+                            
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.user.updated</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when users’ attributes change. These attributes may be <label className='demo-docs-hyperlink'>standard attributes</label>, <label className='demo-docs-hyperlink'>auto-mapped attributes</label>, or <label className='demo-docs-hyperlink'>custom-mapped attributes</label>.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img77' className={`enlargable-image-container ${this.state.enlargedImageId === 'img77' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img77')}>
+                                    <img  src='/assets/undrstanding_events_img4.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={34}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+                               
+                               <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The payload <span>for dsync.user.updated</span> event shows changes between directory group snapshots in the <span>previous_attributes</span> property.</p>
+
+                               <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as <span>null</span>.</p>
+
+                            </div>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.user.deleted</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when a user is hard-deleted from a directory. Typically, you would remove the user from your app in this case. Note, that after Oct. 19, 2023, all new environments will delete Directory Users that get moved to the “inactive” state. If you would like to retain these users, please reach out to support. You can find <label className='demo-docs-hyperlink'>more details here</label>.</p>
+
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img78' className={`enlargable-image-container ${this.state.enlargedImageId === 'img78' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img78')}>
+                                    <img  src='/assets/undrstanding_events_img5.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={35}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>When users are removed from a directory, most providers will use a form of soft user deletion. In these cases, rather than receiving a <span style={{backgroundColor: "#cccc"}}>dsync.user.deleted</span> event, you will receive a <span style={{backgroundColor: "#cccc"}}>dsync.user.updated</span> event with the user’s <span style={{backgroundColor: "#cccc"}}>state</span> marked as <span style={{backgroundColor: "#cccc"}}>inactive</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Directory group events</h1>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.created</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when creating a directory group in the directory provider. WorkOS also sends this event when a directory connection is established.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img79' className={`enlargable-image-container ${this.state.enlargedImageId === 'img79' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img79')}>
+                                    <img  src='/assets/undrstanding_events_img6.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={36}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When WorkOS ingests this event, it first processes the users in the group. So, in most cases, you would receive <span>dsync.user.created</span>, then <span>dsync.group.created</span>, and finally, <span>dsync.group.user_added</span>.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information on best practices for out-of-sequence events, see the <label className='demo-docs-hyperlink'>data syncing guide</label>.</p>
+
+                            </div>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.updated</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event is sent when an attribute of a directory group has changed.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img80' className={`enlargable-image-container ${this.state.enlargedImageId === 'img80' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img80')}>
+                                    <img  src='/assets/undrstanding_events_img7.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={37}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The payload for <span>dsync.group.updated</span> events shows changes between directory group snapshots in the <span>previous_attributes property</span>.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as <span>null</span>.</p>
+
+
+                                <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.deleted</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when deleting a directory group in the directory provider.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a <span>dsync.group.deleted</span> event is received, it indicates that the members in that group have been deleted in WorkOS. You can process the <span>dsync.group.deleted</span> event accordingly in your application, removing the group’s members from your application or marking them as deleted. <span>dsync.group.user_removed</span> events will not be sent for the members in the deleted group.</p>
+
+                            </div>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img81' className={`enlargable-image-container ${this.state.enlargedImageId === 'img81' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img81')}>
+                                    <img  src='/assets/undrstanding_events_img8.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={38}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app relies on groups to sync users or map roles, you should remove access for the users who belonged to the deleted group.</p>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.user_added</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when adding a directory user to a directory group.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img82' className={`enlargable-image-container ${this.state.enlargedImageId === 'img82' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img82')}>
+                                    <img  src='/assets/undrstanding_events_img9.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={39}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should assign the group’s role to the newly added user.</p>
+
+                            <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.user_removed</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This event occurs when removing a directory user from a directory group.</p>
+
+                            <div className='two-tab-selection'>
+                                <div style={{borderBottom: usingLifecycle ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingLifecycleClicked}
+                                    onMouseEnter={this.usingLifecycleEnter}
+                                    onMouseLeave={this.usingLifecycleLeave}
+                                    style={{fontWeight: usingLifecycle ? "bold" : "normal", backgroundColor: usingLifecycleHovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Lifecycle</button>
+                                </div>
+                                <div style={{borderBottom: usingPayload ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingPayloadClicked}
+                                    onMouseEnter={this.usingPayloadEnter}
+                                    onMouseLeave={this.usingPayloadLeave}
+                                    style={{fontWeight: usingPayload ? "bold" : "normal", backgroundColor: usingPayloadHovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Payload</button>
+                                </div>
+                            </div>
+
+                            {usingLifecycle && 
+                           
+                                <div id='img83' className={`enlargable-image-container ${this.state.enlargedImageId === 'img83' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img83')}>
+                                    <img  src='/assets/undrstanding_events_img10.png' alt="Enlargable" className="image" />
+                                </div>
+                                
+                            }
+
+                            {usingPayload && 
+                                
+                                <CodeSnippetStruct 
+                                id={40}
+                                headerTabs={0}
+                                dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                sideBarOpen={sidebarMenuClicked}
+                                snippet="Sample event object" 
+                                updateSelectedLang={this.newLangSelected}
+                                selectedLang={this.state.currentSelectedLanguage}/>
+                            
+                            }
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should remove the group’s role from the user who belonged to the group.</p>
+
+
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Data reconciliation techniques</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>With the WorkOS state API</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API allows for data reconciliation for your app. You can use the WorkOS API to pull the latest data to reconcile any data discrepancies between WorkOS and your app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A standard method apps use for data reconciliation is to set up a cron job that pulls from the WorkOS API on a consistent interval, e.g., every 1 to 6 hours, depending on your app’s user provisioning volume.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><strong>Known issue:</strong> Keeping track of WorkOS updated timestamps is of limited use right now because group membership changes for users do not alter the WorkOS <span>updated_at</span> timestamp. We’re actively working on this issue.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The general approach for performing a full sync of Directory Sync objects goes as follows:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Traverse all directory groups and update all local objects.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Traverse all directory users and update all local objects.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Extract group membership information from each user. Compare with local membership state. Add and remove memberships accordingly.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Compare the list of local users to all users seen in WorkOS traversal. Deactivate any users that exist locally but not on WorkOS.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Compare the list of local groups to all groups seen on WorkOS traversal. Deactivate any groups that exist locally but not on WorkOS.</p></li>
+                            </ol>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>With the events API</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also reconcile directory data using the events API. See our <label className='demo-docs-hyperlink'>data syncing guide</label> to learn more.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>User Attributes</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Configure how attributes map from directory providers to Directory Users.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
             </Styles>
         )
     }
 }
 
-//* IMAGE 72 (latest)
+//* IMAGE 83 (latest)
