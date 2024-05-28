@@ -1439,7 +1439,6 @@ const Styles = styled.div `
 
 }
 
-
     //! - - CHECKLIST - - !//
 
 .checklist:after {
@@ -1525,6 +1524,60 @@ const Styles = styled.div `
 .dos-donts p {
     margin-top: 0px;
 }
+
+
+    //! - - Hidden dropdown button - - !// 
+
+.hidden-dropdown-btn {
+    border-radius: 5px;
+}
+
+.hidden-dropdown-btn:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.hidden-dropdown-btn:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.hdb-icon {
+    float: left;
+    text-align: center;
+    width: 8%;
+}
+
+.hdb-text {
+    float: left;
+    text-align: left;
+    width: 92%;
+}
+
+    // # ICON
+
+.hdb-icon img {
+    width: 40%;
+    margin-top: 17%;
+}
+
+.hdb-icon-img {
+    transition: transform 0.1s ease; /* Add transition for transform property */
+}
+
+.hdb-icon-img-rotated {
+    transform: rotate(90deg); /* Rotate the arrow 180 degrees */
+}
+
+
+    // # TEXT
+
+.hdb-text p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 

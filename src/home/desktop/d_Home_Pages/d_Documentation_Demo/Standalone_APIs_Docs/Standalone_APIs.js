@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import CodeSnippetStruct from '../d_Documentation_Components/d_Code_Snippet_Structure'
+import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div  `
 
@@ -27,7 +28,8 @@ export default class StandaloneAPIs extends Component {
             quickStartDirectorySync: false,
             exampleAppsDirectorySync: false,
             handleInactieUsers: false,
-            understandingEvents: true,
+            understandingEvents: false,
+            userAttributes: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -111,7 +113,11 @@ export default class StandaloneAPIs extends Component {
             usingLifecycle: true,
             usingLifecycleHovered: false,
             usingPayload: false,
-            usingPayloadHovered: false
+            usingPayloadHovered: false,
+
+            //* - - HIDDEN DROPDOWN TOGGLE(S) VAR(S) - *//
+            hiddenDropdownBtn1: false,
+
         }
     }
 
@@ -388,11 +394,17 @@ export default class StandaloneAPIs extends Component {
 
     usingLifecycleClicked = () => { this.setState({usingLifecycle: true, usingPayload: false}) }
     usingPayloadClicked = () => { this.setState({usingLifecycle: false, usingPayload: true}) }
+
+    hiddenDropdownBtnClicked = (num) => {
+        this.setState((prevState) => ({
+            [`hiddenDropdownBtn${num}`]: !prevState[`hiddenDropdownBtn${num}`]
+        }));
+    }
     
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -415,6 +427,9 @@ export default class StandaloneAPIs extends Component {
 
                 //* - - TWO TAB SELECTION VAR(S) - - *//
         const { usingLifecycle, usingLifecycleHovered, usingPayload, usingPayloadHovered } = this.state;
+
+                //* - - HIDDEN DROPDOWN TOGGLE(S) VAR(S) - *//
+        const { hiddenDropdownBtn1 } = this.state;
 
         return(
             <Styles>
@@ -3523,7 +3538,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className='api-keys'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><strong>Known issue:</strong> Keeping track of WorkOS updated timestamps is of limited use right now because group membership changes for users do not alter the WorkOS <span>updated_at</span> timestamp. We’re actively working on this issue.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><strong>Known issue:</strong> Keeping track of WorkOS updated timestamps is of limited use right now because group membership changes for users do not alter the WorkOS <span style={{backgroundColor: "#ccc"}}>updated_at</span> timestamp. We’re actively working on this issue.</p>
                                     </div>
                                 </div>
                             </div>
@@ -3555,9 +3570,335 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 }
+                {userAttributes && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Attributes</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Configure how attributes map from directory providers to Directory Users.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS can automatically find and normalize most common attributes from directory providers into the Directory User object, which represents an enterprise user. More unique cases can be mapped by your customers; i.e. IT Admins.</p>
+
+                            <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
+                                <div className='hdb-icon'>
+                                    <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : ""}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='hdb-text'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Directory User Object</strong></p>
+                                </div>
+                            </div>
+
+                            <CSSTransition
+                            in={hiddenDropdownBtn1}
+                            timeout={500}
+                            classNames="dialog-slide"
+                            unmountOnExit
+                            >
+                                <div style={{marginTop: "2.5%"}}>
+                                    
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Here is an example Directory User. The data stored varies per directory provider and may include attributes such as photo URLs, pay groups, supervisors, etc.</p>
+
+                                    <CodeSnippetStruct 
+                                    id={41}
+                                    headerTabs={0}
+                                    dropdownDisabled={true}
+                                    dropdownDisabledAndHidden={true}
+                                    showOnlyJSONTab={true}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Directory User" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                </div>
+                            </CSSTransition>
+
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll explain how to map data from directory providers to the Directory Users.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Standard attributes</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>The most common user information, normalized across providers.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Auto-mapped attributes</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Detailed user attributes for specific use cases, normalized across providers. You can opt-in to each attribute you want to receive.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Custom-mapped attributes</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>For unique cases, you can create your own attributes that your customers can map when setting up a directory.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Raw attributes</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <div className='api-keys'>
+                                        <p>The entire unprocessed attribute payload that we receive from the directory provider and provide in a field called <span>raw_attributes</span>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Standard attributes</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Every Directory User comes with the following standard attributes. These are the core set of attributes that are common across all identity providers. These are structured fields with a guaranteed schema in the top-level Directory User payload.</p>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Attribute</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Type and description</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Status</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>idp_id</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s unique identifier, assigned by the directory provider. Different directory providers use different ID formats</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Required</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>first_name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s first name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>last_name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s last name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>username</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s username</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Required</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>emails</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s list of email objects (type, value, primary)</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Required</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>state</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s state. May be <span>active</span>, or <span>inactive</span></p>
+                                    </div>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Required</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>job_title</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s job title</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Custom attributes</h1>
+                            
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more detailed user information, you can opt-in to auto-mapped custom attributes and define your own custom-mapped custom attributes. Custom attributes will appear in the custom_attributes field. These attributes can be configured in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Auto-mapped attributes</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When enabled, the values will be mapped without additional setup. Not every directory provider has data for every field, so they are always optional if enabled. These fields are named and schematized by WorkOS – they cannot be renamed.</p>
+                            
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Attribute</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Type and description</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Status</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>addresses</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>TThe user’s list of address objects (<span>street_address</span>, <span>locality</span>, <span>region</span>, <span>postal_code</span>, <span>country</span>, <span>primary</span>, <span>raw_address</span>)</p>
+                                    </div>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>cost_center_name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s cost center name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div  className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>department_name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>TThe user’s department name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>division_name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s division name</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>employee_type</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s employment type</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "55%" : "80%", fontFamily: "inconsolata",}}>employment_start_date</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s start date</p>
+                                    </div>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>manager_email</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The email address for the user’s manager</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Enable or disable an auto-mapped attribute</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Auto-mapped attributes can be enabled or disabled in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> under Directory Sync configuration.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Updates to these settings will typically take 30 minutes to 1 hour to reflect in your Directory User API response.</p>
+                                </div>
+                            </div>
+
+                            <div id='img84' className={`enlargable-image-container ${this.state.enlargedImageId === 'img84' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img84')}>
+                                <img  src='/assets/user_att_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Support per directory provider</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The following support table outlines the attribute availability across directory providers.</p>
+
+                            <div className='complex-sliding-table'>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
             </Styles>
         )
     }
 }
 
-//* IMAGE 83 (latest)
+//* IMAGE 84 (latest)
