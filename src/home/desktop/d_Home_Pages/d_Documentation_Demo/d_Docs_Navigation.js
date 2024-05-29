@@ -1578,6 +1578,134 @@ const Styles = styled.div `
     margin-bottom: 1%;
 }
 
+//! - - Complex Sliding table - - !//
+
+
+
+
+// - COMPLEX TABLE HEADER - //
+
+
+.complex-sliding-table-container:after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+
+.complex-sliding-table-container {
+   height: auto;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+}
+
+
+.complex-sliding-table-left {
+   height: 100%;
+   width: 34%;
+   float: left;
+   text-align: left;
+   border-right: 1px solid #ccc;
+}
+
+
+.complex-sliding-table-right {
+   height: 100%;
+   width: 65%;
+   float: left;
+   text-align: left;
+   overflow-x: auto;
+   overflow-y: hidden; /* Prevent vertical scroll */
+   display: flex;
+}
+
+
+
+
+.complex-sliding-table-left-cell {
+   border-bottom: 1px solid #ccc;
+}
+
+
+   // # HEADER TEXT
+
+
+.complex-sliding-table-left-cell h5 {
+    line-height: 1.2;
+    margin-left: 4%;
+    font-size: 75%;
+}
+
+
+.complex-sliding-table-left-cell p {
+   line-height: 1.4;
+   font-size: 80%;
+   font-family: inconsolata;
+   margin-left: 4%;
+}
+
+
+   // - INNER COMPLEX SLIDING TABLE - //
+
+
+.inner-complex-sliding-table {
+   width: 100%;
+   display: flex;
+   width: max-content;
+}
+
+
+.inner-complex-sliding-table:after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
+
+.icst-column {
+   float: left;
+   text-align: center;
+   width: 6.2em;
+   // border-right: 1px solid #ccc;
+}
+
+
+.icst-column:last-child {
+   border-right: 1px solid transparent;
+}
+
+
+.icst-cell {
+   border-bottom: 1px solid #ccc;
+}
+
+
+.icst-cell h5 {
+   line-height: 1.2;
+   font-size: 75%;
+}
+
+
+.icst-cell p {
+   line-height: 1.2;
+   font-size: 79.7%;
+}
+
+
+.icst-cell button {
+   background-color: white;
+   height: 18px;
+   width: 18px;
+   padding: 0px;
+   border-radius: 10px;
+}
+
+
+.icst-cell img {
+   width: 85%;
+}
+
+
 
         // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
 

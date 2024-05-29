@@ -29,7 +29,8 @@ export default class StandaloneAPIs extends Component {
             exampleAppsDirectorySync: false,
             handleInactieUsers: false,
             understandingEvents: false,
-            userAttributes: true,
+            userAttributes: false,
+            roleData: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -404,7 +405,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -3889,9 +3890,504 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The following support table outlines the attribute availability across directory providers.</p>
 
-                            <div className='complex-sliding-table'>
+                            <div className='complex-sliding-table-container'>
+                               <div style={{width: sidebarMenuClicked ? "44%" : ""}} className='complex-sliding-table-left'>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Attributes</h5>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>addresses</p>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>cost_center</p>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>department_name</p>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>division_name</p>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>employment_start_date</p>
+                                   </div>
+                                   <div className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>employee_type</p>
+                                   </div>
+                                   <div style={{borderBottomLeftRadius: "9px", border: "0px solid transparent"}} className='complex-sliding-table-left-cell'>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>manager_email</p>
+                                   </div>
+                               </div>
+                               <div style={{width: sidebarMenuClicked ? "55%" : ""}} className='complex-sliding-table-right'>
+                                   <div class="inner-complex-sliding-table">
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>SCIM</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Google</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Workday</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>HiBob</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>People HR</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>BambooHR</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Breathe HR</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Cezanne HR</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#d3eee1", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #d3eee1"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/directory_sync_dos_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                       <div className='icst-column'>
+                                           <div className='icst-cell'>
+                                               <h5 style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>Fourth</h5>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                           <div style={{borderBottom: "0px solid transparent"}} className='icst-cell'>
+                                               <p style={{fontSize: sidebarMenuClicked ? "70%" : ""}}>
+                                               <button style={{backgroundColor: "#fff", width: sidebarMenuClicked ? "14px" : "", height: sidebarMenuClicked ? "14px" : "",  marginTop: sidebarMenuClicked ? "0px" : "", border: "2px solid #fff"}}><img style={{marginBottom: sidebarMenuClicked ? "30%" : "", marginTop: sidebarMenuClicked ? "0px": ""}} src='/assets/user_att_table_dash_icon.png' alt='no img available'/></button>
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                              
+                           </div>
 
+                           <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Custom-mapped attributes</h3>
+
+                           <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application may require additional fields, this is where custom-mapped fields are useful. You can create attributes that appear as fields in the <label className='demo-docs-hyperlink'>Admin Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Your customers can map these fields to the correct values in their system when setting up Directory Sync with their directory provider.</p>
+
+                           <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Nested attributes are not supported. These admin-defined attributes must be defined as top-level flat keys.</p>
+                                </div>
                             </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a custom-mapped attribute</h3>
+
+                           <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom-mapped attributes can be created in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> under Directory Sync configuration. For attributes set as <i>Required</i>, your customers must map the field to a relevant field in their HRIS or SCIM provider. This can be done via the <label className='demo-docs-hyperlink'>Admin Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                           <div id='img85' className={`enlargable-image-container ${this.state.enlargedImageId === 'img85' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img85')}>
+                                <img  src='/assets/user_att_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Raw attributes</h1>
+                            
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These are unfiltered and unstructured attributes that are unique to each directory provider. These attributes are included as fields in the <span>raw_attributes</span> object that is included in the <label className='demo-docs-hyperlink'>Directory User</label>.</p>
+                            </div>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Are existing directories required to update the attribute mapping when new required custom attributes are added?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>No, when you add a new required custom attribute to your settings, this won’t be retroactively required for directories that have already been set up and configured. However, in the WorkOS dashboard, you will be able to navigate directly to the existing directory and fill in details for those attributes manually.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>We do not currently support this functionality, as you have to define any custom attributes in the dashboard first. Please reach out to <label className='demo-docs-hyperlink'>support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> if you have a specific use case that you would like to discuss.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Role Data</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to map role data from directory providers to roles in your app.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {roleData && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Data</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to map role data from directory providers to roles in your app.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User roles designate what actions a user can perform in your app and what resources they can access. Directory providers store information about user roles in the form of groups or attributes.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will explain common strategies for sourcing roles from directory providers and mapping them to roles in your app.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Role</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A primitive in your app that defines specific permissions for the users. Roles are often defined as an ability or a job title, for example, “Editor” or “Accountant”.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Group</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A collection of users based on shared traits. Groups are defined and managed by IT admins in the directory provider.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>JIT user provisioning</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <div className='api-keys'>
+                                        <p>Just-in-time (JIT) user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role doesn’t exist until the user creates it – just-in-time.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Role Information</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customers will store role information in different forms, depending on their preferred provisioning workflow. WorkOS allows for flexibility in how you source role data. You can fetch role data via three distinct mechanisms:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
+                            </ul>
 
                         </div>
                     </div>
@@ -3901,4 +4397,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 84 (latest)
+//* IMAGE 85 (latest)
