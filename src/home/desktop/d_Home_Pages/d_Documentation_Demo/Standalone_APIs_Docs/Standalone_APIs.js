@@ -30,7 +30,12 @@ export default class StandaloneAPIs extends Component {
             handleInactieUsers: false,
             understandingEvents: false,
             userAttributes: false,
-            roleData: true,
+            roleData: false,
+            roleArchitecture: false,
+            adminPortal: false,
+            exampleAppsAdminPortal: false,
+            customBranding: false,
+            auditLogs: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -405,7 +410,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData } = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -2877,8 +2882,6 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-
-
                         </div>
                     </div>
                 }
@@ -4301,7 +4304,7 @@ export default class StandaloneAPIs extends Component {
 
                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom-mapped attributes can be created in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> under Directory Sync configuration. For attributes set as <i>Required</i>, your customers must map the field to a relevant field in their HRIS or SCIM provider. This can be done via the <label className='demo-docs-hyperlink'>Admin Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
-                           <div id='img85' className={`enlargable-image-container ${this.state.enlargedImageId === 'img85' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img85')}>
+                            <div id='img85' className={`enlargable-image-container ${this.state.enlargedImageId === 'img85' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img85')}>
                                 <img  src='/assets/user_att_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -4386,10 +4389,919 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customers will store role information in different forms, depending on their preferred provisioning workflow. WorkOS allows for flexibility in how you source role data. You can fetch role data via three distinct mechanisms:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Groups from your customer’s directory provider.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A custom-mapped role attribute from the directory user profile.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A groups attribute in the SSO user profile.</p></li>
                             </ul>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The type of mechanism needed will depend on the level of support for roles in your app, your app’s architecture, and your customer’s workflows:</p>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Approach</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Your app</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Your customer</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Group mapping</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Sets roles based on your customer’s directory groups</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Uses groups in their directory provider to assign roles in your app</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Attribute mapping</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Sets roles based on a per-user custom-mapped attribute</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Assigns roles using attributes on individual users in their directory provider</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>SSO attribute mapping</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>You get role data each time a user logs in (JIT user provisioning)</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Uses groups in their directory provider to assign roles in your app</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Group-based role</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users are assigned to groups via the directory provider. Groups are typically synonymous with roles in your app. Therefore, IT admins will often map a group one-to-one to a role.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sample scenario</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider the fictional SaaS company <i>HireOS</i>, which offers recruiting software to other businesses. HireOS is an online application allowing customers to track leads, candidates, and interviews.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>HireOS</i> has integrated Directory Sync and supports group-based role mapping. For example, a <i>HireOS</i> customer would like to assign their recruiting team to it. The customer’s IT admin would take the following steps:</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a group “Recruiting – HireOS Viewer” using their directory provider.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Push the group to <i>HireOS</i> via the directory provider. This is configured in the directory provider admin console.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Go to <i>HireOS'</i> “Settings → Role Mapping” page.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a role mapping between “Recruiting – HireOS Viewer” and a e.g. default role of “viewer” on <i>HireOS'</i>.</p></li>
+                            </ol>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From this point on, all new users added to “Recruiting – HireOS Viewer” will be given “viewer” permissions on <i>HireOS'</i>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to access group data. You can source group data from <label className='demo-docs-hyperlink'>directory group</label> objects or the SSO-based groups attribute if your app is using WorkOS <label className='demo-docs-hyperlink'>Single Sign-On</label>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory group</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS normalizes group information across directory providers, so the information you receive is consistent. Your app only interfaces with a <label className='demo-docs-hyperlink'>directory group</label>.</p>
+
+                            <CodeSnippetStruct 
+                            id={42}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Directory group" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app stores the mapping between the directory group ID and the directory user ID. This relationship defines group memberships for any given user. Keeping an additional mapping between the directory group ID and a role in your app allows you to determine which role a user receives.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are a powerful tool to provision users with the correct roles inside your app. WorkOS automatically sends changes to a given directory group to your app. As a result, your app is always up-to-date with real-time updates when an IT admin changes a user’s access to resources. This way, you ensure only authorized users get access to resources without delay.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>SSO-based groups attribute</h3>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you have integrated WorkOS <label className='demo-docs-hyperlink'>Single Sign-On</label>, you can retrieve groups via the <span>groups</span> attribute in an <label className='demo-docs-hyperlink'>SSO user profile</label>. There are drawbacks to using SSO-based groups compared to the directory group approach, but it can be quick to set up in some cases.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={43}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="SSO user profile" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use these group name(s) to map onto user roles in your app using JIT user provisioning.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Strictly</strong> using JIT user provisioning comes with a few caveats:</p>
+
+                            <div className='api-keys'>
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app won’t know groups ahead-of-time. As a result, you’ll have to explicitly tell your customer what to name the group(s), thus hardcoding the mapping. e.g., the “Engineering” group always maps to the e.g., “viewer” role in your app.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app will receive updates to this user’s group data only once they sign in with SSO again. This delay can allow unauthorized users to access resources using a stale role.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Apps often assign a user a default introductory role (instead of mapping the correct role) when using JIT user provisioning.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customer must explicitly map the SAML <span>groups</span> attribute in the SSO setup so that you can retrieve that attribute in the SSO profile.</p></li>
+                                </ul>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information, see the <label className='demo-docs-hyperlink'>JIT user provisioning guide</label>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Attribute-based role</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use <label className='demo-docs-hyperlink'>custom-mapped attributes</label> if your customers do not use groups to establish and manage user roles.</p>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can create a custom-mapped attribute role (e.g., <span>myRole</span>) in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> under Configuration → Directory Sync. You can set the status of a role attribute to “Required” or “Optional”.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={44}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Directory user with a custom-mapped attribute" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The newly created attribute will appear as a field in the <label className='demo-docs-hyperlink'>Admin Portal</label>. When setting up Directory Sync with their directory provider in Admin Portal, your customers can map this role field to a field in their directory provider. You’ll have to communicate with your customer what value(s) you expect in the custom-mapped attribute.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An example being that <span>myRole</span> should be one of <span>"admin"</span>, <span>"viewer"</span>, or <span>"editor"</span>. This allows your app to parse the <span>myRole</span> field value correctly.</p>
+
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Role Architecture</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn about common app architectures and edge cases for mapping roles.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
+                }
+                {roleArchitecture &&
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Architecture</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about common app architectures and edge cases for mapping roles.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Apps take different approaches to allow customers to map groups and attributes from their directory providers to roles in the app. For example, some apps chose to surface UI to their end users to perform the mappings. Other times, apps perform the mappings opaquely.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will go over common strategies to allow your customers to map roles in your app.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>RBAC</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Role-based access control (or RBAC) is a methodology for restricting app resources to only authorized users. RBAC defines primitives such as roles, resources, users, and policies to configure access control within an app. RBAC is an implementation detail. End users are not aware of RBAC.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How to implement role mapping</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>We’ll go over a few common role mapping implementations.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have no roles</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app does not support roles, you can essentially ignore the group or attribute-based role data provided by WorkOS. You can build an additional role system at a later date. You can always pull directory group information and perform a migration in your app – to backfill any role data.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have fixed roles</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Maintaining a fixed set of roles is the most common approach apps take. B2B apps often surface a concise set of roles to their users, such as an “Admin”, “Editor”, and “Viewer” role.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A common approach to creating the role mappings is to build a surface in your app that shows an admin the groups associated with their directory provider. Then, your customer can map these groups to roles in your app. Your app then stores the mapping between directory group IDs and roles. Group assignment is the preferred app assignment workflow for many IT admins as it saves on manual per-user assignments.</p>
+
+                            <div id='img86' className={`enlargable-image-container ${this.state.enlargedImageId === 'img86' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img86')}>
+                                <img  src='/assets/role_architecture_img1.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As an alternative to building UI, some apps choose to store mappings in a configuration file i.e. a JSON or YAML file.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, a <label className='demo-docs-hyperlink'>custom-mapped attribute</label> can be used as a direct mapping if you cannot support UI. Your app will receive all custom attribute changes in real-time.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Initial directory setup</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When your customer first activates their directory, your app will not have role mapping configuration set at this point. Despite this, WorkOS will send you events based on changes to the directory. To account for the role mapping not being set, you can grant all incoming users a default role until the role mapping setup is complete.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After that point, you can backfill existing users with the correct roles. To backfill, you can initiate a sync to pull the latest directory state using one of the <span className='demo-docs-hyperlink'>WorkOS SDKs</span>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have custom roles</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Often, custom role creation functionality uses RBAC under the hood. For example, you can use RBAC alongside Directory Sync to map custom role information to your customer’s custom roles. This workflow remains the same as the fixed roles architecture, with an additional role creation UI in your app. Creating mappings is performed as usual, with IT admins additionally allowed to create custom roles.</p>
+
+                            <div id='img87' className={`enlargable-image-container ${this.state.enlargedImageId === 'img87' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img87')}>
+                                <img  src='/assets/role_architecture_img2.png' alt="Enlargable" className="image" />
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use a custom-mapped attribute as a direct mapping in this scenario. First, you’ll have to let your customers know the new role value allowed in their directory provider. Then, the IT admin must ensure they pass the correct newly created role via their directory provider.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Common edge cases</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>A user is part of multiple groups</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Having a user who belongs to multiple groups is a common scenario. For example, there might be a case where an employee <i>Jane</i> is an <i>Engineering Manager</i> and belongs to an “Engineering”, “Manager”, and “Admin” group. The most common way to map multiple groups to a role is to grant the user the role associated with the most privileged group. In this case, “Admin” has the most permissions, giving <i>Jane</i> the “Admin” role.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Another common approach is to add the permission sets together to grant the user all permissions associated with each role assigned to each group. This role addition means the user receives every permission for each role.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>An IT admin wants the ability to manually override a user’s role</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customer might want to retain the ability to override a role for a particular user. WorkOS recommends achieving this by using both a group and attribute-based approach. Roles map to groups by default but can be manually modified with attributes if the attribute exists in the directory provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory group events overwrite their manually inputted role.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>No role information exists for a particular user</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If no role information exists from any source, granting a user a default role with fewer permissions, such as a “Viewer” role is common.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Admin Portal</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A first-class Single Sign-On and Directory Sync onboarding experience for organization admins.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {adminPortal && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Admin Portal</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A first-class Single Sign-On and Directory Sync onboarding experience for organization admins.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Admin Portal provides an out-of-the-box UI for IT admins to configure SSO and Directory Sync Connections. Designed to remove friction, custom walk-through documentation for each Identity Provider means that organization admins can onboard their organizations without high-touch support from your team. Easy to integrate and fully maintained and hosted by WorkOS, the Admin Portal makes the SSO and Directory Sync setup process simple, fast, and secure.</p>
+
+                            <div id='img88' className={`enlargable-image-container ${this.state.enlargedImageId === 'img88' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img88')}>
+                                <img  src='/assets/admin_portal_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Workflow Options</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two main workflows for initiating an Admin Portal session for IT admins. You can either share a link to the Admin Portal from the WorkOS Dashboard, or you can seamlessly integrate Admin Portal into your application through WorkOS SDKs or APIs.</p>
+
+                            <div id='img89' className={`enlargable-image-container ${this.state.enlargedImageId === 'img89' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img89')}>
+                                <img  src='/assets/admin_portal_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you want to provide an IT admin with a link to the Admin Portal, in a email for example, then you would need to create that link in the WorkOS Dashboard.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, if you are adding a button to open the Admin Portal from within your application, then you would need to use the API.</p>
+
+                            <div className='complex-table-header'>
+                                <div  style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Workflow</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "20%"}}  className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Use cases</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "25%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Security</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "35%", float: "left", textAlign: "left"}} className='c-table-header4'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Return URL and Success URLs</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div  style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Share a link from the dashboard</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Setup only</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can be revoked; Automatically revoked on setup completion; Expires after 30 days</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "35%", float: "left", textAlign: "left"}} className='c-table-header4'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Not applicable</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Generate a link via the API</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Setup and post-configuration</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "25%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can not be revoked; Expires after 5 minutes</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "35%", float: "left", textAlign: "left"}} className='c-table-header4'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can be configured on the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img style={{width: sidebarMenuClicked ? "95%" : "6%"}} className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page in the dashboard or specified as a parameter for the API</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of these guides, you’ll need:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS Account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
+                            </ul>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API object definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Connection</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Represents the method by which users of an organization sign in to your application.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Organization</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Describes an organization whose users sign in with a SSO Connection, or whose users are synced with a Directory Sync Connection.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Portal Link</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A temporary link to initiate an Admin Portal session.</p>
+                                </div>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Setup Link from WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Admin Portal Setup Link gives your customer access to a guided configuration experience through our Admin Portal. It instructs them how to configure their Identity or Directory Provider. If successfully configured, no other action is required and you’ll see an Active connection appear under the Organization.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First decide whether your customer will be configuring an Identity Provider, a Directory Provider OR both. Once you generate a link, the customer will have access for 30 days or until configured.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need a <label className='demo-docs-hyperlink'>WorkOS Dashboard account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to create an organization that will represent the enterprise you are onboarding.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create Organization</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your WorkOS Dashboard account and create a new Organization.</p>
+
+                            <div id='img90' className={`enlargable-image-container ${this.state.enlargedImageId === 'img90' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img90')}>
+                                <img  src='/assets/admin_portal_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Generate a Setup Link</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Invite Admin” button, select the features to include and then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link.” Only one link can be active at a time. After creating the initial link, you can click the “Manage” button to revoke the existing link before creating a new one.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sharing a Setup Link</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what the link does and how long the link is active.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrate with your app</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll walk you through the full end-to-end integration of the Admin Portal into your application.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> to your WorkOS Dashboard account to see code examples pre-filled with your test API keys and resource IDs.</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure Admin Portal redirect links</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate, you must configure your app’s default return URI in the production environment. A button in the Admin Portal will use this value to allow users to return to your app unless otherwise specified when generating the Admin Portal link.</p>
+
+                            <div id='img91' className={`enlargable-image-container ${this.state.enlargedImageId === 'img91' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img91')}>
+                                <img  src='/assets/admin_portal_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, you can configure success URIs to redirect users upon successfully setting up Single Sign-On, Directory Sync, or Log Streams.</p>
+
+                            <div id='img92' className={`enlargable-image-container ${this.state.enlargedImageId === 'img92' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img92')}>
+                                <img  src='/assets/admin_portal_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>All redirect links must use HTTPS.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can configure these links in the <label className='demo-docs-hyperlink'>Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install the WorkOS SDK</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.</p>
+
+
+                            <div className='demo-docs-languages'>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("javascript")} 
+                                    style={{boxShadow: javascriptSelected || yarnSelected ? "0 0 0 2px #6363f1" : "none", border: javascriptSelected || yarnSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{marginTop: sidebarMenuClicked ? "15%" : "0%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Node.js</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("ruby")}
+                                    style={{boxShadow: rubySelected || bundlerSelected ? "0 0 0 2px #6363f1" : "none", border: rubySelected || bundlerSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "43%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%", fontSize: sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""}}>Ruby</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("laravel")}
+                                    style={{boxShadow: laravelSelected ? "0 0 0 2px #6363f1" : "none", border: laravelSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "50%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_laravel_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Laravel</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("python")}
+                                    style={{boxShadow: pythonSelected ? "0 0 0 2px #6363f1" : "none", border: pythonSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "27%" : "17%"}} src='/assets/docs_api_reference_python_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Python</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className='demo-docs-languages'>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("php")}
+                                    style={{boxShadow: phpSelected ? "0 0 0 2px #6363f1" : "none", border: phpSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "77.5%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "0px"}}>PHP</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("go")}
+                                    style={{boxShadow: goSelected ? "0 0 0 2px #6363f1" : "none", border: goSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "78%", marginTop: sidebarMenuClicked ? "15%" : "7.5%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "2%"}}>Go</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("java")}
+                                    style={{boxShadow: javaSelected || gradleSelected ? "0 0 0 2px #6363f1" : "none", border: javaSelected || gradleSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "22%" : "17%"}} src='/assets/docs_api_reference_java_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Java</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("dotnet")}
+                                    style={{boxShadow: dotnetSelected ? "0 0 0 2px #6363f1" : "none", border: dotnetSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{marginTop: sidebarMenuClicked ? "18%" : "10%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.3%"}}>.NET</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""} style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Install the SDK using the command below.</p>
+
+                            <CodeSnippetStruct
+                            id={0}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Install the WorkOS SDK"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as <span>WORKOS_API_KEY</span> and <span>WORKOS_CLIENT_ID</span>, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={4}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Environment variables" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a new Organization</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each Admin Portal session is scoped to a specific Organization resource, meaning a session is only capable of managing a Connection that belongs to its associated Organization. Organizations may only have one Connection.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For every customer in your application that would like access to the Admin Portal, you must create an Organization and maintain a reference to its ID.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Create an Organization when onboarding a new customer.</p>
+                                </div>
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={45}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Create an Organization"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Redirect an IT admin to the Admin Portal</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A Portal Link is your enterprise user’s gateway to accessing their Admin Portal. Each Portal Link is generated using an Organization resource ID. Only resources belonging to the specified Organization can be managed during a Portal Session.</p>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the API call to generate an Admin Portal Link, you will pass an <span>intent</span> with possible values of <span>sso</span> for an Admin Portal session to create an SSO connection, and <span>dsync</span> for an Admin Portal session to create a Directory Sync connection.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For security reasons, Portal Links expire 5 minutes after they’re created, so we recommend redirecting users immediately (i.e. don’t email the user Portal Links).</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The endpoint that redirects a user to the Admin Portal should be guarded by auth in your application and only available to IT admins.</p>
+                                </div>
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={46}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Redirect to Admin Portal"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An optional return_url parameter can be used to describe exactly where a user should be sent when they are finished in the Admin Portal. If one is not provided, the success URL configured on the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page of the dashboard will be used.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>C</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Using Admin Portal</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll review the features of Admin Portal from an IT manager’s perspective.</p>
+
+                            <div id='img93' className={`enlargable-image-container ${this.state.enlargedImageId === 'img93' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img93')}>
+                                <img  src='/assets/admin_portal_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may also edit your metadata configuration from the Admin Portal.</p>
+
+                            <div id='img94' className={`enlargable-image-container ${this.state.enlargedImageId === 'img94' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img94')}>
+                                <img  src='/assets/admin_portal_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Recent Events section displays a list of recent connection events by timestamp, and can be sorted by <span>state</span>.</p>
+                            </div>
+
+                            <div id='img95' className={`enlargable-image-container ${this.state.enlargedImageId === 'img95' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img95')}>
+                                <img  src='/assets/admin_portal_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on an event in the list to see event details, such as the request made to the IdP, and the response.</p>
+
+                            <div id='img96' className={`enlargable-image-container ${this.state.enlargedImageId === 'img96' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img96')}>
+                                <img  src='/assets/admin_portal_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you wish to reset your SSO connection and set it up from scratch, select “Reset Connection” and follow the prompts.</p>
+
+                            <div id='img97' className={`enlargable-image-container ${this.state.enlargedImageId === 'img97' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img97')}>
+                                <img  src='/assets/admin_portal_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Managing Directories</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Admin Portal Directory Sync screen, you can view the directory provider details and connection status, user and group counts, last sync time, and a full user list. Hover over the groups column for a particular user to see the list of groups they are in.</p>
+
+                            <div id='img98' className={`enlargable-image-container ${this.state.enlargedImageId === 'img98' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img98')}>
+                                <img  src='/assets/admin_portal_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Example Apps</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View sample Admin Portal apps for each SDK.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {exampleAppsAdminPortal && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View sample Admin Portal apps for each SDK.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power the Admin Portal:</p>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img style={{width: "20%", marginTop: "5%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "12%"}}>github.com</p>
+                                    <h5>Node.js Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img style={{width: "14%"}} src='/assets/docs_example_apps_typescript_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>TypeScript Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "12%", marginTop: "8%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "17%"}}>github.com</p>
+                                    <h5>Ruby Admin Portal app</h5>
+                                </div>
+                            </div>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img src='/assets/flask-logo.svg' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Python Flask Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img src='/assets/docs_example_apps_django_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Python Django Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "11%"}}>github.com</p>
+                                    <h5>Go Admin Portal app</h5>
+                                </div>
+                            </div>
+
+                            <div className='example-apps-container' style={{marginBottom: "5%"}}>
+                                <div className='example-app-container'>
+                                    <img src='/assets/docs_api_reference_java_language_icon.png' alt='img not available'/>
+                                    <p>github.com</p>
+                                    <h5>Java Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                <img style={{width: "25%", marginTop: "2%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
+                                    <p style={{marginTop: "11%"}}>github.com</p>
+                                    <h5>PHP Admin Portal app</h5>
+                                </div>
+                                <div className='example-app-container'>
+                                    <img style={{width: "20%", marginTop: "4%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='img not available'/>
+                                    <p >github.com</p>
+                                    <h5>.NET Admin Portal app</h5>
+                                </div>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Custom Branding</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Use your own logo and colors in the Admin Portal.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {customBranding && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Custom Branding</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Use your own logo and colors in the Admin Portal.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can customize the look and feel of the Admin Portal from the WorkOS Dashboard. Go to <label className='demo-docs-hyperlink'>Branding Settings</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> where you can:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload your logos</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set your brand color</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>View your custom domains</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom branding can be tested for free in the staging environment. You need the <label className='demo-docs-hyperlink'>WorkOS Enterprise Plan</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable custom branding in the production environment</p>
+
+                            <div id='img98' className={`enlargable-image-container ${this.state.enlargedImageId === 'img98' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img98')}>
+                                <img  src='/assets/custom_branding_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Logos and icons</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom branding assets which will be used in the Admin Portal as well as emails.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Image with your company’s logo and wordmark used in the Admin Portal.</p>
+
+                            <div id='img99' className={`enlargable-image-container ${this.state.enlargedImageId === 'img99' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img99')}>
+                                <img  src='/assets/custom_branding_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo icon</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Square aspect ratio icon used in emails.</p>
+
+                            <div id='img100' className={`enlargable-image-container ${this.state.enlargedImageId === 'img100' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img100')}>
+                                <img  src='/assets/custom_branding_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Favicon</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Used as the favicon in Admin Portal.</p>
+
+                            <div id='img101' className={`enlargable-image-container ${this.state.enlargedImageId === 'img101' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img101')}>
+                                <img  src='/assets/custom_branding_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Brand Color</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Hex value used as the background color for buttons in the Admin Portal and emails.</p>
+
+                            <div id='img102' className={`enlargable-image-container ${this.state.enlargedImageId === 'img102' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img102')}>
+                                <img  src='/assets/custom_branding_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} id='img103' className={`enlargable-image-container ${this.state.enlargedImageId === 'img103' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img103')}>
+                                <img  src='/assets/custom_branding_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Custom domains</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS allows you to customize the domain you send API calls to, the domain used by the Admin Portal, and the from address used in emails sent to your customer’s IT admin.</p>
+
+                            <div id='img104' className={`enlargable-image-container ${this.state.enlargedImageId === 'img104' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img104')}>
+                                <img  src='/assets/custom_branding_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Auth link domain</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain you send API calls to and the domain used in URL’s that face your customer’s IT admin such as ACS URL and SP Entity ID.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Admin Portal domain</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain of Admin Portal setup links and Admin Portal sessions opened by your customer’s IT admin.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Email domain</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the from address for emails sent to your customer’s IT admin.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure custom domains, please reach out to <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for assistance.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Team name</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your team name is visible in the Admin Portal and in the emails received by your customers’ organization admins. Learn how to change your team name in <label className='demo-docs-hyperlink'>team settings</label>.</p>
+
+                            <div id='img105' className={`enlargable-image-container ${this.state.enlargedImageId === 'img105' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img105')}>
+                                <img  src='/assets/custom_branding_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} id='img106' className={`enlargable-image-container ${this.state.enlargedImageId === 'img106' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img106')}>
+                                <img  src='/assets/custom_branding_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Audit Logs</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Ingest and export Audit Log Events from your application.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {auditLogs && 
+                    <div className='demo-docs-container'>
+
                     </div>
                 }
             </Styles>
@@ -4397,4 +5309,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 85 (latest)
+//* IMAGE 98 (latest)

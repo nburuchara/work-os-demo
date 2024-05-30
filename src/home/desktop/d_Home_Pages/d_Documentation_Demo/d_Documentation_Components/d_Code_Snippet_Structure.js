@@ -565,10 +565,18 @@ export default class CodeSnippet extends Component {
         ListGroupsRegex: /\bListGroups\w*/,
         listGroupsRegex: /\blistGroups\w*/,
         list_groupsRegex: /\blist_groups\w*/,
+        createOrganizationRegex: /\bcreateOrganization\w*/,
+        CreateOrganizationRegex: /\bCreateOrganization\w*/,
+        create_organizationRegex: /\bcreate_organization\w*/,
+        generateLinkRegex: /\bgenerateLink\w*/,
+        generate_linkRegex: /\bgenerate_link\w*/,
+        GenerateLinkRegex: /\bGenerateLink\w*/,
+        portalLinkRegex: /\bportalLink\w*/,
         profileRegex: /\bprofile\w*/,
         userRegex: /\buser\w*/,
         listRegex: /\blist\w*/,
         groupRegex: /\bgroup\w*/,
+        organizationRegex: /\borganization\w*/
 
       };
     
