@@ -9546,6 +9546,21 @@ const codeSnippets = [
           '26 }',
           '27 ',
           '28 client.audit_logs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">create_event</span>(organization_id, event)',
+        ],
+        go: [
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"context"</span>',
+          '5         <span style="color: #143465;">"time"</span>',
+          '6 ',
+          '7         <span style="color: #143465;">"github.com/workos/workos-go/v3/pkg/auditlogs"</span>',
+          '8 )',
+          '9 ',
+          '10 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '11         apiKey <span style="color: #ce3559;">:=</span> os.<span style="color: #5854c6;">Getenv</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>)',
+          '12 ',
+          '13         directorysync.<span style="color: #5854c6;">SetAPIKey</span>(apiKey)',
         ]
       },
       apiEpxlainers: {
