@@ -10706,8 +10706,38 @@ const codeSnippets = [
           '8     <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
           '9 );',
           '10 ',
-          '11 // $auditLogExport.state `pending` or `ready`',
-          '12 // $auditLogExport.url available once `state` is `ready`'
+          '11 <span style="color: #8b8d98;">// $auditLogExport.state `pending` or `ready`</span>',
+          '12 <span style="color: #8b8d98;">// $auditLogExport.url available once `state` is `ready`</span>'
+        ],
+        laravel: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 WorkOS\\WorkOS::<span style="color: #5854c6;">setApiKey</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");',
+          '4 ',
+          '5 $auditLogs <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\AuditLogs</span>();',
+          '6 ',
+          '7 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">$auditLogExport</span> <span style="color: #ce3559;">=</span> $auditLogs<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getExport</span>(',
+          '8     <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
+          '9 );',
+          '10 ',
+          '11 <span style="color: #8b8d98;">// $auditLogExport.state `pending` or `ready`</span>',
+          '12 <span style="color: #8b8d98;">// $auditLogExport.url available once `state` is `ready`</span>'
+        ],
+        java: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+          '2 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">auditlogs</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">AuditLogExport</span>;',
+          '3 ',
+          '4 <span style="color: #5854c6;">WorkOS</span> work_os <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");',
+          '5 ',
+          '6 <span style="color: #5854c6;">AuditLogExport</span> auditLogExport <span style="color: #ce3559;">=</span>',
+          '7     workos.auditLogs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getExport</span>(<span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>);'
+        ],
+        dotnet: [
+          '1 WorkOS.<span style="color: #5854c6;">SetApiKey</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");',
+          '2 ',
+          '3 <span style="color: #148a68;">var</span> auditLogsService <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">AuditLogsService</span>();',
+          '4 ',
+          '5 <span style="color: #148a68;">var</span> auditLogExport <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> auditLogsService.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GetExport</span>(<span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>);'
         ]
       },
       apiEpxlainers: {
@@ -10780,7 +10810,41 @@ const codeSnippets = [
           '}'
         ],
         getExport_php: [
-          
+          '$auditLogs<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getExport</span>(<span style="color: #148a68;">string</span> $id)<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">AuditLogExport</span>'
+        ],
+        auditLogExport_laravel: [
+          '<span style="color: #148a68;">class</span> <span style="color: #5854c6;">AuditLogExport</span>',
+          '{',
+          '    <span style="color: #148a68;">public string</span> $object <span style="color: #143465;">"audit_log_export"</span>;',
+          '    <span style="color: #148a68;">public string</span> $id;',
+          '    <span style="color: #148a68;">public string</span> $createdAt;',
+          '    <span style="color: #148a68;">public string</span> $updatedAt;',
+          '    <span style="color: #148a68;">public</span> <span style="color: #143465;">"pending"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"ready"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"error"</span> $state;',
+          '    <span style="color: #148a68;">public</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $url;',
+          '}'
+        ],
+        getExport_laravel: [
+          '$auditLogs<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getExport</span>(<span style="color: #148a68;">string</span> $id)<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">AuditLogExport</span>'
+        ],
+        getExport_java: [
+          '<span style="color: #5854c6;">AuditLogExport</span> auditLogs.<span style="color: #5854c6;">getExport</span>(<span style="color: #148a68;">String</span> id)'
+        ],
+        auditLogExport_dotnet: [
+          '<span style="color: #148a68;">class</span> <span style="color: #5854c6;">AuditLogExport</span>',
+          '{',
+          '    <span style="color: #148a68;">string</span> Object <span style="color: #143465;">"audit_log_export"</span>;',
+          '    <span style="color: #148a68;">string</span> Id;',
+          '    <span style="color: #148a68;">string</span> CreatedAt;',
+          '    <span style="color: #148a68;">string</span> UpdatedAt;',
+          '    <span style="color: #5854c6;">AuditLogExportState</span> State;',
+          '    string<span style="color: #ce3559;">?</span> Url;',
+          '}',
+        ],
+        GetExport_dotnet: [
+          '<span style="color: #5854c6;">Task</span><span style="color: #ce3559;"><</span><span style="color: #5854c6;">AuditLogExport</span><span style="color: #ce3559;">></span> auditLogsService.<span style="color: #5854c6;">GetExport</span>(',
+          '    <span style="color: #148a68;">string</span> Id,',
+          '    <span style="color: #5854c6;">CancellationToken</span><span style="color: #ce3559;">?</span> cancellationToken',
+          ')'
         ]
       }
     }
