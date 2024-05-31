@@ -5312,7 +5312,20 @@ export default class StandaloneAPIs extends Component {
                             <div className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Audit Logs are a collection of events that contain information relevant to notable actions taken by users in your application. Every event in the collection contains details regarding what kind of action was taken (<span>action</span>), who performed the action (<span>actor</span>), what resources were affected by the action (<span>targets</span>), and additional details of when and where the action took place.</p>
                             </div>
+
                             
+                            <CodeSnippetStruct
+                            id={47}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            showCodeSnippetHeader={true}
+                            snippet=""
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These events are similar to application logs and analytic events, but are fundamentally different in their intent. They aren’t typically used for active monitoring/alerting, rather they exist as a paper trail of potentially sensitive actions taken by members of an organization for compliance and security reasons.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}></h1>
 
                         </div>
                     </div>

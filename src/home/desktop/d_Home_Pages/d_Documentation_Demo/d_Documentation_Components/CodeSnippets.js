@@ -9319,6 +9319,33 @@ const codeSnippets = [
           ')'
         ]
       }
+    },
+
+    { //* Audit Logs (1st code snippet)
+      id: 47,
+      title: "",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"action"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user.signed_in"</span>,',
+          '3   <span style="color: #0072dd;">"occurred_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2022-08-29T19:47:52.336Z"</span>,',
+          '4   <span style="color: #0072dd;">"actor"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01GBNJC3MX9ZZJW1FSTF4C5938"</span>',
+          '7   },',
+          '8   <span style="color: #0072dd;">"targets"</span><span style="color: #ce3559;">:</span> [',
+          '9     {',
+          '10       <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"team"</span>,',
+          '11       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"team_01GBNJD4MKHVKJGEWK42JNMBGS"</span>',
+          '12     }',
+          '13   ],',
+          '14   <span style="color: #0072dd;">"context"</span><span style="color: #ce3559;">:</span> {',
+          '15     <span style="color: #0072dd;">"location"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"123.123.123.123"</span>,',
+          '16     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Chrome/104.0.0.0"</span>',
+          '17   }',
+          '18 }'
+        ]
+      }
     }
 
 ]

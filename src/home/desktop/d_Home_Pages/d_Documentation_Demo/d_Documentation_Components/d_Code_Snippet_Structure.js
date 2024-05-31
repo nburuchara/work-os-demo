@@ -684,6 +684,7 @@ export default class CodeSnippet extends Component {
         return (
             <Styles>
                 <div className='code-snippet-container'>
+                {this.props.showCodeSnippetHeader ? <div></div> :
                     <div className='code-snippet-header'>
                       <div className='code-snippet-title'>
                         {selectedSnippet && selectedSnippet.doubleHeaders && selectedSnippet.doubleHeaders[this.props.selectedLang.toLowerCase()] ? (
@@ -776,7 +777,8 @@ export default class CodeSnippet extends Component {
                         </button>
                       </div>
                     </div>
-                    <div className='code-snippet-body'>
+                    }
+                    <div style={{borderTopLeftRadius: this.props.showCodeSnippetHeader ? "10px" : "", borderTopRightRadius: this.props.showCodeSnippetHeader ? "10px" : ""}} className='code-snippet-body'>
                         {replaceApiPopup && 
                           <div id="code-snippet-body" className='replace-api-popup'>
                             <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
