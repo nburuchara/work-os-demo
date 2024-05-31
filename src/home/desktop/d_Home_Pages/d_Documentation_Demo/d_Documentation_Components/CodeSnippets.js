@@ -9518,7 +9518,7 @@ const codeSnippets = [
           ') <span style="color: #ce3559;">=> void</span>'
         ],
         createEvent_yarn: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span>span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -9547,6 +9547,34 @@ const codeSnippets = [
           '  }',
           ') <span style="color: #ce3559;">=> void</span>'
         ],
+        create_event_ruby: [
+          'auditLogs.<span style="color: #5854c6;">create_event</span>(',
+          '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  event<span style="color: #ce3559;">:</span> {',
+          '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '    occurredAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '    version<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span><span style="color: #ce3559;">?</span>',
+          '    actor<span style="color: #ce3559;">:</span> {',
+          '      type<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '      id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '      name<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span>,',
+          '      metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Hash</span><span style="color: #ce3559;">?</span>',
+          '    },',
+          '    targets<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span>{',
+          '      type<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '      id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '      name<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">String</span>,',
+          '      metadata<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">Hash</span><span style="color: #ce3559;">?</span>',
+          '    }<span style="color: #ce3559;">]</span>,',
+          '    context<span style="color: #ce3559;">:</span> {',
+          '      location<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '      userAgent<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span>',
+          '    };',
+          '    metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Hash</span><span style="color: #ce3559;">?</span>',
+          '  };',
+          '  </span><span style="color: #ce3559;">?</span>idempotencyKey<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-> void</span>'
+        ]
       }
     }
 
