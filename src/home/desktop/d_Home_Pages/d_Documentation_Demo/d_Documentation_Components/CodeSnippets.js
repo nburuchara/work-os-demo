@@ -9357,9 +9357,9 @@ const codeSnippets = [
           '2 ',
           '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
           '4 ',
-          '5 await workos.auditLogs.createEvent(\'org_01EHWNCE74X7JSDV0X3SZ3KJNY\', {',
+          '5 await workos.auditLogs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">createEvent</span>(\'org_01EHWNCE74X7JSDV0X3SZ3KJNY\', {',
           '6   action: \'user.signed_in\',',
-          '7   occurredAt: new Date(),',
+          '7   occurredAt: new <span style="color: #5854c6;">Date</span>(),',
           '8   actor: {',
           '9     type: \'user\',',
           '10     id: \'user_01GBNJC3MX9ZZJW1FSTF4C5938\',',
@@ -9375,6 +9375,17 @@ const codeSnippets = [
           '20     userAgent: \'Chrome/104.0.0.0\',',
           '21   },',
           '22 });',
+        ],
+        npm: [
+
+        ],
+        yarn: [
+
+        ]
+      },
+      apiEpxlainers: {
+        createEvent_javascript: [
+          ''
         ]
       }
     }
