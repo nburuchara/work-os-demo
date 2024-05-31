@@ -5533,6 +5533,28 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/audit_logs_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Get an Organization ID</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All events are scoped to an Organization, so you will need the ID of an Organization in order to emit events.</p>
+
+                            <div style={{marginTop: "5%"}} id='img108' className={`enlargable-image-container ${this.state.enlargedImageId === 'img108' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img108')}>
+                                <img  src='/assets/audit_logs_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Emit Events</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Using the ID from the Organization, emit an Audit Log Event with the action and targets previously configured.</p>
+
+                            <CodeSnippetStruct
+                            id={48}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Emit event"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            
+
                         </div>
                     </div>
                 }
@@ -5541,4 +5563,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 98 (latest)
+//* IMAGE 108 (latest)

@@ -9346,6 +9346,16 @@ const codeSnippets = [
           '18 }'
         ]
       }
+    },
+    
+    { //* Emit event
+      id: 48,
+      title: "Emit event",
+      code: {
+        javascript: [
+          
+        ]
+      }
     }
 
 ]
