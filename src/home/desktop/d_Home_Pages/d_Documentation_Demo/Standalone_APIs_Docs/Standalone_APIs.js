@@ -5371,6 +5371,168 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Emit an Audit Log Event</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install the WorkOS SDK</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.</p>
+
+
+                            <div className='demo-docs-languages'>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("javascript")} 
+                                    style={{boxShadow: javascriptSelected || yarnSelected ? "0 0 0 2px #6363f1" : "none", border: javascriptSelected || yarnSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{marginTop: sidebarMenuClicked ? "15%" : "0%"}} src='/assets/docs_api_reference_node_language_icon.png' alt='img not available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Node.js</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("ruby")}
+                                    style={{boxShadow: rubySelected || bundlerSelected ? "0 0 0 2px #6363f1" : "none", border: rubySelected || bundlerSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "43%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_ruby_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%", fontSize: sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""}}>Ruby</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("laravel")}
+                                    style={{boxShadow: laravelSelected ? "0 0 0 2px #6363f1" : "none", border: laravelSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "50%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "30%" : "20%"}} src='/assets/docs_api_reference_laravel_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.5%"}}>Laravel</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("python")}
+                                    style={{boxShadow: pythonSelected ? "0 0 0 2px #6363f1" : "none", border: pythonSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "27%" : "17%"}} src='/assets/docs_api_reference_python_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Python</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className='demo-docs-languages'>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("php")}
+                                    style={{boxShadow: phpSelected ? "0 0 0 2px #6363f1" : "none", border: phpSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "77.5%"}} src='/assets/docs_api_reference_php_language_icon.png' alt='img not available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "0px"}}>PHP</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("go")}
+                                    style={{boxShadow: goSelected ? "0 0 0 2px #6363f1" : "none", border: goSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "78%", marginTop: sidebarMenuClicked ? "15%" : "7.5%"}} src='/assets/docs_api_reference_go_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "2%"}}>Go</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("java")}
+                                    style={{boxShadow: javaSelected || gradleSelected ? "0 0 0 2px #6363f1" : "none", border: javaSelected || gradleSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{width: "52%", paddingBottom: "5%", marginTop: sidebarMenuClicked ? "22%" : "17%"}} src='/assets/docs_api_reference_java_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6%"}}>Java</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div className='demo-docs-language'>
+                                    <button 
+                                    onClick={() => this.newLangSelected("dotnet")}
+                                    style={{boxShadow: dotnetSelected ? "0 0 0 2px #6363f1" : "none", border: dotnetSelected ? "1px solid transparent" : "1px solid #ccc" }}>
+                                        <div className='demo-docs-language-container'>
+                                            <div className='demo-docs-language-icon'>
+                                                <img style={{marginTop: sidebarMenuClicked ? "18%" : "10%"}} src='/assets/docs_api_reference_net_language_icon.png' alt='no img available'/>
+                                            </div>
+                                            <div className='demo-docs-language-text'>
+                                                <p className={sidebarMenuClicked ? "demo-docs-langauge-text-sidebar-p" : ""} style={{marginBottom: "6.3%"}}>.NET</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""} style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Install the SDK using the command below.</p>
+
+                            <CodeSnippetStruct
+                            id={0}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Install the WorkOS SDK"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as <span>WORKOS_API_KEY</span> and <span>WORKOS_CLIENT_ID</span>, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.</p>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={4}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Environment variables" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sign in to your WorkOS Dashboard account and configure Audit Log Event schemas</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Before you can emit any Audit Log Events you must configure the allowed event schemas. To start, click “Create an event” and enter <span>user.signed_in</span> for action, <span>team</span> for targets, and click “Save event”.</p>
+                            </div>
+
+                            <div style={{marginTop: "5%"}} id='img107' className={`enlargable-image-container ${this.state.enlargedImageId === 'img107' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img107')}>
+                                <img  src='/assets/audit_logs_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
                     </div>
                 }
