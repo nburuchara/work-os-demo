@@ -10408,7 +10408,7 @@ const codeSnippets = [
           '13                 OrganizationID: <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
           '14                 RangeStart:     <span style="color: #143465;">"2022-08-31T15:51:23.604Z"</span>,',
           '15                 RangeEnd:       <span style="color: #143465;">"2022-08-31T15:51:23.604Z"</span>,',
-          '16         }',
+          '16         })',
           '17 ',
           '18         <span style="color: #8b8d98;">// Use auditLogExport.ID for fetching export at a later time</span>',
           '19 }'
@@ -10668,12 +10668,46 @@ const codeSnippets = [
           '3 ',
           '4 workos.api_key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
           '5 ',
-          '6 audit_log_export <span style="color: #ce3559;">=</span> client.audit_logs.get_export(',
+          '6 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">audit_log_export</span> <span style="color: #ce3559;">=</span> client.audit_logs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">get_export</span>(',
           '7     <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
           '8 )',
           '9 ',
-          '10 # audit_log_export.state "pending" or "ready"',
-          '11 # audit_log_export.url available once "state" is "ready"'
+          '10 <span style="color: #8b8d98;"># audit_log_export.state "pending" or "ready"</span>',
+          '11 <span style="color: #8b8d98;"># audit_log_export.url available once "state" is "ready"</span>'
+        ],
+        go: [
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"context"</span>',
+          '5 ',
+          '6         <span style="color: #143465;">"github.com/workos/workos-go/v3/pkg/auditlogs"</span>',
+          '7 )',
+          '8 ',
+          '9 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '10         auditlogs.<span style="color: #5854c6;">SetAPIKey</span>(apiKey)',
+          '11 ',
+          '12         <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">export</span>, err <span style="color: #ce3559;">:=</span> auditlogs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GetExport</span>(context.Background(), auditlogs.GetExportOpts{',
+          '13                 ExportID: <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>,',
+          '14         })',
+          '15 ',
+          '16         <span style="color: #8b8d98;">// export.State `pending` or `ready`</span>',
+          '17         <span style="color: #8b8d98;">// export.Url available once `State` is `ready`</span>',
+          '18 }'
+        ],
+        php: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 WorkOS\\WorkOS::<span style="color: #5854c6;">setApiKey</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");',
+          '4 ',
+          '5 $auditLogs <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\AuditLogs</span>();',
+          '6 ',
+          '7 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">$auditLogExport</span> <span style="color: #ce3559;">=</span> $auditLogs<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getExport</span>(',
+          '8     <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
+          '9 );',
+          '10 ',
+          '11 // $auditLogExport.state `pending` or `ready`',
+          '12 // $auditLogExport.url available once `state` is `ready`'
         ]
       },
       apiEpxlainers: {
@@ -10702,6 +10736,51 @@ const codeSnippets = [
         ],
         get_export_ruby: [
           'AuditLogs.<span style="color: #5854c6;">get_export</span>(id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>) <span style="color: #ce3559;">-></span> <span style="color: #5854c6;">AuditLogExport</span>'
+        ],
+        audit_log_export_python: [
+          'audit_log_export<span style="color: #ce3559;">:</span> {',
+          '    <span style="color: #143465;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"audit_log_export"</span>,',
+          '    <span style="color: #143465;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"error"</span>,',
+          '    <span style="color: #143465;">"url"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          '}'
+        ],
+        get_export_python: [
+          'audit_logs.<span style="color: #5854c6;">get_export</span><span style="color: #ce3559;">:</span> (id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
+        ],
+        export_go: [
+          'export <span style="color: #148a68;">auditlogs</span>.<span style="color: #148a68;">AuditLogExport</span>{',
+          '        Object <span style="color: #143465;">"audit_log_export"</span>',
+          '        ID <span style="color: #148a68;">string</span>',
+          '        CreatedAt <span style="color: #148a68;">string</span>',
+          '        UpdatedAt <span style="color: #148a68;">string</span>',
+          '        State <span style="color: #148a68;">auditlogs</span>.<span style="color: #148a68;">AuditLogExportState</span>',
+          '        URL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '}',
+        ],
+        GetExport_go: [
+          'auditlogs.<span style="color: #5854c6;">GetExport</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">auditlogs</span>.<span style="color: #148a68;">GetExportOpts</span>{',
+          '                ExportID <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">auditlogs</span>.<span style="color: #148a68;">AuditLogExport</span>, <span style="color: #148a68;">error</span>)'
+        ],
+        auditLogExport_php: [
+          '<span style="color: #148a68;">class</span> <span style="color: #5854c6;">AuditLogExport</span>',
+          '{',
+          '    <span style="color: #148a68;">public string</span> $object <span style="color: #143465;">"audit_log_export"</span>;',
+          '    <span style="color: #148a68;">public string</span> $id;',
+          '    <span style="color: #148a68;">public string</span> $createdAt;',
+          '    <span style="color: #148a68;">public string</span> $updatedAt;',
+          '    <span style="color: #148a68;">public</span> <span style="color: #143465;">"pending"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"ready"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"error"</span> $state;',
+          '    <span style="color: #148a68;">public</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $url;',
+          '}'
+        ],
+        getExport_php: [
+          
         ]
       }
     }
