@@ -9685,7 +9685,7 @@ const codeSnippets = [
           '22 });',
         ],
         ruby: [
-          '1 <span style="color: #148a68;">require</span> "workos"',
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
           '2 ',
           '3 WorkOS.configure do <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
           '4 \tconfig.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
@@ -10631,6 +10631,77 @@ const codeSnippets = [
           '    }',
           '    <span style="color: #5854c6;">CancellationToken</span><span style="color: #ce3559;">?</span> cancellationToken',
           ')',
+        ]
+      }
+    },
+    
+    { //* Fetch Export
+      id: 50,
+      title: "Fetch Export",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">auditLogExport</span> <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.auditLogs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">getExport</span>(',
+          '6   <span style="color: #143465;">\'audit_log_export_01GBT9P815WPET6H8K0XHBACGS\'</span>,',
+          '7 );',
+          '8 ',
+          '9 <span style="color: #8b8d98;">// auditLogExport.state `pending` or `ready`</span>',
+          '10 <span style="color: #8b8d98;">// auditLogExport.url available once `state` is `ready`</span>',
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 WorkOS.configure do <span style="color: #ce3559;">|</span>config<span style="color: #ce3559;">|</span>',
+          '4 \tconfig.key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+          '5 <span style="color: #148a68;">end</span>',
+          '6 ',
+          '7 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">audit_log_export</span> <span style="color: #ce3559;">=</span> WorkOS::AuditLogs.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">get_export</span>(',
+          '8   id<span style="color: #ce3559;">:</span> <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
+          '9 )'
+        ],
+        python: [
+          '1 <span style="color: #148a68;">from</span> workos <span style="color: #148a68;">import</span> client',
+          '2 <span style="color: #148a68;">import</span> workos',
+          '3 ',
+          '4 workos.api_key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+          '5 ',
+          '6 audit_log_export <span style="color: #ce3559;">=</span> client.audit_logs.get_export(',
+          '7     <span style="color: #143465;">"audit_log_export_01GBT9P815WPET6H8K0XHBACGS"</span>',
+          '8 )',
+          '9 ',
+          '10 # audit_log_export.state "pending" or "ready"',
+          '11 # audit_log_export.url available once "state" is "ready"'
+        ]
+      },
+      apiEpxlainers: {
+        auditLogExport_javascript: [
+          '<span style="color: #148a68;">interface</span> <span style="color: #5854c6;">AuditLogExport</span> {',
+          '  object<span style="color: #ce3559;">:</span> <span style="color: #143465;">"audit_log_export"</span>;',
+          '  id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  createdAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  updatedAt<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"error"</span>;',
+          '  url<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        getExport_javascript: [
+          'auditLogs.<span style="color: #5854c6;">getExport</span><span style="color: #ce3559;">:</span> (id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">AuditLogExport</span>'
+        ],
+        audit_log_export_ruby: [
+          '<span style="color: #148a68;">class</span> <span style="color: #5854c6;">AuditLogExport</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> object<span style="color: #ce3559;">:</span> <span style="color: #143465;">"audit_log_export"</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> created_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> updated_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"error"</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> url<span style="color: #ce3559;">:</span> String<span style="color: #ce3559;">?</span>',
+          '<span style="color: #148a68;">end</span>'
+        ],
+        get_export_ruby: [
+          'AuditLogs.<span style="color: #5854c6;">get_export</span>(id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>) <span style="color: #ce3559;">-></span> <span style="color: #5854c6;">AuditLogExport</span>'
         ]
       }
     }
