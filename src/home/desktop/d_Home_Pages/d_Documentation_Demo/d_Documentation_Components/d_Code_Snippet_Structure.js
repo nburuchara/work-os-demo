@@ -572,7 +572,7 @@ export default class CodeSnippet extends Component {
         generate_linkRegex: /\bgenerate_link\w*/,
         GenerateLinkRegex: /\bGenerateLink\w*/,
         createEventRegex: /\bcreateEvent\w*/,
-        CreateEventRegex: /\bcreateEvent\w*/,
+        CreateEventRegex: /\bCreateEvent\w*/,
         create_eventRegex: /\bcreate_event\w*/,
         portalLinkRegex: /\bportalLink\w*/,
         profileRegex: /\bprofile\w*/,
