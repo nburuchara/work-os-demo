@@ -35,7 +35,8 @@ export default class StandaloneAPIs extends Component {
             adminPortal: false,
             exampleAppsAdminPortal: false,
             customBranding: false,
-            auditLogs: true,
+            auditLogs: false,
+            exportingEvents: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -410,7 +411,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -5553,7 +5554,62 @@ export default class StandaloneAPIs extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>View ingested events in the Dashboard</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you have successfully emitted events with the WorkOS SDK, you can view them in the Dashboard under the Organization that the events are associated with.</p>
+
+                            <div style={{marginTop: "5%"}} id='img109' className={`enlargable-image-container ${this.state.enlargedImageId === 'img109' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img109')}>
+                                <img  src='/assets/audit_logs_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Exporting Events</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Export Audit Log Events through the WorkOS Dashboard and API.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                {exportingEvents && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Exporting Events</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Export Audit Log Events through the WorkOS Dashboard and API.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Exporting Events</h1>
                             
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may need to export Audit Log Events in large chunks. WorkOS supports exporting events as CSV files through both the Dashboard and API.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Exports are scoped to a single organization within a specified date range. Events from the past three months can be included in the export. You may define additional filters such as <span>actions</span>, <span>actors</span>, and <span>targets</span>.</p>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Creating an export through the Dashboard</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Exports can be manually created under the Organization page when viewing Audit Log Events by selecting “Export CSV” from the “Actions” dropdown. Set your filters and select “Generate CSV file”.</p>
+
+                            <div style={{marginTop: "5%"}} id='img110' className={`enlargable-image-container ${this.state.enlargedImageId === 'img110' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img110')}>
+                                <img  src='/assets/export_events_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Creating an export through the API</h3>
+
+                            <CodeSnippetStruct
+                            id={49}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Create an Export"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
 
                         </div>
                     </div>
@@ -5563,4 +5619,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 108 (latest)
+//* IMAGE 110 (latest)
