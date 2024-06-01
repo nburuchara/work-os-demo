@@ -37,7 +37,8 @@ export default class StandaloneAPIs extends Component {
             customBranding: false,
             auditLogs: false,
             exportingEvents: false,
-            metadataScheme: true,
+            metadataScheme: false,
+            editingEvents: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -412,7 +413,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -5655,8 +5656,7 @@ export default class StandaloneAPIs extends Component {
                     </div>
                 }
                 {metadataScheme && 
-                    <div className='demo-docs-container'>
-                        
+                    <div className='demo-docs-container'>   
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Metadata Schema</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Define strict JSON Schema for validating event metadata.</p>
@@ -5714,9 +5714,64 @@ export default class StandaloneAPIs extends Component {
 
                     </div>
                 }
+                {editingEvents && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Editing Events</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Modify existing event configuration with backwards compatibility.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Editing Events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve successfully configured Audit Logs in the WorkOS Dashboard and begun emitting events, how do you go about modifying an event schema without breaking your existing integrations? This is where versioning comes into place. When you make a modification to an existing schema it will create a new version rather than overwriting the existing schema.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The reason for this behavior is to ensure backwards compatibility. Schema configuration is immutable to prevent you from accidentally making changes that are incompatible with events that are already being emitted from your application. Rather you must first create a new version of the schema, and then explicitly emit events for that version leveraging the event <span>version</span> field.</p>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Creating a new event version</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the WorkOS Dashboard navigate to the Audit Logs configuration page. Locate the event that you would like to modify the schema for and click the “Edit Event” item under the context menu.</p>
+
+                            <div id='img113' className={`enlargable-image-container ${this.state.enlargedImageId === 'img113' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img113')}>
+                                    <img  src='/assets/editing_events_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will be navigated to a page where you can edit both the <span>targets</span> associated with the event, and optionally the metadata JSON schema. Once you’re done making changes, clicking save will create a new version of the event schema.</p>
+
+                            </div>
+
+                            <div id='img114' className={`enlargable-image-container ${this.state.enlargedImageId === 'img114' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img114')}>
+                                    <img  src='/assets/editing_events_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Emitting event with version</h3>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that a schema exists with a new <span>version</span>, the version field must be provided when emitting an event so that WorkOS knows which version to use for validation.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={52}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Emit event"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                        </div>
+                    </div>
+                }
             </Styles>
         )
     }
 }
 
-//* IMAGE 111 (latest)
+//* IMAGE 113 (latest)
