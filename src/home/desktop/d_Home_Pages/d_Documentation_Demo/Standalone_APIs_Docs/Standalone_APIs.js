@@ -36,7 +36,8 @@ export default class StandaloneAPIs extends Component {
             exampleAppsAdminPortal: false,
             customBranding: false,
             auditLogs: false,
-            exportingEvents: true,
+            exportingEvents: false,
+            metadataScheme: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -411,7 +412,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -5653,9 +5654,69 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 }
+                {metadataScheme && 
+                    <div className='demo-docs-container'>
+                        
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Metadata Schema</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Define strict JSON Schema for validating event metadata.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Metadata Schema</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Audit Log Events can contain arbitrary metadata for adding additional details to your events. Normally this data can take any shape. However, custom metadata schemas can be defined when configuring the event for additional type safety and data consistency. When an event is emitted that does not match the provided schema, an error will be returned.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When first creating an event schema, check the “Require metadata schema validation” checkbox. You will then be navigated to the schema editor where you can modify the underlying <label className='demo-docs-hyperlink'>JSON Schema</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> or all <span>metadata</span> objects.</p>
+                            
+                                <div style={{marginTop: "5%"}} id='img111' className={`enlargable-image-container ${this.state.enlargedImageId === 'img111' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img111')}>
+                                    <img  src='/assets/metadata_scheme_img1.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are <span>metadata</span> objects located at the root of the event, and within <span>actor</span> and <span>targets</span> objects. Each can contain a unique JSON Schema. To add to a <span>metadata</span> object, click the ”+” sign.</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Metadata objects have a limit of 50 keys. Key names can be up to 40 characters long, and values can be up to 500 characters long.</p>
+                                </div>
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} id='img112' className={`enlargable-image-container ${this.state.enlargedImageId === 'img112' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img112')}>
+                                    <img  src='/assets/metadata_scheme_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={51}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Event with metadata"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Editing Events</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Modify existing event configuration with backwards compatibility.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
             </Styles>
         )
     }
 }
 
-//* IMAGE 110 (latest)
+//* IMAGE 111 (latest)
