@@ -419,6 +419,10 @@ export default class CodeSnippet extends Component {
 
     componentDidMount = () => {
       document.addEventListener('click', this.handleClickOutside);
+      if (this.props.languagesToRemove) {
+        console.log(this.props.languagesToRemove)
+        this.updateOptions(this.props.languagesToRemove)
+      }
     }
 
     componentWillUnmount = () => {
@@ -426,6 +430,10 @@ export default class CodeSnippet extends Component {
     }
 
     componentDidUpdate(prevProps) {
+      if (prevProps.languagesToRemove !== this.props.languagesToRemove) {
+        console.log('Languages to remove updated:', this.props.languagesToRemove);
+        this.updateOptions(this.props.languagesToRemove);
+      }
       // Check if selectedLang prop has changed
       if (this.props.selectedLang !== prevProps.selectedLang) {
         // Find the option object corresponding to the selectedLang id
@@ -434,6 +442,12 @@ export default class CodeSnippet extends Component {
           this.selectOption(selectedOption, selectedOption.id, selectedOption.lang)
         }
       }
+    }
+
+    updateOptions = (languagesToRemove) => {
+      this.setState((prevState) => ({
+        options: prevState.options.filter(option => !languagesToRemove.includes(option.lang)),
+      }));
     }
 
     handleClickOutside = (event) => {
@@ -677,7 +691,7 @@ export default class CodeSnippet extends Component {
         if (selectedSnippet.code[selectedLang] === undefined) {selectedLang = this.state.prevLangSelected}
         let codeForSelectedLang = selectedSnippet.code[selectedLang];
 
-        console.log(`component: ${snippet} ${codeForSelectedLang}`)
+        // console.log(`component: ${snippet} ${codeForSelectedLang}`)
 
         let selectedApiExplainer = null
         

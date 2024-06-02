@@ -131,6 +131,8 @@ export default class StandaloneAPIs extends Component {
             //* - - HIDDEN DROPDOWN TOGGLE(S) VAR(S) - *//
             hiddenDropdownBtn1: false,
 
+            languagesRemoving: ['Python']
+
         }
     }
 
@@ -6096,7 +6098,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={57}
                             headerTabs={2}
-                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            languagesToRemove={['Python', 'Go', 'PHP', 'Laravel', 'Java', '.NET', 'Ruby']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create a new Organization Domain"
                             updateSelectedLang={this.newLangSelected}
@@ -6123,7 +6125,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={58}
                             headerTabs={2}
-                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            languagesToRemove={['Python', 'Go', 'PHP', 'Laravel', 'Java', '.NET', 'Ruby']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Get a Domain"
                             updateSelectedLang={this.newLangSelected}
@@ -6155,7 +6157,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={59}
                             headerTabs={2}
-                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            languagesToRemove={['Python', 'Go', 'PHP', 'Laravel', 'Java', '.NET', 'Ruby']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Initiate verification for existing domain"
                             updateSelectedLang={this.newLangSelected}
