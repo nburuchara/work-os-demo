@@ -39,7 +39,8 @@ export default class StandaloneAPIs extends Component {
             exportingEvents: false,
             metadataScheme: false,
             editingEvents: false,
-            adminPortalAuditLogs: true,
+            adminPortalAuditLogs: false,
+            logStreams: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -414,7 +415,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs, logStreams} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -5805,7 +5806,73 @@ export default class StandaloneAPIs extends Component {
                             snippet="Create Admin Portal Link for Audit Logs"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigating to the provided link will result in the following view. Users will be able to view and export Audit Log events just as can be done through the WorkOS Dashboard.</p>
+
+                            <div id='img115' className={`enlargable-image-container ${this.state.enlargedImageId === 'img115' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img115')}>
+                                    <img  src='/assets/admin_portal_audit_logs_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Log Streams</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Stream Audit Log Events to your customers’ SIEM providers.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
                             
+                        </div>
+                    </div>
+                }
+                {logStreams && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Log Streams</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Stream Audit Log Events to your customers’ SIEM providers.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Understanding Log Streams</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log Streams allow your customers to stream Audit Logs directly to their Security Incident and Event Management (SIEM) providers like Datadog, Splunk, AWS S3, or Google Cloud Storage.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The Google Cloud Storage log streams destination is currently in beta, contact <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information..</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This gives your customers greater control over their Audit Logs by allowing them to apply custom indexing and monitoring of their events in the SIEM provider along with events from other cloud services they use.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log Streams can be created by either configuring the Log Stream through your WorkOS Dashboard or by allowing your customer’s IT admin to configure it themselves through the WorkOS Admin Portal.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>IP allowlist</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS streams audit logs from a fixed set of IP addresses. If audit logs are being streamed to a host that restricts access based on IP address, the following IP addresses should be allowed:</p>
+
+                            <CodeSnippetStruct
+                            id={54}
+                            headerTabs={2}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet=""
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Dashboard</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure a Log Stream through the WorkOS Dashboard, navigate to an organization and click “Configure”.</p>
+
+                            <div id='img116' className={`enlargable-image-container ${this.state.enlargedImageId === 'img116' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img116')}>
+                                    <img  src='/assets/log_streams_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
                     </div>
                 }
@@ -5814,4 +5881,4 @@ export default class StandaloneAPIs extends Component {
     }
 }
 
-//* IMAGE 113 (latest)
+//* IMAGE 116 (latest)

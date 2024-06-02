@@ -9294,7 +9294,7 @@ const codeSnippets = [
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
           ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
-          '    "link" <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
           '<span style="color: #ce3559;">]</span>'
         ],
         generateLink_laravel: [
@@ -9304,7 +9304,7 @@ const codeSnippets = [
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
           ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
-          '    "link" <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
           '<span style="color: #ce3559;">]</span>'
         ],
         GenerateLink_dotnet: [
@@ -12218,10 +12218,69 @@ const codeSnippets = [
         php: [
           '1 <span style="color: #8b8d98;">&lt?php</span>',
           '2 ',
-          '5 $auditLogs <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\AuditLogs</span>();',
+          '3 $portal <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\Portal</span>();',
+          '4 ',
+          '5 $<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">portalLink</span> <span style="color: #ce3559;">=</span> $portal<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>(',
+          '6     organization: <span style="color: #143465;">"org_123"</span>,',
+          '7     intent: <span style="color: #143465;">"audit_logs"</span>',
+          '8 );',
+          '9 ',
+          '10 $url <span style="color: #ce3559;">=</span> portalLink[<span style="color: #143465;">"link"</span>];',
+          '11 ',
+          '12 <span style="color: #8b8d98;">// Redirect to $url</span>'
         ],
         laravel: [
-
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 $portal <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\Portal</span>();',
+          '4 ',
+          '5 $<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">portalLink</span> <span style="color: #ce3559;">=</span> $portal<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>(',
+          '6     organization: <span style="color: #143465;">"org_123"</span>,',
+          '7     intent: <span style="color: #143465;">"audit_logs"</span>',
+          '8 );',
+          '9 ',
+          '10 $url <span style="color: #ce3559;">=</span> portalLink[<span style="color: #143465;">"link"</span>];',
+          '11 ',
+          '12 <span style="color: #8b8d98;">// Redirect to $url</span>'
+        ],
+        java: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+          '2 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">PortalApi</span>.<span style="color: #5854c6;">GeneratePortalLinkOptions</span>;',
+          '3 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">Intent</span>;',
+          '4 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">Link</span>;',
+          '5 ',
+          '6 <span style="color: #5854c6;">Map</span><<span style="color: #5854c6;">String</span>, <span style="color: #5854c6;">String</span>> env <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">System</span>.<span style="color: #5854c6;">getenv</span>();',
+          '7 <span style="color: #5854c6;">WorkOS</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(env.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>));',
+          '8 ',
+          '9 <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '10 <span style="color: #5854c6;">String</span> organizationId <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>',
+          '11 ',
+          '12 <span style="color: #5854c6;">Link</span> response <span style="color: #ce3559;">=</span> workos.portal.<span style="color: #5854c6;">generateLink</span>(<span style="color: #5854c6;">GeneratePortalLinkOptions</span>.<span style="color: #5854c6;">builder</span>()',
+          '13                              .<span style="color: #5854c6;">organization</span>()',
+          '14                              .<span style="color: #5854c6;">intent</span>(<span style="color: #5854c6;">Intent</span>.<span style="color: #5854c6;">AuditLogs</span>)',
+          '15                              .<span style="color: #5854c6;">build</span>());',
+          '16 ',
+          '17 <span style="color: #5854c6;">String</span> link <span style="color: #ce3559;">=</span> response.link',
+          '18 ',
+          '19 <span style="color: #8b8d98;">// Redirect to response.link</span>',
+        ],
+        dotnet: [
+          '1 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">System</span>;',
+          '2 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">WorkOS</span>;',
+          '3 ',
+          '4 <span style="color: #148a68;">var</span> portalService <span style="color: #ce3559;">=</span> new PortalService();',
+          '5 ',
+          '6 <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '7 <span style="color: #148a68;">string</span> organizationId <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>;',
+          '8 ',
+          '9 <span style="color: #148a68;">var</span> options <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">GenerateLinkOptions</span> {',
+          '10     Intent <span style="color: #ce3559;">=</span> Intent.AuditLogs,',
+          '11     Organization <span style="color: #ce3559;">=</span> organizationId,',
+          '12 };',
+          '13 ',
+          '14 <span style="color: #148a68;">var</span> link <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> portalService.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GenerateLink</span>(options);',
+          '15 ',
+          '16 <span style="color: #8b8d98;">// Redirect to the portal link</span>',
         ]
       },
       apiEpxlainers: {
@@ -12339,6 +12398,16 @@ const codeSnippets = [
           '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
           ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
         ],
+        portalLink_php: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        portalLink_laravel: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
         generateLink_php: [
           '$portal<span style="color: #ce3559;">-></span><span style="color: #5854c6;">generateLink</span>(',
           '    <span style="color: #148a68;">string</span> $organization,',
@@ -12346,7 +12415,7 @@ const codeSnippets = [
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
           ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
-          '    "link" <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
           '<span style="color: #ce3559;">]</span>'
         ],
         generateLink_laravel: [
@@ -12380,6 +12449,101 @@ const codeSnippets = [
           '    },',
           '    <span style="color: #5854c6;">CancellationToken</span><span style="color: #ce3559;">?</span> cancellationToken',
           ')'
+        ]
+      }
+    },
+
+    { //* 
+      id: 54,
+      title: "",
+      code: {
+        javascript: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        ruby: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        python: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        go: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        php: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        laravel: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        java: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
+        ],
+        dotnet: [
+          '1 3.217.146.166',
+          '2 23.21.184.92',
+          '3 34.204.154.149',
+          '4 44.213.245.178',
+          '5 44.215.236.82',
+          '6 50.16.203.9',
+          '7 52.1.251.34',
+          '8 52.21.49.187',
+          '9 174.129.36.47',
         ]
       }
     }
