@@ -5873,6 +5873,30 @@ export default class StandaloneAPIs extends Component {
                                     <img  src='/assets/log_streams_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will be promoted to select a destination from a dropdown, click “Save connection”. You will then be prompted to provide specific configuration for the selected destination.</p>
+
+                            <div id='img117' className={`enlargable-image-container ${this.state.enlargedImageId === 'img117' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img117')}>
+                                    <img  src='/assets/log_streams_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Admin Portal</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Admin Portal can be accessed via a Setup Link found in the Organization page within the Dashboard. Click “Generate” and select “Log Streams”. Copy the link and send it to the organization’s IT admin who will be configuring Log Streams.</p>
+
+                            <div id='img118' className={`enlargable-image-container ${this.state.enlargedImageId === 'img118' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img118')}>
+                                    <img  src='/assets/log_streams_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also guide users to the Admin Portal by redirecting them to a programmatically generated Admin Portal link directly from your application.</p>
+
+                            <CodeSnippetStruct
+                            id={55}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Create Admin Portal Link for Log Streams"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
                         </div>
                     </div>
                 }

@@ -12213,7 +12213,6 @@ const codeSnippets = [
           '26 ',
           '27          <span style="color: #8b8d98;">// Redirect to link.Link</span>',
           '28 }'
-          
         ],
         php: [
           '1 <span style="color: #8b8d98;">&lt?php</span>',
@@ -12544,6 +12543,81 @@ const codeSnippets = [
           '7 52.1.251.34',
           '8 52.21.49.187',
           '9 174.129.36.47',
+        ]
+      }
+    },
+
+    { //* Create Admin Portal Link for Log Streams
+      id: 55,
+      title: "Create Admin Portal Link for Log Streams",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> { link } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>({',
+          '6   organization<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'org_01EHZNVPK3SFK441A1RGBFSHRT\'</span>,',
+          '7   intent<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'log_streams\'</span>,',
+          '8 });',
+          '9 ',
+          '10 <span style="color: #8b8d98;">// Redirect to link</span>',
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="color: #8b8d98;"># The ID of the organization to start an Admin Portal session for</span>',
+          '4 organization_id <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>',
+          '5 ',
+          '6 link <span style="color: #ce3559;">=</span> WorkOS::Portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generate_link</span>(',
+          '7   organization<span style="color: #ce3559;">:</span> organization_id,',
+          '8   intent<span style="color: #ce3559;">:</span> <span style="color: #143465;">"log_streams"</span>',
+          '9 )',
+          '10 ',
+          '11 <span style="color: #8b8d98;"># Redirect to link</span>',
+        ],
+        python: [
+          '1 <span style="color: #148a68;">import</span> workos',
+          '2 ',
+          '3 organization_id <span style="color: #ce3559;">=</span> (',
+          '4     <span style="color: #143465;">"org_123"</span>  <span style="color: #8b8d98;"># The ID of the organization to start an Admin Portal session for</span>',
+          '5 )',
+          '6 ',
+          '7 portal_link <span style="color: #ce3559;">=</span> workos.client.portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generate_link</span>(',
+          '8     organization<span style="color: #ce3559;">=</span>organization_id, intent<span style="color: #ce3559;">=</span><span style="color: #143465;">"audit_logs"</span>',
+          '9 )',
+          '10 ',
+          '11 <span style="color: #8b8d98;"># Redirect to portal_link["link"]</span>',
+        ],
+        go: [
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"context"</span>',
+          '5         <span style="color: #143465;">"os"</span>',
+          '6 ',
+          '7         <span style="color: #143465;">"github.com/workos/workos-go/v3/pkg/portal"</span>',
+          '8 )',
+          '9 ',
+          '10 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '11         apiKey <span style="color: #ce3559;">:=</span> os.<span style="color: #5854c6;">Getenv</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>)',
+          '12 ',
+          '13         portal.<span style="color: #5854c6;">SetAPIKey</span>(apiKey)',
+          '14 ',
+          '15        <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '16        organizationID <span style="color: #ce3559;">:=</span> <span style="color: #143465;">"org_123"</span>',
+          '17 ',
+          '18        link, err <span style="color: #ce3559;">:=</span> portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GenerateLink</span>(context.<span style="color: #5854c6;">Background</span>(), portal.GenerateLinkOpts{',
+          '19                Organization: organizationID,',
+          '20                Intent:       portal.LogStreams,',
+          '21        })',
+          '22 ',
+          '23          <span style="color: #148a68;">if</span> err <span style="color: #ce3559;">!=</span> <span style="color: #0072dd;">nil</span> {',
+          '24                  <span style="color: #8b8d98;">// Handle the error...</span>',
+          '25          }',
+          '26 ',
+          '27          <span style="color: #8b8d98;">// Redirect to link.Link</span>',
+          '28 }'
         ]
       }
     }
