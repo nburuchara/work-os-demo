@@ -12687,7 +12687,305 @@ const codeSnippets = [
           '16 <span style="color: #8b8d98;">// Redirect to the portal link</span>',
         ]
       }
-    }
+    },
+
+    { //* Create Admin Portal Link for Domain Verification
+      id: 56,
+      title: "Create Admin Portal Link for Domain Verification",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> { link } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>({',
+          '6   organization<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'org_01EHZNVPK3SFK441A1RGBFSHRT\'</span>,',
+          '7   intent<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'domain_verification\'</span>,',
+          '8 });',
+          '9 ',
+          '10 <span style="color: #8b8d98;">// Redirect to link</span>',
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="color: #8b8d98;"># The ID of the organization to start an Admin Portal session for</span>',
+          '4 organization_id <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>',
+          '5 ',
+          '6 link <span style="color: #ce3559;">=</span> WorkOS::Portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generate_link</span>(',
+          '7   organization<span style="color: #ce3559;">:</span> organization_id,',
+          '8   intent<span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain_verification"</span>',
+          '9 )',
+          '10 ',
+          '11 <span style="color: #8b8d98;"># Redirect to link</span>',
+        ],
+        python: [
+          '1 <span style="color: #148a68;">import</span> workos',
+          '2 ',
+          '3 organization_id <span style="color: #ce3559;">=</span> (',
+          '4     <span style="color: #143465;">"org_123"</span>  <span style="color: #8b8d98;"># The ID of the organization to start an Admin Portal session for</span>',
+          '5 )',
+          '6 ',
+          '7 portal_link <span style="color: #ce3559;">=</span> workos.client.portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generate_link</span>(',
+          '8     organization<span style="color: #ce3559;">=</span>organization_id, intent<span style="color: #ce3559;">=</span><span style="color: #143465;">"domain_verification"</span>',
+          '9 )',
+          '10 ',
+          '11 <span style="color: #8b8d98;"># Redirect to portal_link["link"]</span>',
+        ],
+        go: [
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"context"</span>',
+          '5         <span style="color: #143465;">"os"</span>',
+          '6 ',
+          '7         <span style="color: #143465;">"github.com/workos/workos-go/v3/pkg/portal"</span>',
+          '8 )',
+          '9 ',
+          '10 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '11         apiKey <span style="color: #ce3559;">:=</span> os.<span style="color: #5854c6;">Getenv</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>)',
+          '12 ',
+          '13         portal.<span style="color: #5854c6;">SetAPIKey</span>(apiKey)',
+          '14 ',
+          '15        <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '16        organizationID <span style="color: #ce3559;">:=</span> <span style="color: #143465;">"org_123"</span>',
+          '17 ',
+          '18        link, err <span style="color: #ce3559;">:=</span> portal.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GenerateLink</span>(context.<span style="color: #5854c6;">Background</span>(), portal.GenerateLinkOpts{',
+          '19                Organization: organizationID,',
+          '20                Intent:       portal.DomainVerification,',
+          '21        })',
+          '22 ',
+          '23          <span style="color: #148a68;">if</span> err <span style="color: #ce3559;">!=</span> <span style="color: #0072dd;">nil</span> {',
+          '24                  <span style="color: #8b8d98;">// Handle the error...</span>',
+          '25          }',
+          '26 ',
+          '27          <span style="color: #8b8d98;">// Redirect to link.Link</span>',
+          '28 }'
+        ],
+        php: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 $portal <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\Portal</span>();',
+          '4 ',
+          '5 $<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">portalLink</span> <span style="color: #ce3559;">=</span> $portal<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>(',
+          '6     organization: <span style="color: #143465;">"org_123"</span>,',
+          '7     intent: <span style="color: #143465;">"domain_verification"</span>',
+          '8 );',
+          '9 ',
+          '10 $url <span style="color: #ce3559;">=</span> portalLink[<span style="color: #143465;">"link"</span>];',
+          '11 ',
+          '12 <span style="color: #8b8d98;">// Redirect to $url</span>'
+        ],
+        laravel: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 $portal <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS\\Portal</span>();',
+          '4 ',
+          '5 $<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">portalLink</span> <span style="color: #ce3559;">=</span> $portal<span style="color: #ce3559;">-></span><span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">generateLink</span>(',
+          '6     organization: <span style="color: #143465;">"org_123"</span>,',
+          '7     intent: <span style="color: #143465;">"domain_verification"</span>',
+          '8 );',
+          '9 ',
+          '10 $url <span style="color: #ce3559;">=</span> portalLink[<span style="color: #143465;">"link"</span>];',
+          '11 ',
+          '12 <span style="color: #8b8d98;">// Redirect to $url</span>'
+        ],
+        java: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">WorkOS</span>;',
+          '2 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">PortalApi</span>.<span style="color: #5854c6;">GeneratePortalLinkOptions</span>;',
+          '3 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">Intent</span>;',
+          '4 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">com</span>.<span style="color: #5854c6;">workos</span>.<span style="color: #5854c6;">portal</span>.<span style="color: #5854c6;">models</span>.<span style="color: #5854c6;">Link</span>;',
+          '5 ',
+          '6 <span style="color: #5854c6;">Map</span><<span style="color: #5854c6;">String</span>, <span style="color: #5854c6;">String</span>> env <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">System</span>.<span style="color: #5854c6;">getenv</span>();',
+          '7 <span style="color: #5854c6;">WorkOS</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(env.<span style="color: #5854c6;">get</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>));',
+          '8 ',
+          '9 <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '10 <span style="color: #5854c6;">String</span> organizationId <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>',
+          '11 ',
+          '12 <span style="color: #5854c6;">Link</span> response <span style="color: #ce3559;">=</span> workos.portal.<span style="color: #5854c6;">generateLink</span>(<span style="color: #5854c6;">GeneratePortalLinkOptions</span>.<span style="color: #5854c6;">builder</span>()',
+          '13                              .<span style="color: #5854c6;">organization</span>()',
+          '14                              .<span style="color: #5854c6;">intent</span>(<span style="color: #5854c6;">Intent</span>.<span style="color: #5854c6;">DomainVerification</span>)',
+          '15                              .<span style="color: #5854c6;">build</span>());',
+          '16 ',
+          '17 <span style="color: #5854c6;">String</span> link <span style="color: #ce3559;">=</span> response.link',
+          '18 ',
+          '19 <span style="color: #8b8d98;">// Redirect to response.link</span>',
+        ],
+        dotnet: [
+          '1 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">System</span>;',
+          '2 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">WorkOS</span>;',
+          '3 ',
+          '4 <span style="color: #148a68;">var</span> portalService <span style="color: #ce3559;">=</span> new PortalService();',
+          '5 ',
+          '6 <span style="color: #8b8d98;">// The ID of the organization to start an Admin Portal session for</span>',
+          '7 <span style="color: #148a68;">string</span> organizationId <span style="color: #ce3559;">=</span> <span style="color: #143465;">"org_123"</span>;',
+          '8 ',
+          '9 <span style="color: #148a68;">var</span> options <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">GenerateLinkOptions</span> {',
+          '10     Intent <span style="color: #ce3559;">=</span> Intent.DomainVerification,',
+          '11     Organization <span style="color: #ce3559;">=</span> organizationId,',
+          '12 };',
+          '13 ',
+          '14 <span style="color: #148a68;">var</span> link <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> portalService.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GenerateLink</span>(options);',
+          '15 ',
+          '16 <span style="color: #8b8d98;">// Redirect to the portal link</span>',
+        ]
+      }
+    },
+
+    { //* Create a new Organization Domain
+      id: 57,
+      title: "Create a new Organization Domain",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        curl: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        json: [
+          {lang1: "Request", lang2: "Response"},
+        ]
+      },
+      code: {
+        curl: [
+          '$ <span style="color: #5854c6;">curl</span> https://api.workos.com/directories \\',
+          '>   --header <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>',
+          '>   -d organization_id<span style="color: #ce3559;">=</span><span style="color: #143465;">"org_123"</span> \\ ',
+          '>   -d domain<span style="color: #ce3559;">=</span><span style="color: #143465;">"foo-corp.com"</span>'
+        ],
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #8b8d98;">// Creates a new organization.</span>',
+          '6 <span style="color: #8b8d98;">// You can also fetch an existing organization with workos.organizations.getOrganization(id)</span>',
+          '7 ',
+          '7 <span style="color: #148a68;">const</span> <span style="color: #5854c6;">organization</span> <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.organizations.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">createOrganization</span>({',
+          '8   name: <span style="color: #143465;">\'Foo Corp\'</span>,',
+          '9 });',
+          '10 ',
+          '11 <span style="color: #8b8d98;">// Creates the organization domain</span>',
+          '12 <span style="color: #148a68;">const</span> organizationDomain <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.organizationDomains.create({',
+          '13   organizationId<span style="color: #ce3559;">:</span> organization.id,',
+          '14   domain<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'workos.com\'</span>,',
+          '15 });'
+        ],
+        json: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HACSKJ57W8M2Q0N2X759C5HS"</span>,',
+          '3   <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_123"</span>,',
+          '4   <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain-to-verify.com"</span>,',
+          '5   <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span>,',
+          '6   <span style="color: #0072dd;">"verification_token"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"3CVZxo4HgvSiYRKlV4RdOWwWl"</span>,',
+          '7   <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dns"</span>',
+          '8 }',
+        ]
+      },
+      apiEpxlainers: {
+        createOrganization_javascript: [
+          'organizations.<span style="color: #5854c6;">createOrganization</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  name<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  domainData<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">object</span><span style="color: #ce3559;">[]</span>;',
+          '}) <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">Organization</span>'
+        ],
+      }
+    },
+
+    { //* Get a Domain
+      id: 58,
+      title: "Get a Domain",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        curl: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        json: [
+          {lang1: "Request", lang2: "Response"},
+        ]
+      },
+      code: {
+        curl: [
+          '$ <span style="color: #5854c6;">curl</span> https://api.workos.com/organization_domains/org_domain_01EZTR5N6Y9RQKHK2E9F31KZX6 \\',
+          '>   --header <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>',
+        ],
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> organizationDomainId <span style="color: #ce3559;">=</span> <span style="color: #143465;">\'org_domain_0123ABCD\'</span>;',
+          '6 ',
+          '7 <span style="color: #8b8d98;">// Fetch the organization domain by Id</span>',
+          '8 <span style="color: #148a68;">const</span> organizationDomain <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.organizationDomains.<span style="color: #5854c6;">get</span>(',
+          '9   organizationDomainId,',
+          '10 );',
+          '11 ',
+          '12 <span style="color: #8b8d98;">// Check organization state</span>',
+          '13 <span style="color: #148a68;">switch</span> (organizationDomain) {',
+          '14   <span style="color: #148a68;">case</span> <span style="color: #5854c6;">OrganizationDomainState</span>.<span style="color: #5854c6;">Verified</span><span style="color: #ce3559;">:</span>',
+          '15   <span style="color: #148a68;">case</span> <span style="color: #5854c6;">OrganizationDomainState</span>.<span style="color: #5854c6;">Pending</span><span style="color: #ce3559;">:</span>',
+          '16   <span style="color: #148a68;">case</span> <span style="color: #5854c6;">OrganizationDomainState</span>.<span style="color: #5854c6;">Failed</span><span style="color: #ce3559;">:</span>',
+          '17     <span style="color: #148a68;">return</span>;',
+          '18 }'
+        ],
+        json: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HACSKJ57W8M2Q0N2X759C5HS"</span>,',
+          '3   <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_123"</span>,',
+          '4   <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain-to-verify.com"</span>,',
+          '5   <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"verified"</span>,',
+          '6   <span style="color: #0072dd;">"verification_token"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"3CVZxo4HgvSiYRKlV4RdOWwWl"</span>,',
+          '7   <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dns"</span>',
+          '8 }',
+        ]
+      },
+    },
+
+    { //* Initiate verification for existing domain
+      id: 59,
+      title: "Initiate verification for existing domain",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        curl: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        json: [
+          {lang1: "Request", lang2: "Response"},
+        ]
+      },
+      code: {
+        curl: [
+          '$ <span style="color: #5854c6;">curl</span> https://api.workos.com/organization_domains/org_domain_01EZTR5N6Y9RQKHK2E9F31KZX6/verify \\',
+          '>   --header <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>',
+        ],
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span>  <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789"</span>\');',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> organizationDomainId <span style="color: #ce3559;">=</span> <span style="color: #143465;">\'org_domain_0123ABCD\'</span>;',
+          '6 ',
+          '7 <span style="color: #8b8d98;">// Initiate verification by Organization Domain ID</span>',
+          '8 <span style="color: #148a68;">const</span> organizationDomainVerifying <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.organizationDomains.<span style="color: #5854c6;">verify</span>(',
+          '9   organizationDomainId,',
+          '10 );'
+        ],
+        json: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HACSKJ57W8M2Q0N2X759C5HS"</span>,',
+          '3   <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_123"</span>,',
+          '4   <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain-to-verify.com"</span>,',
+          '5   <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span>,',
+          '6   <span style="color: #0072dd;">"verification_token"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"3CVZxo4HgvSiYRKlV4RdOWwWl"</span>,',
+          '7   <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dns"</span>',
+          '8 }',
+        ]
+      },
+    },
 
 ]
 
