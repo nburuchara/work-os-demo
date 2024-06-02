@@ -9,6 +9,7 @@ import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/
 import APIReference from './Resources_Docs/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
 import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
+import EventsWebhooks from './Events_Webhooks_Docs/Events_Webhooks';
 
 const Styles = styled.div `
 
@@ -2041,8 +2042,9 @@ export default class DocsNavigationMenu extends Component {
 
             showDocsHome: false,
             showUserManagementDoc: false,
-            showStandAloneApis: true,
+            showStandAloneApis: false,
             showAPIReference: false ,
+            showEventsWebhooks: true,
 
         }
         this.trie = new Trie(); // Initialize the trie
@@ -2244,7 +2246,7 @@ export default class DocsNavigationMenu extends Component {
         const { sidebarMenuClicked } = this.state;
         
             //* - DOUMENTATION PAGES VARS - *//
-        const { showDocsHome, showUserManagementDoc, showStandAloneApis, showAPIReference } = this.state;
+        const { showDocsHome, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
         const { usrMgmtScrollID, standaloneApisScrollID } = this.state;
         return(
             <Styles>
@@ -2584,7 +2586,7 @@ export default class DocsNavigationMenu extends Component {
                     {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID}/>}
                     {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID}/>}
                     {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>}
-                    
+                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked}/>}
 
             </Styles>
         )
