@@ -40,7 +40,9 @@ export default class StandaloneAPIs extends Component {
             metadataScheme: false,
             editingEvents: false,
             adminPortalAuditLogs: false,
-            logStreams: true,
+            logStreams: false,
+            domainVerification: false,
+            apiDomainVerification: true,
 
 
                 //* - CODE SNIPPET - *//
@@ -415,7 +417,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs, logStreams} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs, logStreams, domainVerification, apiDomainVerification} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -5930,6 +5932,235 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
                             
+                        </div>
+                    </div>
+                }
+                {domainVerification && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Verification</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Self-serve domain verification</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain Verification allows your customers to claim ownership of a domain. Once they have claimed ownership, features that require a higher level of trust and security can be activated.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS Domain Verification provides a self-serve flow through the Admin Portal in which IT Admins can prove ownership through the creation of DNS TXT records.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need a <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>API object definitions</h3>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Organization</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Describes an organization whose users sign in with a SSO Connection, or whose users are synced with a Directory Sync Connection.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Organization Domain</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Describes a domain associated to an organization, verified or unverified.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Portal Link</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>A temporary link to initiate an Admin Portal session. Valid for 5 minutes.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All domains belong to an <label className='demo-docs-hyperlink'>Organization</label>. In order to create and verify a domain through the Admin Portal, an Organization must first be <label className='demo-docs-hyperlink'>created</label>.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Setup link from the WorkOS dashboard</h1>
+                                </div>
+                            </div>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> account and create or locale an Organization.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Invite Admin” button, select <strong>Domain Verification</strong> then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link”.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what the link does and how long the link is active.</p>
+
+                            <div id='img120' className={`enlargable-image-container ${this.state.enlargedImageId === 'img120' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img120')}>
+                                    <img  src='/assets/domain_verify_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrate with your app</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Admin Portal links can also be programmatically generated for the domain verification flow. This can be used to provide a link to the Admin Portal flow directly in your application.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll have to generate the link with the <span>domain_verification</span> intent:</p>
+
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={56}
+                            headerTabs={2}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Create Admin Portal Link for Domain Verification"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+                            
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please refer to the <label className='demo-docs-hyperlink'>Admin Portal Integration Guide</label> for additional integration details.</p>
+                            
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Admin Portal domain verification</h1>
+
+
+                            <div id='img121' className={`enlargable-image-container ${this.state.enlargedImageId === 'img121' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img121')}>
+                                    <img  src='/assets/domain_verify_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If the domain is valid, we identify the DNS service provider and offer custom setup instructions.</p>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The admin will find instruction to add a DNS TXT record with a token generated by our system.</p>
+
+                            <div id='img122' className={`enlargable-image-container ${this.state.enlargedImageId === 'img122' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img122')}>
+                                    <img  src='/assets/domain_verify_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When we detect and verify the DNS record, we will mark the domain as <span>verified</span> and dispatch a <label className='demo-docs-hyperlink'>domain verification event</label> to inform your application.</p>
+
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>API</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Programmatic domain verification</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                }
+                {apiDomainVerification && 
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Programmatic domain verification</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Instead of leveraging the Admin Portal, the Domain Verification API can be used to verify domains programmatically.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrating with the API goes as follows:</p>
+
+                            <ol>
+
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create an Organization Domain for an Organization</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Share the token and setup instructions with the Organization owner (IT Admin)</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Wait for the verification to complete</p></li>
+
+                            </ol>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a new Organization Domain</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All domains belong to an Organization. In order to create and verify a domain, an Organization must first be created.</p>
+
+                            <CodeSnippetStruct
+                            id={57}
+                            headerTabs={2}
+                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Create a new Organization Domain"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>verification_token</span> returned can then be set as the value of a TXT record that WorkOS will periodically check until the record is found. The TXT record for the above response example would be:</p>
+
+                                <ul>
+
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Name: <span>_acme-challenge.domain-to-verify.com</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Value: <span>verification_token=3CVZxo4HgvSiYRKlV4RdOWwWl</span></p></li>
+
+                                </ul>
+
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Get a domain</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Fetch an existing domain and it’s current verification status. This endpoint can be polled once verification has been initiated to determine if verification has been successful.</p>
+
+                            <CodeSnippetStruct
+                            id={58}
+                            headerTabs={2}
+                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Get a Domain"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Possible <span>state</span> values:</p>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>pending</span>: domain verification has been initiated and not yet completed</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>verified</span>: domain has been verified</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>failed</span>: domain was not able to be verified</p></li>
+                                </ul>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Possible <span>verification_strategy</span> values:</p>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dns</span>: domain is verified with the DNS flow</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>developer</span>: domain is verified by a person or a system, without running the DNS flow</p></li>
+                                </ul>
+
+                                <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initiate verification for existing domain</h1>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a domain has not successfully verified within thirty days and moves to the failed state, verification can be restarted manually.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct
+                            id={59}
+                            headerTabs={2}
+                            languagesToRemove={['Python', 'Go', 'Laravel', 'Ruby', 'PHP', 'Java', '.NET']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Initiate verification for existing domain"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
                         </div>
                     </div>
                 }
