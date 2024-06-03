@@ -12987,6 +12987,296 @@ const codeSnippets = [
       },
     },
 
+      //! - - Events and Webhooks - - !//
+
+    { //* Email verification failed event
+      id: 60,
+      title: "Email verification failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.email_verification_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"invalid_one_time_code"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Invalid one-time code"</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* Email verification succeeded event
+      id: 61,
+      title: "Email verification succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.email_verification_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
+    { //* Magic Auth failed event
+      id: 62,
+      title: "Magic Auth failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.magic_auth_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"magic_auth"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication_method_not_allowed"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Google OAuth is disabled."</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* Magic Auth succeeded event
+      id: 63,
+      title: "Magic Auth succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.magic_auth_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"magic_auth"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
+    { //* MFA failed event
+      id: 64,
+      title: "MFA failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.mfa_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"mfa"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"invalid_one_time_code"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Invalid one-time code."</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* MFA succeeded event
+      id: 66,
+      title: "MFA succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.mfa_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"mfa"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
+    { //* OAuth failed event
+      id: 67,
+      title: "OAuth failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.oauth_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"oauth"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"invalid_credentials"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Invalid credentials."</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* OAuth succeeded event
+      id: 68,
+      title: "OAuth succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.oauth_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"oauth"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
+    { //* Password authentication failed event
+      id: 69,
+      title: "Password authentication failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.password_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"password"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"invalid_credentials"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Invalid credentials."</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* Password authentication succeeded event
+      id: 70,
+      title: "Password authentication succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.password_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"password"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
+    { //* SSO failed event
+      id: 71,
+      title: "SSO failed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.sso_failed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11     <span style="color: #0072dd;">"error"</span><span style="color: #ce3559;">:</span> {',
+          '12         <span style="color: #0072dd;">"code"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication_method_not_allowed"</span>,',
+          '13         <span style="color: #0072dd;">"message"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"SSO is disabled for this environment."</span>,',
+          '14     },',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* SSO succeeded event
+      id: 72,
+      title: "SSO succeeded event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"authentication.sso_succeeded"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"sso"</span>,',
+          '6     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '10     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '11   },',
+          '12   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '13 }',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;

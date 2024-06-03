@@ -22,6 +22,7 @@ export default class EventsWebhooks extends Component {
                 //* - IMAGE - *//
             enlargedImageId: null, // No image is enlarged initially
 
+                //* - DROPPDOWN BUTTONS - *//
             hiddenDropdownBtn1: false,
         }
     }
@@ -65,7 +66,7 @@ export default class EventsWebhooks extends Component {
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked, } = this.props;
 
-            const { hiddenDropdownBtn1 } = this.state;
+            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16 } = this.state;
 
         return (
             <Styles>
@@ -82,6 +83,7 @@ export default class EventsWebhooks extends Component {
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Event object</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All event objects share a similar structure.</p>
+
 
                             <div className='complex-table-header'>
                                 <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-header1'>
@@ -128,43 +130,481 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
+                                {/* Authentication Events */}
+
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication events</h1>
+
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each step in the authentication flow emits an authentication event. Authentication success events are emitted even when additional steps, such as MFA, are required to complete the process.</p>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The authentication failed events aren’t emitted yet, but will be available soon.</p>
 
-                            <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
-                                <div className='hdb-icon'>
-                                    <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : ""}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
                                 </div>
-                                <div className='hdb-text'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Directory User Object</strong></p>
-                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn1}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={60}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Email verification failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to verify their email.</p>
+
                             </div>
 
-                            <CSSTransition
-                            in={hiddenDropdownBtn1}
-                            timeout={500}
-                            classNames="dialog-slide"
-                            unmountOnExit
-                            >
-                                <div style={{marginTop: "2.5%"}}>
-                                    
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Here is an example Directory User. The data stored varies per directory provider and may include attributes such as photo URLs, pay groups, supervisors, etc.</p>
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
 
-                                    <CodeSnippetStruct 
-                                    id={41}
-                                    headerTabs={0}
-                                    dropdownDisabled={true}
-                                    dropdownDisabledAndHidden={true}
-                                    showOnlyJSONTab={true}
-                                    sideBarOpen={sidebarMenuClicked}
-                                    snippet="Directory User" 
-                                    updateSelectedLang={this.newLangSelected}
-                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                <div onClick={() => this.hiddenDropdownBtnClicked(2)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn2 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_succeeded</strong></p>
+                                    </div>
                                 </div>
-                            </CSSTransition>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn2}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={61}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Email verification succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully verifies their email.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(3)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn3 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.magic_auth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn3}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={62}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Magic Auth failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to authenticate via Magic Auth.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(4)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn4 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.magic_auth_succeeded</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn4}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={63}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Magic Auth succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully authenticates via Magic Auth.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(5)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn5 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.mfa_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn5}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={65}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="MFA failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to authenticate with a multi-factor authentication code.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(6)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn6 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.mfa_succeeded</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn6}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={66}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="MFA succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully authenticates with a multi-factor authentication code.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(7)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn7 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.oauth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn7}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={67}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="OAuth failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to authenticate with a multi-factor authentication code.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(8)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn8 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.oauth_succeeded</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn8}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={68}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="OAuth succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully authenticates via OAuth.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(9)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn9 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.password_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn9}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={69}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Password authentication failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to authenticate with password credentials.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(10)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn10 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.password_succeeded</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn10}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={70}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Password authentication succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully authenticates with password credentials.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(11)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn11 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.sso_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn11}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={71}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="SSO failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to authenticate with Single Sign-On.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(12)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn12 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.sso_succeeded</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn12}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={72}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="SSO succeeded event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user successfully authenticates with Single Sign-On.</p>
+
+                            </div>
+
+                                {/* Connection Events */}
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Connection events</h1>
+
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn1}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={60}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Email verification failed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to verify their email.</p>
+
+                            </div>
 
                         </div>
                     </div>
