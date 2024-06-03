@@ -13959,22 +13959,77 @@ const codeSnippets = [
       code: {
         javascript: [
           '1 {',
-          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification.created"</span>,',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership.created"</span>,',
           '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
           '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
-          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
-          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification_01HYGAQN7DTHPWDDMMTW6GRN4Z"</span>,',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"om_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '6     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership"</span>,',
           '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
-          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
-          '9     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
-          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
-          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
-          '12   },',
-          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
-          '14 }',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '9     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span>,',
+          '10     <span style="color: #0072dd;">"role"</span><span style="color: #ce3559;">:</span> {',
+          '11       <span style="color: #0072dd;">"slug"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"member"</span>,',
+          '12     },',
+          '13     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '14     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '17 }',
         ]
       }
-    }
+    },
+
+    { //* Organization membership deleted event
+      id: 95,
+      title: "Organization membership deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"om_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '6     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '9     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '10     <span style="color: #0072dd;">"role"</span><span style="color: #ce3559;">:</span> {',
+          '11       <span style="color: #0072dd;">"slug"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"member"</span>,',
+          '12     },',
+          '13     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '14     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-27T03:14:45.864Z"</span>,',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>',
+          '17 }',
+        ]
+      }
+    },
+
+    { //* Organization membership deleted event
+      id: 95,
+      title: "Organization membership deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"om_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '6     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_membership"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01E4ZCR3C56J083X43JQXF3JK5"</span>,',
+          '9     <span style="color: #0072dd;">"status"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '10     <span style="color: #0072dd;">"role"</span><span style="color: #ce3559;">:</span> {',
+          '11       <span style="color: #0072dd;">"slug"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"member"</span>,',
+          '12     },',
+          '13     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '14     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T17:10:15.121Z"</span>,',
+          '15   },',
+          '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>',
+          '17 }',
+        ]
+      }
+    },
 
 ]
 

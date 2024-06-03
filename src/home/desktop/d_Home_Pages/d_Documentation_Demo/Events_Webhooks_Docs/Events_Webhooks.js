@@ -1400,7 +1400,119 @@ export default class EventsWebhooks extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization membership is created.</p>
 
                             </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(36)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn36 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization_membership.deleted</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn36}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={95}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization membership deleted event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization membership is deleted.</p>
+
+                            </div>
                             
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(37)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn37 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization_membership.updated</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn37}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={96}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization membership updated event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization membership is updated.</p>
+
+                            </div>
+
+
+                                {/* Organization domain events */}
+
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Password reset events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when a user requests to reset their password.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(35)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn35 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>password_reset.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn35}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={97}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Password reset created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user requests to reset their password.</p>
+
+                            </div>
 
                         </div>
                     </div>
