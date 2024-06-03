@@ -13376,6 +13376,188 @@ const codeSnippets = [
       }
     },
 
+    { //* Directory activated event
+      id: 76, 
+      title: "Directory activated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.activated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_01FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory"</span>,',
+          '6     <span style="color: #0072dd;">"external_key"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"UWuccu6o1E0GqkYs"</span>,',
+          '7     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp\'s Directory"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '9     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01EHWNC0FCBHZ3BJ7EGKYXK0E6"</span>,',
+          '10     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '11     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"generic scim v2.0"</span>,',
+          '12     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '13     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '14     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '15       {',
+          '16         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>,',
+          '17         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01EZTR5N6Y9RQKHK2E9F31KZX6"</span>,',
+          '18         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '19       }',
+          '20     ]',
+          '21   },',
+          '22   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '23 }',
+        ]
+      }
+    },
+
+    { //* Directory deleted event
+      id: 77,
+      title: "Directory deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_03FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01EHWNC0FCBHZ3BJ7EGKYXK0E6"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '8     <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"generic scim v2.0"</span>,',
+          '9     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"deleting"</span>,',
+          '10     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp\'s Directory"</span>,',
+          '11     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '12     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '13   },',
+          '14   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '15 }',
+        ]
+      }
+    },
+
+    { //* Directory group created event
+      id: 78,
+      title: "Directory group created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_06FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '6     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '7     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '9     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '12     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '13   },',
+          '14   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '15 }',
+        ]
+      }
+    },
+
+    { //* Directory group deleted event
+      id: 79,
+      title: "Directory group deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_06FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '6     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '7     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '9     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '12     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '13   },',
+          '14   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '15 }',
+        ]
+      }
+    },
+
+    { //* Directory group updated event
+      id: 80,
+      title: "Directory group updated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.updated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_06FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '6     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '7     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '9     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '12     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '13     <span style="color: #0072dd;">"previous_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '14   },',
+          '15   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '16 }',
+        ]
+      }
+    },
+
+    { //* Directory group user added event
+      id: 81,
+      title: "Directory group user added event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.user_added"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_05FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '6     <span style="color: #0072dd;">"user"</span><span style="color: #ce3559;">:</span> {',
+          '7       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X56GH84T3FB41SD6PZGDBX"</span>,',
+          '8       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74</span>",',
+          '9       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '10       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2936"</span>,',
+          '11       <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '12         {',
+          '13           <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '14           <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '15           <span style="color: #0072dd;">"value"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>',
+          '16         }',
+          '17       ]',
+          '18       <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Eric"</span>,',
+          '19       <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Schneider"</span>,',
+          '20       <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '21       <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>,',
+          '22       <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '23       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '24       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '25       <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '26         <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '27       },',
+          '28       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '29     },',
+          '30     <span style="color: #0072dd;">"group"</span><span style="color: #ce3559;">:</span> {',
+          '31       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '32       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '33       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '34       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '35       <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '36       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '37       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '38       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '39     }',
+          '40   },',
+          '41   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '42 }',
+        ]
+      }
+    }
+
+
+
 ]
 
 export default codeSnippets;
