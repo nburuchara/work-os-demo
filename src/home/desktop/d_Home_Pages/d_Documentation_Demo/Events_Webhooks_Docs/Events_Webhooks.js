@@ -66,7 +66,7 @@ export default class EventsWebhooks extends Component {
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked, } = this.props;
 
-            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn28, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41 } = this.state;
+            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn28, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41, hiddenDropdownBtn42, hiddenDropdownBtn43, hiddenDropdownBtn44 } = this.state;
 
         return (
             <Styles>
@@ -1590,6 +1590,175 @@ export default class EventsWebhooks extends Component {
 
                                 <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a role is deleted.</p>
 
+                            </div>
+
+
+                                {/* Session events*/}
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Session events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when User Management sessions are created.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(41)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn41 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>session.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn41}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={100}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Session created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <div className="api-keys">
+
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a session is created. Sessions started using <label className="demo-docs-hyperlink">impersonation</label> will include an additional impersonator field with data about the <span>impersonator</span>.</p>
+
+                                </div>
+                            </div>
+
+
+                                {/* User events*/}
+                            
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>User events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when <label className="demo-docs-hyperlink">User Management users</label> are created, updated, or deleted.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(42)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn42 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>user.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn42}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={101}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="User created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user is created.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(43)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn43 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>user.deleted</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn43}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={102}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="User deleted event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user is deleted.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(44)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn44 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>user.updated</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn44}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={103}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="User updated event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user is updated.</p>
+
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Data Syncing</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Keep your app in sync with WorkOS.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
                             </div>
 
                         </div>

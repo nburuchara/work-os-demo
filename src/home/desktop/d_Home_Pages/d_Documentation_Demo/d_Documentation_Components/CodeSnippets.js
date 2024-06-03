@@ -14074,7 +14074,6 @@ const codeSnippets = [
       }
     },
 
-
     { //* Role deleted event
       id: 99,
       title: "Role deleted event",
@@ -14091,6 +14090,109 @@ const codeSnippets = [
           '9   },',
           '10   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-21T18:14:01.399Z"</span>',
           '11 }',
+        ]
+      }
+    },
+
+    { //* Session created event
+      id: 100,
+      title: "Session created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"session.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"session"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"session_01HSCBECW0D7AY8CA45AYKA64G"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01HQGXWZW8BSHRG3HVK2QF7XBX"</span>,',
+          '8     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HQHCBRRAVQ7N3PX81VKAYXSX"</span>,',
+          '9     <span style="color: #0072dd;">"impersonator"</span><span style="color: #ce3559;">:</span> {',
+          '10         <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"admin@example.com"</span>,',
+          '11         <span style="color: #0072dd;">"reason"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Helping a customer fix an issue with their account."</span>,',
+          '12     },',
+          '13     <span style="color: #0072dd;">"ip_address"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"192.0.2.1"</span>,',
+          '14     <span style="color: #0072dd;">"user_agent"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"</span>,',
+          '15   },',
+          '16     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2024-03-19T21:56:25.080Z"</span>,',
+          '17     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2024-03-19T21:56:25.080Z"</span>,',
+          '18   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2024-03-19T21:56:25.080Z"</span>',
+          '19 }',
+        ]
+      }
+    },
+
+    { //* User created event
+      id: 101,
+      title: "User created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_02F4KLW3C56P083X43JQXF4FO9"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '7     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '8     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Todd"</span>,',
+          '9     <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Rundgren"</span>,',
+          '10     <span style="color: #0072dd;">"email_verified"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">false</span>,',
+          '11     <span style="color: #0072dd;">"profile_picture_url"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"https://workoscdn.com/images/v1/123abc"</span>,',
+          '12     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T09:18:13.120Z"</span>,',
+          '13     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T09:18:13.120Z"</span>,',
+          '14   },',
+          '15   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '16 }',
+        ]
+      }
+    },
+
+    { //* User deleted event
+      id: 102,
+      title: "User deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_02F4KLW3C56P083X43JQXF4FO9"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '7     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '8     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Todd"</span>,',
+          '9     <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Rundgren"</span>,',
+          '10     <span style="color: #0072dd;">"email_verified"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">false</span>,',
+          '11     <span style="color: #0072dd;">"profile_picture_url"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"https://workoscdn.com/images/v1/123abc"</span>,',
+          '12     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T09:18:13.120Z"</span>,',
+          '13     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-17T04:00:03.937Z"</span>,',
+          '14   },',
+          '15   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '16 }',
+        ]
+      }
+    },
+    
+    { //* User updated event
+      id: 103,
+      title: "User updated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user.updated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_02F4KLW3C56P083X43JQXF4FO9"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '7     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '8     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Todd"</span>,',
+          '9     <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Rundgren"</span>,',
+          '10     <span style="color: #0072dd;">"email_verified"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">false</span>,',
+          '11     <span style="color: #0072dd;">"profile_picture_url"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"https://workoscdn.com/images/v1/123abc"</span>,',
+          '12     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T09:18:13.120Z"</span>,',
+          '13     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-19T11:05:10.539Z"</span>,',
+          '14   },',
+          '15   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-19T11:05:10.550Z"</span>',
+          '16 }',
         ]
       }
     },
