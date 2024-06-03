@@ -14006,7 +14006,7 @@ const codeSnippets = [
     },
 
     { //* Organization membership deleted event
-      id: 95,
+      id: 96,
       title: "Organization membership deleted event",
       code: {
         javascript: [
@@ -14027,6 +14027,70 @@ const codeSnippets = [
           '15   },',
           '16   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>',
           '17 }',
+        ]
+      }
+    },
+
+    { //* Password reset created event
+      id: 97,
+      title: "Password reset created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"password_reset.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"password_reset"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"password_reset_01HYGATMCSBX77HQHP29XT5WV6"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '12   },',
+          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>',
+          '14 }',
+        ]
+      }
+    },
+
+    { //* Role created event
+      id: 98,
+      title: "Role created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"role.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_02F4KLW3C56P083X43JQXF4FO9"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"role"</span>,',
+          '6     <span style="color: #0072dd;">"slug"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"admin"</span>,',
+          '7     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '8     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '9   },',
+          '10   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>',
+          '11 }',
+        ]
+      }
+    },
+
+
+    { //* Role deleted event
+      id: 99,
+      title: "Role deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"role.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_02F4KLW3C56P083X43JQXF4FO9"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"role"</span>,',
+          '6     <span style="color: #0072dd;">"slug"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"developer"</span>,',
+          '7     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '8     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T10:12:18.121Z"</span>,',
+          '9   },',
+          '10   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-21T18:14:01.399Z"</span>',
+          '11 }',
         ]
       }
     },
