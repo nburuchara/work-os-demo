@@ -13614,7 +13614,7 @@ const codeSnippets = [
 
     { //* Directory user created event
       id: 83,
-      titel: "Directory created event",
+      title: "Directory user created event",
       code: {
         javascript: [
           '1 {',
@@ -14005,9 +14005,9 @@ const codeSnippets = [
       }
     },
 
-    { //* Organization membership deleted event
+    { //* Organization membership updated event
       id: 96,
-      title: "Organization membership deleted event",
+      title: "Organization membership updated event",
       code: {
         javascript: [
           '1 {',
@@ -14196,6 +14196,45 @@ const codeSnippets = [
         ]
       }
     },
+
+    { //* A sample event
+      id: 104,
+      title: "A sample event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.user.updated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_07FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data</span>"<span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X1B89NH8Z3SDFJR4H7RGX7"</span>,',
+          '6     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '8     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"8931"</span>,',
+          '9     <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '10       {',
+          '11         <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '12         <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '13         <span style="color: #0072dd;">"value"</span>: <span style="color: #143465;">"lela.block@example.com"</span>',
+          '14       }',
+          '15     ],',
+          '16     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Lela"</span>,',
+          '17     <span style="color: #0072dd;">"last_name"</span><span style="color #ce3559;">:</span> <span style="color: #143465;">"Block"</span>,',
+          '18     <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '19     <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"lela.block@example.com"</span>,',
+          '20     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '21     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '22     <span style="color: #0072dd;">"updated_at"</span>: <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '23     <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '24       <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '25     },',
+          '26     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '27     <span style="color: #0072dd;">"previous_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '28   },',
+          '29   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '30 }',
+        ]
+      }
+    }
 
 ]
 

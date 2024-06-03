@@ -13,7 +13,8 @@ export default class EventsWebhooks extends Component {
         this.state = {
 
             //* - EVENTS & WEBHOOKS SECTIONS - *//
-            eventTypes: true,
+            eventTypes: false,
+            dataSyncing: true,
 
             //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -60,13 +61,13 @@ export default class EventsWebhooks extends Component {
 
     render () {
 
-            const { eventTypes } = this.state;
+            const { eventTypes, dataSyncing } = this.state;
 
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked, } = this.props;
 
-            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn28, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41, hiddenDropdownBtn42, hiddenDropdownBtn43, hiddenDropdownBtn44 } = this.state;
+            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41, hiddenDropdownBtn42, hiddenDropdownBtn43, hiddenDropdownBtn44 } = this.state;
 
         return (
             <Styles>
@@ -1760,6 +1761,34 @@ export default class EventsWebhooks extends Component {
                                     <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
                                 </div>
                             </div>
+
+                        </div>
+                    </div>
+                }
+                {dataSyncing && 
+                    <div className="demo-docs-container">
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data syncing</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Keep your app in sync with WorkOS.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Syncing your app data with WorkOS is done using events. Events represent activity that has occurred within WorkOS or within third-party identity and directory providers that interact with WorkOS.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When important activity occurs, we record an event. For example, a new SSO connection being activated is an event. A user being created, assigned membership to an organization, or successfully signing in are all events as well. Events are activity that your application might be interested in for the purposes of syncing data or extending your application’s business logic.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app can consume events from WorkOS via either the events API or webhooks.</p>
+
+                            <CodeSnippetStruct 
+                            id={104}
+                            headerTabs={0}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="A sample event" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
 
                         </div>
                     </div>
