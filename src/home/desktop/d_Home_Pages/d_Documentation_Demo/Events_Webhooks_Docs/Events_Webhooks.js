@@ -77,7 +77,7 @@ export default class EventsWebhooks extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Events</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events represent activity that has occurred within WorkOS or within third-party identity and directory providers. Your app can sync the data via either the events API or webhooks.</p>
 
@@ -1790,6 +1790,96 @@ export default class EventsWebhooks extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync using the events API</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With the events API, your application retrieves events from WorkOS. The events API offers a more robust data synchronization solution compared to webhooks, ensuring seamless synchronization of your system state with WorkOS. To sync data using the events API, continue to the <label className="demo-docs-hyperlink">events API guide</label>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync using webhooks</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With webhooks, WorkOS automatically notifies your app when an event occurs by invoking an endpoint hosted within your application. To sync data using webhooks, continue to the webhooks guide.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync using webhooks</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With webhooks, WorkOS automatically notifies your app when an event occurs by invoking an endpoint hosted within your application. To sync data using webhooks, continue to the webhooks guide.</p>
+                        
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Aspect</h5>
+                                </div>
+                                <div className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Events API</h5>
+                                </div>
+                                <div className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Webhooks</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Timing</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Controlled by your app. Your server can process events at its own pace.</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Real-time. Webhooks trigger as soon as an event occurs.</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Order</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>A consistent order is guaranteed.</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>No guarantee of order on receipt. Events contain timestamps to determine order.</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Reconciliation</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Replayable. Can go back to a specific point in time and reprocess events.</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Failed requests are retried with exponential back-off for up to 3 days.</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Security</p>
+                                </div>
+                                <div className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Authentication, confidentiality, and integrity protection by default.</p>
+                                </div>
+                                <div className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>You must expose a public endpoint and validate webhook signatures.</p>
+                                </div>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Syncing with events API</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A step-by-step guide on how to start syncing data using the API.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+                        
                         </div>
                     </div>
                 }
