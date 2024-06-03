@@ -14237,7 +14237,6 @@ const codeSnippets = [
     },
     
     { //* List events
-
       id: 105,
       title: "List events",
       code: {
@@ -14355,7 +14354,7 @@ const codeSnippets = [
           '11 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
           '12         events.<span style="color: #5854c6;">SetAPIKey</span>(os.<span style="color: #5854c6;">Getenv</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>))',
           '13 ',
-          '14         eventTypes := []string{',
+          '14         eventTypes <span style="color: #ce3559;">:=</span> []<span style="color: #148a68;">string</span>{',
           '15                 <span style="color: #143465;">"dsync.activated"</span>,',
           '16                 <span style="color: #143465;">"dsync.deleted"</span>,',
           '17                 <span style="color: #143465;">"dsync.user.created"</span>,',
@@ -14363,14 +14362,14 @@ const codeSnippets = [
           '19                 <span style="color: #143465;">"dsync.user.deleted"</span>,',
           '20        }',
           '21 ',
-          '22        events, err := events.ListEvents(context.Background(), events.ListEventsOpts{',
+          '22        <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">events</span>, err <span style="color: #ce3559;">:=</span> events.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">ListEvents</span>(context.<span style="color: #5854c6;">Background</span>(), events.ListEventsOpts{',
           '23                Events: eventTypes,',
           '24        })',
-          '25        if err != nil {',
-          '26                panic(err)',
+          '25        <span style="color: #148a68;">if</span> err <span style="color: #ce3559;">!=</span> <span style="color: #0072dd;">nil</span> {',
+          '26                <span style="color: #5854c6;">panic</span>(err)',
           '27        }',
           '28 ',
-          '29        fmt.Printf("%#v\\n", events)',
+          '29        fmt.<span style="color: #5854c6;">Printf</span>(<span style="color: #143465;">"%#v\\n"</span>, events)',
           '30 }'
         ]
       },
@@ -14500,6 +14499,24 @@ const codeSnippets = [
           '    <span style="color: #143465;">"data"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">list</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span>,',
           '    <span style="color: #143465;">"list_metadata"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">dict</span>',
           ')',
+        ],
+        events_go: [
+          'events <span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsResponse</span>{',
+          '        Data <span style="color: #ce3559;">[]</span><span style="color: #148a68;">events</span>.<span style="color: #148a68;">Event</span>',
+          '        ListMetadata <span style="color: #148a68;">common</span>.<span style="color: #148a68;">ListMetadata</span>',
+          '}'
+        ],
+        ListEvents_go: [
+          'events.<span style="color: #5854c6;">ListEvents</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsOpts</span>{',
+          '                Events <span style="color: #ce3559;">[]</span><span style="color: #148a68;">string</span>',
+          '                Limit<span style="color: #ce3559;">?</span> <span style="color: #148a68;">int</span>',
+          '                RangeStart<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                RangeEnd<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                After<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsResponse</span>, <span style="color: #148a68;">error</span>)',
         ]
       }
     }

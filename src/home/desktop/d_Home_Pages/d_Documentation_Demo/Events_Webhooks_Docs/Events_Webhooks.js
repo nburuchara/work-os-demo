@@ -2083,10 +2083,92 @@ export default class EventsWebhooks extends Component {
                             <CodeSnippetStruct 
                             id={105}
                             headerTabs={0}
+                            languagesToRemove={['cURL', 'PHP', 'Laravel', 'Java', '.NET']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="List events" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className="api-keys">
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Retrieve events from the API using cursor pagination. To fetch the next set of events, provide the ID of the latest processed event in the <span>after</span> parameter.</p>
+
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Handle event replay</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In some cases, it may be necessary to go back in time and “replay” the events. When designing your app logic to handle events replay it is important to design your event handling logic in a way that can safely accommodate it without undesired effects.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To achieve this, focus on separating your app’s data handlers from transactional business logic like sending emails, communicating to 3rd party APIs, etc. By implementing separate data handling, you can replay events without side effects.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS recommends processing events synchronously, handling them in the order they occurred.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The events API returns events up to 30 days old.</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If your app stops processing events</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When resuming event processing, you have two options to pick up where you left off:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using the latest known cursor</strong>: Retrieve the most recent cursor that was successfully processed and use it as the starting point for event resumption.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using a timestamp</strong>: Alternatively, you can make an API call with the range_start parameter and then use the cursor. Utilize the updated_at timestamp to prevent overwrites.</p></li>
+                            </ul>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Scaling recommendations</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Single consumer</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS recommends that your app starts with a single worker. Process events in a separate thread or process from your app’s main execution thread. Deploying a single worker responsible for handling events simplifies and streamlines event consumption.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This approach ensures serial event processing. After completing the processing of events on the current page, request the next page of events to maintain progress.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Parallel processing</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For onboarding large organizations, divide events into independent queues for parallel processing when calling the events API from a single worker.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Concurrently processing events from different organizations is safe, but for consistency and integrity, it is recommended to sequentially process events within a single organization.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Migrating from webhooks</h1>
+
+                            <div className="api-keys">
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can migrate to the events API if you already use webhooks. To migrate, start querying the events API using the <span>range_start</span> parameter that corresponds to the time you’d want to start syncing from. The event IDs passed in webhook bodies are the same as those returned by the events API.</p>
+
+
+                            </div>
+                            
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Syncing with webhooks</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A step-by-step guide on how to start syncing data using webhooks.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
 
                         </div>
 
