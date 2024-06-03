@@ -567,23 +567,23 @@ export default class EventsWebhooks extends Component {
 
                                 {/* Connection Events */}
 
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Connection events</h1>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Connection events</h1>
 
 
                             <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
 
-                                <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
+                                <div onClick={() => this.hiddenDropdownBtnClicked(13)} className='hidden-dropdown-btn'>
                                     <div className='hdb-icon'>
-                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn13 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.connection.activated<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
 
                                 <CSSTransition
-                                in={hiddenDropdownBtn1}
+                                in={hiddenDropdownBtn13}
                                 timeout={500}
                                 classNames="dialog-slide"
                                 unmountOnExit
@@ -591,18 +591,18 @@ export default class EventsWebhooks extends Component {
                                     <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
 
                                         <CodeSnippetStruct 
-                                        id={60}
+                                        id={73}
                                         headerTabs={0}
                                         showOnlyJSONTab={true}
                                         sideBarOpen={sidebarMenuClicked}
-                                        snippet="Email verification failed event" 
+                                        snippet="Connection activated event" 
                                         updateSelectedLang={this.newLangSelected}
                                         selectedLang={this.state.currentSelectedLanguage}/>
 
                                     </div>
                                 </CSSTransition>
 
-                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user fails to verify their email.</p>
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a connection is activated.</p>
 
                             </div>
 

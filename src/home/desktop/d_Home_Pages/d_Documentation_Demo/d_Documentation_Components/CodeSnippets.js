@@ -13277,6 +13277,105 @@ const codeSnippets = [
       }
     },
 
+    { //* Connection activated event
+      id: 73,
+      title: "Connection activated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection.activated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_10FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01EHWNC0FCBHZ3BJ7EGKYXK0E6"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+          '8     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+
+          '9     <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"OktaSAML"</span>,',
+          '10     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp\'s Connection"</span>,',
+
+          '11     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '12     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '13     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '14       {',
+          '15         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_domain_01EHWNFTAFCF3CQAE5A9Q0P1YB"</span>,',
+          '16         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection_domain"</span>,',
+          '17         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '18       }',
+          '29     ]',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
+    { //* Connection deactivated event
+      id: 74,
+      title: "Connection deactivated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection.deactivated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_10FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01EHWNC0FCBHZ3BJ7EGKYXK0E6"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+          '8     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"inactive"</span>,',
+
+          '9     <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"OktaSAML"</span>,',
+          '10     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp\'s Connection"</span>,',
+
+          '11     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '12     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '13     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '14       {',
+          '15         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_domain_01EHWNFTAFCF3CQAE5A9Q0P1YB"</span>,',
+          '16         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection_domain"</span>,',
+          '17         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '18       }',
+          '29     ]',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
+    { //* Connection deleted event
+      id: 75,
+      title: "Connection deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_10FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_01EHWNC0FCBHZ3BJ7EGKYXK0E6"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EHWNCE74X7JSDV0X3SZ3KJNY"</span>,',
+          '8     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"inactive"</span>,',
+
+          '9     <span style="color: #0072dd;">"connection_type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"OktaSAML"</span>,',
+          '10     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp\'s Connection"</span>,',
+
+          '11     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '12     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '13     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '14       {',
+          '15         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"conn_domain_01EHWNFTAFCF3CQAE5A9Q0P1YB"</span>,',
+          '16         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"connection_domain"</span>,',
+          '17         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '18       }',
+          '29     ]',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;
