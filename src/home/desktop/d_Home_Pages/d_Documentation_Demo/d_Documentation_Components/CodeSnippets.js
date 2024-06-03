@@ -1,6 +1,6 @@
 const codeSnippets = [
 
-          //! - - API REFERENCE - - !//
+        //! - - API REFERENCE - - !//
 
     { //* Install the WorkOS SDK 
       id: 0,
@@ -756,7 +756,9 @@ const codeSnippets = [
         }
     },
 
-           //! - - USER MANAGEMENT - - !//
+
+        //! - - USER MANAGEMENT - - !//
+
 
     { //* Install dependencies
       id: 3,
@@ -2187,7 +2189,8 @@ const codeSnippets = [
     },
 
 
-          //! - - STANDALONE APIs - - !//
+        //! - - STANDALONE APIs - - !//
+
 
     { //* Authentication endpoint (Using organization ID)
       id: 18,
@@ -12987,7 +12990,9 @@ const codeSnippets = [
       },
     },
 
-      //! - - Events and Webhooks - - !//
+
+        //! - - Events and Webhooks - - !//
+
 
     { //* Email verification failed event
       id: 60,
@@ -13554,9 +13559,422 @@ const codeSnippets = [
           '42 }',
         ]
       }
+    },
+
+    { //* Directory group user removed event
+      id: 82,
+      title: "Directory group user removed event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.user_removed"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_05FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '6     <span style="color: #0072dd;">"user"</span><span style="color: #ce3559;">:</span> {',
+          '7       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X56GH84T3FB41SD6PZGDBX"</span>,',
+          '8       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74</span>",',
+          '9       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '10       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2936"</span>,',
+          '11       <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '12         {',
+          '13           <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '14           <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '15           <span style="color: #0072dd;">"value"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>',
+          '16         }',
+          '17       ]',
+          '18       <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Eric"</span>,',
+          '19       <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Schneider"</span>,',
+          '20       <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '21       <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>,',
+          '22       <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '23       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '24       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '25       <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '26         <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '27       },',
+          '28       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '29     },',
+          '30     <span style="color: #0072dd;">"group"</span><span style="color: #ce3559;">:</span> {',
+          '31       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '32       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '33       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '34       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '35       <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '36       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '37       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '38       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '39     }',
+          '40   },',
+          '41   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '42 }',
+        ]
+      }
+    },
+
+    { //* Directory user created event
+      id: 83,
+      titel: "Directory created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.user_added"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_05FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '6     <span style="color: #0072dd;">"user"</span><span style="color: #ce3559;">:</span> {',
+          '7       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X56GH84T3FB41SD6PZGDBX"</span>,',
+          '8       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74</span>",',
+          '9       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '10       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2936"</span>,',
+          '11       <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '12         {',
+          '13           <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '14           <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '15           <span style="color: #0072dd;">"value"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>',
+          '16         }',
+          '17       ]',
+          '18       <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Eric"</span>,',
+          '19       <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Schneider"</span>,',
+          '20       <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '21       <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>,',
+          '22       <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '23       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '24       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '25       <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '26         <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '27       },',
+          '28       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '29     },',
+          '30     <span style="color: #0072dd;">"group"</span><span style="color: #ce3559;">:</span> {',
+          '31       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '32       <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '33       <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '34       <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '35       <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '36       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '37       <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '38       <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '39     }',
+          '40   },',
+          '41   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '42 }',
+        ]
+      }
+    },
+
+    { //* Directory group user deleted event
+      id: 84,
+      title: "Directory user deleted event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.user.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_44FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data</span>"<span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X1B89NH8Z3SDFJR4H7RGX7"</span>,',
+          '6     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '8     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"8931"</span>,',
+          '9     <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '10       {',
+          '11         <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '12         <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '13         <span style="color: #0072dd;">"value"</span>: <span style="color: #143465;">"lela.block@example.com"</span>',
+          '14       }',
+          '15     ],',
+          '16     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Lela"</span>,',
+          '17     <span style="color: #0072dd;">"last_name"</span><span style="color #ce3559;">:</span> <span style="color: #143465;">"Block"</span>,',
+          '18     <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '19     <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"lela.block@example.com"</span>,',
+          '20     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"inactive"</span>,',
+          '21     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '22     <span style="color: #0072dd;">"updated_at"</span>: <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '23     <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '24       <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '25     },',
+          '26     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '27   },',
+          '28   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '29 }',
+        ]
+      }
+    },
+
+    { //* Directory user updated event
+      id: 85,
+      title: "Directory user updated event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.user.updated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_07FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data</span>"<span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X1B89NH8Z3SDFJR4H7RGX7"</span>,',
+          '6     <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '7     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '8     <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"8931"</span>,',
+          '9     <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '10       {',
+          '11         <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '12         <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '13         <span style="color: #0072dd;">"value"</span>: <span style="color: #143465;">"lela.block@example.com"</span>',
+          '14       }',
+          '15     ],',
+          '16     <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Lela"</span>,',
+          '17     <span style="color: #0072dd;">"last_name"</span><span style="color #ce3559;">:</span> <span style="color: #143465;">"Block"</span>,',
+          '18     <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '19     <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"lela.block@example.com"</span>,',
+          '20     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '21     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '22     <span style="color: #0072dd;">"updated_at"</span>: <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '23     <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '24       <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '25     },',
+          '26     <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '27     <span style="color: #0072dd;">"previous_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '28   },',
+          '29   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '30 }',
+        ]
+      }
+    },
+
+    { //* Email verification created event
+      id: 86,
+      title: "Email verification created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification_01HYGAQN7DTHPWDDMMTW6GRN4Z"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '12   },',
+          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '14 }',
+        ]
+      }
+    },
+
+    { //* Invitation created event
+      id: 87,
+      title: "Invitation created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"succeeded"</span>,',
+          '7     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '8     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span>,',
+          '9     <span style="color: #0072dd;">"accepted_at"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">null</span>,',
+          '10     <span style="color: #0072dd;">"revoked_at"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">null</span>,',
+          '11     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '12     <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HWWSSTF0QKDCXMZC911T8BTG"</span>,',
+          '13     <span style="color: #0072dd;">"inviter_user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01HYGAVW79Z32XVDXZJV0WM6Y9"</span>,',
+          '14     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '15     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '16   },',
+          '17   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '18 }',
+        ]
+      }
+    },
+
+    { //* Magic Auth created event
+      id: 88,
+      title: "Magic Auth created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"magic_auth.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_01HWWSTZVFADJG9M9EJMKXB043"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"magic_auth"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"magic_auth_01HWWSVXCRMA5481VK9601SKQX"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '12   },',
+          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '14 }',
+        ]
+      }
+    },
+     
+    { //* Organization created
+      id: 89,
+      title: "Organization created",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M30K"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>,',
+          '6     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp"</span>,',
+          '7     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization"</span>,',
+          '8     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '9       {',
+          '10         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HV1VX5N18E48ETTHNNK54R6S"</span>,',
+          '11         <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"verified"</span>,',
+          '12         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '13         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>',
+          '14         <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>',
+          '15         <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"manual"</span>',
+          '16       }',
+          '17     ],',
+          '18     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>,',
+          '19     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>,',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
+    { //* Organization updated
+      id: 90,
+      title: "Organization updated",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization.updated"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M30K"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>,',
+          '6     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp"</span>,',
+          '7     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization"</span>,',
+          '8     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '9       {',
+          '10         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HV1VX5N18E48ETTHNNK54R6S"</span>,',
+          '11         <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"verified"</span>,',
+          '12         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '13         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>',
+          '14         <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>',
+          '15         <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"manual"</span>',
+          '16       }',
+          '17     ],',
+          '18     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>,',
+          '19     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T17:32:25.239Z"</span>,',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T17:32:25.239Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
+    { //* Organization deleted
+      id: 91,
+      title: "Organization deleted",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization.deleted"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M30K"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>,',
+          '6     <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Foo Corp"</span>,',
+          '7     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization"</span>,',
+          '8     <span style="color: #0072dd;">"domains"</span><span style="color: #ce3559;">:</span> [',
+          '9       {',
+          '10         <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HV1VX5N18E48ETTHNNK54R6S"</span>,',
+          '11         <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"verified"</span>,',
+          '12         <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"foo-corp.com"</span>',
+          '13         <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>',
+          '14         <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01HV1VNQBQ24JVREYB94RFCNDC"</span>',
+          '15         <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"manual"</span>',
+          '16       }',
+          '17     ],',
+          '18     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T16:32:25.239Z"</span>,',
+          '19     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T17:32:25.239Z"</span>,',
+          '20   },',
+          '21   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T17:32:25.239Z"</span>',
+          '22 }',
+        ]
+      }
+    },
+
+    { //* Organization domain verified event
+      id: 92,
+      title: "Organization domain verified event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain.verified"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_07FKJ843CVE8F7BXQSPFH0M53A"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HACSKJ57W8M2Q0N2X759C5HS"</span>,',
+          '7     <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain-to-verify.com"</span>,',
+          '8     <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"verified"</span>,',
+          '9     <span style="color: #0072dd;">"verification_token"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"gBIJgYXZLjW8uHHpz614dkgqm"</span>,',
+          '10     <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dns"</span>,',
+          '12   },',
+          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '14 }',
+        ]
+      }
+    },
+
+    { //* Organization domain verified event
+      id: 93,
+      title: "Organization domain verified event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain.verified"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_07FKJ843CVE8F7BXQSPFH0M53A"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"reason"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain_verification_period_expired"</span>,',
+          '6     <span style="color: #0072dd;">"organization_domain"</span><span style="color: #ce3559;">:</span> {',
+          '7       <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"organization_domain"</span>,',
+          '8       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_domain_01HACSKJ57W8M2Q0N2X759C5HS"</span>,',
+          '9       <span style="color: #0072dd;">"domain"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"domain-to-verify.com"</span>,',
+          '10       <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"failed"</span>,',
+          '11       <span style="color: #0072dd;">"verification_token"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"gBIJgYXZLjW8uHHpz614dkgqm"</span>,',
+          '12       <span style="color: #0072dd;">"verification_strategy"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dns"</span>,',
+          '13     }',
+          '14   },',
+          '15   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '16 }'
+        ]
+      }
+    },
+
+    { //* Organization membership created event
+      id: 94,
+      title: "Organization membership created event",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification.created"</span>,',
+          '3   <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_04FKJ843CVE8F7BXQSPFH0M53V"</span>,',
+          '4   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '5     <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification"</span>,',
+          '6     <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"email_verification_01HYGAQN7DTHPWDDMMTW6GRN4Z"</span>,',
+          '7     <span style="color: #0072dd;">"user_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"user_01E4ZCR3C5A4QZ2Z2JQXGKZJ9E"</span>,',
+          '8     <span style="color: #0072dd;">"email"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"todd@example.com"</span>,',
+          '9     <span style="color: #0072dd;">"expires_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '10     <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '11     <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-16T21:32:25.235Z"</span>,',
+          '12   },',
+          '13   <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2023-11-18T04:18:13.126Z"</span>',
+          '14 }',
+        ]
+      }
     }
-
-
 
 ]
 

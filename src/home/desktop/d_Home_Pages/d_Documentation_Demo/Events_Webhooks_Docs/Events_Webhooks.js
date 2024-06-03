@@ -66,7 +66,7 @@ export default class EventsWebhooks extends Component {
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked, } = this.props;
 
-            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24 } = this.state;
+            const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn28, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41 } = this.state;
 
         return (
             <Styles>
@@ -146,7 +146,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.email_verification_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn2 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.email_verification_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.email_verification_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -217,7 +217,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn3 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.magic_auth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.magic_auth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -253,7 +253,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn4 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.magic_auth_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.magic_auth_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -288,7 +288,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn5 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.mfa_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.mfa_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -302,7 +302,7 @@ export default class EventsWebhooks extends Component {
                                     <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
 
                                         <CodeSnippetStruct 
-                                        id={65}
+                                        id={64}
                                         headerTabs={0}
                                         showOnlyJSONTab={true}
                                         sideBarOpen={sidebarMenuClicked}
@@ -324,7 +324,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn6 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.mfa_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.mfa_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -359,7 +359,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn7 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.oauth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.oauth_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -395,7 +395,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn8 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.oauth_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.oauth_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -430,7 +430,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn9 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.password_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.password_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -466,7 +466,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn10 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.password_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.password_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -501,7 +501,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn11 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.sso_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.sso_failed<span style={{backgroundColor: "#f8f8fb", color: "#5e626a", padding: "0.5%", borderRadius: "20px",
                                 paddingLeft: "1%", paddingRight: "1%", border: "1px solid #ccc", marginLeft: "2.5%"}}>Coming soon</span></strong></p>
                                     </div>
                                 </div>
@@ -537,7 +537,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn12 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.authentication.sso_succeeded</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>authentication.sso_succeeded</strong></p>
                                     </div>
                                 </div>
 
@@ -579,7 +579,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn13 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.connection.activated</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>connection.activated</strong></p>
                                     </div>
                                 </div>
 
@@ -614,7 +614,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn14 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.connection.deactivated</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>connection.deactivated</strong></p>
                                     </div>
                                 </div>
 
@@ -649,7 +649,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn15 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.connection.deleted</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>connection.deleted</strong></p>
                                     </div>
                                 </div>
 
@@ -680,6 +680,7 @@ export default class EventsWebhooks extends Component {
 
                                 {/* Directory Sync Events */}
 
+
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Directory Sync events</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when directory-related resources are changed. To learn what exactly each of these events represents, see the <label className="demo-docs-hyperlink">in-depth Directory Sync events guide</label>.</p>
@@ -691,7 +692,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn16 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.activated</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.activated</strong></p>
                                     </div>
                                 </div>
 
@@ -726,7 +727,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn17 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.deleted</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.deleted</strong></p>
                                     </div>
                                 </div>
 
@@ -764,7 +765,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn18 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.group.created</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.group.created</strong></p>
                                     </div>
                                 </div>
 
@@ -799,7 +800,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn19 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.group.deleted</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.group.deleted</strong></p>
                                     </div>
                                 </div>
 
@@ -834,7 +835,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn20 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.group.updated</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.group.updated</strong></p>
                                     </div>
                                 </div>
 
@@ -869,7 +870,7 @@ export default class EventsWebhooks extends Component {
                                         <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn21 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
                                     </div>
                                     <div className='hdb-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>.dsync.group.user_added</strong></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.group.user_added</strong></p>
                                     </div>
                                 </div>
 
@@ -896,6 +897,510 @@ export default class EventsWebhooks extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a directory group user is added.</p>
 
                             </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(22)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn22 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.group.user_removed</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn22}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={82}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Directory group user removed event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a directory group user is removed.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(23)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn23 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.user.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn23}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={83}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Directory user created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a directory user is created.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(24)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn24 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.user.deleted</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn24}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={84}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Directory user deleted event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a directory user is deleted.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(25)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn25 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>dsync.user.updated</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn25}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={85}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Directory user updated event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a directory user is updated.</p>
+
+                            </div>
+
+                            
+                                {/* Email verification Events */}
+
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Email verification events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when a user is required to verify their email.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(26)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn26 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>email_verification.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn26}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={86}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Email verification created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user is required to verify their email and a code is created.</p>
+
+                            </div>
+
+
+                                {/* Invitation events */}
+
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Invitation events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when a <label className="demo-docs-hyperlink">User Management user</label> is invited to join an organization.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(27)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn27 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>invitation.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn27}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={87}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Invitation created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user is invited to sign up or to join an organization.</p>
+
+                            </div>
+
+
+                                {/* Magic Auth events */}
+
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Magic Auth events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when a user requests a Magic Auth code.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(29)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn29 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>magic_auth.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn29}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={88}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Magic Auth created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a user initiates Magic Auth and an authentication code is created.</p>
+
+                            </div>
+
+
+                                {/* Organization events */}
+
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Organization events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when WorkOS organizations are created, updated, or deleted.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(30)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn30 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn30}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={89}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization created" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization is created.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(31)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn31 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization.updated</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn31}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={90}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization updated" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization is updated.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(32)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn32 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization.deleted</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn32}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={91}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization deleted" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization is deleted.</p>
+
+                            </div>
+
+
+                                {/* Organization domain events */}
+
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Organization domain events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when verification status of an organization domain changes.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(33)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn33 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization.domain.verified</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn33}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={92}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization domain verified event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization domain is verified.</p>
+
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(34)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn34 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization.domain.verification_failed</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn34}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={93}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization domain verified event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization domain verification fails.</p>
+
+                            </div>
+
+
+                                {/* Organization domain events */}
+
+                        
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""} style={{marginTop: sidebarMenuClicked ? "7.5%" : "5%"}}>Organization membership events</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events emitted when a <label className="demo-docs-container">User Management user</label> joins or leaves an organization.</p>
+
+                            <div style={{borderBottom: "1px solid #cccc", borderTop: "1px solid #cccc", paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                <div onClick={() => this.hiddenDropdownBtnClicked(35)} className='hidden-dropdown-btn'>
+                                    <div className='hdb-icon'>
+                                        <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn35 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='hdb-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>organization_membership.created</strong></p>
+                                    </div>
+                                </div>
+
+                                <CSSTransition
+                                in={hiddenDropdownBtn35}
+                                timeout={500}
+                                classNames="dialog-slide"
+                                unmountOnExit
+                                >
+                                    <div style={{marginTop: "2.5%", paddingBottom: "1.5%"}}>
+
+                                        <CodeSnippetStruct 
+                                        id={94}
+                                        headerTabs={0}
+                                        showOnlyJSONTab={true}
+                                        sideBarOpen={sidebarMenuClicked}
+                                        snippet="Organization membership created event" 
+                                        updateSelectedLang={this.newLangSelected}
+                                        selectedLang={this.state.currentSelectedLanguage}/>
+
+                                    </div>
+                                </CSSTransition>
+
+                                <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when an organization membership is created.</p>
+
+                            </div>
+                            
 
                         </div>
                     </div>
