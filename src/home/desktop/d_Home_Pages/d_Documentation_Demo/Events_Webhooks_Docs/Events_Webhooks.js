@@ -2218,7 +2218,7 @@ export default class EventsWebhooks extends Component {
                             headerTabs={0}
                             languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
-                            snippet="" 
+                            snippet="Set up your webhook endpoint" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 

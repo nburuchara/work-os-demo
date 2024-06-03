@@ -4094,7 +4094,7 @@ const codeSnippets = [
         php: [
           '1 <span style="color: #8b8d98;">&lt?php</span>',
           '2 ',
-          '3 <span style="color: #148a68;">require</span> <span style="color: #0072dd;">__DIR__</span> . <span style="color: #143465;">"/vendor/autoload.php"</span>;',
+          '3 <span style="color: #148a68;">require</span> <span style="color: #0072dd;">__DIR__</span> <span style="color: #ce3559;">.</span> <span style="color: #143465;">"/vendor/autoload.php"</span>;',
           '4 ',
           '5 WorkOS\\WorkOS::<span style="color: #5854c6;">setApiKey</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>");',
           '6 WorkOS\\WorkOS::<span style="color: #5854c6;">setClientId</span>("<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>");',
@@ -14523,7 +14523,7 @@ const codeSnippets = [
 
     { //* (Set up your webhook endpoint) 
       id: 106,
-      title: "",
+      title: "Set up your webhook endpoint",
       doubleHeaders: {
         javascript: [
           {lang1: "Next.js", lang2: "Express"}
@@ -14712,7 +14712,68 @@ const codeSnippets = [
           '22     <span style="color: #148a68;">return</span> Response(status<span style="color: #ce3559;">=</span><span style="color: #0072dd;">200</span>)'
         ],
         go: [
-          '1 package main'
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"net/http"<span>',
+          '5 )',
+          '6 ',
+          '7 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '8         http.HandleFunc(<span style="color: #143465;">"/webhook"</span>, <span style="color: #148a68;">func</span>(w http.ResponseWriter, r <span style="color: #ce3559;">*</span>http.Request) {',
+          '9                 payload <span style="color: #ce3559;">:=</span> r.Body',
+          '10 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">               signature <span style="color: #ce3559;">:=</span> r.Header.<span style="color: #5854c6;">Get</span>(<span style="color: #143465;">\'WorkOS-Signature\'</span>);  </span>',
+          '11 ',
+          '12                 <span style="color: #8b8d98;">// Verify the signature and process the event</span>',
+          '13 ',
+          '14                 w.<span style="color: #5854c6;">WriteHeader</span>(http.StatusOK)',
+          '15         })',
+          '16 }'
+        ],
+        php: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 <span style="color: #148a68;">require</span> <span style="color: #0072dd;">__DIR__</span> <span style="color: #ce3559;">.</span> <span style="color: #143465;">"/vendor/autoload.php"</span>;',
+          '4 ',
+          '5 <span style="color: #148a68;">switch</span> (<span style="color: #5854c6;">strtok</span>($_SERVER[<span style="color: #143465;">"REQUEST_URI"</span>], <span style="color: #143465;">"?"</span>)) {',
+          '6     <span style="color: #148a68;">case</span> <span style="color: #143465;">"/webhooks"</span>:',
+          '7         $payload <span style="color: #ce3559;">=</span> file_get_contents(<span style="color: #143465;">"php://input"</span>);',
+          '8 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">        $sigHeader <span style="color: #ce3559;">=</span> $_SERVER[<span style="color: #143465;">\'WORKOS-SIGNATURE\'</span>];  </span>',
+          '9         <span style="color: #148a68;">return</span> <span style="color: #0072dd;">true</span>;',
+          '10 }'
+        ],
+        laravel: [
+          '1 <span style="color: #8b8d98;">&lt?php</span>',
+          '2 ',
+          '3 <span style="color: #148a68;">require</span> <span style="color: #0072dd;">__DIR__</span> <span style="color: #ce3559;">.</span> <span style="color: #143465;">"/vendor/autoload.php"</span>;',
+          '4 ',
+          '5 <span style="color: #148a68;">switch</span> (<span style="color: #5854c6;">strtok</span>($_SERVER[<span style="color: #143465;">"REQUEST_URI"</span>], <span style="color: #143465;">"?"</span>)) {',
+          '6     <span style="color: #148a68;">case</span> <span style="color: #143465;">"/webhooks"</span>:',
+          '7         $payload <span style="color: #ce3559;">=</span> file_get_contents(<span style="color: #143465;">"php://input"</span>);',
+          '8 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">        $sigHeader <span style="color: #ce3559;">=</span> $_SERVER[<span style="color: #143465;">\'WORKOS-SIGNATURE\'</span>];  </span>',
+          '9         <span style="color: #148a68;">return</span> <span style="color: #0072dd;">true</span>;',
+          '10 }'
+        ],
+        java: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">io</span>.<span style="color: #5854c6;">javalin</span>.<span style="color: #5854c6;">Javalin</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">public class</span> <span style="color: #5854c6;">Application</span> {',
+          '4   <span style="color: #148a68;">public static void</span> <span style="color: #5854c6;">main</span>(<span style="color: #5854c6;">String</span>[] args) {',
+          '5     <span style="color: #5854c6;">Javalin</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">Javalin</span>.<span style="color: #5854c6;">create</span>().<span style="color: #5854c6;">start</span>(<span style="color: #0072dd;">7001</span>);',
+          '6 ',
+          '7     app.<span style="color: #5854c6;">post</span>(<span style="color: #143465;">"/webhooks"</span>, ctx <span style="color: #ce3559;">-></span> {',
+          '8       <span style="color: #5854c6;">String</span> payload <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">body</span>();',
+          '9 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">      <span style="color: #5854c6;">String</span> signatureHeader <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">header</span><span style="color: #143465;">\'WorkOS-Signature\'</span>];  </span>',
+          '10 ',  
+          '11        ctx.<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">200</span>);',  
+          '12     });',
+          '13   }',
+          '14 }'
+        ],
+        dotnet: [
+          '1 using System;',
+          '2 using WorkOS;',
+          '3 ',
+          '4 '
         ]
       }
     }
