@@ -857,11 +857,17 @@ export default class CodeSnippet extends Component {
                           // Remove the matched characters from the line content
                           const lineContent = line.substring(firstCharacters.length);
 
-                          // Check if the line contains the specific style
-                          const containsSpecificStyle = line.includes('background-color: #e6f7ed;');
+                          // Check if the line contains either specific style
+                          const containsColor1 = line.includes('background-color: #e6f7ed;');
+                          const containsColor2 = line.includes('background-color: #fcfae9;');
 
-                          // Apply the same background color if the specific style is found
-                          const backgroundColorStyle = containsSpecificStyle ? { backgroundColor: '#e6f7ed' } : {};
+                          // Apply the same background color if either specific style is found
+                          let backgroundColorStyle = {};
+                          if (containsColor1) {
+                              backgroundColorStyle = { backgroundColor: '#e6f7ed' };
+                          } else if (containsColor2) {
+                              backgroundColorStyle = { backgroundColor: '#fcfae9' };
+                          }
 
                           return (
                             <div key={index} className="code-line" style={{ display: 'flex', ...backgroundColorStyle }}>

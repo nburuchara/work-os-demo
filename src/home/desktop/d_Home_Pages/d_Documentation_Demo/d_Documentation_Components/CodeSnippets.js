@@ -14519,6 +14519,100 @@ const codeSnippets = [
           ') (<span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsResponse</span>, <span style="color: #148a68;">error</span>)',
         ]
       }
+    },
+
+    { //* (Set up your webhook endpoint) 
+      id: 106,
+      title: "",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Next.js", lang2: "Express"}
+        ],
+        nextjs: [
+          {lang1: "Next.js", lang2: "Express"}
+        ],
+        express: [
+          {lang1: "Next.js", lang2: "Express"}
+        ],
+        ruby: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        rails: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        sinatra: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        python: [
+          {lang1: "Django", lang2: "Flask"}
+        ],
+        django: [
+          {lang1: "Django", lang2: "Flask"}
+        ],
+        flask: [
+          {lang1: "Django", lang2: "Flask"}
+        ]
+      },
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> type { <span style="color: #5854c6;">NextApiRequest</span>, <span style="color: #5854c6;">NextApiResponse</span> }  <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">export default</span> (req<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">NextApiRequest</span>, res<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">NextApiResponse</span>) <span style="color: #ce3559;">=></span> {',
+          '4   <span style="color: #148a68;">if</span> (req.method <span style="color: #ce3559;">===</span> <span style="color: #143465;">\'POST\'</span>) {',
+          '5     <span style="color: #148a68;">const</span> payload <span style="color: #ce3559;">=</span> req.body;',
+          '6 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">    <span style="color: #148a68;">const</span> sigHeader <span style="color: #ce3559;">=</span> req.headers[<span style="color: #143465;">\'workos-signature\'</span>];  </span>',
+          '7 ',
+          '8     <span style="color: #8b8d98;">// Verify the signature and process the event</span>',
+          '9     res.<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">200</span>);',
+          '10   }',
+          '11 };'
+        ],
+        nextjs: [
+          '1 <span style="color: #148a68;">import</span> type { <span style="color: #5854c6;">NextApiRequest</span>, <span style="color: #5854c6;">NextApiResponse</span> }  <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">export default</span> (req<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">NextApiRequest</span>, res<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">NextApiResponse</span>) <span style="color: #ce3559;">=></span> {',
+          '4   <span style="color: #148a68;">if</span> (req.method <span style="color: #ce3559;">===</span> <span style="color: #143465;">\'POST\'</span>) {',
+          '5     <span style="color: #148a68;">const</span> payload <span style="color: #ce3559;">=</span> req.body;',
+          '6 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">    <span style="color: #148a68;">const</span> sigHeader <span style="color: #ce3559;">=</span> req.headers[<span style="color: #143465;">\'workos-signature\'</span>];  </span>',
+          '7 ',
+          '8     <span style="color: #8b8d98;">// Verify the signature and process the event</span>',
+          '9     res.<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">200</span>);',
+          '10   }',
+          '11 };'
+        ],
+        express: [
+          '1 <span style="color: #148a68;">const</span> express  <span style="color: #5854c6;">require</span>(\'express\');',
+          '2 <span style="color: #148a68;">const</span> app <span style="color: #ce3559;">=</span> express</span><span style="color: #5854c6;">();',
+          '3 ',
+          '4 app.<span style="color: #5854c6;">use</span>(express.<span style="color: #5854c6;">json</span>());',
+          '5 ',
+          '6 app.<span style="color: #5854c6;">post</span>(<span style="color: #143465;">\'/webhook\'</span>, (req, res) <span style="color: #ce3559;">=</span> {',
+          '7   <span style="color: #148a68;">const</span> payload <span style="color: #ce3559;">=</span> req.body;',
+          '8 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">  <span style="color: #148a68;">const</span> sigHeader <span style="color: #ce3559;">=</span> req.headers[<span style="color: #143465;">\'workos-signature\'</span>];  </span>',
+          '9 ',
+          '10   <span style="color: #8b8d98;">// Verify the signature and process the event</span>',
+          '11   res.<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">200</span>);',
+          '12 };'
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="color: #0072dd;">CLIENT_ID</span> <span style="color: #ce3559;">=</span> <span style="color: #0072dd;">ENV</span>[<span style="color: #143465;">"WORKOS_CLIENT_ID"</span>]',
+          '4 ',
+          '5 <span style="color: #148a68;">class</span> <span style="color: #5854c6;">WebhookController</span> <span style="color: #ce3559;"><</span> ApplicationController',
+          '6   skip_forgery_protection',
+          '7 ',
+          '8   <span style="color: #148a68;">def</span> <span style="color: #5854c6;">webhook</span>',
+          '9     payload <span style="color: #ce3559;">=</span> request.body.read',
+          '10 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">   sigHeader <span style="color: #ce3559;">=</span> request.headers[<span style="color: #143465;">\'WorkOS-Signature\'</span>];  </span>',
+          '11 ',
+          '12     <span style="color: #8b8d98;"># Verify the signature and process the event</span>',
+          '13 ',
+          '14     head :ok',
+          '15   <span style="color: #148a68;">end</span>',
+          '16 <span style="color: #148a68;">end</span>'
+        ]
+      }
     }
 
 ]

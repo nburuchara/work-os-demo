@@ -15,7 +15,8 @@ export default class EventsWebhooks extends Component {
                 //* - EVENTS & WEBHOOKS SECTIONS - *//
             eventTypes: false,
             dataSyncing: false,
-            dataSyncingWithApi: true,
+            dataSyncingWithApi: false,
+            dataSyncingWithWebhooks: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -78,10 +79,10 @@ export default class EventsWebhooks extends Component {
     render () {
 
                 //* - EVENTS AND WEBHOOKS SECTION VAR(S) - *//
-        const { eventTypes, dataSyncing, dataSyncingWithApi } = this.state;
+        const { eventTypes, dataSyncing, dataSyncingWithApi, dataSyncingWithWebhooks } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
-        const { sidebarMenuClicked, } = this.props;
+        const { sidebarMenuClicked} = this.props;
 
             //* - HIDDEN DROPDOWN VAR(S) - *//
         const { hiddenDropdownBtn1, hiddenDropdownBtn2, hiddenDropdownBtn3, hiddenDropdownBtn4, hiddenDropdownBtn5, hiddenDropdownBtn6, hiddenDropdownBtn7, hiddenDropdownBtn8, hiddenDropdownBtn9, hiddenDropdownBtn10, hiddenDropdownBtn11, hiddenDropdownBtn12, hiddenDropdownBtn13, hiddenDropdownBtn14, hiddenDropdownBtn15, hiddenDropdownBtn16, hiddenDropdownBtn17, hiddenDropdownBtn18, hiddenDropdownBtn19, hiddenDropdownBtn20, hiddenDropdownBtn21, hiddenDropdownBtn22, hiddenDropdownBtn23, hiddenDropdownBtn24, hiddenDropdownBtn25, hiddenDropdownBtn26, hiddenDropdownBtn27, hiddenDropdownBtn29, hiddenDropdownBtn30, hiddenDropdownBtn31, hiddenDropdownBtn32, hiddenDropdownBtn33, hiddenDropdownBtn34, hiddenDropdownBtn35, hiddenDropdownBtn36, hiddenDropdownBtn37, hiddenDropdownBtn38, hiddenDropdownBtn39, hiddenDropdownBtn40, hiddenDropdownBtn41, hiddenDropdownBtn42, hiddenDropdownBtn43, hiddenDropdownBtn44 } = this.state;
@@ -1905,7 +1906,7 @@ export default class EventsWebhooks extends Component {
                 }
                 {dataSyncingWithApi &&
                     <div className="demo-docs-container">
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data using the events API</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A step-by-step guide on how to start syncing data using the API.</p>
                         </div>
@@ -2169,6 +2170,57 @@ export default class EventsWebhooks extends Component {
                                     <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
                                 </div>
                             </div>
+
+                        </div>
+
+                    </div>
+                }
+                {dataSyncingWithWebhooks && 
+                    <div className="demo-docs-container">
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data with webhooks</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A step-by-step guide on how to start syncing data using webhooks.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll build</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we will walk you through what you will need to set up webhooks:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create your endpoint to receive webhook events</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Register your endpoint with WorkOS</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Process the events received from WorkOS</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test your endpoint</p></li>
+                            </ul>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your webhook endpoint</h1>
+                                </div>
+                            </div>
+
+
+                            <div className="api-keys">
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a public endpoint that WorkOS can send events to. This endpoint should use HTTPS and should accept POST requests with the <span>workos-signature</span> header.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={106}
+                            headerTabs={0}
+                            languagesToRemove={['cURL']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
 
                         </div>
 
