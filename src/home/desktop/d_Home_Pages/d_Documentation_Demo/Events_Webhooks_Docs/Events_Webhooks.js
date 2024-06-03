@@ -2040,6 +2040,55 @@ export default class EventsWebhooks extends Component {
                             </div>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Start consuming events</h1>
+                                </div>
+                            </div>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app can start consuming events once it integrates the WorkOS SDK. The first thing to do is to pick a starting place in the data set.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Keep a cursor</h3>
+
+                            <div className="api-keys">                           
+                                 
+                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <i>cursor</i> is a bookmark to track your app’s position in the events list. The very first call to the events API won’t have a cursor. Subsequent requests to WorkOS should include the updated cursor using the <span>after</span> parameter. You will need to update and store your cursor after processing an event.</p>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Avoid overwriting newer data</h3>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To avoid repeating an update, store the <span>updated_at</span> timestamp provided by WorkOS for each object. Extract this tag from the data object in the event. If the <span>updated_at</span> timestamp in the event is newer, update the local state with the latest event data. Otherwise, you can skip processing that event.</p>
+
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select event types</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Determine the <label className="demo-docs-hyperlink">event types</label> you want to consume. Choose the relevant event types that align with your app’s functionality and integration with WorkOS.</p>
+
+                            <CodeSnippetStruct 
+                            id={105}
+                            headerTabs={0}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="List events" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                        </div>
 
                     </div>
                 }
