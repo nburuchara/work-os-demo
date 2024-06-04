@@ -17,7 +17,8 @@ export default class EventsWebhooks extends Component {
             dataSyncing: false,
             dataSyncingWithApi: false,
             dataSyncingWithWebhooks: false,
-            dataReconciliation: true,
+            dataReconciliation: false,
+            observabilityStreamToDatadog: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -80,7 +81,7 @@ export default class EventsWebhooks extends Component {
     render () {
 
                 //* - EVENTS AND WEBHOOKS SECTION VAR(S) - *//
-        const { eventTypes, dataSyncing, dataSyncingWithApi, dataSyncingWithWebhooks, dataReconciliation } = this.state;
+        const { eventTypes, dataSyncing, dataSyncingWithApi, dataSyncingWithWebhooks, dataReconciliation, observabilityStreamToDatadog } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked} = this.props;
@@ -2593,10 +2594,157 @@ export default class EventsWebhooks extends Component {
                         </div>
                     </div>
                 }
+                {observabilityStreamToDatadog && 
+                    <div className="demo-docs-container">
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Stream events to Datadog</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Stream and analyze WorkOS activity in Datadog.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div id='img125' className={`enlargable-image-container ${this.state.enlargedImageId === 'img125' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img125')}>
+                                    <img  src='/assets/stream_datadogs_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports real-time streaming of events to Datadog. By analyzing WorkOS activity directly in Datadog, you are able to:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>View trends in user sign-ins, user growth, new SSO connections and more.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Debug customer issues related to sign-in, email verification, password resets and more</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generate reports of user activity per customer organization.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set alerts for unexpected activity, such as sudden spike in failed password attempts.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>See all of the WorkOS events that stream to Datadog in the <label className="demo-docs-hyperlink">event types</label> documentation.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Setting up real-time streaming of WorkOS events to Datadog only takes a few minutes and can be done in three simple steps.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a Datadog API key</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, create a new Datadog API key to give WorkOS permission to send event activity as logs to your Datadog account. While you can use an existing API key, WorkOS recommends creating a new key that will only be used for WorkOS event streaming.</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Organization Settings → <label className='demo-docs-hyperlink'>API Keys</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p> page.</li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Key</strong> button</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a name for your new API key.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Create Key</strong> button.</p></li>
+                            </ol>
+
+
+                            <div id='img126' className={`enlargable-image-container ${this.state.enlargedImageId === 'img126' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img126')}>
+                                    <img  src='/assets/stream_datadogs_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure event streaming in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The next step is to configure event streaming in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> using the Datadog API key that was created in the previous step.</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <strong>Events</strong> page.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Stream to Datadog</strong> button.</p></li>
+                            </ol>
+
+                            <div id='img127' className={`enlargable-image-container ${this.state.enlargedImageId === 'img127' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img127')}>
+                                        <img  src='/assets/stream_datadogs_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <ol start={4}>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the Datadog API key.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your Datadog region.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Save Log Stream Details</strong> button.</p></li>
+                            </ol>
+
+                            <div id='img128' className={`enlargable-image-container ${this.state.enlargedImageId === 'img128' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img128')}>
+                                        <img  src='/assets/stream_datadogs_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With event streaming configured, when new events occur, WorkOS will send the events to Datadog with the source <span>workos</span>.</p>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add the WorkOS Datadog dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The final step is to add the WorkOS Datadog dashboard to your Datadog account.</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <label className='demo-docs-hyperlink'>Dashboard List</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the + <strong>New Dashboard</strong> button.</p></li>
+                            </ol>
+
+                            <div id='img129' className={`enlargable-image-container ${this.state.enlargedImageId === 'img129' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img129')}>
+                                        <img  src='/assets/stream_datadogs_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <ol start={4}>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a dashboard name.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Dashboard</strong> button.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the new dashboard, choose the <strong>Configure</strong> button.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Download the <label className='demo-docs-hyperlink'>WorkOS Datadog dashboard JSON file</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_download_color.png' alt='no img available'/></span></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down in the context menu and choose <strong>Import dashboard JSON</strong>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the WorkOS Datadog dashboard JSON file downloaded in the previous step.</p></li>
+                            </ol>
+
+                            <div id='img130' className={`enlargable-image-container ${this.state.enlargedImageId === 'img130' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img130')}>
+                                        <img  src='/assets/stream_datadogs_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>API Reference</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Every SDK method and API endpoint documented.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                }
             </Styles>
         )
 
     }
 }
 
-//* IMAGE 124 (latest)
+//* IMAGE 127 (latest)
