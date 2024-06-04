@@ -1663,7 +1663,7 @@ export default class StandaloneAPIs extends Component {
                                     <p>Provisioning is the process of creating a user and setting attributes for them inside an app.</p>
                                 </div>
                             </div>
-                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                            <div  className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>JIT user provisioning</h5>
                                 </div>
@@ -1671,7 +1671,7 @@ export default class StandaloneAPIs extends Component {
                                     <p>Just-in-time user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role don’t exist until the app creates them – just-in-time.</p>
                                 </div>
                             </div>
-                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>Identity</h5>
                                 </div>

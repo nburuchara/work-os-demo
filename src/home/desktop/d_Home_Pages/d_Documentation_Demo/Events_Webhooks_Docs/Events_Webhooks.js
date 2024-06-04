@@ -16,7 +16,8 @@ export default class EventsWebhooks extends Component {
             eventTypes: false,
             dataSyncing: false,
             dataSyncingWithApi: false,
-            dataSyncingWithWebhooks: true,
+            dataSyncingWithWebhooks: false,
+            dataReconciliation: true,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -79,7 +80,7 @@ export default class EventsWebhooks extends Component {
     render () {
 
                 //* - EVENTS AND WEBHOOKS SECTION VAR(S) - *//
-        const { eventTypes, dataSyncing, dataSyncingWithApi, dataSyncingWithWebhooks } = this.state;
+        const { eventTypes, dataSyncing, dataSyncingWithApi, dataSyncingWithWebhooks, dataReconciliation } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked} = this.props;
@@ -2408,7 +2409,7 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you would like to test against your local development environment, we recommend using a tool like <label className='demo-docs-hyperlink'>ngrok</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to create a secure tunnel to your local machine, and sending test webhooks to the public endpoint generated with ngrok. See our <label className='demo-docs-hyperlink'>blog post</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to get more details on how you may want to test webhooks locally with ngrok.</p>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Best practices</h1>
 
@@ -2485,9 +2486,111 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-
                         </div>
 
+                    </div>
+                }
+                {dataReconciliation && 
+                    <div className="demo-docs-container">
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data reconciliation</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Keep your app in sync with WorkOS.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While the events API makes it easier to keep your app in sync with WorkOS, there may still be cases where your app gets out of sync. For example, your app may have a bug in its event processing logic or in rarer cases, may experience some data loss.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Data reconciliation refers to the process of comparing and aligning the state of objects between WorkOS and your app to ensure consistency. Depending on the scope of the issue, you can reconcile your app state by either replaying events from the <label className="demo-docs-hyperlink">events API</label> or by using the WorkOS <label className="demo-docs-hyperlink">state API</label>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Data reconciliation</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Refers to the process of comparing and aligning data from different sources or systems to ensure consistency and accuracy. The goal of data reconciliation is to ensure that all relevant data sources are synchronized and reflect the same information.</p>
+                                </div>
+                            </div>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Event replay</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Is the act of reprocessing recorded events in an app. It is used to recreate past event sequences for debugging, testing, auditing, or ensuring data consistency.</p>
+                                </div>
+                            </div>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Side effects</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>These are secondary consequences that arise from data modifications in an app. They can alter related data, trigger additional processes, update external systems, or affect the app’s overall state. e.g., Sending an email on a user’s profile change.</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5 style={{color: "black", cursor: "default"}}>Periodic reconciliation</h5>
+                                </div>
+                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Is the regular process of comparing and synchronizing data between systems to ensure accuracy and consistency. It involves scheduled checks to identify and resolve discrepancies in data integrity.</p>
+                                </div>
+                            </div>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Reconciling via the events API</h1>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In general, reconciling state changes between WorkOS and your app using the events API is simplest. Pick your cursor, which is usually the last known cursor you have processed, and paginate through events using the <span>after</span> parameter.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For special cases such as webhook migration or event replay, you can specify a starting time for event consumption using the <span>range_start</span> parameter.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handling side effects in the case of event replay</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Side effects, such as sending emails, updating 3rd party APIs, or performing other actions specific to your app, present challenges during event replay.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Separating data handling from business logic allows you to exercise control over what actions you want your app to make. This allows your app to replay events to sync data but bypass transactional logic e.g., not sending out the same email twice.</p>
+
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Reconciling via the WorkOS state API</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app may perform data reconciliation by syncing state via the WorkOS <label className="demo-docs-hyperlink">state APIs</label> e.g., in disaster recovery scenarios.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Data reconciliation using state APIs requires performing diffs to identify deletions to ensure the correct state is maintained. This introduces additional complexity, making it essential to carefully design and test the reconciliation process.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The general approach for reconciling data via the state API is as follows:</p>
+
+                            <div className="api-keys">
+                                <ol>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Pull state from WorkOS API for the objects your app is interested in.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update based on <span>updated_at</span>. If the timestamp is out of date, update the object.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identify deactivated objects or deletions and sync that state.</p></li>
+                                </ol>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to force all objects to update state, perform a complete resynchronization of the affected data instead of relying solely on the <span>updated_at</span> timestamp. Update all objects regardless of the individual <span>updated_at</span> timestamp.</p>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Considerations for periodic reconciliation</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In some cases, you may want to run periodic reconciliation jobs to proactively check and reconcile the state between WorkOS and your app. When implementing such jobs, it is important to account for potential race conditions for concurrent updates. Additionally, consider the specific characteristics of your app to determine the frequency and scope of periodic reconciliation.</p>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Stream events to Datadog</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Stream and analyze WorkOS activity in Datadog.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 }
             </Styles>
