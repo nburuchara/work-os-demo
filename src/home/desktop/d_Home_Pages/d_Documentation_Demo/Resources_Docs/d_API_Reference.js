@@ -69,7 +69,6 @@ export default class APIReference extends Component {
         }
     }
 
-    
     render () {
 
         const { codeSnippet1CopyHovered } = this.state;

@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
 import { hover } from '@testing-library/user-event/dist/hover'
 import { CSSTransition } from 'react-transition-group';
-import SidebarOptions from './Resources_Docs/Resources_Docs_Options'
+import UserManagementOptions from './User_Mgmt_Docs/User_Mgmt_Options';
+import StandaloneAPIsOptions from './Standalone_APIs_Docs/Standalone_APIs_Options'
+import EventsWebhooksOptions from './Events_Webhooks_Docs/Events_Webhooks_Options';
+import ResourcesOptions from './Resources_Docs/Resources_Docs_Options'
 import NestedDropdown from './d_Documentation_Components/NestedDropdown'
 import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
 import APIReference from './Resources_Docs/d_API_Reference';
@@ -2034,6 +2037,11 @@ export default class DocsNavigationMenu extends Component {
             mOption3Gap: "80px",
             mOption4Gap: "120px",
 
+            userManagementDropdown: false,
+            standaloneAPIsDropdown: false,
+            eventsAndWebhooksDropdown: false,
+            resourcesDropdown: false,
+
             //* - - TOGGLE ADJUSTABLE DIMENSIONS - - *//
 
             sidebarMenuClicked: false,
@@ -2062,9 +2070,36 @@ export default class DocsNavigationMenu extends Component {
             }
         } 
         setTimeout(() => {
-            this.setState({
-                resourcesDropdown: true
-            })
+            if (option === 1) {
+                this.setState({
+                    userManagementDropdown: true,
+                    standaloneAPIsDropdown: false,
+                    eventsAndWebhooksDropdown: false,
+                    resourcesDropdown: false
+                })
+            } else if (option === 2) {
+                this.setState({
+                    userManagementDropdown: false,
+                    standaloneAPIsDropdown: true,
+                    eventsAndWebhooksDropdown: false,
+                    resourcesDropdown: false
+                })
+            } else if (option === 3) {
+                this.setState({
+                    userManagementDropdown: false,
+                    standaloneAPIsDropdown: false,
+                    eventsAndWebhooksDropdown: true,
+                    resourcesDropdown: false
+                })
+            } else {
+                this.setState({
+                    userManagementDropdown: false,
+                    standaloneAPIsDropdown: false,
+                    eventsAndWebhooksDropdown: false,
+                    resourcesDropdown: true
+                })
+            }
+            
         }, 500)
     }
 
@@ -2248,6 +2283,7 @@ export default class DocsNavigationMenu extends Component {
             //* - DOUMENTATION PAGES VARS - *//
         const { showDocsHome, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
         const { usrMgmtScrollID, standaloneApisScrollID } = this.state;
+
         return(
             <Styles>
                         {/* - - SIDE PANEL - -  */}
@@ -2275,15 +2311,49 @@ export default class DocsNavigationMenu extends Component {
                                     }
 
                                     <CSSTransition
+                                    in={this.state.userManagementDropdown}
+                                    timeout={500}
+                                    classNames="dialog-slide"
+                                    unmountOnExit
+                                    >
+                                        <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                            <NestedDropdown menuItems={UserManagementOptions} />
+                                        </div>
+                                    </CSSTransition>
+
+                                    <CSSTransition
+                                    in={this.state.standaloneAPIsDropdown}
+                                    timeout={500}
+                                    classNames="dialog-slide"
+                                    unmountOnExit
+                                    >
+                                        <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                            <NestedDropdown menuItems={StandaloneAPIsOptions} />
+                                        </div>
+                                    </CSSTransition>
+
+                                    <CSSTransition
+                                    in={this.state.eventsAndWebhooksDropdown}
+                                    timeout={500}
+                                    classNames="dialog-slide"
+                                    unmountOnExit
+                                    >
+                                        <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                            <NestedDropdown menuItems={EventsWebhooksOptions} />
+                                        </div>
+                                    </CSSTransition>
+
+                                    <CSSTransition
                                     in={this.state.resourcesDropdown}
                                     timeout={500}
                                     classNames="dialog-slide"
                                     unmountOnExit
                                     >
-                                    <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                        <NestedDropdown menuItems={SidebarOptions} />
-                                    </div>
+                                        <div style={{marginTop: "50px"}} className="dropdown-menu">
+                                            <NestedDropdown menuItems={ResourcesOptions} />
+                                        </div>
                                     </CSSTransition>
+
                                 </div>
                             </div>
                     </CSSTransition>
