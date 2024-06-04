@@ -16,7 +16,7 @@ import EventsWebhooks from './Events_Webhooks_Docs/Events_Webhooks';
 
 const Styles = styled.div `
 
-        // - - - - - - DEMO DOCS SIDEBAR - - - - - //
+        //! - - - - - - DEMO DOCS SIDEBAR - - - - - !//
 
 .demo-docs-sidebar {
     filter: none;
@@ -78,7 +78,7 @@ const Styles = styled.div `
     background-color: ;
     padding: 0.95%;
     border-radius: 8px;
-    width: 90%;
+    width: 88.5%;
     margin-top: 3.5%;
     transition: top 5s ease;
 }
@@ -157,8 +157,42 @@ const Styles = styled.div `
     top: 120px;
     transition: top 0.75s ease !important; /* Add transition for smooth movement */
 }
+
+    //! - - CLOSE SELECTED MENU BUTTON - - !//
+
+.closeSelectedMenuOption {
+    float: right;
+    margin-top: 6.5%;
+    margin-right: 6.25%;
+}
+
+.closeSelectedMenuOption span {
+    border-radius: 50%;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.closeSelectedMenuOption span:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.closeSelectedMenuOption img {
+    height: 10px;
+    width: 10px;
+    margin-bottom: 10%;
+}
+
+
+
+        //? - - - - - END OF SIDEBAR CSS - - - - - //?
+
+
         
-        // - - - - - - DEMO DOCS CONTAINER - - - - - - //
+        //! - - - - - - DEMO DOCS CONTAINER - - - - - - !//
 
 .demo-docs-container {
     text-align: left;
@@ -1709,9 +1743,10 @@ const Styles = styled.div `
    width: 85%;
 }
 
+    //? - - - - - END OF CONTENT CSS - - - - - //?
 
 
-        // - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - //
+        //! - - - - - - DEMO DOCS DOCK/SEAERCH BAR - - - - - !//
 
 .demo-docs-search-bar {
     filter: none !important;
@@ -1816,7 +1851,7 @@ const Styles = styled.div `
     transition: transform 500ms, opacity 500ms !important;
 }
 
-        // - - - - - IMPORTED SEARCH FUNCTIONALITY - - - - - - - //
+        //! - - - - - SEARCH FUNCTIONALITY - - - - - - - 1//
 
     // - - SEARCH RESULTS - - //
 
@@ -1930,7 +1965,7 @@ const Styles = styled.div `
 }
 
 
-        // - - - - - - DOCS HOME CONTAINER - - - - - - //
+        //! - - - - - - DOCS HOME CONTAINER - - - - - - !//
 
 .docs-home-container {
     text-align: left;
@@ -2065,7 +2100,8 @@ export default class DocsNavigationMenu extends Component {
             })
             if (option === i) {
                 this.setState({
-                    [`menuOption${i}`]: true 
+                    [`menuOption${i}`]: true,
+                    showCloseSelectedOptionBtn: true
                 })
             }
         } 
@@ -2101,6 +2137,24 @@ export default class DocsNavigationMenu extends Component {
             }
             
         }, 500)
+    }
+
+    closeSelectedMenuOption = () => {
+        this.setState({
+            menuOption1: false,
+            menuOption2: false,
+            menuOption3: false,
+            menuOption4: false,
+            mOption1Gap: "0px",
+            mOption2Gap: "40px",
+            mOption3Gap: "80px",
+            mOption4Gap: "120px",
+            userManagementDropdown: false,
+            standaloneAPIsDropdown: false,
+            eventsAndWebhooksDropdown: false,
+            resourcesDropdown: false,
+            showCloseSelectedOptionBtn: false
+        })
     }
 
     menuDocsEnter = () => { this.setState({menuDocsHovered: true}) }
@@ -2268,7 +2322,7 @@ export default class DocsNavigationMenu extends Component {
 
     render () {
             //* - SIDE BAR MENU VARS - *//
-        const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap } = this.state;
+        const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn } = this.state;
             
             //* - DOCK SEARCH BAR VARS - *//
         const { menuDocsHovered, externalDocsHovered, exitDocsHovered, dockSearchBarWidth, dockMenuBtnsPaddingTop, dockSearchBarInputWidth, dockMenuBtnWidth, dockExternalBtnWidth, dockExitBtnWidth } = this.state
@@ -2302,11 +2356,23 @@ export default class DocsNavigationMenu extends Component {
                                 <div style={{borderBottom: "1px solid #ccc", marginLeft: "5%", marginRight: "5%"}}></div>
                                 <div style={{width: "100%", height: "88.75%", bottom: 0, overflow: "scroll", position: "relative"}}>
                                     {menuSubsections && 
-                                        <div className='demo-docs-sidebar-subsections'> 
-                                            <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
-                                            <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
-                                            <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
-                                            <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                                        <div>
+                                            <div className='demo-docs-sidebar-subsections'> 
+                                                <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
+                                                <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
+                                                <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
+                                                <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                                            </div>
+                                            <CSSTransition
+                                            in={showCloseSelectedOptionBtn}
+                                            timeout={500}
+                                            classNames="mini-search-bar"
+                                            unmountOnExit
+                                            >
+                                                <div className='closeSelectedMenuOption'>
+                                                    <span onClick={this.closeSelectedMenuOption}><img src='/assets/docs_popup_exit_search_icon.png' alt='no img available'/></span>
+                                                </div>
+                                            </CSSTransition>
                                         </div>
                                     }
 
