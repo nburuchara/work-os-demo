@@ -2298,6 +2298,193 @@ export default class EventsWebhooks extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There is an optional parameter, tolerance, that sets the time validation for the webhook in seconds. The SDK methods have default values for tolerance, usually 3 – 5 minutes.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Validate the requests manually</h3>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If implementing webhook validation yourself, you’ll need to use the following steps:</p>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, extract the timestamp and signature from the header. There are two values to parse from the <span>WorkOS-Signature</span> header, delimited by a <span>,</span> character.</p>
+                            </div>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "20%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "90%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Key</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : "80%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "90%" : "", marginBottom: sidebarMenuClicked ? "5%" : "3.5%"}}>Value</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>issued_timestamp</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : "80%"}} className='c-table-cell2'>
+                                    <div className="api-keys">
+                                        <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>The number of milliseconds since the epoch time at which the event was issued, prefixed by <span>t=</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>signature_hash</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : "80%"}} className='c-table-cell2'>
+                                    <div className="api-keys">
+                                        <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>The HMAC SHA256 hashed signature for the request, prefixed by <span>v1=</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To avoid replay attacks, we suggest validating that the <span>issued_timestamp</span> does not differ too much from the current time.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, construct the expected signature. The expected signature is computed from the concatenation of:</p>
+
+                            <ol>
+                                <li>
+                                    <div className="api-keys">
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>issued_timestamp</span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="api-keys">
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>.</span> character</p>
+                                    </div>
+                                </li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The request’s body as a utf-8 decoded string</p></li>
+                            </ol>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Hash the string using HMAC SHA256, using the webhook secret as the key. The expected signature will be the hex digest of the hash. Finally, compare signatures to make sure the webhook request is valid.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve determined the event request is validly signed, it’s safe to use the event payload in your application’s business logic.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create an IP allowlist</h3>
+
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS sends webhooks from a fixed set of IP addresses. It’s recommended to restrict access to your webhook endpoint to only these IP addresses:</p>
+
+                            <CodeSnippetStruct 
+                            id={108}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="WorkOS IP addresses" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Test your endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From the dashboard, you can send test webhook events after configuring an endpoint. Go to the webhook endpoint detail page, click the <strong>Actions</strong> button and select <strong>Send test event</strong>. The types of events that you have configured for your endpoint are available for you to send sample payloads.</p>
+
+
+                            <div id='img124' className={`enlargable-image-container ${this.state.enlargedImageId === 'img124' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img124')}>
+                                    <img  src='/assets/syncing_webhooks_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you would like to test against your local development environment, we recommend using a tool like <label className='demo-docs-hyperlink'>ngrok</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to create a secure tunnel to your local machine, and sending test webhooks to the public endpoint generated with ngrok. See our <label className='demo-docs-hyperlink'>blog post</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to get more details on how you may want to test webhooks locally with ngrok.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Best practices</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Respond to events immediately</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To avoid webhook requests potentially stressing your system, WorkOS strongly recommends that you respond to a webhook request with a 200 OK response as quickly as possible once received.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you process the event before responding, your system may not be able to handle a spike of requests. This may cause requests to timeout and result in missing important updates.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A common pattern is to store the request payload on a message queue, respond with a 200 OK response, and use a background worker to process the messages in the queue.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Recover from failed events</h3>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your endpoint fails to respond to a webhook request with a <span>2xx</span> response, WorkOS will automatically retry the event with exponential back-off for up to 3 days in production environments. If for some reason your endpoint is still unable to respond successfully to events during that period, the event will be considered failed, and we will no longer retry sending it. You can reconcile your data using our <label className="demo-docs-hyperlink">Directory Sync endpoints</label> to update your data.</p>
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <div className="api-keys">
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>In staging environments, WorkOS only retries failed webhooks for several minutes before giving up. You can, however, manually retry webhooks using the WorkOS Dashboard for these environments.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle out-of-sequence events</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS does not guarantee that events are delivered in the same sequence that they are generated. For example, when syncing a directory you may receive:</p>
+
+                            <ul>
+                                <li>
+                                    <div className="api-keys">
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dsync.group.created</span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="api-keys">
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dsync.user.created</span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="api-keys">
+                                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dsync.group.user_added</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your endpoint should handle cases when these events are delivered out of order. Each event includes the full payload of the objects involved, so you can perform an upsert using the payload data.</p>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It is also possible that event data can be stale due to a retry of an older event being delivered after a newer event for the same object. Therefore, we recommend checking the timestamp of the incoming webhook data against the timestamp of the data in your system to ensure you do not overwrite your data with stale data. Each object in the payload includes a <span>created_at</span> field and an <span>updated_at</span> field.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Ignore duplicate events</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It is possible to receive the same event more than once. WorkOS recommends that you handle webhook events using idempotent operations. One way of doing this is logging the ID of webhook events that you have processed and ignoring subsequent requests with the same ID.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Obfuscate your endpoint URL</h3>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A small security measure you can incorporate is to make your webhook endpoint difficult to guess. Including a token comprised of series of random numbers and letters to your endpoint URL can prevent malicious actors from easily guessing your endpoint. For example: <span>https://api.example.com/webhooks/n0dbga5x…</span> is much more difficult to guess than <span>https://api.example.com/webhooks</span></p>
+                            </div>
+
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Data Reconciliation</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Keep your app in sync with WorkOS.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
 
                         </div>
 
@@ -2309,4 +2496,4 @@ export default class EventsWebhooks extends Component {
     }
 }
 
-//* IMAGE 123 (latest)
+//* IMAGE 124 (latest)
