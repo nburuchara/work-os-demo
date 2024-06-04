@@ -14762,7 +14762,7 @@ const codeSnippets = [
           '6 ',
           '7     app.<span style="color: #5854c6;">post</span>(<span style="color: #143465;">"/webhooks"</span>, ctx <span style="color: #ce3559;">-></span> {',
           '8       <span style="color: #5854c6;">String</span> payload <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">body</span>();',
-          '9 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">      <span style="color: #5854c6;">String</span> signatureHeader <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">header</span><span style="color: #143465;">\'WorkOS-Signature\'</span>];  </span>',
+          '9 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">      <span style="color: #5854c6;">String</span> signatureHeader <span style="color: #ce3559;">=</span> ctx.<span style="color: #5854c6;">header</span>[<span style="color: #143465;">\'WorkOS-Signature\'</span>];  </span>',
           '10 ',  
           '11        ctx.<span style="color: #5854c6;">status</span>(<span style="color: #0072dd;">200</span>);',  
           '12     });',
@@ -14770,10 +14770,106 @@ const codeSnippets = [
           '14 }'
         ],
         dotnet: [
-          '1 using System;',
-          '2 using WorkOS;',
+          '1 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">System</span>;',
+          '2 <span style="color: #148a68;">using</span> <span style="color: #5854c6;">WorkOS</span>;',
           '3 ',
-          '4 '
+          '4 <span style="color: #148a68;">namespace</span> <span style="color: #5854c6;">MyApplication</span>.<span style="color: #5854c6;">Controllers</span>',
+          '5 {',
+          '6     [<span style="color: #5854c6;">Route</span>(<span style="color: #143465;">"webhook"</span>)]',
+          '7     [<span style="color: #5854c6;">ApiController</span>]',
+          '8     <span style="color: #148a68;">public class</span> <span style="color: #5854c6;">WebhookController</span> : <span style="color: #5854c6;">Controller</span>',
+          '9     {',
+          '10         [<span style="color: #5854c6;">HttpPost</span>]',
+          '11         <span style="color: #148a68;">public async</span> <span style="color: #5854c6;">Task</span><<span style="color: #5854c6;">IActionResult</span>> <span style="color: #5854c6;">Index</span>()',
+          '12         {',
+          '13             <span style="color: #148a68;">var</span> json <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await new</span> <span style="color: #5854c6;">StreamReader</span>(HttpContext.Request.Body).<span style="color: #5854c6;">ReadToEndAsync</span>();',
+          '14 <span style="display: inline-block; width: calc(100% - 15px); background-color: #fcfae9; border-top: 1px solid #fbe576; border-bottom: 1px solid #fbe576; color: #000; padding: 2px 4px;">            <span style="color: #148a68;">var</span> signatureHeader <span style="color: #ce3559;">=</span> Request.Headers[<span style="color: #143465;">\'WorkOS-Signature\'</span>];  </span>',
+          '15, ',
+          '16             // Verify the signature and process the event',
+          '17             <span style="color: #148a68;">return</span> <span style="color: #5854c6;">Ok</span>();',
+          '18         }',
+          '19     }',
+          '20 }'
+        ]
+      }
+    },
+
+    {
+      id: 107,
+      title: "Webhook validation",
+      doubleHeaders: {
+        ruby: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        rails: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        sinatra: [
+          {lang1: "Rails", lang2: "Sinatra"}
+        ],
+        python: [
+          {lang1: "Django", lang2: "Flask"}
+        ],
+        django: [
+          {lang1: "Django", lang2: "Flask"}
+        ],
+        flask: [
+          {lang1: "Django", lang2: "Flask"}
+        ]
+      },
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">WorkOS</span>(process.env.<span style="color: #0072dd;">WORKOS_API_KEY</span>);',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> webhook <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.webhooks.<span style="color: #5854c6;">constructEvent</span>({',
+          '6   payload<span style="color: #ce3559;">:</span> payload,',
+          '7   sigHeader<span style="color: #ce3559;">:</span> sigHeader,',
+          '8   secret<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WEBHOOK_SECRET</span>,',
+          '9 });'
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="color: #148a68;">class</span> <span style="color: #5854c6;">WebhookController</span> <span style="color: #ce3559;"><</span> ApplicationController',
+          '4   <span style="color: #148a68;">def</span> <span style="color: #5854c6;">webhooks</span>',
+          '5   webhook <span style="color: #ce3559;">=</span> WorkOS::Webhooks.construct_event(',
+          '6     payload<span style="color: #ce3559;">:</span> payload,',
+          '7     sig_header<span style="color: #ce3559;">:</span> sig_header,',
+          '8     secret<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">ENV</span>[<span style="color: #143465;">"WORKOS_WEBHOOK_SECRET"</span>]',
+          '9   )',
+          '10 ',
+          '11     head :ok',
+          '12   <span style="color: #148a68;">end</span>',
+          '13 <span style="color: #148a68;">end</span>'
+        ],
+        rails: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="color: #148a68;">class</span> <span style="color: #5854c6;">WebhookController</span> <span style="color: #ce3559;"><</span> ApplicationController',
+          '4   <span style="color: #148a68;">def</span> <span style="color: #5854c6;">webhooks</span>',
+          '5   webhook <span style="color: #ce3559;">=</span> WorkOS::Webhooks.construct_event(',
+          '6     payload<span style="color: #ce3559;">:</span> payload,',
+          '7     sig_header<span style="color: #ce3559;">:</span> sig_header,',
+          '8     secret<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">ENV</span>[<span style="color: #143465;">"WORKOS_WEBHOOK_SECRET"</span>]',
+          '9   )',
+          '10 ',
+          '11     head :ok',
+          '12   <span style="color: #148a68;">end</span>',
+          '13 <span style="color: #148a68;">end</span>'
+        ],
+        sinatra: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"sinatra"</span>',
+          '2 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '3 ',
+          '4 post <span style="color: #143465;">"/webhook"</span> <span style="color: #148a68;">do</span>',
+          '5   webhook = WorkOS::Webhooks.construct_event(',
+          '6     payload: payload,',
+          '7     sig_header: sig_header,',
+          '8     secret: ENV[<span style="color: #143465;">"WORKOS_WEBHOOK_SECRET"</span>]',
+          '9   )',
+          '10 end'
         ]
       }
     }

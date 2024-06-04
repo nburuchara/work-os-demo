@@ -2222,6 +2222,83 @@ export default class EventsWebhooks extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <div className="api-keys">
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS sends the header as <span style={{backgroundColor: "#ccc"}}>WorkOS-Signature</span>, but many web servers normalize HTTP request headers to their lowercase variants..</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Register your endpoint</h1>
+                                </div>
+                            </div>
+
+                            <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set and save the webhook URL in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, so WorkOS knows where to deliver the events. Your webhook endpoints should only be configured to receive the ones required by your integration. Receiving all event types can put undue strain on your servers and is not recommended.</p>
+
+                            <div id='img123' className={`enlargable-image-container ${this.state.enlargedImageId === 'img123' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img123')}>
+                                    <img  src='/assets/syncing_webhooks_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Process the events</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to avoid unnecessary retry requests hitting your webhook handler, we recommend using two concurrent processes for handling events: one for receiving the event, and the other for processing it.</p>
+                        
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Respond with HTTP 200 OK</h3>
+
+                            <div className="api-keys">
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On receiving an event, you should respond with an HTTP 200 OK to signal to WorkOS that the event was successfully delivered. Otherwise, WorkOS will consider the event delivery a failure and retry up to 12 times, with exponential backoff over 3 days. You do not need to signal to WorkOS whether or not the event was processed successfully.</p>
+                            </div>
+
+                            
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Validate the requests using the SDK</h3>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Before processing the request payload, verify the request was sent by WorkOS and not an unknown party.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS includes a unique signature in each webhook request that it sends, allowing you to verify the authenticity of the request. In order to verify this signature, you must obtain the secret that is generated for you when you set up your webhook endpoint in the WorkOS dashboard. Ensure that this secret is stored securely on your webhook endpoint server as an environment variable.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SDKs provide a method to validate the timestamp and signature of a webhook. Examples using these methods are included below. The parameters are the payload (raw request body), the request header, and the webhook secret.</p>
+
+                            <CodeSnippetStruct 
+                            id={107}
+                            headerTabs={0}
+                            languagesToRemove={['cURL']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Webhook validation" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+
                         </div>
 
                     </div>
@@ -2231,3 +2308,5 @@ export default class EventsWebhooks extends Component {
 
     }
 }
+
+//* IMAGE 123 (latest)
