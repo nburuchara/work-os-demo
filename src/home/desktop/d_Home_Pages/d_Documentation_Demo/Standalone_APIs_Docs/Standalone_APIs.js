@@ -42,7 +42,7 @@ export default class StandaloneAPIs extends Component {
             adminPortalAuditLogs: false,
             logStreams: false,
             domainVerification: false,
-            apiDomainVerification: true,
+            apiDomainVerification: false,
 
 
                 //* - CODE SNIPPET - *//
@@ -133,6 +133,140 @@ export default class StandaloneAPIs extends Component {
 
             languagesRemoving: ['Python']
 
+        }
+    }
+
+    componentDidMount = () => {
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
+    }
+
+    openFirstDoc = () => {
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
+    }
+
+    getSelectedPage = (selectedPage) => {
+        const pageMap = {
+          "Quick Start": "gettingStarted",
+          "Test SSO": "testSSO",
+          "Example Apps": "exampleApps",
+          "Sign-In": "signInUX",
+          "Login Flows": "loginFlows",
+          "Redirect URIs": "redirectURIs",
+          "Signing Certificates": "signingCertificates",
+          "JIT Provisioning": "jitProvisioning",
+          "Launch Checklist": "launchChecklist",
+          "FAQ for IT teams": "faqForItTeams",
+          "SAML Security": "samlSecurity",
+          "Fundamentals": "directorySync",
+          "Quick Start (DS)": "quickStartDirectorySync",
+          "Example Apps (DS)": "exampleAppsDirectorySync",
+          "Handle Inactive Users": "handleInactieUsers",
+          "Understanding Events": "understandingEvents",
+          "User Attributes": "userAttributes",
+          "Role Data": "roleData",
+          "Role Architecture": "roleArchitecture",
+          "Quick Start (AP)": "adminPortal",
+          "Example Apps (AP)": "exampleAppsAdminPortal",
+          "Custom Branding": "customBranding",
+          "Quick Start (AL)": "auditLogs",
+          "Exporting Events": "exportingEvents",
+          "Metadata Schema": "metadataScheme",
+          "Editing Events": "editingEvents",
+          "Admin Portal (AL)": "adminPortalAuditLogs",
+          "Log Streams": "logStreams",
+          "Quick Start (DV)": "domainVerification",
+          "API": "apiDomainVerification",
+        };
+      
+        const page = pageMap[selectedPage];
+        if (page) {
+          this.loadSelectedPage(page);
+        } else {
+          console.error("Unknown selected page:", selectedPage);
+        }
+    };
+
+    scrollToTop = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'auto' }); // Use 'auto' for instant scroll, or 'smooth' for smooth scroll
+        }
+    }
+
+    loadSelectedPage = (selectedPage) => {
+        this.hideAllPages()
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: true,
+        //     })
+        // }, 600)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 900)
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: false,
+        //     })
+        // }, 1300)
+        setTimeout (() => {
+            this.setState({
+                [`${selectedPage}`]: true
+            })
+        }, 750)
+    }
+
+    hideAllPages = () => {
+        this.setState({
+            gettingStarted: false,
+            testSSO: false,
+            exampleApps: false,
+            signInUX: false,
+            loginFlows: false,
+            redirectURIs: false,
+            signingCertificates: false,
+            jitProvisioning: false,
+            launchChecklist: false,
+            faqForItTeams: false,
+            samlSecurity: false,
+            directorySync: false,
+            quickStartDirectorySync: false,
+            exampleAppsDirectorySync: false,
+            handleInactieUsers: false,
+            understandingEvents: false,
+            userAttributes: false,
+            roleData: false,
+            roleArchitecture: false,
+            adminPortal: false,
+            exampleAppsAdminPortal: false,
+            customBranding: false,
+            auditLogs: false,
+            exportingEvents: false,
+            metadataScheme: false,
+            editingEvents: false,
+            adminPortalAuditLogs: false,
+            logStreams: false,
+            domainVerification: false,
+            apiDomainVerification: false,
+        })
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (this.props.scrollToID !== prevProps.scrollToID) {
+            this.getSelectedPage(this.props.scrollToID)
         }
     }
 
@@ -6314,6 +6448,7 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 </CSSTransition>
+
             </Styles>
         )
     }

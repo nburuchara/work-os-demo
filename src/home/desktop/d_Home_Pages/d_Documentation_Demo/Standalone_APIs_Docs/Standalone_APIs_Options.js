@@ -81,11 +81,11 @@ const docs_sidebar_options = [
                     },
                     {
                         id: 1,
-                        levelName: "Quick Start"
+                        levelName: "Quick Start (DS)"
                     },
                     {
                         id: 2,
-                        levelName: "Example Apps"
+                        levelName: "Example Apps (DS)"
                     }
                 ]
             },
@@ -134,11 +134,11 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 0,
-                        levelName: "Quick Start"
+                        levelName: "Quick Start (AP)"
                     },
                     {
                         id: 1,
-                        levelName: "Example Apps"
+                        levelName: "Example Apps (AP)"
                     }
                 ]
             },
@@ -164,7 +164,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 0, 
-                        levelName: "Quick Start"
+                        levelName: "Quick Start (AL)"
                     }
                 ]
             },
@@ -186,7 +186,7 @@ const docs_sidebar_options = [
                     },
                     {
                         id: 3,
-                        levelName: "Admin Portal"
+                        levelName: "Admin Portal (AL)"
                     },
                     {
                         id: 4,
@@ -202,7 +202,7 @@ const docs_sidebar_options = [
         sections: [
             {
                 id: 0,
-                levelName: "Quick Start"
+                levelName: "Quick Start (DV)"
             },
             {
                 id: 1,

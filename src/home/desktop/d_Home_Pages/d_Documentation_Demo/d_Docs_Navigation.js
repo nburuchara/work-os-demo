@@ -2090,6 +2090,7 @@ export default class DocsNavigationMenu extends Component {
             mOption2Gap: "40px",
             mOption3Gap: "80px",
             mOption4Gap: "120px",
+            prevSelectedOption: "",
 
             userManagementDropdown: false,
             standaloneAPIsDropdown: false,
@@ -2110,10 +2111,22 @@ export default class DocsNavigationMenu extends Component {
             showEventsWebhooks: false,
 
         }
+
+            //* - TRIE NODE (for search functionality) - *//
+
         this.trie = new Trie(); // Initialize the trie
+
+            //* - MENU OPTIONS REFS - *//
+
+        this.menuOption1Ref = React.createRef();
+        this.menuOption2Ref = React.createRef();
+        this.menuOption3Ref = React.createRef();
+        this.menuOption4Ref = React.createRef();
+
     }
 
     menuOptionClicked = (option) => {
+        this.closeAllOpenPages()
         for (let i = 1; i <= 4; i++) {
             this.setState({
                 [`mOption${i}Gap`]: "0px"
@@ -2121,6 +2134,7 @@ export default class DocsNavigationMenu extends Component {
             if (option === i) {
                 this.setState({
                     [`menuOption${i}`]: true,
+                    prevSelectedOption: `menuOption${i}`,
                     showCloseSelectedOptionBtn: true
                 })
             }
@@ -2132,8 +2146,10 @@ export default class DocsNavigationMenu extends Component {
                     standaloneAPIsDropdown: false,
                     eventsAndWebhooksDropdown: false,
                     resourcesDropdown: false,
-                    usrMgmtScrollID: "User Management"
                 })
+                if (this.menuOption1Ref.current) {
+                    this.menuOption1Ref.current.openFirstDoc();
+                }
             } else if (option === 2) {
                 this.setState({
                     userManagementDropdown: false,
@@ -2141,6 +2157,9 @@ export default class DocsNavigationMenu extends Component {
                     eventsAndWebhooksDropdown: false,
                     resourcesDropdown: false
                 })
+                if (this.menuOption2Ref.current) {
+                    this.menuOption2Ref.current.openFirstDoc();
+                }
             } else if (option === 3) {
                 this.setState({
                     userManagementDropdown: false,
@@ -2174,8 +2193,20 @@ export default class DocsNavigationMenu extends Component {
             standaloneAPIsDropdown: false,
             eventsAndWebhooksDropdown: false,
             resourcesDropdown: false,
-            showCloseSelectedOptionBtn: false
+            showCloseSelectedOptionBtn: false,
         })
+    }
+
+    closeAllOpenPages = () => {
+        if (this.state.prevSelectedOption === "menuOption1") {
+            if (this.menuOption1Ref.current) {
+                this.menuOption1Ref.current.hideAllPages();
+            }
+        } else if (this.state.prevSelectedOption === "menuOption2") {
+            if (this.menuOption2Ref.current) {
+                this.menuOption2Ref.current.hideAllPages();
+            }
+        }
     }
 
     //! - - MAIN FOCUS - - !//
@@ -2186,6 +2217,12 @@ export default class DocsNavigationMenu extends Component {
                 showDocsHome: false,
                 showUserManagementDoc: true,
                 usrMgmtScrollID: item
+            })
+        } else if (menuOption2 === true) {
+            this.setState({
+                showDocsHome: false,
+                showStandAloneApis: true,
+                standaloneApisScrollID: item
             })
         }
     }
@@ -2770,10 +2807,10 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
-                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID}/>}
-                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID}/>}
-                    {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>}
-                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked}/>}
+                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref}/>}
+                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} ref={this.menuOption2Ref}/>}
+                    {/* {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>} */}
+                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref}/>}
 
             </Styles>
         )

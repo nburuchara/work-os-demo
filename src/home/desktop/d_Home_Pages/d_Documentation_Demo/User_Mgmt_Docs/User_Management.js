@@ -57,9 +57,25 @@ export default class UserManagement extends Component {
     }
 
     componentDidMount = () => {
-        this.setState({
-            gettingStarted: true
-        })
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
+    }
+
+    openFirstDoc = () => {
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
     }
 
     getSelectedPage = (selectedPage) => {
@@ -75,7 +91,7 @@ export default class UserManagement extends Component {
           "Email + Password": "emailAndPassword",
           "Social Login": "socialLogin",
           "Multi-Factor Auth": "multiFactorAuth",
-          "magicAuth": "magicAuth",
+          "Magic Auth": "magicAuth",
           "Users and Organizations": "usersAndOrganizations",
           "Sessions": "sessions",
           "Invitations": "invitations",
@@ -113,7 +129,7 @@ export default class UserManagement extends Component {
         // }, 600)
         setTimeout (() => {
             this.scrollToTop('top')
-        }, 1050)
+        }, 900)
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: false,
@@ -123,7 +139,7 @@ export default class UserManagement extends Component {
             this.setState({
                 [`${selectedPage}`]: true
             })
-        }, 950)
+        }, 750)
     }
 
     hideAllPages = () => {
