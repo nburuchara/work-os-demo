@@ -2602,7 +2602,7 @@ export default class EventsWebhooks extends Component {
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
-                            <div id='img125' className={`enlargable-image-container ${this.state.enlargedImageId === 'img125' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img125')}>
+                            <div style={{marginTop: "5%"}} id='img125' className={`enlargable-image-container ${this.state.enlargedImageId === 'img125' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img125')}>
                                     <img  src='/assets/stream_datadogs_img1.avif' alt="Enlargable" className="image" />
                             </div>
 

@@ -2083,11 +2083,12 @@ export default class DocsNavigationMenu extends Component {
 
             //* - - DOCUMENTATION PAGES - - *//
 
-            showDocsHome: false,
+            showDocsHome: true,
+            showDocsLoadingScreen: false,
             showUserManagementDoc: false,
             showStandAloneApis: false,
             showAPIReference: false ,
-            showEventsWebhooks: true,
+            showEventsWebhooks: false,
 
         }
         this.trie = new Trie(); // Initialize the trie
@@ -2135,7 +2136,7 @@ export default class DocsNavigationMenu extends Component {
                     resourcesDropdown: true
                 })
             }
-            
+            this.handleMenuItemSelected()
         }, 500)
     }
 
@@ -2155,6 +2156,18 @@ export default class DocsNavigationMenu extends Component {
             resourcesDropdown: false,
             showCloseSelectedOptionBtn: false
         })
+    }
+
+    //! - - MAIN FOCUS - - !//
+    handleMenuItemSelected = (item) => {
+        const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        if (menuOption1 === true) {
+            this.setState({
+                showDocsHome: false,
+                showUserManagementDoc: true,
+                usrMgmtScrollID: item
+            })
+        }
     }
 
     menuDocsEnter = () => { this.setState({menuDocsHovered: true}) }
@@ -2335,7 +2348,7 @@ export default class DocsNavigationMenu extends Component {
         const { sidebarMenuClicked } = this.state;
         
             //* - DOUMENTATION PAGES VARS - *//
-        const { showDocsHome, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
+        const { showDocsHome, showDocsLoadingScreen, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
         const { usrMgmtScrollID, standaloneApisScrollID } = this.state;
 
         return(
@@ -2376,6 +2389,8 @@ export default class DocsNavigationMenu extends Component {
                                         </div>
                                     }
 
+                                    {/* - User Management Dropdown Menu Options - */}
+
                                     <CSSTransition
                                     in={this.state.userManagementDropdown}
                                     timeout={500}
@@ -2383,9 +2398,11 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown menuItems={UserManagementOptions} />
+                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={UserManagementOptions} />
                                         </div>
                                     </CSSTransition>
+
+                                    {/* - Standalone APIs Dropdown Menu Options - */}
 
                                     <CSSTransition
                                     in={this.state.standaloneAPIsDropdown}
@@ -2394,9 +2411,11 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown menuItems={StandaloneAPIsOptions} />
+                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={StandaloneAPIsOptions} />
                                         </div>
                                     </CSSTransition>
+
+                                    {/* - Events & Webhooks Dropdown Menu Options - */}
 
                                     <CSSTransition
                                     in={this.state.eventsAndWebhooksDropdown}
@@ -2405,9 +2424,11 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown menuItems={EventsWebhooksOptions} />
+                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={EventsWebhooksOptions} />
                                         </div>
                                     </CSSTransition>
+
+                                    {/* - Resources Dropdown Menu Options - */}
 
                                     <CSSTransition
                                     in={this.state.resourcesDropdown}
@@ -2416,7 +2437,7 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown menuItems={ResourcesOptions} />
+                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={ResourcesOptions} />
                                         </div>
                                     </CSSTransition>
 
@@ -2678,7 +2699,8 @@ export default class DocsNavigationMenu extends Component {
                         </div>
                     </CSSTransition>
 
-                        {/* - - DOCUMENTATION PAGES - -  */}
+                    {/* - - DOCUMENTATION HOME SCREEN & LOADING PAGE - -  */}
+
                     {showDocsHome && 
                         <div className='docs-home-container'>
                             <h1>User Management</h1>
@@ -2719,6 +2741,15 @@ export default class DocsNavigationMenu extends Component {
                             </div>
                         </div>
                     }
+
+                    {showDocsLoadingScreen && 
+                        <div>
+
+                        </div>
+                    }
+
+                    {/* - - DOCUMENTATION PAGES - -  */}
+
                     {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID}/>}
                     {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID}/>}
                     {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>}

@@ -66,7 +66,7 @@ const Styles2 = styled.div `
 
 `
 
-class NestedDropdown extends Component {
+export default class NestedDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,7 +75,7 @@ class NestedDropdown extends Component {
   }
 
 
-handleItemClick = (index) => {
+handleItemClick = (index, item) => {
     const { activeIndices } = this.state;
 
     // Toggle the clicked item's active state
@@ -87,17 +87,19 @@ handleItemClick = (index) => {
         // Otherwise, select the clicked item
         activeIndices.push(index);
 
+        
+        this.props.getMenuItemSelected(item)
+      
+        
         // Collapse other items with the same parent
         const parentIndex = this.getParentIndex(index);
         const updatedActiveIndices = activeIndices.filter((activeIndex) => {
             const activeParentIndex = this.getParentIndex(activeIndex);
             return activeParentIndex !== parentIndex || activeIndex === index;
         });
-
         this.setState({ activeIndices: updatedActiveIndices });
     }
 };
-
   
 getParentIndex = (index) => {
     // Convert index to string if it's not already
@@ -139,14 +141,14 @@ renderMenuItems = (menuItems, level = 0) => {
                 <p style={{marginTop: "1%"}} key={item.id}>
                     <span 
                         className={`menu-option ${activeIndices.includes(item.id) ? 'menu-option-active' : 'menu-option'}`}
-                        onClick={() => this.handleItemClick(item.id)}
+                        onClick={() => this.handleItemClick(item.id, item.levelName)}
                         onMouseEnter={() => this.handleMouseEnter(item.id)}
                         onMouseLeave={() => this.handleMouseLeave()}
                     >
                         {item.levelName}
                     </span><br/>
                     {activeIndices.includes(item.id) && item.sections && (
-                        <img src='/assets/docs_sidebar_nested_icon.png' style={{ width: "5%", marginTop: "5%", marginLeft: "5%"}} />
+                        <img src='/assets/docs_sidebar_nested_icon.png' style={{ width: "5%", marginTop: "5%", marginLeft: "5%"}} alt='no img available' />
                     )}
                     <CSSTransition
                     in={activeIndices.includes(item.id) && item.sections}
@@ -157,9 +159,10 @@ renderMenuItems = (menuItems, level = 0) => {
                         <div>
                             {activeIndices.includes(item.id) && item.sections && (
                                 <NestedDropdown
-                                    menuItems={item.sections}
-                                    activeIndices={activeIndices} // Pass activeIndices to nested components
-                                    handleItemClick={this.handleItemClick} // Pass handleItemClick to nested components
+                                getMenuItemSelected={this.props.getMenuItemSelected}
+                                menuItems={item.sections}
+                                activeIndices={activeIndices} // Pass activeIndices to nested components
+                                handleItemClick={() => this.handleItemClick(item.id, item.levelName)} // Pass handleItemClick to nested components
                                 />
                             )}
                         </div>
@@ -185,5 +188,3 @@ renderMenuItems = (menuItems, level = 0) => {
     );
   }
 }
-
-export default NestedDropdown;

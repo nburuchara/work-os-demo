@@ -65,7 +65,7 @@ const docs_sidebar_options = [
                         sections: [
                             {
                                 id: 0,
-                                levelName: "Get an Organizations",
+                                levelName: "Get an Organization",
                             },
                             {
                                 id: 1,

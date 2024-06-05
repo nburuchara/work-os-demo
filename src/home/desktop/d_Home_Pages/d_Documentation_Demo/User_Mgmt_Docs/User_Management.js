@@ -50,6 +50,59 @@ export default class UserManagement extends Component {
         }
     }
 
+    componentDidMount = () => {
+        this.getSelectedPage(this.props.scrollToID)
+    }
+
+    getSelectedPage = (selectedPage) => {
+        if (selectedPage === "Quick Start") {
+            this.loadSelectedPage('gettingStarted')
+        } else if (selectedPage === "Example Apps") {
+            this.loadSelectedPage('exampleApps')
+        }
+    }
+
+    loadSelectedPage = (selectedPage) => {
+        this.hideAllPages()
+        setTimeout (() => {
+            this.setState({
+                [`${selectedPage}`]: true
+            })
+        }, 750)
+    }
+
+    hideAllPages = () => {
+        this.setState({
+            gettingStarted: false,
+            exampleApps: false,
+            authKit: false,
+            emailDomains: false,
+            branding: false,
+            migrations: false,
+            singleSignOn: false,
+            emailAndPassword: false,
+            socialLogin: false,
+            multiFactorAuth: false,
+            magicAuth: false,
+            usersAndOrganizations: false,
+            sessions: false,
+            invitations: false,
+            emailVerification: false,
+            domainCapture: false,
+            identityLinking: false,
+            jitProvisioning: false,
+            roles: false,
+            directoryProvisioning: false,
+            organizationPolicies: false,
+            impersonation: false,
+        })
+    }
+
+    componentDidUpdate = (prevProps) => {
+    if (this.props.scrollToID !== prevProps.scrollToID) {
+        this.getSelectedPage(this.props.scrollToID)
+    }
+    }
 
     newLangSelected = (currentLang) => {
         if (this.state.currentSelectedLanguage === "") {
@@ -110,8 +163,13 @@ export default class UserManagement extends Component {
 
         return (
             <Styles>
+                {loadingScreen && 
+                    <div>
+                        
+                    </div>
+                }
                 {gettingStarted && 
-                    <div className='demo-docs-container'>
+                    <div id='Quick Start' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
@@ -449,7 +507,7 @@ export default class UserManagement extends Component {
                     </div>
                 }
                 {exampleApps && 
-                    <div className='demo-docs-container'>
+                    <div id='Example Apps' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View sample User Management apps.</p>
@@ -476,7 +534,7 @@ export default class UserManagement extends Component {
                     </div>
                 }
                 {authKit && 
-                    <div className='demo-docs-container'>
+                    <div id='AuthKit' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AuthKit</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>

@@ -16,11 +16,11 @@ const docs_sidebar_options = [
                 levelName: "Syncing with events API"
             },
             {
-                id: 1,
+                id: 2,
                 levelName: "Syncing with webhooks"
             },
             {
-                id: 2,
+                id: 3,
                 levelName: "Data reconciliation"
             }
         ]
