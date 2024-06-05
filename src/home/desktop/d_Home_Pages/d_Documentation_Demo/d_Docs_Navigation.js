@@ -2131,7 +2131,8 @@ export default class DocsNavigationMenu extends Component {
                     userManagementDropdown: true,
                     standaloneAPIsDropdown: false,
                     eventsAndWebhooksDropdown: false,
-                    resourcesDropdown: false
+                    resourcesDropdown: false,
+                    usrMgmtScrollID: "User Management"
                 })
             } else if (option === 2) {
                 this.setState({

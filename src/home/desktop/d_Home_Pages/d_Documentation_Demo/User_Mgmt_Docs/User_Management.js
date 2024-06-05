@@ -57,11 +57,14 @@ export default class UserManagement extends Component {
     }
 
     componentDidMount = () => {
-        this.getSelectedPage(this.props.scrollToID)
+        this.setState({
+            gettingStarted: true
+        })
     }
 
     getSelectedPage = (selectedPage) => {
         const pageMap = {
+          "User Management": "gettingStarted",
           "Quick Start": "gettingStarted",
           "Example Apps": "exampleApps",
           "Authkit": "authKit",
