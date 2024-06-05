@@ -186,8 +186,6 @@ const Styles = styled.div `
     margin-bottom: 10%;
 }
 
-
-
         //? - - - - - END OF SIDEBAR CSS - - - - - //?
 
 
@@ -195,6 +193,7 @@ const Styles = styled.div `
         //! - - - - - - DEMO DOCS CONTAINER - - - - - - !//
 
 .demo-docs-container {
+    padding-top: 2.5%;
     text-align: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -452,6 +451,26 @@ const Styles = styled.div `
 .client-library-contact-us:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+    //! - - Loading Screen - - !//
+
+.loading-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 47.5%; /* Reset default margin */
+}
+
+.loading-sidebar-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%; /* Reset default margin */
+    margin-left: 40%;
 }
 
     //! - - Testing the API - - !//
