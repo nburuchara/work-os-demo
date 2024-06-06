@@ -175,18 +175,21 @@ export default class UserManagement extends Component {
             this.getSelectedPage(this.props.scrollToID)
         }
         if (this.props.searchedTerm) {
-            
+            console.log(this.props.searchedTerm.lastCat)
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
         }
     }
 
     smoothScrollToId = (id) => {
         const element = document.getElementById(id);
         if (element) {
-          const yOffset = -50; // Adjust as needed
-          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth' });
+
+        setTimeout(() => {
+            this.props.clearLatestSearch();
+        }, 1000);
         }
-      };
+    };
 
     newLangSelected = (currentLang) => {
         if (this.state.currentSelectedLanguage === "") {
@@ -277,6 +280,7 @@ export default class UserManagement extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using <label className='demo-docs-hyperlink'>AuthKit</label>.</p>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
+                            <div id='Install dependencies'></div>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
@@ -293,7 +297,9 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
                             <p>Let's add the necessary dependencies and configuration in your WorkOS Dashboard.</p>
+
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install dependencies</h3>
+                            <div id='Configure a redirect URI'></div>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you're using Next.js, you can use the <label className='demo-docs-hyperlink'>authkit-nextjs</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> library. The Next.js library is the fastest way to get AuthKit and <label className='demo-docs-hyperlink'>Impersonation</label> working in your Next.js application with full session management.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively you can use one of the several native SDKs that WorkOS provides. This guide will use the popular Node.js SDK.</p>
                         
@@ -305,12 +311,18 @@ export default class UserManagement extends Component {
                             snippet="Install dependencies" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
-                            
+
+
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure a redirect URI</h3>
+                    
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A redirect URI is a callback endpoint that WorkOS will redirect to after a user has authenticated. This endpoint will exchange the authorization code returned by WorkOS for an authenticated <label className='demo-docs-hyperlink'>User object</label>. We’ll be creating this endpoint in the next step.</p>
+
+                    
+
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can set a redirect URI in the <i>Redirects</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> – be sure not to include wildcard subdomains or query parameters.</p>
 
-            
+                            <div id='Set secrets'></div>
+
                             <div id='img1' className={`enlargable-image-container ${this.state.enlargedImageId === 'img1' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img1')}>
                                 <img src='/assets/usr_mgmt_docs_redirects_img.avif' alt="Enlargable" className="image" />
                             </div>
@@ -337,6 +349,8 @@ export default class UserManagement extends Component {
                                     >Using Next.js</button>
                                 </div>
                             </div>
+
+                            <div id='Redirect users to AuthKit'></div>
                             
                             {usingNode && 
                                 <div>

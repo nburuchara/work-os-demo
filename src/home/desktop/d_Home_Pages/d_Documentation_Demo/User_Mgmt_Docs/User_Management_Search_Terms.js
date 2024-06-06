@@ -12,16 +12,16 @@ const results = [
 
         //? - - H3 LABELEED HEADERS - - ?//
 
-    {id: "999993", name: "Install dependencies", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Configure your project", page: "Quick Start"},
-    {id: "999992", name: "Configure a redirect URI", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Configure your project", page: "Quick Start"},
-    {id: "999991", name: "Set secrets", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", page: "Quick Start", lastCat: "Configure your project"},
-    {id: "999990", name: "Redirect users to AuthKit", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Add AuthKit to your app"},
-    {id: "999989", name: "Add a callback endpoint", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start"},
-    {id: "999988", name: "Validate the authentication flow", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Add AuthKit to your app"},
+    {id: "999993", name: "Install dependencies", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Install dependencies", page: "Quick Start"},
+    {id: "999992", name: "Configure a redirect URI", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Configure a redirect URI", page: "Quick Start"},
+    {id: "999991", name: "Set secrets", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", page: "Quick Start", lastCat: "Set secrets"},
+    {id: "999990", name: "Redirect users to AuthKit", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Redirect users to AuthKit"},
+    {id: "999989", name: "Add a callback endpoint", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Add a callback endpoint"},
+    {id: "999988", name: "Validate the authentication flow", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Validate the authentication flow"},
 
         //? - - H3 HEADERS - - !?/
 
-    {id: "999987", name: "Using authkit-nextjs", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session"},
+    {id: "999987", name: "Using authkit-nextjs", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", },
     {id: "999986", name: "Manually", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session"},
     {id: "999985", name: "Create a session password", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually"},
     {id: "999984", name: "Save the encrypted session", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually"},
@@ -29,8 +29,8 @@ const results = [
         //? - - P TAGS - - ?//
 
     {id: "999983", name: "Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.", category: "User Management", },
-    {id: "999982", name: "Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using AuthKit.", category: "User Management", },
-    {id: "999981", name: "To get the most out of this guide, you’ll need:", category: "User Management", subCat1: "Quick Start",  },
+    {id: "999982", name: "Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using AuthKit.", category: "User Management", subCat1: ""},
+    {id: "999981", name: "To get the most out of this guide, you’ll need:", category: "User Management", page: "Quick Start", lastCat: "top" },
     {id: "999980", name: "Using authkit-nextjs", category: "User Management", },
     {id: "999979", name: "Using authkit-nextjs", category: "User Management", },
     {id: "999978", name: "Using authkit-nextjs", category: "User Management", },

@@ -659,7 +659,7 @@ const Styles = styled.div `
     left: 50%;
     width: 50vw; /* Set width to 75% of viewport width */
     height: auto; /* Maintain aspect ratio */
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.07);
     z-index: 5;
     border-radius: 8px;
     border: 30px solid #e6e6eb;
@@ -2425,6 +2425,13 @@ export default class DocsNavigationMenu extends Component {
     }
 
 
+    clearRecentSearch = () => {
+        this.setState({
+            menuOption1SearchTermObject: null,
+            searchedData: "",
+            clearSearchBtn: false,
+        })
+    }
     
 
     render () {
@@ -2840,7 +2847,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
-                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject}/>}
+                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject} clearLatestSearch={this.clearRecentSearch}/>}
                     {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} ref={this.menuOption2Ref}/>}
                     {/* {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>} */}
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref}/>}
