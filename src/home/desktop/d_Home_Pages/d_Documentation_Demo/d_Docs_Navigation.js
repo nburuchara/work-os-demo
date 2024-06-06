@@ -194,7 +194,6 @@ const Styles = styled.div `
         //! - - - - - - DEMO DOCS CONTAINER - - - - - - !//
 
 .demo-docs-container {
-    padding-top: 2.5%;
     text-align: left;
     margin-left: 1%;
     margin-right: 1%;
@@ -1914,6 +1913,12 @@ const Styles = styled.div `
     padding-top: 1%;
     margin-bottom: 0px;
     font-size: 80.5%;
+    overflow: hidden;          /* Hide the overflowing text */
+    display: -webkit-box;      /* Use the flexible box layout */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2;     /* Number of lines to show before truncating */
+    line-clamp: 2;             /* Standard property for other browsers (future-proof) */
+    // line-height: 1.5em; 
 }
 
 .searchResultCategory {
@@ -2008,7 +2013,6 @@ const Styles = styled.div `
 }
 
 `
-
 
 class TrieNode {
     constructor() {
@@ -2113,12 +2117,23 @@ export default class DocsNavigationMenu extends Component {
 
             //* - - DOCUMENTATION PAGES - - *//
 
-            showDocsHome: false,
+            showDocsHome: true,
             showDocsLoadingScreen: false,
-            showUserManagementDoc: true,
+            showUserManagementDoc: false,
             showStandAloneApis: false,
             showAPIReference: false ,
             showEventsWebhooks: false,
+
+            //* - - DOCS SEARCH RESULTS PROPS - - *//
+
+            menuOption1SearchCategory: "",
+            menuOption1SearchTermObject: null,
+            menuOption2SearchCategory: "",
+            menuOption2SearchTermObject: null,
+            menuOption3SearchCategory: "",
+            menuOption3SearchTermObject: null,
+            menuOption4SearchCategory: "",
+            menuOptionSearchTermObject: null,
 
         }
 
@@ -2394,13 +2409,22 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    currentSearchedCellEnter = (resultId) => {
-        this.setState({ hoveredResultId: resultId });
+    searchedTermClicked = (category, option) => {
+        const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        if (menuOption1 === true) {
+            this.setState({
+                menuOption1SearchCategory: category,
+                menuOption1SearchTermObject: option
+            })
+        } else if (menuOption2 === true) {
+            this.setState({
+                menuOption2SearchCategory: category,
+                menuOption2SearchTermObject: option
+            })
+        }
     }
 
-    currentSearchedCellLeave = () => {
-        this.setState({ hoveredResultId: null });
-    }
+
     
 
     render () {
@@ -2577,6 +2601,7 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
+                                                            onClick={() => this.searchedTermClicked(category, option)}
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
@@ -2701,6 +2726,7 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
+                                                            onClick={() => this.searchedTermClicked(category, option)}
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
@@ -2814,7 +2840,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
-                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref}/>}
+                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject}/>}
                     {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} ref={this.menuOption2Ref}/>}
                     {/* {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>} */}
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref}/>}
