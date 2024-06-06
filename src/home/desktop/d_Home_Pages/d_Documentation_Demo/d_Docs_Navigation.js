@@ -8,7 +8,8 @@ import StandaloneAPIsOptions from './Standalone_APIs_Docs/Standalone_APIs_Option
 import EventsWebhooksOptions from './Events_Webhooks_Docs/Events_Webhooks_Options';
 import ResourcesOptions from './Resources_Docs/Resources_Docs_Options'
 import NestedDropdown from './d_Documentation_Components/NestedDropdown'
-import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
+// import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
+import ResultsData from './User_Mgmt_Docs/User_Management_Search_Terms'
 import APIReference from './Resources_Docs/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
 import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
@@ -733,6 +734,10 @@ const Styles = styled.div `
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
     border: 1px solid #ccc;
     cursor: pointer;
+}
+
+.demo-next-section-container:hover {
+    border: 1px solid #999999;
 }
 
 .demo-next-section-container:after {
@@ -1823,7 +1828,6 @@ const Styles = styled.div `
     border-radius: 4px;
 }
 
-
 .demo-docs-search-bar-input input {
     outline: none;
 }
@@ -1983,8 +1987,14 @@ const Styles = styled.div `
     text-overflow: ellipsis;
 }
 
+.searchResultCell:hover,
+.codeSnippetResult:hover {
+  background-color: #F0F1FF;
+  color: #1C1C8E;
+}
 
         //! - - - - - - DOCS HOME CONTAINER - - - - - - !//
+
 
 .docs-home-container {
     text-align: left;
@@ -2103,9 +2113,9 @@ export default class DocsNavigationMenu extends Component {
 
             //* - - DOCUMENTATION PAGES - - *//
 
-            showDocsHome: true,
+            showDocsHome: false,
             showDocsLoadingScreen: false,
-            showUserManagementDoc: false,
+            showUserManagementDoc: true,
             showStandAloneApis: false,
             showAPIReference: false ,
             showEventsWebhooks: false,
@@ -2124,6 +2134,8 @@ export default class DocsNavigationMenu extends Component {
         this.menuOption4Ref = React.createRef();
 
     }
+
+        //* - - SIDEBAR FUNCS - - *//
 
     menuOptionClicked = (option) => {
         this.closeAllOpenPages()
@@ -2198,18 +2210,17 @@ export default class DocsNavigationMenu extends Component {
     }
 
     closeAllOpenPages = () => {
-        if (this.state.prevSelectedOption === "menuOption1") {
+        if (this.state.prevSelectedOption === "menuOption1" && this.state.menuOption1 !== true) {
             if (this.menuOption1Ref.current) {
                 this.menuOption1Ref.current.hideAllPages();
             }
-        } else if (this.state.prevSelectedOption === "menuOption2") {
+        } else if (this.state.prevSelectedOption === "menuOption2" && this.state.menuOption2 !== true) {
             if (this.menuOption2Ref.current) {
                 this.menuOption2Ref.current.hideAllPages();
             }
         }
     }
 
-    //! - - MAIN FOCUS - - !//
     handleMenuItemSelected = (item) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (menuOption1 === true) {
@@ -2226,6 +2237,8 @@ export default class DocsNavigationMenu extends Component {
             })
         }
     }
+    
+        //* - - SEARCH DOCK (NON SEARCH) FUNCS - - *//
 
     menuDocsEnter = () => { this.setState({menuDocsHovered: true}) }
 
@@ -2564,13 +2577,10 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
-                                                            onMouseEnter={() => this.currentSearchedCellEnter(option.id)}
-                                                            onMouseLeave={this.currentSearchedCellLeave}
-                                                            style={{backgroundColor: hoveredResultId === option.id ? "#F0F1FF" : "transparent", color: hoveredResultId === option.id ? "#1C1C8E" : "black"}} 
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
-                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null }</p> 
+                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null }</p> 
                                                             </div>
                                                         ) : (
                                                             <div>
@@ -2691,9 +2701,6 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
-                                                            onMouseEnter={() => this.currentSearchedCellEnter(option.id)}
-                                                            onMouseLeave={this.currentSearchedCellLeave}
-                                                            style={{backgroundColor: hoveredResultId === option.id ? "#F0F1FF" : "transparent", color: hoveredResultId === option.id ? "#1C1C8E" : "black"}} 
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>

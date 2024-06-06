@@ -224,6 +224,7 @@ export default class StandaloneAPIs extends Component {
         // }, 1300)
         setTimeout (() => {
             this.setState({
+                currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
             })
         }, 750)

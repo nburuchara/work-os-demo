@@ -25,6 +25,7 @@ const results = [
   { id: 8, name: "userManagement.authenticateWithEmailVerification()", category: "Code Snippet", command: ""},
   { id: 9, name: "userManagement.authenticateWithRefreshToken()", category: "Code Snippet", command: ""},
   { id: 10, name: "userManagement.authenticateWithMagicAuth()", category: "Code Snippet", command: ""},
+  
 
   //* - USER MANAGEMENT - *//
 

@@ -83,7 +83,7 @@ export default class UserManagement extends Component {
           "User Management": "gettingStarted",
           "Quick Start": "gettingStarted",
           "Example Apps": "exampleApps",
-          "Authkit": "authKit",
+          "AuthKit": "authKit",
           "Email Domains": "emailDomains",
           "Branding": "branding",
           "Migrations": "migrations",
@@ -137,6 +137,7 @@ export default class UserManagement extends Component {
         // }, 1300)
         setTimeout (() => {
             this.setState({
+                currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
             })
         }, 750)
