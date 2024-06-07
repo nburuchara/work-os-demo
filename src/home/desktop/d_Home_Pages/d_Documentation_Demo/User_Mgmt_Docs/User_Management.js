@@ -57,14 +57,7 @@ export default class UserManagement extends Component {
     }
 
     componentDidMount = () => {
-        setTimeout (() => {
-            this.setState({
-                gettingStarted: true
-            })
-        }, 300)
-        setTimeout (() => {
-            this.scrollToTop('top')
-        }, 450)
+       
     }
 
     openFirstDoc = () => {
@@ -121,6 +114,7 @@ export default class UserManagement extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
+        console.log("LSP: this got triggered")
         this.hideAllPages()
         // setTimeout (() => {
         //     this.setState({
@@ -175,20 +169,29 @@ export default class UserManagement extends Component {
             this.getSelectedPage(this.props.scrollToID)
         }
         if (this.props.searchedTerm) {
-            console.log(this.props.searchedTerm.lastCat)
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         }
     }
 
     smoothScrollToId = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-
+        const checkElementAndScroll = () => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+    
+                setTimeout(() => {
+                    this.props.clearLatestSearch();
+                }, 1000);
+            } else {
+                // If the element is not yet in the DOM, keep checking
+                requestAnimationFrame(checkElementAndScroll);
+            }
+        };
+    
+        // Add a small delay before starting the checking loop
         setTimeout(() => {
-            this.props.clearLatestSearch();
-        }, 1000);
-        }
+            requestAnimationFrame(checkElementAndScroll);
+        }, 500); // You can adjust the delay as needed
     };
 
     newLangSelected = (currentLang) => {

@@ -1882,7 +1882,7 @@ const Styles = styled.div `
     width: 95.5%;
     position: relative;
     background-color: white;
-    height: 20vh;
+    height: 40vh;
     border: 1px solid #cccccc;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
@@ -2164,6 +2164,9 @@ export default class DocsNavigationMenu extends Component {
                     prevSelectedOption: `menuOption${i}`,
                     showCloseSelectedOptionBtn: true
                 })
+                setTimeout(() => {
+                    this.handleSearchWithinNested('Quick Start')
+                }, 1000)
             }
         } 
         setTimeout(() => {
@@ -2355,7 +2358,8 @@ export default class DocsNavigationMenu extends Component {
                     // Perform search logic
                     const filteredOptions = ResultsData.filter(option => {
                         const name = option.name.toLowerCase();
-                        return name.includes(searchInput);
+                        const words = name.split(' '); // Split name into words
+                        return words.some(word => word.startsWith(searchInput)); // Check if any word starts with the search term
                     });
     
                     const resultsFound = filteredOptions.length > 0; // Check if any results were found
@@ -2417,10 +2421,19 @@ export default class DocsNavigationMenu extends Component {
     searchedTermClicked = (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (menuOption1 === true) {
+            if (this.state.previouslySearched !== option.page) {
+                this.handleSearchWithinNested(option.page);
+            }
             this.setState({
                 menuOption1SearchCategory: category,
-                menuOption1SearchTermObject: option
-            })
+                menuOption1SearchTermObject: option,
+                
+              }, () => {
+                // Call the callback function to perform search
+                this.setState({
+                    previouslySearched: option.page,
+                })
+              });
         } else if (menuOption2 === true) {
             this.setState({
                 menuOption2SearchCategory: category,
@@ -2428,6 +2441,15 @@ export default class DocsNavigationMenu extends Component {
             })
         }
     }
+
+    handleSearchWithinNested = (searchTerm) => {
+        // Access searchconsole.log()
+        if (this.nestedDropdownRef) {
+          const searchPath = this.nestedDropdownRef.searchMenuItems(UserManagementOptions, searchTerm);
+          console.log(searchPath)
+          this.setState({ searchPath });
+        }
+    };
 
 
     clearRecentSearch = () => {
@@ -2477,7 +2499,7 @@ export default class DocsNavigationMenu extends Component {
                                     {menuSubsections && 
                                         <div>
                                             <div className='demo-docs-sidebar-subsections'> 
-                                                <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => this.menuOptionClicked(1))}>User Management</label></p></div>
+                                                <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => {this.menuOptionClicked(1) } )}>User Management</label></p></div>
                                                 <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
                                                 <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
                                                 <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
@@ -2504,7 +2526,12 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={UserManagementOptions} />
+                                            <NestedDropdown 
+                                            searchPath={this.state.searchPath} 
+                                            getMenuItemSelected={this.handleMenuItemSelected} 
+                                            menuItems={UserManagementOptions} 
+                                            ref={(ref) => { this.nestedDropdownRef = ref; }}
+                                            />
                                         </div>
                                     </CSSTransition>
 

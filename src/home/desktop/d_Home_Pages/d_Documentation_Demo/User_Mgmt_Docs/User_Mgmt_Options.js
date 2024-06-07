@@ -4,109 +4,109 @@ const docs_sidebar_options = [
         levelName: "Getting Started",
         sections: [
             {
-                id: 0,
+                id: 1,
                 levelName: "Quick Start",
             },
             {
-                id: 1,
+                id: 2,
                 levelName: "Example Apps"
             }
         ]
     },
     {
-        id: 1,
+        id: 3,
         levelName: "Integrating",
         sections: [
             {
-                id: 0, 
+                id: 4, 
                 levelName: "AuthKit"
             },
             {
-                id: 1, 
+                id: 5, 
                 levelName: "Email Domains"
             },
             {
-                id: 2,
+                id: 6,
                 levelName: "Branding"
             },
             {
-                id: 3,
+                id: 7,
                 levelName: "Migrations"
             }
         ]
     },
     {
-        id: 2,
+        id: 8,
         levelName: "Authentication",
         sections: [
             {
-                id: 0,
+                id: 9,
                 levelName: "Single Sign-On"
             },
             {
-                id: 1,
+                id: 10,
                 levelName: "Email + Password"
             },
             {
-                id: 2,
+                id: 11,
                 levelName: "Social Login"
             },
             {
-                id: 3,
+                id: 12,
                 levelName: "Multi-Factor Auth"
             },
             {
-                id: 4,
+                id: 13,
                 levelName: "Magic Auth"
             }
         ]
     },
     {
-        id: 3,
+        id: 14,
         levelName: "Features",
         sections: [
             {
-                id: 0,
+                id: 15,
                 levelName: "Users and Organizations"
             },
             {
-                id: 1,
+                id: 16,
                 levelName: "Sessions"
             },
             {
-                id: 2,
+                id: 17,
                 levelName: "Invitations"
             },
             {
-                id: 3,
+                id: 18,
                 levelName: "Email Verification"
             },
             {
-                id: 4,
+                id: 19,
                 levelName: "Domain Capture"
             },
             {
-                id: 5,
+                id: 20,
                 levelName: "Identity Linking"
             },
             {
-                id: 6,
+                id: 21,
                 levelName: "JIT Provisioning"
             },
             {
-                id: 7,
+                id: 22,
                 levelName: "Roles"
             },
             {
-                id: 8,
+                id: 23,
                 levelName: "Directory Provisioning"
             },
             {
-                id: 9,
+                id: 24,
                 levelName: "Organization Policies"
             },
             {
-                id: 10,
+                id: 25,
                 levelName: "Impersonation"
             }
         ]

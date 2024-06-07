@@ -1,18 +1,12 @@
+
 const results = [
 
-    //? - - H1 (TOP) HEADERS - - ?//
-
-        //! - QUICK START - !//
+     //? - - H1 (TOP) HEADERS - - ?//
 
     {id: "999999", name: "User Management", category: "User Management", page: "Quick Start", lastCat: "top"},
 
-         //! - AUTHKIT - !//
-
-    {id: "999953", name: "AuthKit", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "top"},
     
     //? - - H1 (IN-TEXT) HEADERS - - ?//
-
-        //! - QUICK START - !//
 
     {id: "999998", name: "Introduction", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Introduction"},
     {id: "999997", name: "Before getting started", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Before getting started"},
@@ -20,22 +14,8 @@ const results = [
     {id: "999995", name: "Add AuthKit to your app", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Add AuthKit to your app"},
     {id: "999994", name: "Handle the user session", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Handle the user session"},
 
-        //! - EXAMPLE APPS - !//
-
-    {id: "999956", name: "Example Apps", category: "User Management", subCat1: "Example Apps",  page: "Example Apps", lastCat: "Example apps"},
-
-        //! - AUTHKIT - !//
-
-    
-    {id: "999952", name: "Introduction", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
-    {id: "999951", name: "Authentication Flow", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
-    {id: "999950", name: "Authentication Methods", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
-    {id: "999949", name: "Integrating", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
-
 
     //? - - H3 HEADERS - - ?//
-
-        //! - QUICK START - !//
 
     {id: "999993", name: "Install dependencies", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Install dependencies", page: "Quick Start"},
     {id: "999992", name: "Configure a redirect URI", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Configure a redirect URI", page: "Quick Start"},
@@ -47,22 +27,13 @@ const results = [
 
     //? - - H3 LABELED HEADERS - - !?/
 
-        //! - QUICK START - !//
-
     {id: "999987", name: "Using authkit-nextjs", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", page: "Quick Start", lastCat: "Handle the user session"},
     {id: "999986", name: "Manually", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", page: "Quick Start", lastCat: "Handle the user session"},
     {id: "999985", name: "Create a session password", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", page: "Quick Start", lastCat: "Create a session password"},
     {id: "999984", name: "Save the encrypted session", category: "User Management", page: "Quick Start", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", lastCat: "Save the encrypted session"},
 
-       //! - AUTHKIT - !//
-
-    {id: "999948", name: "Integrate with AuthKit", category: "User Management", subCat1: "AuthKit", subCat2: "Integrating", page: "AuthKit", lastCat: "AuthKit"},
-    {id: "999947", name: "Build your own authentication flows", category: "User Management", subCat1: "AuthKit", subCat2: "Integrating",  page: "AuthKit", lastCat: "AuthKit"},
-
 
     //? - - P TAGS - - ?//
-
-        //! - QUICK START - !//
 
     {id: "999983", name: "Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.", category: "User Management", page: "Quick Start", lastCat: "top"},
     {id: "999982", name: "Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using AuthKit.", category: "User Management", subCat1: "Quick Start", subCat2: "Introduction", page: "Quick Start", lastCat: "Introduction"},
@@ -104,18 +75,6 @@ const results = [
 
     {id: "999957", name: "Finally, add the middleware to the route that should only be accessible to logged in users.", category: "User Management", subCat1: "Quick Start", subCat2: "Save the encrypted session", page: "Quick Start", lastCat: "Save the encrypted session"},
 
-        //! - EXAMPLE APPS - !//
-
-    {id: "999955", name: "View sample User Management apps.", category: "User Management", subCat1: "Example Apps", page: "Example Apps", lastCat: "Example apps"},
-
-    {id: "999954", name: "You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:", category: "User Management", subCat1: "Example Apps", page: "Example Apps", lastCat: "Example apps"},
-
-        //! - AUTHKIT - !//
-
-    {id: "999946", name: "Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.", category: "User Management", page: "AuthKit", lastCat: "AuthKit"},
-
 ]
-
-//* latest: 999953 - authkit
 
 export default results;

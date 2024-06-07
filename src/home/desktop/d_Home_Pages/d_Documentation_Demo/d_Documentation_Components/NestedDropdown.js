@@ -70,9 +70,16 @@ export default class NestedDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndices: []
+      activeIndices: props.searchPath || [],
     };
   }
+
+componentDidUpdate(prevProps) {
+    // Check if the searchPath prop has changed
+    if (prevProps.searchPath !== this.props.searchPath) {
+        this.setState({ activeIndices: this.props.searchPath });
+    }
+}
 
 
 handleItemClick = (index, item) => {
@@ -85,12 +92,11 @@ handleItemClick = (index, item) => {
         activeIndices.splice(itemIndex, 1);
     } else {
         // Otherwise, select the clicked item
+        activeIndices.pop();
         activeIndices.push(index);
 
-        
         this.props.getMenuItemSelected(item)
       
-        
         // Collapse other items with the same parent
         const parentIndex = this.getParentIndex(index);
         const updatedActiveIndices = activeIndices.filter((activeIndex) => {
@@ -98,6 +104,7 @@ handleItemClick = (index, item) => {
             return activeParentIndex !== parentIndex || activeIndex === index;
         });
         this.setState({ activeIndices: updatedActiveIndices });
+        console.log(`handleItemClicked activeIndices: ${activeIndices}`)
     }
 };
   
@@ -128,9 +135,49 @@ getHierarchyLevel = (index) => {
     return getItemLevel(menuItems, index);
 };
 
+searchMenuItems = (menuItems, searchTerm) => {
+    let path = [];
+  
+    const search = (items, term, currentPath = []) => {
+        let found = false;
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i];
+          if (!item) continue; // Add defensive check for undefined item
+          
+          const newPath = [...currentPath, item.id];
+          
+          if (item.levelName && item.levelName.toLowerCase().includes(term.toLowerCase())) {
+            // If item matches search term, add its index to path
+            path = newPath;
+            found = true;
+            // Break the loop to prioritize the first match
+            break;
+          }
+    
+          if (item.sections && search(item.sections, term, newPath)) {
+            // If match found in nested section, update found status
+            found = true;
+            // Break the loop to prioritize the first match
+            break;
+          }
+        }
+        return found; // Return whether match was found
+      };
+    
+      search(menuItems, searchTerm);
+      this.props.getMenuItemSelected(searchTerm)
+      return path;
+};
+
 handleMouseEnter = () => { }
 
 handleMouseLeave = () => { }
+
+handleSearchWithinNested = (searchTerm) => {
+    const { searchMenuItems, menuItems } = this.props;
+    const searchPath = searchMenuItems(menuItems, searchTerm);
+    this.setState({ activeIndices: searchPath });
+};
 
 renderMenuItems = (menuItems, level = 0) => {
     const { activeIndices } = this.state;
@@ -159,6 +206,7 @@ renderMenuItems = (menuItems, level = 0) => {
                         <div>
                             {activeIndices.includes(item.id) && item.sections && (
                                 <NestedDropdown
+                                searchPath={this.props.searchPath}
                                 getMenuItemSelected={this.props.getMenuItemSelected}
                                 menuItems={item.sections}
                                 activeIndices={activeIndices} // Pass activeIndices to nested components
