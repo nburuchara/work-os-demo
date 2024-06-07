@@ -18,10 +18,14 @@ const results = [
 
         //! - AUTHKIT - !//
 
-    {id: "999953", name: "AuthKit", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "Example apps"},
+    {id: "999953", name: "AuthKit", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
+    {id: "999952", name: "Introduction", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
+    {id: "999951", name: "Authentication Flow", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
+    {id: "999950", name: "Authentication Methods", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
+    {id: "999949", name: "Integrating", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "AuthKit"},
 
 
-    //? - - H3 LABELEED HEADERS - - ?//
+    //? - - H3 HEADERS - - ?//
 
         //! - QUICK START - !//
 
@@ -32,7 +36,8 @@ const results = [
     {id: "999989", name: "Add a callback endpoint", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Add a callback endpoint"},
     {id: "999988", name: "Validate the authentication flow", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Validate the authentication flow"},
 
-    //? - - H3 HEADERS - - !?/
+
+    //? - - H3 LABELED HEADERS - - !?/
 
         //! - QUICK START - !//
 
@@ -40,6 +45,12 @@ const results = [
     {id: "999986", name: "Manually", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", page: "Quick Start", lastCat: "Handle the user session"},
     {id: "999985", name: "Create a session password", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", page: "Quick Start", lastCat: "Create a session password"},
     {id: "999984", name: "Save the encrypted session", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", page: "Quick Start", lastCat: "Save the encrypted session"},
+
+       //! - AUTHKIT - !//
+
+    {id: "999948", name: "Integrate with AuthKit", category: "User Management", subCat1: "AuthKit", subCat2: "Integrating", page: "AuthKit", lastCat: "AuthKit"},
+    {id: "999947", name: "Build your own authentication flows", category: "User Management", subCat1: "AuthKit", subCat2: "Integrating",  page: "AuthKit", lastCat: "AuthKit"},
+
 
     //? - - P TAGS - - ?//
 
@@ -79,7 +90,7 @@ const results = [
 
     {id: "999960", name: "Then add it to the environment variables file.", category: "User Management", subCat1: "Quick Start", subCat2: "Create a session password", page: "Quick Start", lastCat: "Create a session password"},
 
-    {id: "999959", name: "Next, update the callback to seal the access and refresh token. The access token is a JWT which is used to check if the session is still valid. If it isn't, the refresh token is used to attempt to retrieve a new access token.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
+    {id: "999959", name: "Next, update the callback to seal the access and refresh token. The access token is a JWT which is used to check if the session is still valid. If it isn't, the refresh token is used to attempt to retrieve a new access token.", category: "User Management", subCat1: "Quick Start", subCat2: "Save the encrypted session", page: "Quick Start", lastCat: "Save the encrypted session"},
 
     {id: "999958", name: "Then, use middleware to specify which routes should be protected. If the session has expired, use the refresh token to attempt to generate a new one.", category: "User Management", subCat1: "Quick Start", subCat2: "Save the encrypted session", page: "Quick Start", lastCat: "Save the encrypted session"},
 
@@ -87,10 +98,16 @@ const results = [
 
         //! - EXAMPLE APPS - !//
 
-    {id: "999955", name: "View sample User Management apps.", category: "User Management", page: "Example Apps", lastCat: "Example apps"},
+    {id: "999955", name: "View sample User Management apps.", category: "User Management", subCat1: "Example Apps", page: "Example Apps", lastCat: "Example apps"},
 
-    {id: "999954", name: "You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:", category: "User Management", page: "Example Apps", lastCat: "Example apps"},
+    {id: "999954", name: "You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:", category: "User Management", subCat1: "Example Apps", page: "Example Apps", lastCat: "Example apps"},
+
+        //! - AUTHKIT - !//
+
+    {id: "999946", name: "Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.", category: "User Management", page: "AuthKit", lastCat: "AuthKit"},
 
 ]
+
+//* latest: 999953 - authkit
 
 export default results;

@@ -2742,7 +2742,7 @@ export default class DocsNavigationMenu extends Component {
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
-                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null }</p> 
+                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null }</p> 
                                                             </div>
                                                         ) : (
                                                             <div>
