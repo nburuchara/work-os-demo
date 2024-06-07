@@ -1,7 +1,9 @@
 
 const results = [
 
-        //? - - H1 HEADERS - - ?//
+    //? - - H1 HEADERS - - ?//
+
+        //! - QUICK START - !//
 
     {id: "999999", name: "User Management", category: "User Management", page: "Quick Start", lastCat: "top"},
     {id: "999998", name: "Introduction", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Introduction"},
@@ -10,7 +12,18 @@ const results = [
     {id: "999995", name: "Add AuthKit to your app", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Add AuthKit to your app"},
     {id: "999994", name: "Handle the user session", category: "User Management", subCat1: "Quick Start", page: "Quick Start", lastCat: "Handle the user session"},
 
-        //? - - H3 LABELEED HEADERS - - ?//
+        //! - EXAMPLE APPS - !//
+
+    {id: "999956", name: "Example Apps", category: "User Management", subCat1: "Example Apps",  page: "Example Apps", lastCat: "Example apps"},
+
+        //! - AUTHKIT - !//
+
+    {id: "999953", name: "AuthKit", category: "User Management", subCat1: "AuthKit",  page: "AuthKit", lastCat: "Example apps"},
+
+
+    //? - - H3 LABELEED HEADERS - - ?//
+
+        //! - QUICK START - !//
 
     {id: "999993", name: "Install dependencies", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Install dependencies", page: "Quick Start"},
     {id: "999992", name: "Configure a redirect URI", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", lastCat: "Configure a redirect URI", page: "Quick Start"},
@@ -19,27 +32,31 @@ const results = [
     {id: "999989", name: "Add a callback endpoint", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Add a callback endpoint"},
     {id: "999988", name: "Validate the authentication flow", category: "User Management", subCat1: "Quick Start", subCat2: "Add AuthKit to your app", page: "Quick Start", lastCat: "Validate the authentication flow"},
 
-        //? - - H3 HEADERS - - !?/
+    //? - - H3 HEADERS - - !?/
+
+        //! - QUICK START - !//
 
     {id: "999987", name: "Using authkit-nextjs", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", page: "Quick Start", lastCat: "Handle the user session"},
     {id: "999986", name: "Manually", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", page: "Quick Start", lastCat: "Handle the user session"},
     {id: "999985", name: "Create a session password", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", page: "Quick Start", lastCat: "Create a session password"},
     {id: "999984", name: "Save the encrypted session", category: "User Management", subCat1: "Quick Start", subCat2: "Handle the user session", subCat3: "Manually", page: "Quick Start", lastCat: "Save the encrypted session"},
 
-        //? - - P TAGS - - ?//
+    //? - - P TAGS - - ?//
+
+        //! - QUICK START - !//
 
     {id: "999983", name: "Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.", category: "User Management", },
-    {id: "999982", name: "Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using AuthKit.", category: "User Management", page: "User Management", lastCat: "Introduction"},
-    {id: "999981", name: "To get the most out of this guide, you’ll need:", category: "User Management", page: "Quick Start", lastCat: "Before getting started"},
-    {id: "999980", name: "A WorkOS account", category: "User Management", page: "User Management", lastCat: "Before getting started"},
-    {id: "999979", name: "Your WorkOS API Key and Client ID.", category: "User Management", page: "User Management", lastCat: "Before getting started"},
-    {id: "999978", name: "Let's add the necessary dependencies and configuration in your WorkOS Dashboard.", category: "User Management", page: "Quick Start", lastCat: "Configure your project"},
-    {id: "999977", name: "If you're using Next.js, you can use the authkit-nextjs library. The Next.js library is the fastest way to get AuthKit and Impersonation working in your Next.js application with full session management.", category: "User Management", page: "Quick Start"},
-    {id: "999976", name: "Alternatively you can use one of the several native SDKs that WorkOS provides. This guide will use the popular Node.js SDK.", category: "User Management", page: "Quick Start", lastCat: "Install dependencies"},
-    {id: "999975", name: "A redirect URI is a callback endpoint that WorkOS will redirect to after a user has authenticated. This endpoint will exchange the authorization code returned by WorkOS for an authenticated User object. We’ll be creating this endpoint in the next step.", category: "User Management", page: "Quick Start", lastCat: "Configure a redirect URI"},
-    {id: "999974", name: "You can set a redirect URI in the Redirects section of the WorkOS Dashboard – be sure not to include wildcard subdomains or query parameters.", category: "User Management", page: "Quick Start", lastCat: "Configure a redirect URI"},
-    {id: "999973", name: "To make calls to WorkOS, provide the API key and the client ID. Store these values as managed secrets and pass them to the SDKs either as environment variables or directly in your app's configuration depending on your preferences.", category: "User Management", page: "Quick Start", lastCat: "Set secrets" },
-    {id: "999972", name: "The code examples use your staging API keys when signed in", category: "User Management", page: "Quick Start", lastCat: "Set secrets"},
+    {id: "999982", name: "Integrating User Management features into your app is quick and easy. In this guide, we’ll take you through adding a hosted authentication flow to your application using AuthKit.", category: "User Management", subCat1: "Quick Start", subCat2: "Introduction", page: "User Management", lastCat: "Introduction"},
+    {id: "999981", name: "To get the most out of this guide, you’ll need:", category: "User Management", subCat1: "Quick Start", subCat2: "Before getting started", page: "Quick Start", lastCat: "Before getting started"},
+    {id: "999980", name: "A WorkOS account", category: "User Management", page: "User Management", subCat1: "Quick Start", subCat2: "Before getting started", lastCat: "Before getting started"},
+    {id: "999979", name: "Your WorkOS API Key and Client ID.", category: "User Management", subCat1: "Quick Start", subCat2: "Before getting started", page: "User Management", lastCat: "Before getting started"},
+    {id: "999978", name: "Let's add the necessary dependencies and configuration in your WorkOS Dashboard.", category: "User Management", subCat1: "Quick Start", subCat2: "Configure your project", page: "Quick Start", lastCat: "Configure your project"},
+    {id: "999977", name: "If you're using Next.js, you can use the authkit-nextjs library. The Next.js library is the fastest way to get AuthKit and Impersonation working in your Next.js application with full session management.", category: "User Management", subCat1: "Quick Start", subCat2: "Install dependencies", page: "Quick Start", lastCat: "Install dependencies"},
+    {id: "999976", name: "Alternatively you can use one of the several native SDKs that WorkOS provides. This guide will use the popular Node.js SDK.", category: "User Management", subCat1: "Quick Start", subCat2: "Install dependencies", page: "Quick Start", lastCat: "Install dependencies"},
+    {id: "999975", name: "A redirect URI is a callback endpoint that WorkOS will redirect to after a user has authenticated. This endpoint will exchange the authorization code returned by WorkOS for an authenticated User object. We’ll be creating this endpoint in the next step.", category: "User Management", page: "Quick Start", subCat1: "Quick Start", subCat2: "Configure a redirect URI", lastCat: "Configure a redirect URI"},
+    {id: "999974", name: "You can set a redirect URI in the Redirects section of the WorkOS Dashboard – be sure not to include wildcard subdomains or query parameters.", category: "User Management", subCat1: "Quick Start", subCat2: "Configure a redirect URI", page: "Quick Start", lastCat: "Configure a redirect URI"},
+    {id: "999973", name: "To make calls to WorkOS, provide the API key and the client ID. Store these values as managed secrets and pass them to the SDKs either as environment variables or directly in your app's configuration depending on your preferences.", category: "User Management", subCat1: "Quick Start", subCat2: "Set secrets", page: "Quick Start", lastCat: "Set secrets" },
+    {id: "999972", name: "The code examples use your staging API keys when signed in", category: "User Management", subCat1: "Quick Start", subCat2: "Set secrets", page: "Quick Start", lastCat: "Set secrets"},
     {id: "999971", name: "Let's integrate the hosted authentication flow into your app.", category: "User Management", page: "Quick Start", lastCat: "Add AuthKit to your app"},
     {id: "999970", name: "First, we'll need to direct users to sign in (or sign up) using AuthKit before redirecting them back to your application. We'll do this by generating an AuthKit authorization URL server side and redirecting the user to it.", category: "User Management", page: "Quick Start", lastCat: "Redirect users to AuthKit"},
     {id: "999969", name: "You can use the optional state parameter to encode arbitrary information to help restore application state between redirects.", category: "User Management", page: "Quick Start", lastCat: "Redirect users to AuthKit",},
@@ -60,11 +77,17 @@ const results = [
     {id: "999961", name: "First, generate a unique password to seal the session with.", category: "User Management", page: "Quick Start", lastCat: "Create a session password"},
     {id: "999960", name: "Then add it to the environment variables file.", category: "User Management", page: "Quick Start", lastCat: "Redirect users to AuthKit"},
 
-    {id: "9999659", name: "Next, update the callback to seal the access and refresh token. The access token is a JWT which is used to check if the session is still valid. If it isn't, the refresh token is used to attempt to retrieve a new access token.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
+    {id: "999959", name: "Next, update the callback to seal the access and refresh token. The access token is a JWT which is used to check if the session is still valid. If it isn't, the refresh token is used to attempt to retrieve a new access token.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
 
-    {id: "9999659", name: "Then, use middleware to specify which routes should be protected. If the session has expired, use the refresh token to attempt to generate a new one.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
+    {id: "999958", name: "Then, use middleware to specify which routes should be protected. If the session has expired, use the refresh token to attempt to generate a new one.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
 
-    {id: "9999659", name: "Finally, add the middleware to the route that should only be accessible to logged in users.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
+    {id: "999957", name: "Finally, add the middleware to the route that should only be accessible to logged in users.", category: "User Management", page: "Quick Start", lastCat: "Save the encrypted session"},
+
+        //! - EXAMPLE APPS - !//
+
+    {id: "999955", name: "View sample User Management apps.", category: "User Management", page: "Example Apps", lastCat: "Example apps"},
+
+    {id: "999954", name: "You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:", category: "User Management", page: "Example Apps", lastCat: "Example apps"},
 
 ]
 

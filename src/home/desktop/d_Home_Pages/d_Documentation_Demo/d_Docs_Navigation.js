@@ -2326,10 +2326,15 @@ export default class DocsNavigationMenu extends Component {
     handleSearchChange = (e) => {
         const searchInput = e.target.value.toLowerCase();
     
-    // Clear previous timeout
-    clearTimeout(this.searchTimeout);
-
-    this.setState({searchedData: e.target.value, isSearchLoading: true, clearSearchBtn: true, showDocsPopupHomescreen: false})
+        // Clear previous timeout
+        clearTimeout(this.searchTimeout);
+    
+        this.setState({
+            searchedData: e.target.value,
+            isSearchLoading: true,
+            clearSearchBtn: true,
+            showDocsPopupHomescreen: false
+        });
     
         // Set a new timeout to execute after 500ms
         this.searchTimeout = setTimeout(() => {
@@ -2346,22 +2351,22 @@ export default class DocsNavigationMenu extends Component {
                 });
             } else {
                 // Show loading screen and start search
-                this.setState({ isSearchLoading: true, searchedData: searchInput, searchCloseBtn: true}, () => {
+                this.setState({ isSearchLoading: true, searchedData: searchInput, searchCloseBtn: true }, () => {
                     // Perform search logic
                     const filteredOptions = ResultsData.filter(option => {
-                        const words = option.name.toLowerCase().split(/[\s/:]+/);
-                        return words.some(word => word.startsWith(searchInput));
+                        const name = option.name.toLowerCase();
+                        return name.includes(searchInput);
                     });
-
+    
                     const resultsFound = filteredOptions.length > 0; // Check if any results were found
-
+    
                     const highlightedOptions = filteredOptions.map(option => ({
                         ...option,
                         highlightedName: this.highlightMatchedCharacters(option, searchInput)
                     }));
-
+    
                     const groupedResults = this.groupBy(highlightedOptions, 'category');
-
+    
                     // Construct trie for each category
                     const trieByCategory = {};
                     Object.entries(groupedResults).forEach(([category, options]) => {
@@ -2370,7 +2375,7 @@ export default class DocsNavigationMenu extends Component {
                             trieByCategory[category].insert(option.name.toLowerCase());
                         });
                     });
-
+    
                     // Update state after search logic is complete
                     this.setState({
                         trieByCategory,
