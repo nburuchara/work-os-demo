@@ -272,9 +272,13 @@ export default class UserManagement extends Component {
                 unmountOnExit    
                 >
                     <div id='top' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                        
+                        <div id='Introduction' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div id='Configure your project'></div>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
+                            <div id='Before getting started'></div>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
+                        
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -337,7 +341,7 @@ export default class UserManagement extends Component {
                                     onClick={this.usingNodeClicked}
                                     onMouseEnter={this.usingNodeEnter}
                                     onMouseLeave={this.usingNodeLeave}
-                                    style={{fontWeight: usingNode ? "bold" : "normal", backgroundColor: usingNodeHovered ? "#e6e6eb": ""}}
+                                    style={{fontWeight: usingNode ? "bold" : "normal", backgroundColor: usingNodeHovered ? "#e6e6eb": "", width: "90%"}}
                                     >Using Node</button>
                                 </div>
                                 <div style={{borderBottom: usingNextJs ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
@@ -345,12 +349,13 @@ export default class UserManagement extends Component {
                                     onClick={this.usingNextJsClicked}
                                     onMouseEnter={this.usingNextJsEnter}
                                     onMouseLeave={this.usingNextJsLeave}
-                                    style={{fontWeight: usingNextJs ? "bold" : "normal", backgroundColor: usingNextJsHovered ? "#e6e6eb" : ""}}
+                                    style={{fontWeight: usingNextJs ? "bold" : "normal", backgroundColor: usingNextJsHovered ? "#e6e6eb" : "", width: "90%"}}
                                     >Using Next.js</button>
                                 </div>
                             </div>
 
                             <div id='Redirect users to AuthKit'></div>
+                            
                             
                             {usingNode && 
                                 <div>
@@ -404,8 +409,11 @@ export default class UserManagement extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>The code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span></p>
                                 </div>
                             </div>
+
+                            
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                            
                             <div className='labeled-header'>
                                 <div className='label-tag'>
                                     <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
@@ -414,13 +422,15 @@ export default class UserManagement extends Component {
                                     <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add AuthKit to your app</h1>
                                 </div>
                             </div>
+
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let's integrate the hosted authentication flow into your app.</p>
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Redirect users to AuthKit</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, we'll need to direct users to sign in (or sign up) using AuthKit before redirecting them back to your application. We'll do this by generating an AuthKit authorization URL server side and redirecting the user to it.</p>
-                            <div className='api-keys'>
+                            <div id='You can use the optional state' className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use the optional state parameter to encode arbitrary information to help restore application <span>state</span> between redirects.</p>
                             </div>
 
+                
                             <CodeSnippetStruct 
                             id={7}
                             headerTabs={0}
@@ -429,6 +439,10 @@ export default class UserManagement extends Component {
                             snippet="Redirect users to AuthKit" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <div style={{paddingBottom:"3%"}} id='WorkOS will redirect'></div>
+                            
+                            <div id='Add a callback endpoint'></div>
+
 
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
@@ -441,14 +455,14 @@ export default class UserManagement extends Component {
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Add a callback endpoint</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, let’s add the callback endpoint (referenced in <label className='demo-docs-hyperlink'>Configure a redirect URI</label>) which will exchange the authorization code (valid for 10 minutes) for an authenticated User object.</p>
-                    
+                            
                             <div className='two-tab-selection'>
                                 <div style={{borderBottom: usingNode ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
                                     <button
                                     onClick={this.usingNodeClicked}
                                     onMouseEnter={this.usingNodeEnter}
                                     onMouseLeave={this.usingNodeLeave}
-                                    style={{fontWeight: usingNode ? "bold" : "normal", backgroundColor: usingNodeHovered ? "#e6e6eb": ""}}
+                                    style={{fontWeight: usingNode ? "bold" : "normal", backgroundColor: usingNodeHovered ? "#e6e6eb": "", width: "90%"}}
                                     >Using Node</button>
                                 </div>
                                 <div style={{borderBottom: usingNextJs ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
@@ -456,10 +470,12 @@ export default class UserManagement extends Component {
                                     onClick={this.usingNextJsClicked}
                                     onMouseEnter={this.usingNextJsEnter}
                                     onMouseLeave={this.usingNextJsLeave}
-                                    style={{fontWeight: usingNextJs ? "bold" : "normal", backgroundColor: usingNextJsHovered ? "#e6e6eb" : ""}}
+                                    style={{fontWeight: usingNextJs ? "bold" : "normal", backgroundColor: usingNextJsHovered ? "#e6e6eb" : "", width: "90%"}}
                                     >Using Next.js</button>
                                 </div>
                             </div>
+
+                            <div id='Validate the authentication flow'></div>
 
                             {usingNode && 
                                 <div>
@@ -500,12 +516,17 @@ export default class UserManagement extends Component {
                                 </div>
                             }
 
+
+
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Validate the authentication flow</h3>
                             <p>Navigate to the <label className='demo-docs-hyperlink'>authentication endpoint</label> we created and sign up for an account. You can then sign in with the newly created credentials and see the user listed in the <i>Users</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                     
+                            <div id='Handle the user session'></div>
                             <div id='img2' className={`enlargable-image-container ${this.state.enlargedImageId === 'img2' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img2')}>
                                 <img src='/assets/usr_mgmt_docs_validate_auth_flow_img.avif' alt="Enlargable" className="image" />
                             </div>
+                            <div id='For illustration purposes'></div>
+                            
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             
@@ -534,7 +555,8 @@ export default class UserManagement extends Component {
                             <div className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If using the <span>authkit-nextjs</span> library, session management is handled for you. No further integration is required.</p>
                             </div>
-
+                            <div id='Create a session password'></div>
+                            
                             <div className='labeled-header'>
                                 <div className='label-tag'>
                                     <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
@@ -547,11 +569,14 @@ export default class UserManagement extends Component {
                             </div>
                         
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to persist the authenticated state of the user in the application, we need to store and access a session.</p>
+                            
+                            
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For illustration purposes we’ll be using a <label className='demo-docs-hyperlink'>JSON Web Token (JWT)</label> to store the authenticated user in a short lived cookie, though your approach may differ depending on the application's specific requirements.</p>
-                        
+                            
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a session password</h3>
+                            
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, generate a unique password to seal the session with.</p>
-
+                            <div id='Save the encrypted session'></div>
                             <CodeSnippetStruct 
                             id={11}
                             headerTabs={0}
