@@ -2421,7 +2421,7 @@ export default class DocsNavigationMenu extends Component {
     searchedTermClicked = (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (menuOption1 === true) {
-            if (this.state.previouslySearched !== option.page) {
+            if (this.state.prevSelectedOption !== option.page) {
                 this.handleSearchWithinNested(option.page);
             }
             this.setState({
