@@ -2420,7 +2420,7 @@ export default class DocsNavigationMenu extends Component {
 
     searchedTermClicked = (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
-        if(this.state.showDocsMenu === false) {
+        if(this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
                 showLargeSearchBar: !prevState.showLargeSearchBar,
@@ -2455,6 +2455,27 @@ export default class DocsNavigationMenu extends Component {
                     }
                 }, 0)
             })
+        } else {
+            if (menuOption1 === true) {
+                if (this.state.prevSelectedOption !== option.page) {
+                    this.handleSearchWithinNested(option.page);
+                    this.clearRecentSearch()
+                }
+                this.setState({
+                    menuOption1SearchCategory: category,
+                    menuOption1SearchTermObject: option,
+                  }, () => {
+                    // Call the callback function to perform search
+                    this.setState({
+                        previouslySearched: option.page,
+                    })
+                  });
+            } else if (menuOption2 === true) {
+                this.setState({
+                    menuOption2SearchCategory: category,
+                    menuOption2SearchTermObject: option
+                })
+            }
         }
     }
 
