@@ -269,8 +269,31 @@ export default class StandaloneAPIs extends Component {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
         }
+        if (this.props.searchedTerm) {
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+        }
     }
 
+    smoothScrollToId = (id) => {
+        const checkElementAndScroll = () => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+    
+                setTimeout(() => {
+                    this.props.clearLatestSearch();
+                }, 1000);
+            } else {
+                // If the element is not yet in the DOM, keep checking
+                requestAnimationFrame(checkElementAndScroll);
+            }
+        };
+    
+        // Add a small delay before starting the checking loop
+        setTimeout(() => {
+            requestAnimationFrame(checkElementAndScroll);
+        }, 500); // You can adjust the delay as needed
+    };
 
     toggleEnlarged = (imageId) => {
         this.setState(prevState => ({

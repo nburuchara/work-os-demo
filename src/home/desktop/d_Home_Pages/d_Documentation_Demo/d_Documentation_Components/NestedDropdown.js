@@ -74,39 +74,72 @@ export default class NestedDropdown extends Component {
     };
   }
 
+componentDidMount() {
+    this.setState({ activeIndices: this.props.searchPath || [] });
+}
+
 componentDidUpdate(prevProps) {
     // Check if the searchPath prop has changed
     if (prevProps.searchPath !== this.props.searchPath) {
-        this.setState({ activeIndices: this.props.searchPath });
+        this.setState({ activeIndices: this.props.searchPath || []});
     }
 }
 
 
 handleItemClick = (index, item) => {
-    const { activeIndices } = this.state;
+    this.setState(prevState => {
+        const { activeIndices } = prevState;
+        const itemIndex = activeIndices.indexOf(index);
 
-    // Toggle the clicked item's active state
-    const itemIndex = activeIndices.indexOf(index);
-    if (itemIndex !== -1) {
-        // If the clicked item is already active, deselect it and collapse if it's clicked again
-        activeIndices.splice(itemIndex, 1);
-    } else {
-        // Otherwise, select the clicked item
-        activeIndices.pop();
-        activeIndices.push(index);
+        let newActiveIndices;
+        if (itemIndex !== -1) {
+            // Deselect the clicked item
+            newActiveIndices = activeIndices.filter((_, i) => i !== itemIndex);
+        } else {
+            // Select the clicked item and collapse other items with the same parent
+            const parentIndex = this.getParentIndex(index);
+            newActiveIndices = [...activeIndices, index].filter((activeIndex) => {
+                const activeParentIndex = this.getParentIndex(activeIndex);
+                return activeParentIndex !== parentIndex || activeIndex === index;
+            });
+        }
 
-        this.props.getMenuItemSelected(item)
-      
-        // Collapse other items with the same parent
-        const parentIndex = this.getParentIndex(index);
-        const updatedActiveIndices = activeIndices.filter((activeIndex) => {
-            const activeParentIndex = this.getParentIndex(activeIndex);
-            return activeParentIndex !== parentIndex || activeIndex === index;
-        });
-        this.setState({ activeIndices: updatedActiveIndices });
-        console.log(`handleItemClicked activeIndices: ${activeIndices}`)
-    }
+        this.props.setCurrentIndex(index);
+        this.props.setSearchPath(newActiveIndices); // Notify parent component
+        return { activeIndices: newActiveIndices };
+    });
+
+    this.props.getMenuItemSelected(item); // Notify parent component about the selected item
 };
+
+sendIndexToParent = () => {
+    
+}
+
+reselectClickedItem = (index) => {
+    // const { reselectedIndex } = this.props;
+    // this.setState(prevState => {
+    //     const { activeIndices } = prevState;
+    //     const itemIndex = activeIndices.indexOf(index);
+
+    //     let newActiveIndices;
+    //     if (itemIndex !== -1) {
+    //         // Deselect the clicked item
+    //         newActiveIndices = activeIndices.filter((_, i) => i !== itemIndex);
+    //     } else {
+    //         // Select the clicked item and collapse other items with the same parent
+    //         const parentIndex = this.getParentIndex(index);
+    //         newActiveIndices = [...activeIndices, index].filter((activeIndex) => {
+    //             const activeParentIndex = this.getParentIndex(activeIndex);
+    //             return activeParentIndex !== parentIndex || activeIndex === index;
+    //         });
+    //     }
+
+    //     this.props.setSearchPath(newActiveIndices); // Notify parent component
+    //     return { activeIndices: newActiveIndices };
+    // });
+    console.log('index', index)
+}
   
 getParentIndex = (index) => {
     // Convert index to string if it's not already
@@ -166,6 +199,7 @@ searchMenuItems = (menuItems, searchTerm) => {
     
       search(menuItems, searchTerm);
       this.props.getMenuItemSelected(searchTerm)
+      console.log(path)
       return path;
 };
 
@@ -176,7 +210,12 @@ handleMouseLeave = () => { }
 handleSearchWithinNested = (searchTerm) => {
     const { searchMenuItems, menuItems } = this.props;
     const searchPath = searchMenuItems(menuItems, searchTerm);
-    this.setState({ activeIndices: searchPath });
+    this.setState({activeIndices: searchPath})
+    // this.setSearchPath(searchPath)
+};
+
+setSearchPath = (searchPath) => {
+    this.setState({ searchPath });
 };
 
 renderMenuItems = (menuItems, level = 0) => {
@@ -207,6 +246,8 @@ renderMenuItems = (menuItems, level = 0) => {
                             {activeIndices.includes(item.id) && item.sections && (
                                 <NestedDropdown
                                 searchPath={this.props.searchPath}
+                                setCurrentIndex={this.props.setCurrentIndex}
+                                setSearchPath={this.setSearchPath}
                                 getMenuItemSelected={this.props.getMenuItemSelected}
                                 menuItems={item.sections}
                                 activeIndices={activeIndices} // Pass activeIndices to nested components

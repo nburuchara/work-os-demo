@@ -10,6 +10,9 @@ import ResourcesOptions from './Resources_Docs/Resources_Docs_Options'
 import NestedDropdown from './d_Documentation_Components/NestedDropdown'
 // import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
 import ResultsData from './User_Mgmt_Docs/User_Management_Search_Terms'
+import UserManagementFullSearch from './User_Mgmt_Docs/User_Management_Search_Terms'
+import StandaloneAPIsFullSearch from './Standalone_APIs_Docs/Standalone_APIs_Search_Terms'
+
 import APIReference from './Resources_Docs/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
 import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
@@ -2110,6 +2113,8 @@ export default class DocsNavigationMenu extends Component {
             standaloneAPIsDropdown: false,
             eventsAndWebhooksDropdown: false,
             resourcesDropdown: false,
+            
+            indexReselecting: 0,
 
             //* - - TOGGLE ADJUSTABLE DIMENSIONS - - *//
 
@@ -2148,11 +2153,19 @@ export default class DocsNavigationMenu extends Component {
         this.menuOption3Ref = React.createRef();
         this.menuOption4Ref = React.createRef();
 
+        this.nestedDropdownRef = React.createRef();
+
     }
 
         //* - - SIDEBAR FUNCS - - *//
 
     menuOptionClicked = (option) => {
+        const optionHomepages = [
+            {id: "1", name: "Quick Start"},
+            {id: "2", name: "Quick Start"},
+            {id: "3", name: "Event Types"},
+            {id: "4", name: "Overview"},
+        ]
         this.closeAllOpenPages()
         for (let i = 1; i <= 4; i++) {
             this.setState({
@@ -2165,7 +2178,7 @@ export default class DocsNavigationMenu extends Component {
                     showCloseSelectedOptionBtn: true
                 })
                 setTimeout(() => {
-                    this.handleSearchWithinNested('Quick Start')
+                    this.handleSearchWithinNested(optionHomepages[i].name)
                 }, 1000)
             }
         } 
@@ -2178,7 +2191,7 @@ export default class DocsNavigationMenu extends Component {
                     resourcesDropdown: false,
                 })
                 if (this.menuOption1Ref.current) {
-                    this.menuOption1Ref.current.openFirstDoc();
+                    // this.menuOption1Ref.current.openFirstDoc();
                 }
             } else if (option === 2) {
                 this.setState({
@@ -2273,6 +2286,10 @@ export default class DocsNavigationMenu extends Component {
     dockMenuBtnClicked =  ()  => {
         this.props.sidePanelOpened()
         if(this.state.showDocsMenu === false) {
+            if (this.state.prevSelectedOption !== "") {
+                this.handleSearchWithinNested(this.state.prevSelectedOption)
+            }
+            this.reselectClickedOption(this.state.indexReselecting)
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
                 showLargeSearchBar: !prevState.showLargeSearchBar,
@@ -2301,7 +2318,6 @@ export default class DocsNavigationMenu extends Component {
                 }, 500)
             })
         }
-
     }
 
         //* - - SEARCH BAR INPUT FUNCS - - *//
@@ -2356,10 +2372,29 @@ export default class DocsNavigationMenu extends Component {
                 // Show loading screen and start search
                 this.setState({ isSearchLoading: true, searchedData: searchInput, searchCloseBtn: true }, () => {
                     // Perform search logic
+                
+                    // const filteredOptions = UserManagementFullSearch.filter(option => {
+                    //     const name = option.name.toLowerCase();
+                    //     const words = name.split(' '); // Split name into words
+                    //     return words.some(word => word.startsWith(searchInput)); // Check if any word starts with the search term
+                    // });
                     const filteredOptions = ResultsData.filter(option => {
                         const name = option.name.toLowerCase();
-                        const words = name.split(' '); // Split name into words
-                        return words.some(word => word.startsWith(searchInput)); // Check if any word starts with the search term
+                        const searchWords = searchInput.toLowerCase().split(' '); // Split search input into words
+                        const optionWords = name.split(' '); // Split name into words
+                    
+                        if (searchWords.length === 1) {
+                            // Special case: search input is a single word
+                            const searchWord = searchWords[0];
+                            return optionWords.some(optionWord => optionWord.startsWith(searchWord));
+                        } else {
+                            if (searchWords.length > optionWords.length) {
+                                return false; // Not enough words in the option to match the search input
+                            }
+                    
+                            // Check if each search word matches the beginning of the corresponding option word
+                            return searchWords.every((searchWord, index) => optionWords[index].startsWith(searchWord));
+                        }
                     });
     
                     const resultsFound = filteredOptions.length > 0; // Check if any results were found
@@ -2418,9 +2453,17 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
+    getSelectedSearchTerms = (searchInput) => {
+        UserManagementFullSearch.filter(option => {
+            const name = option.name.toLowerCase();
+            const words = name.split(' '); // Split name into words
+            return words.some(word => word.startsWith(searchInput)); // Check if any word starts with the search term
+        });
+    }
+
     searchedTermClicked = (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
-        if(this.state.showMiniSearchBar === false) {
+        if (this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
                 showLargeSearchBar: !prevState.showLargeSearchBar,
@@ -2481,13 +2524,29 @@ export default class DocsNavigationMenu extends Component {
 
     handleSearchWithinNested = (searchTerm) => {
         // Access searchconsole.log()
-        if (this.nestedDropdownRef) {
-          const searchPath = this.nestedDropdownRef.searchMenuItems(UserManagementOptions, searchTerm);
-          console.log(searchPath)
-          this.setState({ searchPath });
+        if (this.nestedDropdownRef.current) {
+          const searchPath = this.nestedDropdownRef.current.searchMenuItems(UserManagementOptions, searchTerm);
+          this.setSearchPath(searchPath)
         }
     };
 
+    reselectClickedOption = (index) => {
+        console.log("did we get here")
+        if (this.nestedDropdownRef.current) {
+            this.nestedDropdownRef.current.reselectClickedItem(index)
+        }
+    }
+
+    setCurrentIndex = (index) => {
+        console.log(index)
+        this.setState({
+            indexReselecting: index
+        })
+    }
+
+    setSearchPath = (searchPath) => {
+        this.setState({ searchPath });
+    };
 
     clearRecentSearch = () => {
         this.setState({
@@ -2565,9 +2624,11 @@ export default class DocsNavigationMenu extends Component {
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
                                             searchPath={this.state.searchPath} 
+                                            setCurrentIndex={this.setCurrentIndex}
+                                            setSearchPath={this.setSearchPath}
                                             getMenuItemSelected={this.handleMenuItemSelected} 
                                             menuItems={UserManagementOptions} 
-                                            ref={(ref) => { this.nestedDropdownRef = ref; }}
+                                            ref={this.nestedDropdownRef}
                                             />
                                         </div>
                                     </CSSTransition>
