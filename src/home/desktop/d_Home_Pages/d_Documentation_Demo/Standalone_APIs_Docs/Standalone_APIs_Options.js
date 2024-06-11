@@ -4,63 +4,63 @@ const docs_sidebar_options = [
         levelName: "Single Sign-On",
         sections: [
             {
-                id: 0,
+                id: 1,
                 levelName: "Getting Started",
                 sections: [
                     {
-                        id: 0,
+                        id: 2,
                         levelName: "Quick Start",
                     },
                     {
-                        id: 1,
+                        id: 3,
                         levelName: "Test SSO"
                     },
                     {
-                        id: 2,
+                        id: 4,
                         levelName: "Example Apps"
                     }
                 ]
             },
             {
-                id: 1,
+                id: 5,
                 levelName: "User Experience",
                 sections: [
                     {
-                        id: 0,
+                        id: 6,
                         levelName: "Sign-In"
                     }
                 ]
             },
             {
-                id: 2,
+                id: 7,
                 levelName: "Going Live",
                 sections: [
                     {
-                        id: 0,
+                        id: 8,
                         levelName: "Login Flows"
                     },
                     {
-                        id: 1,
+                        id: 9,
                         levelName: "Redirect URIs"
                     },
                     {
-                        id: 3,
+                        id: 10,
                         levelName: "Signing Certificates"
                     },
                     {
-                        id: 4,
+                        id: 11,
                         levelName: "JIT Provisioning"
                     },
                     {
-                        id: 5,
+                        id: 12,
                         levelName: "Launch Checklist"
                     },
                     {
-                        id: 6,
+                        id: 13,
                         levelName: "FAQ for IT teams"
                     },
                     {
-                        id: 7,
+                        id: 14,
                         levelName: "SAML Security"
                     }
                 ]
@@ -68,55 +68,55 @@ const docs_sidebar_options = [
         ]
     },
     {
-        id: 1,
+        id: 15,
         levelName: "Directory Sync",
         sections: [
             {
-                id: 0,
+                id: 16,
                 levelName: "Getting Started",
                 sections: [
                     {
-                        id: 0,
+                        id: 17,
                         levelName: "Fundamentals"
                     },
                     {
-                        id: 1,
+                        id: 18,
                         levelName: "Quick Start (DS)"
                     },
                     {
-                        id: 2,
+                        id: 19,
                         levelName: "Example Apps (DS)"
                     }
                 ]
             },
             {
-                id: 1,
+                id: 20,
                 levelName: "Going Live",
                 sections: [
                     {
-                        id: 0,
+                        id: 21,
                         levelName: "Handle Inactive Users",
                     },
                     {
-                        id: 1,
+                        id: 22,
                         levelName: "Understanding Events"
                     },
                     {
-                        id: 2,
+                        id: 23,
                         levelName: "User Attributes"
                     }
                 ]
             },
             {
-                id: 2,
+                id: 24,
                 levelName: "Mapping Roles",
                 sections: [
                     {
-                        id: 0,
+                        id: 25,
                         levelName: "Role Data"
                     },
                     {
-                        id: 1,
+                        id: 26,
                         levelName: "Role Architecture"
                     }
                 ]
@@ -125,29 +125,29 @@ const docs_sidebar_options = [
         ]
     },
     {
-        id: 2,
+        id: 27,
         levelName: "Admin Portal",
         sections: [
             {
-                id: 0,
+                id: 28,
                 levelName: "Getting Started",
                 sections: [
                     {
-                        id: 0,
+                        id: 29,
                         levelName: "Quick Start (AP)"
                     },
                     {
-                        id: 1,
+                        id: 30,
                         levelName: "Example Apps (AP)"
                     }
                 ]
             },
             {
-                id: 1,
+                id: 31,
                 levelName: "Going Live",
                 sections: [
                     {
-                        id: 0,
+                        id: 32,
                         levelName: "Custom Branding"
                     }
                 ]
@@ -155,41 +155,41 @@ const docs_sidebar_options = [
         ]
     },
     {
-        id: 3,
+        id: 33,
         levelName: "Audit Logs",
         sections: [
             {
-                id: 0,
+                id: 34,
                 levelName: "Getting Started",
                 sections: [
                     {
-                        id: 0, 
+                        id: 35, 
                         levelName: "Quick Start (AL)"
                     }
                 ]
             },
             {
-                id: 1,
+                id: 36,
                 levelName: "Going Live",
                 sections: [
                     {
-                        id: 0,
+                        id: 37,
                         levelName: "Exporting Events"
                     },
                     {
-                        id: 1,
+                        id: 38,
                         levelName: "Metadata Schema"
                     },
                     {
-                        id: 2,
+                        id: 39,
                         levelName: "Editing Events"
                     },
                     {
-                        id: 3,
+                        id: 40,
                         levelName: "Admin Portal (AL)"
                     },
                     {
-                        id: 4,
+                        id: 41,
                         levelName: "Log Streams"
                     }
                 ]
@@ -197,15 +197,15 @@ const docs_sidebar_options = [
         ]
     },
     {
-        id: 4,
+        id: 42,
         levelName: "Domain Verification",
         sections: [
             {
-                id: 0,
+                id: 43,
                 levelName: "Quick Start (DV)"
             },
             {
-                id: 1,
+                id: 44,
                 levelName: "API"
             }
         ]

@@ -91,9 +91,9 @@ handleItemClick = (index, item) => {
     this.setState(prevState => {
         const { activeIndices } = prevState;
         const itemIndex = activeIndices.indexOf(index);
-        this.setState({
-            selectedIndex: index
-        })
+        // this.setState({
+        //     selectedIndex: index
+        // })
         let newActiveIndices;
         if (itemIndex !== -1) {
             // Deselect the clicked item
@@ -107,8 +107,8 @@ handleItemClick = (index, item) => {
             });
         }
 
-        this.props.setCurrentIndex(index);
         this.props.setSearchPath(newActiveIndices); // Notify parent component
+        this.props.setCurrentIndex(index);
         return { activeIndices: newActiveIndices };
     });
 
@@ -116,14 +116,36 @@ handleItemClick = (index, item) => {
 };
 
 reselectClickedItem = (index) => {
-    console.log('active indices b4 push: ', this.state.activeIndices)
-    this.state.activeIndices.push(index)
-    if (this.state.activeIndices.length > 2) {
-        this.state.activeIndices.splice(1, 1);
+
+    const { activeIndices } = this.state;
+    
+    console.log('active indices: ', this.state.activeIndices)
+
+    if (this.getHierarchyLevel(index) === 2 && this.getHierarchyLevel(activeIndices[activeIndices.length - 1]) === 1) {
+        activeIndices.pop();
     }
-    console.log('active indices b4 push: ', this.state.activeIndices)
+ 
+    if (!activeIndices.includes(index)) {
+        activeIndices.push(index)
+    }
+
+    let immediateParentIndex = this.getImmediateParentIndex(index)
+
+
+    if (this.getHierarchyLevel(index) === 2) {
+        activeIndices.push(immediateParentIndex)
+    }
+
+    if (activeIndices.length > this.props.maximumDepth) {
+        // Find the index of the second last item
+    let secondLastIndex = activeIndices.length - 2;
+        // Remove the second last item
+    activeIndices.splice(secondLastIndex, 1);
+
+    
 }
 
+}
   
 getParentIndex = (index) => {
     // Convert index to string if it's not already
@@ -131,6 +153,81 @@ getParentIndex = (index) => {
     // Extract the parent index from the concatenated index
     return indexString.substring(0, indexString.lastIndexOf('-'));
 };
+
+getImmediateParentIndex = (index) => {
+    const { menuItems } = this.props;
+
+    const findParent = (items, targetIndex, parent = null) => {
+        for (const item of items) {
+            if (item.id === targetIndex) {
+                return parent ? parent.id : null;
+            }
+            if (item.sections) {
+                const parentLevelIndex = findParent(item.sections, targetIndex, item);
+                if (parentLevelIndex !== null) {
+                    return parentLevelIndex;
+                }
+            }
+        }
+        return null;
+    };
+
+    return findParent(menuItems, index);
+};
+
+getAllIndicesAtSameLevel = (index) => {
+    const { menuItems } = this.props;
+    const parentIndices = [];
+
+    const findParent = (items, targetIndex, parent = null) => {
+        for (const item of items) {
+            if (item.id === targetIndex) {
+                // Found the target index, so add all parent indices to the array
+                if (parent) {
+                    parentIndices.push(parent.id);
+                }
+                return;
+            }
+            if (item.sections) {
+                findParent(item.sections, targetIndex, item);
+            }
+        }
+    };
+
+    findParent(menuItems, index);
+    return parentIndices;
+};
+
+
+closeOtherParentsInSameLevel = (index) => {
+    const { menuItems } = this.props;
+    const currentParentIndex = index
+
+    if (!currentParentIndex) {
+        // No parent index, so no other parents to close
+        return;
+    }
+
+    const closeParents = (items, targetIndex, parentIndices = []) => {
+        for (const item of items) {
+            if (item.id === targetIndex) {
+                // Found the target index, close all parent indices except for the current one
+                const parentIndexesToClose = parentIndices.filter(parentIndex => parentIndex !== currentParentIndex);
+                console.log('parent indexes to close: ',parentIndexesToClose)
+                this.setState(prevState => ({
+                    activeIndices: prevState.activeIndices.filter(idx => !parentIndexesToClose.includes(idx))
+                }));
+                return;
+            }
+            if (item.sections) {
+                closeParents(item.sections, targetIndex, [...parentIndices, item.id]);
+            }
+        }
+    };
+
+    closeParents(menuItems, index);
+};
+
   
   // Function to get the hierarchy level of an item by its index
 getHierarchyLevel = (index) => {
@@ -198,6 +295,7 @@ handleSearchWithinNested = (searchTerm) => {
 };
 
 setSearchPath = (searchPath) => {
+    // this.sets
     this.setState({ searchPath });
 };
 
@@ -233,6 +331,7 @@ renderMenuItems = (menuItems, level = 0) => {
                                 setSearchPath={this.setSearchPath}
                                 getMenuItemSelected={this.props.getMenuItemSelected}
                                 menuItems={item.sections}
+                                maximumDepth={this.props.maximumDepth}
                                 activeIndices={activeIndices} // Pass activeIndices to nested components
                                 handleItemClick={() => this.handleItemClick(item.id, item.levelName)} // Pass handleItemClick to nested components
                                 />

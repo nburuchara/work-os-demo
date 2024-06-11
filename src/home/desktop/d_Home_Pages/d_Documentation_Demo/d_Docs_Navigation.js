@@ -216,6 +216,7 @@ const Styles = styled.div `
     font-family: poppins;
     margin-bottom: 2%;
     font-size: 120%;
+
 }
 
 .demo-docs-section-sidebar-h1 {
@@ -1876,6 +1877,30 @@ const Styles = styled.div `
     transition: transform 500ms, opacity 500ms !important;
 }
 
+
+/* CSS Transition Definitions */
+.mini-search-bar2-enter {
+    transform: translateY(20%) !important;
+    opacity: 0 !important;
+}
+
+.mini-search-bar2-enter-active {
+    transform: translate(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.mini-search-bar2-exit {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.mini-search-bar2-exit-active {
+    transform: translateY(5%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
         //! - - - - - SEARCH FUNCTIONALITY - - - - - - - 1//
 
     // - - SEARCH RESULTS - - //
@@ -2081,6 +2106,7 @@ export default class DocsNavigationMenu extends Component {
             dockMenuBtnWidth: "43%",
             dockExternalBtnWidth: "34.5%",
             dockExitBtnWidth: "45.5%",
+            miniSearchBarTransitioning: false,
 
             //* - SEARCH RESULTS COMPONENTS - *//
 
@@ -2115,6 +2141,7 @@ export default class DocsNavigationMenu extends Component {
             resourcesDropdown: false,
             
             indexReselecting: 0,
+            aIndices: [],
 
             //* - - TOGGLE ADJUSTABLE DIMENSIONS - - *//
 
@@ -2159,10 +2186,10 @@ export default class DocsNavigationMenu extends Component {
 
     menuOptionClicked = (option) => {
         const optionHomepages = [
-            {id: "1", name: "Quick Start"},
-            {id: "2", name: "Quick Start"},
-            {id: "3", name: "Event Types"},
-            {id: "4", name: "Overview"},
+            {id: 1, name: "Quick Start"},
+            {id: 2, name: "Quick Start"},
+            {id: 3, name: "Event Types"},
+            {id: 4, name: "Overview"},
         ]
         this.closeAllOpenPages()
         for (let i = 1; i <= 4; i++) {
@@ -2173,34 +2200,34 @@ export default class DocsNavigationMenu extends Component {
                 this.setState({
                     [`menuOption${i}`]: true,
                     prevSelectedOption: `menuOption${i}`,
-                    showCloseSelectedOptionBtn: true
+                    showCloseSelectedOptionBtn: true,
+                    indexReselecting: 0
                 })
                 setTimeout(() => {
-                    this.handleSearchWithinNested(optionHomepages[i].name)
+                    this.handleSearchWithinNested(optionHomepages[option-1].name)
+                    console.log(optionHomepages[option-1].name)
                 }, 1000)
             }
         } 
         setTimeout(() => {
             if (option === 1) {
                 this.setState({
+                    showDocsHome: false,
+                    showUserManagementDoc: true,
                     userManagementDropdown: true,
                     standaloneAPIsDropdown: false,
                     eventsAndWebhooksDropdown: false,
                     resourcesDropdown: false,
                 })
-                if (this.menuOption1Ref.current) {
-                    // this.menuOption1Ref.current.openFirstDoc();
-                }
             } else if (option === 2) {
                 this.setState({
+                    showDocsHome: false,
+                    showStandAloneApis: true,
                     userManagementDropdown: false,
                     standaloneAPIsDropdown: true,
                     eventsAndWebhooksDropdown: false,
                     resourcesDropdown: false
                 })
-                if (this.menuOption2Ref.current) {
-                    this.menuOption2Ref.current.openFirstDoc();
-                }
             } else if (option === 3) {
                 this.setState({
                     userManagementDropdown: false,
@@ -2216,7 +2243,6 @@ export default class DocsNavigationMenu extends Component {
                     resourcesDropdown: true
                 })
             }
-            this.handleMenuItemSelected()
         }, 500)
     }
 
@@ -2254,14 +2280,10 @@ export default class DocsNavigationMenu extends Component {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (menuOption1 === true) {
             this.setState({
-                showDocsHome: false,
-                showUserManagementDoc: true,
-                usrMgmtScrollID: item
+                usrMgmtScrollID: item,
             })
         } else if (menuOption2 === true) {
             this.setState({
-                showDocsHome: false,
-                showStandAloneApis: true,
                 standaloneApisScrollID: item
             })
         }
@@ -2451,14 +2473,6 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    getSelectedSearchTerms = (searchInput) => {
-        UserManagementFullSearch.filter(option => {
-            const name = option.name.toLowerCase();
-            const words = name.split(' '); // Split name into words
-            return words.some(word => word.startsWith(searchInput)); // Check if any word starts with the search term
-        });
-    }
-
     searchedTermClicked = (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (this.state.showMiniSearchBar === false) {
@@ -2535,9 +2549,18 @@ export default class DocsNavigationMenu extends Component {
     }
 
     setCurrentIndex = (index) => {
-        console.log(index)
+        // console.log(this.state.aIndices)
+        // console.log(index)
+        // this.state.aIndices.push(index)
+        console.log(this.state.aIndices)
         this.setState({
-            indexReselecting: index
+            indexReselecting: index,
+        })
+    }
+
+    getSearchPath = (sP) => {
+        this.setState({
+            aIndices: sP
         })
     }
 
@@ -2625,6 +2648,7 @@ export default class DocsNavigationMenu extends Component {
                                             setSearchPath={this.setSearchPath}
                                             getMenuItemSelected={this.handleMenuItemSelected} 
                                             menuItems={UserManagementOptions} 
+                                            maximumDepth={2}
                                             ref={(ref) => { this.nestedDropdownRef = ref; }}
                                             />
                                         </div>
@@ -2639,7 +2663,15 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown getMenuItemSelected={this.handleMenuItemSelected} menuItems={StandaloneAPIsOptions} />
+                                            <NestedDropdown 
+                                            searchPath={this.state.searchPath} 
+                                            setCurrentIndex={this.setCurrentIndex}
+                                            setSearchPath={this.setSearchPath}
+                                            getMenuItemSelected={this.handleMenuItemSelected} 
+                                            menuItems={StandaloneAPIsOptions} 
+                                            maximumDepth={3}
+                                            ref={(ref) => { this.nestedDropdownRef = ref; }} 
+                                            />
                                         </div>
                                     </CSSTransition>
 

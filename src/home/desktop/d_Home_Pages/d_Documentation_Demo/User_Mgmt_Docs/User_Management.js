@@ -40,6 +40,7 @@ export default class UserManagement extends Component {
             directoryProvisioning: false,
             organizationPolicies: false,
             impersonation: false,
+            scrollDistance: 0,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -57,8 +58,18 @@ export default class UserManagement extends Component {
     }
 
     componentDidMount = () => {
-       
+        window.addEventListener('scroll', this.handleScroll);
     }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        this.setState({
+          scrollDistance: window.scrollY,
+        });
+    };
 
     openFirstDoc = () => {
         setTimeout (() => {
@@ -114,7 +125,6 @@ export default class UserManagement extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
-        console.log("LSP: this got triggered")
         this.hideAllPages()
         // setTimeout (() => {
         //     this.setState({
@@ -688,7 +698,9 @@ export default class UserManagement extends Component {
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AuthKit</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
+                            
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}} id=''>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
+                            <div style={{paddingBottom: "3%"}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -700,8 +712,8 @@ export default class UserManagement extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Automatic bot detection and blocking, to protect against brute force attacks.</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Customizable <label className='demo-docs-hyperlink'>domains</label> and <label className='demo-docs-hyperlink'>branding</label>.</p></li>
                             </ul>
-                        
-                            <div id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
+                            <div></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "8%" : ""}} id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
                                 <img src='/assets/auth_kit_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -713,7 +725,7 @@ export default class UserManagement extends Component {
                             <div id='img4' className={`enlargable-image-container ${this.state.enlargedImageId === 'img4' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img4')}>
                                 <img src='/assets/authkit_img2.avif' alt="Enlargable" className="image" />
                             </div>
-
+                           
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
@@ -722,8 +734,9 @@ export default class UserManagement extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The AuthKit flow abstracts away many of the UX and WorkOS API calling concerns automatically, for more guidance on integrating with AuthKit, see the <label className='demo-docs-hyperlink'>Quick Start</label> guide.</p>
                                 </div>
                             </div>
+                            <div ></div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit also provides a sign-up flow for creating users. Available options are determined by the configured <label className='demo-docs-hyperlink'>authentication methods</label>. If a user’s email address is associated with an SSO connection, they will automatically be redirected to sign up via their IdP.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit also provides a sign-up flow for creating users. Available options are determined by the configured <label  id='Authentication Methods' className='demo-docs-hyperlink'>authentication methods</label>. If a user’s email address is associated with an SSO connection, they will automatically be redirected to sign up via their IdP.</p>
                            
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication Methods</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports all of the authentication methods available in WorkOS User Management and will automatically adjust the available options depending on the configured methods in the <i>Authentication</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
@@ -737,9 +750,9 @@ export default class UserManagement extends Component {
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Single Sign-On</label></p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Email + Password</label></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Social Login</label></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label  className='demo-docs-hyperlink'>Social Login</label></p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Multi-Factor Auth</label></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Magic Auth</label></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label id = 'Integrating'className='demo-docs-hyperlink'>Magic Auth</label></p></li>
                             </ul>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
