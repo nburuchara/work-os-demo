@@ -71,6 +71,7 @@ export default class NestedDropdown extends Component {
     super(props);
     this.state = {
       activeIndices: props.searchPath || [],
+      selectedIndex: 0
     };
   }
 
@@ -90,7 +91,9 @@ handleItemClick = (index, item) => {
     this.setState(prevState => {
         const { activeIndices } = prevState;
         const itemIndex = activeIndices.indexOf(index);
-
+        this.setState({
+            selectedIndex: index
+        })
         let newActiveIndices;
         if (itemIndex !== -1) {
             // Deselect the clicked item
@@ -112,34 +115,15 @@ handleItemClick = (index, item) => {
     this.props.getMenuItemSelected(item); // Notify parent component about the selected item
 };
 
-sendIndexToParent = () => {
-    
-}
-
 reselectClickedItem = (index) => {
-    // const { reselectedIndex } = this.props;
-    // this.setState(prevState => {
-    //     const { activeIndices } = prevState;
-    //     const itemIndex = activeIndices.indexOf(index);
-
-    //     let newActiveIndices;
-    //     if (itemIndex !== -1) {
-    //         // Deselect the clicked item
-    //         newActiveIndices = activeIndices.filter((_, i) => i !== itemIndex);
-    //     } else {
-    //         // Select the clicked item and collapse other items with the same parent
-    //         const parentIndex = this.getParentIndex(index);
-    //         newActiveIndices = [...activeIndices, index].filter((activeIndex) => {
-    //             const activeParentIndex = this.getParentIndex(activeIndex);
-    //             return activeParentIndex !== parentIndex || activeIndex === index;
-    //         });
-    //     }
-
-    //     this.props.setSearchPath(newActiveIndices); // Notify parent component
-    //     return { activeIndices: newActiveIndices };
-    // });
-    console.log('index', index)
+    console.log('active indices b4 push: ', this.state.activeIndices)
+    this.state.activeIndices.push(index)
+    if (this.state.activeIndices.length > 2) {
+        this.state.activeIndices.splice(1, 1);
+    }
+    console.log('active indices b4 push: ', this.state.activeIndices)
 }
+
   
 getParentIndex = (index) => {
     // Convert index to string if it's not already
@@ -199,7 +183,6 @@ searchMenuItems = (menuItems, searchTerm) => {
     
       search(menuItems, searchTerm);
       this.props.getMenuItemSelected(searchTerm)
-      console.log(path)
       return path;
 };
 

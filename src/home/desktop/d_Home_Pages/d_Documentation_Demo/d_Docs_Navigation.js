@@ -2153,8 +2153,6 @@ export default class DocsNavigationMenu extends Component {
         this.menuOption3Ref = React.createRef();
         this.menuOption4Ref = React.createRef();
 
-        this.nestedDropdownRef = React.createRef();
-
     }
 
         //* - - SIDEBAR FUNCS - - *//
@@ -2289,7 +2287,6 @@ export default class DocsNavigationMenu extends Component {
             if (this.state.prevSelectedOption !== "") {
                 this.handleSearchWithinNested(this.state.prevSelectedOption)
             }
-            this.reselectClickedOption(this.state.indexReselecting)
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
                 showLargeSearchBar: !prevState.showLargeSearchBar,
@@ -2302,6 +2299,7 @@ export default class DocsNavigationMenu extends Component {
                         externalDocsHovered: false,
                         exitDocsHovered: false
                     }))
+                    this.reselectClickedOption(this.state.indexReselecting)
                 }, 500)
             })
         } else {
@@ -2524,16 +2522,15 @@ export default class DocsNavigationMenu extends Component {
 
     handleSearchWithinNested = (searchTerm) => {
         // Access searchconsole.log()
-        if (this.nestedDropdownRef.current) {
-          const searchPath = this.nestedDropdownRef.current.searchMenuItems(UserManagementOptions, searchTerm);
+        if (this.nestedDropdownRef) {
+          const searchPath = this.nestedDropdownRef.searchMenuItems(UserManagementOptions, searchTerm);
           this.setSearchPath(searchPath)
         }
     };
 
     reselectClickedOption = (index) => {
-        console.log("did we get here")
-        if (this.nestedDropdownRef.current) {
-            this.nestedDropdownRef.current.reselectClickedItem(index)
+        if (this.nestedDropdownRef) {
+            this.nestedDropdownRef.reselectClickedItem(index);
         }
     }
 
@@ -2628,7 +2625,7 @@ export default class DocsNavigationMenu extends Component {
                                             setSearchPath={this.setSearchPath}
                                             getMenuItemSelected={this.handleMenuItemSelected} 
                                             menuItems={UserManagementOptions} 
-                                            ref={this.nestedDropdownRef}
+                                            ref={(ref) => { this.nestedDropdownRef = ref; }}
                                             />
                                         </div>
                                     </CSSTransition>
