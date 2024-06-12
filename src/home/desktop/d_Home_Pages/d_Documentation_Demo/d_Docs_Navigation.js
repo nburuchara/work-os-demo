@@ -2184,7 +2184,9 @@ export default class DocsNavigationMenu extends Component {
 
     }
 
+
         //* - - SIDEBAR FUNCS - - *//
+
 
     menuOptionClicked = (option) => {
         new Promise((resolve) => {
@@ -2301,8 +2303,23 @@ export default class DocsNavigationMenu extends Component {
             })
         }
     }
+
+    reselectClickedOption = (index) => {
+        if (this.nestedDropdownRef) {
+            this.nestedDropdownRef.reselectClickedItem(index);
+        }
+    }
+
+    setCurrentIndex = (index, item) => {
+        this.setState({
+            indexReselecting: index,
+            currentPage: item
+        })
+    }
     
+
         //* - - SEARCH DOCK (NON SEARCH) FUNCS - - *//
+
 
     menuDocsEnter = () => { this.setState({menuDocsHovered: true}) }
 
@@ -2353,7 +2370,9 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
+    
         //* - - SEARCH BAR INPUT FUNCS - - *//
+    
 
     clearSearchBar = () => {
         this.setState({
@@ -2486,10 +2505,6 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    checkIfCurrentPageIsSearchedPage = async () => {
-        console.log('new func current page: ', this.state.currentPage)
-    }
-
     searchedTermClicked = async (category, option, searchedPage) => {
         const { currentPage } = this.state;
         let searchingSamePage = false;
@@ -2524,9 +2539,7 @@ export default class DocsNavigationMenu extends Component {
                             }
                             resolve();
                         });
-                        setTimeout(() => {
-                            this.getSearchedTerm(category, option, searchedPage, searchingSamePage)
-                        }, 0)
+                        this.getSearchedTerm(category, option, searchedPage, searchingSamePage)
                     })
             })
         } else {
@@ -2588,19 +2601,6 @@ export default class DocsNavigationMenu extends Component {
           this.setSearchPath(searchPath)
         }
     };
-
-    reselectClickedOption = (index) => {
-        if (this.nestedDropdownRef) {
-            this.nestedDropdownRef.reselectClickedItem(index);
-        }
-    }
-
-    setCurrentIndex = (index, item) => {
-        this.setState({
-            indexReselecting: index,
-            currentPage: item
-        })
-    }
 
     setSearchPath = (searchPath) => {
         this.setState({ searchPath });

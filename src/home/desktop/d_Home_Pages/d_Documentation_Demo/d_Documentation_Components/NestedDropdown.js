@@ -75,8 +75,7 @@ export default class NestedDropdown extends Component {
     };
   }
 
-componentDidMount() {
-    
+componentDidMount() { 
     this.setState({ activeIndices: this.props.searchPath || [] });
 }
 

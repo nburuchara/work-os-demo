@@ -285,11 +285,11 @@ export default class UserManagement extends Component {
                 unmountOnExit    
                 >
                     <div id='top' className='demo-docs-container'>    
-                        <div id='Introduction' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
-                            <div ></div>
+                            
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
-                        
+                            <div style={{paddingBottom: sidebarMenuClicked ? "3%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -338,10 +338,11 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can set a redirect URI in the <i>Redirects</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> – be sure not to include wildcard subdomains or query parameters.</p>
 
-                            <div id='Set secrets'></div>
+                            <div></div>
 
                             <div id='img1' className={`enlargable-image-container ${this.state.enlargedImageId === 'img1' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img1')}>
                                 <img src='/assets/usr_mgmt_docs_redirects_img.avif' alt="Enlargable" className="image" />
+                                <i id='Set secrets'></i>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
@@ -367,7 +368,7 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
 
-                            <div id='Redirect users to AuthKit'></div>
+                            <div ></div>
                             
                             
                             {usingNode && 
@@ -419,7 +420,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>The code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span></p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>The code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img id='Add AuthKit to your app' className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span></p>
                                 </div>
                             </div>
 
@@ -432,10 +433,10 @@ export default class UserManagement extends Component {
                                     <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
                                 </div>
                                 <div className='label-desc'>
-                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add AuthKit to your app</h1>
+                                    <h1  className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add AuthKit to your app</h1>
                                 </div>
                             </div>
-
+                            <i id='Redirect users to AuthKit'></i>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let's integrate the hosted authentication flow into your app.</p>
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Redirect users to AuthKit</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, we'll need to direct users to sign in (or sign up) using AuthKit before redirecting them back to your application. We'll do this by generating an AuthKit authorization URL server side and redirecting the user to it.</p>
@@ -454,7 +455,7 @@ export default class UserManagement extends Component {
                             selectedLang={this.state.currentSelectedLanguage}/>
                             <div style={{paddingBottom:"3%"}} id='WorkOS will redirect'></div>
                             
-                            <div id='Add a callback endpoint'></div>
+                            <div></div>
 
 
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
@@ -462,7 +463,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>WorkOS will redirect to your <label className='demo-docs-hyperlink'>Redirect URI</label> if there is an issue generating an authorization URL. Read our <label className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
+                                    <p  style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>WorkOS will redirect to your <label className='demo-docs-hyperlink'>Redirect URI</label> if there is an issue generating an authorization URL. Read our <label id='Add a callback endpoint' className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
                                 </div>
                             </div>
 
@@ -488,7 +489,7 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
 
-                            <div id='Validate the authentication flow'></div>
+                            {/* <div id='Validate the authentication flow'></div> */}
 
                             {usingNode && 
                                 <div>
@@ -529,9 +530,9 @@ export default class UserManagement extends Component {
                                 </div>
                             }
 
+                            <label style={{paddingBottom: sidebarMenuClicked ? "12%" : "", color: "transparent"}} id='Validate the authentication flow'> . </label>
 
-
-                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Validate the authentication flow</h3>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Validate the authentication flow</h3>
                             <p>Navigate to the <label className='demo-docs-hyperlink'>authentication endpoint</label> we created and sign up for an account. You can then sign in with the newly created credentials and see the user listed in the <i>Users</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                     
                             <div id='Handle the user session'></div>
@@ -716,7 +717,7 @@ export default class UserManagement extends Component {
                             <div style={{paddingBottom: sidebarMenuClicked ? "8%" : ""}} id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
                                 <img src='/assets/auth_kit_img1.avif' alt="Enlargable" className="image" />
                             </div>
-
+                            <label id='Authentication Flow' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication Flow</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit is conceptually similar to a <label className='demo-docs-hyperlink'>Social Login (OAuth)</label> experience, but with the added benefit of being able to authenticate users with any identity provider.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit sits outside of your application code. When a user initiates a sign-in request, your application redirects them to the AuthKit URL. The user then completes the authentication process with WorkOS before being returned to the application.</p>
@@ -725,7 +726,7 @@ export default class UserManagement extends Component {
                             <div id='img4' className={`enlargable-image-container ${this.state.enlargedImageId === 'img4' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img4')}>
                                 <img src='/assets/authkit_img2.avif' alt="Enlargable" className="image" />
                             </div>
-                           
+                            <label id='The AuthKit flow' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
@@ -736,7 +737,7 @@ export default class UserManagement extends Component {
                             </div>
                             <div ></div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit also provides a sign-up flow for creating users. Available options are determined by the configured <label  id='Authentication Methods' className='demo-docs-hyperlink'>authentication methods</label>. If a user’s email address is associated with an SSO connection, they will automatically be redirected to sign up via their IdP.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit also provides a sign-up flow for creating users. Available options are determined by the configured <label  className='demo-docs-hyperlink'>authentication methods</label>. If a user’s email address is associated with an SSO connection, they will <i id='Authentication Methods'></i>automatically be redirected to sign up via their IdP.</p>
                            
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication Methods</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports all of the authentication methods available in WorkOS User Management and will automatically adjust the available options depending on the configured methods in the <i>Authentication</i> section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
