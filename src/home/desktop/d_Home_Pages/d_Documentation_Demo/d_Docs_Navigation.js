@@ -2205,10 +2205,12 @@ export default class DocsNavigationMenu extends Component {
                         showCloseSelectedOptionBtn: true,
                         indexReselecting: 0
                     })
-                    setTimeout(() => {
-                        this.handleSearchWithinNested(optionHomepages[option-1].name)
-                        console.log(optionHomepages[option-1].name)
-                    }, 1000)
+                    if (this.state.transitioningMenu === false) {
+                        setTimeout(() => {
+                            this.handleSearchWithinNested(optionHomepages[option-1].name)
+                            console.log(optionHomepages[option-1].name)
+                        }, 1000)
+                    }
                 }
             } 
             setTimeout(() => {
@@ -2500,11 +2502,11 @@ export default class DocsNavigationMenu extends Component {
                         await this.closeSelectedMenuOption()
                         await new Promise((resolve, reject) => {
                             if (category === "User Management") {
-                                this.setState({menuOption2: false, menuOption3: false, menuOption4: false}, () => {
+                                this.setState({transitioningMenu: true, menuOption2: false, menuOption3: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(1)
                                 })
                             } else if (category === "Standalone APIs") {
-                                this.setState({menuOption1: false, menuOption3: false, menuOption4: false}, () => {
+                                this.setState({ransitioningMenu: true, menuOption1: false, menuOption3: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(2)
                                 })
                             }
@@ -2512,7 +2514,7 @@ export default class DocsNavigationMenu extends Component {
                         });
                         setTimeout(() => {
                             this.getSearchedTerm(category, option)
-                        })
+                        }, 0)
                     })
             })
         } else {
@@ -2520,11 +2522,11 @@ export default class DocsNavigationMenu extends Component {
             await this.closeSelectedMenuOption()
             await new Promise((resolve, reject) => {
                 if (category === "User Management") {
-                    this.setState({menuOption2: false, menuOption3: false, menuOption4: false}, () => {
+                    this.setState({transitioningMenu: true, menuOption2: false, menuOption3: false, menuOption4: false}, () => {
                         this.menuOptionClicked(1)
                     })
                 } else if (category === "Standalone APIs") {
-                    this.setState({menuOption1: false, menuOption3: false, menuOption4: false}, () => {
+                    this.setState({transitioningMenu: true, menuOption1: false, menuOption3: false, menuOption4: false}, () => {
                         this.menuOptionClicked(2)
                     })
                 }
