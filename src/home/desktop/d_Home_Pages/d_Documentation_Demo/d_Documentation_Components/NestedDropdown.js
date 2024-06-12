@@ -87,7 +87,6 @@ componentDidUpdate(prevProps) {
     }
 }
 
-
 handleItemClick = (index, item) => {
     this.setState(prevState => {
         const { activeIndices } = prevState;
@@ -230,7 +229,6 @@ closeOtherParentsInSameLevel = (index) => {
     closeParents(menuItems, index);
 };
 
-  
   // Function to get the hierarchy level of an item by its index
 getHierarchyLevel = (index) => {
     const { menuItems } = this.props;

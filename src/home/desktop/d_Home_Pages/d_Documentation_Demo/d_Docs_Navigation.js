@@ -2156,6 +2156,7 @@ export default class DocsNavigationMenu extends Component {
             showStandAloneApis: false,
             showAPIReference: false ,
             showEventsWebhooks: false,
+            currentPage: "",
 
             //* - - DOCS SEARCH RESULTS PROPS - - *//
 
@@ -2289,6 +2290,7 @@ export default class DocsNavigationMenu extends Component {
 
     handleMenuItemSelected = (item) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        this.setState({currentPage: item})
         if (menuOption1 === true) {
             this.setState({
                 usrMgmtScrollID: item,
@@ -2484,8 +2486,16 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    searchedTermClicked = async (category, option) => {
-        const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+    checkIfCurrentPageIsSearchedPage = async () => {
+        console.log('new func current page: ', this.state.currentPage)
+    }
+
+    searchedTermClicked = async (category, option, searchedPage) => {
+        const { currentPage } = this.state;
+        let searchingSamePage = false;
+        if (currentPage === searchedPage) {
+            searchingSamePage = true;
+        }
         if (this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
@@ -2499,27 +2509,31 @@ export default class DocsNavigationMenu extends Component {
                         exitDocsHovered: false,
                     }), async () => {
                         await this.clearRecentSearch()
-                        await this.closeSelectedMenuOption()
+                        if (!searchingSamePage) {
+                            await this.closeSelectedMenuOption()
+                        }
                         await new Promise((resolve, reject) => {
                             if (category === "User Management") {
                                 this.setState({transitioningMenu: true, menuOption2: false, menuOption3: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(1)
                                 })
                             } else if (category === "Standalone APIs") {
-                                this.setState({ransitioningMenu: true, menuOption1: false, menuOption3: false, menuOption4: false}, () => {
+                                this.setState({transitioningMenu: true, menuOption1: false, menuOption3: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(2)
                                 })
                             }
                             resolve();
                         });
                         setTimeout(() => {
-                            this.getSearchedTerm(category, option)
+                            this.getSearchedTerm(category, option, searchedPage, searchingSamePage)
                         }, 0)
                     })
             })
         } else {
             await this.clearRecentSearch()
-            await this.closeSelectedMenuOption()
+            if (!searchingSamePage) {
+                await this.closeSelectedMenuOption()
+            }
             await new Promise((resolve, reject) => {
                 if (category === "User Management") {
                     this.setState({transitioningMenu: true, menuOption2: false, menuOption3: false, menuOption4: false}, () => {
@@ -2532,12 +2546,11 @@ export default class DocsNavigationMenu extends Component {
                 }
                 resolve();
             });
-            this.getSearchedTerm(category, option)
-            // this.getSearchedTerm(category, option)
+            this.getSearchedTerm(category, option, searchedPage, searchingSamePage)
         }
     }
 
-    getSearchedTerm = (category, option) => {
+    getSearchedTerm = (category, option, searchedPage, searchingSamePage) => {
         new Promise((resolve) => {
             const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
             setTimeout(() => {
@@ -2548,6 +2561,7 @@ export default class DocsNavigationMenu extends Component {
                     this.setState({
                         menuOption1SearchCategory: category,
                         menuOption1SearchTermObject: option,
+                        currentPage: searchedPage
                     }, () => {
                         // Call the callback function to perform search
                         this.setState({
@@ -2561,10 +2575,10 @@ export default class DocsNavigationMenu extends Component {
                         menuOption2SearchTermObject: option
                     })
                 }
-            }, 1000)
+            }, searchingSamePage ? 0 : 1000)
             resolve();
         });
-        
+        console.log('late current page: ', this.state.currentPage)
     }
 
     handleSearchWithinNested = (searchTerm) => {
@@ -2581,19 +2595,10 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    setCurrentIndex = (index) => {
-        // console.log(this.state.aIndices)
-        // console.log(index)
-        // this.state.aIndices.push(index)
-        console.log(this.state.aIndices)
+    setCurrentIndex = (index, item) => {
         this.setState({
             indexReselecting: index,
-        })
-    }
-
-    getSearchPath = (sP) => {
-        this.setState({
-            aIndices: sP
+            currentPage: item
         })
     }
 
@@ -2800,7 +2805,7 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
-                                                            onClick={() => this.searchedTermClicked(category, option)}
+                                                            onClick={() => this.searchedTermClicked(category, option, option.page)}
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
@@ -2925,7 +2930,7 @@ export default class DocsNavigationMenu extends Component {
                                                         {category !== "Code Snippet" ? 
                                                         (
                                                             <div 
-                                                            onClick={() => this.searchedTermClicked(category, option)}
+                                                            onClick={() => this.searchedTermClicked(category, option, option.page)}
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
