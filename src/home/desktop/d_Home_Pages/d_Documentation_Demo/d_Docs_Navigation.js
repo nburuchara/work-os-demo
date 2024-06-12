@@ -902,6 +902,11 @@ const Styles = styled.div `
     border: 1px solid #999999;
 }
 
+.migration-sidebar-container:hover {
+    cursor: pointer;
+    border: 1px solid #999999;
+ }
+
     // # IMG
 
 .migration-container img {

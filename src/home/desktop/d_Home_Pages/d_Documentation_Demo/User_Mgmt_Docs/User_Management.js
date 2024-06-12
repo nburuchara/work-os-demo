@@ -289,7 +289,7 @@ export default class UserManagement extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
                             
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
-                            <div style={{paddingBottom: sidebarMenuClicked ? "3%" : ""}} id='Introduction' ></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -701,7 +701,7 @@ export default class UserManagement extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AuthKit</h1>
                             
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}} id=''>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
-                            <div style={{paddingBottom: sidebarMenuClicked ? "3%" : ""}} id='Introduction'></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -717,7 +717,7 @@ export default class UserManagement extends Component {
                             <div style={{paddingBottom: sidebarMenuClicked ? "8%" : ""}} id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
                                 <img src='/assets/auth_kit_img1.avif' alt="Enlargable" className="image" />
                             </div>
-                            <label id='Authentication Flow' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='Authentication Flow'></i>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authentication Flow</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit is conceptually similar to a <label className='demo-docs-hyperlink'>Social Login (OAuth)</label> experience, but with the added benefit of being able to authenticate users with any identity provider.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit sits outside of your application code. When a user initiates a sign-in request, your application redirects them to the AuthKit URL. The user then completes the authentication process with WorkOS before being returned to the application.</p>
@@ -726,7 +726,7 @@ export default class UserManagement extends Component {
                             <div id='img4' className={`enlargable-image-container ${this.state.enlargedImageId === 'img4' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img4')}>
                                 <img src='/assets/authkit_img2.avif' alt="Enlargable" className="image" />
                             </div>
-                            <label id='The AuthKit flow' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='The AuthKit flow'>.</i>
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
@@ -810,7 +810,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email Domains</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Guidance on configuring domains for emails.</p>
-                            <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id='Configuring a domain'></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Configuring a domain'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuring a domain</h1>
@@ -906,7 +906,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Branding</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customize AuthKit to fit natively with your app’s unique design.</p>
-                            <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id='Introduction'></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -923,7 +923,7 @@ export default class UserManagement extends Component {
                             <div id='img9' className={`enlargable-image-container ${this.state.enlargedImageId === 'img9' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img9')}>
                                 <img src='/assets/branding_img1.avif' alt="Enlargable" className="image" />
                             </div>
-                            <label id='Appearance' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='Appearance'>.</i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Appearance</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports both light and dark mode; each brand configuration option is split across both so that they can be configured independently. You can enforce a specific appearance, or allow the user's OS system settings to determine which to use.</p>
@@ -932,7 +932,7 @@ export default class UserManagement extends Component {
                                 <img src='/assets/branding_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <label id='Assets' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='Assets'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assets</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom brand assets to display in AuthKit, transactional emails, and the <label className='demo-docs-hyperlink'>Admin Portal</label></p>
@@ -953,7 +953,7 @@ export default class UserManagement extends Component {
                             <div id='img12' className={`enlargable-image-container ${this.state.enlargedImageId === 'img12' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img12')}>
                                 <img src='/assets/branding_img4.avif' alt="Enlargable" className="image" />
                             </div>
-                            <label id='Color' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='Color'></i>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Color</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can control four colors across light and dark mode:</p>
 
@@ -969,7 +969,7 @@ export default class UserManagement extends Component {
                                 <img src='/assets/branding_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <label id='Copy' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            <i id='Copy'></i>
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy</h1>
                             <div id='img14' className={`enlargable-image-container ${this.state.enlargedImageId === 'img14' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img14')}>
@@ -998,10 +998,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Migrations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Guidance on moving your existing users to WorkOS.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a <label className='demo-docs-hyperlink'>range of guides</label> to help you migrate your existing integration to WorkOS User Management.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a <label className='demo-docs-hyperlink'>range of guides</label> to help you migrate your existing integration <i id='Migrate from another service'></i>to WorkOS User Management.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Migrate from another service</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These guides will walk you through the process of moving your users and organizations to WorkOS from another service.</p>
@@ -1031,7 +1032,7 @@ export default class UserManagement extends Component {
                                         <img className="migration-container-see-all-img" src='/assets/migrations_see_all_icon.png' alt='no img available'/>
                                     </button>
                                     <h5 className='migration-container-see-all-h5'>View all migrations</h5>
-                                    <p className='migration-container-see-all-p'>Migrate from a range of other services</p>
+                                    <p id='Migrate an existing WorkOS integration' className='migration-container-see-all-p'>Migrate from a range of other services</p>
                                 </div>
                             </div>
 
@@ -1061,14 +1062,15 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Single Sign-On</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Facilitate greater security, easier account management, and accelerated application onboarding and adoption.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Single Sign-On is the most frequently asked for requirement by organizations looking to adopt new SaaS applications. SSO enables authentication via an organization’s <label className='demo-docs-hyperlink'>identity provider (IdP)</label>.</p>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This service is compatible with any IdP and supports both the <label className='demo-docs-hyperlink'>SAML</label> and <label className='demo-docs-hyperlink'>OIDC</label> protocols. It’s modeled to meet the <label className='demo-docs-hyperlink'>OAuth 2.0</label> framework specification, abstracting away the underlying authentication handshakes between different IdPs.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This service is compatible with any IdP and supports both the <label className='demo-docs-hyperlink'>SAML</label> and <label className='demo-docs-hyperlink'>OIDC</label> protocols. It’s modeled to meet the <label className='demo-docs-hyperlink'>OAuth 2.0</label> framework specification, abstracting away the underlying authentication handshakes<i id='Getting Started'></i> between different IdPs.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Getting Started</h1>
-                            <p>AuthKit greatly simplifies the process of integrating SSO into your application. AuthKit will make the necessary API calls automatically and handle the routing of SSO users when their account is associated with an existing SSO connection.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit greatly simplifies the process of integrating SSO into your application. AuthKit will make the necessary API calls automatically and handle the routing of SSO users when their account<i id='Enable SSO'></i> is associated with an existing SSO connection.</p>
                         
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1085,7 +1087,7 @@ export default class UserManagement extends Component {
                                 <img src='/assets/sso_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will now automatically detect when a user is attempting to sign in via SSO and redirect them to the appropriate IdP.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will now automatically detect when a user is attempting to sign in via SSO and redirect them<i id='Test with the Test Identity Provider'></i> to the appropriate IdP.</p>
                         
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1101,6 +1103,7 @@ export default class UserManagement extends Component {
                             <div id='img16' className={`enlargable-image-container ${this.state.enlargedImageId === 'img16' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img16')}>
                                 <img src='/assets/sso_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Getting Started H3'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Getting Started</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log into the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and navigate to the Test SSO page to get started with the Test IdP. This page outlines a number of different SSO scenarios you can follow and provides all the necessary information to complete the tests.</p>
@@ -1108,21 +1111,22 @@ export default class UserManagement extends Component {
                             <div id='img17' className={`enlargable-image-container ${this.state.enlargedImageId === 'img17' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img17')}>
                                 <img src='/assets/sso_img3.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Service provider-initiated SSO'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Service provider-initiated SSO</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This case is likely the first <label className='demo-docs-hyperlink'>login flow</label> you would test when implementing SSO in your app. The test simulates users initiating authentication from your sign-in page. In this scenario, the user enters their email in your app, gets redirected to the identity provider, and then is redirected back to your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This case is likely the first <label className='demo-docs-hyperlink'>login flow</label> you would test when implementing SSO in your app. The test simulates users initiating authentication from your sign-in page. In this scenario, the user enters their email in your app, gets redirected to the identity provider, and then<i id='Identity provider-initiated SSO'></i> is redirected back to your application.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Identity provider-initiated SSO</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users initiating authentication from their identity provider. It is a common <label className='demo-docs-hyperlink'>login flow</label> that developers forget to consider. In the scenario, users log in to the identity provider directly, select your application from their list of SSO-enabled apps, and are redirected to your application upon successful authentication.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users initiating authentication from their identity provider. It is a common <label className='demo-docs-hyperlink'>login flow</label> that developers forget to consider. In the scenario, users log in to the identity provider directly, select your application from their list of SSO-enabled apps,<i id='Guest email domain'></i> and are redirected to your application upon successful authentication.</p>
 
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Guest email domain</h3>
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users authenticating with an email domain different from the verified domain of the test organization, <span>example.com</span>. A relevant scenario is authenticating freelance users, whose email domain is not owned by the company.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users authenticating with an email domain different from the verified domain of the test organization, <span>example.com</span>. A relevant scenario is authenticating freelance users,<i id='Error response'></i> whose email domain is not owned by the company.</p>
                             </div>
                             
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Error response</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates a generic <label className='demo-docs-hyperlink'>error response</label> from the user’s identity provider. In this scenario, SSO authentication has failed for the user. Below is an example of the error-related params passed to the <label className='demo-docs-hyperlink'>redirect URI</label> in your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates a generic <label className='demo-docs-hyperlink'>error response</label> from the user’s identity provider. In this scenario, SSO authentication has failed for the user. Below is an example of the error-related params passed to the <label className='demo-docs-hyperlink'>redirect URI</label> in your application.<i id='Test with other identity providers'></i></p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             
@@ -1137,7 +1141,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test Identity Provider saves time by providing an out of the box experience compared to the configuration process that someone using a real identity provider would have to go through to enable Single Sign-On for your app.</p>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your integration works with the Test Identity Provider, you can be sure it will work with other identity providers. However, it may be helpful to also learn about the setup process that your customers will go through on their side, which varies depending on a specific identity provider.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your integration works with the Test Identity Provider, you can be sure it will work with other identity providers. However, it may be helpful to also learn about the setup process that your customers will go through<i id='Create an organization'></i> on their side, which varies depending on a specific identity provider.</p>
 
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create an organization</h3>
@@ -1147,6 +1151,7 @@ export default class UserManagement extends Component {
                             <div id='img18' className={`enlargable-image-container ${this.state.enlargedImageId === 'img18' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img18')}>
                                 <img src='/assets/sso_img4.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Create a connection'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a connection</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Go to the organization you created and click <i>Invite admin</i>. Select <i>Single Sign-On</i> from the list of features. In the next step, enter an email address to send the setup link to, or click <i>Copy setup link</i>.</p>
@@ -1165,6 +1170,7 @@ export default class UserManagement extends Component {
                             <div id='img19' className={`enlargable-image-container ${this.state.enlargedImageId === 'img19' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img19')}>
                                 <img src='/assets/sso_img5.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Follow the Admin Portal instructions'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Follow the Admin Portal instructions</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To complete the integration, you’ll have to also create an account with the identity provider you want to test with. After you have signed up with an identity provider of your choice, follow the corresponding Admin Portal instructions from the setup link. Once done, you can start testing your SSO integration with that identity provider.</p>
@@ -1222,7 +1228,7 @@ export default class UserManagement extends Component {
                                     </div>
                                     <div className={sidebarMenuClicked ? "sso-manual-btn-sidebar-logo" : "sso-manual-btn-logo"}>
                                         <button>
-                                            <img src='/assets/sso_other_providers_icon.png' alt='no img available'/>
+                                            <img id='Integrating via the API' src='/assets/sso_other_providers_icon.png' alt='no img available'/>
                                         </button>
                                     </div>
                                 </div>
