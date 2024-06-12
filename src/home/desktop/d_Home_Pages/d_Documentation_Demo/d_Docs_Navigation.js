@@ -2510,7 +2510,9 @@ export default class DocsNavigationMenu extends Component {
                             }
                             resolve();
                         });
-                        this.getSearchedTerm(category, option)
+                        setTimeout(() => {
+                            this.getSearchedTerm(category, option)
+                        })
                     })
             })
         } else {
