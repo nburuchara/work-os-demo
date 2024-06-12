@@ -2253,7 +2253,6 @@ export default class DocsNavigationMenu extends Component {
     }
 
     closeSelectedMenuOption = async () => {
-        console.log("did we get to closing the options")
         await new Promise((resolve) => {
             this.setState({
                 menuOption1: false,
@@ -2492,21 +2491,27 @@ export default class DocsNavigationMenu extends Component {
                 menuDocsHovered: !prevState.menuDocsHovered,
                 sidebarMenuClicked: true,
             }), () => {
-                setTimeout(() => {
-                    this.clearRecentSearch()
                     this.setState((prevState) => ({
                         showMiniSearchBar: !prevState.showMiniSearchBar,
                         externalDocsHovered: false,
                         exitDocsHovered: false,
-                    }))
-                    this.closeSelectedMenuOption()
-                    if (category === "User Management") {
-                        this.menuOptionClicked(1)
-                    } else if (category === "Standalone APIs") {
-                        this.menuOptionClicked(2)
-                    }
-                    this.getSearchedTerm(category, option)
-                }, 0)
+                    }), async () => {
+                        await this.clearRecentSearch()
+                        await this.closeSelectedMenuOption()
+                        await new Promise((resolve, reject) => {
+                            if (category === "User Management") {
+                                this.setState({menuOption2: false, menuOption3: false, menuOption4: false}, () => {
+                                    this.menuOptionClicked(1)
+                                })
+                            } else if (category === "Standalone APIs") {
+                                this.setState({menuOption1: false, menuOption3: false, menuOption4: false}, () => {
+                                    this.menuOptionClicked(2)
+                                })
+                            }
+                            resolve();
+                        });
+                        this.getSearchedTerm(category, option)
+                    })
             })
         } else {
             await this.clearRecentSearch()
@@ -2517,8 +2522,9 @@ export default class DocsNavigationMenu extends Component {
                         this.menuOptionClicked(1)
                     })
                 } else if (category === "Standalone APIs") {
-                    this.setState({menuOption1: false, menuOption2: false, menuOption3: false, menuOption4: false})
-                    this.menuOptionClicked(2)
+                    this.setState({menuOption1: false, menuOption3: false, menuOption4: false}, () => {
+                        this.menuOptionClicked(2)
+                    })
                 }
                 resolve();
             });
