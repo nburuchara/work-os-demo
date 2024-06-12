@@ -2134,6 +2134,7 @@ export default class DocsNavigationMenu extends Component {
             mOption3Gap: "80px",
             mOption4Gap: "120px",
             prevSelectedOption: "",
+            transitioningMenu: false,
 
             userManagementDropdown: false,
             standaloneAPIsDropdown: false,
@@ -2185,83 +2186,92 @@ export default class DocsNavigationMenu extends Component {
         //* - - SIDEBAR FUNCS - - *//
 
     menuOptionClicked = (option) => {
-        const optionHomepages = [
-            {id: 1, name: "Quick Start"},
-            {id: 2, name: "Quick Start"},
-            {id: 3, name: "Event Types"},
-            {id: 4, name: "Overview"},
-        ]
-        this.closeAllOpenPages()
-        for (let i = 1; i <= 4; i++) {
-            this.setState({
-                [`mOption${i}Gap`]: "0px"
-            })
-            if (option === i) {
+        new Promise((resolve) => {
+            const optionHomepages = [
+                {id: 1, name: "Quick Start"},
+                {id: 2, name: "Quick Start"},
+                {id: 3, name: "Event Types"},
+                {id: 4, name: "Overview"},
+            ]
+            this.closeAllOpenPages()
+            for (let i = 1; i <= 4; i++) {
                 this.setState({
-                    [`menuOption${i}`]: true,
-                    prevSelectedOption: `menuOption${i}`,
-                    showCloseSelectedOptionBtn: true,
-                    indexReselecting: 0
+                    [`mOption${i}Gap`]: "0px"
                 })
-                setTimeout(() => {
-                    this.handleSearchWithinNested(optionHomepages[option-1].name)
-                    console.log(optionHomepages[option-1].name)
-                }, 1000)
-            }
-        } 
-        setTimeout(() => {
-            if (option === 1) {
-                this.setState({
-                    showDocsHome: false,
-                    showUserManagementDoc: true,
-                    userManagementDropdown: true,
-                    standaloneAPIsDropdown: false,
-                    eventsAndWebhooksDropdown: false,
-                    resourcesDropdown: false,
-                })
-            } else if (option === 2) {
-                this.setState({
-                    showDocsHome: false,
-                    showStandAloneApis: true,
-                    userManagementDropdown: false,
-                    standaloneAPIsDropdown: true,
-                    eventsAndWebhooksDropdown: false,
-                    resourcesDropdown: false
-                })
-            } else if (option === 3) {
-                this.setState({
-                    userManagementDropdown: false,
-                    standaloneAPIsDropdown: false,
-                    eventsAndWebhooksDropdown: true,
-                    resourcesDropdown: false
-                })
-            } else {
-                this.setState({
-                    userManagementDropdown: false,
-                    standaloneAPIsDropdown: false,
-                    eventsAndWebhooksDropdown: false,
-                    resourcesDropdown: true
-                })
-            }
-        }, 500)
+                if (option === i) {
+                    this.setState({
+                        [`menuOption${i}`]: true,
+                        prevSelectedOption: `menuOption${i}`,
+                        showCloseSelectedOptionBtn: true,
+                        indexReselecting: 0
+                    })
+                    setTimeout(() => {
+                        this.handleSearchWithinNested(optionHomepages[option-1].name)
+                        console.log(optionHomepages[option-1].name)
+                    }, 1000)
+                }
+            } 
+            setTimeout(() => {
+                if (option === 1) {
+                    this.setState({
+                        showDocsHome: false,
+                        showUserManagementDoc: true,
+                        userManagementDropdown: true,
+                        showStandAloneApis: false,
+                        standaloneAPIsDropdown: false,
+                        showEventsWebhooks: false,
+                        eventsAndWebhooksDropdown: false,
+                        resourcesDropdown: false,
+                    })
+                } else if (option === 2) {
+                    this.setState({
+                        showDocsHome: false,
+                        showStandAloneApis: true,
+                        userManagementDropdown: false,
+                        standaloneAPIsDropdown: true,
+                        eventsAndWebhooksDropdown: false,
+                        resourcesDropdown: false
+                    })
+                } else if (option === 3) {
+                    this.setState({
+                        userManagementDropdown: false,
+                        standaloneAPIsDropdown: false,
+                        eventsAndWebhooksDropdown: true,
+                        resourcesDropdown: false
+                    })
+                } else {
+                    this.setState({
+                        userManagementDropdown: false,
+                        standaloneAPIsDropdown: false,
+                        eventsAndWebhooksDropdown: false,
+                        resourcesDropdown: true
+                    })
+                }
+            }, 500)
+            resolve();
+        });
     }
 
-    closeSelectedMenuOption = () => {
-        this.setState({
-            menuOption1: false,
-            menuOption2: false,
-            menuOption3: false,
-            menuOption4: false,
-            mOption1Gap: "0px",
-            mOption2Gap: "40px",
-            mOption3Gap: "80px",
-            mOption4Gap: "120px",
-            userManagementDropdown: false,
-            standaloneAPIsDropdown: false,
-            eventsAndWebhooksDropdown: false,
-            resourcesDropdown: false,
-            showCloseSelectedOptionBtn: false,
-        })
+    closeSelectedMenuOption = async () => {
+        console.log("did we get to closing the options")
+        await new Promise((resolve) => {
+            this.setState({
+                menuOption1: false,
+                menuOption2: false,
+                menuOption3: false,
+                menuOption4: false,
+                mOption1Gap: "0px",
+                mOption2Gap: "40px",
+                mOption3Gap: "80px",
+                mOption4Gap: "120px",
+                userManagementDropdown: false,
+                standaloneAPIsDropdown: false,
+                eventsAndWebhooksDropdown: false,
+                resourcesDropdown: false,
+                showCloseSelectedOptionBtn: false,
+            })
+            resolve();
+        });
     }
 
     closeAllOpenPages = () => {
@@ -2473,7 +2483,7 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    searchedTermClicked = (category, option) => {
+    searchedTermClicked = async (category, option) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         if (this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
@@ -2487,51 +2497,64 @@ export default class DocsNavigationMenu extends Component {
                     this.setState((prevState) => ({
                         showMiniSearchBar: !prevState.showMiniSearchBar,
                         externalDocsHovered: false,
-                        exitDocsHovered: false
+                        exitDocsHovered: false,
                     }))
-                    if (menuOption1 === true) {
-                        if (this.state.prevSelectedOption !== option.page) {
-                            this.handleSearchWithinNested(option.page);
-                        }
-                        this.setState({
-                            menuOption1SearchCategory: category,
-                            menuOption1SearchTermObject: option,
-                          }, () => {
-                            // Call the callback function to perform search
-                            this.setState({
-                                previouslySearched: option.page,
-                            })
-                          });
-                    } else if (menuOption2 === true) {
-                        this.setState({
-                            menuOption2SearchCategory: category,
-                            menuOption2SearchTermObject: option
-                        })
+                    this.closeSelectedMenuOption()
+                    if (category === "User Management") {
+                        this.menuOptionClicked(1)
+                    } else if (category === "Standalone APIs") {
+                        this.menuOptionClicked(2)
                     }
+                    this.getSearchedTerm(category, option)
                 }, 0)
             })
         } else {
-            if (menuOption1 === true) {
-                if (this.state.prevSelectedOption !== option.page) {
-                    this.handleSearchWithinNested(option.page);
-                    this.clearRecentSearch()
-                }
-                this.setState({
-                    menuOption1SearchCategory: category,
-                    menuOption1SearchTermObject: option,
-                  }, () => {
-                    // Call the callback function to perform search
-                    this.setState({
-                        previouslySearched: option.page,
+            await this.clearRecentSearch()
+            await this.closeSelectedMenuOption()
+            await new Promise((resolve, reject) => {
+                if (category === "User Management") {
+                    this.setState({menuOption2: false, menuOption3: false, menuOption4: false}, () => {
+                        this.menuOptionClicked(1)
                     })
-                  });
-            } else if (menuOption2 === true) {
-                this.setState({
-                    menuOption2SearchCategory: category,
-                    menuOption2SearchTermObject: option
-                })
-            }
+                } else if (category === "Standalone APIs") {
+                    this.setState({menuOption1: false, menuOption2: false, menuOption3: false, menuOption4: false})
+                    this.menuOptionClicked(2)
+                }
+                resolve();
+            });
+            this.getSearchedTerm(category, option)
+            // this.getSearchedTerm(category, option)
         }
+    }
+
+    getSearchedTerm = (category, option) => {
+        new Promise((resolve) => {
+            const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+            setTimeout(() => {
+                if (menuOption1 === true) {
+                    if (this.state.prevSelectedOption !== option.page) {
+                        this.handleSearchWithinNested(option.page);
+                    }
+                    this.setState({
+                        menuOption1SearchCategory: category,
+                        menuOption1SearchTermObject: option,
+                    }, () => {
+                        // Call the callback function to perform search
+                        this.setState({
+                            previouslySearched: option.page,
+                            transitioningMenu: false
+                        })
+                    });
+                } else if (menuOption2 === true) {
+                    this.setState({
+                        menuOption2SearchCategory: category,
+                        menuOption2SearchTermObject: option
+                    })
+                }
+            }, 1000)
+            resolve();
+        });
+        
     }
 
     handleSearchWithinNested = (searchTerm) => {
@@ -2568,8 +2591,8 @@ export default class DocsNavigationMenu extends Component {
         this.setState({ searchPath });
     };
 
-    clearRecentSearch = () => {
-        this.setState({
+    clearRecentSearch = async () => {
+       this.setState({
             menuOption1SearchTermObject: null,
             searchedData: "",
             clearSearchBtn: false,
