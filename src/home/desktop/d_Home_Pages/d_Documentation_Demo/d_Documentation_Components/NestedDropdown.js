@@ -76,6 +76,7 @@ export default class NestedDropdown extends Component {
   }
 
 componentDidMount() {
+    
     this.setState({ activeIndices: this.props.searchPath || [] });
 }
 
@@ -131,19 +132,20 @@ reselectClickedItem = (index) => {
 
     let immediateParentIndex = this.getImmediateParentIndex(index)
 
-
     if (this.getHierarchyLevel(index) === 2) {
         activeIndices.push(immediateParentIndex)
     }
 
-    if (activeIndices.length > this.props.maximumDepth) {
-        // Find the index of the second last item
-    let secondLastIndex = activeIndices.length - 2;
-        // Remove the second last item
-    activeIndices.splice(secondLastIndex, 1);
+    console.log("activeIndices", activeIndices)
 
-    
-}
+    console.log('max depth: ', this.props.maximumDepth)
+
+    if (activeIndices.length > this.props.maximumDepth) {
+            // Find the index of the second last item
+        let secondLastIndex = activeIndices.length - this.props.maximumDepth;
+            // Remove the second last item
+        activeIndices.splice(secondLastIndex, 1);
+    }
 
 }
   

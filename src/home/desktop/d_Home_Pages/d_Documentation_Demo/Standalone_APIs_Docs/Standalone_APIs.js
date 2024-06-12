@@ -6216,23 +6216,6 @@ export default class StandaloneAPIs extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Verification</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Self-serve domain verification</p>
-                        </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
-
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain Verification allows your customers to claim ownership of a domain. Once they have claimed ownership, features that require a higher level of trust and security can be activated.</p>
-
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS Domain Verification provides a self-serve flow through the Admin Portal in which IT Admins can prove ownership through the creation of DNS TXT records.</p>
-
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
-
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
-                            
-                        </div>
                     </div>
                 </CSSTransition>
 
