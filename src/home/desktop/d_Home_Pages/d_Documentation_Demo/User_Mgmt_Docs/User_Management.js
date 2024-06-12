@@ -906,6 +906,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Branding</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customize AuthKit to fit natively with your app’s unique design.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -922,6 +923,7 @@ export default class UserManagement extends Component {
                             <div id='img9' className={`enlargable-image-container ${this.state.enlargedImageId === 'img9' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img9')}>
                                 <img src='/assets/branding_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <label id='Appearance' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Appearance</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit supports both light and dark mode; each brand configuration option is split across both so that they can be configured independently. You can enforce a specific appearance, or allow the user's OS system settings to determine which to use.</p>
@@ -929,6 +931,8 @@ export default class UserManagement extends Component {
                             <div id='img10' className={`enlargable-image-container ${this.state.enlargedImageId === 'img10' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img10')}>
                                 <img src='/assets/branding_img2.avif' alt="Enlargable" className="image" />
                             </div>
+
+                            <label id='Assets' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assets</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom brand assets to display in AuthKit, transactional emails, and the <label className='demo-docs-hyperlink'>Admin Portal</label></p>
@@ -941,7 +945,7 @@ export default class UserManagement extends Component {
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo:</strong> Your full size brand logo, styles vary but this would typically include the wordmark.</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo icon:</strong> A smaller, iconized version of the logo, this is often simply the logomark.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Favicon:</strong> The favicon is displayed in the browser tab alongside the address bar.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong  id='Logo style'>Favicon:</strong> The favicon is displayed in the browser tab alongside the address bar.</p></li>
                             </ul>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo style</h3>
@@ -949,7 +953,7 @@ export default class UserManagement extends Component {
                             <div id='img12' className={`enlargable-image-container ${this.state.enlargedImageId === 'img12' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img12')}>
                                 <img src='/assets/branding_img4.avif' alt="Enlargable" className="image" />
                             </div>
-
+                            <label id='Color' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Color</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can control four colors across light and dark mode:</p>
 
@@ -965,6 +969,8 @@ export default class UserManagement extends Component {
                                 <img src='/assets/branding_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
+                            <label id='Copy' style={{color: "transparent", paddingBottom: sidebarMenuClicked ? "12.5%" : ""}}>.</label>
+                            
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy</h1>
                             <div id='img14' className={`enlargable-image-container ${this.state.enlargedImageId === 'img14' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img14')}>
                                 <img src='/assets/branding_img6.avif' alt="Enlargable" className="image" />
