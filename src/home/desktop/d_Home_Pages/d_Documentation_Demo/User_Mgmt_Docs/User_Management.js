@@ -1829,6 +1829,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Capture</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Understanding domain verification and domain-captured users.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -1837,15 +1838,15 @@ export default class UserManagement extends Component {
                             <div id='img35' className={`enlargable-image-container ${this.state.enlargedImageId === 'img35' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img35')}>
                                 <img src='/assets/domain_capture_img1.png' alt="Enlargable" className="image" />
                             </div>
-                        
+                            <i id='Domain Verification'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain Verification</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Everything starts by verifying a domain. Domain verification requires an IT admin to perform tasks that prove access to a domain’s configuration that only owners of the domain can have. This might include adding a TXT DNS record, verifying access to an administrator email inbox, or modifying a webpage on the domain’s website.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a set of <label className='demo-docs-hyperlink'>APIs and Admin Portal flows</label> for the whole verification process. The result of a domain verification is that a domain is marked as verified for the specific organization that initiated the verification, and the organization becomes <i>domain-verified</i>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a set of <label className='demo-docs-hyperlink'>APIs and Admin Portal flows</label> for the whole verification process. The result of a domain verification is that a domain is marked as verified for the specific organization that<i id='Proof of ownership'></i> initiated the verification, and the organization becomes <i>domain-verified</i>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Proof of ownership</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Proof of ownership of the domain is a shortcut to proving that the IT admin has access to do everything else on the domain, including creation of email inboxes, accessing password-reset emails, and deletion of email accounts. When an organization has verified a domain, that organization has proven they have access to control every resource on that domain.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Proof of ownership of the domain is a shortcut to proving that the IT admin has access to do everything else on the domain, including creation of email inboxes, accessing password-reset emails, and deletion of email accounts. When an organization has verified a domain, that organization has<i id='Manually adding a verified domain'></i> proven they have access to control every resource on that domain.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Manually adding a verified domain</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verified domains may also be added via the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> without the need to have an IT admin complete the formal verification process.</p>
@@ -1859,7 +1860,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This is a useful shortcut if the IT admin has already proven ownership of the domain in another context and you do not want to enforce explicit domain verification.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This is a useful shortcut if the IT admin has already proven ownership of the domain in another context and<i id='Domain uniqueness'></i> you do not want to enforce explicit domain verification.</p>
                                 </div>
                             </div>
 
@@ -1867,7 +1868,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Only one organization can successfully verify a given domain. The alternative would create ambiguity as to which organization has ultimate control over resources on that domain.</p>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you find that a customer is trying to verify a domain that has already been verified, you should intermediate between the two organizations and identify which should assume ultimate control over the domain.</p>
-
+                            <i id='Domain-captured users'></i>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once a domain is verified, all existing and future users with email addresses of that domain are considered <i>domain-captured users</i>. The organization that verified that domain now controls all of those users and can <label className='demo-docs-hyperlink'>automatically provision</label> users signing in with that organizations email domain.</p>
 
@@ -1898,6 +1899,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Identity Linking</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Automatic deduplication of user credentials across identity providers.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -1907,7 +1909,7 @@ export default class UserManagement extends Component {
                             <div id='img37' className={`enlargable-image-container ${this.state.enlargedImageId === 'img37' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img37')}>
                                 <img src='/assets/identity_linking_img1.png' alt="Enlargable" className="image" />
                             </div>
-                        
+                            <i id='Credentials'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Credentials</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A credential is an authentication method in a specific identity provider. For example, WorkOS offers a <label className='demo-docs-hyperlink'>password credential</label> for users to authenticate with. In this case, WorkOS is the identity provider and password is the authentication method.</p>
@@ -1916,7 +1918,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Google OAuth</label> is another credential, where Google is the identity provider and OAuth is the authentication method. </p>
 
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users may use multiple types of authentication methods based on preference, perhaps because one is more convenient to use on one of their devices, or they simply didn’t remember which method they used in the past.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users may use multiple types of authentication methods based on preference, perhaps because one is more convenient to use on one of their devices<i id='Email verification'></i>, or they simply didn’t remember which method they used in the past.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Email verification</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS ensures all user emails are unique via an <label className='demo-docs-hyperlink'>email verification process</label>. By default, email verification is required by all users for authentication to succeed. This ensures that verified users are always returned to your application.</p>
@@ -1930,7 +1932,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS does not complete the authentication flow when a new identity cannot be safely linked to an existing user to ensure account takeover risks are minimized.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS does not complete the authentication flow when a new identity cannot be safely linked to an existing user to ensure<i id='Domain-captured users'></i> account takeover risks are minimized.</p>
                                 </div>
                             </div>
 
@@ -1944,7 +1946,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Users who sign-in through SSO with an email address that is not a verified domain, are not considered verified and will have go through the <label className='demo-docs-hyperlink'>email verification</label> process.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Users who sign-in through SSO with an email address that is not a verified domain, are not considered verified and will<i id='SSO identity linking'></i> have go through the <label className='demo-docs-hyperlink'>email verification</label> process.</p>
                                 </div>
                             </div>
 
@@ -1956,7 +1958,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The email verification safety still applies. When the user signs-in for the first time through an SSO IdP where the user’s email address is not captured by the organizations verified domain, the user is asked to verify their email before the SSO credential is linked to their account.</p>
-
+                            <i id='Users not captured by an'></i>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users not captured by an organization’s verified domain <strong>must be invited to the organization</strong> before they have access via SSO for the first time. This applies to non-domain-captured and <label className='demo-docs-hyperlink'>domain-captured</label> users on domains of other organizations.</p>
                         
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>

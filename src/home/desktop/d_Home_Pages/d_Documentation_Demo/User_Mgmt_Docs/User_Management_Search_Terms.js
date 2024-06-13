@@ -60,6 +60,16 @@ const results = [
 
     {id: "999676", name: "Email Verification", category: "User Management", page: "Email Verification", lastCat: "top"},
 
+        //! - DOMAIN CAPTURE - !//
+
+    {id: "999662", name: "Domain Capture", category: "User Management", page: "Domain Capture", lastCat: "top"},
+
+
+        //! - IDENTITY LINKING - !//
+
+    {id: "999644", name: "Identity Linking", category: "User Management", page: "Identity Linking", lastCat: "top"},
+
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -158,6 +168,20 @@ const results = [
     {id: "999673", name: "Domain-captured users", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "Domain-captured users"},
     {id: "999672", name: "Sending verification requests", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "Sending verification requests"},
 
+        //! - DOMAIN CAPTURE - !//
+
+    {id: "999661", name: "Introduction", category: "User Management", subCat1: "Domain Capture", page: "Domain Capture", lastCat: "Introduction"},
+    {id: "999660", name: "Domain Verification", category: "User Management", subCat1: "Domain Capture", page: "Domain Capture", lastCat: "Domain Verification"},
+    {id: "999659", name: "Domain-captured users", category: "User Management", subCat1: "Domain Capture", page: "Domain Capture", lastCat: "Domain-captured users"},
+
+        //! - IDENTITY LINKING - !//
+
+    {id: "999643", name: "Introduction", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "Introduction"},
+    {id: "999642", name: "Credentials", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "Credentials"},
+    {id: "999641", name: "Email verification", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "Email verification"},
+    {id: "999640", name: "Domain-captured users", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "Domain-captured users"},
+    {id: "999639", name: "SSO identity linking", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "SSO identity linking"},
+
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -223,6 +247,11 @@ const results = [
     {id: "999692", name: "Inviting new users", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "Inviting new users"},
     {id: "999691", name: "Inviting existing users", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "Inviting existing users"},
 
+        //! - DOMAIN CAPTURE - !//
+
+    {id: "999658", name: "Proof of ownership", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Proof of ownership"},
+    {id: "999657", name: "Manually adding a verified domain", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Manually adding a verified domain"},
+    {id: "999656", name: "Domain uniqueness", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Domain uniqueness"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
@@ -603,9 +632,53 @@ const results = [
     {id: "999664", name: "If a user's email domain matches a verified domain attached to the organization they are attempting to join, they will automatically be considered verified and will not need to complete the email verification process.", category: "User Management", subCat1: "Email Verification", subCat2: "Domain-captured users", page: "Email Verification", lastCat: "Sending verification requests"},
 
     {id: "999663", name: "AuthKit automatically handles email verification out of the box. When a user signs up via the hosted sign-up form, AuthKit will automatically send the verification email, prompt the user to input the code and route them through the authentication process before they gain access to the application.", category: "User Management", subCat1: "Email Verification", subCat2: "Sending verification requests", page: "Email Verification", lastCat: "Sending verification requests"},
+    
+        //! - DOMAIN CAPTURE - !//
+    
+    {id: "999655", name: "Understanding domain verification and domain-captured users.", category: "User Management", subCat1: "Domain Capture", page: "Domain Capture", lastCat: "top"},
+    {id: "999654", name: "Domain capture is a set of controls the IT admin of an organization can apply to everything related to its organizational resources on WorkOS. This currently enables provisioning of new users into an organization, but will soon support organization-level control of authentication and user membership policies.", category: "User Management", subCat1: "Domain Capture", subCat2: "Introduction", page: "Domain Capture", lastCat: "Introduction"},
+
+    {id: "999653", name: "Everything starts by verifying a domain. Domain verification requires an IT admin to perform tasks that prove access to a domain’s configuration that only owners of the domain can have. This might include adding a TXT DNS record, verifying access to an administrator email inbox, or modifying a webpage on the domain’s website.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Domain Verification"},
+    {id: "999652", name: "WorkOS provides a set of APIs and Admin Portal flows for the whole verification process. The result of a domain verification is that a domain is marked as verified for the specific organization that initiated the verification, and the organization becomes domain-verified.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Domain Verification"},
+
+    {id: "999651", name: "Proof of ownership of the domain is a shortcut to proving that the IT admin has access to do everything else on the domain, including creation of email inboxes, accessing password-reset emails, and deletion of email accounts. When an organization has verified a domain, that organization has proven they have access to control every resource on that domain.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", subCat3: "Proof of ownership", page: "Domain Capture", lastCat: "Proof of ownership"},
+    {id: "999650", name: "Verified domains may also be added via the WorkOS Dashboardno img available without the need to have an IT admin complete the formal verification process.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", subCat3: "Manually adding a verified domain", page: "Domain Capture", lastCat: "Manually adding a verified domain"},
+    {id: "999649", name: "This is a useful shortcut if the IT admin has already proven ownership of the domain in another context and you do not want to enforce explicit domain verification.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", subCat3: "Manually adding a verified domain", page: "Domain Capture", lastCat: "Manually adding a verified domain"},
+
+    {id: "999649", name: "Only one organization can successfully verify a given domain. The alternative would create ambiguity as to which organization has ultimate control over resources on that domain.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", subCat3: "Domain uniqueness", page: "Domain Capture", lastCat: "Domain uniqueness"},
+    {id: "999648", name: "If you find that a customer is trying to verify a domain that has already been verified, you should intermediate between the two organizations and identify which should assume ultimate control over the domain.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", subCat3: "Domain uniqueness", page: "Domain Capture", lastCat: "Domain uniqueness"},
+
+    {id: "999647", name: "Once a domain is verified, all existing and future users with email addresses of that domain are considered domain-captured users. The organization that verified that domain now controls all of those users and can automatically provision users signing in with that organizations email domain.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain-captured users", page: "Domain Capture", lastCat: "Domain-captured users"},
+    {id: "999646", name: "Domain-captured users will automatically be considered verified and will not need to go through the email verification process.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain-captured users", page: "Domain Capture", lastCat: "Domain-captured users"},
+    {id: "999645", name: "The organization can also enforce specific authentication methods on its domain-captured users.", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain-captured users", page: "Domain Capture", lastCat: "Domain-captured users"},
+
+        //! - IDENTITY LINKING - !//
+
+    {id: "999638", name: "Automatic deduplication of user credentials across identity providers.", category: "User Management", subCat1: "Identity Linking", page: "Identity Linking", lastCat: "top"},
+
+    {id: "999637", name: "Users have unique email addresses, because each user’s access to their inbox represents ultimate access to all of their credentials and thus services they control. The User object unifies all of the identities they use so that your application does not have to consider different identity systems.", category: "User Management", subCat1: "Identity Linking", subCat2: "Introduction", page: "Identity Linking", lastCat: "Introduction"},
+    {id: "999636", name: "Identity linking is the process in which WorkOS safely deduplicates various credentials across identity providers to offer a single, unified user interface. It does this by using the email address as the unique identifier and access to the email inbox as the source of truth.", category: "User Management", subCat1: "Identity Linking", subCat2: "Introduction", page: "Identity Linking", lastCat: "Introduction"},
+
+    {id: "999635", name: "A credential is an authentication method in a specific identity provider. For example, WorkOS offers a password credential for users to authenticate with. In this case, WorkOS is the identity provider and password is the authentication method.", category: "User Management", subCat1: "Identity Linking", subCat2: "Credentials", page: "Identity Linking", lastCat: "Credentials"},
+    {id: "999634", name: "Google OAuth is another credential, where Google is the identity provider and OAuth is the authentication method.", category: "User Management", subCat1: "Identity Linking", subCat2: "Credentials", page: "Identity Linking", lastCat: "Credentials"},
+    {id: "999633", name: "Users may use multiple types of authentication methods based on preference, perhaps because one is more convenient to use on one of their devices, or they simply didn’t remember which method they used in the past.", category: "User Management", subCat1: "Identity Linking", subCat2: "Credentials", page: "Identity Linking", lastCat: "Credentials"},
+
+    {id: "999632", name: "WorkOS ensures all user emails are unique via an email verification process. By default, email verification is required by all users for authentication to succeed. This ensures that verified users are always returned to your application.", category: "User Management", subCat1: "Identity Linking", subCat2: "Email verification", page: "Identity Linking", lastCat: "Email verification"},
+    {id: "999631", name: "When a user signs in with a new credential for the first time, e.g. they sign in through Google OAuth despite already having a password account, WorkOS will safely attach the new credential to the existing user. This is only performed if WorkOS can verify that the user has access to the email inbox referenced by that credential.", category: "User Management", subCat1: "Identity Linking", subCat2: "Email verification", page: "Identity Linking", lastCat: "Email verification"},
+    {id: "999630", name: "WorkOS considers it a security risk if the user cannot verify their email access. For some identity providers, a credential with an email address does not guarantee access to that inbox.", category: "User Management", subCat1: "Identity Linking", subCat2: "Email verification", page: "Identity Linking", lastCat: "Email verification"},
+    {id: "999629", name: "WorkOS does not complete the authentication flow when a new identity cannot be safely linked to an existing user to ensure account takeover risks are minimized.", category: "User Management", subCat1: "Identity Linking", subCat2: "Email verification", page: "Identity Linking", lastCat: "Email verification"},
+
+    {id: "999628", name: "When an IT admin verifies a domain for their organization, it means they have access to create email inboxes. Thus, a verified domain implies the ability to verify all users with that email domain.", category: "User Management", subCat1: "Identity Linking", subCat2: "Domain-captured users", page: "Identity Linking", lastCat: "Domain-captured users"},
+    {id: "999627", name: "In practice, when a domain is verified and an SSO connection is configured, users who sign in through an organization’s IdP are automatically considered email verified if the domain matches. This shortcut reduces friction for your end users.", category: "User Management", subCat1: "Identity Linking", subCat2: "Domain-captured users", page: "Identity Linking", lastCat: "Domain-captured users"},
+    {id: "999626", name: "Users who sign-in through SSO with an email address that is not a verified domain, are not considered verified and will have go through the email verification process.", category: "User Management", subCat1: "Identity Linking", subCat2: "Domain-captured users", page: "Identity Linking", lastCat: "Domain-captured users"},
+
+    {id: "999625", name: "Not only can a user have multiple credentials, they may also have multiple SSO credentials. This might happen when a user works with multiple organizations that require SSO authentication for all members. In this case, there is still only one User object, but they would choose which organization’s SSO IdP to use when authenticating.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
+    {id: "999624", name: "The email verification safety still applies. When the user signs-in for the first time through an SSO IdP where the user’s email address is not captured by the organizations verified domain, the user is asked to verify their email before the SSO credential is linked to their account.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
+    {id: "999623", name: "Users not captured by an organization’s verified domain must be invited to the organization before they have access via SSO for the first time. This applies to non-domain-captured and domain-captured users on domains of other organizations.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
+    {id: "999622", name: "An invitation ensures that the authentication flow gives the user an opportunity to go to the SSO’s identity provider.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
 
 ]
 
-//* latest: 999677 - invitations
+//* latest: 999622 - domain capture
 
 export default results;
