@@ -38,8 +38,20 @@ const results = [
 
         //! - MULTI-FACTOR AUTHENTICATION - !//
 
-    {id: "999793", name: "Multi-Factor Authentication", category: "User Management", page: "Multi-Factor Auth", lastCat: "top"},
+    {id: "999783", name: "Multi-Factor Authentication", category: "User Management", page: "Multi-Factor Auth", lastCat: "top"},
 
+        //! - MAGIC AUTHENTICATION - !//
+
+    {id: "999770", name: "Magic Auth", category: "User Management", page: "Magic Auth", lastCat: "top"},
+
+        //! - USERS AND ORGANIZATIONS - !//
+
+    {id: "999757", name: "Users and Organizations", category: "User Management", page: "Users and Organizations", lastCat: "top"},
+
+
+        //! - Sessions - !//
+
+    {id: "999728", name: "Sessions", category: "User Management", page: "Sessions", lastCat: "top"},
 
 
     //? - - - - - - - - - - - - - - - ?//
@@ -95,19 +107,36 @@ const results = [
     {id: "999813", name: "Password configuration", category: "User Management", subCat1: "Email + Password", page: "Email + Password", lastCat: "Password configuration"},
     {id: "999812", name: "Integrating via the API", category: "User Management", subCat1: "Email + Password", page: "Email + Password", lastCat: "Integrating via the API"},
 
-
         //! - SOCIAL LOGIN - !//
 
     {id: "999796", name: "Introduction", category: "User Management", subCat1: "Social Login", page: "Social Login", lastCat: "Introduction"},
     {id: "999795", name: "Getting Started", category: "User Management", subCat1: "Social Login", page: "Social Login", lastCat: "Getting Started"},
     {id: "999794", name: "Integrating via the API", category: "User Management", subCat1: "Social Login", page: "Social Login", lastCat: "Integrating via the API"},
 
-
         //! - MULTI-FACTOR AUTHENTICATION - !//
 
-    {id: "999792", name: "Introduction", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "top"},
-    {id: "999791", name: "Getting Started", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Getting Started"},
-    {id: "999790", name: "Integrating via the API", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
+    {id: "999782", name: "Introduction", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "top"},
+    {id: "999781", name: "Getting Started", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Getting Started"},
+    {id: "999780", name: "Integrating via the API", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
+
+
+        //! - MAGIC AUTHENTICATION - !//
+
+    {id: "999769", name: "Introduction", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "Introduction"},
+    {id: "999768", name: "Getting Started", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "Getting Started"},
+    {id: "999767", name: "Integrating via the API", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "Integrating via the API"},
+
+        //! - USERS AND ORGANIZATIONS - !//
+
+    {id: "999756", name: "Users", category: "User Management", subCat1: "Users and Organizations", page: "Users and Organizations", lastCat: "Users"},
+    {id: "999755", name: "Organizations", category: "User Management", subCat1: "Users and Organizations", page: "Users and Organizations", lastCat: "Organizations"},
+
+
+        //! - Sessions - !//
+
+    {id: "999727", name: "Introduction", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Introduction"},
+    {id: "999726", name: "Integrating Sessions", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Integrating Sessions"},
+    {id: "999725", name: "Configuring Sessions", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
 
 
 
@@ -146,8 +175,28 @@ const results = [
 
         //! - MULTI-FACTOR AUTHENTICATION - !//
 
-    {id: "999789", name: "Enabling MFA", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
+    {id: "999779", name: "Enabling MFA", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
 
+        //! - MAGIC AUTHENTICATION - !//
+
+    {id: "999766", name: "Enabling Magic Auth", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "Enabling Magic Auth"},
+
+        //! - USERS AND ORGANIZATIONS - !//
+
+     {id: "999754", name: "Authentication methods", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Authentication methods"},
+     {id: "999753", name: "Identity linking", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Identity linking"},
+     {id: "999752", name: "Email verification", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Email verification"},
+     {id: "999751", name: "Domain-captured users", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Domain-captured users"},
+     {id: "999750", name: "Organization memberships", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization memberships"},
+     {id: "999749", name: "Organization access", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization access"},
+     {id: "999748", name: "Membership management", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Membership management"},
+
+        //! - Sessions - !//
+
+    {id: "999724", name: "Access Token", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Access Token"},
+    {id: "999723", name: "Refresh Token", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Refresh Token"},
+    {id: "999722", name: "Signing Out", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Signing Out"},
+    {id: "999721", name: "Example", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Example"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -407,18 +456,97 @@ const results = [
 
         //! - MULTI-FACTOR AUTHENTICATION - !//
 
-    {id: "999788", name: "Add an additional layer of security to your application.", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "top"},
-    {id: "999787", name: "Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional time-based one-time password (TOTP).", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Introduction", page: "Multi-Factor Auth", lastCat: "Introduction"},
-    {id: "999786", name: "Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional time-based one-time password (TOTP).", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Introduction", page: "Multi-Factor Auth", lastCat: "Introduction"},
-    {id: "999785", name: "AuthKit will make the necessary API calls to handle first-time configuration of users’ MFA factors automatically, and validate one-time codes as part of the authentication flow.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", page: "Multi-Factor Auth", lastCat: "Getting Started"},
-    {id: "999784", name: "MFA can be enabled in the Authentication section of the WorkOS Dashboard . New and existing users will be required to set up multi-factor authentication with an authenticator app that supports one-time passcodes before they can sign in.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", subCat3: "Enabling MFA", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
-    {id: "999783", name: "The MFA requirement does not apply to SSO users.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", subCat3: "Enabling MFA", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
-    {id: "999782", name: "If you’d prefer to build and manage your own authentication UI, you can do so via the User Management Authentication API.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Integrating via the API",  page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
-    {id: "999781", name: "Examples of building custom UI are also available on GitHub", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Integrating via the API",  page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
+    {id: "999778", name: "Add an additional layer of security to your application.", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "top"},
+    {id: "999777", name: "Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional time-based one-time password (TOTP).", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Introduction", page: "Multi-Factor Auth", lastCat: "Introduction"},
+    {id: "999776", name: "Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional time-based one-time password (TOTP).", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Introduction", page: "Multi-Factor Auth", lastCat: "Introduction"},
+    {id: "999775", name: "AuthKit will make the necessary API calls to handle first-time configuration of users’ MFA factors automatically, and validate one-time codes as part of the authentication flow.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", page: "Multi-Factor Auth", lastCat: "Getting Started"},
+    {id: "999774", name: "MFA can be enabled in the Authentication section of the WorkOS Dashboard . New and existing users will be required to set up multi-factor authentication with an authenticator app that supports one-time passcodes before they can sign in.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", subCat3: "Enabling MFA", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
+    {id: "999773", name: "The MFA requirement does not apply to SSO users.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Getting Started", subCat3: "Enabling MFA", page: "Multi-Factor Auth", lastCat: "Enabling MFA"},
+    {id: "999772", name: "If you’d prefer to build and manage your own authentication UI, you can do so via the User Management Authentication API.", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Integrating via the API",  page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
+    {id: "999771", name: "Examples of building custom UI are also available on GitHub", category: "User Management", subCat1: "Multi-Factor Authentication", subCat2: "Integrating via the API",  page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
 
+        //! - MAGIC AUTHENTICATION - !//
+
+    {id: "999765", name: "Maximize user experience and security with passwordless authentication.", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "top"},
+
+    {id: "999764", name: "Magic Auth is a passwordless authentication method that allows users to sign in or sign up via a unique, six digit one-time-use code sent to their email inbox.", category: "User Management", subCat1: "Magic Auth", subCat2: "Introduction", page: "Magic Auth", lastCat: "Introduction"},
+
+    {id: "999763", name: "AuthKit will make the necessary API calls to issue one-time-use codes via email and provide input verification and authentication automatically.", category: "User Management", subCat1: "Magic Auth", subCat2: "Getting Started", page: "Magic Auth", lastCat: "Getting Started"},
+    {id: "999762", name: "Important: Emails will not be sent from the production environment until you have configured a domain. See the Custom Domains guide for more information on how to configure this.", category: "User Management", subCat1: "Magic Auth", subCat2: "Getting Started", page: "Magic Auth", lastCat: "Getting Started"},
+
+    {id: "999761", name: "Magic Auth can be enabled in the Authentication section of the WorkOS Dashboard. Users will then be able to sign in or sign up via Magic Auth on the AuthKit authentication page.", category: "User Management", subCat1: "Magic Auth", subCat2: "Getting Started", subCat3: "Enabling Magic Auth", page: "Magic Auth", lastCat: "Enabling Magic Auth"},
+
+    {id: "999760", name: "One-time-use codes expire after 10 minutes.", category: "User Management", subCat1: "Magic Auth", subCat2: "Getting Started", subCat3: "Enabling Magic Auth", page: "Magic Auth", lastCat: "Enabling Magic Auth"},
+
+    {id: "999759", name: "If you’d prefer to build and manage your own authentication UI, you can do so via the User Management Authentication API.", category: "User Management", subCat1: "Magic Auth", subCat2: "Integrating via the API", page: "Magic Auth", lastCat: "Integrating via the API"},
+    {id: "999758", name: "Examples of building custom UI are also available on GitHub", category: "User Management", subCat1: "Magic Auth", subCat2: "Integrating via the API", page: "Magic Auth", lastCat: "Integrating via the API"},
+
+        //! - USERS AND ORGANIZATIONS - !//
+
+    {id: "999747", name: "Flexible application modeling with user and membership features.", category: "User Management", subCat1: "Users and Organizations", page: "Users and Organizations", lastCat: "top"},
+    {id: "999746", name: "The User object represents an identity that has access or owns artifacts in your application. A User object may not uniquely identify an individual person, since a person may present themselves as having multiple identities in the same system.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Users"},
+    {id: "999745", name: "What uniquely identifies a user is their email address, since having access to that email inbox ultimately gives access to all accounts based on that address.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Users"},
+
+    {id: "999744", name: "There may be multiple authentication methods on a single user object, such as Email + Password or OAuth. A user can sign in with any of the authentication methods associated with them, as long as you have enabled those authentication methods in the WorkOS Dashboard.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", subCat3: "Authentication methods", page: "Users and Organizations", lastCat: "Authentication methods"},
+
+    {id: "999743", name: "There may be multiple authentication methods on a single user object, such as Email + Password or OAuth. A user can sign in with any of the authentication methods associated with them, as long as you have enabled those authentication methods in the WorkOS Dashboard.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", subCat3: "Identity Linking", page: "Users and Organizations", lastCat: "Identity Linking"},
+
+    {id: "999742", name: "All users will go through an initial email verification process by default. While this can be disabled in the WorkOS Dashboard, we recommend keeping it enabled so that any user object you get back from an authentication request is guaranteed to have a verified email address.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", subCat3: "Email verification", page: "Users and Organizations", lastCat: "Email verification"},
+    {id: "999741", name: "This applies to all authentication methods, including OAuth and SSO. This unifying interface simplifies how your application considers the authenticity of your users.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", subCat3: "Email verification", page: "Users and Organizations", lastCat: "Email verification"},
+    
+    {id: "999740", name: "If a user’s email domain matches an organization domain, they will automatically be considered verified and will not need to go through the email verification flow.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", subCat3: "Domain-captured users", page: "Users and Organizations", lastCat: "Domain-captured users"},
+
+    {id: "999739", name: "Organizations represent both a collection of users that your customer’s IT admin has control over and a workspace within which members collaborate. Organizations are a first-class concept in WorkOS and support a suite of features around organizational management.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organizations"},
+
+    {id: "999738", name: "An organization contains users as members. Organization membership allows you to model organizations as \"workspaces\" and user’s access to them with memberships.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization memberships", page: "Users and Organizations", lastCat: "Organization memberships"},
+    {id: "999737", name: "WorkOS organization memberships are designed to be flexible, and support any B2B app model. For example:", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization memberships", page: "Users and Organizations", lastCat: "Organization memberships"},
+    {id: "999736", name: "Multiple Workspaces: A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization memberships", page: "Users and Organizations", lastCat: "Organization memberships"},
+    {id: "999735", name: "Single Workspace: An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly one organization.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization memberships", page: "Users and Organizations", lastCat: "Organization memberships"},
+    {id: "999734", name: "While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. WorkOS User Management supports both.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization memberships", page: "Users and Organizations", lastCat: "While these are two distinct models"},
+
+    {id: "999733", name: "It’s common for users to create resources in B2B applications. You can use the organization as a container for these resources, so that access is dependent on a user’s access to the organization.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization access", page: "Users and Organizations", lastCat: "Organization access"},
+    {id: "999732", name: "This means when a user leaves an organization and is no longer a member, the data remains with the organization and not the user. Organizations provide the level of data ownership that B2B applications structure around.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization access", page: "Users and Organizations", lastCat: "Organization access"},
+    {id: "999731", name: "While organization membership conveys the most basic form of access, you can attach more granular role information per member within your own application’s database.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Membership management", page: "Users and Organizations", lastCat: "Membership management"},
+
+    {id: "999730", name: "Beyond manually adding or removing users to and from organizations as members, users can be automatically Just-in-Time (JIT) provisioned into a domain-verified organization if their email address matches the verified domain. This allows customers to quickly onboard teammates.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization access", page: "Users and Organizations", lastCat: "Organization access"},
+    {id: "999729", name: "Users can also invite individuals to organizations, regardless of their email domain. This is handy for contractors within a company, or a collection of people without a shared domain.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Membership management", page: "Users and Organizations", lastCat: "Membership management"},
+
+        //! - Sessions - !//
+
+    {id: "999720", name: "Learn more about integrating sessions.", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "top"},
+
+    {id: "999719", name: "When a user signs in to your app, a user session is created. Along with the User object, a successful authentication response will include an access token and refresh token. Your application can use these tokens to ensure that the user’s session is still active.", category: "User Management", subCat1: "Sessions", subCat2: "Introduction", page: "Sessions", lastCat: "Introduction"},
+    {id: "999718", name: "Each user session can be viewed from within the WorkOS dashboard:", category: "User Management", subCat1: "Sessions", subCat2: "Introduction", page: "Sessions", lastCat: "Introduction"},
+    {id: "999717", name: "Navigate to Users and select a user. Then, switch to Sessions tab and click on a user session to get more information.", category: "User Management", subCat1: "Sessions", subCat2: "Introduction", page: "Sessions", lastCat: "Introduction"},
+
+    {id: "999716", name: "Successful authentication responses will include both an access token and a refresh token. The access token should be stored as a secure cookie in the user’s browser and should be validated by the backend on each request. The refresh token should be persisted on your backend. Once the access token has expired, a new one can be obtained using the refresh token.", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Integrating Sessions"},
+
+    {id: "999715", name: "If you're using Next SDK, all the work of validating access tokens and refreshing expired tokens is handled for you (more framework support coming soon). Read on for details about how token handling works.", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999714", name: "The access token is a JSON Web Token (JWT), which should be validated on each request using a library like jose. The signing JWKS can be found at http://api.workos.com/sso/jwks/<clientId>. The JWT includes the following claims:", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999713", name: "sub: the WorkOS user id", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999712", name: "sid: the session ID (used for signing out)", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999711", name: "iss: https://api.workos.com/the session ID (used for signing out)", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999710", name: "org_id: The organization that was selected at sign-in time (if applicable)", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999709", name: "exp: the standard expires_at claim (the token should not be trusted after this time)", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+    {id: "999708", name: "iat: the standard issued_at claim", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Access Token", page: "Sessions", lastCat: "Access Token"},
+
+    {id: "999707", name: "When a user signs out of your app, the following steps should occur:", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
+    {id: "999706", name: "Get the session id (sid claim) out of the access token.", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
+    {id: "999705", name: "Delete the user’s app session.", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
+    {id: "999704", name: "Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
+    {id: "999703", name: "The user will be redirected back to the URL configured as your App homepage URL", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
+
+
+    {id: "999702", name: "Using the WorkOS dashboard you can configure how Sessions work in your integration. You’ll find the settings in the Authentication section.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
+    {id: "999701", name: "Maximum session length: the user will need to sign in again.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
+    {id: "999700", name: "Access token duration: Your backend can verify the access token on each request (see the Integrating Sessions section above). It’s recommended to keep the access token duration short so that changes in the session are quickly reflected in your app.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
+    {id: "999699", name: "Additionally, make sure to review your settings in the Redirect section:", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "App homepage URL"},
+    {id: "999698", name: "App homepage URL: Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "App homepage URL"},
+    
+    
 
 ]
 
-//* latest: 999784 - social login
+//* latest: 999698 - users and organizations
 
 export default results;

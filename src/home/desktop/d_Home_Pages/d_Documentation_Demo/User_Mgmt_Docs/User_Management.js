@@ -1453,10 +1453,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Magic Auth</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Maximize user experience and security with passwordless authentication.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Magic Auth is a passwordless authentication method that allows users to sign in or sign up via a unique, six digit one-time-use code sent to their email inbox.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Magic Auth is a passwordless authentication method that allows users to sign in or sign up via a unique, six digit one-time-use code <i id='Getting Started'></i>sent to their email inbox.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Getting Started</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will make the necessary API calls to issue one-time-use codes via email and provide input verification and authentication automatically.</p>
@@ -1466,7 +1467,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><strong>Important:</strong> Emails will not be sent from the <strong>production</strong> environment until you have configured a domain. See the <label className='demo-docs-hyperlink'>Custom Domains</label> guide for more information on how to configure this.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><strong>Important:</strong> Emails will not be sent from the <strong>production</strong> environment until you have configured a domain. See the <label className='demo-docs-hyperlink'>Custom Domains</label> guide<i id='Enabling Magic Auth'></i> for more information on how to configure this.</p>
                                 </div>
                             </div>
 
@@ -1487,6 +1488,7 @@ export default class UserManagement extends Component {
                             <div id='img28' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img28' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img28')}>
                                 <img src='/assets/magic_auth_img3.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Integrating via the API'></i>
                             
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
@@ -1518,12 +1520,13 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Users and Organizations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Flexible application modeling with user and membership features.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Users'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Users</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <label className='demo-docs-hyperlink'>User object</label> represents an identity that has access or owns artifacts in your application. A User object may not uniquely identify an individual person, since a person may present themselves as having multiple identities in the same system.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>What uniquely identifies a user is their <strong>email address</strong>, since having access to that email inbox ultimately gives access to all accounts based on that address.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>What uniquely identifies a user is their <strong>email address</strong>, since having access to that email inbox ultimately gives <i id='Authentication methods'></i> access to all accounts based on that address.</p>
                     
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Authentication methods</h3>
@@ -1532,23 +1535,24 @@ export default class UserManagement extends Component {
                             <div id='img29' className={`enlargable-image-container ${this.state.enlargedImageId === 'img29' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img29')}>
                                 <img src='/assets/users_org_img1.png' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Identity Linking'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Identity linking</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Because a user is uniquely identified by their email address, you won’t have users with duplicate email addresses. WorkOS handles <label className='demo-docs-hyperlink'>identity linking</label> automatically.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Because a user is uniquely identified by their email address, you won’t have users with duplicate email addresses.<i id='Email verification'></i> WorkOS handles <label className='demo-docs-hyperlink'>identity linking</label> automatically.</p>
                             
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Email verification</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All users will go through an initial <label className='demo-docs-hyperlink'>email verification process</label> by default. While this can be disabled in the WorkOS Dashboard, we recommend keeping it enabled so that any user object you get back from an authentication request is guaranteed to have a verified email address.</p>
                         
                         
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods, including OAuth and SSO. This unifying interface simplifies how your application considers the authenticity of your users.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods, including OAuth and SSO. This unifying interface simplifies how your<i id='Domain-captured users'></i> application considers the authenticity of your users.</p>
                         
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Domain-captured users</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user’s email domain matches an organization domain, they will <label className='demo-docs-hyperlink'>automatically be considered verified</label> and will not need to go through the email verification flow.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user’s email domain matches an organization domain, they will <label className='demo-docs-hyperlink'>automatically be considered verified</label> and will not need to go through the email verification flow.</p><i id='Organizations'></i>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Organizations</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations represent both a collection of users that your customer’s IT admin has control over and a workspace within which members collaborate. Organizations are a first-class concept in WorkOS and support a suite of features around organizational management.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations represent both a collection of users that your customer’s IT admin has control over and a workspace within which members collaborate. Organizations are a first-class concept in WorkOS and support a suite of features<i id='Organization memberships'></i> around organizational management.</p>
                        
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Organization memberships</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization contains users as members. Organization membership allows you to model organizations as "workspaces" and user’s access to them with memberships.</p>
@@ -1561,10 +1565,10 @@ export default class UserManagement extends Component {
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Multiple Workspaces:</strong> A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly one organization.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly<i id='While these are two distinct models'></i> one organization.</p></li>
                             </ul>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. <strong>WorkOS User Management supports both</strong>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. <strong>WorkOS User<i id='Organization access'></i> Management supports both</strong>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Organization access</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It’s common for users to create resources in B2B applications. You can use the organization as a container for these resources, so that access is dependent on a user’s access to the organization.</p>
@@ -1573,7 +1577,7 @@ export default class UserManagement extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This means when a user leaves an organization and is no longer a member, the data remains with the organization and not the user. Organizations provide the level of data ownership that B2B applications structure around.</p>
 
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While organization membership conveys the most basic form of access, you can attach more granular role information per member within your own application’s database.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While organization membership conveys the most basic form of access, you can attach more granular role information per member within<i id='Membership management'></i> your own application’s database.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Membership management</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Beyond manually adding or removing users to and from organizations as members, users can be automatically <label className='demo-docs-hyperlink'>Just-in-Time (JIT) provisioned</label> into a <label className='demo-docs-hyperlink'>domain-verified</label> organization if their email address matches the verified domain. This allows customers to quickly onboard teammates.</p>
@@ -1614,7 +1618,7 @@ export default class UserManagement extends Component {
                                 <img src='/assets/sessions_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Users</i> and select a user. Then, switch to <i>Sessions</i> tab and click on a user session to get more information.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Users</i> and select a user. Then, switch to <i>Sessions</i> tab and click on a user<i id='Integrating Sessions'></i> session to get more information.</p>
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating Sessions</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Successful authentication responses will include both an access token and a refresh token. The access token should be stored as a secure cookie in the user’s browser and should be validated by the backend on each request. The refresh token should be persisted on your backend. Once the access token has expired, a new one can be obtained using the refresh token.</p>
@@ -1622,6 +1626,7 @@ export default class UserManagement extends Component {
                             <div id='img31' className={`enlargable-image-container ${this.state.enlargedImageId === 'img31' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img31')}>
                                 <img src='/assets/sessions_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Access Token'></i> 
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Access Token</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you're using <label className='demo-docs-hyperlink'>Next SDK</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, all the work of validating access tokens and refreshing expired tokens is handled for you (more framework support coming soon). Read on for details about how token handling works.</p>
@@ -1633,12 +1638,14 @@ export default class UserManagement extends Component {
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sub</span>: the WorkOS user id</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iss</span>: <span>https://api.workos.com/</span>the session ID (used for signing out)</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>org_id</span>: The organization that was selected at sign-in time (if applicable)</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>exp</span>: the standard <span>expires_at</span> claim (the token should not be trusted after this time<i id='Refresh Token'></i>)</p></li> 
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iat</span>: the standard <span>issued_at</span> claim</p></li>
                                 </ul>
                             
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Refresh Token</h3>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Refresh tokens should be persisted on the backend in, for instance, a database, cache, or secure http-only cookie. A new access token can be obtained by using the <label className='demo-docs-hyperlink'>authenticate with refresh token</label> endpoint. If the session is still active, a new access token and refresh token will be returned. Refresh tokens are single use, so be sure to replace the old refresh token with the newly generated one.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Refresh tokens should be persisted on the backend in, for instance, a database, cache, or secure http-only cookie. A new access token can be obtained by using the <label className='demo-docs-hyperlink'>authenticate with refresh token</label> endpoint. If the session is still active, a new access token and refresh token will be returned. Refresh tokens are single use, so be sure to replace the old<i id='Signing Out'></i> refresh token with the newly generated one.</p>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signing Out</h3>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs out of your app, the following steps should occur:</p>
@@ -1648,7 +1655,7 @@ export default class UserManagement extends Component {
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get the session id (<span>sid</span> claim) out of the access token.</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Delete the user’s app session.</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user will be redirected back to the URL configured as your <i>App homepage URL</i></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user will be redirected back to the URL<i id='Example'></i> configured as your <i>App homepage URL</i></p></li>
                                 </ul>
 
                             </div>
@@ -1664,6 +1671,7 @@ export default class UserManagement extends Component {
                             snippet="" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Configuring Sessions'></i>
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuring Sessions</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Using the WorkOS dashboard you can configure how Sessions work in your integration. You’ll find the settings in the <i>Authentication</i> section.</p>
@@ -1682,6 +1690,7 @@ export default class UserManagement extends Component {
                             <div id='img33' className={`enlargable-image-container ${this.state.enlargedImageId === 'img33' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img33')}>
                                 <img src='/assets/sessions_img4.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='App homepage URL'></i>
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>App homepage URL:</strong> Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.</p></li>
                             </ul>

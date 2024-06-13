@@ -220,7 +220,7 @@ const Styles = styled.div `
 }
 
 .demo-docs-section-sidebar-h1 {
-    font-size: 100% !important;
+    font-size: 108% !important;
 }
 
 .demo-docs-section h3 {
@@ -229,7 +229,7 @@ const Styles = styled.div `
 }
 
 .demo-docs-section-sidebar-h3 {
-    font-size: 82% !important;
+    font-size: 90% !important;
 }
 
 .demo-docs-section p {
