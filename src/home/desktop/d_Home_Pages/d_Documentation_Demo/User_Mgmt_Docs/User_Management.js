@@ -1264,14 +1264,15 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email + Password</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Configuring email and password authentication and requirements</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email + Password authentication allows users to sign up and sign in to your application using an email address and password combination. This is one of the most common forms of authentication and is enabled by default.</p>
-                        
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email + Password authentication allows users to sign up and sign in to your application using an email address and password combination. This is one of the most common<i id='Password configuration'></i> forms of authentication and is enabled  by default.</p>
+                            
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Password configuration</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the majority of cases, no additional configuration is required. However, depending on your application's security requirements you may wish to modify the password strength policy.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the majority of cases, no additional configuration is required. However, depending on your application's security requirements you<i id='Modifying the password strength policy'></i> may wish to modify the password strength policy.</p>
 
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Modifying the password strength policy</h3>
@@ -1292,7 +1293,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Disabling Email + Password</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Disabling this method entirely will prevent users from signing up or signing in using a password. This is useful when you want to restrict access to your application to only those users who have been provisioned via SSO.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Disabling this method entirely will prevent users from signing up or signing in using a password. This is useful when you want to restrict access to your application to only those users who have been provisioned via SSO.</p><i id='Integrating via the API'></i>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
@@ -1322,13 +1323,14 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Social Login</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Quickly and easily integrate with social OAuth providers.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Social Login allows users to sign in or sign up using their existing credentials with OAuth providers such as Google, Microsoft or GitHub.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Social Login allows users to sign in or sign up using their<i id='Getting Started'></i> existing credentials with OAuth providers such as Google, Microsoft or GitHub.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Getting Started</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will make the necessary API calls and route users through OAuth providers automatically during the authentication flow, though the relevant providers must first be configured and enabled.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will make the necessary API calls and route users through OAuth providers automatically during the authentication flow, though the<i id='Configure OAuth providers'></i> relevant providers must first be configured and enabled.</p>
                         
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1344,6 +1346,7 @@ export default class UserManagement extends Component {
                             <div id='img22' className={`enlargable-image-container ${this.state.enlargedImageId === 'img22' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img22')}>
                                 <img src='/assets/social_login_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Enable OAuth providers'></i>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1359,6 +1362,7 @@ export default class UserManagement extends Component {
                             <div id='img23' className={`enlargable-image-container ${this.state.enlargedImageId === 'img23' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img23')}>
                                 <img src='/assets/social_login_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Integrating via the API'></i>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
@@ -1390,13 +1394,14 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Multi-Factor Authentication</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Add an additional layer of security to your application.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional time-based one-time password (TOTP).</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Multi-Factor Authentication (MFA) is an additional method of securing your application. MFA adds a layer of security during sign in that requires a user to provide an additional<i id='Getting Started'></i> time-based one-time password (TOTP).</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Getting Started</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will make the necessary API calls to handle first-time configuration of users’ MFA factors automatically, and validate one-time codes as part of the authentication flow.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>AuthKit will make the necessary API calls to handle first-time configuration of users’ MFA factors automatically, and validate one-time <i id='Enabling MFA'></i>codes as part of the authentication flow.</p>
                         
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Enabling MFA</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>MFA can be enabled in the Authentication section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. New and existing users will be required to set up multi-factor authentication with an authenticator app that supports one-time passcodes before they can sign in.</p>
@@ -1418,6 +1423,7 @@ export default class UserManagement extends Component {
                             <div id='img25' style={{marginTop: "5%"}} className={`enlargable-image-container ${this.state.enlargedImageId === 'img25' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img25')}>
                                 <img src='/assets/mfa_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Integrating via the API'></i>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>

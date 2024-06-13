@@ -229,7 +229,7 @@ const Styles = styled.div `
 }
 
 .demo-docs-section-sidebar-h3 {
-    font-size: 84%;
+    font-size: 82% !important;
 }
 
 .demo-docs-section p {
