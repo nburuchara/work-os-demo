@@ -77,6 +77,10 @@ const results = [
 
     {id: "999603", name: "Roles", category: "User Management", page: "Roles", lastCat: "top"},
 
+        //! - DIRECTORY PROVISIONING - !//
+
+    {id: "999586", name: "Directory Provisioning", category: "User Management", page: "Directory Provisioning", lastCat: "top"},
+
 
 
     //? - - - - - - - - - - - - - - - ?//
@@ -144,7 +148,6 @@ const results = [
     {id: "999781", name: "Getting Started", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Getting Started"},
     {id: "999780", name: "Integrating via the API", category: "User Management", subCat1: "Multi-Factor Authentication", page: "Multi-Factor Auth", lastCat: "Integrating via the API"},
 
-
         //! - MAGIC AUTHENTICATION - !//
 
     {id: "999769", name: "Introduction", category: "User Management", subCat1: "Magic Auth", page: "Magic Auth", lastCat: "Introduction"},
@@ -203,7 +206,10 @@ const results = [
     {id: "999601", name: "Configure Roles", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "Configure Roles"},
     {id: "999600", name: "Role-aware sessions", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "Role-aware sessions"},
 
+        //! - DIRECTORY PROVISIONING - !//
 
+    {id: "999585", name: "Directory Provisioning", category: "User Management", subCat1: "", page: "Directory Provisioning", lastCat: "top"},
+ 
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
