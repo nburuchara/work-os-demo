@@ -1607,6 +1607,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sessions</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn more about integrating sessions.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Inroduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -1718,10 +1719,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Invitations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easily add users as members to an organization.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations are a way of adding a specific user as a member to an organization. They provide a flow for end-users to engage in collaboration that takes into consideration security and user choice.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations are a way of adding a specific user as a member to an organization. They provide a flow for end-users to engage in <i id='The invitation flow'></i> collaboration that takes into consideration security and user choice.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>The invitation flow</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each invitation is for a specific email address to a specific organization. Invitations are for both new users and existing users.</p>
@@ -1730,25 +1732,25 @@ export default class UserManagement extends Component {
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The inviter expresses intent for someone to join an organization.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The invitee chooses to join that organization.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The invitee chooses to <i id='Inviting new users'></i>join that organization.</p></li>
                             </ul>
 
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Inviting new users</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If an invitation is created for an email address that does not yet exist, an email is sent to that user with a link to sign up for your application and join the organization. </p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As part of signing up, they automatically join the organization. If a user is invited to multiple organizations, they only join the organization for which they clicked the invitation email for, indicating intent to join that specific organization.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As part of signing up, they automatically join the organization. If a user is invited to multiple organizations, they only join the organization for which they clicked<i id='Inviting existing users'></i> the invitation email for, indicating intent to join that specific organization.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Inviting existing users</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If an invitation is for an existing user, clicking the link in the email and signing in adds the user as a member to the organization. If the user is already signed-in, you can use the invitation code to validate that the signed-in user is eligible to use the invitation, by querying the <label className='demo-docs-hyperlink'>Invitation API</label>.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This offers choice for the end-user so that they aren’t automatically added to organizations that may be attempting phishing attacks.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This offers choice for the end-user so that they aren’t<i id='Application-wide invitations'></i> automatically added to organizations that may be attempting phishing attacks.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Application-wide invitations</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations do not have to be specific to an organization. An invitation sent without specifying an organization is an invitation to join the application. This allows your existing users help grow your application by inviting peers organically.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When sign-up is disabled, users cannot register for a new account through <label className='demo-docs-hyperlink'>AuthKit</label> or the <label className='demo-docs-hyperlink'>API</label>. When a valid invitation code is present in the sign-in flow, registration is opened up both in AuthKit and the API so that a new user may sign up. This lets you model your application as a closed-registration invitation-only system.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When sign-up is disabled, users cannot register for a new account through <label className='demo-docs-hyperlink'>AuthKit</label> or the <label className='demo-docs-hyperlink'>API</label>. When a valid invitation code is present in the sign-in flow, registration is opened up both in AuthKit and the API so that a new user may sign up.<i id='Sending invitations'></i> This lets you model your application as a closed-registration invitation-only system.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sending invitations</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations can be sent programmatically by your application with the <label className='demo-docs-hyperlink'>Invitation API</label>, or viewed and manually created in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
@@ -1780,10 +1782,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email Verification</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn more about the email verification process.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification is a process in which a new user must validate ownership of their email inbox before they can access the application, ensuring authenticity of inbox ownership.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification is a process in which a new user must validate ownership of their email inbox before they can access<i id='The email verification flow'></i> the application, ensuring authenticity of inbox ownership.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>The email verification flow</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verification is a two-step process:</p>
@@ -1795,12 +1798,12 @@ export default class UserManagement extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods including <label className='demo-docs-hyperlink'>OAuth</label> and <label className='demo-docs-hyperlink'>SSO</label>. This unifying interface simplifies how your application considers the authenticity of your users.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email verification is always on</strong> to ensure that verified users are always returned to your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Email verification<i id='Domain-captured users'></i> is always on</strong> to ensure that verified users are always returned to your application.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user's email domain matches a <label className='demo-docs-hyperlink'>verified domain</label> attached to the organization they are attempting to join, they will automatically be considered verified and will not need to complete the email verification process.</p>
-                            
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured users</h1>
+                            <i id='Sending verification requests'></i>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sending verification requests</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>AuthKit</label> automatically handles email verification out of the box. When a user signs up via the hosted sign-up form, AuthKit will automatically send the verification email, prompt the user to input the code and route them through the authentication process before they gain access to the application.</p>
 
                             <div className='demo-next-section-container'>

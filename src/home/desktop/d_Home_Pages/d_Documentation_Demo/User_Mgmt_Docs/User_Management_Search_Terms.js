@@ -48,10 +48,17 @@ const results = [
 
     {id: "999757", name: "Users and Organizations", category: "User Management", page: "Users and Organizations", lastCat: "top"},
 
-
-        //! - Sessions - !//
+        //! - SESSIONS - !//
 
     {id: "999728", name: "Sessions", category: "User Management", page: "Sessions", lastCat: "top"},
+
+        //! - INVITATIONS - !//
+
+    {id: "999697", name: "Invitations", category: "User Management", page: "Invitations", lastCat: "top"},
+
+        //! - EMAIL VERIFICATION - !//
+
+    {id: "999676", name: "Email Verification", category: "User Management", page: "Email Verification", lastCat: "top"},
 
 
     //? - - - - - - - - - - - - - - - ?//
@@ -131,12 +138,25 @@ const results = [
     {id: "999756", name: "Users", category: "User Management", subCat1: "Users and Organizations", page: "Users and Organizations", lastCat: "Users"},
     {id: "999755", name: "Organizations", category: "User Management", subCat1: "Users and Organizations", page: "Users and Organizations", lastCat: "Organizations"},
 
-
-        //! - Sessions - !//
+        //! - SESSIONS - !//
 
     {id: "999727", name: "Introduction", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Introduction"},
     {id: "999726", name: "Integrating Sessions", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Integrating Sessions"},
     {id: "999725", name: "Configuring Sessions", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
+
+        //! - INVITATIONS - !//
+
+    {id: "999696", name: "Introduction", category: "User Management", subCat1: "Invitations", page: "Invitations", lastCat: "Introduction"},
+    {id: "999695", name: "The invitation flow", category: "User Management", subCat1: "Invitations", page: "Invitations", lastCat: "The invitation flow"},
+    {id: "999694", name: "Application-wide invitations", category: "User Management", subCat1: "Invitations", page: "Invitations", lastCat: "Application-wide invitations"},
+    {id: "999693", name: "Sending invitations", category: "User Management", subCat1: "Invitations", page: "Invitations", lastCat: "Sending invitations"},
+
+        //! - EMAIL VERIFICATION - !//
+
+    {id: "999675", name: "Introduction", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "Introduction"},
+    {id: "999674", name: "The email verification flow", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "The email verification flow"},
+    {id: "999673", name: "Domain-captured users", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "Domain-captured users"},
+    {id: "999672", name: "Sending verification requests", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "Sending verification requests"},
 
 
 
@@ -191,12 +211,17 @@ const results = [
      {id: "999749", name: "Organization access", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization access"},
      {id: "999748", name: "Membership management", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Membership management"},
 
-        //! - Sessions - !//
+        //! - SESSIONS - !//
 
     {id: "999724", name: "Access Token", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Access Token"},
     {id: "999723", name: "Refresh Token", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Refresh Token"},
     {id: "999722", name: "Signing Out", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Signing Out"},
     {id: "999721", name: "Example", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", page: "Sessions", lastCat: "Example"},
+
+        //! - INVITATIONS - !//
+
+    {id: "999692", name: "Inviting new users", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "Inviting new users"},
+    {id: "999691", name: "Inviting existing users", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "Inviting existing users"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -511,7 +536,7 @@ const results = [
     {id: "999730", name: "Beyond manually adding or removing users to and from organizations as members, users can be automatically Just-in-Time (JIT) provisioned into a domain-verified organization if their email address matches the verified domain. This allows customers to quickly onboard teammates.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Organization access", page: "Users and Organizations", lastCat: "Organization access"},
     {id: "999729", name: "Users can also invite individuals to organizations, regardless of their email domain. This is handy for contractors within a company, or a collection of people without a shared domain.", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", subCat3: "Membership management", page: "Users and Organizations", lastCat: "Membership management"},
 
-        //! - Sessions - !//
+        //! - SESSIONS - !//
 
     {id: "999720", name: "Learn more about integrating sessions.", category: "User Management", subCat1: "Sessions", page: "Sessions", lastCat: "top"},
 
@@ -536,17 +561,51 @@ const results = [
     {id: "999704", name: "Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
     {id: "999703", name: "The user will be redirected back to the URL configured as your App homepage URL", category: "User Management", subCat1: "Sessions", subCat2: "Integrating Sessions", subCat3: "Signing Out", page: "Sessions", lastCat: "Signing Out"},
 
-
     {id: "999702", name: "Using the WorkOS dashboard you can configure how Sessions work in your integration. You’ll find the settings in the Authentication section.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
     {id: "999701", name: "Maximum session length: the user will need to sign in again.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
     {id: "999700", name: "Access token duration: Your backend can verify the access token on each request (see the Integrating Sessions section above). It’s recommended to keep the access token duration short so that changes in the session are quickly reflected in your app.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "Configuring Sessions"},
     {id: "999699", name: "Additionally, make sure to review your settings in the Redirect section:", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "App homepage URL"},
     {id: "999698", name: "App homepage URL: Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.", category: "User Management", subCat1: "Sessions", subCat2: "Configuring Sessions", page: "Sessions", lastCat: "App homepage URL"},
     
-    
+        //! - INVITATIONS - !//
+
+    {id: "999690", name: "Easily add users as members to an organization.", category: "User Management", subCat1: "Invitations", page: "Invitations", lastCat: "top"},
+    {id: "999689", name: "Invitations are a way of adding a specific user as a member to an organization. They provide a flow for end-users to engage in collaboration that takes into consideration security and user choice.", category: "User Management", subCat1: "Invitations", subCat2: "Introduction", page: "Invitations", lastCat: "Introduction"},
+
+    {id: "999688", name: "Each invitation is for a specific email address to a specific organization. Invitations are for both new users and existing users.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "The invitation flow"},
+    {id: "999687", name: "Each invitation is a two step process:", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "The invitation flow"},
+    {id: "999686", name: "The inviter expresses intent for someone to join an organization.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "The invitation flow"},
+    {id: "999685", name: "The invitee chooses to join that organization.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", page: "Invitations", lastCat: "The invitation flow"},
+
+    {id: "999684", name: "If an invitation is created for an email address that does not yet exist, an email is sent to that user with a link to sign up for your application and join the organization.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", subCat3: "Inviting new users", page: "Invitations", lastCat: "Inviting new users"},
+    {id: "999683", name: "If an invitation is created for an email address that does not yet exist, an email is sent to that user with a link to sign up for your application and join the organization.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", subCat3: "Inviting new users", page: "Invitations", lastCat: "Inviting new users"},
+    {id: "999682", name: "As part of signing up, they automatically join the organization. If a user is invited to multiple organizations, they only join the organization for which they clicked the invitation email for, indicating intent to join that specific organization.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", subCat3: "Inviting new users", page: "Invitations", lastCat: "Inviting new users"},
+
+    {id: "999681", name: "If an invitation is for an existing user, clicking the link in the email and signing in adds the user as a member to the organization. If the user is already signed-in, you can use the invitation code to validate that the signed-in user is eligible to use the invitation, by querying the Invitation API.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", subCat3: "Inviting existing users", page: "Invitations", lastCat: "Inviting existing users"},
+    {id: "999680", name: "This offers choice for the end-user so that they aren’t automatically added to organizations that may be attempting phishing attacks.", category: "User Management", subCat1: "Invitations", subCat2: "The invitation flow", subCat3: "Inviting existing users", page: "Invitations", lastCat: "Inviting existing users"},
+
+    {id: "999679", name: "Invitations do not have to be specific to an organization. An invitation sent without specifying an organization is an invitation to join the application. This allows your existing users help grow your application by inviting peers organically.", category: "User Management", subCat1: "Invitations", subCat2: "Application-wide invitations", page: "Invitations", lastCat: "Application-wide invitations"},
+    {id: "999678", name: "When sign-up is disabled, users cannot register for a new account through AuthKit or the API. When a valid invitation code is present in the sign-in flow, registration is opened up both in AuthKit and the API so that a new user may sign up. This lets you model your application as a closed-registration invitation-only system.", category: "User Management", subCat1: "Invitations", subCat2: "Application-wide invitations", page: "Invitations", lastCat: "Application-wide invitations"},
+
+    {id: "999677", name: "Invitations can be sent programmatically by your application with the Invitation API, or viewed and manually created in the WorkOS Dashboard", category: "User Management", subCat1: "Invitations", subCat2: "Sending invitations", page: "Invitations", lastCat: "Sending invitations"},
+
+        //! - EMAIL VERIFICATION - !//
+
+    {id: "999671", name: "Learn more about the email verification process.", category: "User Management", subCat1: "Email Verification", page: "Email Verification", lastCat: "top"},
+    {id: "999670", name: "Email verification is a process in which a new user must validate ownership of their email inbox before they can access the application, ensuring authenticity of inbox ownership.", category: "User Management", subCat1: "Email Verification", subCat2: "Introduction", page: "Email Verification", lastCat: "Introduction"},
+
+    {id: "999669", name: "Verification is a two-step process:", category: "User Management", subCat1: "Email Verification", subCat2: "The email verification flow", page: "Email Verification", lastCat: "The email verification flow"},
+    {id: "999668", name: "A user signs up to your application and an email is sent with a verification code.", category: "User Management", subCat1: "Email Verification", subCat2: "The email verification flow", page: "Email Verification", lastCat: "The email verification flow"},
+    {id: "999667", name: "The user inputs the verification code to complete the sign-up process.", category: "User Management", subCat1: "Email Verification", subCat2: "The email verification flow", page: "Email Verification", lastCat: "The email verification flow"},
+    {id: "999666", name: "This applies to all authentication methods including OAuth and SSO. This unifying interface simplifies how your application considers the authenticity of your users.", category: "User Management", subCat1: "Email Verification", subCat2: "The email verification flow", page: "Email Verification", lastCat: "The email verification flow"},
+    {id: "999665", name: "Email verification is always on to ensure that verified users are always returned to your application.", category: "User Management", subCat1: "Email Verification", subCat2: "The email verification flow", page: "Email Verification", lastCat: "The email verification flow"},
+
+    {id: "999664", name: "If a user's email domain matches a verified domain attached to the organization they are attempting to join, they will automatically be considered verified and will not need to complete the email verification process.", category: "User Management", subCat1: "Email Verification", subCat2: "Domain-captured users", page: "Email Verification", lastCat: "Sending verification requests"},
+
+    {id: "999663", name: "AuthKit automatically handles email verification out of the box. When a user signs up via the hosted sign-up form, AuthKit will automatically send the verification email, prompt the user to input the code and route them through the authentication process before they gain access to the application.", category: "User Management", subCat1: "Email Verification", subCat2: "Sending verification requests", page: "Email Verification", lastCat: "Sending verification requests"},
 
 ]
 
-//* latest: 999698 - users and organizations
+//* latest: 999677 - invitations
 
 export default results;
