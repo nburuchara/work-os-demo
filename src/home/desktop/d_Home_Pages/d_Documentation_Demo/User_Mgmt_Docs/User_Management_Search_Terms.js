@@ -69,6 +69,14 @@ const results = [
 
     {id: "999644", name: "Identity Linking", category: "User Management", page: "Identity Linking", lastCat: "top"},
 
+        //! - JIT PROVISIONING - !//
+
+    {id: "999621", name: "JIT Provisioning", category: "User Management", page: "JIT Provisioning", lastCat: "top"},
+
+        //! - ROLES - !//
+
+    {id: "999603", name: "Roles", category: "User Management", page: "Roles", lastCat: "top"},
+
 
 
     //? - - - - - - - - - - - - - - - ?//
@@ -182,6 +190,19 @@ const results = [
     {id: "999640", name: "Domain-captured users", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "Domain-captured users"},
     {id: "999639", name: "SSO identity linking", category: "User Management", page: "Identity Linking", subCat1: "Identity Linking", lastCat: "SSO identity linking"},
 
+        //! - JIT PROVISIONING - !//
+
+    {id: "999620", name: "Introduction", category: "User Management", subCat1: "JIT Provisioning", page: "JIT Provisioning", lastCat: "Introduction"},
+    {id: "999619", name: "Domain-captured user provisioning", category: "User Management", subCat1: "JIT Provisioning", page: "JIT Provisioning", lastCat: "Domain-captured user provisioning"},
+    {id: "999618", name: "SSO provisioning", category: "User Management", subCat1: "JIT Provisioning", page: "JIT Provisioning", lastCat: "SSO provisioning"},
+    {id: "999617", name: "Disabling JIT provisioning", category: "User Management", subCat1: "JIT Provisioning", page: "JIT Provisioning", lastCat: "Disabling JIT provisioning"},
+
+        //! - ROLES - !//
+
+    {id: "999602", name: "Introduction", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "Introduction"},
+    {id: "999601", name: "Configure Roles", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "Configure Roles"},
+    {id: "999600", name: "Role-aware sessions", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "Role-aware sessions"},
+
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -252,6 +273,18 @@ const results = [
     {id: "999658", name: "Proof of ownership", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Proof of ownership"},
     {id: "999657", name: "Manually adding a verified domain", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Manually adding a verified domain"},
     {id: "999656", name: "Domain uniqueness", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Domain uniqueness"},
+
+
+        //! - JIT PROVISIONING - !//
+
+    {id: "999616", name: "Guest provisioning", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
+
+        //! - ROLES - !//
+
+    {id: "999599", name: "Default role", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Default role"},
+    {id: "999598", name: "Assign roles", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Assign roles"},
+    {id: "999597", name: "Delete roles", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Delete roles"},
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
@@ -677,8 +710,47 @@ const results = [
     {id: "999623", name: "Users not captured by an organization’s verified domain must be invited to the organization before they have access via SSO for the first time. This applies to non-domain-captured and domain-captured users on domains of other organizations.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
     {id: "999622", name: "An invitation ensures that the authentication flow gives the user an opportunity to go to the SSO’s identity provider.", category: "User Management", subCat1: "Identity Linking", subCat2: "SSO identity linking", page: "Identity Linking", lastCat: "Users not captured by an"},
 
+        //! - JIT PROVISIONING - !//
+
+    {id: "999615", name: "Provision organization membership using Just-In-Time user provisioning.", category: "User Management", subCat1: "JIT Provisioning", page: "JIT Provisioning", lastCat: "top"},
+
+    {id: "999614", name: "JIT provisioning automatically assigns user membership to an organization when a user authenticates for the first time. It is helpful to provide access to an organization’s resources without manual entry of all users by the IT admin.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "Introduction", page: "JIT Provisioning", lastCat: "Introduction"},
+
+    {id: "999613", name: "Domain-captured users can be automatically added as members to an organization using JIT provisioning. This is useful when your application or a specific organization wants to automatically gather a set of individuals to the same workspace based on email domain.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "Domain-captured user provisioning", page: "JIT Provisioning", lastCat: "Domain-captured user provisioning"},
+
+    {id: "999612", name: "When a user who hasn’t signed in previously through their SSO IdP enters their email into the sign-in form, WorkOS APIs detects that their email domain matches the domain of the organization and offers authentication through SSO. This user is then JIT provisioned, and future sign in attempts detect that this user belongs to the organization.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", page: "JIT Provisioning", lastCat: "SSO provisioning"},
+
+    {id: "999611", name: "This will not work for guests, who are members of an organization but are not domain-captured by the organization.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", page: "JIT Provisioning", lastCat: "SSO provisioning"},
+
+    {id: "999610", name: "When an IT admin adds a guest email address that does not match the organization’s domain to their SSO IdP, the guest cannot sign in for the very first time through the IdP because WorkOS doesn’t have an association of this email address to the organization.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", subCat3: "Guest provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
+    {id: "999609", name: "An example scenario is an IT admin who wants to gate all contractor access through their IdP (to provide access revocation across applications) but the contractor wishes to use their own email address.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", subCat3: "Guest provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
+    {id: "999608", name: "Invitations can be used to enable this scenario. By inviting the contractor to the organization, the authentication flow will detect a possible SSO connection and offer authentication through the SSO IdP when signing in.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", subCat3: "Guest provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
+    {id: "999607", name: "A domain-captured user of one domain-verified organization that requires SSO may be a guest of another domain-verified organization that also requires SSO. If the user is a member of both organizations, that user has two SSO credentials, and will need to choose which organization to access at sign-in time before being redirected to the corresponding IdP.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", subCat3: "Guest provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
+
+    {id: "999606", name: "JIT membership provisioning can be disabled, if for example the IT admin wants only select individuals to have access to the organization.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "Disabling JIT provisioning", page: "JIT Provisioning", lastCat: "Disabling JIT provisioning"},
+    {id: "999605", name: "When JIT provisioning is off for a domain-verified organization, new users with matching email addresses cannot be created in a self-serve manner.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "Disabling JIT provisioning",page: "JIT Provisioning", lastCat: "Disabling JIT provisioning"},
+    {id: "999604", name: "Turning off JIT provisioning disables user provisioning for new users. This may be useful when an organization wants to limit access to its workspace. Invitations can be used to allow specific email addresses to sign up and be provisioned.", category: "User Management", subCat1: "JIT Provisioning", subCat2: "Disabling JIT provisioning", page: "JIT Provisioning", lastCat: "Disabling JIT provisioning"},
+
+        //! - ROLES - !//
+
+    {id: "999596", name: "Manage and assign roles to users.", category: "User Management", subCat1: "Roles", page: "Roles", lastCat: "top"},
+    {id: "999595", name: "A role represents a logical grouping of permissions, defining access control levels for users within your application. Roles are identified by a unique, immutable slug and are assigned to usersthrough organization memberships.", category: "User Management", subCat1: "Roles", subCat2: "Introduction", page: "Roles", lastCat: "Introduction"},
+    {id: "999594", name: "Roles can be created and managed in the Roles section of the WorkOS Dashboard.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Configure Roles"},
+
+    {id: "999593", name: "Role configuration occurs at the environment level. Each environment is seeded with a default member role, which is automatically assigned to every organization member. This default role cannot be deleted, but any role can be set as the default.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Default role", page: "Roles", lastCat: "Configure Roles"},
+    {id: "999592", name: "If you need to set default roles or other role configurations at the organization level, please contact us", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Default role", page: "Roles", lastCat: "Default role"},
+
+    {id: "999591", name: "Organization memberships require a role. Every user with an organization membership is automatically assigned the default role when added to an organization. This role can be edited.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Assign roles", page: "Roles", lastCat: "Assign roles"},
+    {id: "999590", name: "You can retrieve the role slug from the user's organization membership object to determine their access level and capabilities within your application.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Assign roles", page: "Roles", lastCat: "Assign roles"},
+
+    {id: "999589", name: "When roles are deleted, all organization memberships are reassigned to the default role. Role deletion happens asynchronously, so there may be a slight delay between deleting a role and updating all organization memberships.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Delete roles", page: "Roles", lastCat: "Delete roles"},
+    {id: "999588", name: "To migrate from one default role to another, set the new default role and delete the old one. All users will then be reassigned to the new default role.", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", subCat3: "Delete roles", page: "Roles", lastCat: "Delete roles"},
+
+    {id: "999587", name: "When a user signs into your app, a user session is initiated. The authentication response includes an access token, a JSON Web Token (JWT), with the \"role\" claim indicating the organization membership's role for that session.", category: "User Management", subCat1: "Roles", subCat2: "Role-aware sessions", page: "Roles", lastCat: "Role-aware sessions"},
+
+
 ]
 
-//* latest: 999622 - domain capture
+//* latest: 999587 - roles
 
 export default results;

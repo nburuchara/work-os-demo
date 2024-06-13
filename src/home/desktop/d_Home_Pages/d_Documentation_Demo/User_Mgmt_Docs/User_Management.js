@@ -1993,10 +1993,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>JIT Provisioning</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Provision organization membership using Just-In-Time user provisioning.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning automatically assigns user membership to an organization when a user authenticates for the first time. It is helpful to provide access to an organization’s resources without manual entry of all users by the IT admin.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning automatically assigns user membership to an organization when a user authenticates for the first time. It is helpful to provide access to an organization’s resources<i id='Domain-captured user provisioning'></i> without manual entry of all users by the IT admin.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Domain-captured user provisioning</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Domain-captured</label> users can be automatically added as members to an organization using JIT provisioning. This is useful when your application or a specific organization wants to automatically gather a set of individuals to the same workspace based on email domain.</p>
@@ -2004,11 +2005,12 @@ export default class UserManagement extends Component {
                             <div id='img39' className={`enlargable-image-container ${this.state.enlargedImageId === 'img39' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img39')}>
                                 <img src='/assets/jit_prov_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='SSO provisioning'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SSO provisioning</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user who hasn’t signed in previously through their SSO IdP enters their email into the sign-in form, WorkOS APIs detects that their email domain matches the domain of the organization and offers authentication through SSO. This user is then JIT provisioned, and future sign in attempts detect that this user belongs to the organization.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This will not work for guests, who are members of an organization but are not <label className='demo-docs-hyperlink'>domain-captured</label> by the organization.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This will not work for guests, who are members of an organization but are not<i id='Guest provisioning'></i> <label className='demo-docs-hyperlink'>domain-captured</label> by the organization.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Guest provisioning</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an IT admin adds a guest email address that does not match the organization’s domain to their SSO IdP, the guest cannot sign in for the very first time through the IdP because WorkOS doesn’t have an association of this email address to the organization.</p>
@@ -2022,6 +2024,7 @@ export default class UserManagement extends Component {
                             <div id='img40' className={`enlargable-image-container ${this.state.enlargedImageId === 'img40' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img40')}>
                                 <img src='/assets/jit_prov_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Disabling JIT provisioning'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Disabling JIT provisioning</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT membership provisioning can be disabled, if for example the IT admin wants only select individuals to have access to the organization.</p>
@@ -2053,6 +2056,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Roles</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Manage and assign roles to users.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -2060,7 +2064,6 @@ export default class UserManagement extends Component {
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Roles</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Roles can be created and managed in the Roles section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
-                        
 
                             <div id='img41' className={`enlargable-image-container ${this.state.enlargedImageId === 'img41' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img41')}>
                                 <img  src='/assets/roles_img1.avif' alt="Enlargable" className="image" />
@@ -2070,7 +2073,7 @@ export default class UserManagement extends Component {
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Default role</h3>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Role configuration occurs at the environment level. Each environment is seeded with a default <span>member</span> role, which is automatically assigned to every organization member. This default role cannot be deleted, but any role can be set as the default.</p>
                             
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to set default roles or other role configurations at the organization level, please <label className='demo-docs-hyperlink'>contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to set default roles or other role configurations at the organization level, please <label className='demo-docs-hyperlink'>contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                             
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Assign roles</h3>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organization memberships require a role. Every user with an organization membership is automatically assigned the default role when added to an organization. This role can be edited.</p>

@@ -198,7 +198,6 @@ getAllIndicesAtSameLevel = (index) => {
     return parentIndices;
 };
 
-
 closeOtherParentsInSameLevel = (index) => {
     const { menuItems } = this.props;
     const currentParentIndex = index
