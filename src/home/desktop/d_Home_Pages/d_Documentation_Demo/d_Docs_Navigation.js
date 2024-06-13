@@ -2162,6 +2162,8 @@ export default class DocsNavigationMenu extends Component {
             showAPIReference: false ,
             showEventsWebhooks: false,
             currentPage: "",
+            currentSection: "",
+            searchingSameSection: false,
 
             //* - - DOCS SEARCH RESULTS PROPS - - *//
 
@@ -2232,6 +2234,7 @@ export default class DocsNavigationMenu extends Component {
                         showEventsWebhooks: false,
                         eventsAndWebhooksDropdown: false,
                         resourcesDropdown: false,
+                        currentSection: "User Management",
                     })
                 } else if (option === 2) {
                     this.setState({
@@ -2240,7 +2243,8 @@ export default class DocsNavigationMenu extends Component {
                         userManagementDropdown: false,
                         standaloneAPIsDropdown: true,
                         eventsAndWebhooksDropdown: false,
-                        resourcesDropdown: false
+                        resourcesDropdown: false,
+                        currentSection: "Standalone APIs",
                     })
                 } else if (option === 3) {
                     this.setState({
@@ -2510,12 +2514,16 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    searchedTermClicked = async (category, option, searchedPage) => {
-        const { currentPage } = this.state;
-        let searchingSamePage = false;
+    searchedTermClicked = async (category, option, searchedPage, searchedSection) => {
+        const { currentPage, currentSection } = this.state;
+        let searchingSamePage= false, searchingSameSection = false;
         if (currentPage === searchedPage) {
             searchingSamePage = true;
         }
+        if (currentSection === category) {
+            searchingSameSection = true;
+        }
+        console.log('current section: ', currentSection)
         if (this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,
@@ -2529,7 +2537,7 @@ export default class DocsNavigationMenu extends Component {
                         exitDocsHovered: false,
                     }), async () => {
                         await this.clearRecentSearch()
-                        if (!searchingSamePage) {
+                        if (!searchingSamePage && !searchingSameSection) {
                             await this.closeSelectedMenuOption()
                         }
                         await new Promise((resolve, reject) => {
@@ -2549,7 +2557,7 @@ export default class DocsNavigationMenu extends Component {
             })
         } else {
             await this.clearRecentSearch()
-            if (!searchingSamePage) {
+            if (!searchingSamePage && !searchingSameSection) {
                 await this.closeSelectedMenuOption()
             }
             await new Promise((resolve, reject) => {
@@ -2711,7 +2719,7 @@ export default class DocsNavigationMenu extends Component {
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
                                             getMenuItemSelected={this.handleMenuItemSelected} 
-                                            menuItems={StandaloneAPIsOptions} 
+                                            menuItems={StandaloneAPIsOptions}
                                             maximumDepth={3}
                                             ref={(ref) => { this.nestedDropdownRef = ref; }} 
                                             />
