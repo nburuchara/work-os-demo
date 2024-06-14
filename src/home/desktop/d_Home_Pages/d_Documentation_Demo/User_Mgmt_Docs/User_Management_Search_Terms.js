@@ -81,7 +81,13 @@ const results = [
 
     {id: "999586", name: "Directory Provisioning", category: "User Management", page: "Directory Provisioning", lastCat: "top"},
 
+        //! - ORGANIZATION POLICIES - !//
 
+    {id: "999555", name: "Organization Policies", category: "User Management", page: "Organization Policies", lastCat: "top"},
+
+        //! - IMPERSONATION - !//
+
+    {id: "999544", name: "Impersonation", category: "User Management", page: "Impersonation", lastCat: "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -208,8 +214,26 @@ const results = [
 
         //! - DIRECTORY PROVISIONING - !//
 
-    {id: "999585", name: "Directory Provisioning", category: "User Management", subCat1: "", page: "Directory Provisioning", lastCat: "top"},
+    {id: "999585", name: "Introduction", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "Introduction"},
+    {id: "999584", name: "Initial Configuration", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "Initial Configuration"},
+    {id: "999583", name: "Provision users from a directory", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "Provision users from a directory"},
+    {id: "999582", name: "Manage users from a directory", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+    {id: "999581", name: "Frequently asked questions", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "Frequently asked questions"},
  
+        //! - ORGANIZATION POLICIES - !//
+
+    {id: "999554", name: "Introduction", category: "User Management", subCat1: "Organization Policies", page: "Organization Policies", lastCat: "Introduction"},
+    {id: "999554", name: "Controls for domain-captured users", category: "User Management", subCat1: "Organization Policies", page: "Organization Policies", lastCat: "Controls for domain-captured users"},
+    {id: "999553", name: "Controls for non-domain-captured users", category: "User Management", subCat1: "Organization Policies", page: "Organization Policies", lastCat: "Controls for non-domain-captured users"},
+
+        //! - IMPERSONATION - !//
+
+    {id: "999543", name: "Introduction", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Introduction"},
+    {id: "999542", name: "Enabling impersonation", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Enabling impersonation"},
+    {id: "999541", name: "Using impersonation", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999540", name: "Auditing impersonation usage", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+    {id: "999539", name: "Integrating impersonation", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Integrating impersonation"},
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -280,7 +304,6 @@ const results = [
     {id: "999657", name: "Manually adding a verified domain", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Manually adding a verified domain"},
     {id: "999656", name: "Domain uniqueness", category: "User Management", subCat1: "Domain Capture", subCat2: "Domain Verification", page: "Domain Capture", lastCat: "Domain uniqueness"},
 
-
         //! - JIT PROVISIONING - !//
 
     {id: "999616", name: "Guest provisioning", category: "User Management", subCat1: "JIT Provisioning", subCat2: "SSO provisioning", page: "JIT Provisioning", lastCat: "Guest provisioning"},
@@ -291,6 +314,17 @@ const results = [
     {id: "999598", name: "Assign roles", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Assign roles"},
     {id: "999597", name: "Delete roles", category: "User Management", subCat1: "Roles", subCat2: "Configure Roles", page: "Roles", lastCat: "Delete roles"},
 
+        //! - DIRECTORY PROVISIONING - !//
+
+    {id: "999580", name: "Supported directory providers", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+
+        //! - ORGANIZATION POLICIES - !//
+
+    {id: "999552", name: "Requiring SSO by default", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for domain-captured users", page: "Organization Policies", lastCat: "Requiring SSO by default"},
+
+        //! - IMPERSONATION - !//
+
+    {id: "999538", name: "Impersonation with authkit-nextjs", category: "User Management", subCat1: "Impersonation", subCat2: "Integrating impersonation", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
@@ -320,7 +354,7 @@ const results = [
     {id: "999847", name: "Test with the Test Identity Provider", category: "User Management", subCat1: "Single Sign-On", page: "Single Sign-On", lastCat: "Test with the Test Identity Provider"},
     {id: "999846", name: "Test with other identity providers", category: "User Management", subCat1: "Single Sign-On", page: "Single Sign-On", lastCat: "Test with other identity providers"},
 
-      //! - SOCIAL LOGIN - !//
+        //! - SOCIAL LOGIN - !//
 
     {id: "999793", name: "Configure OAuth providers", category: "User Management", subCat1: "Social Login", subCat2: "Getting Started", page: "Social Login", lastCat: "Configure OAuth providers"},
     {id: "999792", name: "Enable OAuth providers", category: "User Management", subCat1: "Social Login", subCat2: "Getting Started", page: "Social Login", lastCat: "Enable OAuth providers"},
@@ -754,9 +788,80 @@ const results = [
 
     {id: "999587", name: "When a user signs into your app, a user session is initiated. The authentication response includes an access token, a JSON Web Token (JWT), with the \"role\" claim indicating the organization membership's role for that session.", category: "User Management", subCat1: "Roles", subCat2: "Role-aware sessions", page: "Roles", lastCat: "Role-aware sessions"},
 
+        //! - DIRECTORY PROVISIONING - !//
+
+    {id: "999579", name: "Manage users and organization memberships via directory sync providers.", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "top"},
+    {id: "999578", name: "This feature is currently in preview. Please reach out to support@workos.com or via your team's WorkOS Slack channel if you would like Directory Provisioning enabled.", category: "User Management", subCat1: "Directory Provisioning", page: "Directory Provisioning", lastCat: "This feature is currently in preview"},
+    {id: "999577", name: "Directory provisioning gives an IT admin full control over access to an organization’s resources, without relying on manual entry. Users from a directory are pre-provisioned and managed by their Identity Provider.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Introduction", page: "Directory Provisioning", lastCat: "Introduction"},
+
+    {id: "999576", name: "A Directory Sync integration will need to be configured for every domain, i.e. organization, that wants to source users and organization memberships via directory provisioning. Directories can be set up via the WorkOS Dashboardno img available with Setup Links. You can also integrate the Admin Portal with your app to generate links to configure directories.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", page: "Directory Provisioning", lastCat: "Initial Configuration"},
+
+    {id: "999575", name: "The following directory sync providers are supported with directory provisioning:", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999574", name: "Okta SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999573", name: "Entra ID (Azure AD) SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999572", name: "Google Workspace", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999571", name: "OneLogin SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999570", name: "CyberArk SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999569", name: "PingFederate SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999568", name: "JumpCloud SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999567", name: "Rippling SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999566", name: "Generic SCIM", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+    {id: "999565", name: "If you are interested in directory provisioning support from a directory sync provider not listed above, please reach out to support@workos.com or via your team's WorkOS Slack channel.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Initial Configuration", subCat3: "Supported directory providers", page: "Directory Provisioning", lastCat: "Supported directory providers"},
+
+    {id: "999564", name: "When directory provisioning is enabled and a directory sync provider integration is set up, domain-captured users from the directory sync provider will be provisioned and added as members to the organization.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Provision users from a directory", page: "Directory Provisioning", lastCat: "Provision users from a directory"},
+    {id: "999563", name: "Users with email addresses that do not match the organization’s domain will be sent an invitation to join the organization. On successful authentication, an organization membership will be added for these users.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Provision users from a directory", page: "Directory Provisioning", lastCat: "Provision users from a directory"},
+
+    {id: "999562", name: "Once directory provisioning is set up for an organization, any additional users, updates to current users, and de-provisioning events will flow through to user management.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Manage users from a directory", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+    {id: "999561", name: "Domain-captured users will be fully managed by the directory, and updates to attributes will supersede updates from SSO, the API or manually in the dashboard.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Manage users from a directory", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+    {id: "999560", name: "Users with email addresses that do not match the organization’s domain will not be fully managed by the directory, and SSO, API or manual updates in the dashboard will persist.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Manage users from a directory", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+    {id: "999559", name: "When a user is de-provisioned in the directory, the corresponding organization membership will become inactive and the status for the membership will be inactive. De-provisioning will not automatically delete users or organization memberships.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Manage users from a directory", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+    {id: "999558", name: "If a user is re-provisioned in the directory, the corresponding organization membership will be reactivated and the status for the membership will be active. The organization membership's pre-existing role will be retained.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Manage users from a directory", page: "Directory Provisioning", lastCat: "Manage users from a directory"},
+
+    {id: "999557", name: "I am using directory provisioning, but some directory users aren't being provisioned in user management. Why would a directory user not be provisioned in user management?", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Frequently asked questions", page: "Directory Provisioning", lastCat: "Frequently asked questions"},
+    {id: "999556", name: "Directory users need to have a primary email address to be provisioned in user management. So if the directory user is missing a primary email, they won't be provisioned. Additionally, if the primary email of a directory user is shared by another directory user, only one will be provisioned in user management, as emails are unique to user management users.", category: "User Management", subCat1: "Directory Provisioning", subCat2: "Frequently asked questions", page: "Directory Provisioning", lastCat: "Frequently asked questions"},
+    
+        //! - ORGANIZATION POLICIES - !//
+
+    {id: "999551", name: "Customize available authentication methods per organization.", category: "User Management", subCat1: "Organization Policies", page: "Organization Policies", lastCat: "top"},
+    {id: "999550", name: "While your application provides a set of authentication methods, certain organizations may want to restrict their users to a subset of those methods for customized security constraints. These organization-level customizations can be configured on the organization page in the Dashboard.", category: "User Management", subCat1: "Organization Policies", subCat2: "Introduction", page: "Organization Policies", lastCat: "Introduction"},
+
+    {id: "999549", name: "When an organization has a verified domain, the organization has full control over the authentication methods for its domain-captured users. The organization can enable any subset of the authentication methods that your application enables at the environment level.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for domain-captured users", page: "Organization Policies", lastCat: "Controls for domain-captured users"},
+    {id: "999548", name: "Additionally, if the MFA setting for the environment is set to Optional, meaning that users who choose to enroll in MFA would get challenged at authentication time, an organization can require its domain-captured users to enroll in MFA.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for domain-captured users", page: "Organization Policies", lastCat: "Controls for domain-captured users"},
+
+    {id: "999548", name: "When an SSO connection is first setup on an organization, all non-SSO authentication methods for the organization are automatically disabled. It’s usually the case that an IT admin that sets up SSO wants that to be the only method of authentication. If an organization wants additional methods enabled, they can be manually turned on.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for domain-captured users", subCat3: "Requiring SSO by default", page: "Organization Policies", lastCat: "Requiring SSO by default"},
+
+    {id: "999547", name: "When a user is domain-captured, their own organization can enforce specific authentication controls on them. The organizations the user may be a guest member of does not have the same set of controls for guests, as it may conflict with the controls of the domain-capturing organization.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for non-domain-captured users", page: "Organization Policies", lastCat: "Controls for non-domain-captured users"},
+    {id: "999546", name: "An organization may only require that its guest members authenticate through its own SSO connection. When this is enabled, guest members would login as they normally do, and upon selecting this organization to log into, the user would be prompted to sign-in at the organization’s SSO IdP. This acts as a secondary authentication method that this organization controls.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for non-domain-captured users", page: "Organization Policies", lastCat: "Controls for non-domain-captured users"},
+    {id: "999545", name: "Organizations may also require that its guests enroll in MFA.", category: "User Management", subCat1: "Organization Policies", subCat2: "Controls for non-domain-captured users", page: "Organization Policies", lastCat: "Controls for non-domain-captured users"},
+
+    //! - IMPERSONATION - !//
+
+    {id: "999537", name: "Learn how to sign into your application as one of your users.", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "top"},
+    {id: "999536", name: "Impersonation allows administrators and support team members to assume the identity of any of your users, allowing them to reproduce or debug issues the user may be having in your application. The ability to see the application in an identical state as the user helps to greatly speed up the support process.", category: "User Management", subCat1: "Impersonation", subCat2: "Introduction", page: "Impersonation", lastCat: "Introduction"},
+
+    {id: "999535", name: "Since impersonation allows any member of your WorkOS team to bypass the normal authentication flow for a user, it is not enabled by default in any of your environments. You must have the Admin role in order to enable impersonation for an environment.", category: "User Management", subCat1: "Impersonation", subCat2: "Enabling impersonation", page: "Impersonation", lastCat: "Enabling impersonation"},
+    {id: "999534", name: "Navigate to Authentication → User Impersonation and select Configure to enable impersonation for your current environment.", category: "User Management", subCat1: "Impersonation", subCat2: "Enabling impersonation", page: "Impersonation", lastCat: "Enabling impersonation"},
+
+    {id: "999533", name: "To impersonate one of your users, navigate to Users, select the user you'd like to impersonate, and under Danger Zone select Impersonate User.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999532", name: "You will be prompted for the reason your are impersonating the user. It is optional to provide a reason in staging environments, and required in production. The reason will be recorded internally on the session.created event that is emitted whenever impersonation is used.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999531", name: "If the user is a member of more than one organization, you will also need to choose which of these organizations you will be signing-into as the user. You can read more about users and organizations in our dedicated guide.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999530", name: "Finally, click Impersonate user to start an impersonation session, redirecting your browser to your application's callback endpoint with an authorization code for the impersonated user. You can read more about how to implement a callback endpoint in our Quick Start guide.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999529", name: "Impersonation sessions automatically expire after 60 minutes.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+    {id: "999528", name: "Be aware that impersonating a user usually generally gives the same level of access as that user, allowing the impersonator to see the user's information. If your application contains sensitive user data, see the Integrating impersonation section about how to customize your application when using impersonation.", category: "User Management", subCat1: "Impersonation", subCat2: "Using impersonation", page: "Impersonation", lastCat: "Using impersonation"},
+
+    {id: "999527", name: "User sessions that were initiated via impersonation will be clearly marked as such when viewing their details in the WorkOS Dashboard. Additionally, WorkOS emits a session.created event which you can view under the events for the user, or listen for in your application via the events API.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+    {id: "999527", name: "The session.created event has an impersonator field that contains information about the mpersonation session, like the email of your team member who performed the impersonation, along with their reason for doing so.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+
+    {id: "999526", name: "No additional code is required to start using impersonation once you have integrated with WorkOS. However, many developers may want to augment their application's behavior when your team members are impersonating one of your users.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+    {id: "999525", name: "The response from the Authenticate with Code API will include an additional impersonator field when the resulting session was created via impersonation, containg the impersonator's email and reason for using impersonation. Similarly, the access_token will include an act claim with the impersonator's email. Your application can use either in order to trigger impersonation-specific behavior.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+    {id: "999524", name: "A common enhancement is to change the appearance of the application in order to make it obvious to the viewer they are currently impersonating one of your users, such as a \"Staff Bar\" displayed at the top of the viewport. You may also want to restrict access to sensitive views or redact certain fields in your application.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", page: "Impersonation", lastCat: "Auditing impersonation usage"},
+
+    {id: "999523", name: "If using the authkit-nextjs library, impersonation can be easily added by using the provided helper component.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", subCat3: "Impersonation with authkit-nextjs", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
+    {id: "999522", name: "After completing the setup instructions in the quick start guide, add the Impersonation component to your app code.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", subCat3: "Impersonation with authkit-nextjs", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
+    {id: "999521", name: "The above will automatically render a visually distinct frame on your page with an option to hide it or stop the impersonation session.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", subCat3: "Impersonation with authkit-nextjs", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
 
 ]
 
-//* latest: 999587 - roles
+//* latest: 999521 - impersontaion
 
 export default results;

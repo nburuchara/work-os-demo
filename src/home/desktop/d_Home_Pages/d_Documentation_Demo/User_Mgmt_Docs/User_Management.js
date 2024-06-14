@@ -2123,6 +2123,7 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Directory Provisioning</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Manage users and organization memberships via directory sync providers.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='This feature is currently in preview'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
                             
@@ -2131,16 +2132,16 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in preview. Please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team's WorkOS Slack channel if you would like Directory Provisioning enabled.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in preview. Please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team's WorkOS Slack channel if you would like Directory Provisioning<i id='Introduction'></i> enabled.</p>
                                 </div>
                             </div>
                            
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory provisioning gives an IT admin full control over access to an organization’s resources, without relying on manual entry. Users from a directory are pre-provisioned and managed by their <label className='demo-docs-hyperlink'>Identity Provider</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory provisioning gives an IT admin full control over access to an organization’s resources, without relying on manual entry. Users from a directory<i id='Initial Configuration'></i> are pre-provisioned and managed by their <label className='demo-docs-hyperlink'>Identity Provider</label>.</p>
 
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial Configuration</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Directory Sync</label> integration will need to be configured for every domain, i.e. organization, that wants to source users and organization memberships via directory provisioning. Directories can be set up via the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> with <label className='demo-docs-hyperlink'>Setup Links</label>. You can also <label className='demo-docs-hyperlink'>integrate the Admin Portal with your app</label> to generate links to configure directories.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Directory Sync</label> integration will need to be configured for every domain, i.e. organization, that wants to source users and organization memberships via directory provisioning. Directories can be set up via the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> with <label className='demo-docs-hyperlink'>Setup Links</label>. You can also <label className='demo-docs-hyperlink'>integrate the Admin<i id='Supported directory providers'></i> Portal with your app</label> to generate links to configure directories.</p>
                         
                         
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Supported directory providers</h3>
@@ -2164,7 +2165,7 @@ export default class UserManagement extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>If you are interested in directory provisioning support from a directory sync provider not listed above, please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team's WorkOS Slack channel.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>If you are interested in directory provisioning support from a directory sync provider not listed above, please reach out to <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span><i id='Provision users from a directory'></i> or via your team's WorkOS Slack channel.</p>
                                 </div>
                             </div>
 
@@ -2172,7 +2173,7 @@ export default class UserManagement extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provision users from a directory</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When directory provisioning is enabled and a directory sync provider integration is set up, <label className='demo-docs-hyperlink'>domain-captured</label> users from the directory sync provider will be provisioned and added as members to the organization.</p>
                         
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users with email addresses that do not match the organization’s domain will be sent an <label className='demo-docs-hyperlink'>invitation</label> to join the organization. On successful authentication, an organization membership will be added for these users.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users with email addresses that do not match the organization’s domain will be sent an <label className='demo-docs-hyperlink'>invitation</label> to join the organization. On successful authentication,<i id='Manage users from a directory'></i> an organization membership will be added for these users.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Manage users from a directory</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once directory provisioning is set up for an organization, any additional users, updates to current users, and de-provisioning events will flow through to user management.</p>
@@ -2188,6 +2189,7 @@ export default class UserManagement extends Component {
                             </div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                        <i id='Frequently asked questions'></i>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
                             <strong><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>I am using directory provisioning, but some directory users aren't being provisioned in user management. Why would a directory user not be provisioned in user management?</p></strong>
 
@@ -2215,10 +2217,11 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Organization Policies</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Customize available authentication methods per organization.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While your application provides a set of authentication methods, certain organizations may want to restrict their users to a subset of those methods for customized security constraints. These organization-level customizations can be configured on the organization page in the Dashboard.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While your application provides a set of authentication methods, certain organizations may want to restrict their users to a subset of those methods for customized security constraints. These organization-level customizations can be <i id='Controls for domain-captured users'></i>configured on the organization page in the Dashboard.</p>
                         
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Controls for domain-captured users</h1>
@@ -2229,11 +2232,13 @@ export default class UserManagement extends Component {
                             <div id='img43' className={`enlargable-image-container ${this.state.enlargedImageId === 'img43' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img43')}>
                                 <img  src='/assets/org_policies_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Requiring SSO by default'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Requiring SSO by default</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an SSO connection is first setup on an organization, all non-SSO authentication methods for the organization are automatically disabled. It’s usually the case that an IT admin that sets up SSO wants that to be the only method of authentication. If an organization wants additional methods enabled, they can be manually turned on.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When an SSO connection is first setup on an organization, all non-SSO authentication methods for the organization are automatically disabled. It’s usually the case that an IT admin that sets up SSO wants that to be the only method of authentication. If an organization wants additional<i id='Controls for non-domain-captured users'></i>
+ methods enabled, they can be manually turned on.</p>
 
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Controls for domain-captured users</h1>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Controls for non-domain-captured users</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user is domain-captured, their own organization can enforce specific authentication controls on them. The organizations the user may be a <label className='demo-docs-hyperlink'>guest member</label> of does not have the same set of controls for guests, as it may conflict with the controls of the domain-capturing organization.</p>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization may only require that its guest members authenticate through its own SSO connection. When this is enabled, guest members would login as they normally do, and upon <label className='demo-docs-hyperlink'>selecting this organization</label> to log into, the user would be prompted to sign-in at the organization’s SSO IdP. This acts as a secondary authentication method that this organization controls.</p>
@@ -2266,20 +2271,21 @@ export default class UserManagement extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Impersonation</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to sign into your application as one of your users.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Impersonation allows administrators and support team members to assume the identity of any of your users, allowing them to reproduce or debug issues the user may be having in your application. The ability to see the application in an identical state as the user helps to greatly speed up the support process.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Impersonation allows administrators and support team members to assume the identity of any of your users, allowing them to reproduce or debug issues the user may be having in your application. The ability to see the application in an identical state as the user<i id='Enabling impersonation'></i> helps to greatly speed up the support process.</p>
                         
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enabling impersonation</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Since impersonation allows any member of your WorkOS team to bypass the normal authentication flow for a user, it is not enabled by default in any of your environments. You must have the<strong>Admin</strong> role in order to enable impersonation for an environment.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Since impersonation allows any member of your WorkOS team to bypass the normal authentication flow for a user, it is not enabled by default in any of your environments. You must have the <strong>Admin</strong> role in order to enable impersonation for an environment.</p>
                         
                             <div id='img45' className={`enlargable-image-container ${this.state.enlargedImageId === 'img45' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img45')}>
                                 <img  src='/assets/impersonation_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Authentication → User Impersonation</i> and select <i>Configure</i> to enable impersonation for your current environment.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to <i>Authentication → User Impersonation</i> and select <i id='Using impersonation'>Configure</i> to enable impersonation for your current environment.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Using impersonation</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To impersonate one of your users, navigate to <i>Users</i>, select the user you'd like to impersonate, and under <i>Danger Zone</i> select <i>Impersonate User</i>.</p>
@@ -2305,7 +2311,7 @@ export default class UserManagement extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Be aware that impersonating a user usually generally gives the same level of access as that user, allowing the impersonator to see the user's information. If your application contains sensitive user data, see the <label className='demo-docs-hyperlink'>Integrating impersonation</label> section about how to customize your application when using impersonation.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Be aware that impersonating a user usually generally gives the same level of access as that user, allowing the impersonator to see the user's information. If your application contains sensitive user data, see the <label className='demo-docs-hyperlink'>Integrating impersonation</label> section about how to customize<i id='Auditing impersonation usage'></i> your application when using impersonation.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Auditing impersonation usage</h1>
                                 
@@ -2318,7 +2324,7 @@ export default class UserManagement extends Component {
                             </div>
 
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>session.created</span> event has an <span>impersonator</span> field that contains information about the mpersonation session, like the <span>email</span> of your team member who performed the impersonation, along with their <span>reason</span> for doing so.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>session.created</span> event has an <span>impersonator</span> field that contains information about the mpersonation session, like the <span>email</span> of your team member who performed the impersonation,<i id='Integrating impersonation'></i> along with their <span>reason</span> for doing so.</p>
                             </div>
 
 
@@ -2330,7 +2336,7 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The response from the <label className='demo-docs-hyperlink'>Authenticate with Code API</label> will include an additional <span>impersonator</span> field when the resulting session was created via impersonation, containg the impersonator's <span>email</span> and <span>reason</span> for using impersonation. Similarly, the <span>access_token</span> will include an <span>act</span> claim with the impersonator's <span>email</span>. Your application can use either in order to trigger impersonation-specific behavior.</p>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A common enhancement is to change the appearance of the application in order to make it obvious to the viewer they are currently impersonating one of your users, such as a "Staff Bar" displayed at the top of the viewport. You may also want to restrict access to sensitive views or redact certain fields in your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A common enhancement is to change the appearance of the application in order to make it obvious to the viewer they are currently impersonating one of your users, such as a "Staff Bar" displayed at the top of the viewport. You may also want to restrict access to sensitive views or<i id='Impersonation with authkit-nextjs'></i> redact certain fields in your application.</p>
 
 
                             <div className='api-keys'>

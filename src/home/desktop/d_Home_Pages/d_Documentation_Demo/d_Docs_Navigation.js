@@ -2514,7 +2514,7 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
-    searchedTermClicked = async (category, option, searchedPage, searchedSection) => {
+    searchedTermClicked = async (category, option, searchedPage) => {
         const { currentPage, currentSection } = this.state;
         let searchingSamePage= false, searchingSameSection = false;
         if (currentPage === searchedPage) {
