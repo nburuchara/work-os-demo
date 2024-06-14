@@ -105,7 +105,7 @@ handleItemClick = (index, item) => {
                 return activeParentIndex !== parentIndex || activeIndex === index;
             });
         }
-
+        console.log('clicked path', newActiveIndices)
         this.props.setSearchPath(newActiveIndices); // Notify parent component
         this.props.setCurrentIndex(index);
         return { activeIndices: newActiveIndices };
@@ -277,6 +277,14 @@ searchMenuItems = (menuItems, searchTerm) => {
       };
     
       search(menuItems, searchTerm);
+
+      if (path.length === 2 && path[0] === 0 && path[1] === 1) {
+        if (this.props.maximumDepth > 2) {
+            for (let i = path[1]; i < this.props.maximumDepth; i++) {
+                path.push(i);
+            }
+        }
+      }
       this.props.getMenuItemSelected(searchTerm)
       this.props.setCurrentIndex(path[path.length - 1])
       return path;
@@ -290,13 +298,18 @@ handleSearchWithinNested = (searchTerm) => {
     const { searchMenuItems, menuItems } = this.props;
     const searchPath = searchMenuItems(menuItems, searchTerm);
     this.setState({activeIndices: searchPath})
-    // this.setSearchPath(searchPath)
 };
 
 setSearchPath = (searchPath) => {
     // this.sets
     this.setState({ searchPath });
 };
+
+exitActiveIndices = () => {
+    this.setState({
+        activeIndices: []
+    })
+}
 
 renderMenuItems = (menuItems, level = 0) => {
     const { activeIndices } = this.state;

@@ -60,6 +60,14 @@ export default class UserManagement extends Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
     }
 
     componentWillUnmount() {

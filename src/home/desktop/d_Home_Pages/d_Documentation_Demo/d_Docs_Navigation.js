@@ -1945,7 +1945,7 @@ const Styles = styled.div `
     padding-right: 0.5%;
     background-color: #f9f9fb;
     border-radius: 20px;
-    border: 1px solid #f9f9fb;
+    border: 1px solid #ccc;
     font-family: poppins;
     font-size: 65%;
 }
@@ -2280,25 +2280,27 @@ export default class DocsNavigationMenu extends Component {
                 {id: 4, name: "Overview"},
             ]
             this.closeAllOpenPages()
-            for (let i = 1; i <= 4; i++) {
-                this.setState({
-                    [`mOption${i}Gap`]: "0px"
-                })
-                if (option === i) {
+            new Promise((resolve) => {
+                for (let i = 1; i <= 4; i++) {
                     this.setState({
-                        [`menuOption${i}`]: true,
-                        prevSelectedOption: `menuOption${i}`,
-                        showCloseSelectedOptionBtn: true,
-                        indexReselecting: 0
+                        [`mOption${i}Gap`]: "0px"
                     })
-                    if (this.state.transitioningMenu === false) {
-                        setTimeout(() => {
-                            this.handleSearchWithinNested(optionHomepages[option-1].name)
-                            console.log(optionHomepages[option-1].name)
-                        }, 1000)
+                    if (option === i) {
+                        this.setState({
+                            [`menuOption${i}`]: true,
+                            prevSelectedOption: `menuOption${i}`,
+                            showCloseSelectedOptionBtn: true,
+                            indexReselecting: 0
+                        })
+                        if (this.state.transitioningMenu === false) {
+                            setTimeout(() => {
+                                this.handleSearchWithinNested(optionHomepages[option-1].name)
+                            }, 1000)
+                        }
                     }
-                }
-            } 
+                } 
+                resolve();
+            });
             setTimeout(() => {
                 if (option === 1) {
                     this.setState({
@@ -2312,16 +2314,23 @@ export default class DocsNavigationMenu extends Component {
                         resourcesDropdown: false,
                         currentSection: "User Management",
                     })
+                    // if (this.menuOption1Ref.current) {
+                    //     this.menuOption1Ref.current.openFirstDoc();
+                    // }
                 } else if (option === 2) {
                     this.setState({
                         showDocsHome: false,
                         showStandAloneApis: true,
+                        showUserManagementDoc: false,
                         userManagementDropdown: false,
                         standaloneAPIsDropdown: true,
                         eventsAndWebhooksDropdown: false,
                         resourcesDropdown: false,
                         currentSection: "Standalone APIs",
                     })
+                    // if (this.menuOption2Ref.current) {
+                    //     this.menuOption2Ref.current.openFirstDoc();
+                    // }
                 } else if (option === 3) {
                     this.setState({
                         userManagementDropdown: false,
@@ -2344,6 +2353,7 @@ export default class DocsNavigationMenu extends Component {
 
     closeSelectedMenuOption = async () => {
         await new Promise((resolve) => {
+            // this.nestedDropdownRef.exitActiveIndices()
             this.setState({
                 menuOption1: false,
                 menuOption2: false,
@@ -2380,11 +2390,19 @@ export default class DocsNavigationMenu extends Component {
         this.setState({currentPage: item})
         if (menuOption1 === true) {
             this.setState({
+                // showUserManagementDoc: true,
+                // showStandAloneApis: false,
+                // showEventsWebhooks: false,
+                // showResources: false,
                 usrMgmtScrollID: item,
             })
         } else if (menuOption2 === true) {
             this.setState({
-                standaloneApisScrollID: item
+                // showUserManagementDoc: false,
+                // showStandAloneApis: true,
+                // showEventsWebhooks: false,
+                // showResources: false,
+                standaloneApisScrollID: item,
             })
         }
     }

@@ -137,14 +137,14 @@ export default class StandaloneAPIs extends Component {
     }
 
     componentDidMount = () => {
-        // setTimeout (() => {
-        //     this.setState({
-        //         gettingStarted: true
-        //     })
-        // }, 300)
-        // setTimeout (() => {
-        //     this.scrollToTop('top')
-        // }, 450)
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
     }
 
     openFirstDoc = () => {
