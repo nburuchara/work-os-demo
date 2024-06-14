@@ -40,6 +40,7 @@ export default class UserManagement extends Component {
             directoryProvisioning: false,
             organizationPolicies: false,
             impersonation: false,
+            customEmails: false,
             scrollDistance: 0,
 
                 //* - CODE SNIPPET - *//
@@ -106,7 +107,8 @@ export default class UserManagement extends Component {
           "Roles": "roles",
           "Directory Provisioning": "directoryProvisioning",
           "Organization Policies": "organizationPolicies",
-          "Impersonation": "impersonation"
+          "Impersonation": "impersonation",
+          "Custom Emails": "customEmails",
         };
       
         const page = pageMap[selectedPage];
@@ -171,6 +173,7 @@ export default class UserManagement extends Component {
             directoryProvisioning: false,
             organizationPolicies: false,
             impersonation: false,
+            customEmails: false
         })
     }
 
@@ -247,7 +250,7 @@ export default class UserManagement extends Component {
             //* - USR MGMG SECTIONS VAR(S) - *//
         const { loadingScreen, gettingStarted, exampleApps, authKit, emailDomains, branding, migrations, singleSignOn, 
             emailAndPassword, socialLogin, multiFactorAuth, magicAuth, usersAndOrganizations, sessions, 
-            invitations, emailVerification, domainCapture, identityLinking, jitProvisioning, roles, directoryProvisioning, organizationPolicies, impersonation } = this.state;
+            invitations, emailVerification, domainCapture, identityLinking, jitProvisioning, roles, directoryProvisioning, organizationPolicies, impersonation, customEmails } = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;
@@ -2362,7 +2365,355 @@ export default class UserManagement extends Component {
                                 <img  src='/assets/impersonation_img4.avif' alt="Enlargable" className="image" />
                             </div>
 
+                            <div className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Custom Emails</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to send your own emails for user lifecycle events.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={customEmails}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Custom Emails</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to send your own emails for user lifecycle events.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By default, WorkOS will send emails related to User Management for you, such as password reset and Magic Auth. If you’d like to customize email content or have more control over deliverability, you can turn off the default emails and deliver your<i id='Disabling default emails'></i> own.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Disabling default emails</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To change email settings for an environment, navigate to <i>Authentication → Emails</i> and select <i>Configure emails</i>. You should have an <strong>Admin</strong> role for to update this setting.</p>
+
+                            <div style={{marginBottom: "5%"}} id='img47.1' className={`enlargable-image-container ${this.state.enlargedImageId === 'img47.1' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img47.1')}>
+                                <img  src='/assets/custom_email_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img47.2' className={`enlargable-image-container ${this.state.enlargedImageId === 'img47.2' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img47.2')}>
+                                <img  src='/assets/custom_email_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+                            <i id='Invitations'></i>
+                            
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Invitations</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve turned off the default user invitation emails, use the information below to send custom invitation emails.</p>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "35%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>invitation.created</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Event emitted when an invitation is created, which can be consumed using the events API or webhooks.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "35%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Get Invitation API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to retrieve the invitation object from the ID in the invitation created event.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "35%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Send Invitation API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "65%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to create an invitation via the API without handling the<i id='Set up your user invitation URL'></i> invitation created event.</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set up your user invitation URL</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure you have the correct user invitation URL set on your <i>Redirects</i> page. The default setting is the hosted AuthKit URL for accepting invitations. If you are using your own authentication UI, make sure the URL path is configured on your end to capture the <span>invitation_token</span> query parameter, and <label className='demo-docs-hyperlink'>pass it into one of the authenticate methods</label>.</p>
+                            </div>
+
+                            <div id='img47.3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img47.3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img47.3')}>
+                                <img  src='/assets/custom_email_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+                            <i id='Handle manually creating invitations'></i>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle manually creating invitations</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’re creating invitations using the WorkOS dashboard, you’ll need to handle <span>invitation.created</span> events using the events API or webhooks.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full invitation object with this information, use the invitation ID from the event to call the Get Invitation API.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You<i id='Handle invitations created via the API'></i> can skip this step if you don’t plan to create the invitations manually in the dashboard.</p>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle invitations created via the API</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’re creating invites via the Send Invitation API, you can send your own email using the information returned in the invitation object.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you also plan to create invitations manually in the dashboard<i id='Send your email invitations'></i>, you can just handle <span>invitation.created</span> events as described above.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Send your email</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The recipient of the <span>email</span> should match the email attribute in the invitation object retrieved via the API. The body of the email should include a link where the user can accept the invitation. For most use cases, you can use the <span>accept_invitation_url</span> as this link.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you aren’t using hosted AuthKit, and your invitation acceptance path diverges from this pattern, you may want to construct your own URL with the <span>token</span>, rather than using the <span>accept_invitation_url</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, if the invitation object contains an organization ID and/or an inviter user ID, you may want to include that information in the body of the email.</p><i id='Magic Auth'></i>
+                                
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Magic Auth</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve turned off the default Magic Auth emails, use the information below to send custom Magic Auth emails.</p>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>magic_auth.created</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Event emitted when a user initiates a Magic Auth authentication, which can be consumed using the events API or webhooks.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Get Magic Auth API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to retrieve the Magic Auth object from the ID in the Magic Auth created event.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Create Magic Auth API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to create a Magic Auth code via the<i id='Handle Magic Auth codes created via AuthKit'></i> API without handling the Magic Auth created event.</p>
+                                </div>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle Magic Auth codes created via AuthKit</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you are using hosted AuthKit, you’ll need to handle <span>magic_auth.created</span> events, using the events API or webhooks.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full Magic Auth object with this information, use the Magic Auth ID from the event to call the Get Magic Auth API.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You<i id='Handle Magic Auth codes created via the API'></i> can skip this step if you’re not using hosted AuthKit.</p>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle Magic Auth codes created via the API</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’re initiating Magic Auth authentication via the Create Magic Auth API, you can send your own email using the<i id='Send your email magic auth'></i> information returned in the Magic Auth object.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Send your email</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The recipient of the <span>email</span> should match the email attribute for the Magic Auth object retrieved via the API, and the email should include the <span>code</span>. Recipients will input that code into AuthKit, or your own authentication UI, to authenticate into your application via Magic Auth.</p>
+                            </div><i id='Email verification'></i>
+                            
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Email verification</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve turned off the default email verification emails, use the information below to send custom email verification emails.</p>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>email_verification.created</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Event emitted when a user requires email verification, which can be consumed using the events API or webhooks.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Get Email Verification API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to retrieve the email verification object from the ID in the email verification created event.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Email Verification Required error</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Returned in the API when attempting to authenticate a<i id='Handle email verification codes created via AuthKit'></i> user that requires email verification.</p>
+                                </div>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle email verification codes created via AuthKit</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you are using hosted AuthKit, you’ll need to handle <span>email_verification.created</span> events, using the events API or webhooks.</p>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full email verification object with this information, use the email verification ID from the event to call the Get Email Verification API.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can<i id='Handle email verification codes created via the API'></i> skip this step if you’re not using hosted AuthKit.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle email verification codes created via the API</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you are using the <label className='demo-docs-hyperlink'>authentication API</label>, an <span>email_verification_required</span> error will be returned if the user you’re authenticating needs to verify their email. This error contains an <span>email_verification_id</span> that can be used to call the Get Email Verification API endpoint which returns the email verification<i id='Send your email email verification'></i> object that contains the information needed to send the email.</p>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Send your email</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The recipient of the <span>email</span> should match the email attribute for the email verification object retrieved via the API, and the email should include the <span>code</span>. Recipients will input that code into AuthKit, or your own authentication UI, to verify their email.</p>
+                            </div><i id='Password reset'></i>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Password reset</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve turned off the default password reset emails, use the information below to send custom password reset emails.</p>
+
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>password_reset.created</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Event emitted when a user requests to reset their password, which can be consumed using the events API or webhooks.</p>
+                                </div>
+                            </div>
+                            <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Get Password Reset API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to retrieve the password reset object from the ID in the password reset created event.</p>
+                                </div>
+                            </div>
+                            <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "30%"}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                    <h5>Create Password Reset API</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "70%"}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Used to create a password reset object via the API without handling the<i id='Set up your password reset URL'></i> password reset created event.</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set up your password reset URL</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure you have the correct password reset URL set on your <i>Redirects</i> page. The default setting is the hosted AuthKit URL for resetting passwords. If you are using your own authentication UI, make sure the URL path is configured on your end to capture the <span>token</span> query parameter, and <label className='demo-docs-hyperlink'>use it to reset the password.</label></p>
+                            </div>
+
+                            <div id='img47.4' className={`enlargable-image-container ${this.state.enlargedImageId === 'img47.4' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img47.4')}>
+                                <img  src='/assets/custom_email_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+                            <i id='Handle password resets created via AuthKit'></i>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>A</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle password resets created via AuthKit</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you are using hosted AuthKit, you’ll need to handle <span>password_reset.created</span> events, using the events API or webhooks.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full password reset object with this information, use the password reset ID from the event to call the Get Password Reset API.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can skip this step if you’re not using hosted<i id='Handle password resets created via the API'></i> AuthKit.</p>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handle password resets created via the API</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’re creating password resets via the Create Password Reset API, you can send your own email using the information returned in the password reset object.</p>
+                            <i id='Send your email password reset'></i>
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Send your email</h3>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The recipient of the <span>email</span> should be the email attribute in the password reset object retrieved via the API. The body of the email should include a link where the user can reset their password. For most use cases, you can use the <span>password_reset_url</span> as this link.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you aren’t using hosted AuthKit, and your password reset path diverges from this pattern, you may want to construct your own URL with the <span>password_reset_token</span>, rather than using the <span>password_reset_url</span>.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </CSSTransition>
 

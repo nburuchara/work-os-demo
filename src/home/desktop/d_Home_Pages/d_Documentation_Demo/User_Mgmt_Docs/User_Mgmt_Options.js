@@ -108,6 +108,10 @@ const docs_sidebar_options = [
             {
                 id: 25,
                 levelName: "Impersonation"
+            },
+            {
+                id: 26,
+                levelName: "Custom Emails"
             }
         ]
     },

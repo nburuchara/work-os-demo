@@ -89,6 +89,13 @@ const results = [
 
     {id: "999544", name: "Impersonation", category: "User Management", page: "Impersonation", lastCat: "top"},
 
+
+        //! - CUSTOM EMAILS - !//
+
+    {id: "999520", name: "Custom Emails", category: "User Management", page: "Custom Emails", lastCat: "top"},
+
+
+
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
     //? - - - - - - - - - - - - - - - ?//
@@ -234,6 +241,16 @@ const results = [
     {id: "999540", name: "Auditing impersonation usage", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Auditing impersonation usage"},
     {id: "999539", name: "Integrating impersonation", category: "User Management", subCat1: "Impersonation", page: "Impersonation", lastCat: "Integrating impersonation"},
 
+        //! - CUSTOM EMAILS - !//
+
+    {id: "999519", name: "Introduction", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Introduction"},
+    {id: "999518", name: "Disabling default emails", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Disabling default emails"},
+    {id: "999517", name: "Invitations", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Invitations"},
+    {id: "999516", name: "Magic Auth", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Magic Auth"},
+    {id: "999515", name: "Email verification", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Email verification"},
+    {id: "999514", name: "Password reset", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "Password reset"},
+
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -278,13 +295,13 @@ const results = [
 
         //! - USERS AND ORGANIZATIONS - !//
 
-     {id: "999754", name: "Authentication methods", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Authentication methods"},
-     {id: "999753", name: "Identity linking", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Identity linking"},
-     {id: "999752", name: "Email verification", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Email verification"},
-     {id: "999751", name: "Domain-captured users", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Domain-captured users"},
-     {id: "999750", name: "Organization memberships", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization memberships"},
-     {id: "999749", name: "Organization access", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization access"},
-     {id: "999748", name: "Membership management", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Membership management"},
+    {id: "999754", name: "Authentication methods", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Authentication methods"},
+    {id: "999753", name: "Identity linking", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Identity linking"},
+    {id: "999752", name: "Email verification", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Email verification"},
+    {id: "999751", name: "Domain-captured users", category: "User Management", subCat1: "Users and Organizations", subCat2: "Users", page: "Users and Organizations", lastCat: "Domain-captured users"},
+    {id: "999750", name: "Organization memberships", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization memberships"},
+    {id: "999749", name: "Organization access", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Organization access"},
+    {id: "999748", name: "Membership management", category: "User Management", subCat1: "Users and Organizations", subCat2: "Organizations", page: "Users and Organizations", lastCat: "Membership management"},
 
         //! - SESSIONS - !//
 
@@ -326,6 +343,17 @@ const results = [
 
     {id: "999538", name: "Impersonation with authkit-nextjs", category: "User Management", subCat1: "Impersonation", subCat2: "Integrating impersonation", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
 
+        //! - CUSTOM EMAILS - !//
+
+    {id: "999513", name: "Set up your user invitation URL", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Set up your user invitation URL"},
+    {id: "999512", name: "Send your email", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Send your email invitations"},
+    {id: "999511", name: "Send your email", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Send your email magic auth"},
+    {id: "999510", name: "Send your email", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Send your email email verification"},
+    {id: "999509", name: "Set up your password reset URL", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Set up your password reset URL"},
+    {id: "999508", name: "Send your email", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Send your email password reset"},
+
+
+
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
     //? - - - - - - - - - - - - - - ?//
@@ -358,6 +386,20 @@ const results = [
 
     {id: "999793", name: "Configure OAuth providers", category: "User Management", subCat1: "Social Login", subCat2: "Getting Started", page: "Social Login", lastCat: "Configure OAuth providers"},
     {id: "999792", name: "Enable OAuth providers", category: "User Management", subCat1: "Social Login", subCat2: "Getting Started", page: "Social Login", lastCat: "Enable OAuth providers"},
+
+        //! - CUSTOM EMAILS - !//
+
+    {id: "999507", name: "Handle manually creating invitations", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Handle manually creating invitations"},
+    {id: "999506", name: "Handle invitations created via the API", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Handle invitations created via the API"},
+
+    {id: "999505", name: "Handle Magic Auth codes created via AuthKit", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via AuthKit"},
+    {id: "999504", name: "Handle Magic Auth codes created via the API", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via the API"},
+
+    {id: "999503", name: "Handle email verification codes created via AuthKit", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Handle email verification codes created via AuthKit"},
+    {id: "999502", name: "Handle email verification codes created via the API", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Handle email verification codes created via the API"},
+
+    {id: "999501", name: "Handle password resets created via AuthKit", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Handle password resets created via AuthKit"},
+    {id: "999500", name: "Handle password resets created via the API", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Handle password resets created via the API"},
 
 
 
@@ -860,8 +902,92 @@ const results = [
     {id: "999522", name: "After completing the setup instructions in the quick start guide, add the Impersonation component to your app code.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", subCat3: "Impersonation with authkit-nextjs", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
     {id: "999521", name: "The above will automatically render a visually distinct frame on your page with an option to hide it or stop the impersonation session.", category: "User Management", subCat1: "Impersonation", subCat2: "Auditing impersonation usage", subCat3: "Impersonation with authkit-nextjs", page: "Impersonation", lastCat: "Impersonation with authkit-nextjs"},
 
+        //! - CUSTOM EMAILS - !//
+
+        {id: "999499", name: "Learn how to send your own emails for user lifecycle events.", category: "User Management", subCat1: "Custom Emails", page: "Custom Emails", lastCat: "top"},
+        {id: "999498", name: "By default, WorkOS will send emails related to User Management for you, such as password reset and Magic Auth. If you’d like to customize email content or have more control over deliverability, you can turn off the default emails and deliver your own.", category: "User Management", subCat1: "Custom Emails", subCat2: "Introduction", page: "Custom Emails", lastCat: "Introduction"},
+
+        {id: "999497", name: "To change email settings for an environment, navigate to Authentication → Emails and select Configure emails. You should have an Admin role for to update this setting.", category: "User Management", subCat1: "Custom Emails", subCat2: "Disabling default emails", page: "Custom Emails", lastCat: "Disabling default emails"},
+
+        {id: "999496", name: "Once you’ve turned off the default user invitation emails, use the information below to send custom invitation emails.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999495", name: "invitation.created", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999494", name: "Event emitted when an invitation is created, which can be consumed using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999493", name: "Get Invitation API", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999492", name: "Used to retrieve the invitation object from the ID in the invitation created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999491", name: "Send Invitation API", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+        {id: "999490", name: "Used to create an invitation via the API without handling the invitation created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", page: "Custom Emails", lastCat: "Invitations"},
+
+        {id: "999489", name: "Make sure you have the correct user invitation URL set on your Redirects page. The default setting is the hosted AuthKit URL for accepting invitations. If you are using your own authentication UI, make sure the URL path is configured on your end to capture the invitation_token query parameter, and pass it into one of the authenticate methods.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Set up your user invitation URL", page: "Custom Emails", lastCat: "Set up your user invitation URL"},
+
+        {id: "999488", name: "If you’re creating invitations using the WorkOS dashboard, you’ll need to handle invitation.created events using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Handle manually creating invitations", page: "Custom Emails", lastCat: "Handle manually creating invitations"},
+        {id: "999487", name: "Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full invitation object with this information, use the invitation ID from the event to call the Get Invitation API.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Handle manually creating invitations", page: "Custom Emails", lastCat: "Handle manually creating invitations"},
+        {id: "999488", name: "You can skip this step if you don’t plan to create the invitations manually in the dashboard.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Handle manually creating invitations", page: "Custom Emails", lastCat: "Handle manually creating invitations"},
+
+        {id: "999487", name: "If you’re creating invites via the Send Invitation API, you can send your own email using the information returned in the invitation object.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Handle invitations created via the API", page: "Custom Emails", lastCat: "Handle invitations created via the API"},
+        {id: "999486", name: "If you also plan to create invitations manually in the dashboard, you can just handle invitation.created events as described above.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Handle invitations created via the API", page: "Custom Emails", lastCat: "Handle invitations created via the API"},
+
+        {id: "999485", name: "The recipient of the email should match the email attribute in the invitation object retrieved via the API. The body of the email should include a link where the user can accept the invitation. For most use cases, you can use the accept_invitation_url as this link.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email invitations"},
+        {id: "999484", name: "If you aren’t using hosted AuthKit, and your invitation acceptance path diverges from this pattern, you may want to construct your own URL with the token, rather than using the accept_invitation_url.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email invitations"},
+        {id: "999483", name: "Additionally, if the invitation object contains an organization ID and/or an inviter user ID, you may want to include that information in the body of the email.", category: "User Management", subCat1: "Custom Emails", subCat2: "Invitations", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email invitations"},
+
+        {id: "999482", name: "Once you’ve turned off the default Magic Auth emails, use the information below to send custom Magic Auth emails.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+
+        {id: "999481", name: "magic_auth.created", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+        {id: "999480", name: "Event emitted when a user initiates a Magic Auth authentication, which can be consumed using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+        {id: "999479", name: "Get Magic Auth API", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+        {id: "999478", name: "Used to retrieve the Magic Auth object from the ID in the Magic Auth created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+        {id: "999477", name: "Create Magic Auth API", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+        {id: "999476", name: "Used to create a Magic Auth code via the API without handling the Magic Auth created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", page: "Custom Emails", lastCat: "Magic Auth"},
+
+        {id: "999475", name: "If you are using hosted AuthKit, you’ll need to handle magic_auth.created events, using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", subCat3: "Handle Magic Auth codes created via AuthKit", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via AuthKit"},
+        {id: "999474", name: "Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full Magic Auth object with this information, use the Magic Auth ID from the event to call the Get Magic Auth API.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", subCat3: "Handle Magic Auth codes created via AuthKit", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via AuthKit"},
+        {id: "999473", name: "You can skip this step if you’re not using hosted AuthKit.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", subCat3: "Handle Magic Auth codes created via AuthKit", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via AuthKit"},
+
+        {id: "999472", name: "If you’re initiating Magic Auth authentication via the Create Magic Auth API, you can send your own email using the information returned in the Magic Auth object.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", subCat3: "Handle Magic Auth codes created via the API", page: "Custom Emails", lastCat: "Handle Magic Auth codes created via the API"},
+
+        {id: "999471", name: "The recipient of the email should match the email attribute for the Magic Auth object retrieved via the API, and the email should include the code. Recipients will input that code into AuthKit, or your own authentication UI, to authenticate into your application via Magic Auth.", category: "User Management", subCat1: "Custom Emails", subCat2: "Magic Auth", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email magic auth"},
+
+        {id: "999470", name: "Once you’ve turned off the default email verification emails, use the information below to send custom email verification emails.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999469", name: "email_verification.created", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999468", name: "Event emitted when a user requires email verification, which can be consumed using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999467", name: "Get Email Verification API", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999466", name: "Used to retrieve the email verification object from the ID in the email verification created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999465", name: "Email Verification Required error", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+        {id: "999464", name: "Returned in the API when attempting to authenticate a user that requires email verification.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", page: "Custom Emails", lastCat: "Email verification"},
+
+
+        {id: "999463", name: "If you are using hosted AuthKit, you’ll need to handle email_verification.created events, using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", subCat3: "Handle email verification codes created via AuthKit", page: "Custom Emails", lastCat: "Handle email verification codes created via AuthKit"},
+        {id: "999462", name: "Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full email verification object with this information, use the email verification ID from the event to call the Get Email Verification API.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", subCat3: "Handle email verification codes created via AuthKit", page: "Custom Emails", lastCat: "Handle email verification codes created via AuthKit"},
+        {id: "999461", name: "You can skip this step if you’re not using hosted AuthKit.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", subCat3: "Handle email verification codes created via AuthKit", page: "Custom Emails", lastCat: "Handle email verification codes created via AuthKit"},
+
+        {id: "999460", name: "If you are using the authentication API, an email_verification_required error will be returned if the user you’re authenticating needs to verify their email. This error contains an email_verification_id that can be used to call the Get Email Verification API endpoint which returns the email verification object that contains the information needed to send the email.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", subCat3: "Handle email verification codes created via the API", page: "Custom Emails", lastCat: "Handle email verification codes created via the API"},
+
+        {id: "999459", name: "The recipient of the email should match the email attribute for the email verification object retrieved via the API, and the email should include the code. Recipients will input that code into AuthKit, or your own authentication UI, to verify their email.", category: "User Management", subCat1: "Custom Emails", subCat2: "Email verification", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email email verification"},
+
+        {id: "999458", name: "Once you’ve turned off the default password reset emails, use the information below to send custom password reset emails.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999457", name: "password_reset.created", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999456", name: "Event emitted when a user requests to reset their password, which can be consumed using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999455", name: "Get Password Reset API", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999454", name: "Used to retrieve the password reset object from the ID in the password reset created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999453", name: "Create Password Reset API", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+        {id: "999452", name: "Used to create a password reset object via the API without handling the password reset created event.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", page: "Custom Emails", lastCat: "Password reset"},
+
+
+        {id: "999451", name: "Make sure you have the correct password reset URL set on your Redirects page. The default setting is the hosted AuthKit URL for resetting passwords. If you are using your own authentication UI, make sure the URL path is configured on your end to capture the token query parameter, and use it to reset the password.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Set up your password reset URL", page: "Custom Emails", lastCat: "Set up your password reset URL"},
+
+        {id: "999450", name: "If you are using hosted AuthKit, you’ll need to handle password_reset.created events, using the events API or webhooks.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Handle password resets created via AuthKit", page: "Custom Emails", lastCat: "Handle password resets created via AuthKit"},
+
+        {id: "999449", name: "Due to security concerns, the events do not contain the sensitive information you’ll need to send the email. To retrieve the full password reset object with this information, use the password reset ID from the event to call the Get Password Reset API.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Handle password resets created via AuthKit", page: "Custom Emails", lastCat: "Handle password resets created via AuthKit"},
+
+        {id: "999448", name: "You can skip this step if you’re not using hosted AuthKit.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Handle password resets created via AuthKit", page: "Custom Emails", lastCat: "Handle password resets created via AuthKit"},
+
+        {id: "999447", name: "If you’re creating password resets via the Create Password Reset API, you can send your own email using the information returned in the password reset object.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Handle password resets created via the API", page: "Custom Emails", lastCat: "Handle password resets created via the API"},
+
+        {id: "999446", name: "The recipient of the email should be the email attribute in the password reset object retrieved via the API. The body of the email should include a link where the user can reset their password. For most use cases, you can use the password_reset_url as this link.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email password resets"},
+        {id: "999445", name: "If you aren’t using hosted AuthKit, and your password reset path diverges from this pattern, you may want to construct your own URL with the password_reset_token, rather than using the password_reset_url.", category: "User Management", subCat1: "Custom Emails", subCat2: "Password reset", subCat3: "Send your email", page: "Custom Emails", lastCat: "Send your email password resets"},
+
 ]
 
-//* latest: 999521 - impersontaion
+//* latest: 999445 - custom emails
 
 export default results;
