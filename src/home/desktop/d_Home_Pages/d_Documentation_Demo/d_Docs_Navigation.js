@@ -733,6 +733,7 @@ const Styles = styled.div `
 
 .demo-next-section-container {
     margin-top: 5%;
+    margin-bottom: 1%;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
     border: 1px solid #ccc;
@@ -1850,6 +1851,11 @@ const Styles = styled.div `
     font-family: poppins;
     font-size: 70%;
     cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+.demo-docs-search-bar-input button:hover {
+    border: 1px solid #999999;
 }
 
     // - - DOCK BUTTONS - - //
@@ -1906,7 +1912,77 @@ const Styles = styled.div `
     transition: transform 500ms, opacity 500ms !important;
 }
 
-        //! - - - - - SEARCH FUNCTIONALITY - - - - - - - 1//
+    //* - - FILTER BUTTONS FOR SEARCH - - *//
+
+
+.filterSearchBtns {
+    float: right;
+    right: 3.75%;
+    position: fixed;
+    margin-top: 0px;
+    padding: 0.2%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    background-color: #f9f9fb;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-family: poppins;
+    font-size: 75%;
+}
+
+.filterSearchBtns:hover {
+    border: 1px solid #999999;
+    cursor: pointer;
+}
+
+.filterSearchBtns-sidebar {
+    float: right;
+    right: 3.5%;
+    position: fixed;
+    margin-top: 0px;
+    padding: 0.2%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    background-color: #f9f9fb;
+    border-radius: 20px;
+    border: 1px solid #f9f9fb;
+    font-family: poppins;
+    font-size: 65%;
+}
+
+.filterSearchBtns-sidebar:hover {
+    border: 1px solid #999999;
+    cursor: pointer;
+}
+
+.filterSearchOptions { 
+    float: right;
+    right: 3.75%;
+    position: fixed;
+    margin-top: 2.25%;
+    padding: 0.2%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    background-color: #f9f9fb;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: poppins;
+    font-size: 75%;
+}
+.filterSearchOption {
+    text-align: right;
+    // font-size: 93%;
+}
+.filterSearchOption label:hover {
+    color: #6363f1;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+        //? - - - - END OF DOCK BAR CSS - - - - ?//
+
+        //! - - - - - SEARCH RESULTS - - - - - - - 1//
 
     // - - SEARCH RESULTS - - //
 
@@ -1917,8 +1993,8 @@ const Styles = styled.div `
     background-color: white;
     height: 40vh;
     border: 1px solid #cccccc;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-radius: 7px;
+    // border-bottom-right-radius: 7px;
     padding: 2%;
     margin-top: 6%;
 }
@@ -2777,7 +2853,7 @@ export default class DocsNavigationMenu extends Component {
                                 />
                                 {this.state.clearSearchBtn && 
                                     <button onClick={this.clearSearchBar}>Clear</button>
-                                }  
+                                } 
                             </div>
                             <div style={{paddingTop: dockMenuBtnsPaddingTop}} className='demo-docs-search-bar-btns'>
                                 <div className='dd-search-bar-btn'>
@@ -2805,6 +2881,17 @@ export default class DocsNavigationMenu extends Component {
                             </div>
                             {searchInput !== "" && (
                                 <div className='searchResults'>
+
+                                    <button className='filterSearchBtns'>Filter search</button>
+                                    {this.state.show}
+                                    <div className='filterSearchOptions'>
+                                        <p style={{marginTop: "2%", marginBottom: "1%", fontWeight: "bold", textAlign: "left", fontSize: "87.5%"}}><u>Docs sections: </u></p>
+                                        <div className='filterSearchOption'><p><label>All docs</label></p></div>
+                                        <div className='filterSearchOption'><p><label>User Management</label></p></div>
+                                        <div className='filterSearchOption'><p><label>Standalone APIs</label></p></div>
+                                        <div className='filterSearchOption'><p><label>Events and webhooks</label></p></div>
+                                        <div className='filterSearchOption'><p><label>Resources</label></p></div>
+                                    </div>
                                     {isSearchLoading && 
                                         <div>
                                             <p>Loading...</p>
@@ -2930,6 +3017,7 @@ export default class DocsNavigationMenu extends Component {
                             </div>
                             {searchInput !== "" && (
                                 <div style={{marginTop: "9%"}} className='searchResults'>
+                                    <button className='filterSearchBtns-sidebar'>User Management</button>
                                     {isSearchLoading && 
                                         <div>
                                             <p>Loading...</p>
