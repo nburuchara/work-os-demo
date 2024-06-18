@@ -54,6 +54,7 @@ const results = [
      {id: "999384", name: "Service provider-initiated SSO", category: "Standalone APIs", subCat1: "Test SSO", subCat2: "Testing with the Test Identity Provider", page: "Test SSO", lastCat: "Service provider-initiated SSO"},
      {id: "999383", name: "Guest email domain", category: "Standalone APIs", subCat1: "Test SSO", subCat2: "Testing with the Test Identity Provider", page: "Test SSO", lastCat: "Guest email domain"},
      {id: "999382", name: "Error response", category: "Standalone APIs", subCat1: "Test SSO", subCat2: "Testing with the Test Identity Provider", page: "Test SSO", lastCat: "Error response"},
+     {id: "999382.5", name: "Identity provider-initiated SSO", category: "Standalone APIs", subCat1: "Test SSO", subCat2: "Testing with the Test Identity Provider", page: "Test SSO", lastCat: "Identity provider-initiated SSO"},
      {id: "999381", name: "Follow the Admin Portal instructions", category: "Standalone APIs", subCat1: "Test SSO", subCat2: "Testing with other identity providers", page: "Test SSO", lastCat: "Follow the Admin Portal instructions"},
 
 

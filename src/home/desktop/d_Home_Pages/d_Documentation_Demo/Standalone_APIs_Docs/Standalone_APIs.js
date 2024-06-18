@@ -1050,6 +1050,7 @@ export default class StandaloneAPIs extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Test SSO</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to test your Single Sign-On integration end-to-end.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Testing with the Test Identity Provider' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing with the Test Identity Provider</h1>
@@ -1059,6 +1060,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img51' className={`enlargable-image-container ${this.state.enlargedImageId === 'img51' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img51')}>
                                 <img  src='/assets/test_sso_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Getting started'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Getting started</h3>
 
@@ -1068,9 +1070,11 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/test_sso_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
+                            <i id='Service provider-initiated SSO'></i>
+
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Service provider-initiated SSO</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This case is likely the first <label className='demo-docs-hyeprlink'>login flow</label> you would test when implementing SSO in your app. The test simulates users initiating authentication from your sign-in page. In this scenario, the user enters their email in your app, gets redirected to the identity provider, and then is redirected back to your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This case is likely the first <label className='demo-docs-hyeprlink'>login flow</label> you would test when implementing SSO in your app. The test simulates users initiating authentication from your sign-in page. In this scenario, the user enters their email in your app, gets redirected to the identity provider,<i id='Identity provider-initiated SSO'></i> and then is redirected back to your application.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Identity provider-initiated SSO</h3>
 
@@ -1081,19 +1085,19 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Ensure <label className='demo-docs-hyperlink'>Authkit is disabled</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> before testing.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Ensure <label className='demo-docs-hyperlink'><i id='Guest email domain'></i>Authkit is disabled</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> before testing.</p>
                                 </div>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Guest email domain</h3>
                             
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users authenticating with an email domain different from the verified domain of the test organization,<span>example.com</span>. A relevant scenario is authenticating freelance users, whose email domain is not owned by the company.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates users authenticating with an email domain different from the verified domain of the test organization,<span>example.com</span>. A relevant scenario is authenticating freelance<i id='Error response'></i> users, whose email domain is not owned by the company.</p>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Error response</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates a generic <label className='demo-docs-hyperlink'>error response</label> from the user’s identity provider. In this scenario, SSO authentication has failed for the user. Below is an example of the error-related parameters passed to the <label className='demo-docs-hyperlink'>redirect URI</label> in your application.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates a generic <label className='demo-docs-hyperlink'>error response</label> from the user’s identity provider. In this scenario, SSO authentication has failed for the user. Below is an example of the error-related parameters passed to the <label className='demo-docs-hyperlink'>redirect URI</label> in your application<i id='Testing with other identity providers'></i>.</p>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -1101,7 +1105,7 @@ export default class StandaloneAPIs extends Component {
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test Identity Provider saves time by providing an out of the box experience compared to the configuration process that someone using a real identity provider would have to go through to enable Single Sign-On for your app.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your integration works with the Test Identity Provider, you can be sure it will work with other identity providers. However, it may be helpful to also learn about the setup process that your customers will go through on their side, which varies depending on a specific identity provider.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your integration works with the Test Identity Provider, you can be sure it will work with other identity providers. However, it may be helpful to also learn about the setup process that your customers will go <i id='Create an organization'></i>through on their side, which varies depending on a specific identity provider.</p>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1117,7 +1121,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img53' className={`enlargable-image-container ${this.state.enlargedImageId === 'img53' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img53')}>
                                 <img  src='/assets/test_sso_img3.avif' alt="Enlargable" className="image" />
                             </div>
-
+                            <i id='Create an connection'></i>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -1144,6 +1148,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img54' className={`enlargable-image-container ${this.state.enlargedImageId === 'img54' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img54')}>
                                 <img  src='/assets/test_sso_img4.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Follow the Admin Portal instructions'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Follow the Admin Portal instructions</h3>
 
@@ -1153,7 +1158,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/test_sso_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The setup instructions you’ve seen in the Admin Portal are also available directly in the docs if you want to create a connection manually:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The setup instructions you’ve seen in the Admin Portal are also available directly in the docs if you want to create a connection manually:<i id='Okta'></i></p>
 
                             <div className='sso-manual-btns-container'>
                                 <div className={sidebarMenuClicked ? "sso-manual-sidebar-btn-container" : "sso-manual-btn-container"}>
