@@ -612,6 +612,8 @@ export default class StandaloneAPIs extends Component {
         return(
             <Styles>
 
+                    {/* - -  SINGLE SIGN-ON - -  */}
+
                 <CSSTransition in={gettingStarted}
                 timeout={500}
                 classNames="docs-side-panel"
@@ -2055,23 +2057,24 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Launch Checklist</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Launch Checklist</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Make sure you’re ready to take your app to production.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Implement complementary enterprise features' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implement complementary enterprise features</h1>
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrate the WorkOS <label className='demo-docs-hyperlink'>Admin Portal</label> to enable your users to onboard and set up SSO themselves. </p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ntegrate the WorkOS Directory Sync API for automatic user updating, provisioning, and deprovisioning.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrate the WorkOS Directory Sync API for automatic user updating,<i id='Before you start'></i> provisioning, and deprovisioning.</p></li>
                             </ul>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Before you start</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out<i id='Create an IP Allowlist'></i> of the box, following best practices.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an IP Allowlist</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS makes use of Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for redirect requests, you can use the IP Ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS makes use of Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for redirect requests, you<i id='Go-live checklist'></i> can use the IP Ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Go-live checklist</h1>
 
@@ -2154,7 +2157,7 @@ export default class StandaloneAPIs extends Component {
                                     <button onClick={() => this.checklistClicked('8')} style={{backgroundColor: launchCheck8 ? "#6363f1" : "white", width: sidebarMenuClicked ? "13px" : "", height: sidebarMenuClicked ? "13px" : ""}}>{launchCheck8 ? <img style={{width: sidebarMenuClicked ? "80%" : "", marginBottom: sidebarMenuClicked ? "11%" : ""}} src='/assets/launch_checklist_checkmark_icon.png' alt='no img available'/> : <p></p>}</button>
                                 </div>
                                 <div className='checklist-text'>
-                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add Connections for your customers in the Production Environment</p>
+                                    <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i id='Frequently asked questions'></i>Add Connections for your customers in the Production<i id='How should an application handle the first time a user authenticates using WorkOS?'></i> Environment</p>
                                 </div>
                             </div>
 
@@ -2164,20 +2167,20 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is authenticating to your application for the first time via SSO and doesn’t have an account, you can implement just-in-time provisioning to create a user when authentication is complete.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also leverage <label className='demo-docs-hyperlink'>Directory Sync</label> to pre-provision users with API endpoints or webhooks. In this case, the user will already be created in your application when they authenticate for the first time.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also leverage <label className='demo-docs-hyperlink'>Directory Sync</label> to pre-provision users with API endpoints or webhooks. In this case, the user will already be created in your application when they<i id='Can we add SSO authentication for a current user in an application?'></i> authenticate for the first time.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can we add SSO authentication for a current user in an application?</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is authenticating to your application via SSO, but already has an account (with username/password for example), you can “upgrade” them to SSO. Usually the emails are the same for both methods of authentication, so you can match on email address. Once SSO via WorkOS is enabled, you can restrict users to sign in with only SSO.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is authenticating to your application via SSO, but already has an account (with username/password for example), you can “upgrade” them to SSO. Usually the emails are the same for both methods of authentication, so you can match on email address. Once SSO via WorkOS is enabled, you can restrict<i id='How does WorkOS manage user attributes from an identity provider?'></i> users to sign in with only SSO.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How does WorkOS manage user attributes from an identity provider?</h3>
 
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS normalizes user attributes so you can expect known values such as <span>id</span>, <span>email</span>,<span>firstName</span>, and <span>lastName</span>. You will still receive all of the attributes sent by your identity provider in the <span>raw_attributes</span> object.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS normalizes user attributes so you can expect known values such as <span>id</span>, <span>email</span>,<span>firstName</span>, and <span>lastName</span>. You will still receive all of the attributes sent by your identity<i id='Is the user attribute mapping configurable in WorkOS?'></i> provider in the <span>raw_attributes</span> object.</p>
                             
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Is the user attribute mapping configurable in WorkOS?</h3>
                             
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes. For example, let’s say the <span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</span> attribute contains the user email rather than the <span>surname</span> as the attribute name suggests. In these edge cases, WorkOS will identify any attributes that are misconfigured and recommend correct mapping in the “Attribute Mapper“ section of the “Connection info” page.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes. For example, let’s say the <span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</span> attribute contains the user email rather than the <span>surname</span> as the attribute name suggests. In these edge cases, WorkOS will identify any attributes that are misconfigured and recommend correct mapping in the “Attribute<i id='What does the “Allow Profiles Outside Organization” option do?'></i> Mapper“ section of the “Connection info” page.</p>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>What does the “Allow Profiles Outside Organization” option do?</h3>
 
@@ -2185,12 +2188,13 @@ export default class StandaloneAPIs extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enabling this option removes this restriction and allows user profiles with any email address to sign in through Connections under this Organization.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If this option is enabled, your code can not exclusively trust the returned <span>email</span> attribute on user profiles to be a verified email address. Instead, you must use the <span>organization_id</span> or <span>connection_id</span> in order to verify that the profile belongs to whom it claims.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If this option is enabled, your code can not exclusively trust the returned <span>email</span> attribute on user profiles to be a verified email address. Instead, you must use the <span>organization_id</span> or <span>connection_id</span> in order to verify<i id='What does “There are 0 profiles awaiting reconciliation” refer to?'></i> that the profile belongs to whom it claims.</p>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>What does “There are 0 profiles awaiting reconciliation” refer to?</h3>
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This refers to the number of user profiles that have inconsistent attribute mappings, and that need to be updated in order to successfully authenticate.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This refers to the number of user profiles that have inconsistent attribute mappings, and that need to be updated in<i id='How do I integrate WorkOS SSO with my native mobile application?'></i> order to successfully authenticate.</p>
+
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How do I integrate WorkOS SSO with my native mobile application?</h3>
 
@@ -2223,35 +2227,36 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>FAQ for IT teams</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>FAQ for IT teams</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Answers to common questions from your customer’s IT team.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='What is WorkOS?' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is WorkOS?</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS is a software company that provides a suite of products to make an app enterprise-ready. These products include Single Sign-On, Directory Sync, and User Management, among others.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate WorkOS services into their apps in order to provide a secure authentication and user provisioning experience. It’s trusted by companies like Webflow, Plaid, Vercel, and many others.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate WorkOS services into their apps in order to provide a secure authentication and user provisioning experience. It’s trusted by companies<i id='What data does WorkOS store?'></i> like Webflow, Plaid, Vercel, and many others.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What data does WorkOS store?</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For Single Sign-On, WorkOS stores the user profile from the identity provider. This includes the user’s name, email and IP address.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For Directory Sync, WorkOS will store the data that the identity provider sends. The shape and content of that data is at the discretion of the identity provider.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For Directory Sync, WorkOS will store the data that the identity provider sends. The shape and content of that data is at the discretion of the identity provider<i id='How do developer apps communicate with WorkOS?'></i>.</p>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information, view our <label className='demo-docs-hyperlink'>Privacy Policy</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How do developer apps communicate with WorkOS?</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate with WorkOS using its Rest API and the related SDKs. You can find a list of all WorkOS API endpoints in the <label className='demo-docs-hyperlink'>API reference.</label></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Developers integrate with WorkOS using its Rest API and the related SDKs. You can find a list of all WorkOS API endpoints in the<i id='What IP addresses does WorkOS use?'></i>  <label className='demo-docs-hyperlink'>API reference.</label></p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What IP addresses does WorkOS use?</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS uses Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for the WorkOS API, you can use the IP ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS uses Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for the WorkOS API, you can use the IP ranges listed in the <label className='demo-docs-hyperlink'>Cloudflare documentation<i id='Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?'></i></label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes, WorkOS is compliant with all the above and regularly undergoes penetration testing.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes,<i id='Is WorkOS GDPR compliant?'></i> WorkOS is compliant with all the above and regularly undergoes penetration testing.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Is WorkOS GDPR compliant?</h1>
 
@@ -2278,7 +2283,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2292,7 +2297,7 @@ export default class StandaloneAPIs extends Component {
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identity Provider</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Service Provider (<label className='demo-docs-hyperlink'>SP</label>)</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User Agent, i.e. a browser</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User Agent, i.e. a browser<i id='SP to IdP security features'></i></p></li>
                             </ul>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2303,6 +2308,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img68' className={`enlargable-image-container ${this.state.enlargedImageId === 'img68' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img68')}>
                                 <img  src='/assets/saml_secrity_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='SAML request signing'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>SAML request signing</h3>
 
@@ -2338,7 +2344,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports SAML request signing for all compatible connection types. Please <label className='demo-docs-hyperlink'>contact WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable it.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports SAML request signing for all compatible connection types. Please <label className='demo-docs-hyperlink'>contact WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable it.<i id='IdP to SP security features'></i></p>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -2361,6 +2367,8 @@ export default class StandaloneAPIs extends Component {
                             snippet="SAML response" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <i id='Signed response assertions'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signed response assertions</h3>
 
@@ -2390,7 +2398,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Signed response assertions are enabled in the setup steps when you create a <label className='demo-docs-hyperlink'>SAML connection</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Signed response assertions<i id='Signed response message envelope'></i> are enabled in the setup steps when you create a <label className='demo-docs-hyperlink'>SAML connection</label>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Signed response message envelope</h3>
 
@@ -2420,7 +2428,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please <label className='demo-docs-hyperlink'>SAML Security Considerations</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable encrypted response assertion.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please <label className='demo-docs-hyperlink'>SAML Security Considerations</label><span className='demo-docs-hyperlink-icon'><img id='Encrypted response attributes' className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable encrypted response assertion.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Encrypted response attributes</h3>
 
@@ -2450,7 +2458,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS does not currently support encrypted response attributes. It is recommended to use assertion encryption to envelope all the attributes if confidentiality is required.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS does not currently support encrypted response attributes. It is recommended to use assertion encryption to envelope <i id='Implementing SSO with WorkOS'></i>all the attributes if confidentiality is required.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
@@ -2468,6 +2476,8 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 </CSSTransition>
+
+                    {/* - -  DIRECTORY SYNC - -  */}
 
                 <CSSTransition in={directorySync}
                 timeout={500}

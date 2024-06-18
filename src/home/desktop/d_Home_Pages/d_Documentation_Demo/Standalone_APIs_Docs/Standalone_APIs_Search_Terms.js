@@ -36,6 +36,18 @@ const results = [
 
     {id: "999250", name: "JIT Provisioning", category: "Standalone APIs", subCat1: "Single Sign-On", page: "JIT Provisioning", lastCat: "top"},
 
+    //! - LAUNCH CHECKLIST - !//
+
+    {id: "999213", name: "Launch Checklist", category: "Standalone APIs", subCat1: "Single Sign-On", page: "Launch Checklist", lastCat: "top"},
+
+    //! - FAQ FOR IT TEAMS - !//
+
+    {id: "999173", name: "FAQ for IT teams", category: "Standalone APIs", subCat1: "Single Sign-On", page: "FAQ for IT teams", lastCat: "top"},
+
+    //! - SAML SECURITY - !//
+
+    {id: "999158", name: "SAML Security", category: "Standalone APIs", subCat1: "Single Sign-On", page: "SAML Security", lastCat: "top"},
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -91,6 +103,28 @@ const results = [
     {id: "999246", name: "JIT provisioning with WorkOS SSO", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", page: "JIT Provisioning", lastCat: "JIT provisioning with WorkOS SSO"},
     {id: "999245", name: "Implementing SSO with WorkOS", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", page: "JIT Provisioning", lastCat: "Implementing SSO with WorkOS"},
 
+    //! - LAUNCH CHECKLIST - !//
+
+    {id: "999212", name: "Implement complementary enterprise features", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", page: "Launch Checklist", lastCat: "Implement complementary enterprise features"},
+    {id: "999211", name: "Create an IP Allowlist", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", page: "Launch Checklist", lastCat: "Create an IP Allowlist"},
+    {id: "999210", name: "Go-live checklist", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999209", name: "Frequently asked questions", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", page: "Launch Checklist", lastCat: "Frequently asked questions"},
+
+    //! - FAQ FOR IT TEAMS - !//
+
+    {id: "999172", name: "What is WorkOS?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "What is WorkOS?"},
+    {id: "999171", name: "What data does WorkOS store?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "What data does WorkOS store?"},
+    {id: "999170", name: "How do developer apps communicate with WorkOS?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "How do developer apps communicate with WorkOS?"},
+    {id: "999169", name: "What IP addresses does WorkOS use?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "What IP addresses does WorkOS use?"},
+    {id: "999168", name: "Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?"},
+    {id: "999167", name: "Is WorkOS GDPR compliant?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "Is WorkOS GDPR compliant?"},
+
+    //! - SAML SECURITY - !//
+
+    {id: "999157", name: "SP to IdP security features", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "SP to IdP security features"},
+    {id: "999156", name: "IdP to SP security features", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "IdP to SP security features"},
+    {id: "999155", name: "Implementing SSO with WorkOS", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "Implementing SSO with WorkOS"},
+
     
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -145,6 +179,24 @@ const results = [
     {id: "999244", name: "Sample scenario", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "What is JIT provisioning?", page: "JIT Provisioning", lastCat: "Sample scenario"},
     {id: "999243", name: "New account creation", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "What is JIT provisioning?", page: "JIT Provisioning", lastCat: "New account creation"},
     {id: "999242", name: "Linking an existing user", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "What is JIT provisioning?", page: "JIT Provisioning", lastCat: "Linking an existing user"},
+
+    //! - LAUNCH CHECKLIST - !//
+
+    {id: "999208", name: "Before you start", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Implement complementary enterprise features", page: "Launch Checklist", lastCat: "Before you start"},
+    {id: "999207", name: "How should an application handle the first time a user authenticates using WorkOS?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "Frequently asked questions"},
+    {id: "999206", name: "Can we add SSO authentication for a current user in an application?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "Can we add SSO authentication for a current user in an application?"},
+    {id: "999205", name: "How does WorkOS manage user attributes from an identity provider?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "How does WorkOS manage user attributes from an identity provider?"},
+    {id: "999204", name: "Is the user attribute mapping configurable in WorkOS?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "Is the user attribute mapping configurable in WorkOS?"},
+    {id: "999203", name: "What does “There are 0 profiles awaiting reconciliation” refer to?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "What does “There are 0 profiles awaiting reconciliation” refer to?"},
+    {id: "999202", name: "How do I integrate WorkOS SSO with my native mobile application?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "How do I integrate WorkOS SSO with my native mobile application?"},
+    {id: "999201", name: "How do I integrate WorkOS SSO with my native mobile application?", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", page: "Launch Checklist", lastCat: "How do I integrate WorkOS SSO with my native mobile application?"},
+
+    //! - SAML SECURITY - !//
+
+    {id: "999154", name: "SAML request signing", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", page: "SAML Security", lastCat: "SAML request signing"},
+    {id: "999153", name: "Signed response assertions", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response assertions"},
+    {id: "999152", name: "Signed response message envelope", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response message envelope"},
+    {id: "999151", name: "Encrypted response attributes", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Encrypted response attributes"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -406,7 +458,6 @@ const results = [
     {id: "999233.3", name: "Provisioning users via Directory Sync", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "User provisioning strategies", page: "JIT Provisioning", lastCat: "User provisioning strategies"},
     {id: "999233.4", name: "JIT provisioning via SSO", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "User provisioning strategies", page: "JIT Provisioning", lastCat: "User provisioning strategies"},
     {id: "999233.5", name: "The type of provisioning needed will depend on your app’s architecture and level of enterprise feature support:", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "User provisioning strategies", page: "JIT Provisioning", lastCat: "User provisioning strategies"},
-   
 
     {id: "999232", name: "JIT provisioning creates a user account with associated identity information when a user authenticates via SSO for the first time. IT admins often use JIT provisioning to quickly set up accounts in an app. Typically, apps that implement only SSO will have JIT provisioning support as the alternative is self-registration by individual users or manual entry of all users by the IT admin.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "What is JIT provisioning?", page: "JIT Provisioning", lastCat: "What is JIT provisioning?"},
 
@@ -434,10 +485,96 @@ const results = [
 
     {id: "999214", name: "This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "JIT Provisioning", subCat3: "Implementing SSO with WorkOS", page: "JIT Provisioning", lastCat: "Implementing SSO with WorkOS"},
 
+    //! - LAUNCH CHECKLIST - !//
 
+    {id: "999200", name: "Make sure you’re ready to take your app to production.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", page: "Launch Checklist", lastCat: "top"},
+    {id: "999199", name: "Integrate the WorkOS Admin Portal to enable your users to onboard and set up SSO themselves.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Implement complementary enterprise features", page: "Launch Checklist", lastCat: "Implement complementary enterprise features"},
+    {id: "999198", name: "Integrate the WorkOS Directory Sync API for automatic user updating, provisioning, and deprovisioning.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Implement complementary enterprise features", page: "Launch Checklist", lastCat: "Implement complementary enterprise features"},
+    {id: "999197", name: "Integrate the WorkOS Directory Sync API for automatic user updating, provisioning, and deprovisioning.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Implement complementary enterprise features", page: "Launch Checklist", lastCat: "Implement complementary enterprise features"},
+
+    {id: "999196", name: "This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Implement complementary enterprise features", subCat4: "Before you start", page: "Launch Checklist", lastCat: "Before you start"},
+
+    {id: "999195", name: "WorkOS makes use of Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for redirect requests, you can use the IP Ranges listed in the Cloudflare documentation.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Create an IP Allowlist", page: "Launch Checklist", lastCat: "Create an IP Allowlist"},
+
+    {id: "999194", name: "Implement an SSO UI/UX. See our guide for ideas – UI/UXBest Practices for IdP & SP-Initiated SSO", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999193", name: "Test the end-to-end SSO experience in your Staging environment.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999192", name: "Unlock your Production environment by adding your billing information", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999191", name: "Set your Production Client’s ID and API Key as environment variables", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999190", name: "Secure your Production Project’s API key", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999189", name: "Configure production redirect URI(s) in your Product Project. Verify the default redirect URI is correct", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999189.5", name: "Ensure that your application can receive redirects from WorkOS Depending on your network architecture, you may need to allowlist incoming redirect traffic from api.workos.com.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+    {id: "999188", name: "Add Connections for your customers in the Production Environment", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Go-live checklist", page: "Launch Checklist", lastCat: "Go-live checklist"},
+
+    {id: "999187", name: "If a user is authenticating to your application for the first time via SSO and doesn’t have an account, you can implement just-in-time provisioning to create a user when authentication is complete.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How should an application handle the first time a user authenticates using WorkOS?", page: "Launch Checklist", lastCat: "How should an application handle the first time a user authenticates using WorkOS?"},
+    {id: "999186", name: "You can also leverage Directory Sync to pre-provision users with API endpoints or webhooks. In this case, the user will already be created in your application when they authenticate for the first time.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How should an application handle the first time a user authenticates using WorkOS?", page: "Launch Checklist", lastCat: "How should an application handle the first time a user authenticates using WorkOS?"},
+
+    {id: "999185", name: "If a user is authenticating to your application via SSO, but already has an account (with username/password for example), you can “upgrade” them to SSO. Usually the emails are the same for both methods of authentication, so you can match on email address. Once SSO via WorkOS is enabled, you can restrict users to sign in with only SSO.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "Can we add SSO authentication for a current user in an application?", page: "Launch Checklist", lastCat: "Can we add SSO authentication for a current user in an application?"},
+
+    {id: "999184", name: "WorkOS normalizes user attributes so you can expect known values such as id, email,firstName, and lastName. You will still receive all of the attributes sent by your identity provider in the raw_attributes object.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How does WorkOS manage user attributes from an identity provider?", page: "Launch Checklist", lastCat: "How does WorkOS manage user attributes from an identity provider?"},
+
+    {id: "999183", name: "Yes. For example, let’s say the http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname attribute contains the user email rather than the surname as the attribute name suggests. In these edge cases, WorkOS will identify any attributes that are misconfigured and recommend correct mapping in the “Attribute Mapper“ section of the “Connection info” page.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "Is the user attribute mapping configurable in WorkOS?", page: "Launch Checklist", lastCat: "Is the user attribute mapping configurable in WorkOS?"},
+
+    {id: "999181", name: "By default, WorkOS restricts user profiles for SAML Connections to profiles that have email domains that are in the set of User Email Domains on the Organization.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "What does the “Allow Profiles Outside Organization” option do?", page: "Launch Checklist", lastCat: "What does the “Allow Profiles Outside Organization” option do?"},
+    {id: "999180", name: "Enabling this option removes this restriction and allows user profiles with any email address to sign in through Connections under this Organization.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "What does the “Allow Profiles Outside Organization” option do?", page: "Launch Checklist", lastCat: "What does the “Allow Profiles Outside Organization” option do?"},
+    {id: "999179", name: "If this option is enabled, your code can not exclusively trust the returned email attribute on user profiles to be a verified email address. Instead, you must use the organization_id or connection_id in order to verify that the profile belongs to whom it claims.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "What does the “Allow Profiles Outside Organization” option do?", page: "Launch Checklist", lastCat: "What does the “Allow Profiles Outside Organization” option do?"},
+
+    {id: "999178", name: "This refers to the number of user profiles that have inconsistent attribute mappings, and that need to be updated in order to successfully authenticate.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "What does “There are 0 profiles awaiting reconciliation” refer to?", page: "Launch Checklist", lastCat: "What does “There are 0 profiles awaiting reconciliation” refer to?"},
+
+    {id: "999177", name: "When it comes to mobile applications, our typical advice in implementing SSO authentication goes like this:", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "What does “There are 0 profiles awaiting reconciliation” refer to?", page: "Launch Checklist", lastCat: "What does “There are 0 profiles awaiting reconciliation” refer to?"},
+    {id: "999176", name: "Generate the authentication URL and route the user to a browser or browser fragment in order to authenticate.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How do I integrate WorkOS SSO with my native mobile application?", page: "Launch Checklist", lastCat: "How do I integrate WorkOS SSO with my native mobile application?"},
+    {id: "999175", name: "The end user authenticates via the native UI of their IdP within that browser.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How do I integrate WorkOS SSO with my native mobile application?", page: "Launch Checklist", lastCat: "How do I integrate WorkOS SSO with my native mobile application?"},
+    {id: "999174", name: "Upon successful authentication, deep-link the user back into your native application.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Launch Checklist", subCat3: "Frequently asked questions", subCat4: "How do I integrate WorkOS SSO with my native mobile application?", page: "Launch Checklist", lastCat: "How do I integrate WorkOS SSO with my native mobile application?"},
+
+    //! - FAQ FOR IT TEAMS - !//
+
+    {id: "999166", name: "Answers to common questions from your customer’s IT team.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", page: "FAQ for IT teams", lastCat: "top"},
+
+    {id: "999165", name: "WorkOS is a software company that provides a suite of products to make an app enterprise-ready. These products include Single Sign-On, Directory Sync, and User Management, among others.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "What is WorkOS?", page: "FAQ for IT teams", lastCat: "What is WorkOS?"},
+    {id: "999165", name: "For Single Sign-On, WorkOS stores the user profile from the identity provider. This includes the user’s name, email and IP address.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "What data does WorkOS store?", page: "FAQ for IT teams", lastCat: "What data does WorkOS store?"},
+    {id: "999164", name: "For Directory Sync, WorkOS will store the data that the identity provider sends. The shape and content of that data is at the discretion of the identity provider.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "What data does WorkOS store?", page: "FAQ for IT teams", lastCat: "What data does WorkOS store?"},
+    {id: "999163", name: "For more information, view our Privacy Policy.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "What data does WorkOS store?", page: "FAQ for IT teams", lastCat: "What data does WorkOS store?"},
+
+    {id: "999162", name: "Developers integrate with WorkOS using its Rest API and the related SDKs. You can find a list of all WorkOS API endpoints in the API reference.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "How do developer apps communicate with WorkOS?", page: "FAQ for IT teams", lastCat: "How do developer apps communicate with WorkOS?"},
+
+    {id: "999161", name: "WorkOS uses Cloudflare to ensure security and reliability of all operations. If you are looking to create a list of allowed IP addresses for the WorkOS API, you can use the IP ranges listed in the Cloudflare documentation", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "What IP addresses does WorkOS use?", page: "FAQ for IT teams", lastCat: "What IP addresses does WorkOS use?"},
+
+    {id: "999160", name: "Yes, WorkOS is compliant with all the above and regularly undergoes penetration testing.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?", page: "FAQ for IT teams", lastCat: "Is WorkOS certified for SOC 2 Type II, SOC 3 and SIG Lite?"},
+
+    {id: "999159", name: "Yes, WorkOS is GDPR compliant. Reach out to support", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "FAQ for IT teams", subCat3: "Is WorkOS GDPR compliant?", page: "FAQ for IT teams", lastCat: "Is WorkOS GDPR compliant?"},
+
+    //! - SAML SECURITY - !//
+
+    {id: "999150", name: "Learn about additional SAML features that WorkOS supports.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999149", name: "SAML requests and responses each have their own unique confidentiality and integrity features. To use SAML with WorkOS, the only requirement is that the Identity Provider (IdP) signs the assertions within the SAML authentication response.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999148", name: "However, you may have customers that have stricter configuration requirements or you may simply want to raise the security bar by following recommendations. This document details what security features are available, how they can benefit you, your customer and their identity provider.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999147", name: "The parties involved in a SAML authentication request and response flow are:", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999146", name: "Identity Provider", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999145", name: "Service Provider (SP)", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+    {id: "999144", name: "User Agent, i.e. a browser", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "top"},
+
+    {id: "999143", name: "The SAML authentication request is a way for the SP to request confirmation that the user they’re presented with is who they’re claiming to be. It is relayed to the IdP via the user agent.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", page: "SAML Security", lastCat: "SP to IdP security features"},
+
+    {id: "999142", name: "To address the opportunity to spoof or tamper with a SAML request to the IdP, the IdP may require that all SP’s sign the request. To accommodate this there needs to be a pre-existing relationship between the SP and IdP where a key-pair is shared. The IdP holds the public key (for verifying the request) and the SP holds the private key (for signing the request).", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", subCat4: "SAML request signing", page: "SAML Security", lastCat: "SP to IdP security features"},
+    {id: "999141", name: "WorkOS recommends SAML request signing, this is especially important in cases where HTTPS is terminated or interrupted prior to reaching the IdP.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", subCat4: "SAML request signing", page: "SAML Security", lastCat: "SP to IdP security features"},
+    {id: "999140", name: "All of our requests embed the <IssueInstant> timestamp to allow the IdP to reject stale requests, however to mitigate tamper of this value request signing must be used. (See SAML 2.0 Security Considerations sections 5.2.1.2, 6.5.1 for more detail).", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", subCat4: "SAML request signing", page: "SAML Security", lastCat: "SP to IdP security features"},
+    {id: "999139", name: "WorkOS supports SAML request signing for all compatible connection types. Please contact WorkOS support to enable it.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "SP to IdP security features", subCat4: "SAML request signing", page: "SAML Security", lastCat: "SP to IdP security features"},
+
+    {id: "999138", name: "The SAML response is an XML document provided by an IdP containing details about a user so that an SP can authenticate them. It is relayed to the SP via the user agent.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "SP to IdP security features"},
+    {id: "999137", name: "For reference in understanding the following features, below is a simplified hierarchy of the XML elements in a SAML Response:", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "IdP to SP security features"},
+
+    {id: "999136", name: "This is required by WorkOS for all SAML connections. It is a core requirement for SAML IdPs to implement as of SAML 2.0 (see SAML 2.0 Profiles section 4.1.3.5).", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Signed response assertions", page: "SAML Security", lastCat: "Signed response assertions"},
+    {id: "999135", name: "Signed response assertions are enabled in the setup steps when you create a SAML connection.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Signed response assertions", page: "SAML Security", lastCat: "Signed response assertions"},
+
+    {id: "999134", name: "This is the complete signature over the SAML response payload. In combination with an assertion signature it will provide additional integrity protection and is recommended by WorkOS (For details on threats addressed see SAML Security Considerations sections 7.1.1.6, 7.1.1.7).", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Signed response message envelope", page: "SAML Security", lastCat: "Signed response message envelope"},
+    {id: "999133", name: "Please SAML Security Considerations to enable encrypted response assertion.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Signed response message envelope", page: "SAML Security", lastCat: "Signed response message envelope"},
+
+    {id: "999132", name: "The attribute statement is a sub-element of the assertion, some or all of the attributes in the statement can be encrypted as part of the SAML authentication protocol.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Encrypted response attributes", page: "SAML Security", lastCat: "Encrypted response attributes"},
+    {id: "999131", name: "WorkOS does not currently support encrypted response attributes. It is recommended to use assertion encryption to envelope all the attributes if confidentiality is required.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", subCat4: "Encrypted response attributes", page: "SAML Security", lastCat: "Encrypted response attributes"},
+
+    {id: "999130", name: "This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "Implementing SSO with WorkOS", page: "SAML Security", lastCat: "Implementing SSO with WorkOS"},
 
 ]
 
 export default results;
 
-//* latest: 999251 - signing certificates
+//* latest: 999130 - faq for IT teams

@@ -2566,8 +2566,8 @@ export default class DocsNavigationMenu extends Component {
                             return optionWords.some(optionWord => optionWord.startsWith(searchWord));
                         } else {
                             // Combine search words into a single substring
-        const searchSubstring = searchWords.join(' ');
-        return name.includes(searchSubstring);
+                            const searchSubstring = searchWords.join(' ');
+                            return name.includes(searchSubstring);
                         }
                     });
     
