@@ -24,6 +24,10 @@ const results = [
 
     {id: "999333", name: "Login Flows", category: "Standalone APIs", subCat1: "Single Sign-On", page: "Login Flows", lastCat: "top"},
 
+    //! - REDIRECT URIs - !//
+
+    {id: "999311", name: "Redirect URIs", category: "Standalone APIs", subCat1: "Single Sign-On", page: "Redirect URIs", lastCat: "top"},
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -57,6 +61,12 @@ const results = [
     {id: "999332", name: "SP-initiated SSO", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Login Flows", page: "Login Flows", lastCat: "SP-initiated SSO"},
     {id: "999331", name: "IdP-initiated SSO", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Login Flows", page: "Login Flows", lastCat: "IdP-initiated SSO"},
     {id: "999330", name: "Implementing SSO with WorkOS", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Login Flows", page: "Login Flows", lastCat: "Implementing SSO with WorkOS"},
+
+     //! - REDIRECT URIs - !//
+
+     {id: "999310", name: "Introduction", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", page: "Redirect URIs", lastCat: "Introduction"},
+     {id: "999309", name: "Wildcard characters", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", page: "Redirect URIs", lastCat: "Wildcard characters"},
+     {id: "999308", name: "Implementing SSO with WorkOS", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", page: "Redirect URIs", lastCat: "Implementing SSO with WorkOS"},
 
     
     //? - - - - - - - - - - - - - - ?//
@@ -267,6 +277,24 @@ const results = [
 
     {id: "999312", name: "This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Login Flows", subCat3: "Implementing SSO with WorkOS", page: "Login Flows", lastCat: "Implementing SSO with WorkOS"},
 
+    //! - REDIRECT URIs - !//
+
+    {id: "999307", name: "Learn what a redirect URI is and how it relates to Service Provider and Identity Provider initiated login flows.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", page: "Redirect URIs", lastCat: "top"},
+    {id: "999306", name: "With a WorkOS Service Provider (SP) initiated login flow, there are a series of exchanges that take place between a Service Provider (your application), WorkOS, and the IdP that’s being used to authenticate the user as shown in the diagram below. The Redirect URI is the location to which the user gets returned to after successfully completing the authentication with their Identity Provider (IdP).", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Introduction", page: "Redirect URIs", lastCat: "Introduction"},
+    {id: "999305", name: "With an Identity Provider (IdP) initiated login flow, the approach is similar but the user will begin the login flow by clicking on the tile within their IdP platform instead of from your application.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Introduction", page: "Redirect URIs", lastCat: "Introduction"},
+    {id: "999304", name: "In WorkOS Production Environments, the Redirect URI to your application must use HTTPS, however, Redirect URIs that use HTTP and localhost are allowed in Sandbox Environments.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Introduction", page: "Redirect URIs", lastCat: "Introduction"},
+    {id: "999303", name: "There should be at least one redirect URI configured and selected as a default for a WorkOS There should be at least one redirect URI configured and selected as a default for a WorkOS Redirects page in the WorkOS dashboard. If you try to route the authorization flow to a Redirect URI that is not yet defined in the Dashboard it will result in an error and users will be unable to sign in, so it’s important to define them in the dashboard first.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Introduction", page: "Redirect URIs", lastCat: "Introduction"},
+    {id: "999302", name: "The Redirect URI can also be included directly in the Get Authorization URL call as a redirect_uri parameter. When the Redirect URI is set in this fashion, it will override the default Redirect URI that is set in the WorkOS Dashboard.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Introduction", page: "Redirect URIs", lastCat: "Introduction"},
+
+    {id: "999301", name: "WorkOS supports using wildcard characters in Redirect URIs for staging environments.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999300", name: "The * symbol can be used as a wildcard for subdomains; however, it must be used in accordance with the following rules in order to properly function.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999299", name: 'The protocol of the URL must be either http: or https:. For example, com.example.app://' + '*.example.com will not work.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999298", name: 'The wildcard must be located in a subdomain within the hostname component. For example, http://'+ '*.com will not work.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999297", name: 'The wildcard must be located in the subdomain which is furthest from the root domain. For example, https://sub.*.example.com will not work.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999296", name: 'The URL must not contain more than one wildcard. For example, https://'+'*.*.example.com will not work.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999295", name: 'A wildcard character may be prefixed and/or suffixed with additional valid hostname characters. For example, https://prefix-*-suffix.example.com will work.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999294", name: 'A URL with a valid wildcard will not match a URL more than one subdomain level in place of the wildcard. For example, https://'+'*.example.com will not work with https://sub1.sub2.example.com.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Wildcard characters", page: "Redirect URIs", lastCat: "Wildcard characters"},
+    {id: "999293", name: 'This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.', category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "Redirect URIs", subCat3: "Implementing SSO with WorkOS", page: "Redirect URIs", lastCat: "Implementing SSO with WorkOS"},
 
 
 
@@ -274,4 +302,4 @@ const results = [
 
 export default results;
 
-//* latest: 999334 - sign-in ux
+//* latest: 999312 - login flows

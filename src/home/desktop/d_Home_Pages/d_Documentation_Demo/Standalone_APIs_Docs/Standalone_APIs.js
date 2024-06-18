@@ -1554,13 +1554,14 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn the differences between SP‑initiated and IdP‑initiated SSO.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label> focus on setting up Service Provider (SP)-initiated SSO. In these scenarios, when a user attempts to login, they navigate to an application (a service provider) and are then redirected to the Identity Provider (IdP) for authentication, via the WorkOS API.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label> focus on setting up Service Provider (SP)-initiated SSO. In these scenarios, when a user attempts to login, they navigate to an application (a service provider) and are then redirected to the Identity Provider (IdP) <i id='Alternatively, most users are able to start'></i> for authentication, via the WorkOS API.</p>
                         
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, most users are able to start the process from the Identity Provider itself. Organizations will often provide an IdP dashboard where employees can select any of the eligible applications that they can access via the IdP, similar to the screenshot below. Clicking on a tile results in an IdP-initiated login flow, since the user initiates the login from the Identity Provider, not the application.</p>
                         
                             <div id='img56' className={`enlargable-image-container ${this.state.enlargedImageId === 'img56' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img56')}>
                                 <img  src='/assets/login_flows_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='SP-initiated SSO'></i>
                         
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -1578,12 +1579,13 @@ export default class StandaloneAPIs extends Component {
                         snippet="Get Authorization URL Call" 
                         updateSelectedLang={this.newLangSelected}
                         selectedLang={this.state.currentSelectedLanguage}/>
+                         <i id='IdP-initiated SSO'></i>
                         
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>IdP-initiated SSO</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you follow the instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label>, IdP-initiated login flows will automatically be available, and users will be able to find a tile for your application within their IdP, similar to the screenshot above. Clicking on the tile will send an IdP-initiated SSO response to your application’s callback endpoint.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you follow the instructions in the <label className='demo-docs-hyperlink'>Quick Start guide</label>, IdP-initiated login flows will automatically be available, and users will be able to find a tile for your application within their IdP, similar to the screenshot above. Clicking on the tile will send an IdP-initiated SSO response<i id='Configure IdP-initiated SSO'></i> to your application’s callback endpoint.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure IdP-initiated SSO</h3>
 
@@ -1604,7 +1606,7 @@ export default class StandaloneAPIs extends Component {
                             selectedLang={this.state.currentSelectedLanguage}/>
 
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Profile object includes the <label className='demo-docs-hyperlink'>connection_id</label> which identifies the connection that the profile is associated with in WorkOS. We recommend using the connection information for routing requests in an IdP-Initiated flow.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Profile object includes the <label className='demo-docs-hyperlink'>connection_id</label> which identifies the connection that the profile is associated with in WorkOS. We recommend using the connection information for<i id='Disable IdP-initiated SSO (Beta)'></i> routing requests in an IdP-Initiated flow.</p>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Disable IdP-initiated SSO (Beta)</h3>
 
@@ -1640,6 +1642,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Callback Endpoint with IdP-Initiated error support" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Implementing SSO with WorkOS'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
 
@@ -1666,8 +1669,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Redirect URIs</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Redirect URIs</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn what a redirect URI is and how it relates to Service Provider and Identity Provider initiated login flows.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -1688,7 +1692,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/redirect_uri_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Redirect URI can also be included directly in the Get Authorization URL call as a redirect_uri parameter. When the Redirect URI is set in this fashion, it will override the default Redirect URI that is set in the WorkOS Dashboard.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Redirect URI can also be included directly in the Get Authorization URL call as a redirect_uri parameter. When the Redirect URI is set in this fashion, it will override the default Redirect URI that is set in the WorkOS Dashboard<i id='Wildcard characters'></i>.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Wildcard characters</h1>
@@ -1708,7 +1712,7 @@ export default class StandaloneAPIs extends Component {
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The wildcard <strong>must</strong> be located in the subdomain which is furthest from the root domain. For example, <span>https://sub.*.example.com</span> will not work.</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The URL <strong>must not</strong> contain more than one wildcard. For example, <span>https://*.*.example.com</span> will not work.</p></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A wildcard character <strong>may</strong> be prefixed and/or suffixed with additional valid hostname characters. For example, <span>https://prefix-*-suffix.example.com</span> will work.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A URL with a valid wildcard <strong>will not</strong> match a URL more than one subdomain level in place of the wildcard. For example, <span>https://*.example.com</span> will not work with <span>https://sub1.sub2.example.com</span>.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A URL with a valid wildcard <strong>will not</strong> match a URL more than one subdomain level in place of the wildcard. For example,<i id='Implementing SSO with WorkOS'></i> <span>https://*.example.com</span> will not work with <span>https://sub1.sub2.example.com</span>.</p></li>
                                 </ul>
 
                             </div>
