@@ -285,6 +285,7 @@ searchMenuItems = (menuItems, searchTerm) => {
             }
         }
       }
+      
       this.props.getMenuItemSelected(searchTerm)
       this.props.setCurrentIndex(path[path.length - 1])
       return path;

@@ -131,20 +131,25 @@ export default class StandaloneAPIs extends Component {
             //* - - HIDDEN DROPDOWN TOGGLE(S) VAR(S) - *//
             hiddenDropdownBtn1: false,
 
-            languagesRemoving: ['Python']
+
 
         }
     }
 
     componentDidMount = () => {
-        setTimeout (() => {
-            this.setState({
-                gettingStarted: true
-            })
-        }, 300)
-        setTimeout (() => {
-            this.scrollToTop('top')
-        }, 450)
+        window.addEventListener('scroll', this.handleScroll);
+        // setTimeout (() => {
+        //     this.setState({
+        //         gettingStarted: true
+        //     })
+        // }, 300)
+        // setTimeout (() => {
+        //     this.scrollToTop('top')
+        // }, 450)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     }
 
     openFirstDoc = () => {
@@ -614,12 +619,13 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id="top" className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Single Sign-On</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Single Sign-On</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Facilitate greater security, easier account management, and accelerated application onboarding and adoption.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Choose your integration approach' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Choose your integration approach</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to integrate Single Sign-On (SSO) with WorkOS:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to <i id='With the standalone SSO API'></i>integrate Single Sign-On (SSO) with WorkOS:</p>
                        
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -632,7 +638,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The standalone API (covered in this document), is a standalone API for integrating into an existing auth stack.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The standalone API (covered in this document), is a standalone API for integrating<i id='Using WorkOS User Management'></i> into an existing auth stack.</p>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -645,21 +651,21 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
                        
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User Management is a complete authentication platform which includes SSO out of the box.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User Management is a complete<i id='How Single Sign-On works'></i> authentication platform which includes SSO out of the box.</p>
                        
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How Single Sign-On works</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Single Sign-On is the most frequently asked for requirement by organizations looking to adopt new SaaS applications. SSO enables authentication via an organization’s <label className='demo-docs-hyperlink'>identity provider (IdP)</label>.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This service is compatible with any IdP that supports either the <label className='demo-docs-hyperlink'>SAML</label> or <label className='demo-docs-hyperlink'>OIDC</label> protocols. It’s modeled to meet the <label className='demo-docs-hyperlink'>OAuth 2.0</label> framework specification, abstracting away the underlying </p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This service is compatible with any IdP that supports either the <label className='demo-docs-hyperlink'>SAML</label> or <label className='demo-docs-hyperlink'>OIDC</label> protocols. It’s modeled to meet the <label className='demo-docs-hyperlink'>OAuth 2.0</label> framework specification, abstracting away the underlying authentication handshakes between different IdPs.</p>
 
                             <div id='img48' className={`enlargable-image-container ${this.state.enlargedImageId === 'img48' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img48')}>
                                 <img  src='/assets/sso_section_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS SSO API acts as authentication middleware and intentionally does not handle user database management for your application. This is by design, to minimize vendor lock-in.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS SSO API acts as authentication middleware and intentionally does not handle user database management for your <label id="What you’ll build"></label>application. This is by design, to minimize vendor lock-in.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll build</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll take you from learning about Single Sign-On and POC-ing all the way through to authenticating your first user via the WorkOS SSO API.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll take you from learning about Single Sign-On and POC-ing all the way through to authenticating your first user<i id='Before getting started'></i> via the WorkOS SSO API.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
@@ -669,7 +675,7 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A local app to integrate SSO with.</p></li>
                             </ul>
                         
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Reference these <label className='demo-docs-hyperlink'>example apps</label> as you follow this guide.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Reference these <label id='API object definitions' className='demo-docs-hyperlink'>example apps</label> as you follow this guide.</p>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API object definitions</h1>
 
@@ -686,7 +692,7 @@ export default class StandaloneAPIs extends Component {
                                     <h5>Profile</h5>
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>Represents an authenticated user. The Profile object contains information relevant to a user in the form of normalized and raw attributes.</p>
+                                    <p>Represents an authenticated user. The Profile object contains information relevant to a user in the form of normalized<i id='Add SSO to your app'></i> and raw attributes.</p>
                                 </div>
                             </div>
 
@@ -699,7 +705,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s build the SSO authentication workflow into your app.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s build the SSO <i id='Install the WorkOS SDK'></i>authentication workflow into your app.</p>
                         
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install the WorkOS SDK</h3>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.</p>
@@ -832,6 +838,7 @@ export default class StandaloneAPIs extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}
                             />
+                            <i id='Set secrets'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
                             <div className='api-keys'>
@@ -853,7 +860,7 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span>.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The code examples use your staging API keys when <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span>.</p>
                                 </div>
                             </div>
 
@@ -947,7 +954,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             }
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If there is an issue generating an authorization URL, WorkOS will return the redirect URI as is. Read the <label className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If there is an issue generating an authorization URL, WorkOS will return the<i id='Add a callback endpoint'></i> redirect URI as is. Read the <label className='demo-docs-hyperlink'>API Reference</label> for more details.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Add a callback endpoint</h3>
 
@@ -963,7 +970,7 @@ export default class StandaloneAPIs extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When adding your callback endpoint, it is important to always validate the returned profile’s organization ID. It’s unsafe to validate using email domains as organizations might allow email addresses from outside their corporate domain (e.g. for guest users).</p>  
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When adding your callback endpoint, it is important to always validate the returned profile’s organization ID. It’s unsafe to validate using email domains as organizations might allow email addresses from outside their corporate domain (e.g. for guest users)<i id='Configure a redirect URI'></i>.</p>  
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             
@@ -972,7 +979,7 @@ export default class StandaloneAPIs extends Component {
                                     <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
                                 </div>
                                 <div className='label-desc'>
-                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Conifigure a redirect URI</h1>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure a redirect URI</h1>
                                 </div>
                             </div>
 
@@ -992,6 +999,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img49' className={`enlargable-image-container ${this.state.enlargedImageId === 'img49' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img49')}>
                                 <img  src='/assets/sso_section_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Identity provider-initiated SSO'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Identity provider-initiated SSO</h3>
 
@@ -1001,7 +1009,7 @@ export default class StandaloneAPIs extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, your customer can specify a separate redirect URI to be used for all their IdP-initiated sessions as a <span>RelayState</span> parameter in the SAML settings on their side.</p>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Learn more about configuring IdP-initiated SSO in the <label className='demo-docs-hyperlink'>Login Flows</label> guide.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Learn more about configuring IdP-initiated SSO in the <label className='demo-docs-hyperlink'>Login Flows</label> guide<i id='Test end-to-end'></i>.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             

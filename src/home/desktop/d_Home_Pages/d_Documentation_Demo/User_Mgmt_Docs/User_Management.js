@@ -60,14 +60,14 @@ export default class UserManagement extends Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
-        setTimeout (() => {
-            this.setState({
-                gettingStarted: true
-            })
-        }, 300)
-        setTimeout (() => {
-            this.scrollToTop('top')
-        }, 450)
+        // setTimeout (() => {
+        //     this.setState({
+        //         gettingStarted: true
+        //     })
+        // }, 300)
+        // setTimeout (() => {
+        //     this.scrollToTop('top')
+        // }, 450)
     }
 
     componentWillUnmount() {
@@ -212,7 +212,7 @@ export default class UserManagement extends Component {
         // Add a small delay before starting the checking loop
         setTimeout(() => {
             requestAnimationFrame(checkElementAndScroll);
-        }, 500); // You can adjust the delay as needed
+        }, 800); // You can adjust the delay as needed
     };
 
     newLangSelected = (currentLang) => {
@@ -298,9 +298,8 @@ export default class UserManagement extends Component {
                     <div id='top' className='demo-docs-container'>    
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
-                            
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
-                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
