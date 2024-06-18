@@ -2515,17 +2515,17 @@ export default class DocsNavigationMenu extends Component {
     handleSearchChange = (e) => {
         const { searchFilterTitle } = this.state;
         let currentSectionSearching = StandaloneAPIsFullSearch
-        // if (searchFilterTitle === "All docs") {
-        //     currentSectionSearching = UserManagementFullSearch
-        // } else if (searchFilterTitle === "User Management") {
-        //     currentSectionSearching = StandaloneAPIsFullSearch
-        // } else if (searchFilterTitle === "Standalone APIs") {
+        if (searchFilterTitle === "All docs") {
+            currentSectionSearching = UserManagementFullSearch
+        } else if (searchFilterTitle === "User Management") {
+            currentSectionSearching = StandaloneAPIsFullSearch
+        } else if (searchFilterTitle === "Standalone APIs") {
 
-        // } else if (searchFilterTitle === "Events and webhooks") {
+        } else if (searchFilterTitle === "Events and webhooks") {
 
-        // } else {
+        } else {
             
-        // }
+        }
         const searchInput = e.target.value.toLowerCase();
         
         // Clear previous timeout
@@ -2565,11 +2565,9 @@ export default class DocsNavigationMenu extends Component {
                             const searchWord = searchWords[0];
                             return optionWords.some(optionWord => optionWord.startsWith(searchWord));
                         } else {
-                            if (searchWords.length > optionWords.length) {
-                                return false; // Not enough words in the option to match the search input
-                            }
-                            // Check if each search word matches the beginning of the corresponding option word
-                            return searchWords.every((searchWord, index) => optionWords[index].startsWith(searchWord));
+                            // Combine search words into a single substring
+        const searchSubstring = searchWords.join(' ');
+        return name.includes(searchSubstring);
                         }
                     });
     
@@ -3036,7 +3034,7 @@ export default class DocsNavigationMenu extends Component {
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
-                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null }</p> 
+                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null } {option.subCat4 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat4}</label> : null } </p> 
                                                             </div>
                                                         ) : (
                                                             <div>
@@ -3177,7 +3175,7 @@ export default class DocsNavigationMenu extends Component {
                                                             className='searchResultCell' 
                                                             key={option.id}>
                                                                 <p className='searchResultOption'>{option.highlightedName}</p>
-                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null }</p> 
+                                                                <p className='searchResultCategory'>{category} {option.subCat1 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat1}</label> : null } {option.subCat2 ? <label style={{cursor: "pointer"}}>{'>'} {option.subCat2}</label> : null } {option.subCat3 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat3}</label> : null } {option.subCat4 ? <label style={{cursor: "pointer"}}> {'>'} {option.subCat4}</label> : null }</p> 
                                                             </div>
                                                         ) : (
                                                             <div>

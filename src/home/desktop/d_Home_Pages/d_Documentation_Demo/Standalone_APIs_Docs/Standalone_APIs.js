@@ -1048,7 +1048,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Test SSO</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Test SSO</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to test your Single Sign-On integration end-to-end.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Testing with the Test Identity Provider' ></div>
                         </div>
@@ -1230,7 +1230,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View sample Single Sign-On apps for each SDK.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -1311,8 +1311,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sign-In UX</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sign-In UX</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>User experience considerations for Single Sign-On.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
@@ -1330,12 +1331,12 @@ export default class StandaloneAPIs extends Component {
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You are building an app called <i>Demo App</i></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization named <i>Foo Corp</i> is using Single Sign-On with Okta as the <label className='demo-docs-hyperlink'>IdP</label></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An organization named <i id='Implementing SSO with WorkOS'>Foo Corp</i> is using Single Sign-On with Okta as the <label className='demo-docs-hyperlink'>IdP</label></p></li>
                             </ul>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Implementing SSO with WorkOS</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance on UX best practices when integrating SSO with the standalone API. You might instead consider <label className='demo-docs-hyperlink'>WorkOS User Management</label> with AuthKit, a complete authentication platform which handles all of the UX complexity for you.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance on UX best practices when integrating SSO with the standalone API. You might instead consider <label className='demo-docs-hyperlink'>WorkOS User Management</label> with AuthKit, a complete authentication<i id='Separate SSO flow'></i> platform which handles all of the UX complexity for you.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Separate SSO flow</h1>
 
@@ -1406,7 +1407,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p style={{textAlign: "center", fontSize: "80%", marginBottom: "7.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing with credentials, then using Single Sign-On with any <strong>@foo-corp.com</strong> email.</i></p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As this adds yet another button, one thing to be mindful with this approach is the <label className='demo-docs-hyperlink'>NASCAR problem</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> where a cluster of 3rd party branded buttons creates both visual noise and confusion. Consider only offering a couple of options that are relevant to your user base.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As this adds yet another button, one thing to be mindful with this approach is the <label className='demo-docs-hyperlink'>NASCAR problem</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> where a cluster of 3rd party branded buttons creates both visual noise and confusion. Consider only offering a couple of options<i id='Separate email and password fields'></i> that are relevant to your user base.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Separate email and password fields</h1>
 
@@ -1473,7 +1474,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             }
 
-                            <p style={{textAlign: "center", fontSize: "80%", marginBottom: "7.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing in with any <strong>@foo-corp.com</strong> email vs. credentials.</i></p>
+                            <p style={{textAlign: "center", fontSize: "80%", marginBottom: "7.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try<i id='Auto-hide the password field'></i> signing in with any <strong>@foo-corp.com</strong> email vs. credentials.</i></p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Auto-hide the password field</h1>
 
@@ -1549,7 +1550,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Login Flows</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Login Flows</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn the differences between SP‑initiated and IdP‑initiated SSO.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
