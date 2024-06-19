@@ -48,6 +48,18 @@ const results = [
 
     {id: "999158", name: "SAML Security", category: "Standalone APIs", subCat1: "Single Sign-On", page: "SAML Security", lastCat: "top"},
 
+    //! - FUNDAMENTALS - !// - - (DIRECTORY SYNC) - -
+
+    {id: "999129", name: "Fundamentals", category: "Standalone APIs", subCat1: "Directory Sync", page: "Fundamentals", lastCat: "top"},
+
+    //! - QUICK START (DS) - !// 
+
+    {id: "999075", name: "Quick Start", category: "Standalone APIs", subCat1: "Directory Sync", page: "Quick Start (DS)", lastCat: "top"},
+
+    //! - EXAMPLE APPS (DS) - !// 
+
+    {id: "999015", name: "Example Apps", category: "Standalone APIs", subCat1: "Directory Sync", page: "Example Apps (DS)", lastCat: "top"},
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -125,6 +137,24 @@ const results = [
     {id: "999156", name: "IdP to SP security features", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "IdP to SP security features"},
     {id: "999155", name: "Implementing SSO with WorkOS", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", page: "SAML Security", lastCat: "Implementing SSO with WorkOS"},
 
+    //! - FUNDAMENTALS - !//
+
+    {id: "999128", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "Introduction"},
+    {id: "999127", name: "Definitions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999126", name: "What is Directory Sync?", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "What is Directory Sync?"},
+    {id: "999125", name: "Why use Directory Sync?", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999124", name: "What your customer experiences", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "What your customer experiences"},
+    {id: "999123", name: "API overview", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "API overview"},
+
+    //! - QUICK START (DS) - !// 
+
+    {id: "999074", name: "What you'll build", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "What youll build"},
+    {id: "999073", name: "Before getting started", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Before getting started"},
+    {id: "999073.5", name: "API object definitions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999072", name: "Create a new directory connection", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Create a new directory connection"},
+    {id: "999071", name: "Add Directory Sync to your app", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Add Directory Sync to your app"},
+    {id: "999070", name: "Handle directory events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Handle directory events"},
+
     
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -197,6 +227,25 @@ const results = [
     {id: "999153", name: "Signed response assertions", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response assertions"},
     {id: "999152", name: "Signed response message envelope", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response message envelope"},
     {id: "999151", name: "Encrypted response attributes", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Encrypted response attributes"},
+
+
+    //! - FUNDAMENTALS - !//
+
+    {id: "999122", name: "Your app doesn’t use Directory Sync", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999121", name: "Your app uses Directory Sync", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+    {id: "999120", name: "Directory", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "API overview", page: "Fundamentals", lastCat: "Directory"},
+    {id: "999119", name: "Directory group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "API overview", page: "Fundamentals", lastCat: "Directory group"},
+    {id: "999118", name: "Directory user", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "API overview", page: "Fundamentals", lastCat: "Directory user"},
+
+    //! - QUICK START (DS) - !// 
+
+    {id: "999069", name: "Install the WorkOS SDK", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Install the WorkOS SDK"},
+    {id: "999068", name: "Set secrets", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Set secrets"},
+    {id: "999067", name: "Fetch directory resources", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Fetch directory resources"},
+    {id: "999066", name: "List directory users", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "List directory users"},
+    {id: "999065", name: "Get directory group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Get directory group"},
+    {id: "999064", name: "List directory groups", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "List directory groups"},
+
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -573,8 +622,134 @@ const results = [
 
     {id: "999130", name: "This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at User Management, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "Implementing SSO with WorkOS", page: "SAML Security", lastCat: "Implementing SSO with WorkOS"},
 
+    //! - FUNDAMENTALS - !//
+
+    {id: "999117", name: "Build frictionless onboarding for organizations with real‑time user provisioning and deprovisioning.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", page: "Fundamentals", lastCat: "top"},
+
+    {id: "999116", name: "Organizations use company directories and HRIS systems to manage users and enforce their access to organization resources. Directories enable IT admins to activate and deactivate accounts, create groups that inform access rules, accelerate adoption of new tools, and more.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Introduction", page: "Fundamentals", lastCat: "Introduction"},
+
+    {id: "999115", name: "ULM", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999114", name: "User Lifecycle Management (or ULM) is the process of managing a user’s access to an app. This occurs from app onboarding until they are removed from an app. ULM is also commonly referred to as identity provisioning.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999113", name: "SCIM", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999112", name: "System for Cross-domain Identity Management (or SCIM) is an open standard for managing automated user and group provisioning. It’s a standard that many directory providers interface with.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999111", name: "HRIS", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999110", name: "A Human Resources Information System (or HRIS) is software designed to maintain, manage, and process detailed employee information and human resources-related policies. Examples include: Workday, HiBob, BambooHR, etc.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999109", name: "User Deprovisioning", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+    {id: "999108", name: "Deprovisioning is the process of removing a user from an app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Definitions", page: "Fundamentals", lastCat: "Definitions"},
+
+    {id: "999107", name: "Directory Sync is a set of developer-friendly APIs and IT admin tools that allows you to implement enterprise-grade User Lifecycle Management (ULM) into your existing app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What is Directory Sync?", page: "Fundamentals", lastCat: "What is Directory Sync?"},
+    {id: "999106", name: "ULM allows IT admins to centrally provision and deprovision users from their directory provider. A directory provider is the source of truth for your enterprise customer’s user and group lists. Directory Sync sends automatic updates to your app for changes to directories, groups, users, or access rules.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What is Directory Sync?", page: "Fundamentals", lastCat: "What is Directory Sync?"},
+    {id: "999105", name: "Common directory providers include: Microsoft Active Directory, Okta, Workday, and Google Workspace. See the full list of supported directory providers on the integrations page.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What is Directory Sync?", page: "Fundamentals", lastCat: "What is Directory Sync?"},
+
+    {id: "999104", name: "ULM increases the security of your app and makes it easier for your customers to use your app. ULM is most often implemented using SCIM. SCIM requests are sent between directory providers and your app to inform you of changes to a user’s identity. Changes can include:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999103", name: "Provisioning an identity for a user (account creation)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999102", name: "When a user’s attribute has changed (account update)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999101", name: "When a user’s attribute has changed (account update)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999100", name: "Deprovisioning a user from your app (account deletion)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+    {id: "999099", name: "Each directory provider implements SCIM differently. Implementing SCIM is often a challenging process and can introduce security vulnerabilities into your app. Directory Sync hides this complexity, so you can focus on building core product features in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "Why use Directory Sync?", page: "Fundamentals", lastCat: "Why use Directory Sync?"},
+
+    {id: "999098", name: "Let’s take a look at two different user provisioning scenarios.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", page: "Fundamentals", lastCat: "What your customer experiences"},
+
+    {id: "999097", name: "Without ULM, your customers have to manually add, update, and remove users from your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999096", name: "Imagine a scenario where your customer has purchased your software and onboards a new employee to your app. Your customer would have to do the following:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999095", name: "The IT admin provisions the employee in their directory provider (if they use one) and manually in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999094", name: "All employee information has to be set manually in both the directory provider and manually in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999093", name: "The IT admin has to manually provision a login method for the employee; through either SSO (if they use an identity provider) or a self-registration page.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999092", name: "The IT admin sends the invite link to their employee. Often initiating a back and forth via either email, messaging app, or IT helpdesk ticket.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999091", name: "The employee has to proceed with the registration method and can then use your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999090", name: "All future changes to this employee’s data and access are manually entered by the IT admin. This is error prone and can lead to security vulnerabilities where users get unauthorized access to resources.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+    {id: "999089", name: "As your customers adopt more cloud software, these manual processes do not scale well. Manual input error can lead to the source of truth (directory) drifting from your app’s state. As a result, ULM has become a table stakes product requirement for enterprises.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app doesn’t use Directory Sync", page: "Fundamentals", lastCat: "Your app doesn’t use Directory Sync"},
+
+    {id: "999088", name: "If your app supports ULM via Directory Sync, the IT admin can provision this employee from one place:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app uses Directory Sync", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+    {id: "999087", name: "Add the employee to their directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app uses Directory Sync", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+    {id: "999086", name: "Assign the employee to your app with the appropriate role once; via the directory provider admin page.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app uses Directory Sync", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+    {id: "999085", name: "Optional. Have the employee go through a password setup if they are not using an identity provider (SSO).", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app uses Directory Sync", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+    {id: "999084", name: "Directory Sync makes this integration easy by providing APIs your app interfaces with. All updates for this directory will automatically be sent to your app from WorkOS.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "What your customer experiences", subCat4: "Your app uses Directory Sync", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+
+    {id: "999083", name: "Directory, directory group, and directory user are the main components your app interfaces with.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals", subCat3: "API overview", page: "Fundamentals", lastCat: "Your app uses Directory Sync"},
+
+    {id: "999082", name: "A directory is the source of truth for your customer’s user and group lists.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory", page: "Fundamentals", lastCat: "Directory"},
+    {id: "999081", name: "WorkOS supports dozens of integrations including SCIM. Directory updates are delivered to you via webhooks. Your app stores a mapping between your customer and their directory. This allows you to maintain your app in sync with the directory provider used by your customer.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory", page: "Fundamentals", lastCat: "Directory"},
+    {id: "999080", name: "You can enable self-service Directory Sync setup for your customers using the Admin Portal.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory", page: "Fundamentals", lastCat: "Directory"},
+
+    {id: "999079", name: "A directory group is a collection of users within an organization who have been provisioned with access to your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory group", page: "Fundamentals", lastCat: "Directory group"},
+    {id: "999078", name: "Directory groups are mapped from directory provider groups. Directory groups are most often used to categorize a collection of users based on shared traits. i.e. Grouping software developers at a company under an “Engineering” group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory group", page: "Fundamentals", lastCat: "Directory group"},
+
+    {id: "999077", name: "A directory user is a person or entity within an organization who has been provisioned with access to your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory user", page: "Fundamentals", lastCat: "Directory user"},
+    {id: "999076", name: "Users can belong to multiple directory groups. Users have attributes associated with them. These attributes can be configured for your app’s needs.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Fundamentals",  subCat3: "API overview", subCat4: "Directory user", page: "Fundamentals", lastCat: "Directory user"},
+
+    //! - QUICK START (DS) - !// 
+
+    {id: "999063", name: "Set up a directory, install the SDK, and integrate Directory Sync.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "top"},
+
+    {id: "999062", name: "In this guide, we’ll take you from learning about Directory Sync and POC-ing all the way through to building production-ready features fully integrated with the WorkOS Directory Sync API.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (DS)", lastCat: "What you’ll build"},
+    {id: "999061", name: "This guide will show you how to:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (DS)", lastCat: "What you’ll build"},
+    {id: "999060", name: "Create a new directory in the WorkOS Dashboard", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (DS)", lastCat: "What you’ll build"},
+    {id: "999059", name: "Add Directory Sync to your app and fetch directory resources", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (DS)", lastCat: "What you’ll build"},
+    {id: "999058", name: "Use events to keep your app in sync with the directory changes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (DS)", lastCat: "What you’ll build"},
+
+    {id: "999057", name: "To get the most out of this guide, you’ll need:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (DS)", lastCat: "Before getting started"},
+    {id: "999056", name: "A WorkOS Account", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (DS)", lastCat: "Before getting started"},
+    {id: "999055", name: "A directory from a directory provider that WorkOS supports", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (DS)", lastCat: "Before getting started"},
+
+    {id: "999054", name: "Directory", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999053", name: "Stores info about an organization’s user management system (i.e. directory provider).", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999052", name: "Directory user", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999051", name: "Represents an organization user that is active in an organization’s directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999050", name: "Directory group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999049", name: "A collection of organization users within a directory, e.g. IT, database admins, HR.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+    {id: "999048", name: "The WorkOS Directory Sync API exclusively uses read-only operations. We never mutate end-user directories.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (DS)", lastCat: "API object definitions"},
+
+    {id: "999047", name: "The first step to connecting with a directory is creating an organization in the WorkOS Dashboard. You will then be able to create a new connection to the organization’s directory. Let’s start by creating one for development in your sandbox environment.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Create a new directory connection"},
+    {id: "999046", name: "Get provider-specific instructions by selecting the directory provider you want to test:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Create a new directory connection"},
+
+    {id: "999045", name: "Okta", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", subCat4: "Okta", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999044", name: "Configure a connection to Okta.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", subCat4: "Okta", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999043", name: "Entra ID (Azure ID)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999042", name: "Configure a Entra ID SAML connection.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", subCat4: "Entra ID (Azure ID)", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999041", name: "Google Workspace", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999040", name: "Configure a Google Workspace SAML connection.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", subCat4: "Google Workspace", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999039", name: "All other connections", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999038", name: "Choose from dozens of other identity providers.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", subCat4: "All other connections", page: "Quick Start (DS)", lastCat: "Okta"},
+    {id: "999037", name: "You can view and copy the unique identifier for the directory connection on the directory page, once it has been set up. The id takes the form directory_*.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Create a new directory connection", page: "Quick Start (DS)", lastCat: "Okta"},
+
+    {id: "999036", name: "Let’s integrate the Directory Sync API into your app to enable fetching directory resources programmatically.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Add Directory Sync to your app"},
+
+    {id: "999035", name: "WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (DS)", lastCat: "Install the WorkOS SDK"},
+    {id: "999034", name: "Don't see an SDK you need? Contact us to request and SDK!", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (DS)", lastCat: "Install the WorkOS SDK"},
+    {id: "999033", name: "Install the SDK using the command below.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (DS)", lastCat: "Install the WorkOS SDK"},
+
+    {id: "999032", name: "To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as WORKOS_API_KEY and WORKOS_CLIENT_ID, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Set secrets", page: "Quick Start (DS)", lastCat: "Set secrets"},
+    {id: "999031", name: "The code examples use your staging API keys when signed in", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Set secrets", page: "Quick Start (DS)", lastCat: "Set secrets"},
+
+    {id: "999030", name: "Get the details of an existing directory user.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Fetch directory resources", page: "Quick Start (DS)", lastCat: "Fetch directory resources"},
+    {id: "999029", name: "Example use case: pre-populate user attributes for new user accounts.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Fetch directory resources", page: "Quick Start (DS)", lastCat: "Fetch directory resources"},
+
+    {id: "999028", name: "Get directory users for a given directory or directory group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory users", page: "Quick Start (DS)", lastCat: "List directory users"},
+    {id: "999027", name: "Example use case: Build an onboarding experience that allows an admin to select who to invite and create accounts for.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory users", page: "Quick Start (DS)", lastCat: "List directory users"},
+    {id: "999026", name: "Use the optional limit, before, and after parameters to paginate through results. See the API Reference for details.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory users", page: "Quick Start (DS)", lastCat: "List directory users"},
+
+    {id: "999025", name: "Get the details of an existing directory group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Get directory group", page: "Quick Start (DS)", lastCat: "Get directory group"},
+    {id: "999024", name: "Example use case: Pre-populate team attributes for new organizations.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "Get directory group", page: "Quick Start (DS)", lastCat: "Get directory group"},
+
+    {id: "999023", name: "Get directory groups for a given directory or directory user.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory groups", page: "Quick Start (DS)", lastCat: "List directory groups"},
+    {id: "999022", name: "Example use case: Build an onboarding experience that allows an admin to select which groups of employees to invite and create accounts for.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory groups", page: "Quick Start (DS)", lastCat: "List directory groups"},
+    {id: "999021", name: "Use the optional limit, before, and after parameters to paginate through results. See the API Reference for details.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", subCat4: "List directory groups", page: "Quick Start (DS)", lastCat: "List directory groups"},
+
+    {id: "999020", name: "Actions performed in a WorkOS environment are represented by events. These can occur as a result of user-related actions, manually via the WorkOS dashboard, or via API calls. To keep your app in sync with the latest directory data, follow the corresponding guides:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Handle directory events",  page: "Quick Start (DS)", lastCat: "Handle directory events"},
+    {id: "999019", name: "Learn about the different types of events that you can receive. See event types.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Handle directory events", page: "Quick Start (DS)", lastCat: "Handle directory events"},
+    {id: "999018", name: "Handle the events you need on your side by syncing the data. See the data syncing guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Handle directory events", page: "Quick Start (DS)", lastCat: "Handle directory events"},
+    {id: "999017", name: "Understand how directory events work. See the understanding events guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Handle directory events", page: "Quick Start (DS)", lastCat: "Handle directory events"},
+    {id: "999016", name: "Optionally, stream events to Datadog. See the observability guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Handle directory events", page: "Quick Start (DS)", lastCat: "Handle directory events"},
+
+
+    //! - EXAMPLE APPS (DS) - !// 
+
+    {id: "999014", name: "View sample Directory Sync apps for each SDK.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Example Apps", page: "Example Apps (DS)", lastCat: "top"},
+    {id: "999014", name: "You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Example Apps", page: "Example Apps (DS)", lastCat: "top"},
+    
 ]
 
 export default results;
 
-//* latest: 999130 - faq for IT teams
+//* latest: 999016 - quick start (ds)

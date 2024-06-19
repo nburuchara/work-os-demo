@@ -2486,46 +2486,47 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>SAML Security Considerations</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about additional SAML features that WorkOS supports.</p>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Directory Sync</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Build frictionless onboarding for organizations with real‑time user provisioning and deprovisioning.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations use company directories and HRIS systems to manage users and enforce their access to organization resources. Directories enable IT admins to activate and deactivate accounts, create groups that inform access rules, accelerate adoption of new tools, and more.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations use company directories and HRIS systems to manage users and enforce their access to organization resources. Directories enable IT admins to activate and deactivate accounts, create groups that inform access rules,<i id='Definitions'></i> accelerate adoption of new tools, and more.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
 
                             <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>ULM</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                <div style={{width: sidebarMenuClicked ? "70%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <p>User Lifecycle Management (or ULM) is the process of managing a user’s access to an app. This occurs from app onboarding until they are removed from an app. ULM is also commonly referred to as identity provisioning.</p>
                                 </div>
                             </div>
                             <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>SCIM</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                <div style={{width: sidebarMenuClicked ? "70%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <p>System for Cross-domain Identity Management (or SCIM) is an open standard for managing automated user and group provisioning. It’s a standard that many directory providers interface with.</p>
                                 </div>
                             </div>
                             <div className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>HRIS</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                <div style={{width: sidebarMenuClicked ? "70%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <p>A Human Resources Information System (or HRIS) is software designed to maintain, manage, and process detailed employee information and human resources-related policies. Examples include: Workday, HiBob, BambooHR, etc.</p>
                                 </div>
                             </div>
                             <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5 style={{color: "black", cursor: "default"}}>User Deprovisioning</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>Deprovisioning is the process of removing a user from an app.</p>
+                                <div style={{width: sidebarMenuClicked ? "70%" : ""}} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Deprovisioning<i id='What is Directory Sync?'></i> is the process of removing a user from an app.</p>
                                 </div>
                             </div>
 
@@ -2534,7 +2535,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ULM allows IT admins to centrally provision and deprovision users from their directory provider. A directory provider is the source of truth for your enterprise customer’s user and group lists. Directory Sync sends automatic updates to your app for changes to directories, groups, users, or access rules.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Common directory providers include: <label className='demo-docs-hyperlink'>Microsoft Active Directory</label>, <label className='demo-docs-hyperlink'>Okta</label>, <label className='demo-docs-hyperlink'>Workday</label>, and <label className='demo-docs-hyperlink'>Google Workspace</label>. See the full list of supported directory providers on the <label className='demo-docs-hyperlink'>integrations</label> page.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Common directory providers include: <label className='demo-docs-hyperlink'>Microsoft Active Directory</label>, <label className='demo-docs-hyperlink'>Okta</label>, <label className='demo-docs-hyperlink'>Workday</label>, and <label className='demo-docs-hyperlink'>Google Workspace</label>. See the<i id='Why use Directory Sync?'></i>  full list of supported directory providers on the <label className='demo-docs-hyperlink'>integrations</label> page.</p>
 
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Why use Directory Sync?</h1>
@@ -2546,11 +2547,11 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Deprovisioning a user from your app (account deletion)</p></li>
                             </ul>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each directory provider implements SCIM differently. Implementing SCIM is often a challenging process and can introduce security vulnerabilities into your app. Directory Sync hides this complexity, so you can focus on building core product features in your app.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each directory provider implements SCIM differently. Implementing SCIM is often a challenging process and can introduce security vulnerabilities into your app. Directory Sync hides this complexity, so you can focus on<i id='What your customer experiences'></i> building core product features in your app.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What your customer experiences</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s take a look at two different user provisioning scenarios.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s take a look at two different<i id='Your app doesn’t use Directory Sync'></i> user provisioning scenarios.</p>
 
                             <div className='dos-donts'>
                                 <div className='dos-donts-icon'>
@@ -2575,7 +2576,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All future changes to this employee’s data and access are manually entered by the IT admin. This is error prone and can lead to security vulnerabilities where users get unauthorized access to resources.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As your customers adopt more cloud software, these manual processes do not scale well. Manual input error can lead to the source of truth (directory) drifting from your app’s state. As a result, ULM has become a table stakes product requirement for enterprises.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As your customers adopt more cloud software, these manual processes do not scale well. Manual input error can lead to the source of truth (directory) drifting from your app’s state. As a result, ULM has become a table stakes product<i id='Your app uses Directory Sync'></i> requirement for enterprises.</p>
 
                             <div className='dos-donts'>
                                 <div className='dos-donts-icon'>
@@ -2594,13 +2595,13 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Optional.</strong> Have the employee go through a password setup if they are not using an identity provider (SSO).</p></li>
                             </ol>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync makes this integration easy by providing APIs your app interfaces with. All updates for this directory will automatically be sent to your app from WorkOS.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync makes this integration easy by providing APIs your app interfaces with. All updates for this directory will automatically be sent to your app from WorkOS<i id='API overview'></i>.</p>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API overview</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Directory</label>, <label className='demo-docs-hyperlink'>directory group</label>, and <label className='demo-docs-hyperlink'>directory user</label> are the main components your app interfaces with.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Directory</label>, <label className='demo-docs-hyperlink'>directory group</label>,<i id='Directory'></i> and <label className='demo-docs-hyperlink'>directory user</label> are the main components your app interfaces with.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory</h3>
 
@@ -2612,7 +2613,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports dozens of integrations including SCIM. Directory updates are delivered to you via webhooks. Your app stores a mapping between your customer and their directory. This allows you to maintain your app in sync with the directory provider used by your customer.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can enable self-service Directory Sync setup for your customers using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can enable self-service Directory Sync setup<i id='Directory group'></i> for your customers using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory group</h3>
 
@@ -2622,7 +2623,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory group is a collection of users within an organization who have been provisioned with access to your app.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are mapped from directory provider groups. Directory groups are most often used to categorize a collection of users based on shared traits. i.e. Grouping software developers at a company under an “Engineering” group.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are mapped from directory provider groups. Directory groups are most often used to categorize a collection of users based on shared traits. i.e. Grouping software developers at a<i id='Directory user'></i> company under an “Engineering” group.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory user</h3>
 
@@ -2655,11 +2656,11 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Quick Start</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Quick Start</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Set up a directory, install the SDK, and integrate Directory Sync.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id="What youll build" ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
-
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll build</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll take you from learning about Directory Sync and POC-ing all the way through to building production-ready features fully integrated with the WorkOS Directory Sync API.</p>
 
@@ -2668,7 +2669,7 @@ export default class StandaloneAPIs extends Component {
                             <ol>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a new directory in the WorkOS Dashboard</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add Directory Sync to your app and fetch directory resources</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Use events to keep your app in sync with the directory changes</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Use events to keep your<i id='Before getting started'></i> app in sync with the directory changes</p></li>
                             </ol>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
@@ -2677,42 +2678,42 @@ export default class StandaloneAPIs extends Component {
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS Account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory from a directory provider that WorkOS supports</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A directory from a <i id='API object definitions'></i>directory provider that WorkOS supports</p></li>
                             </ul>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API object definitions</h1>
 
                             <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5>Directory</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>JStores info about an organization’s user management system (i.e. directory provider).</p>
+                                <div style={{width: sidebarMenuClicked ? "70%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                    <p>Stores info about an organization’s user management system (i.e. directory provider).</p>
                                 </div>
                             </div>
                             <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5>Directory user</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                <div style={{width: sidebarMenuClicked ? "70%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <p>Represents an organization user that is active in an organization’s directory provider.</p>
                                 </div>
                             </div>
                             <div style={{borderBottom: "1px solid #ccc"}} className={sidebarMenuClicked ? "simple-sidebar-table" : "simple-table"}>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-left" : "simple-table-left"}>
                                     <h5>Directory group	</h5>
                                 </div>
-                                <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
+                                <div style={{width: sidebarMenuClicked ? "70%" : "" }} className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <p>A collection of organization users within a directory, e.g. IT, database admins, HR.</p>
                                 </div>
                             </div>
 
-                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The WorkOS Directory Sync API exclusively uses read-only operations. We never mutate end-user directories.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The WorkOS Directory Sync API exclusively uses read-only operations. We never mutate end-user directories<i id='Create a new directory connection'></i>.</p>
                                 </div>
                             </div>
 
@@ -2730,7 +2731,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The first step to connecting with a directory is creating an organization in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. You will then be able to create a new connection to the organization’s directory. Let’s start by creating one for development in your sandbox environment.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get provider-specific instructions by selecting the directory provider you want to test:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get provider-specific <i id='Okta'></i> instructions by selecting the directory provider you want to test:</p>
 
                             <div className='sso-manual-btns-container'>
                                 <div className={sidebarMenuClicked ? "sso-manual-sidebar-btn-container" : "sso-manual-btn-container"}>
@@ -2760,8 +2761,8 @@ export default class StandaloneAPIs extends Component {
                             <div className='sso-manual-btns-container'>
                                 <div className={sidebarMenuClicked ? "sso-manual-sidebar-btn-container" : "sso-manual-btn-container"}>
                                    <div className={sidebarMenuClicked ? "sso-manual-btn-sidebar-text" : "sso-manual-btn-text"}>
-                                        <h4>Google Workplace</h4>
-                                        <p>Configure a Google Workplace SAML connection.</p>
+                                        <h4>Google Workspace</h4>
+                                        <p>Configure a Google Workspace SAML connection.</p>
                                    </div>
                                    <div className={sidebarMenuClicked ? "sso-manual-btn-sidebar-logo" : "sso-manual-btn-logo"}>
                                         <button>
@@ -2788,7 +2789,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className='api-keys'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>You can view and copy the unique identifier for the directory connection on the directory page, once it has been set up. The id takes the form <span style={{backgroundColor: "#cccc"}}>directory_*</span>.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>You can view and copy the unique identifier for the directory connection on the directory page, once it has been set up. The id takes the form <span style={{backgroundColor: "#cccc"}}><i id='Add Directory Sync to your app'></i>directory_*</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2805,7 +2806,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s integrate the Directory Sync API into your app to enable fetching directory resources programmatically.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Let’s integrate the Directory Sync API into your app to enable fetching directory<i id='Install the WorkOS SDK'></i> resources programmatically.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Install the WorkOS SDK</h3>
 
@@ -2939,6 +2940,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Set secrets'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
 
@@ -2961,7 +2963,7 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span>.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The<i id='Fetch directory resources'></i> code examples use your staging API keys when <label className='demo-docs-hyperlink'>signed in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span>.</p>
                                 </div>
                             </div>
 
@@ -2978,6 +2980,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Get directory user" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='List directory users'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>List directory users</h3>
 
@@ -2999,7 +3002,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className='api-keys'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Use the optional <span style={{backgroundColor: "#cccc"}}>limit</span>, <span style={{backgroundColor: "#cccc"}}>before</span>, and <span style={{backgroundColor: "#cccc"}}>after</span> parameters to paginate through results. See the <label className='demo-docs-hyperlink'>API Reference</label> for details.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Use the optional <span style={{backgroundColor: "#cccc"}}>limit</span>, <span style={{backgroundColor: "#cccc"}}>before</span>, and<i id='Get directory group'></i> <span style={{backgroundColor: "#cccc"}}>after</span> parameters to paginate through results. See the <label className='demo-docs-hyperlink'>API Reference</label> for details.</p>
                                     </div>
                                 </div>
                             </div>
@@ -3017,6 +3020,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Get directory group" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='List directory groups'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>List directory groups</h3>
 
@@ -3038,7 +3042,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className='api-keys'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Use the optional <span style={{backgroundColor: "#cccc"}}>limit</span>, <span style={{backgroundColor: "#cccc"}}>before</span>, and <span style={{backgroundColor: "#cccc"}}>after</span> parameters to paginate through results. See the <label className='demo-docs-hyperlink'>API Reference</label> for details.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Use the optional <span style={{backgroundColor: "#cccc"}}>limit</span>, <span style={{backgroundColor: "#cccc"}}>before</span>, and <span style={{backgroundColor: "#cccc"}}>after</span> parameters to paginate through results. See the <label className='demo-docs-hyperlink'>API Reference</label> for details<i id='Handle directory events'></i>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -3085,7 +3089,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View sample Directory Sync apps for each SDK.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
