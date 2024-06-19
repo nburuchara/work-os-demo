@@ -4,7 +4,7 @@ const results = [
     //? - - H1 (TOP) HEADERS - - ?//
     //? - - - - - - - - - - - - - ?//
 
-    //! - QUICK START - !//
+    //! - QUICK START - !//            - - - SINGLE SIGN-ON - - - 
 
     {id: "999444", name: "Single Sign-On", category: "Standalone APIs", page: "Quick Start", subCat1: "Single Sign-On", lastCat: "top"},
  
@@ -48,7 +48,7 @@ const results = [
 
     {id: "999158", name: "SAML Security", category: "Standalone APIs", subCat1: "Single Sign-On", page: "SAML Security", lastCat: "top"},
 
-    //! - FUNDAMENTALS - !// - - (DIRECTORY SYNC) - -
+    //! - FUNDAMENTALS - !//             - - - (DIRECTORY SYNC) - - -
 
     {id: "999129", name: "Fundamentals", category: "Standalone APIs", subCat1: "Directory Sync", page: "Fundamentals", lastCat: "top"},
 
@@ -67,6 +67,19 @@ const results = [
     //! - UNDERSTANDING EVENTS - !// 
 
     {id: "998991", name: "Understanding Events", category: "Standalone APIs", subCat1: "Directory Sync", page: "Understanding Events", lastCat: "top"},
+
+    //! - USER ATTRIBUTES - !// 
+
+    {id: "998933", name: "User Attributes", category: "Standalone APIs", subCat1: "Directory Sync", page: "User Attributes", lastCat: "top"},
+
+    //! - ROLE DATA - !// 
+
+    {id: "998895", name: "Role Data", category: "Standalone APIs", subCat1: "Directory Sync", page: "Role Data", lastCat: "top"},
+
+    //! - ROLE ARCHITECTURE - !// 
+
+    {id: "998848", name: "Role Architecture", category: "Standalone APIs", subCat1: "Directory Sync", page: "Role Architecture", lastCat: "top"},
+
 
 
     //? - - - - - - - - - - - - - - - ?//
@@ -178,7 +191,31 @@ const results = [
     {id: "998987", name: "Directory group events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Directory group events"},
     {id: "998986", name: "Data reconciliation techniques", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Data reconciliation techniques"},
 
+    //! - USER ATTRIBUTES - !// 
+
+    {id: "998932", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Introduction"},
+    {id: "998931", name: "Definitions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998930", name: "Standard attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Standard attributes"},
+    {id: "998929", name: "Custom attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Custom attributes"},
+    {id: "998928", name: "Raw attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Raw attributes"},
+    {id: "998927", name: "Frequently asked questions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Frequently asked questions"},
+
+    //! - ROLE DATA - !// 
+
+    {id: "998894", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Introduction"},
+    {id: "998893", name: "Definitions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Definitions"},
+    {id: "998892", name: "Role Information", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Role Information"},
+    {id: "998892", name: "Group-based role", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Group-based role"},
+    {id: "998891", name: "Attribute-based role", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Attribute-based role"},
+
+    //! - ROLE ARCHITECTURE - !// 
+
+    {id: "998847", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "Introduction"},
+    {id: "998846", name: "Definitions", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "Definitions"},
+    {id: "998845", name: "How to implement role mapping", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "How to implement role mapping"},
+    {id: "998844", name: "Common edge cases", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "Common edge cases"},
     
+
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
     //? - - - - - - - - - - - - - - ?//
@@ -297,6 +334,34 @@ const results = [
     {id: "998975", name: "With the WorkOS state API", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", page: "Understanding Events", lastCat: "With the WorkOS state API"},
     {id: "998974", name: "With the events API", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", page: "Understanding Events", lastCat: "With the events API"},
 
+    //! - USER ATTRIBUTES - !// 
+
+    {id: "998926", name: "Directory User Object", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "Directory User Object"},
+    {id: "998925", name: "Auto-mapped attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Auto-mapped attributes"},
+    {id: "998924", name: "Enable or disable an auto-mapped attribute", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Enable or disable an auto-mapped attribute"},
+    {id: "998923", name: "Support per directory provider", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Support per directory provider"},
+    {id: "998922", name: "Custom-mapped attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Custom-mapped attributes"},
+    {id: "998921", name: "Create a custom-mapped attribute", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Create a custom-mapped attribute"},
+
+    {id: "998920", name: "Are existing directories required to update the attribute mapping when new required custom attributes are added?", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Frequently asked questions", page: "User Attributes", lastCat: "Are existing directories required to update the attribute mapping when new required custom attributes are added?"},
+    {id: "998919", name: "Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Frequently asked questions", page: "User Attributes", lastCat: "Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?"},
+
+    //! - ROLE DATA - !// 
+
+    {id: "998890", name: "Sample scenario", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998889", name: "Directory group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", page: "Role Data", lastCat: "Directory group"},
+    {id: "998888", name: "SSO-based groups attribute", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", page: "Role Data", lastCat: "SSO-based groups attribute"},
+
+    //! - ROLE ARCHITECTURE - !// 
+
+    {id: "998843", name: "If you have no roles", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", page: "Role Architecture", lastCat: "If you have no roles"},
+    {id: "998842", name: "If you have fixed roles", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", page: "Role Architecture", lastCat: "If you have fixed roles"},
+    {id: "998841", name: "Initial directory setup", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", page: "Role Architecture", lastCat: "Initial directory setup"},
+    {id: "998840", name: "If you have custom roles", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", page: "Role Architecture", lastCat: "If you have custom roles"},
+
+    {id: "998839", name: "A user is part of multiple groups", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "A user is part of multiple groups"},
+    {id: "998838", name: "An IT admin wants the ability to manually override a user’s role", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
+    {id: "998837", name: "No role information exists for a particular user", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "No role information exists for a particular user"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -880,9 +945,131 @@ const results = [
 
     {id: "998934", name: "You can also reconcile directory data using the events API. See our data syncing guide to learn more.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the events API", page: "Understanding Events", lastCat: "With the events API"},
 
+    //! - USER ATTRIBUTES - !// 
+
+    {id: "998918", name: "Configure how attributes map from directory providers to Directory Users.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", page: "User Attributes", lastCat: "top"},
+
+    {id: "998917", name: "WorkOS can automatically find and normalize most common attributes from directory providers into the Directory User object, which represents an enterprise user. More unique cases can be mapped by your customers; i.e. IT Admins.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Introduction", page: "User Attributes", lastCat: "Introduction"},
+
+    {id: "998916", name: "Here is an example Directory User. The data stored varies per directory provider and may include attributes such as photo URLs, pay groups, supervisors, etc.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Introduction", subCat4: "Directory User Object", page: "User Attributes", lastCat: "Introduction"},
+
+    {id: "998915", name: "Standard attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998914", name: "The most common user information, normalized across providers.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998913", name: "Auto-mapped attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998912", name: "Detailed user attributes for specific use cases, normalized across providers. You can opt-in to each attribute you want to receive.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998911", name: "Custom-mapped attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998910", name: "For unique cases, you can create your own attributes that your customers can map when setting up a directory.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998909", name: "Raw attributes", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+    {id: "998908", name: "The entire unprocessed attribute payload that we receive from the directory provider and provide in a field called raw_attributes.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Definitions", page: "User Attributes", lastCat: "Definitions"},
+
+    {id: "998907", name: "Every Directory User comes with the following standard attributes. These are the core set of attributes that are common across all identity providers. These are structured fields with a guaranteed schema in the top-level Directory User payload.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Standard Attributes", page: "User Attributes", lastCat: "Standard Attributes"},
+
+    {id: "998906", name: "For more detailed user information, you can opt-in to auto-mapped custom attributes and define your own custom-mapped custom attributes. Custom attributes will appear in the custom_attributes field. These attributes can be configured in the WorkOS Dashboard.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", page: "User Attributes", lastCat: "Custom Attributes"},
+
+    {id: "998905", name: "When enabled, the values will be mapped without additional setup. Not every directory provider has data for every field, so they are always optional if enabled. These fields are named and schematized by WorkOS – they cannot be renamed.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Auto-mapped attributes", page: "User Attributes", lastCat: "Auto-mapped Attributes"},
+
+    {id: "998904", name: "Auto-mapped attributes can be enabled or disabled in the WorkOS Dashboard under Directory Sync configuration.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Enable or disable an auto-mapped attribute", page: "User Attributes", lastCat: "Enable or disable an auto-mapped attribute"},
+    {id: "998903", name: "Updates to these settings will typically take 30 minutes to 1 hour to reflect in your Directory User API response.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Enable or disable an auto-mapped attribute", page: "User Attributes", lastCat: "Enable or disable an auto-mapped attribute"},
+
+    {id: "998902", name: "The following support table outlines the attribute availability across directory providers.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Support per directory provider", page: "User Attributes", lastCat: "Support per directory provider"},
+
+    {id: "998901", name: "If your application may require additional fields, this is where custom-mapped fields are useful. You can create attributes that appear as fields in the Admin Portal. Your customers can map these fields to the correct values in their system when setting up Directory Sync with their directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Custom-mapped attributes", page: "User Attributes", lastCat: "Custom-mapped attributes"},
+    {id: "998900", name: "Nested attributes are not supported. These admin-defined attributes must be defined as top-level flat keys.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Custom-mapped attributes", page: "User Attributes", lastCat: "Custom-mapped attributes"},
+
+    {id: "998899", name: "Custom-mapped attributes can be created in the WorkOS Dashboard under Directory Sync configuration. For attributes set as Required, your customers must map the field to a relevant field in their HRIS or SCIM provider. This can be done via the Admin Portal.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Custom attributes", subCat4: "Create a custom-mapped attribute", page: "User Attributes", lastCat: "Create a custom-mapped attribute"},
+    
+    {id: "998898", name: "These are unfiltered and unstructured attributes that are unique to each directory provider. These attributes are included as fields in the raw_attributes object that is included in the Directory User.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Raw attributes", page: "User Attributes", lastCat: "Raw attributes"},
+
+    {id: "998897", name: "No, when you add a new required custom attribute to your settings, this won’t be retroactively required for directories that have already been set up and configured. However, in the WorkOS dashboard, you will be able to navigate directly to the existing directory and fill in details for those attributes manually.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Frequently asked questions", subCat4: "Are existing directories required to update the attribute mapping when new required custom attributes are added?", page: "User Attributes", lastCat: "Are existing directories required to update the attribute mapping when new required custom attributes are added?"},
+
+    {id: "998896", name: "We do not currently support this functionality, as you have to define any custom attributes in the dashboard first. Please reach out to support if you have a specific use case that you would like to discuss.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "User Attributes", subCat3: "Frequently asked questions", subCat4: "Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?", page: "User Attributes", lastCat: "Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?"},
+
+    //! - ROLE DATA - !// 
+
+    {id: "998887", name: "Learn how to map role data from directory providers to roles in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", page: "Role Data", lastCat: "Sample scenario"},
+
+    {id: "998886", name: "User roles designate what actions a user can perform in your app and what resources they can access. Directory providers store information about user roles in the form of groups or attributes.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Introduction", page: "Role Data", lastCat: "Introduction"},
+    {id: "998885", name: "This guide will explain common strategies for sourcing roles from directory providers and mapping them to roles in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Introduction", page: "Role Data", lastCat: "Introduction"},
+
+    {id: "998884", name: "Role", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+    {id: "998883", name: "A primitive in your app that defines specific permissions for the users. Roles are often defined as an ability or a job title, for example, “Editor” or “Accountant”.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+    {id: "998882", name: "Group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+    {id: "998881", name: "A collection of users based on shared traits. Groups are defined and managed by IT admins in the directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+    {id: "998880", name: "JIT user provisioning", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+    {id: "998879", name: "Just-in-time (JIT) user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role doesn’t exist until the user creates it – just-in-time.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Definitions", page: "Role Data", lastCat: "Definitions"},
+
+    {id: "998878", name: "Your customers will store role information in different forms, depending on their preferred provisioning workflow. WorkOS allows for flexibility in how you source role data. You can fetch role data via three distinct mechanisms:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Role Information", page: "Role Data", lastCat: "Role Information"},
+    {id: "998877", name: "Groups from your customer’s directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Role Information", page: "Role Data", lastCat: "Role Information"},
+    {id: "998876", name: "A custom-mapped role attribute from the directory user profile.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Role Information", page: "Role Data", lastCat: "Role Information"},
+    {id: "998875", name: "A groups attribute in the SSO user profile.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Role Information", page: "Role Data", lastCat: "Role Information"},
+    {id: "998874", name: "The type of mechanism needed will depend on the level of support for roles in your app, your app’s architecture, and your customer’s workflows:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Role Information", page: "Role Data", lastCat: "Role Information"},
+
+    {id: "998873", name: "Users are assigned to groups via the directory provider. Groups are typically synonymous with roles in your app. Therefore, IT admins will often map a group one-to-one to a role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", page: "Role Data", lastCat: "Group-based role"},
+
+    {id: "998872", name: "Consider the fictional SaaS company HireOS, which offers recruiting software to other businesses. HireOS is an online application allowing customers to track leads, candidates, and interviews.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998871", name: "HireOS has integrated Directory Sync and supports group-based role mapping. For example, a HireOS customer would like to assign their recruiting team to it. The customer’s IT admin would take the following steps:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998870", name: "Create a group “Recruiting – HireOS Viewer” using their directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998869", name: "Push the group to HireOS via the directory provider. This is configured in the directory provider admin console.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998868", name: "Go to HireOS' “Settings → Role Mapping” page.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998867", name: "Create a role mapping between “Recruiting – HireOS Viewer” and a e.g. default role of “viewer” on HireOS'.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998866", name: "From this point on, all new users added to “Recruiting – HireOS Viewer” will be given “viewer” permissions on HireOS'.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+    {id: "998865", name: "There are two ways to access group data. You can source group data from directory group objects or the SSO-based groups attribute if your app is using WorkOS Single Sign-On.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Sample scenario", page: "Role Data", lastCat: "Sample scenario"},
+
+    {id: "998864", name: "WorkOS normalizes group information across directory providers, so the information you receive is consistent. Your app only interfaces with a directory group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Directory group", page: "Role Data", lastCat: "Directory group"},
+    {id: "998863", name: "Your app stores the mapping between the directory group ID and the directory user ID. This relationship defines group memberships for any given user. Keeping an additional mapping between the directory group ID and a role in your app allows you to determine which role a user receives.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Directory group", page: "Role Data", lastCat: "Directory group"},
+    {id: "998862", name: "Directory groups are a powerful tool to provision users with the correct roles inside your app. WorkOS automatically sends changes to a given directory group to your app. As a result, your app is always up-to-date with real-time updates when an IT admin changes a user’s access to resources. This way, you ensure only authorized users get access to resources without delay.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "Directory group", page: "Role Data", lastCat: "Directory group"},
+
+    {id: "998861", name: "This feature is currently in beta, contact customer supportno img available for more information.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998860", name: "If you have integrated WorkOS Single Sign-On, you can retrieve groups via the groups attribute in an SSO user profile. There are drawbacks to using SSO-based groups compared to the directory group approach, but it can be quick to set up in some cases.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998859", name: "You can use these group name(s) to map onto user roles in your app using JIT user provisioning.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998858", name: "Strictly using JIT user provisioning comes with a few caveats:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998857", name: "Your app won’t know groups ahead-of-time. As a result, you’ll have to explicitly tell your customer what to name the group(s), thus hardcoding the mapping. e.g., the “Engineering” group always maps to the e.g., “viewer” role in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998856", name: "Your app will receive updates to this user’s group data only once they sign in with SSO again. This delay can allow unauthorized users to access resources using a stale role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998855", name: "Apps often assign a user a default introductory role (instead of mapping the correct role) when using JIT user provisioning.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998854", name: "Your customer must explicitly map the SAML groups attribute in the SSO setup so that you can retrieve that attribute in the SSO profile.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+    {id: "998853", name: "For more information, see the JIT user provisioning guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Group-based role", subCat4: "SSO-based groups attribute", page: "Role Data", lastCat: "SSO-based groups attribute"},
+
+    {id: "998852", name: "You can use custom-mapped attributes if your customers do not use groups to establish and manage user roles.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Attribute-based role", page: "Role Data", lastCat: "Attribute-based role"},
+    {id: "998851", name: "You can create a custom-mapped attribute role (e.g., myRole) in the WorkOS Dashboard under Configuration → Directory Sync. You can set the status of a role attribute to “Required” or “Optional”.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Attribute-based role", page: "Role Data", lastCat: "Attribute-based role"},
+    {id: "998850", name: "The newly created attribute will appear as a field in the Admin Portal. When setting up Directory Sync with their directory provider in Admin Portal, your customers can map this role field to a field in their directory provider. You’ll have to communicate with your customer what value(s) you expect in the custom-mapped attribute.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Attribute-based role", page: "Role Data", lastCat: "Attribute-based role"},
+    {id: "998849", name: "An example being that myRole should be one of \"admin\", \"viewer\", or \"editor\". This allows your app to parse the myRole field value correctly.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Data", subCat3: "Attribute-based role", page: "Role Data", lastCat: "Attribute-based role"},
+
+    //! - ROLE ARCHITECTURE - !// 
+
+    {id: "998836", name: "Learn about common app architectures and edge cases for mapping roles.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "top"},
+
+    {id: "998835", name: "Apps take different approaches to allow customers to map groups and attributes from their directory providers to roles in the app. For example, some apps chose to surface UI to their end users to perform the mappings. Other times, apps perform the mappings opaquely.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Introduction", page: "Role Architecture", lastCat: "Introduction"},
+    {id: "998834", name: "This guide will go over common strategies to allow your customers to map roles in your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Introduction", page: "Role Architecture", lastCat: "Introduction"},
+
+    {id: "998833", name: "RBAC", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Definitions", page: "Role Architecture", lastCat: "Definitions"},
+    {id: "998832", name: "Role-based access control (or RBAC) is a methodology for restricting app resources to only authorized users. RBAC defines primitives such as roles, resources, users, and policies to configure access control within an app. RBAC is an implementation detail. End users are not aware of RBAC.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Definitions", page: "Role Architecture", lastCat: "Definitions"},
+    
+    {id: "998831", name: "We’ll go over a few common role mapping implementations.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", page: "Role Architecture", lastCat: "How to implement role mapping"},
+
+    {id: "998830", name: "If your app does not support roles, you can essentially ignore the group or attribute-based role data provided by WorkOS. You can build an additional role system at a later date. You can always pull directory group information and perform a migration in your app – to backfill any role data.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have no roles", page: "Role Architecture", lastCat: "If you have no roles"},
+
+    {id: "998829", name: "Maintaining a fixed set of roles is the most common approach apps take. B2B apps often surface a concise set of roles to their users, such as an “Admin”, “Editor”, and “Viewer” role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have fixed roles", page: "Role Architecture", lastCat: "If you have fixed roles"},
+    {id: "998828", name: "A common approach to creating the role mappings is to build a surface in your app that shows an admin the groups associated with their directory provider. Then, your customer can map these groups to roles in your app. Your app then stores the mapping between directory group IDs and roles. Group assignment is the preferred app assignment workflow for many IT admins as it saves on manual per-user assignments.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have fixed roles", page: "Role Architecture", lastCat: "If you have fixed roles"},
+    {id: "998827", name: "As an alternative to building UI, some apps choose to store mappings in a configuration file i.e. a JSON or YAML file.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have fixed roles", page: "Role Architecture", lastCat: "If you have fixed roles"},
+    {id: "998826", name: "Alternatively, a custom-mapped attribute can be used as a direct mapping if you cannot support UI. Your app will receive all custom attribute changes in real-time.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have fixed roles", page: "Role Architecture", lastCat: "If you have fixed roles"},
+
+    {id: "998825", name: "When your customer first activates their directory, your app will not have role mapping configuration set at this point. Despite this, WorkOS will send you events based on changes to the directory. To account for the role mapping not being set, you can grant all incoming users a default role until the role mapping setup is complete.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "Initial directory setup", page: "Role Architecture", lastCat: "Initial directory setup"},
+    {id: "998824", name: "After that point, you can backfill existing users with the correct roles. To backfill, you can initiate a sync to pull the latest directory state using one of the WorkOS SDKs.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "Initial directory setup", page: "Role Architecture", lastCat: "Initial directory setup"},
+
+    {id: "998823", name: "Often, custom role creation functionality uses RBAC under the hood. For example, you can use RBAC alongside Directory Sync to map custom role information to your customer’s custom roles. This workflow remains the same as the fixed roles architecture, with an additional role creation UI in your app. Creating mappings is performed as usual, with IT admins additionally allowed to create custom roles.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have custom roles", page: "Role Architecture", lastCat: "If you have custom roles"},
+    {id: "998822", name: "You can use a custom-mapped attribute as a direct mapping in this scenario. First, you’ll have to let your customers know the new role value allowed in their directory provider. Then, the IT admin must ensure they pass the correct newly created role via their directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "How to implement role mapping", subCat4: "If you have custom roles", page: "Role Architecture", lastCat: "If you have custom roles"},
+
+    {id: "998821", name: "Having a user who belongs to multiple groups is a common scenario. For example, there might be a case where an employee Jane is an Engineering Manager and belongs to an “Engineering”, “Manager”, and “Admin” group. The most common way to map multiple groups to a role is to grant the user the role associated with the most privileged group. In this case, “Admin” has the most permissions, giving Jane the “Admin” role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "A user is part of multiple groups", page: "Role Architecture", lastCat: "A user is part of multiple groups"},
+    {id: "998820", name: "Another common approach is to add the permission sets together to grant the user all permissions associated with each role assigned to each group. This role addition means the user receives every permission for each role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "A user is part of multiple groups", page: "Role Architecture", lastCat: "A user is part of multiple groups"},
+
+    {id: "998819", name: "Your customer might want to retain the ability to override a role for a particular user. WorkOS recommends achieving this by using both a group and attribute-based approach. Roles map to groups by default but can be manually modified with attributes if the attribute exists in the directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "An IT admin wants the ability to manually override a user’s role", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
+    {id: "998818", name: "You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory group events overwrite their manually inputted role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "An IT admin wants the ability to manually override a user’s role", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
+
+    {id: "998817", name: "You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory group events overwrite their manually inputted role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "An IT admin wants the ability to manually override a user’s role", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
+    {id: "998816", name: "If no role information exists from any source, granting a user a default role with fewer permissions, such as a “Viewer” role is common.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "No role information exists for a particular user", page: "Role Architecture", lastCat: "No role information exists for a particular user"},
 
 ]
 
 export default results;
 
-//* latest: 998992 - handle inactive users 
+//* latest: 998816 - role architecture

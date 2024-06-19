@@ -2636,8 +2636,7 @@ export default class DocsNavigationMenu extends Component {
         if (currentSection === category) {
             searchingSameSection = true;
         }
-        console.log("searched category: ", category)
-        console.log('current section: ', currentSection)
+        
         if (this.state.showMiniSearchBar === false) {
             this.setState((prevState) => ({
                 showDocsMenu: !prevState.showDocsMenu,

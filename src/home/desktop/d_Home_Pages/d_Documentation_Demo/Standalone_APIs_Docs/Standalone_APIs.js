@@ -3875,11 +3875,12 @@ export default class StandaloneAPIs extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Attributes</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Configure how attributes map from directory providers to Directory Users.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS can automatically find and normalize most common attributes from directory providers into the Directory User object, which represents an enterprise user. More unique cases can be mapped by your customers; i.e. IT Admins.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS can automatically find and normalize most common attributes from directory providers into the Directory User object, which represents an enterprise user. More unique<i id='Directory User Object'></i> cases can be mapped by your customers; i.e. IT Admins.</p>
 
                             <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
                                 <div className='hdb-icon'>
@@ -3914,7 +3915,7 @@ export default class StandaloneAPIs extends Component {
                             </CSSTransition>
 
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll explain how to map data from directory providers to the Directory Users.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we’ll explain how<i id='Definitions'></i> to map data from directory providers to the Directory Users.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
 
@@ -3948,7 +3949,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <div className='api-keys'>
-                                        <p>The entire unprocessed attribute payload that we receive from the directory provider and provide in a field called <span>raw_attributes</span>.</p>
+                                        <p>The entire unprocessed attribute payload that we receive from the directory provider<i id='Standard attributes'></i> and provide in a field called <span>raw_attributes</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -4048,7 +4049,7 @@ export default class StandaloneAPIs extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>job_title</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "60%" : "70%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The user’s job title</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The<i id='Custom attributes'></i> user’s job title</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "20%" : "15%"}} className='c-table-cell3'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
@@ -4061,7 +4062,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Custom attributes</h1>
                             
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more detailed user information, you can opt-in to auto-mapped custom attributes and define your own custom-mapped custom attributes. Custom attributes will appear in the custom_attributes field. These attributes can be configured in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more detailed user information, you can opt-in to auto-mapped custom attributes and define your own custom-mapped custom attributes. Custom attributes will appear in the custom_attributes field. These <i id='Auto-mapped attributes'></i>attributes can be configured in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Auto-mapped attributes</h3>
@@ -4161,7 +4162,7 @@ export default class StandaloneAPIs extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>manager_email</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "55%" : "55%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>The email address for the user’s manager</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}><i id='Enable or disable an auto-mapped attribute'></i>The email address for the user’s manager</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "15%" : "15%"}} className='c-table-cell3'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Optional</p>
@@ -4184,6 +4185,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img84' className={`enlargable-image-container ${this.state.enlargedImageId === 'img84' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img84')}>
                                 <img  src='/assets/user_att_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Support per directory provider'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Support per directory provider</h3>
 
@@ -4210,7 +4212,7 @@ export default class StandaloneAPIs extends Component {
                                        <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>employment_start_date</p>
                                    </div>
                                    <div className='complex-sliding-table-left-cell'>
-                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>employee_type</p>
+                                       <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>employee_type</p><i id='Custom-mapped attributes'></i>
                                    </div>
                                    <div style={{borderBottomLeftRadius: "9px", border: "0px solid transparent"}} className='complex-sliding-table-left-cell'>
                                        <p style={{fontSize: sidebarMenuClicked ? "72.3%" : ""}}>manager_email</p>
@@ -4592,7 +4594,7 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Nested attributes are not supported. These admin-defined attributes must be defined as top-level flat keys.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Nested attributes are not supported. These admin-defined attributes<i id='Create a custom-mapped attribute'></i> must be defined as top-level flat keys.</p>
                                 </div>
                             </div>
 
@@ -4601,24 +4603,25 @@ export default class StandaloneAPIs extends Component {
                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom-mapped attributes can be created in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> under Directory Sync configuration. For attributes set as <i>Required</i>, your customers must map the field to a relevant field in their HRIS or SCIM provider. This can be done via the <label className='demo-docs-hyperlink'>Admin Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                             <div id='img85' className={`enlargable-image-container ${this.state.enlargedImageId === 'img85' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img85')}>
-                                <img  src='/assets/user_att_img2.avif' alt="Enlargable" className="image" />
+                            <i id='Raw attributes'></i><img  src='/assets/user_att_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Raw attributes</h1>
                             
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These are unfiltered and unstructured attributes that are unique to each directory provider. These attributes are included as fields in the <span>raw_attributes</span> object that is included in the <label className='demo-docs-hyperlink'>Directory User</label>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These are unfiltered and unstructured attributes that are unique to each directory provider. These attributes are included as fields in the <span>raw_attributes</span> object that is included in<i id='Frequently asked questions'></i> the <label className='demo-docs-hyperlink'>Directory User</label>.</p>
                             </div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'><i id='Are existing directories required to update the attribute mapping when new required custom attributes are added?'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Are existing directories required to update the attribute mapping when new required custom attributes are added?</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>No, when you add a new required custom attribute to your settings, this won’t be retroactively required for directories that have already been set up and configured. However, in the WorkOS dashboard, you will be able to navigate directly to the existing directory and fill in details for those attributes manually.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>No, when you add a new required custom attribute to your settings, this won’t be retroactively required for directories that have already been set up and configured. However, in the WorkOS dashboard, you will be able to navigate directly to the existing <i id='Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?'></i>directory and fill in details for those attributes manually.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can our customers add their own custom attributes outside of what is defined in the WorkOS dashboard?</h3>
 
@@ -4645,16 +4648,17 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Data</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Data</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn how to map role data from directory providers to roles in your app.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User roles designate what actions a user can perform in your app and what resources they can access. Directory providers store information about user roles in the form of groups or attributes.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will explain common strategies for sourcing roles from directory providers and mapping them to roles in your app.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will explain common strategies for sourcing roles from directoryI<i id='Definitions'></i> providers and mapping them to roles in your app.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
 
@@ -4680,7 +4684,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
                                     <div className='api-keys'>
-                                        <p>Just-in-time (JIT) user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role doesn’t exist until the user creates it – just-in-time.</p>
+                                        <p>Just-in-time (JIT) user provisioning creates a user in an app when the user attempts to sign in for the first time. The account and respective role doesn’t exist until<i id='Role Information'></i> the user creates it – just-in-time.</p>
                                     </div>
                                 </div>
                             </div>
@@ -4735,7 +4739,7 @@ export default class StandaloneAPIs extends Component {
 
                             <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
                                 <div className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>SSO attribute mapping</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>SSO attribute<i id='Group-based role'></i> mapping</p>
                                 </div>
                                 <div className='c-table-cell2'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>You get role data each time a user logs in (JIT user provisioning)</p>
@@ -4747,7 +4751,7 @@ export default class StandaloneAPIs extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Group-based role</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users are assigned to groups via the directory provider. Groups are typically synonymous with roles in your app. Therefore, IT admins will often map a group one-to-one to a role.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users are assigned to groups via the directory provider. Groups are typically synonymous with roles in your app. Therefore, IT admins<i id='Sample scenario'></i> will often map a group one-to-one to a role.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sample scenario</h3>
 
@@ -4764,7 +4768,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From this point on, all new users added to “Recruiting – HireOS Viewer” will be given “viewer” permissions on <i>HireOS'</i>.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to access group data. You can source group data from <label className='demo-docs-hyperlink'>directory group</label> objects or the SSO-based groups attribute if your app is using WorkOS <label className='demo-docs-hyperlink'>Single Sign-On</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two ways to access group data. You can source group data from <label className='demo-docs-hyperlink'>directory group</label> objects or the SSO-based groups <i id='Directory group'></i>attribute if your app is using WorkOS <label className='demo-docs-hyperlink'>Single Sign-On</label>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory group</h3>
 
@@ -4783,7 +4787,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your app stores the mapping between the directory group ID and the directory user ID. This relationship defines group memberships for any given user. Keeping an additional mapping between the directory group ID and a role in your app allows you to determine which role a user receives.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are a powerful tool to provision users with the correct roles inside your app. WorkOS automatically sends changes to a given directory group to your app. As a result, your app is always up-to-date with real-time updates when an IT admin changes a user’s access to resources. This way, you ensure only authorized users get access to resources without delay.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory groups are a powerful tool to provision users with the correct roles inside your app. WorkOS automatically sends changes to a given directory group to your app. As a result, your app is always up-to-date with real-time updates when an IT admin changes a user’s access to resources. This way, you ensure only <i id='SSO-based groups attribute'></i>authorized users get access to resources without delay.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>SSO-based groups attribute</h3>
 
@@ -4824,7 +4828,7 @@ export default class StandaloneAPIs extends Component {
                                 </ul>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information, see the <label className='demo-docs-hyperlink'>JIT user provisioning guide</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i id='Attribute-based role'></i>For more information, see the <label className='demo-docs-hyperlink'>JIT user provisioning guide</label>.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Attribute-based role</h1>
 
@@ -4874,8 +4878,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Architecture</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Role Architecture</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn about common app architectures and edge cases for mapping roles.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -4883,7 +4888,7 @@ export default class StandaloneAPIs extends Component {
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Apps take different approaches to allow customers to map groups and attributes from their directory providers to roles in the app. For example, some apps chose to surface UI to their end users to perform the mappings. Other times, apps perform the mappings opaquely.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will go over common strategies to allow your customers to map roles in your app.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide will go over common strategies to<i id='Definitions'></i> allow your customers to map roles in your app.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
 
@@ -4893,17 +4898,17 @@ export default class StandaloneAPIs extends Component {
                                     <h5 style={{color: "black", cursor: "default"}}>RBAC</h5>
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>Role-based access control (or RBAC) is a methodology for restricting app resources to only authorized users. RBAC defines primitives such as roles, resources, users, and policies to configure access control within an app. RBAC is an implementation detail. End users are not aware of RBAC.</p>
+                                    <p>Role-based access control (or RBAC) is a methodology for restricting app resources to only authorized users. RBAC defines primitives such as roles, resources, users, and policies to configure access control within an app. RBAC is an implementation <i id='How to implement role mapping'></i>detail. End users are not aware of RBAC.</p>
                                 </div>
                             </div>
 
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How to implement role mapping</h1>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>How to implement role mapping</h1><i id='If you have no roles'></i>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>We’ll go over a few common role mapping implementations.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have no roles</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app does not support roles, you can essentially ignore the group or attribute-based role data provided by WorkOS. You can build an additional role system at a later date. You can always pull directory group information and perform a migration in your app – to backfill any role data.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app does not support roles, you can essentially ignore the group or attribute-based role data provided by WorkOS. You can build an additional role system at a later date. You can always pull directory group information and perform a migration<i id='If you have fixed roles'></i> in your app – to backfill any role data.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have fixed roles</h3>
 
@@ -4917,13 +4922,13 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As an alternative to building UI, some apps choose to store mappings in a configuration file i.e. a JSON or YAML file.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, a <label className='demo-docs-hyperlink'>custom-mapped attribute</label> can be used as a direct mapping if you cannot support UI. Your app will receive all custom attribute changes in real-time.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Alternatively, a <label className='demo-docs-hyperlink'>custom-mapped attribute</label> can be used as a direct mapping if you cannot support UI. Your app will receive<i id='Initial directory setup'></i> all custom attribute changes in real-time.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Initial directory setup</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When your customer first activates their directory, your app will not have role mapping configuration set at this point. Despite this, WorkOS will send you events based on changes to the directory. To account for the role mapping not being set, you can grant all incoming users a default role until the role mapping setup is complete.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After that point, you can backfill existing users with the correct roles. To backfill, you can initiate a sync to pull the latest directory state using one of the <span className='demo-docs-hyperlink'>WorkOS SDKs</span>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After that point, you can backfill existing users with the correct roles. To backfill, you can initiate a sync to pull the latest <i id='If you have custom roles'></i>directory state using one of the <span className='demo-docs-hyperlink'>WorkOS SDKs</span>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>If you have custom roles</h3>
 
@@ -4933,7 +4938,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/role_architecture_img2.png' alt="Enlargable" className="image" />
                             </div>
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use a custom-mapped attribute as a direct mapping in this scenario. First, you’ll have to let your customers know the new role value allowed in their directory provider. Then, the IT admin must ensure they pass the correct newly created role via their directory provider.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can use a custom-mapped attribute as a direct mapping in this scenario. First, you’ll have to let your customers know the new role value allowed in their directory provider. Then, the IT admin must ensure they pass the correct newly<i id='Common edge cases'></i> created role via their directory provider.<i id='A user is part of multiple groups'></i></p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Common edge cases</h1>
 
@@ -4941,13 +4946,13 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Having a user who belongs to multiple groups is a common scenario. For example, there might be a case where an employee <i>Jane</i> is an <i>Engineering Manager</i> and belongs to an “Engineering”, “Manager”, and “Admin” group. The most common way to map multiple groups to a role is to grant the user the role associated with the most privileged group. In this case, “Admin” has the most permissions, giving <i>Jane</i> the “Admin” role.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Another common approach is to add the permission sets together to grant the user all permissions associated with each role assigned to each group. This role addition means the user receives every permission for each role.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Another common approach is to add the permission sets together to grant the user all permissions associated with each role assigned to each group. This role addition means the <i id='An IT admin wants the ability to manually override a user’s role'></i>user receives every permission for each role.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>An IT admin wants the ability to manually override a user’s role</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your customer might want to retain the ability to override a role for a particular user. WorkOS recommends achieving this by using both a group and attribute-based approach. Roles map to groups by default but can be manually modified with attributes if the attribute exists in the directory provider.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory group events overwrite their manually inputted role.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory <i id='No role information exists for a particular user'></i>group events overwrite their manually inputted role.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>No role information exists for a particular user</h3>
 
