@@ -5933,8 +5933,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Exporting Events</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Exporting Events</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Export Audit Log Events through the WorkOS Dashboard and API.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Exporting Events' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -5944,7 +5945,7 @@ export default class StandaloneAPIs extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may need to export Audit Log Events in large chunks. WorkOS supports exporting events as CSV files through both the Dashboard and API.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Exports are scoped to a single organization within a specified date range. Events from the past three months can be included in the export. You may define additional filters such as <span>actions</span>, <span>actors</span>, and <span>targets</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Exports are scoped to a single organization within a specified date range. Events from the past three months can be included in the export. You may define <i id='Creating an export through the Dashboard'></i>additional filters such as <span>actions</span>, <span>actors</span>, and <span>targets</span>.</p>
 
                             </div>
 
@@ -5955,6 +5956,7 @@ export default class StandaloneAPIs extends Component {
                             <div style={{marginTop: "5%"}} id='img110' className={`enlargable-image-container ${this.state.enlargedImageId === 'img110' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img110')}>
                                 <img  src='/assets/export_events_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Creating an export through the API'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Creating an export through the API</h3>
 
@@ -6016,8 +6018,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>   
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Metadata Schema</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Metadata Schema</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Define strict JSON Schema for validating event metadata.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Metadata Schema' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -6080,8 +6083,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Editing Events</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Editing Events</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Modify existing event configuration with backwards compatibility.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Editing Events' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -6091,7 +6095,7 @@ export default class StandaloneAPIs extends Component {
 
                             <div className='api-keys'>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The reason for this behavior is to ensure backwards compatibility. Schema configuration is immutable to prevent you from accidentally making changes that are incompatible with events that are already being emitted from your application. Rather you must first create a new version of the schema, and then explicitly emit events for that version leveraging the event <span>version</span> field.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The reason for this behavior is to ensure backwards compatibility. Schema configuration is immutable to prevent you from accidentally making changes that are incompatible with events that are already being emitted from your application. Rather you must first create a new version of the schema, and then explicitly emit events for that version leveraging<i id='Creating a new event version'></i> the event <span>version</span> field.</p>
 
                             </div>
 
@@ -6112,6 +6116,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img114' className={`enlargable-image-container ${this.state.enlargedImageId === 'img114' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img114')}>
                                     <img  src='/assets/editing_events_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Emitting event with version'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Emitting event with version</h3>
 
@@ -6152,6 +6157,7 @@ export default class StandaloneAPIs extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Admin Portal</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>View Audit Log events for an organization in the WorkOS Admin Portal.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Creating Admin Portal Link' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -6202,6 +6208,7 @@ export default class StandaloneAPIs extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Log Streams</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Stream Audit Log Events to your customers’ SIEM providers.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Understanding Log Streams' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -6220,7 +6227,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This gives your customers greater control over their Audit Logs by allowing them to apply custom indexing and monitoring of their events in the SIEM provider along with events from other cloud services they use.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log Streams can be created by either configuring the Log Stream through your WorkOS Dashboard or by allowing your customer’s IT admin to configure it themselves through the WorkOS Admin Portal.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log Streams can be created by either configuring the Log Stream through your WorkOS Dashboard or by allowing your customer’s IT admin to configure it themselves<i id='IP allowlist'></i> through the WorkOS Admin Portal.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>IP allowlist</h3>
 
@@ -6235,6 +6242,7 @@ export default class StandaloneAPIs extends Component {
                             snippet=""
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Dashboard'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Dashboard</h1>
 
@@ -6249,6 +6257,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img117' className={`enlargable-image-container ${this.state.enlargedImageId === 'img117' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img117')}>
                                     <img  src='/assets/log_streams_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Admin Portal'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Admin Portal</h1>
 

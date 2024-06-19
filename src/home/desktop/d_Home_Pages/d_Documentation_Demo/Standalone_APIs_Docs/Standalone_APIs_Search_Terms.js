@@ -96,6 +96,27 @@ const results = [
 
     {id: "998722", name: "Audit Logs", category: "Standalone APIs", subCat1: "Audit Logs", page: "Quick Start (AL)", lastCat: "top"},
 
+    //! - EXPORTING EVENTS - !//             
+
+    {id: "998686", name: "Exporting Events", category: "Standalone APIs", subCat1: "Audit Logs", page: "Exporting Events", lastCat: "top"},
+
+    //! - METADATA SCHEMA - !//             
+
+    {id: "998674", name: "Metadata Schema", category: "Standalone APIs", subCat1: "Audit Logs", page: "Metadata Schema", lastCat: "top"},
+
+    //! - EDITING EVENTS - !//             
+
+    {id: "998667", name: "Editing Events", category: "Standalone APIs", subCat1: "Audit Logs", page: "Editing Events", lastCat: "top"},
+
+    //! - ADMIN PORTAL - !//             
+
+    {id: "998657", name: "Admin Portal", category: "Standalone APIs", subCat1: "Audit Logs", page: "Admin Portal (AL)", lastCat: "top"},
+
+    //! - LOG STREAMS - !//             
+
+    {id: "998651", name: "Log Streams", category: "Standalone APIs", subCat1: "Audit Logs", page: "Log Streams", lastCat: "top"},
+
+
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
     //? - - - - - - - - - - - - - - - ?//
@@ -255,6 +276,27 @@ const results = [
      {id: "998717", name: "API object definitions", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "API object definitions"},
      {id: "998716", name: "Emit an Audit Log Event", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Emit an Audit Log Event"},
 
+     //! - EXPORTING EVENTS - !//             
+
+     {id: "998685", name: "Exporting Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", page: "Exporting Events", lastCat: "Exporting Events"},
+
+     //! - METADATA SCHEMA - !//             
+
+    {id: "998673", name: "Metadata Schema", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "Metadata Schema"},
+
+    //! - EDITING EVENTS - !//             
+
+    {id: "998667", name: "Editing Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", page: "Editing Events", lastCat: "Editing Events"},
+
+    //! - ADMIN PORTAL - !//             
+
+    {id: "998656", name: "Creating Admin Portal Link", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Admin Portal", page: "Admin Portal (AL)", lastCat: "Creating Admin Portal Link"},
+
+    //! - LOG STREAMS - !//             
+
+    {id: "998650", name: "Understanding Log Streams", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
+    {id: "998649", name: "Dashboard", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Dashboard"},
+    {id: "998648", name: "Admin Portal", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Admin Portal"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -434,6 +476,20 @@ const results = [
     {id: "998712", name: "Get an Organization ID", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Get an Organization ID"},
     {id: "998711", name: "Emit Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Emit Events"},
     {id: "998710", name: "View ingested events in the Dashboard", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "View ingested events in the Dashboard"},
+
+    //! - EXPORTING EVENTS - !//             
+
+    {id: "998683", name: "Creating an export through the Dashboard", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", page: "Exporting Events", lastCat: "Creating an export through the Dashboard"},
+    {id: "998682", name: "Creating an export through the API", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", page: "Exporting Events", lastCat: "Creating an export through the API"},
+
+    //! - EDITING EVENTS - !//             
+
+    {id: "998665", name: "Creating a new event version", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", page: "Editing Events", lastCat: "Creating a new event version"},
+    {id: "998664", name: "Emitting event with version", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", page: "Editing Events", lastCat: "Emitting event with version"},
+
+    //! - LOG STREAMS - !//             
+
+    {id: "998647", name: "IP allowlist", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "IP allowlist"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -1275,8 +1331,68 @@ const results = [
 
     {id: "998687", name: "Once you have successfully emitted events with the WorkOS SDK, you can view them in the Dashboard under the Organization that the events are associated with.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "View ingested events in the Dashboard", page: "Quick Start (AL)", lastCat: "View ingested events in the Dashboard"},
 
+    //! - EXPORTING EVENTS - !//             
+
+    {id: "998681", name: "Export Audit Log Events through the WorkOS Dashboard and API.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", page: "Exporting Events", lastCat: "top"},
+
+    {id: "998680", name: "You may need to export Audit Log Events in large chunks. WorkOS supports exporting events as CSV files through both the Dashboard and API.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", page: "Exporting Events", lastCat: "Exporting Events"},
+    {id: "998679", name: "Exports are scoped to a single organization within a specified date range. Events from the past three months can be included in the export. You may define additional filters such as actions, actors, and targets.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", page: "Exporting Events", lastCat: "Exporting Events"},
+
+    {id: "998678", name: "Exports can be manually created under the Organization page when viewing Audit Log Events by selecting “Export CSV” from the “Actions” dropdown. Set your filters and select “Generate CSV file”.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", subCat4: "Creating an export through the Dashboard", page: "Exporting Events", lastCat: "Creating an export through the Dashboard"},
+
+    {id: "998677", name: "Once the export has been created, fetch the export at a later time to access the url of the generated CSV file.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", subCat4: "Creating an export through the API", page: "Exporting Events", lastCat: "Creating an export through the API"},
+    {id: "998676", name: "The URL will expire after 10 minutes. If the export is needed again at a later time, refetching the export will regenerate the URL.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", subCat4: "Creating an export through the API", page: "Exporting Events", lastCat: "Creating an export through the API"},
+    {id: "998675", name: "If the state of the export is still pending, poll the export until it is ready for download.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Exporting Events", subCat3: "Exporting Events", subCat4: "Creating an export through the API", page: "Exporting Events", lastCat: "Creating an export through the API"},
+
+    //! - METADATA SCHEMA - !//             
+
+    {id: "998672", name: "Define strict JSON Schema for validating event metadata.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "top"},
+
+    {id: "998671", name: "Audit Log Events can contain arbitrary metadata for adding additional details to your events. Normally this data can take any shape. However, custom metadata schemas can be defined when configuring the event for additional type safety and data consistency. When an event is emitted that does not match the provided schema, an error will be returned.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "Metadata Schema"},
+    {id: "998670", name: "When first creating an event schema, check the “Require metadata schema validation” checkbox. You will then be navigated to the schema editor where you can modify the underlying JSON Schema or all metadata objects.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "Metadata Schema"},
+    {id: "998669", name: "There are metadata objects located at the root of the event, and within actor and targets objects. Each can contain a unique JSON Schema. To add to a metadata object, click the ”+” sign.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "Metadata Schema"},
+    {id: "998668", name: "Metadata objects have a limit of 50 keys. Key names can be up to 40 characters long, and values can be up to 500 characters long.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Metadata Schema", page: "Metadata Schema", lastCat: "Metadata Schema"},
+
+    //! - EDITING EVENTS - !//             
+
+    {id: "998663", name: "Modify existing event configuration with backwards compatibility.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", page: "Editing Events", lastCat: "top"},
+
+    {id: "998662", name: "Once you’ve successfully configured Audit Logs in the WorkOS Dashboard and begun emitting events, how do you go about modifying an event schema without breaking your existing integrations? This is where versioning comes into place. When you make a modification to an existing schema it will create a new version rather than overwriting the existing schema.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", subCat3: "Editing Events", page: "Editing Events", lastCat: "Editing Events"},
+    {id: "998661", name: "The reason for this behavior is to ensure backwards compatibility. Schema configuration is immutable to prevent you from accidentally making changes that are incompatible with events that are already being emitted from your application. Rather you must first create a new version of the schema, and then explicitly emit events for that version leveraging the event version field.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", subCat3: "Editing Events", page: "Editing Events", lastCat: "Editing Events"},
+
+    {id: "998660", name: "In the WorkOS Dashboard navigate to the Audit Logs configuration page. Locate the event that you would like to modify the schema for and click the “Edit Event” item under the context menu.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", subCat3: "Editing Events", subCat4: "Creating a new event version", page: "Editing Events", lastCat: "Creating a new event version"},
+    {id: "998659", name: "You will be navigated to a page where you can edit both the targets associated with the event, and optionally the metadata JSON schema. Once you’re done making changes, clicking save will create a new version of the event schema.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", subCat3: "Editing Events", subCat4: "Creating a new event version", page: "Editing Events", lastCat: "Creating a new event version"},
+
+    {id: "998658", name: "Now that a schema exists with a new version, the version field must be provided when emitting an event so that WorkOS knows which version to use for validation.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Editing Events", subCat3: "Editing Events", subCat4: "Emitting event with version", page: "Editing Events", lastCat: "Emitting event with version"},
+
+    //! - ADMIN PORTAL - !//             
+
+    {id: "998655", name: "View Audit Log events for an organization in the WorkOS Admin Portal.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Admin Portal", page: "Admin Portal (AL)", lastCat: "top"},
+
+    {id: "998654", name: "Audit Log events can be viewed in the WorkOS Admin Portal. Links can be generated through the WorkOS API and sent to your customers for viewing events associated with their Organization.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Admin Portal", subCat3: "Creating Admin Portal Link", page: "Admin Portal (AL)", lastCat: "Creating Admin Portal Link"},
+    {id: "998653", name: "When creating a link for an Admin Portal session, you must provide the Organization ID whose events will be displayed in the Admin Portal, and specify the intent as audit_logs.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Admin Portal", subCat3: "Creating Admin Portal Link", page: "Admin Portal (AL)", lastCat: "Creating Admin Portal Link"},
+    {id: "998652", name: "Navigating to the provided link will result in the following view. Users will be able to view and export Audit Log events just as can be done through the WorkOS Dashboard.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Admin Portal", subCat3: "Creating Admin Portal Link", page: "Admin Portal (AL)", lastCat: "Creating Admin Portal Link"},
+
+    //! - LOG STREAMS - !//             
+
+    {id: "998646", name: "Stream Audit Log Events to your customers’ SIEM providers.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "top"},
+
+    {id: "998645", name: "Log Streams allow your customers to stream Audit Logs directly to their Security Incident and Event Management (SIEM) providers like Datadog, Splunk, AWS S3, or Google Cloud Storage.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
+    {id: "998644", name: "The Google Cloud Storage log streams destination is currently in beta, contact customer support for more information.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
+    {id: "998643", name: "This gives your customers greater control over their Audit Logs by allowing them to apply custom indexing and monitoring of their events in the SIEM provider along with events from other cloud services they use.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
+    {id: "998642", name: "Log Streams can be created by either configuring the Log Stream through your WorkOS Dashboard or by allowing your customer’s IT admin to configure it themselves through the WorkOS Admin Portal.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
+
+    {id: "998642", name: "WorkOS streams audit logs from a fixed set of IP addresses. If audit logs are being streamed to a host that restricts access based on IP address, the following IP addresses should be allowed:", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", subCat4: "IP allowlist", page: "Log Streams", lastCat: "IP allowlist"},
+
+    {id: "998641", name: "To configure a Log Stream through the WorkOS Dashboard, navigate to an organization and click “Configure”.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Dashboard", page: "Log Streams", lastCat: "Dashboard"},
+    {id: "998640", name: "You will be promoted to select a destination from a dropdown, click “Save connection”. You will then be prompted to provide specific configuration for the selected destination.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Dashboard", page: "Log Streams", lastCat: "Dashboard"},
+
+    {id: "998639", name: "The Admin Portal can be accessed via a Setup Link found in the Organization page within the Dashboard. Click “Generate” and select “Log Streams”. Copy the link and send it to the organization’s IT admin who will be configuring Log Streams.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Admin Portal", page: "Log Streams", lastCat: "Admin Portal"},
+    {id: "998638", name: "You can also guide users to the Admin Portal by redirecting them to a programmatically generated Admin Portal link directly from your application.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Admin Portal", page: "Log Streams", lastCat: "Admin Portal"},
+    {id: "998637", name: "Once redirected to the Admin Portal, the user will be prompted to select a destination and will be provided with step-by-step configuration instructions for the selected destination.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Admin Portal", page: "Log Streams", lastCat: "Admin Portal"},
+
 ]
 
 export default results;
 
-//* latest: 998687 -  quick start (al)
+//* latest: 998637 - log streams
