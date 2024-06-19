@@ -92,6 +92,10 @@ const results = [
 
     {id: "998752", name: "Custom Branding", category: "Standalone APIs", subCat1: "Admin Portal", page: "Custom Branding", lastCat: "top"},
 
+    //! - QUICK START (AL) - !//             - - - (AUDIT LOGS) - - -
+
+    {id: "998722", name: "Audit Logs", category: "Standalone APIs", subCat1: "Audit Logs", page: "Quick Start (AL)", lastCat: "top"},
+
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
     //? - - - - - - - - - - - - - - - ?//
@@ -241,6 +245,15 @@ const results = [
     {id: "998750", name: "Logos and icons", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Logos and icons"},
     {id: "998749", name: "Custom domains", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Custom domains"},
     {id: "998748", name: "Team name", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Team name"},
+
+     //! - QUICK START (AL) - !//             
+
+     {id: "998721", name: "Introduction", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Introduction"},
+     {id: "998720", name: "What you’ll build", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+     {id: "998719", name: "Before getting started", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Before getting started"},
+     {id: "998718", name: "API object definitions", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "API object definitions"},
+     {id: "998717", name: "API object definitions", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "API object definitions"},
+     {id: "998716", name: "Emit an Audit Log Event", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Emit an Audit Log Event"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -413,6 +426,14 @@ const results = [
     {id: "998742", name: "Admin Portal domain", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Admin Portal domain"},
     {id: "998741", name: "Email domain", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Email domain"},
 
+    //! - QUICK START (AL) - !//             
+
+    {id: "998715", name: "Install the WorkOS SDK", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Install the WorkOS SDK"},
+    {id: "998714", name: "Set secrets", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Set secrets"},
+    {id: "998713", name: "Sign in to your WorkOS Dashboard account and configure Audit Log Event schemas", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Sign in to your WorkOS Dashboard account and configure Audit Log Event schemas"},
+    {id: "998712", name: "Get an Organization ID", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Get an Organization ID"},
+    {id: "998711", name: "Emit Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "Emit Events"},
+    {id: "998710", name: "View ingested events in the Dashboard", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "View ingested events in the Dashboard"},
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -1217,8 +1238,45 @@ const results = [
 
     {id: "998723", name: "Your team name is visible in the Admin Portal and in the emails received by your customers’ organization admins. Learn how to change your team name in team settings.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Team name", page: "Custom Branding", lastCat: "Team name"},
 
+    //! - QUICK START (AL) - !//             
+
+    {id: "998709", name: "Ingest and export Audit Log Events from your application.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", page: "Quick Start (AL)", lastCat: "top"},
+
+    {id: "998708", name: "Audit Logs are a collection of events that contain information relevant to notable actions taken by users in your application. Every event in the collection contains details regarding what kind of action was taken (action), who performed the action (actor), what resources were affected by the action (targets), and additional details of when and where the action took place.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Introduction", page: "Quick Start (AL)", lastCat: "Introduction"},
+    {id: "998707", name: "These events are similar to application logs and analytic events, but are fundamentally different in their intent. They aren’t typically used for active monitoring/alerting, rather they exist as a paper trail of potentially sensitive actions taken by members of an organization for compliance and security reasons.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Introduction", page: "Quick Start (AL)", lastCat: "Introduction"},
+
+    {id: "998706", name: "This guide will show you how to:", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+    {id: "998705", name: "Configure and emit Audit Log Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+    {id: "998704", name: "Export Audit Log Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+    {id: "998703", name: "Create custom metadata schemas for Audit Log Events", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+    {id: "998702", name: "Create new versions of Audit Log Event schemas", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "What you’ll build", page: "Quick Start (AL)", lastCat: "What you’ll build"},
+
+    {id: "998701", name: "To get the most out of this guide, you’ll need:", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (AL)", lastCat: "Before getting started"},
+    {id: "998700", name: "A WorkOS account", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (AL)", lastCat: "Before getting started"},
+
+    {id: "998699", name: "Connection", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+    {id: "998698", name: "Represents the method by which users of an organization sign in to your application.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+    {id: "998699", name: "Organization", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+    {id: "998697", name: "Describes an organization whose users sign in with a SSO Connection, or whose users are synced with a Directory Sync Connection.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+    {id: "998696", name: "Portal Link", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+    {id: "998695", name: "A temporary link to initiate an Admin Portal session.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AL)", lastCat: "API object definitions"},
+
+    {id: "998694", name: "WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Install the WorkOS SDK", page: "Quick Start (AL)", lastCat: "Install the WorkOS SDK"},
+    {id: "998693", name: "Don't see an SDK you need? Contact us to request and SDK!", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Install the WorkOS SDK", page: "Quick Start (AL)", lastCat: "Install the WorkOS SDK"},
+    {id: "998692", name: "Install the SDK using the command below.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Install the WorkOS SDK", page: "Quick Start (AL)", lastCat: "Install the WorkOS SDK"},
+
+    {id: "998691", name: "To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as WORKOS_API_KEY and WORKOS_CLIENT_ID, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Set secrets", page: "Quick Start (AL)", lastCat: "Set secrets"},
+
+    {id: "998690", name: "Before you can emit any Audit Log Events you must configure the allowed event schemas. To start, click “Create an event” and enter user.signed_in for action, team for targets, and click “Save event”.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Sign in to your WorkOS Dashboard account and configure Audit Log Event schemas", page: "Quick Start (AL)", lastCat: "Sign in to your WorkOS Dashboard account and configure Audit Log Event schemas"},
+
+    {id: "998689", name: "All events are scoped to an Organization, so you will need the ID of an Organization in order to emit events.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Get an Organization ID", page: "Quick Start (AL)", lastCat: "Get an Organization ID"},
+
+    {id: "998688", name: "Using the ID from the Organization, emit an Audit Log Event with the action and targets previously configured.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "Emit Events", page: "Quick Start (AL)", lastCat: "Emit Events"},
+
+    {id: "998687", name: "Once you have successfully emitted events with the WorkOS SDK, you can view them in the Dashboard under the Organization that the events are associated with.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", subCat3: "Emit an Audit Log Event", subCat4: "View ingested events in the Dashboard", page: "Quick Start (AL)", lastCat: "View ingested events in the Dashboard"},
+
 ]
 
 export default results;
 
-//* latest: 998753 - example apps (ap)
+//* latest: 998687 -  quick start (al)
