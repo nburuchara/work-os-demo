@@ -3171,8 +3171,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Handle Inactive Users</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Handle Inactive Users</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Learn why inactive users are deleted from directories by default and how to configure this behavior.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
@@ -3180,7 +3181,7 @@ export default class StandaloneAPIs extends Component {
                             <div className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Traditionally, user provisioning involves the ingestion of user information from various providers (either through SCIM or non-SCIM integrations). This process typically includes categorizing users into states such as <span>active</span>, or <span>inactive</span> as provided by the IdP data source.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, the challenge arises when businesses need to handle these <span>inactive</span> users differently based on their unique operational and security requirements. Some developers may prefer a security-first approach, automatically deleting these users to enhance data security, while others may opt to retain this information for reactivation processes or comprehensive directory management.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>However, the challenge arises when businesses need to handle these <span>inactive</span> users differently based on their unique operational and security requirements. Some developers may prefer a security-first approach, automatically deleting these users to enhance data security, while others may opt to retain this information for reactivation processes or comprehensive directory management<i id='Configuration'></i>.</p>
                             </div>
                     
                         </div>
@@ -3189,11 +3190,11 @@ export default class StandaloneAPIs extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuration</h1>
 
                             <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To provide improved security and customizability, you can choose how <span>inactive</span> users are handled during the provisioning process. Here is an overview of the two options available:</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To provide improved security and customizability, you can choose how <span>inactive</span> users are handled during the provisioning process. Here is an<i id='Secure flow (default)'></i> overview of the two options available:</p>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Secure flow (default)</h3>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By selecting this option, customers can opt for a security-focused workflow. Any user marked as <span>inactive</span> will be automatically deleted from the directory, resulting in cleaner and potentially more secure data. This approach reduces the data footprint and minimizes potential security risks associated with unused accounts.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By selecting this option, customers can opt for a security-focused workflow. Any user marked as <span>inactive</span> will be automatically deleted from the directory, resulting in cleaner and potentially more secure data. This approach reduces the data footprint and minimizes potential security <i id='Custom management flow'></i>risks associated with unused accounts.</p>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Custom management flow</h3>
 
@@ -3213,23 +3214,23 @@ export default class StandaloneAPIs extends Component {
                             <div id='img73' className={`enlargable-image-container ${this.state.enlargedImageId === 'img73' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img73')}>
                                 <img  src='/assets/handle_inactive_usr_img1.avif' alt="Enlargable" className="image" />
                             </div>
-
+                            <i id='Weighing the tradeoffs'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Weighing the tradeoffs</h1>
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both options offer distinct advantages, and the right choice depends on your organization’s unique needs and security posture:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both options offer distinct advantages, and the right choice depends on your organization’s<i id='Security vs. flexibility'></i> unique needs and security posture:</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Security vs. flexibility</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The automatic deletion option prioritizes data security by minimizing the data footprint, while the customized management option provides flexibility for reactivation flows and comprehensive directory oversight.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The automatic deletion option prioritizes data security by minimizing the data footprint, while the customized management option provides flexibility for reactivation flows and<i id='Compliance and regulations'></i> comprehensive directory oversight.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Compliance and regulations</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Depending on industry regulations and compliance requirements, one option may align better with your organization’s obligations.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Depending on industry regulations and compliance requirements, one option may align better with your organization’s <i id='Operational efficiency'></i>obligations.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Operational efficiency</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider how each option impacts operational efficiency using WorkOS to handle a set of the computation for you.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Consider how each option impacts operational efficiency using WorkOS to handle a set of the<i id='Reactivation'></i> computation for you.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Reactivation</h3>
 
@@ -3258,15 +3259,16 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Understanding the Events Lifecycle</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Understanding the Events Lifecycle</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Understand the lifecycle of the events that occur in Directory Sync.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync events represent actions performed within directory providers. For example, an action could mean an IT admin assigning a user to your app or modifying a user group assigned to your app. These actions form the basis of user lifecycle management (ULM).</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides information about these actions through a set of structured events. This reference guide will cover the events Directory Sync produces and what they mean. To learn about how to handle these events on your side, see the data syncing guide.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides information about these actions through a set of structured events. This reference guide will cover the events Directory Sync produces and what they mean. To learn about how to handle these events on your side, see the data syncing guide<i id='Directory events'></i>.</p><i id='dsync.activated'></i>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -3323,7 +3325,7 @@ export default class StandaloneAPIs extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dsync.activated</span> is triggered if you manually create the directory connection in the <label className='demo-docs-hyperlink'>Developer Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, or your customer sets the connection up using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
                             </div>
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The directory ID identifies a connection with the directory of a particular customer. Your app should save it and associate the directory ID with the corresponding organization ID.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The directory ID identifies a connection with the directory of a particular customer. Your app should save it and associate the directory ID<i id='dsync.deleted'></i> with the corresponding organization ID.</p>
 
                             <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.deleted</h3>
 
@@ -3376,8 +3378,9 @@ export default class StandaloneAPIs extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When receiving a <span>dsync.deleted</span> event, you can ignore the connection’s <span>state</span> attribute, since it indicates the state before the deletion occurs. When a directory is deleted in WorkOS, a sole <span>dsync.deleted</span> event is sent.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a <span>dsync.deleted</span> event is received, it indicates that the users and groups in that directory have been deleted in WorkOS. You can process the <span>dsync.deleted</span> event accordingly in your application, removing the organization’s groups and its users from your application or marking them as deleted. <span>dsync.user.deleted</span> and <span>dsync.group.deleted</span> events will not be sent for the deleted directory.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a <span>dsync.deleted</span> event is received, it indicates that the users and groups in that directory have been deleted in WorkOS. You can process the <span>dsync.deleted</span> event accordingly in your application, removing the organization’s groups and its users from your application or marking them as deleted. <span>dsync.user.deleted</span> and <span>dsync.group.deleted</span> events will not be sent for the deleted directory<i id='Directory user events'></i>.</p><i id='dsync.user.created'></i>
                             </div>
+                            
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -3434,7 +3437,7 @@ export default class StandaloneAPIs extends Component {
                                
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can add this user to your users table in your app and associate them with the directory ID and organization ID. You can begin to engage with the user at this point, e.g., send the user a “Getting Started” email.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>During the initial sync of any directory, you will receive a <span>dsync.user.created</span> event for each existing user in the directory.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>During the initial sync of any directory, you will receive a<i id='dsync.user.updated'></i> <span>dsync.user.created</span> event for each existing user in the directory.</p>
 
                             </div>
 
@@ -3489,7 +3492,7 @@ export default class StandaloneAPIs extends Component {
                                
                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The payload <span>for dsync.user.updated</span> event shows changes between directory group snapshots in the <span>previous_attributes</span> property.</p>
 
-                               <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as <span>null</span>.</p>
+                               <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the value for<i id='dsync.user.deleted'></i> the attribute will be indicated as <span>null</span>.</p>
 
                             </div>
 
@@ -3546,7 +3549,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className='api-keys'>
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>When users are removed from a directory, most providers will use a form of soft user deletion. In these cases, rather than receiving a <span style={{backgroundColor: "#cccc"}}>dsync.user.deleted</span> event, you will receive a <span style={{backgroundColor: "#cccc"}}>dsync.user.updated</span> event with the user’s <span style={{backgroundColor: "#cccc"}}>state</span> marked as <span style={{backgroundColor: "#cccc"}}>inactive</span>.</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>When users are removed from a directory, most providers will use a form of soft user deletion. In these cases, rather than receiving a <span style={{backgroundColor: "#cccc"}}>dsync.user.deleted</span> event, you will receive a <span style={{backgroundColor: "#cccc"}}>dsync.user.updated</span> event with the user’s <span style={{backgroundColor: "#cccc"}}>state</span> marked as <span style={{backgroundColor: "#cccc"}}>inactive</span><i id='Directory group events'></i>.</p><i id='dsync.group.created'></i>
                                     </div>
                                 </div>
                             </div>
@@ -3606,7 +3609,7 @@ export default class StandaloneAPIs extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When WorkOS ingests this event, it first processes the users in the group. So, in most cases, you would receive <span>dsync.user.created</span>, then <span>dsync.group.created</span>, and finally, <span>dsync.group.user_added</span>.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information on best practices for out-of-sequence events, see the <label className='demo-docs-hyperlink'>data syncing guide</label>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more information on best practices<i id='dsync.group.updated'></i> for out-of-sequence events, see the <label className='demo-docs-hyperlink'>data syncing guide</label>.</p>
 
                             </div>
 
@@ -3660,7 +3663,7 @@ export default class StandaloneAPIs extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The payload for <span>dsync.group.updated</span> events shows changes between directory group snapshots in the <span>previous_attributes property</span>.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as <span>null</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The changes in the object are shallow differences for root properties, <span>raw_attributes</span>, and <span>custom_attributes</span>. If the current snapshot has a new attribute that did not exist previously, then the <i id='dsync.group.deleted'></i>value for the attribute will be indicated as <span>null</span>.</p>
 
 
                                 <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.deleted</h3>
@@ -3713,7 +3716,7 @@ export default class StandaloneAPIs extends Component {
                             
                             }
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app relies on groups to sync users or map roles, you should remove access for the users who belonged to the deleted group.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your app relies on groups to sync users or map roles, you should remove<i id='dsync.group.user_added'></i> access for the users who belonged to the deleted group.</p>
 
                             <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.user_added</h3>
 
@@ -3761,7 +3764,7 @@ export default class StandaloneAPIs extends Component {
                             
                             }
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should assign the group’s role to the newly added user.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should assign<i id='dsync.group.user_removed'></i> the group’s role to the newly added user.</p>
 
                             <h3 style={{fontFamily: "inconsolata"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>dsync.group.user_removed</h3>
 
@@ -3809,7 +3812,7 @@ export default class StandaloneAPIs extends Component {
                             
                             }
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should remove the group’s role from the user who belonged to the group.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you map roles using groups, you should remove the group’s role from the user who belonged to the group<i id='Data reconciliation techniques'></i>.</p><i id='With the WorkOS state API'></i>
 
 
 
@@ -3844,7 +3847,7 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Compare the list of local users to all users seen in WorkOS traversal. Deactivate any users that exist locally but not on WorkOS.</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Compare the list of local groups to all groups seen on WorkOS traversal. Deactivate any groups that exist locally but not on WorkOS.</p></li>
                             </ol>
-
+                            <i id='With the events API'></i>
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>With the events API</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also reconcile directory data using the events API. See our <label className='demo-docs-hyperlink'>data syncing guide</label> to learn more.</p>

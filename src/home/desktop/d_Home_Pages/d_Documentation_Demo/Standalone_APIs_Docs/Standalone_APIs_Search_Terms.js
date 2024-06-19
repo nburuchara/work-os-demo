@@ -60,6 +60,14 @@ const results = [
 
     {id: "999015", name: "Example Apps", category: "Standalone APIs", subCat1: "Directory Sync", page: "Example Apps (DS)", lastCat: "top"},
 
+    //! - HANDLE INACTIVE USERS - !// 
+
+    {id: "999012", name: "Handle Inactive Users", category: "Standalone APIs", subCat1: "Directory Sync", page: "Handle Inactive Users", lastCat: "top"},
+
+    //! - UNDERSTANDING EVENTS - !// 
+
+    {id: "998991", name: "Understanding Events", category: "Standalone APIs", subCat1: "Directory Sync", page: "Understanding Events", lastCat: "top"},
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -155,6 +163,21 @@ const results = [
     {id: "999071", name: "Add Directory Sync to your app", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Add Directory Sync to your app"},
     {id: "999070", name: "Handle directory events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", page: "Quick Start (DS)", lastCat: "Handle directory events"},
 
+    //! - HANDLE INACTIVE USERS - !// 
+
+    {id: "999011", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", page: "Handle Inactive Users", lastCat: "Introduction"},
+    {id: "999010", name: "Configuration", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", page: "Handle Inactive Users", lastCat: "Configuration"},
+    {id: "999009", name: "Weighing the tradeoffs", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", page: "Handle Inactive Users", lastCat: "Weighing the tradeoffs"},
+
+    //! - UNDERSTANDING EVENTS - !// 
+
+    {id: "998990", name: "Introduction", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Introduction"},
+    {id: "998989", name: "Directory events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Directory events"},
+    {id: "998988", name: "Directory events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Directory events"},
+    {id: "998988", name: "Directory user events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Directory user events"},
+    {id: "998987", name: "Directory group events", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Directory group events"},
+    {id: "998986", name: "Data reconciliation techniques", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "Data reconciliation techniques"},
+
     
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -245,6 +268,34 @@ const results = [
     {id: "999066", name: "List directory users", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "List directory users"},
     {id: "999065", name: "Get directory group", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "Get directory group"},
     {id: "999064", name: "List directory groups", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Quick Start", subCat3: "Add Directory Sync to your app", page: "Quick Start (DS)", lastCat: "List directory groups"},
+
+    //! - HANDLE INACTIVE USERS - !// 
+
+    {id: "999008", name: "Secure flow (default)", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", page: "Handle Inactive Users", lastCat: "Secure flow (default)"},
+    {id: "999007", name: "Custom management flow", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", page: "Handle Inactive Users", lastCat: "Custom management flow"},
+
+    {id: "999006", name: "Security vs. flexibility", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", page: "Handle Inactive Users", lastCat: "Security vs. flexibility"},
+    {id: "999005", name: "Compliance and regulations", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", page: "Handle Inactive Users", lastCat: "Compliance and regulations"},
+    {id: "999004", name: "Operational efficiency", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", page: "Handle Inactive Users", lastCat: "Operational efficiency"},
+    {id: "999003", name: "Reactivation", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", page: "Handle Inactive Users", lastCat: "Reactivation"},
+
+    //! - UNDERSTANDING EVENTS - !// 
+
+    {id: "998985", name: "dsync.activated", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.activated"},
+    {id: "998984", name: "dsync.deleted", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.deleted"},
+
+    {id: "998983", name: "dsync.user.created", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.user.created"},
+    {id: "998982", name: "dsync.user.updated", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.user.updated"},
+    {id: "998981", name: "dsync.user.deleted", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.user.deleted"},
+
+    {id: "998980", name: "dsync.group.created", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.group.created"},
+    {id: "998979", name: "dsync.group.updated", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.group.updated"},
+    {id: "998978", name: "dsync.group.deleted", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.group.deleted"},
+    {id: "998977", name: "dsync.group.user_added", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.group.user_added"},
+    {id: "998976", name: "dsync.group.user_removed", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", page: "Understanding Events", lastCat: "dsync.group.user_removed"},
+
+    {id: "998975", name: "With the WorkOS state API", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998974", name: "With the events API", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", page: "Understanding Events", lastCat: "With the events API"},
 
 
 
@@ -746,10 +797,92 @@ const results = [
     //! - EXAMPLE APPS (DS) - !// 
 
     {id: "999014", name: "View sample Directory Sync apps for each SDK.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Example Apps", page: "Example Apps (DS)", lastCat: "top"},
-    {id: "999014", name: "You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Example Apps", page: "Example Apps (DS)", lastCat: "top"},
-    
+    {id: "999013", name: "You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Example Apps", page: "Example Apps (DS)", lastCat: "top"},
+
+    //! - HANDLE INACTIVE USERS - !// 
+
+    {id: "999002", name: "Learn why inactive users are deleted from directories by default and how to configure this behavior.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", page: "Handle Inactive Users", lastCat: "top"},
+
+    {id: "999001", name: "Traditionally, user provisioning involves the ingestion of user information from various providers (either through SCIM or non-SCIM integrations). This process typically includes categorizing users into states such as active, or inactive as provided by the IdP data source.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Introduction", page: "Handle Inactive Users", lastCat: "Introduction"},
+    {id: "999000", name: "However, the challenge arises when businesses need to handle these inactive users differently based on their unique operational and security requirements. Some developers may prefer a security-first approach, automatically deleting these users to enhance data security, while others may opt to retain this information for reactivation processes or comprehensive directory management.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Introduction", page: "Handle Inactive Users", lastCat: "Introduction"},
+
+    {id: "998999", name: "To provide improved security and customizability, you can choose how inactive users are handled during the provisioning process. Here is an overview of the two options available:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", page: "Handle Inactive Users", lastCat: "Configuration"},
+
+    {id: "998999", name: "By selecting this option, customers can opt for a security-focused workflow. Any user marked as inactive will be automatically deleted from the directory, resulting in cleaner and potentially more secure data. This approach reduces the data footprint and minimizes potential security risks associated with unused accounts.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", subCat4: "Secure flow (default)", page: "Handle Inactive Users", lastCat: "Secure flow (default)"},
+
+    {id: "998998", name: "Alternatively, customers can choose to maintain the existing flow, keeping the inactive users in the directory. This approach supports reactivation processes and ensures a comprehensive view of the directory, allowing for easier reintegration of users when needed.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", subCat4: "Custom management flow", page: "Handle Inactive Users", lastCat: "Custom management flow"},
+    {id: "998997", name: "Contact customer support to enable custom management flow for your environment.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Configuration", subCat4: "Custom management flow", page: "Handle Inactive Users", lastCat: "Custom management flow"},
+
+    {id: "998996", name: "Both options offer distinct advantages, and the right choice depends on your organization’s unique needs and security posture:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", page: "Handle Inactive Users", lastCat: "Weighing the tradeoffs"},
+
+    {id: "998995", name: "BThe automatic deletion option prioritizes data security by minimizing the data footprint, while the customized management option provides flexibility for reactivation flows and comprehensive directory oversight.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", subCat4: "Security vs. flexibility", page: "Handle Inactive Users", lastCat: "Security vs. flexibility"},
+
+    {id: "998994", name: "Depending on industry regulations and compliance requirements, one option may align better with your organization’s obligations.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", subCat4: "Compliance and regulations", page: "Handle Inactive Users", lastCat: "Compliance and regulations"},
+
+    {id: "998993", name: "Consider how each option impacts operational efficiency using WorkOS to handle a set of the computation for you.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", subCat4: "Operational efficiency", page: "Handle Inactive Users", lastCat: "Operational efficiency"},
+
+    {id: "998992", name: "If a user is temporarily removed, does the same user information need to be retained when they return? A new directory user will be created by default on return, whereas using the inactive user will retain the same information on reactivation.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Handle Inactive Users", subCat3: "Weighing the tradeoffs", subCat4: "Reactivation", page: "Handle Inactive Users", lastCat: "Reactivation"},
+
+    //! - UNDERSTANDING EVENTS - !// 
+
+    {id: "998973", name: "Understand the lifecycle of the events that occur in Directory Sync.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", page: "Understanding Events", lastCat: "top"},
+
+    {id: "998972", name: "Directory Sync events represent actions performed within directory providers. For example, an action could mean an IT admin assigning a user to your app or modifying a user group assigned to your app. These actions form the basis of user lifecycle management (ULM).", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Introduction", page: "Understanding Events", lastCat: "Introduction"},
+    {id: "998971", name: "WorkOS provides information about these actions through a set of structured events. This reference guide will cover the events Directory Sync produces and what they mean. To learn about how to handle these events on your side, see the data syncing guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Introduction", page: "Understanding Events", lastCat: "Introduction"},
+
+    {id: "998970", name: "WorkOS provides information about these actions through a set of structured events. This reference guide will cover the events Directory Sync produces and what they mean. To learn about how to handle these events on your side, see the data syncing guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.activated", page: "Understanding Events", lastCat: "dsync.activated"},
+    {id: "998969", name: "dsync.activated is triggered if you manually create the directory connection in the Developer Dashboardno img available, or your customer sets the connection up using the Admin Portal.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.activated", page: "Understanding Events", lastCat: "dsync.activated"},
+    {id: "998968", name: "The directory ID identifies a connection with the directory of a particular customer. Your app should save it and associate the directory ID with the corresponding organization ID.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.activated", page: "Understanding Events", lastCat: "dsync.activated"},
+
+    {id: "998967", name: "This event occurs when a Directory Sync connection is deleted in WorkOS, thus tearing down the link between your customer’s directory provider and your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.deleted", page: "Understanding Events", lastCat: "dsync.deleted"},
+    {id: "998966", name: "A connection can be deleted through the Admin Portal, Developer Dashboard , or WorkOS API. At this point your app should remove the association between the corresponding organization and its directory, as it no longer exists. Directories, users, and groups are typically deleted if your app offboards a customer altogether.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.deleted", page: "Understanding Events", lastCat: "dsync.deleted"},
+    {id: "998965", name: "When receiving a dsync.deleted event, you can ignore the connection’s state attribute, since it indicates the state before the deletion occurs. When a directory is deleted in WorkOS, a sole dsync.deleted event is sent.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.deleted", page: "Understanding Events", lastCat: "dsync.deleted"},
+    {id: "998964", name: "When a dsync.deleted event is received, it indicates that the users and groups in that directory have been deleted in WorkOS. You can process the dsync.deleted event accordingly in your application, removing the organization’s groups and its users from your application or marking them as deleted. dsync.user.deleted and dsync.group.deleted events will not be sent for the deleted directory.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory events", subCat4: "dsync.deleted", page: "Understanding Events", lastCat: "dsync.deleted"},
+
+    {id: "998963", name: "This event occurs when an IT admin creates a user using their directory provider. It is standard to create and provision the user in your app when you receive this event.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.created", page: "Understanding Events", lastCat: "dsync.user.created"},
+    {id: "998962", name: "You can add this user to your users table in your app and associate them with the directory ID and organization ID. You can begin to engage with the user at this point, e.g., send the user a “Getting Started” email.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.created", page: "Understanding Events", lastCat: "dsync.user.created"},
+    {id: "998961", name: "During the initial sync of any directory, you will receive a dsync.user.created event for each existing user in the directory.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.created", page: "Understanding Events", lastCat: "dsync.user.created"},
+
+    {id: "998960", name: "This event occurs when users’ attributes change. These attributes may be standard attributes, auto-mapped attributes, or custom-mapped attributes.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.updated", page: "Understanding Events", lastCat: "dsync.user.updated"},
+    {id: "998959", name: "The payload for dsync.user.updated event shows changes between directory group snapshots in the previous_attributes property.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.updated", page: "Understanding Events", lastCat: "dsync.user.updated"},
+    {id: "998958", name: "The changes in the object are shallow differences for root properties, raw_attributes, and custom_attributes. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as null.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.updated", page: "Understanding Events", lastCat: "dsync.user.updated"},
+
+    {id: "998957", name: "This event occurs when a user is hard-deleted from a directory. Typically, you would remove the user from your app in this case. Note, that after Oct. 19, 2023, all new environments will delete Directory Users that get moved to the “inactive” state. If you would like to retain these users, please reach out to support. You can find more details here.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.deleted", page: "Understanding Events", lastCat: "dsync.user.deleted"},
+    {id: "998956", name: "When users are removed from a directory, most providers will use a form of soft user deletion. In these cases, rather than receiving a dsync.user.deleted event, you will receive a dsync.user.updated event with the user’s state marked as inactive.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory user events", subCat4: "dsync.user.deleted", page: "Understanding Events", lastCat: "dsync.user.deleted"},
+
+    {id: "998955", name: "This event occurs when creating a directory group in the directory provider. WorkOS also sends this event when a directory connection is established.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.created", page: "Understanding Events", lastCat: "dsync.group.created"},
+    {id: "998954", name: "When WorkOS ingests this event, it first processes the users in the group. So, in most cases, you would receive dsync.user.created, then dsync.group.created, and finally, dsync.group.user_added.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.created", page: "Understanding Events", lastCat: "dsync.group.created"},
+    {id: "998953", name: "For more information on best practices for out-of-sequence events, see the data syncing guide.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.created", page: "Understanding Events", lastCat: "dsync.group.created"},
+
+    {id: "998952", name: "This event is sent when an attribute of a directory group has changed.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.updated", page: "Understanding Events", lastCat: "dsync.group.updated"},
+    {id: "998951", name: "The payload for dsync.group.updated events shows changes between directory group snapshots in the previous_attributes property.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.updated", page: "Understanding Events", lastCat: "dsync.group.updated"},
+    {id: "998950", name: "The changes in the object are shallow differences for root properties, raw_attributes, and custom_attributes. If the current snapshot has a new attribute that did not exist previously, then the value for the attribute will be indicated as null.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.updated", page: "Understanding Events", lastCat: "dsync.group.updated"},
+
+    {id: "998949", name: "This event occurs when deleting a directory group in the directory provider.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.deleted", page: "Understanding Events", lastCat: "dsync.group.deleted"},
+    {id: "998948", name: "When a dsync.group.deleted event is received, it indicates that the members in that group have been deleted in WorkOS. You can process the dsync.group.deleted event accordingly in your application, removing the group’s members from your application or marking them as deleted. dsync.group.user_removed events will not be sent for the members in the deleted group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.deleted", page: "Understanding Events", lastCat: "dsync.group.deleted"},
+    {id: "998947", name: "If your app relies on groups to sync users or map roles, you should remove access for the users who belonged to the deleted group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.deleted", page: "Understanding Events", lastCat: "dsync.group.deleted"},
+
+    {id: "998946", name: "This event occurs when adding a directory user to a directory group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.user_added", page: "Understanding Events", lastCat: "dsync.group.user_added"},
+    {id: "998945", name: "If you map roles using groups, you should assign the group’s role to the newly added user.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.user_added", page: "Understanding Events", lastCat: "dsync.group.user_added"},
+
+    {id: "998944", name: "This event occurs when removing a directory user from a directory group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.user_removed", page: "Understanding Events", lastCat: "dsync.group.user_removed"},
+    {id: "998943", name: "If you map roles using groups, you should remove the group’s role from the user who belonged to the group.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Directory group events", subCat4: "dsync.group.user_removed", page: "Understanding Events", lastCat: "dsync.group.user_removed"},
+
+    {id: "998942", name: "The WorkOS API allows for data reconciliation for your app. You can use the WorkOS API to pull the latest data to reconcile any data discrepancies between WorkOS and your app.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998941", name: "A standard method apps use for data reconciliation is to set up a cron job that pulls from the WorkOS API on a consistent interval, e.g., every 1 to 6 hours, depending on your app’s user provisioning volume.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998940", name: "Known issue: Keeping track of WorkOS updated timestamps is of limited use right now because group membership changes for users do not alter the WorkOS updated_at timestamp. We’re actively working on this issue.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998939", name: "The general approach for performing a full sync of Directory Sync objects goes as follows:", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998938", name: "Traverse all directory groups and update all local objects.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998937", name: "Traverse all directory users and update all local objects.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998936", name: "Extract group membership information from each user. Compare with local membership state. Add and remove memberships accordingly.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998935", name: "Compare the list of local users to all users seen in WorkOS traversal. Deactivate any users that exist locally but not on WorkOS.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+    {id: "998934", name: "Compare the list of local groups to all groups seen on WorkOS traversal. Deactivate any groups that exist locally but not on WorkOS.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the WorkOS state API", page: "Understanding Events", lastCat: "With the WorkOS state API"},
+
+    {id: "998934", name: "You can also reconcile directory data using the events API. See our data syncing guide to learn more.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Understanding Events", subCat3: "Data reconciliation techniques", subCat4: "With the events API", page: "Understanding Events", lastCat: "With the events API"},
+
+
 ]
 
 export default results;
 
-//* latest: 999016 - quick start (ds)
+//* latest: 998992 - handle inactive users 
