@@ -80,7 +80,17 @@ const results = [
 
     {id: "998848", name: "Role Architecture", category: "Standalone APIs", subCat1: "Directory Sync", page: "Role Architecture", lastCat: "top"},
 
+    //! - QUICK START (AP) - !//             - - - (ADMIN PORTAL) - - -
 
+    {id: "998815", name: "Quick Start", category: "Standalone APIs", subCat1: "Admin Portal", page: "Quick Start (AP)", lastCat: "top"},
+
+    //! - EXAMPLE APPS (AP) - !//            
+
+    {id: "998755", name: "Example Apps", category: "Standalone APIs", subCat1: "Admin Portal", page: "Example Apps (AP)", lastCat: "top"},
+
+    //! - CUSTOM BRANDING - !//            
+
+    {id: "998752", name: "Custom Branding", category: "Standalone APIs", subCat1: "Admin Portal", page: "Custom Branding", lastCat: "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -215,6 +225,23 @@ const results = [
     {id: "998845", name: "How to implement role mapping", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "How to implement role mapping"},
     {id: "998844", name: "Common edge cases", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", page: "Role Architecture", lastCat: "Common edge cases"},
     
+    //! - QUICK START (AP) - !//            
+
+    {id: "998814", name: "Introduction", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Introduction"},
+    {id: "998813", name: "Workflow Options", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Workflow Options"},
+    {id: "998812", name: "Before getting started", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Before getting started"},
+    {id: "998811", name: "API object definitions", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998810", name: "Setup Link from WorkOS Dashboard", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Setup Link from WorkOS Dashboard"},
+    {id: "998809", name: "Integrate with your app", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Integrate with your app"},
+    {id: "998808", name: "Using Admin Portal", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+
+    //! - CUSTOM BRANDING - !//            
+
+    {id: "998751", name: "Introduction", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Introduction"},
+    {id: "998750", name: "Logos and icons", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Logos and icons"},
+    {id: "998749", name: "Custom domains", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Custom domains"},
+    {id: "998748", name: "Team name", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "Team name"},
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -287,7 +314,6 @@ const results = [
     {id: "999153", name: "Signed response assertions", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response assertions"},
     {id: "999152", name: "Signed response message envelope", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Signed response message envelope"},
     {id: "999151", name: "Encrypted response attributes", category: "Standalone APIs", subCat1: "Single Sign-On", subCat2: "SAML Security", subCat3: "IdP to SP security features", page: "SAML Security", lastCat: "Encrypted response attributes"},
-
 
     //! - FUNDAMENTALS - !//
 
@@ -362,6 +388,31 @@ const results = [
     {id: "998839", name: "A user is part of multiple groups", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "A user is part of multiple groups"},
     {id: "998838", name: "An IT admin wants the ability to manually override a user’s role", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
     {id: "998837", name: "No role information exists for a particular user", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", page: "Role Architecture", lastCat: "No role information exists for a particular user"},
+
+    //! - QUICK START (AP) - !//            
+
+    {id: "998807", name: "Create Organization", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Create Organization"},
+    {id: "998806", name: "Generate a Setup Link", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Generate a Setup Link"},
+    {id: "998805", name: "Sharing a Setup Link", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Sharing a Setup Link"},
+
+    {id: "998804", name: "Configure Admin Portal redirect links", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Configure Admin Portal redirect links"},
+    {id: "998803", name: "Install the WorkOS SDK", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Install the WorkOS SDK"},
+    {id: "998802", name: "Set secrets", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Set secrets"},
+    {id: "998801", name: "Create a new Organization", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Create a new Organization"},
+    {id: "998800", name: "Redirect an IT admin to the Admin Portal", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+    {id: "998799", name: "Managing Directories", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Managing Directories"},
+
+    //! - CUSTOM BRANDING - !//            
+
+    {id: "998747", name: "Logo", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", page: "Custom Branding", lastCat: "Logo"},
+    {id: "998746", name: "Logo icon", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", page: "Custom Branding", lastCat: "Logo icon"},
+    {id: "998745", name: "Favicon", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", page: "Custom Branding", lastCat: "Favicon"},
+    {id: "998744", name: "Brand Color", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", page: "Custom Branding", lastCat: "Brand Color"},
+
+    {id: "998743", name: "Auth link domain", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Auth link domain"},
+    {id: "998742", name: "Admin Portal domain", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Admin Portal domain"},
+    {id: "998741", name: "Email domain", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Email domain"},
+
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -1068,8 +1119,106 @@ const results = [
     {id: "998817", name: "You can also build override functionality by flagging a specific user’s role as having been set by either Directory Sync or an IT admin. For this case, your app should not sync this particular user’s role from now on, nor have new directory group events overwrite their manually inputted role.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "An IT admin wants the ability to manually override a user’s role", page: "Role Architecture", lastCat: "An IT admin wants the ability to manually override a user’s role"},
     {id: "998816", name: "If no role information exists from any source, granting a user a default role with fewer permissions, such as a “Viewer” role is common.", category: "Standalone APIs", subCat1: "Directory Sync", subCat2: "Role Architecture", subCat3: "Common edge cases", subCat4: "No role information exists for a particular user", page: "Role Architecture", lastCat: "No role information exists for a particular user"},
 
+    //! - QUICK START (AP) - !//            
+
+    {id: "998798", name: "A first-class Single Sign-On and Directory Sync onboarding experience for organization admins.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", page: "Quick Start (AP)", lastCat: "top"},
+
+    {id: "998797", name: "The Admin Portal provides an out-of-the-box UI for IT admins to configure SSO and Directory Sync Connections. Designed to remove friction, custom walk-through documentation for each Identity Provider means that organization admins can onboard their organizations without high-touch support from your team. Easy to integrate and fully maintained and hosted by WorkOS, the Admin Portal makes the SSO and Directory Sync setup process simple, fast, and secure.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Introduction", page: "Quick Start (AP)", lastCat: "Introduction"},
+
+    {id: "998796", name: "There are two main workflows for initiating an Admin Portal session for IT admins. You can either share a link to the Admin Portal from the WorkOS Dashboard, or you can seamlessly integrate Admin Portal into your application through WorkOS SDKs or APIs.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Workflow Options", page: "Quick Start (AP)", lastCat: "Workflow Options"},
+    {id: "998795", name: "If you want to provide an IT admin with a link to the Admin Portal, in a email for example, then you would need to create that link in the WorkOS Dashboard.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Workflow Options", page: "Quick Start (AP)", lastCat: "Workflow Options"},
+    {id: "998794", name: "However, if you are adding a button to open the Admin Portal from within your application, then you would need to use the API.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Workflow Options", page: "Quick Start (AP)", lastCat: "Workflow Options"},
+
+    {id: "998793", name: "To get the most out of these guides, you’ll need:", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (AP)", lastCat: "Before getting started"},
+    {id: "998792", name: "A WorkOS Account", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (AP)", lastCat: "Before getting started"},
+
+    {id: "998791", name: "Connection", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998790", name: "Represents the method by which users of an organization sign in to your application.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998789", name: "Organization", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998788", name: "Describes an organization whose users sign in with a SSO Connection, or whose users are synced with a Directory Sync Connection.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998787", name: "Portal Link", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+    {id: "998786", name: "A temporary link to initiate an Admin Portal session.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "API object definitions", page: "Quick Start (AP)", lastCat: "API object definitions"},
+
+    {id: "998785", name: "The Admin Portal Setup Link gives your customer access to a guided configuration experience through our Admin Portal. It instructs them how to configure their Identity or Directory Provider. If successfully configured, no other action is required and you’ll see an Active connection appear under the Organization.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Setup Link from WorkOS Dashboard"},
+    {id: "998784", name: "First decide whether your customer will be configuring an Identity Provider, a Directory Provider OR both. Once you generate a link, the customer will have access for 30 days or until configured.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Setup Link from WorkOS Dashboard"},
+    {id: "998783", name: "You’ll need a WorkOS Dashboard account to create an organization that will represent the enterprise you are onboarding.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", page: "Quick Start (AP)", lastCat: "Setup Link from WorkOS Dashboard"},
+
+    {id: "998782", name: "Sign in to your WorkOS Dashboard account and create a new Organization.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", subCat4: "Create Organization", page: "Quick Start (AP)", lastCat: "Create Organization"},
+
+    {id: "998781", name: "Click the “Invite Admin” button, select the features to include and then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link.” Only one link can be active at a time. After creating the initial link, you can click the “Manage” button to revoke the existing link before creating a new one.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", subCat4: "Generate a Setup Link", page: "Quick Start (AP)", lastCat: "Generate a Setup Link"},
+
+    {id: "998780", name: "If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what the link does and how long the link is active.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Setup Link from WorkOS Dashboard", subCat4: "Sharing a Setup Link", page: "Quick Start (AP)", lastCat: "Sharing a Setup Link"},
+
+    {id: "998779", name: "In this guide, we’ll walk you through the full end-to-end integration of the Admin Portal into your application.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Integrate with your app"},
+    {id: "998778", name: "Sign in to your WorkOS Dashboard account to see code examples pre-filled with your test API keys and resource IDs.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (AP)", lastCat: "Integrate with your app"},
+
+    {id: "998777", name: "In order to integrate, you must configure your app’s default return URI in the production environment. A button in the Admin Portal will use this value to allow users to return to your app unless otherwise specified when generating the Admin Portal link.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Configure Admin Portal redirect links", page: "Quick Start (AP)", lastCat: "Configure Admin Portal redirect links"},
+    {id: "998776", name: "Additionally, you can configure success URIs to redirect users upon successfully setting up Single Sign-On, Directory Sync, or Log Streams.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Configure Admin Portal redirect links", page: "Quick Start (AP)", lastCat: "Configure Admin Portal redirect links"},
+    {id: "998775", name: "All redirect links must use HTTPS.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Configure Admin Portal redirect links", page: "Quick Start (AP)", lastCat: "Configure Admin Portal redirect links"},
+    {id: "998774", name: "You can configure these links in the Dashboard.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Configure Admin Portal redirect links", page: "Quick Start (AP)", lastCat: "Configure Admin Portal redirect links"},
+
+    {id: "998773", name: "WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your application’s language.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (AP)", lastCat: "Install the WorkOS SDK"},
+    {id: "998772", name: "Don't see an SDK you need? Contact us to request and SDK!", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (AP)", lastCat: "Install the WorkOS SDK"},
+    {id: "998771", name: "Install the SDK using the command below.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Install the WorkOS SDK", page: "Quick Start (AP)", lastCat: "Install the WorkOS SDK"},
+    
+    {id: "998770", name: "To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as WORKOS_API_KEY and WORKOS_CLIENT_ID, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Set secrets", page: "Quick Start (AP)", lastCat: "Set secrets"},
+
+    {id: "998769", name: "Each Admin Portal session is scoped to a specific Organization resource, meaning a session is only capable of managing a Connection that belongs to its associated Organization. Organizations may only have one Connection.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Create a new Organization", page: "Quick Start (AP)", lastCat: "Create a new Organization"},
+    {id: "998768", name: "For every customer in your application that would like access to the Admin Portal, you must create an Organization and maintain a reference to its ID.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Create a new Organization", page: "Quick Start (AP)", lastCat: "Create a new Organization"},
+    {id: "998767", name: "Create an Organization when onboarding a new customer.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Create a new Organization", page: "Quick Start (AP)", lastCat: "Create a new Organization"},
+
+    {id: "998766", name: "A Portal Link is your enterprise user’s gateway to accessing their Admin Portal. Each Portal Link is generated using an Organization resource ID. Only resources belonging to the specified Organization can be managed during a Portal Session.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Redirect an IT admin to the Admin Portal", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+    {id: "998765", name: "In the API call to generate an Admin Portal Link, you will pass an intent with possible values of sso for an Admin Portal session to create an SSO connection, and dsync for an Admin Portal session to create a Directory Sync connection.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Redirect an IT admin to the Admin Portal", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+    {id: "998764", name: "For security reasons, Portal Links expire 5 minutes after they’re created, so we recommend redirecting users immediately (i.e. don’t email the user Portal Links).", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Redirect an IT admin to the Admin Portal", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+    {id: "998763", name: "The endpoint that redirects a user to the Admin Portal should be guarded by auth in your application and only available to IT admins.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Redirect an IT admin to the Admin Portal", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+    {id: "998762", name: "An optional return_url parameter can be used to describe exactly where a user should be sent when they are finished in the Admin Portal. If one is not provided, the success URL configured on the Redirects page of the dashboard will be used.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Integrate with your app", subCat4: "Redirect an IT admin to the Admin Portal", page: "Quick Start (AP)", lastCat: "Redirect an IT admin to the Admin Portal"},
+
+    {id: "998761", name: "In this guide, we’ll review the features of Admin Portal from an IT manager’s perspective.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+    {id: "998760", name: "You may also edit your metadata configuration from the Admin Portal.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+    {id: "998759", name: "The Recent Events section displays a list of recent connection events by timestamp, and can be sorted by state.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+    {id: "998758", name: "Click on an event in the list to see event details, such as the request made to the IdP, and the response.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+    {id: "998757", name: "If you wish to reset your SSO connection and set it up from scratch, select “Reset Connection” and follow the prompts.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", page: "Quick Start (AP)", lastCat: "Using Admin Portal"},
+
+    {id: "998756", name: "On the Admin Portal Directory Sync screen, you can view the directory provider details and connection status, user and group counts, last sync time, and a full user list. Hover over the groups column for a particular user to see the list of groups they are in.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Quick Start", subCat3: "Using Admin Portal", subCat4: "Managing Directories", page: "Quick Start (AP)", lastCat: "Managing Directories"},
+
+    //! - EXAMPLE APPS (AP) - !//            
+
+    {id: "998754", name: "View sample Admin Portal apps for each SDK.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Example Apps", page: "Example Apps (AP)", lastCat: "top"},
+    {id: "998753", name: "You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power the Admin Portal:", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Example Apps", page: "Example Apps (AP)", lastCat: "top"},
+
+    //! - CUSTOM BRANDING - !//            
+
+    {id: "998739", name: "Use your own logo and colors in the Admin Portal.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", page: "Custom Branding", lastCat: "top"},
+
+    {id: "998738", name: "You can customize the look and feel of the Admin Portal from the WorkOS Dashboard. Go to Branding Settings where you can:", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Introduction", page: "Custom Branding", lastCat: "Introduction"},
+    {id: "998737", name: "Upload your logos", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Introduction", page: "Custom Branding", lastCat: "Introduction"},
+    {id: "998736", name: "Set your brand color", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Introduction", page: "Custom Branding", lastCat: "Introduction"},
+    {id: "998735", name: "View your custom domains", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Introduction", page: "Custom Branding", lastCat: "Introduction"},
+    {id: "998734", name: "Custom branding can be tested for free in the staging environment. You need the WorkOS Enterprise Plan to enable custom branding in the production environment.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Introduction", page: "Custom Branding", lastCat: "Introduction"},
+
+    {id: "998733", name: "You can upload custom branding assets which will be used in the Admin Portal as well as emails.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", page: "Custom Branding", lastCat: "Logos and icons"},
+
+    {id: "998732", name: "Image with your company’s logo and wordmark used in the Admin Portal.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", subCat4: "Logo", page: "Custom Branding", lastCat: "Logo"},
+
+    {id: "998731", name: "Square aspect ratio icon used in emails.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", subCat4: "Logo icon", page: "Custom Branding", lastCat: "Logo icon"},
+    
+    {id: "998730", name: "Used as the favicon in Admin Portal.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", subCat4: "Favicon", page: "Custom Branding", lastCat: "Favicon"},
+    
+    {id: "998729", name: "Hex value used as the background color for buttons in the Admin Portal and emails.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Logos and icons", subCat4: "Brand Color", page: "Custom Branding", lastCat: "Brand Color"},
+
+    {id: "998728", name: "WorkOS allows you to customize the domain you send API calls to, the domain used by the Admin Portal, and the from address used in emails sent to your customer’s IT admin.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", page: "Custom Branding", lastCat: "Brand Color"},
+
+    {id: "998727", name: "Controls the domain you send API calls to and the domain used in URL’s that face your customer’s IT admin such as ACS URL and SP Entity ID.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", subCat4: "Auth link domain", page: "Custom Branding", lastCat: "Auth link domain"},
+
+    {id: "998726", name: "Controls the domain of Admin Portal setup links and Admin Portal sessions opened by your customer’s IT admin.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", subCat4: "Admin Portal domain", page: "Custom Branding", lastCat: "Admin Portal domain"},
+
+    {id: "998725", name: "Controls the from address for emails sent to your customer’s IT admin.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", subCat4: "Email domain", page: "Custom Branding", lastCat: "Email domain"},
+    {id: "998724", name: "To configure custom domains, please reach out to customer support for assistance.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Custom domains", subCat4: "Email domain", page: "Custom Branding", lastCat: "Email domain"},
+
+    {id: "998723", name: "Your team name is visible in the Admin Portal and in the emails received by your customers’ organization admins. Learn how to change your team name in team settings.", category: "Standalone APIs", subCat1: "Admin Portal", subCat2: "Custom Branding", subCat3:"Team name", page: "Custom Branding", lastCat: "Team name"},
+
 ]
 
 export default results;
 
-//* latest: 998816 - role architecture
+//* latest: 998753 - example apps (ap)

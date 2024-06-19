@@ -4979,8 +4979,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Admin Portal</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Admin Portal</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A first-class Single Sign-On and Directory Sync onboarding experience for organization admins.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
@@ -4991,6 +4992,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img88' className={`enlargable-image-container ${this.state.enlargedImageId === 'img88' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img88')}>
                                 <img  src='/assets/admin_portal_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Workflow Options'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Workflow Options</h1>
 
@@ -5045,7 +5047,7 @@ export default class StandaloneAPIs extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can not be revoked; Expires after 5 minutes</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "30%" : "35%", float: "left", textAlign: "left"}} className='c-table-header4'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can be configured on the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img style={{width: sidebarMenuClicked ? "95%" : "6%"}} className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page in the dashboard or specified as a parameter for the API</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Can be configured on the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img style={{width: sidebarMenuClicked ? "95%" : "6%"}} className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page in the dashboard or specified as a parameter for the API<i id='Before getting started'></i></p>
                                 </div>
                             </div>
 
@@ -5054,7 +5056,7 @@ export default class StandaloneAPIs extends Component {
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
                             
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of these guides, you’ll need:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of these guides,you’ll need:<i id='API object definitions'></i> </p>
 
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS Account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
@@ -5083,7 +5085,7 @@ export default class StandaloneAPIs extends Component {
                                     <h5>Portal Link</h5>
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>A temporary link to initiate an Admin Portal session.</p>
+                                    <p><i id='Setup Link from WorkOS Dashboard'></i>A temporary link to initiate an Admin Portal session.</p>
                                 </div>
                             </div>
 
@@ -5100,7 +5102,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First decide whether your customer will be configuring an Identity Provider, a Directory Provider OR both. Once you generate a link, the customer will have access for 30 days or until configured.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need a <label className='demo-docs-hyperlink'>WorkOS Dashboard account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to create an organization that will represent the enterprise you are onboarding.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need a <label className='demo-docs-hyperlink'>WorkOS Dashboard account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to create an<i id='Create Organization'></i> organization that will represent the enterprise you are onboarding.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create Organization</h3>
 
@@ -5109,14 +5111,15 @@ export default class StandaloneAPIs extends Component {
                             <div id='img90' className={`enlargable-image-container ${this.state.enlargedImageId === 'img90' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img90')}>
                                 <img  src='/assets/admin_portal_img3.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Generate a Setup Link'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Generate a Setup Link</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Invite Admin” button, select the features to include and then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link.” Only one link can be active at a time. After creating the initial link, you can click the “Manage” button to revoke the existing link before creating a new one.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Invite Admin” button, select the features to include and then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link.” Only one link can be active at a time. After creating the initial link, you can click the “Manage” button to <i id='Sharing a Setup Link'></i>revoke the existing link before creating a new one.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sharing a Setup Link</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what the link does and how long the link is active.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what<i id='Integrate with your app'></i> the link does and how long the link is active.</p>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -5134,7 +5137,7 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> to your WorkOS Dashboard account to see code examples pre-filled with your test API keys and resource IDs.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> to your WorkOS Dashboard account to see code examples pre-filled<i id='Configure Admin Portal redirect links'></i> with your test API keys and resource IDs.</p>
                                 </div>
                             </div>
 
@@ -5157,7 +5160,7 @@ export default class StandaloneAPIs extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>All redirect links must use HTTPS.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>All redirect links must use HTTPS.</p><i id='Install the WorkOS SDK'></i>
                                 </div>
                             </div>
 
@@ -5296,6 +5299,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Set secrets'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set secrets</h3>
 
@@ -5312,6 +5316,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Environment variables" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Create a new Organization'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a new Organization</h3>
 
@@ -5335,6 +5340,7 @@ export default class StandaloneAPIs extends Component {
                             snippet="Create an Organization"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+                            <i id='Redirect an IT admin to the Admin Portal'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Redirect an IT admin to the Admin Portal</h3>
 
@@ -5363,7 +5369,7 @@ export default class StandaloneAPIs extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An optional return_url parameter can be used to describe exactly where a user should be sent when they are finished in the Admin Portal. If one is not provided, the success URL configured on the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page of the dashboard will be used.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An optional return_url parameter can be used to describe exactly where a user should be sent when they are finished in the Admin Portal. If one is not provided, the success URL configured on<i id='Using Admin Portal'></i> the <label className='demo-docs-hyperlink'>Redirects</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page of the dashboard will be used.</p>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -5405,6 +5411,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img97' className={`enlargable-image-container ${this.state.enlargedImageId === 'img97' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img97')}>
                                 <img  src='/assets/admin_portal_img10.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Managing Directories'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Managing Directories</h3>
 
@@ -5519,6 +5526,7 @@ export default class StandaloneAPIs extends Component {
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Custom Branding</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Use your own logo and colors in the Admin Portal.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -5532,15 +5540,16 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>View your custom domains</p></li>
                             </ul>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom branding can be tested for free in the staging environment. You need the <label className='demo-docs-hyperlink'>WorkOS Enterprise Plan</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable custom branding in the production environment</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Custom branding can be tested for free in the staging environment. You need the <label className='demo-docs-hyperlink'>WorkOS Enterprise Plan</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable custom branding in the production environment.</p>
 
                             <div id='img98' className={`enlargable-image-container ${this.state.enlargedImageId === 'img98' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img98')}>
                                 <img  src='/assets/custom_branding_img1.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Logos and icons'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Logos and icons</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom branding assets which will be used in the Admin Portal as well as emails.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can upload custom branding assets<i id='Logo'></i> which will be used in the Admin Portal as well as emails.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo</h3>
 
@@ -5549,6 +5558,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img99' className={`enlargable-image-container ${this.state.enlargedImageId === 'img99' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img99')}>
                                 <img  src='/assets/custom_branding_img2.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Logo icon'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo icon</h3>
 
@@ -5557,6 +5567,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img100' className={`enlargable-image-container ${this.state.enlargedImageId === 'img100' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img100')}>
                                 <img  src='/assets/custom_branding_img3.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Favicon'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Favicon</h3>
 
@@ -5565,6 +5576,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img101' className={`enlargable-image-container ${this.state.enlargedImageId === 'img101' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img101')}>
                                 <img  src='/assets/custom_branding_img4.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Brand Color'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Brand Color</h3>
 
@@ -5577,6 +5589,7 @@ export default class StandaloneAPIs extends Component {
                             <div style={{marginTop: "5%"}} id='img103' className={`enlargable-image-container ${this.state.enlargedImageId === 'img103' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img103')}>
                                 <img  src='/assets/custom_branding_img6.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Custom domains'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Custom domains</h1>
 
@@ -5585,20 +5598,21 @@ export default class StandaloneAPIs extends Component {
                             <div id='img104' className={`enlargable-image-container ${this.state.enlargedImageId === 'img104' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img104')}>
                                 <img  src='/assets/custom_branding_img7.avif' alt="Enlargable" className="image" />
                             </div>
+                            <i id='Auth link domain'></i>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Auth link domain</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain you send API calls to and the domain used in URL’s that face your customer’s IT admin such as ACS URL and SP Entity ID.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain you send API calls to and the domain used in URL’s that face your<i id='Admin Portal domain'></i> customer’s IT admin such as ACS URL and SP Entity ID.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Admin Portal domain</h3>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain of Admin Portal setup links and Admin Portal sessions opened by your customer’s IT admin.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the domain of Admin Portal setup links and Admin<i id='Email domain'></i> Portal sessions opened by your customer’s IT admin.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Email domain</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Controls the from address for emails sent to your customer’s IT admin.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure custom domains, please reach out to <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for assistance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To <i id='Team name'></i>configure custom domains, please reach out to <label className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for assistance.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Team name</h1>
 
