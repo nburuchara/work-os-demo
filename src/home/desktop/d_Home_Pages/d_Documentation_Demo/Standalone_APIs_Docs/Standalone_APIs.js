@@ -6304,8 +6304,9 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Verification</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Verification</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Self-serve domain verification</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
@@ -6313,10 +6314,10 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain Verification allows your customers to claim ownership of a domain. Once they have claimed ownership, features that require a higher level of trust and security can be activated.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS Domain Verification provides a self-serve flow through the Admin Portal in which IT Admins can prove ownership through the creation of DNS TXT records.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS Domain Verification provides a self-serve flow through the Admin Portal in which IT Admins can prove ownership throug<i id='Before getting started'></i> the creation of DNS TXT records.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
-
+                            <i id='API object definitions'></i>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need a <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>API object definitions</h3>
@@ -6346,7 +6347,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All domains belong to an <label className='demo-docs-hyperlink'>Organization</label>. In order to create and verify a domain through the Admin Portal, an Organization must first be <label className='demo-docs-hyperlink'>created</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All domains belong to an <label className='demo-docs-hyperlink'>Organization</label>. In order to create and verify a domain through the Admin <i id='Setup link from the WorkOS dashboard'></i>Portal, an Organization must first be <label className='demo-docs-hyperlink'>created</label>.</p>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -6367,7 +6368,7 @@ export default class StandaloneAPIs extends Component {
                             <div id='img120' className={`enlargable-image-container ${this.state.enlargedImageId === 'img120' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img120')}>
                                     <img  src='/assets/domain_verify_img1.avif' alt="Enlargable" className="image" />
                             </div>
-
+                            <i id='Integrate with your app'></i>
                             <div className='labeled-header'>
                                 <div className='label-tag'>
                                     <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>B</span>
@@ -6394,7 +6395,7 @@ export default class StandaloneAPIs extends Component {
                             selectedLang={this.state.currentSelectedLanguage}/>
                             
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please refer to the <label className='demo-docs-hyperlink'>Admin Portal Integration Guide</label> for additional integration details.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please refer to the <label className='demo-docs-hyperlink'>Admin Portal Integration Guide</label> for additional integration details<i id='Admin Portal domain verification'></i>.</p>
                             
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -6441,7 +6442,7 @@ export default class StandaloneAPIs extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "3%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Programmatic domain verification</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -6453,7 +6454,7 @@ export default class StandaloneAPIs extends Component {
                             <ol>
 
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create an Organization Domain for an Organization</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Share the token and setup instructions with the Organization owner (IT Admin)</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Share the token and setup instructions with the Organization owner (IT Admin)<i id='Create a new Organization Domain'></i></p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Wait for the verification to complete</p></li>
 
                             </ol>
@@ -6478,7 +6479,7 @@ export default class StandaloneAPIs extends Component {
 
                                 <ul>
 
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Name: <span>_acme-challenge.domain-to-verify.com</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Name: <span>_acme-challenge.domain-to-verify.com</span></p><i id='Get a domain'></i></li>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Value: <span>verification_token=3CVZxo4HgvSiYRKlV4RdOWwWl</span></p></li>
 
                                 </ul>
@@ -6512,7 +6513,7 @@ export default class StandaloneAPIs extends Component {
 
                                 <ul>
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>dns</span>: domain is verified with the DNS flow</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>developer</span>: domain is verified by a person or a system, without running the DNS flow</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>developer<i id='Initiate verification for existing domain'></i></span>: domain is verified by a person or a system, without running the DNS flow</p></li>
                                 </ul>
 
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initiate verification for existing domain</h1>

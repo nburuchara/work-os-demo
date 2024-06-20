@@ -116,6 +116,14 @@ const results = [
 
     {id: "998651", name: "Log Streams", category: "Standalone APIs", subCat1: "Audit Logs", page: "Log Streams", lastCat: "top"},
 
+     //! - QUICK START (DV) - !//            - - - (DOMAIN VERIFICATION) - - -            
+
+     {id: "998636", name: "Quick Start", category: "Standalone APIs", subCat1: "Domain Verification", page: "Quick Start (DV)", lastCat: "top"},
+
+      //! - API - !//                     
+
+      {id: "998609", name: "API", category: "Standalone APIs", subCat1: "Domain Verification", page: "API", lastCat: "top"},
+
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -273,7 +281,6 @@ const results = [
      {id: "998720", name: "What you’ll build", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "What you’ll build"},
      {id: "998719", name: "Before getting started", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Before getting started"},
      {id: "998718", name: "API object definitions", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "API object definitions"},
-     {id: "998717", name: "API object definitions", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "API object definitions"},
      {id: "998716", name: "Emit an Audit Log Event", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Quick Start", page: "Quick Start (AL)", lastCat: "Emit an Audit Log Event"},
 
      //! - EXPORTING EVENTS - !//             
@@ -297,6 +304,21 @@ const results = [
     {id: "998650", name: "Understanding Log Streams", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Understanding Log Streams"},
     {id: "998649", name: "Dashboard", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Dashboard"},
     {id: "998648", name: "Admin Portal", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", page: "Log Streams", lastCat: "Admin Portal"},
+
+     //! - QUICK START (DV) - !//                            
+
+     {id: "998635", name: "Introduction", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "Introduction"},
+     {id: "998634", name: "Before getting started", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "Before getting started"},
+     {id: "998633", name: "Setup link from the WorkOS dashboard", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "Setup link from the WorkOS dashboard"},
+     {id: "998632", name: "Integrate with your app", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "Integrate with your app"},
+     {id: "998631", name: "Admin Portal domain verification", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "Admin Portal domain verification"},
+
+      //! - API - !//                     
+
+      {id: "998608", name: "Create a new Organization Domain", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "Create a new Organization Domain"},
+      {id: "998607", name: "Get a domain", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "Get a domain"},
+      {id: "998606", name: "Initiate verification for existing domain", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "Initiate verification for existing domain"},
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -490,6 +512,11 @@ const results = [
     //! - LOG STREAMS - !//             
 
     {id: "998647", name: "IP allowlist", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Understanding Log Streams", page: "Log Streams", lastCat: "IP allowlist"},
+
+    //! - QUICK START (DV) - !//                            
+
+    {id: "998630", name: "API object definitions", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (DV)", lastCat: "API object definitions"},
+
 
 
     //? - - - - - - - - - - - - - - ?//
@@ -1391,8 +1418,64 @@ const results = [
     {id: "998638", name: "You can also guide users to the Admin Portal by redirecting them to a programmatically generated Admin Portal link directly from your application.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Admin Portal", page: "Log Streams", lastCat: "Admin Portal"},
     {id: "998637", name: "Once redirected to the Admin Portal, the user will be prompted to select a destination and will be provided with step-by-step configuration instructions for the selected destination.", category: "Standalone APIs", subCat1: "Audit Logs", subCat2: "Log Streams", subCat3: "Admin Portal", page: "Log Streams", lastCat: "Admin Portal"},
 
+    //! - QUICK START (DV) - !//                            
+
+    {id: "998629", name: "Self-serve domain verification", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", page: "Quick Start (DV)", lastCat: "top"},
+
+    {id: "998628", name: "Domain Verification allows your customers to claim ownership of a domain. Once they have claimed ownership, features that require a higher level of trust and security can be activated.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Introduction", page: "Quick Start (DV)", lastCat: "Introduction"},
+    {id: "998627", name: "WorkOS Domain Verification provides a self-serve flow through the Admin Portal in which IT Admins can prove ownership through the creation of DNS TXT records.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Introduction", page: "Quick Start (DV)", lastCat: "Introduction"},
+
+    {id: "998626", name: "You’ll need a WorkOS account.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", page: "Quick Start (DV)", lastCat: "Before getting started"},
+
+    {id: "998625", name: "Organization", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998624", name: "Describes an organization whose users sign in with a SSO Connection, or whose users are synced with a Directory Sync Connection.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998623", name: "Organization Domain", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998622", name: "Describes a domain associated to an organization, verified or unverified.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998621", name: "Portal Link", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998620", name: "YA temporary link to initiate an Admin Portal session. Valid for 5 minutes.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+    {id: "998619", name: "All domains belong to an Organization. In order to create and verify a domain through the Admin Portal, an Organization must first be created.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Before getting started", subCat4: "API object definitions", page: "Quick Start (DV)", lastCat: "API object definitions"},
+
+    {id: "998618", name: "Sign in to your WorkOS account account and create or locale an Organization.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Setup link from the WorkOS dashboard", page: "Quick Start (DV)", lastCat: "Setup link from the WorkOS dashboard"},
+    {id: "998617", name: "Click the “Invite Admin” button, select Domain Verification then click “Next.” Enter the email of the IT admin for the organization to automatically send them a setup link, or click “Copy setup link”.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Setup link from the WorkOS dashboard", page: "Quick Start (DV)", lastCat: "Setup link from the WorkOS dashboard"},
+    {id: "998616", name: "If you chose to copy the setup link you can share it over email, Slack or direct message. We also recommend including details on what the link does and how long the link is active.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Setup link from the WorkOS dashboard", page: "Quick Start (DV)", lastCat: "Setup link from the WorkOS dashboard"},
+
+    {id: "998615", name: "IAdmin Portal links can also be programmatically generated for the domain verification flow. This can be used to provide a link to the Admin Portal flow directly in your application.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (DV)", lastCat: "Integrate with your app"},
+    {id: "998614", name: "You’ll have to generate the link with the domain_verification intent:", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (DV)", lastCat: "Integrate with your app"},
+    {id: "998613", name: "Please refer to the Admin Portal Integration Guide for additional integration details.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Integrate with your app", page: "Quick Start (DV)", lastCat: "Integrate with your app"},
+
+    {id: "998612", name: "If the domain is valid, we identify the DNS service provider and offer custom setup instructions.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Admin Portal domain verification", page: "Quick Start (DV)", lastCat: "Admin Portal domain verification"},
+    {id: "998611", name: "The admin will find instruction to add a DNS TXT record with a token generated by our system.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Admin Portal domain verification", page: "Quick Start (DV)", lastCat: "Admin Portal domain verification"},
+    {id: "998610", name: "When we detect and verify the DNS record, we will mark the domain as verified and dispatch a domain verification event to inform your application.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "Quick Start", subCat3: "Admin Portal domain verification", page: "Quick Start (DV)", lastCat: "Admin Portal domain verification"},
+
+    //! - API - !//                     
+
+    {id: "998605", name: "Programmatic domain verification", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+    {id: "998604", name: "Instead of leveraging the Admin Portal, the Domain Verification API can be used to verify domains programmatically.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+    {id: "998603", name: "Integrating with the API goes as follows:", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+    {id: "998602", name: "Create an Organization Domain for an Organization", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+    {id: "998601", name: "Share the token and setup instructions with the Organization owner (IT Admin)", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+    {id: "998600", name: "Wait for the verification to complete", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", page: "API", lastCat: "top"},
+
+    {id: "998599", name: "All domains belong to an Organization. In order to create and verify a domain, an Organization must first be created.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Create a new Organization Domain", page: "API", lastCat: "Create a new Organization Domain"},
+    {id: "998598", name: "The verification_token returned can then be set as the value of a TXT record that WorkOS will periodically check until the record is found. The TXT record for the above response example would be:", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Create a new Organization Domain", page: "API", lastCat: "Create a new Organization Domain"},
+    {id: "998597", name: "Name: _acme-challenge.domain-to-verify.com", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Create a new Organization Domain", page: "API", lastCat: "Create a new Organization Domain"},
+    {id: "998596", name: "Value: verification_token=3CVZxo4HgvSiYRKlV4RdOWwWl", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Create a new Organization Domain", page: "API", lastCat: "Create a new Organization Domain"},
+
+    {id: "998595", name: "Fetch an existing domain and it’s current verification status. This endpoint can be polled once verification has been initiated to determine if verification has been successful.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998594", name: "Possible state values:", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998593", name: "pending: domain verification has been initiated and not yet completed", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998592", name: "verified: domain has been verified", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998591", name: "failed: domain was not able to be verified", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998590", name: "Possible verification_strategy values:", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998589", name: "dns: domain is verified with the DNS flow", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+    {id: "998588", name: "developer: domain is verified by a person or a system, without running the DNS flow", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Get a domain", page: "API", lastCat: "Get a domain"},
+
+    {id: "998587", name: "If a domain has not successfully verified within thirty days and moves to the failed state, verification can be restarted manually.", category: "Standalone APIs", subCat1: "Domain Verification", subCat2: "API", subCat3: "Initiate verification for existing domain", page: "API", lastCat: "Initiate verification for existing domain"},
+
+
+
 ]
 
 export default results;
 
-//* latest: 998637 - log streams
+//* latest: 998610 - domain verification
