@@ -138,14 +138,7 @@ export default class StandaloneAPIs extends Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
-        // setTimeout (() => {
-        //     this.setState({
-        //         gettingStarted: true
-        //     })
-        // }, 300)
-        // setTimeout (() => {
-        //     this.scrollToTop('top')
-        // }, 450)
+        this.getSelectedPage(this.props.scrollToID)
     }
 
     componentWillUnmount() {
@@ -6296,6 +6289,8 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 </CSSTransition>
+
+                    {/* - -  DOMAIN VERIFICATION - -  */}
 
                 <CSSTransition in={domainVerification}
                 timeout={500}

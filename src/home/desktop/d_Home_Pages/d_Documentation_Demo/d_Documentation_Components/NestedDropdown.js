@@ -251,11 +251,12 @@ searchMenuItems = (menuItems, searchTerm) => {
     let path = [];
   
     const search = (items, term, currentPath = []) => {
+        
         let found = false;
         for (let i = 0; i < items.length; i++) {
           const item = items[i];
           if (!item) continue; // Add defensive check for undefined item
-          
+          console.log('we entered search & the for loop')
           const newPath = [...currentPath, item.id];
           
           if (item.levelName && item.levelName.toLowerCase().includes(term.toLowerCase())) {

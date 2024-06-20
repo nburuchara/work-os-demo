@@ -18,7 +18,7 @@ export default class EventsWebhooks extends Component {
             dataSyncingWithApi: false,
             dataSyncingWithWebhooks: false,
             dataReconciliation: false,
-            observabilityStreamToDatadog: true,
+            observabilityStreamToDatadog: false,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -46,6 +46,123 @@ export default class EventsWebhooks extends Component {
             hiddenDropdownBtn1: false,
         }
     }
+
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
+        // setTimeout (() => {
+        //     this.setState({
+        //         gettingStarted: true
+        //     })
+        // }, 300)
+        // setTimeout (() => {
+        //     this.scrollToTop('top')
+        // }, 450)
+        this.getSelectedPage(this.props.scrollToID)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    openFirstDoc = () => {
+        setTimeout (() => {
+            this.setState({
+                gettingStarted: true
+            })
+        }, 300)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 450)
+    }
+
+    getSelectedPage = (selectedPage) => {
+        const pageMap = {
+          "Event types": "eventTypes",
+          "Overview": "dataSyncing",
+          "Syncing with events API": "dataSyncingWithApi",
+          "Syncing with webhooks": "dataSyncingWithWebhooks",
+          "Data reconciliation": "dataReconciliation",
+          "Streaming to Datadog": "observabilityStreamToDatadog",
+        };
+      
+        const page = pageMap[selectedPage];
+        if (page) {
+          this.loadSelectedPage(page);
+        } else {
+          console.error("Unknown selected page:", selectedPage);
+        }
+    };
+
+    scrollToTop = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'auto' }); // Use 'auto' for instant scroll, or 'smooth' for smooth scroll
+        }
+    }
+
+    loadSelectedPage = (selectedPage) => {
+        this.hideAllPages()
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: true,
+        //     })
+        // }, 600)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 900)
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: false,
+        //     })
+        // }, 1300)
+        setTimeout (() => {
+            this.setState({
+                currentSelectedLanguage: "javascript",
+                [`${selectedPage}`]: true
+            })
+        }, 750)
+    }
+
+    hideAllPages = () => {
+        this.setState({
+            eventTypes: false,
+            dataSyncing: false,
+            dataSyncingWithApi: false,
+            dataSyncingWithWebhooks: false,
+            dataReconciliation: false,
+            observabilityStreamToDatadog: false,
+        })
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (this.props.scrollToID !== prevProps.scrollToID) {
+            this.getSelectedPage(this.props.scrollToID)
+        }
+        if (this.props.searchedTerm) {
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+        }
+    }
+
+    smoothScrollToId = (id) => {
+        const checkElementAndScroll = () => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+    
+                setTimeout(() => {
+                    this.props.clearLatestSearch();
+                }, 1000);
+            } else {
+                // If the element is not yet in the DOM, keep checking
+                requestAnimationFrame(checkElementAndScroll);
+            }
+        };
+    
+        // Add a small delay before starting the checking loop
+        setTimeout(() => {
+            requestAnimationFrame(checkElementAndScroll);
+        }, 500); // You can adjust the delay as needed
+    };
 
     newLangSelected = (currentLang) => {
         if (this.state.currentSelectedLanguage === "") {
@@ -94,7 +211,11 @@ export default class EventsWebhooks extends Component {
 
         return (
             <Styles>
-                {eventTypes && 
+                <CSSTransition in={eventTypes}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Events</h1>
@@ -1787,8 +1908,13 @@ export default class EventsWebhooks extends Component {
 
                         </div>
                     </div>
-                }
-                {dataSyncing && 
+                </CSSTransition>
+
+                <CSSTransition in={dataSyncing}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data syncing</h1>
@@ -1905,8 +2031,13 @@ export default class EventsWebhooks extends Component {
                         
                         </div>
                     </div>
-                }
-                {dataSyncingWithApi &&
+                </CSSTransition>
+
+                <CSSTransition in={dataSyncingWithApi}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data using the events API</h1>
@@ -2176,8 +2307,13 @@ export default class EventsWebhooks extends Component {
                         </div>
 
                     </div>
-                }
-                {dataSyncingWithWebhooks && 
+                </CSSTransition>
+
+                <CSSTransition in={dataSyncingWithWebhooks}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data with webhooks</h1>
@@ -2490,8 +2626,13 @@ export default class EventsWebhooks extends Component {
                         </div>
 
                     </div>
-                }
-                {dataReconciliation && 
+                </CSSTransition>
+
+                <CSSTransition in={dataReconciliation}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data reconciliation</h1>
@@ -2593,8 +2734,13 @@ export default class EventsWebhooks extends Component {
 
                         </div>
                     </div>
-                }
-                {observabilityStreamToDatadog && 
+                </CSSTransition>
+
+                <CSSTransition in={observabilityStreamToDatadog}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Stream events to Datadog</h1>
@@ -2740,7 +2886,7 @@ export default class EventsWebhooks extends Component {
                         </div>
 
                     </div>
-                }
+                </CSSTransition>
             </Styles>
         )
 

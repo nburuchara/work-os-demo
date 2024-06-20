@@ -1,36 +1,42 @@
 const docs_sidebar_options = [
     {
         id: 0,
-        levelName: "Event Types"
-    },
-    {
-        id: 1,
-        levelName: "Data Syncing",
+        levelName: "Events",
         sections: [
             {
-                id: 0,
-                levelName: "Overview",
-            },
-            {
                 id: 1,
-                levelName: "Syncing with events API"
-            },
-            {
-                id: 2,
-                levelName: "Syncing with webhooks"
-            },
-            {
-                id: 3,
-                levelName: "Data reconciliation"
+                levelName: "Event types",
             }
         ]
     },
     {
         id: 2,
+        levelName: "Data Syncing",
+        sections: [
+            {
+                id: 3,
+                levelName: "Overview",
+            },
+            {
+                id: 4,
+                levelName: "Syncing with events API"
+            },
+            {
+                id: 5,
+                levelName: "Syncing with webhooks"
+            },
+            {
+                id: 6,
+                levelName: "Data reconciliation"
+            }
+        ]
+    },
+    {
+        id: 7,
         levelName: "Observability",
         sections: [
             {
-                id: 0,
+                id: 8,
                 levelName: "Streaming to Datadog"
             }
         ]

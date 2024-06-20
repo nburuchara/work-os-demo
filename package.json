@@ -19,8 +19,9 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "merge-terms": "node src/home/desktop/d_Home_Pages/d_Documentation_Demo/d_Documentation_Search_Terms/Merge_All_Search_Terms.js",
+    "start": "npm run merge-terms && react-scripts start",
+    "build": "npm run merge-terms && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
