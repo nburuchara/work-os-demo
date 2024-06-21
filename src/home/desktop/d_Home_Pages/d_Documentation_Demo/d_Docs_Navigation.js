@@ -2529,15 +2529,27 @@ export default class DocsNavigationMenu extends Component {
         const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        if (searchFilterSelected === "User Management" || menuOption1 === true) {
+        if (menuOption1 === true) {
             currentSectionSearching = UserManagementFullSearch
-        } else if (searchFilterSelected === "Standalone APIs" || menuOption2 === true) {
+        } else if (menuOption2 === true) {
             currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (searchFilterSelected === "Events and webhooks" || menuOption3 === true) {
+        } else if (menuOption3 === true) {
             currentSectionSearching = EventsWebhooksFullSearch
-        } else if (searchFilterSelected === "Resources" || menuOption4 === true) {
+        } else if (menuOption4 === true) {
             currentSectionSearching = AllDocsFullSearch
         } else {
+            currentSectionSearching = AllDocsFullSearch
+        }
+
+        if (searchFilterSelected === "User Management") {
+            currentSectionSearching = UserManagementFullSearch
+        } else if (searchFilterSelected === "Standalone APIs") {
+            currentSectionSearching = StandaloneAPIsFullSearch
+        } else if (searchFilterSelected === "Events and webhooks") {
+            currentSectionSearching = EventsWebhooksFullSearch
+        } else if (searchFilterSelected === "Resources") {
+            currentSectionSearching = AllDocsFullSearch
+        } else if (searchFilterSelected === "All docs") {
             currentSectionSearching = AllDocsFullSearch
         }
         
@@ -2621,15 +2633,27 @@ export default class DocsNavigationMenu extends Component {
         const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        if (searchFilterSelected === "User Management" || menuOption1 === true) {
+        if (menuOption1 === true) {
             currentSectionSearching = UserManagementFullSearch
-        } else if (searchFilterSelected === "Standalone APIs" || menuOption2 === true) {
+        } else if (menuOption2 === true) {
             currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (searchFilterSelected === "Events and webhooks" || menuOption3 === true) {
+        } else if (menuOption3 === true) {
             currentSectionSearching = EventsWebhooksFullSearch
-        } else if (searchFilterSelected === "Resources" || menuOption4 === true) {
+        } else if (menuOption4 === true) {
             currentSectionSearching = AllDocsFullSearch
         } else {
+            currentSectionSearching = AllDocsFullSearch
+        }
+
+        if (searchFilterSelected === "User Management") {
+            currentSectionSearching = UserManagementFullSearch
+        } else if (searchFilterSelected === "Standalone APIs") {
+            currentSectionSearching = StandaloneAPIsFullSearch
+        } else if (searchFilterSelected === "Events and webhooks") {
+            currentSectionSearching = EventsWebhooksFullSearch
+        } else if (searchFilterSelected === "Resources") {
+            currentSectionSearching = AllDocsFullSearch
+        } else if (searchFilterSelected === "All docs") {
             currentSectionSearching = AllDocsFullSearch
         }
         
