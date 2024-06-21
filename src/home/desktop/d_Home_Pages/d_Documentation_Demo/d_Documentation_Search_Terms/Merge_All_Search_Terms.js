@@ -29,7 +29,7 @@ const readJsFile = (filePath) => {
                     throw new Error('No object lines found in the file');
                 }
 
-                console.log('Extracted Object Lines:', objectLines);
+                // console.log('Extracted Object Lines:', objectLines);
 
                 // Parse each line as a JSON object with detailed logging
                 const jsonData = objectLines.map((line, index) => {
@@ -45,7 +45,7 @@ const readJsFile = (filePath) => {
                   });
                 resolve(jsonData);
             } catch (error) {
-                console.error(`Error processing file ${filePath}:`, error);
+                console.error(`Error processing file ${filePath}:`, error);x
                 reject(error);
             }
         });
@@ -89,5 +89,6 @@ const mergeTerms = async () => {
 }
 
 // Run the merge function
-// mergeTerms();
-module.exports = mergeTerms;
+mergeTerms();
+// Test the merge function
+// module.exports = mergeTerms;

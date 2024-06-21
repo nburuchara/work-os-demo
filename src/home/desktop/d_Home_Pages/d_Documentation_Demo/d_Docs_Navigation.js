@@ -2526,7 +2526,7 @@ export default class DocsNavigationMenu extends Component {
 
     handleSearchChange = (e) => {
         const { searchFilterTitle, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
-        let currentSectionSearching = AllDocsFullSearch
+        let currentSectionSearching; 
 
         if (searchFilterTitle === "User Management" || menuOption1 === true) {
             currentSectionSearching = UserManagementFullSearch
@@ -2534,9 +2534,12 @@ export default class DocsNavigationMenu extends Component {
             currentSectionSearching = StandaloneAPIsFullSearch
         } else if (searchFilterTitle === "Events and webhooks" || menuOption3 === true) {
             currentSectionSearching = EventsWebhooksFullSearch
-        } else {
+        } else if (searchFilterTitle === "Resources" || menuOption4 === true) {
             
+        } else {
+            currentSectionSearching = AllDocsFullSearch
         }
+        
         const searchInput = e.target.value.toLowerCase();
         
         // Clear previous timeout
@@ -2613,6 +2616,98 @@ export default class DocsNavigationMenu extends Component {
         }, 500); // Set debounce delay to 500ms
     };
 
+    reloadFilteredSearchResults = (input) => {
+        const { searchFilterTitle, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        let currentSectionSearching; 
+
+        if (searchFilterTitle === "User Management" || menuOption1 === true) {
+            currentSectionSearching = UserManagementFullSearch
+        } else if (searchFilterTitle === "Standalone APIs" || menuOption2 === true) {
+            currentSectionSearching = StandaloneAPIsFullSearch
+        } else if (searchFilterTitle === "Events and webhooks" || menuOption3 === true) {
+            currentSectionSearching = EventsWebhooksFullSearch
+        } else if (searchFilterTitle === "Resources" || menuOption4 === true) {
+            
+        } else {
+            currentSectionSearching = AllDocsFullSearch
+        }
+        
+        const searchInput = input.toLowerCase();
+        
+        // Clear previous timeout
+        clearTimeout(this.searchTimeout);
+    
+        this.setState({
+            searchedData: input,
+            isSearchLoading: true,
+            clearSearchBtn: true,
+            showDocsPopupHomescreen: false
+        });
+    
+        // Set a new timeout to execute after 500ms
+        this.searchTimeout = setTimeout(() => {
+            if (searchInput.trim() === "") {
+                // Reset filteredOptions and loading state
+                this.setState({
+                    searchedData: "",
+                    searchCloseBtn: false,
+                    filteredOptions: [],
+                    isSearchLoading: false,
+                    resultsFound: false,
+                    showDocsPopupHomescreen: true,
+                    clearSearchBtn: false
+                });
+
+            } else {
+                // Show loading screen and start search
+                this.setState({ isSearchLoading: true, searchedData: searchInput, searchCloseBtn: true }, () => {
+                    const filteredOptions = currentSectionSearching.filter(option => {
+                        const name = option.name.toLowerCase();
+                        const searchWords = searchInput.toLowerCase().split(' '); // Split search input into words
+                        const optionWords = name.split(' '); // Split name into words
+                    
+                        if (searchWords.length === 1) {
+                            // Special case: search input is a single word
+                            const searchWord = searchWords[0];
+                            return optionWords.some(optionWord => optionWord.startsWith(searchWord));
+                        } else {
+                            // Combine search words into a single substring
+                            const searchSubstring = searchWords.join(' ');
+                            return name.includes(searchSubstring);
+                        }
+                    });
+    
+                    const resultsFound = filteredOptions.length > 0; // Check if any results were found
+    
+                    const highlightedOptions = filteredOptions.map(option => ({
+                        ...option,
+                        highlightedName: this.highlightMatchedCharacters(option, searchInput)
+                    }));
+    
+                    const groupedResults = this.groupBy(highlightedOptions, 'category');
+    
+                    // Construct trie for each category
+                    const trieByCategory = {};
+                    Object.entries(groupedResults).forEach(([category, options]) => {
+                        trieByCategory[category] = new Trie();
+                        options.forEach(option => {
+                            trieByCategory[category].insert(option.name.toLowerCase());
+                        });
+                    });
+    
+                    // Update state after search logic is complete
+                    this.setState({
+                        trieByCategory,
+                        groupedOptions: groupedResults,
+                        filteredOptions: highlightedOptions,
+                        isSearchLoading: false, // Hide loading screen
+                        resultsFound: resultsFound
+                    });
+                });
+            }
+        }, 500); // Set debounce delay to 500ms
+    }
+
     highlightMatchedCharacters(option, searchInput, isSearchLoading) {
         const name = option.name.toLowerCase();
         const searchRegex = new RegExp(`\\b${searchInput}`, 'i');
@@ -2674,7 +2769,7 @@ export default class DocsNavigationMenu extends Component {
                                     this.menuOptionClicked(2)
                                 })
                             } else if (category === "Events and webhooks") {
-                                this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
+                                this.setState({transitioningMenu: true, menuOption3: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(3)
                                 })
                             }
@@ -2787,6 +2882,7 @@ export default class DocsNavigationMenu extends Component {
        this.setState({
             menuOption1SearchTermObject: null,
             menuOption2SearchTermObject: null,
+            menuOption3SearchTermObject: null,
             searchedData: "",
             clearSearchBtn: false,
         })
@@ -2831,31 +2927,40 @@ export default class DocsNavigationMenu extends Component {
                 searchFilterTitle: "User Management",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false,
-
+            }, () => {
+                this.reloadFilteredSearchResults(this.state.searchedData)
             })
         } else if (option === 2) {
             this.setState({
                 searchFilterTitle: "Standalone APIs",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
+            }, () => {
+                this.reloadFilteredSearchResults(this.state.searchedData)
             })
         } else if (option === 3) {
             this.setState({
                 searchFilterTitle: "Events and webhooks",
                 showLargeSearchFilterOptions: false,
-                showSmallSearchFilterOptions: false
+                showSmallSearchFilterOptions: false,
+            }, () => {
+                this.reloadFilteredSearchResults(this.state.searchedData)
             })
         } else if (option === 4) {
             this.setState({
                 searchFilterTitle: "Resources",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
+            }, () => {
+                this.reloadFilteredSearchResults(this.state.searchedData)
             })
         } else {
             this.setState({
                 searchFilterTitle: "All docs",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
+            }, () => {
+                this.reloadFilteredSearchResults(this.state.searchedData)
             })
         }
         

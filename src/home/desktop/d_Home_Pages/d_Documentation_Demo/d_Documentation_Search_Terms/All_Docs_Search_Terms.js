@@ -13823,8 +13823,120 @@ const results = [
     "id": "998587",
     "name": "Event Types",
     "category": "Events and webhooks",
-    "page": "Event Types",
+    "page": "Event types",
     "lastCat": "top"
+  },
+  {
+    "id": "998586",
+    "name": "Authentication events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998585",
+    "name": "Connection events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998584",
+    "name": "Directory Sync events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998583",
+    "name": "Email verification events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998582",
+    "name": "Invitation events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998581",
+    "name": "Magic Auth events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998580",
+    "name": "Organization events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998579",
+    "name": "Organization domain events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998578",
+    "name": "Organization membership events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998577",
+    "name": "Password reset events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998576",
+    "name": "Role events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998575",
+    "name": "Session events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "top"
+  },
+  {
+    "id": "998574",
+    "name": "User events",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "User events"
+  },
+  {
+    "id": "998574",
+    "name": "authentication.email_verification_failed",
+    "category": "Events and webhooks",
+    "subCat1": "Event types",
+    "page": "Event types",
+    "lastCat": "authentication.email_verification_failed"
   }
 ];
 export default results;

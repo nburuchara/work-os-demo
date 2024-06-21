@@ -50,13 +50,11 @@ export default class EventsWebhooks extends Component {
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
         // setTimeout (() => {
-        //     this.setState({
-        //         gettingStarted: true
-        //     })
+        //     this.getSelectedPage(this.props.scrollToID)
         // }, 300)
         // setTimeout (() => {
         //     this.scrollToTop('top')
-        // }, 450)
+        // }, 450) 
         this.getSelectedPage(this.props.scrollToID)
     }
 
@@ -218,7 +216,7 @@ export default class EventsWebhooks extends Component {
                 >
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Events</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Events</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -262,7 +260,7 @@ export default class EventsWebhooks extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "70%" : "80%", fontFamily: "inconsolata",}}>data</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "80%" : "80%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Event payload. Payloads match the corresponding API objects.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Event payload. Payloads match the corresponding API objects.</p><i id="Authentication events"></i>
                                 </div>
                             </div>
 
@@ -1778,7 +1776,7 @@ export default class EventsWebhooks extends Component {
 
                                 <div className="api-keys">
 
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a session is created. Sessions started using <label className="demo-docs-hyperlink">impersonation</label> will include an additional impersonator field with data about the <span>impersonator</span>.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginLeft: "8%", marginTop: "0%", marginBottom: "0%", marginRight: "2%"}}>Triggered when a session is created. Sessions started using <label className="demo-docs-hyperlink">impersonation</label> will include an additional impersonator<i id="User events"></i> field with data about the <span>impersonator</span>.</p>
 
                                 </div>
                             </div>
