@@ -2206,6 +2206,7 @@ export default class DocsNavigationMenu extends Component {
 
             searchFilterTitle: "🔎",
             searchFilterSelected: "",
+            currentSectionSearching: AllDocsFullSearch,
 
             //* - - SIDEBAR - - *//
 
@@ -2273,6 +2274,11 @@ export default class DocsNavigationMenu extends Component {
 
     }
 
+    componentDidMount = () => {
+        this.setState({
+            searchFilterSelected: "All docs"
+        })
+    }
 
         //* - - SIDEBAR FUNCS - - *//
 
@@ -2317,9 +2323,7 @@ export default class DocsNavigationMenu extends Component {
                         resourcesDropdown: false,
                         currentSection: "User Management",
                     })
-                    // if (this.menuOption1Ref.current) {
-                    //     this.menuOption1Ref.current.openFirstDoc();
-                    // }
+                    if (this.state.searchFilterTitle === "🔎") {this.setState({searchFilterTitle: "🔎 UM", searchFilterSelected: "User Management"})}
                 } else if (option === 2) {
                     this.setState({
                         showDocsHome: false,
@@ -2332,9 +2336,7 @@ export default class DocsNavigationMenu extends Component {
                         resourcesDropdown: false,
                         currentSection: "Standalone APIs",
                     })
-                    // if (this.menuOption2Ref.current) {
-                    //     this.menuOption2Ref.current.openFirstDoc();
-                    // }
+                    if (this.state.searchFilterTitle === "🔎") {this.setState({searchFilterTitle: "🔎 SA", searchFilterSelected: "Standalone APIs"})}
                 } else if (option === 3) {
                     this.setState({
                         showDocsHome: false,
@@ -2347,6 +2349,7 @@ export default class DocsNavigationMenu extends Component {
                         resourcesDropdown: false,
                         currentSection: "Events and webhooks",
                     })
+                    if (this.state.searchFilterTitle === "🔎") {this.setState({searchFilterTitle: "🔎 EAW", searchFilterSelected: "Events and webhooks"})}
                 } else {
                     this.setState({
                         userManagementDropdown: false,
@@ -2385,11 +2388,18 @@ export default class DocsNavigationMenu extends Component {
     closeAllOpenPages = () => {
         if (this.state.prevSelectedOption === "menuOption1" && this.state.menuOption1 !== true) {
             if (this.menuOption1Ref.current) {
+                this.setState({menuOption1SearchTermObject: null})
                 this.menuOption1Ref.current.hideAllPages();
             }
         } else if (this.state.prevSelectedOption === "menuOption2" && this.state.menuOption2 !== true) {
             if (this.menuOption2Ref.current) {
+                this.setState({menuOption2SearchTermObject: null})
                 this.menuOption2Ref.current.hideAllPages();
+            }
+        } else if (this.state.prevSelectedOption === "menuOption3" && this.state.menuOption3 !== true) {
+            if (this.menuOption3Ref.current) {
+                this.setState({menuOption3SearchTermObject: null})
+                this.menuOption3Ref.current.hideAllPages();
             }
         }
     }
@@ -2526,44 +2536,19 @@ export default class DocsNavigationMenu extends Component {
     }
 
     handleSearchChange = (e) => {
-        const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
-        let currentSectionSearching; 
-
-        if (menuOption1 === true) {
-            currentSectionSearching = UserManagementFullSearch
-        } else if (menuOption2 === true) {
-            currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (menuOption3 === true) {
-            currentSectionSearching = EventsWebhooksFullSearch
-        } else if (menuOption4 === true) {
-            currentSectionSearching = AllDocsFullSearch
-        } else {
-            currentSectionSearching = AllDocsFullSearch
-        }
-
-        if (searchFilterSelected === "User Management") {
-            currentSectionSearching = UserManagementFullSearch
-        } else if (searchFilterSelected === "Standalone APIs") {
-            currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (searchFilterSelected === "Events and webhooks") {
-            currentSectionSearching = EventsWebhooksFullSearch
-        } else if (searchFilterSelected === "Resources") {
-            currentSectionSearching = AllDocsFullSearch
-        } else if (searchFilterSelected === "All docs") {
-            currentSectionSearching = AllDocsFullSearch
-        }
-        
-        const searchInput = e.target.value.toLowerCase();
-        
-        // Clear previous timeout
-        clearTimeout(this.searchTimeout);
-    
+        const { searchFilterTitle, searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state; 
+        let { currentSectionSearching } = this.state;
         this.setState({
             searchedData: e.target.value,
             isSearchLoading: true,
             clearSearchBtn: true,
             showDocsPopupHomescreen: false
         });
+        
+        const searchInput = e.target.value.toLowerCase();
+        
+        // Clear previous timeout
+    
     
         // Set a new timeout to execute after 500ms
         this.searchTimeout = setTimeout(() => {
@@ -2580,7 +2565,19 @@ export default class DocsNavigationMenu extends Component {
                 });
 
             } else {
-                // Show loading screen and start search
+        
+                if (searchFilterSelected === "User Management") {
+                    currentSectionSearching = UserManagementFullSearch
+                } else if (searchFilterSelected === "Standalone APIs") {
+                    currentSectionSearching = StandaloneAPIsFullSearch
+                } else if (searchFilterSelected === "Events and webhooks") {
+                    currentSectionSearching = EventsWebhooksFullSearch
+                } else if (searchFilterSelected === "Resources") {
+                    currentSectionSearching = AllDocsFullSearch
+                } else if (searchFilterSelected === "All docs") {
+                    currentSectionSearching = AllDocsFullSearch
+                }
+
                 this.setState({ isSearchLoading: true, searchedData: searchInput, searchCloseBtn: true }, () => {
                     const filteredOptions = currentSectionSearching.filter(option => {
                         const name = option.name.toLowerCase();
@@ -2626,7 +2623,7 @@ export default class DocsNavigationMenu extends Component {
                     });
                 });
             }
-        }, 500); // Set debounce delay to 500ms
+        }, 0); // Set debounce delay to 500ms
     };
 
     reloadFilteredSearchResults = (input) => {
@@ -2794,7 +2791,7 @@ export default class DocsNavigationMenu extends Component {
                                     this.menuOptionClicked(2)
                                 })
                             } else if (category === "Events and webhooks") {
-                                this.setState({transitioningMenu: true, menuOption3: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
+                                this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(3)
                                 })
                             }

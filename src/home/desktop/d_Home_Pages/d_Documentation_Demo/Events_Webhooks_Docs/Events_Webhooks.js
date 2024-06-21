@@ -49,14 +49,12 @@ export default class EventsWebhooks extends Component {
 
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleScroll);
-        // setTimeout (() => {
-        //     this.getSelectedPage(this.props.scrollToID)
-        // }, 300)
-        this.getSelectedPage(this.props.scrollToID)
-        // setTimeout (() => {
-        //     this.scrollToTop('top')
-        // }, 450) 
-        
+        if (this.props.searchedTerm) {
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+        } else {
+            this.hideAllPages()
+            this.getSelectedPage(this.props.scrollToID)
+        }
     }
 
     componentWillUnmount() {
@@ -219,7 +217,7 @@ export default class EventsWebhooks extends Component {
                     <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Events</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}}></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -1919,7 +1917,7 @@ export default class EventsWebhooks extends Component {
                     <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data syncing</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Keep your app in sync with WorkOS.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Keep your app in sync with WorkOS.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id="Introduction"></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2044,7 +2042,7 @@ export default class EventsWebhooks extends Component {
                     <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data using the events API</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A step-by-step guide on how to start syncing data using the API.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>A step-by-step guide on how to start syncing data using the API.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id="What you’ll build"></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2322,7 +2320,7 @@ export default class EventsWebhooks extends Component {
                     <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sync data with webhooks</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>A step-by-step guide on how to start syncing data using webhooks.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>A step-by-step guide on how to start syncing data using webhooks.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id="What you’ll build"></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2335,7 +2333,7 @@ export default class EventsWebhooks extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create your endpoint to receive webhook events</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Register your endpoint with WorkOS</p></li>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Process the events received from WorkOS</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test your endpoint</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test your <i id="Set up your webhook endpoint"></i>endpoint</p></li>
                             </ul>
 
                         </div>
@@ -2372,7 +2370,7 @@ export default class EventsWebhooks extends Component {
                                 </div>
                                 <div className='api-info-box-text'>
                                     <div className="api-keys">
-                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS sends the header as <span style={{backgroundColor: "#ccc"}}>WorkOS-Signature</span>, but many web servers normalize HTTP request headers to their lowercase variants..</p>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>WorkOS sends the header as <span style={{backgroundColor: "#ccc"}}>WorkOS-Signature</span>, but many web servers normalize HTTP request headers to their lowercase variants<i id="Register your endpoint"></i>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2389,12 +2387,11 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-                            <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>
-
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set and save the webhook URL in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, so WorkOS knows where to deliver the events. Your webhook endpoints should only be configured to receive the ones required by your integration. Receiving all event types can put undue strain on your servers and is not recommended.</p>
 
                             <div id='img123' className={`enlargable-image-container ${this.state.enlargedImageId === 'img123' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img123')}>
-                                    <img  src='/assets/syncing_webhooks_img1.avif' alt="Enlargable" className="image" />
+                                    <img  src='/assets/syncing_webhooks_img1.avif' alt="Enlargable" className="image"/>
+                                    <i id="Process the events"></i>
                             </div>
 
                         </div>
@@ -2409,7 +2406,7 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to avoid unnecessary retry requests hitting your webhook handler, we recommend using two concurrent processes for handling events: one for receiving the event, and the other for processing it.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to avoid unnecessary retry requests hitting your webhook handler, we recommend using two concurrent processes for handling events:<i id="Respond with HTTP 200 OK"></i> one for receiving the event, and the other for processing it.</p>
                         
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Respond with HTTP 200 OK</h3>
 
@@ -2642,7 +2639,7 @@ export default class EventsWebhooks extends Component {
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data reconciliation</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Keep your app in sync with WorkOS.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Keep your app in sync with WorkOS.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -2750,7 +2747,7 @@ export default class EventsWebhooks extends Component {
                     <div className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Stream events to Datadog</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}}>Stream and analyze WorkOS activity in Datadog.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Stream and analyze WorkOS activity in Datadog.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 

@@ -18,6 +18,11 @@ const results = [
     {"id": "998587", "name": "Syncing with events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
     {"id": "998587", "name": "Sync data using the events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
 
+    //! - SYNCING WITH WEBHOOKS - !//        
+
+    {"id": "998587", "name": "Syncing with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+    {"id": "998587", "name": "Sync data with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
     //? - - - - - - - - - - - - - - - ?//
@@ -56,6 +61,15 @@ const results = [
     {"id": "998587", "name": "Handle event replay", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Handle event replay"},
     {"id": "998587", "name": "Migrating from webhooks", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
     {"id": "998587", "name": "Scaling recommendations", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Scaling recommendations"},
+
+    //! - SYNCING WITH WEBHOOKS - !//        
+
+    {"id": "998587", "name": "What you’ll build", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998587", "name": "Set up your webhook endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Set up your webhook endpoint"},
+    {"id": "998587", "name": "Register your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Register your endpoint"},
+    {"id": "998587", "name": "Process the events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Process the events"},
+    {"id": "998587", "name": "Test your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Test your endpoint"},
+    {"id": "998587", "name": "Best practices", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Best practices"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -131,12 +145,26 @@ const results = [
     {"id": "998587", "name": "Single consumer", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay",  "page": "Syncing with events API", "lastCat": "Single consumer"},
     {"id": "998587", "name": "Parallel processing", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations",  "page": "Syncing with events API", "lastCat": "Parallel processing"},
 
+    //! - SYNCING WITH WEBHOOKS - !//        
+
+    {"id": "998587", "name": "Respond with HTTP 200 OK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Respond with HTTP 200 OK"},
+    {"id": "998587", "name": "Create an IP allowlist", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
+
+    {"id": "998587", "name": "Respond to events immediately", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
+    {"id": "998587", "name": "Recover from failed events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Recover from failed events"},
+    {"id": "998587", "name": "Handle out-of-sequence events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "Ignore duplicate events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
+    {"id": "998587", "name": "Obfuscate your endpoint URL", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
+
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
     //? - - - - - - - - - - - - - - ?//
 
-    //! - EVENT TYPES - !// 
+    //! - SYNCING WITH WEBHOOKS - !//        
+
+    {"id": "998587", "name": "Validate the requests using the SDK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+    {"id": "998587", "name": "Validate the requests manually", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
 
     //? - - - - - - - - - - - - ?//
     //? - - - - P TAGS - - - - ?//
@@ -280,6 +308,63 @@ const results = [
     {"id": "998587", "name": "Concurrently processing events from different organizations is safe, but for consistency and integrity, it is recommended to sequentially process events within a single organization.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Parallel processing", "page": "Syncing with events API", "lastCat": "Parallel processing"},
 
     {"id": "998587", "name": "You can migrate to the events API if you already use webhooks. To migrate, start querying the events API using the range_start parameter that corresponds to the time you’d want to start syncing from. The event IDs passed in webhook bodies are the same as those returned by the events API.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Migrating from webhooks", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
+
+    //! - SYNCING WITH WEBHOOKS - !//        
+
+    {"id": "998587", "name": "A step-by-step guide on how to start syncing data using webhooks.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+
+    {"id": "998587", "name": "In this guide, we will walk you through what you will need to set up webhooks:", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "What you’ll build", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998587", "name": "Create your endpoint to receive webhook events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "What you’ll build", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998587", "name": "Register your endpoint with WorkOS", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "What you’ll build", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998587", "name": "Process the events received from WorkOS", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "What you’ll build", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998587", "name": "Test your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "What you’ll build", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    
+    {"id": "998587", "name": "Create a public endpoint that WorkOS can send events to. This endpoint should use HTTPS and should accept POST requests with the workos-signature header.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Set up your webhook endpoint", "page": "Syncing with webhooks", "lastCat": "Set up your webhook endpoint"},
+    {"id": "998587", "name": "WorkOS sends the header as WorkOS-Signature, but many web servers normalize HTTP request headers to their lowercase variants.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Set up your webhook endpoint", "page": "Syncing with webhooks", "lastCat": "Set up your webhook endpoint"},
+
+    {"id": "998587", "name": "Set and save the webhook URL in the WorkOS Dashboard, so WorkOS knows where to deliver the events. Your webhook endpoints should only be configured to receive the ones required by your integration. Receiving all event types can put undue strain on your servers and is not recommended.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Register your endpoint", "page": "Syncing with webhooks", "lastCat": "Register your endpoint"},
+
+    {"id": "998587", "name": "In order to avoid unnecessary retry requests hitting your webhook handler, we recommend using two concurrent processes for handling events: one for receiving the event, and the other for processing it.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Process the events"},
+
+    {"id": "998587", "name": "On receiving an event, you should respond with an HTTP 200 OK to signal to WorkOS that the event was successfully delivered. Otherwise, WorkOS will consider the event delivery a failure and retry up to 12 times, with exponential backoff over 3 days. You do not need to signal to WorkOS whether or not the event was processed successfully.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Respond with HTTP 200 OK", "page": "Syncing with webhooks", "lastCat": "Respond with HTTP 200 OK"},
+
+    {"id": "998587", "name": "Before processing the request payload, verify the request was sent by WorkOS and not an unknown party.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests using the SDK", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+    {"id": "998587", "name": "WorkOS includes a unique signature in each webhook request that it sends, allowing you to verify the authenticity of the request. In order to verify this signature, you must obtain the secret that is generated for you when you set up your webhook endpoint in the WorkOS dashboard. Ensure that this secret is stored securely on your webhook endpoint server as an environment variable.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests using the SDK", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+    {"id": "998587", "name": "The SDKs provide a method to validate the timestamp and signature of a webhook. Examples using these methods are included below. The parameters are the payload (raw request body), the request header, and the webhook secret.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests using the SDK", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+    {"id": "998587", "name": "There is an optional parameter, tolerance, that sets the time validation for the webhook in seconds. The SDK methods have default values for tolerance, usually 3 – 5 minutes.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests using the SDK", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+
+    {"id": "998587", "name": "If implementing webhook validation yourself, you’ll need to use the following steps:", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "First, extract the timestamp and signature from the header. There are two values to parse from the WorkOS-Signature header, delimited by a , character.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "To avoid replay attacks, we suggest validating that the issued_timestamp does not differ too much from the current time.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "Next, construct the expected signature. The expected signature is computed from the concatenation of:", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "issued_timestamp", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "The . character", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "The request’s body as a utf-8 decoded string", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "Hash the string using HMAC SHA256, using the webhook secret as the key. The expected signature will be the hex digest of the hash. Finally, compare signatures to make sure the webhook request is valid.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "998587", "name": "Once you’ve determined the event request is validly signed, it’s safe to use the event payload in your application’s business logic.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Validate the requests manually", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+
+    {"id": "998587", "name": "WorkOS sends webhooks from a fixed set of IP addresses. It’s recommended to restrict access to your webhook endpoint to only these IP addresses:", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "subCat3": "Create an IP allowlist", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
+
+    {"id": "998587", "name": "From the dashboard, you can send test webhook events after configuring an endpoint. Go to the webhook endpoint detail page, click the Actions button and select Send test event. The types of events that you have configured for your endpoint are available for you to send sample payloads.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Create an IP allowlist", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
+    {"id": "998587", "name": "If you would like to test against your local development environment, we recommend using a tool like ngrok to create a secure tunnel to your local machine, and sending test webhooks to the public endpoint generated with ngrok. See our blog post to get more details on how you may want to test webhooks locally with ngrok.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Create an IP allowlist", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
+
+    {"id": "998587", "name": "To avoid webhook requests potentially stressing your system, WorkOS strongly recommends that you respond to a webhook request with a 200 OK response as quickly as possible once received.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Respond to events immediately", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
+    {"id": "998587", "name": "If you process the event before responding, your system may not be able to handle a spike of requests. This may cause requests to timeout and result in missing important updates.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Respond to events immediately", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
+    {"id": "998587", "name": "A common pattern is to store the request payload on a message queue, respond with a 200 OK response, and use a background worker to process the messages in the queue.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Respond to events immediately", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
+
+    {"id": "998587", "name": "If your endpoint fails to respond to a webhook request with a 2xx response, WorkOS will automatically retry the event with exponential back-off for up to 3 days in production environments. If for some reason your endpoint is still unable to respond successfully to events during that period, the event will be considered failed, and we will no longer retry sending it. You can reconcile your data using our Directory Sync endpoints to update your data.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Recover from failed events", "page": "Syncing with webhooks", "lastCat": "Recover from failed events"},
+    {"id": "998587", "name": "In staging environments, WorkOS only retries failed webhooks for several minutes before giving up. You can, however, manually retry webhooks using the WorkOS Dashboard for these environments.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Recover from failed events", "page": "Syncing with webhooks", "lastCat": "Recover from failed events"},
+
+    {"id": "998587", "name": "WorkOS does not guarantee that events are delivered in the same sequence that they are generated. For example, when syncing a directory you may receive:", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "dsync.group.created", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "dsync.user.created", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "dsync.group.user_added", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "Your endpoint should handle cases when these events are delivered out of order. Each event includes the full payload of the objects involved, so you can perform an upsert using the payload data.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "998587", "name": "It is also possible that event data can be stale due to a retry of an older event being delivered after a newer event for the same object. Therefore, we recommend checking the timestamp of the incoming webhook data against the timestamp of the data in your system to ensure you do not overwrite your data with stale data. Each object in the payload includes a created_at field and an updated_at field.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Handle out-of-sequence events", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+
+    {"id": "998587", "name": "It is also possible that event data can be stale due to a retry of an older event being delivered after a newer event for the same object. Therefore, we recommend checking the timestamp of the incoming webhook data against the timestamp of the data in your system to ensure you do not overwrite your data with stale data. Each object in the payload includes a created_at field and an updated_at field.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Ignore duplicate events", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
+
+    {"id": "998587", "name": "A small security measure you can incorporate is to make your webhook endpoint difficult to guess. Including a token comprised of series of random numbers and letters to your endpoint URL can prevent malicious actors from easily guessing your endpoint. For example: https://api.example.com/webhooks/n0dbga5x… is much more difficult to guess than https://api.example.com/webhooks", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Obfuscate your endpoint URL", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
 
 ]
 

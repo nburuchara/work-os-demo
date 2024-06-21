@@ -13848,6 +13848,20 @@ const results = [
     "lastCat": "top"
   },
   {
+    "id": "998587",
+    "name": "Syncing with webhooks",
+    "category": "Events and webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "top"
+  },
+  {
+    "id": "998587",
+    "name": "Sync data with webhooks",
+    "category": "Events and webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "top"
+  },
+  {
     "id": "998586",
     "name": "Authentication events",
     "category": "Events and webhooks",
@@ -14046,6 +14060,54 @@ const results = [
     "subCat1": "Sync data using the events API",
     "page": "Syncing with events API",
     "lastCat": "Scaling recommendations"
+  },
+  {
+    "id": "998587",
+    "name": "What you’ll build",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "What you’ll build"
+  },
+  {
+    "id": "998587",
+    "name": "Set up your webhook endpoint",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "Set up your webhook endpoint"
+  },
+  {
+    "id": "998587",
+    "name": "Register your endpoint",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "Register your endpoint"
+  },
+  {
+    "id": "998587",
+    "name": "Process the events",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "Process the events"
+  },
+  {
+    "id": "998587",
+    "name": "Test your endpoint",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "Test your endpoint"
+  },
+  {
+    "id": "998587",
+    "name": "Best practices",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "page": "Syncing with webhooks",
+    "lastCat": "Best practices"
   },
   {
     "id": "998574",
@@ -14487,6 +14549,87 @@ const results = [
     "subCat2": "Scaling recommendations",
     "page": "Syncing with events API",
     "lastCat": "Parallel processing"
+  },
+  {
+    "id": "998587",
+    "name": "Respond with HTTP 200 OK",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Process the events",
+    "page": "Syncing with webhooks",
+    "lastCat": "Respond with HTTP 200 OK"
+  },
+  {
+    "id": "998587",
+    "name": "Create an IP allowlist",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Process the events",
+    "page": "Syncing with webhooks",
+    "lastCat": "Create an IP allowlist"
+  },
+  {
+    "id": "998587",
+    "name": "Respond to events immediately",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Best practices",
+    "page": "Syncing with webhooks",
+    "lastCat": "Respond to events immediately"
+  },
+  {
+    "id": "998587",
+    "name": "Recover from failed events",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Best practices",
+    "page": "Syncing with webhooks",
+    "lastCat": "Recover from failed events"
+  },
+  {
+    "id": "998587",
+    "name": "Handle out-of-sequence events",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Best practices",
+    "page": "Syncing with webhooks",
+    "lastCat": "Handle out-of-sequence events"
+  },
+  {
+    "id": "998587",
+    "name": "Ignore duplicate events",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Best practices",
+    "page": "Syncing with webhooks",
+    "lastCat": "Ignore duplicate events"
+  },
+  {
+    "id": "998587",
+    "name": "Obfuscate your endpoint URL",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Best practices",
+    "page": "Syncing with webhooks",
+    "lastCat": "Obfuscate your endpoint URL"
+  },
+  {
+    "id": "998587",
+    "name": "Validate the requests using the SDK",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Process the events",
+    "page": "Syncing with webhooks",
+    "lastCat": "Validate the requests using the SDK"
+  },
+  {
+    "id": "998587",
+    "name": "Validate the requests manually",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Process the events",
+    "page": "Syncing with webhooks",
+    "lastCat": "Validate the requests manually"
   },
   {
     "id": "998574",
@@ -15376,6 +15519,15 @@ const results = [
     "subCat2": "Migrating from webhooks",
     "page": "Syncing with events API",
     "lastCat": "Migrating from webhooks"
+  },
+  {
+    "id": "998587",
+    "name": "Validate the requests using the SDK",
+    "category": "Events and webhooks",
+    "subCat1": "Syncing data with webhooks",
+    "subCat2": "Process the events",
+    "page": "Syncing with webhooks",
+    "lastCat": "Validate the requests using the SDK"
   }
 ];
 export default results;
