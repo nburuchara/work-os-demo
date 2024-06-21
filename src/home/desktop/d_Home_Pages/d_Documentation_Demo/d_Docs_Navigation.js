@@ -1927,7 +1927,7 @@ const Styles = styled.div `
     padding-right: 0.5%;
     background-color: #f9f9fb;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #6363f1;
     font-family: poppins;
     font-size: 75%;
 }
@@ -1947,7 +1947,7 @@ const Styles = styled.div `
     padding-right: 0.5%;
     background-color: #f9f9fb;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #6363f1;
     font-family: poppins;
     font-size: 65%;
 }
@@ -2204,7 +2204,8 @@ export default class DocsNavigationMenu extends Component {
 
             //* # SEARCH FILTER COMPONENTS
 
-            searchFilterTitle: "🔎 Filter search",
+            searchFilterTitle: "🔎",
+            searchFilterSelected: "",
 
             //* - - SIDEBAR - - *//
 
@@ -2525,17 +2526,17 @@ export default class DocsNavigationMenu extends Component {
     }
 
     handleSearchChange = (e) => {
-        const { searchFilterTitle, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        if (searchFilterTitle === "User Management" || menuOption1 === true) {
+        if (searchFilterSelected === "User Management" || menuOption1 === true) {
             currentSectionSearching = UserManagementFullSearch
-        } else if (searchFilterTitle === "Standalone APIs" || menuOption2 === true) {
+        } else if (searchFilterSelected === "Standalone APIs" || menuOption2 === true) {
             currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (searchFilterTitle === "Events and webhooks" || menuOption3 === true) {
+        } else if (searchFilterSelected === "Events and webhooks" || menuOption3 === true) {
             currentSectionSearching = EventsWebhooksFullSearch
-        } else if (searchFilterTitle === "Resources" || menuOption4 === true) {
-            
+        } else if (searchFilterSelected === "Resources" || menuOption4 === true) {
+            currentSectionSearching = AllDocsFullSearch
         } else {
             currentSectionSearching = AllDocsFullSearch
         }
@@ -2617,17 +2618,17 @@ export default class DocsNavigationMenu extends Component {
     };
 
     reloadFilteredSearchResults = (input) => {
-        const { searchFilterTitle, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
+        const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        if (searchFilterTitle === "User Management" || menuOption1 === true) {
+        if (searchFilterSelected === "User Management" || menuOption1 === true) {
             currentSectionSearching = UserManagementFullSearch
-        } else if (searchFilterTitle === "Standalone APIs" || menuOption2 === true) {
+        } else if (searchFilterSelected === "Standalone APIs" || menuOption2 === true) {
             currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (searchFilterTitle === "Events and webhooks" || menuOption3 === true) {
+        } else if (searchFilterSelected === "Events and webhooks" || menuOption3 === true) {
             currentSectionSearching = EventsWebhooksFullSearch
-        } else if (searchFilterTitle === "Resources" || menuOption4 === true) {
-            
+        } else if (searchFilterSelected === "Resources" || menuOption4 === true) {
+            currentSectionSearching = AllDocsFullSearch
         } else {
             currentSectionSearching = AllDocsFullSearch
         }
@@ -2890,11 +2891,27 @@ export default class DocsNavigationMenu extends Component {
 
     displayLargeSearchFilters = () => {
         if (this.state.showLargeSearchFilterOptions === true) {
-            this.setState({
-                showLargeSearchFilterOptions: false,
-                showSmallSearchFilterOptions: false,
-                searchFilterTitle: "🔎 Filter Search"
-            })
+            if (this.state.searchFilterSelected !== "") {
+                this.setState((prevState) => {
+                    const { searchFilterSelected } = prevState;
+                    // Split the text into words, map over each word to get the first letter and capitalize it
+                    const firstLetters = searchFilterSelected
+                      .split(' ')
+                      .map(word => word.charAt(0).toUpperCase())
+                      .join('');
+                    return { 
+                        showSmallSearchFilterOptions: false,
+                        showLargeSearchFilterOptions: false,
+                        searchFilterTitle: `🔎 ${firstLetters}` 
+                    };
+                });
+            } else {
+                this.setState({
+                    showSmallSearchFilterOptions: false,
+                    showLargeSearchFilterOptions: false,
+                    searchFilterTitle: "🔎" 
+                })
+            }
         } else {
             this.setState({
                 showLargeSearchFilterOptions: true,
@@ -2905,12 +2922,29 @@ export default class DocsNavigationMenu extends Component {
     }
 
     displaySmallSearchFilters = () => {
+        console.log("search feature title: ", this.state.searchFilterTitle)
         if (this.state.showSmallSearchFilterOptions === true) {
-            this.setState({
-                showSmallSearchFilterOptions: false,
-                showLargeSearchFilterOptions: false,
-                searchFilterTitle: "🔎 Filter Search"
-            })
+            if (this.state.searchFilterSelected !== "") {
+                this.setState((prevState) => {
+                    const { searchFilterSelected } = prevState;
+                    // Split the text into words, map over each word to get the first letter and capitalize it
+                    const firstLetters = searchFilterSelected
+                      .split(' ')
+                      .map(word => word.charAt(0).toUpperCase())
+                      .join('');
+                    return { 
+                        showSmallSearchFilterOptions: false,
+                        showLargeSearchFilterOptions: false,
+                        searchFilterTitle: `🔎 ${firstLetters}` 
+                    };
+                });
+            } else {
+                this.setState({
+                    showSmallSearchFilterOptions: false,
+                    showLargeSearchFilterOptions: false,
+                    searchFilterTitle: "🔎" 
+                })
+            }
         } else {
             this.setState({
                 showSmallSearchFilterOptions: true,
@@ -2924,7 +2958,8 @@ export default class DocsNavigationMenu extends Component {
     searchFilterClicked = (option) => {
         if (option === 1) {
             this.setState({
-                searchFilterTitle: "User Management",
+                searchFilterTitle: "🔎 UM",
+                searchFilterSelected: "User Management",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false,
             }, () => {
@@ -2932,7 +2967,8 @@ export default class DocsNavigationMenu extends Component {
             })
         } else if (option === 2) {
             this.setState({
-                searchFilterTitle: "Standalone APIs",
+                searchFilterTitle: "🔎 SA",
+                searchFilterSelected: "Standalone APIs",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
             }, () => {
@@ -2940,7 +2976,8 @@ export default class DocsNavigationMenu extends Component {
             })
         } else if (option === 3) {
             this.setState({
-                searchFilterTitle: "Events and webhooks",
+                searchFilterTitle: "🔎 EAW",
+                searchFilterSelected: "Events and webhooks",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false,
             }, () => {
@@ -2948,7 +2985,8 @@ export default class DocsNavigationMenu extends Component {
             })
         } else if (option === 4) {
             this.setState({
-                searchFilterTitle: "Resources",
+                searchFilterTitle: "🔎 R",
+                searchFilterSelected: "Resources",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
             }, () => {
@@ -2956,7 +2994,8 @@ export default class DocsNavigationMenu extends Component {
             })
         } else {
             this.setState({
-                searchFilterTitle: "All docs",
+                searchFilterTitle: "🔎 AD",
+                searchFilterSelected: "All docs",
                 showLargeSearchFilterOptions: false,
                 showSmallSearchFilterOptions: false
             }, () => {
@@ -2985,8 +3024,10 @@ export default class DocsNavigationMenu extends Component {
         const { showDocsHome, showDocsLoadingScreen, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
         const { usrMgmtScrollID, standaloneApisScrollID, eventsWebhooksScrollID } = this.state;
 
+            //* - SEARCH FILTERR VAR(S) - *//
         let searchFilterOptionFontWeight = "normal";
-        let searchFilterOptionBorderColor = "#ccc";
+        let searchFilterOptionBorderColor = "#6363f1";
+        const { searchFilterTitle, searchFilterSelected } = this.state;
 
         return(
             <Styles>
@@ -3163,7 +3204,7 @@ export default class DocsNavigationMenu extends Component {
                             </div>
                             {searchInput !== "" && (
                                 <div className='searchResults'>
-                                    <button style={{border: `1px solid ${searchFilterOptionBorderColor}`, fontWeight: searchFilterOptionFontWeight}} onClick={this.displayLargeSearchFilters} className='filterSearchBtns'>{this.state.searchFilterTitle}</button>
+                                    <button style={{fontWeight: searchFilterTitle !== "Close" ? "bold" : ""}} onClick={this.displayLargeSearchFilters} className='filterSearchBtns'>{this.state.searchFilterTitle}</button>
                                     <CSSTransition
                                     in={this.state.showLargeSearchFilterOptions}
                                     timeout={500}
@@ -3171,12 +3212,12 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div className='filterSearchOptions'>
-                                            <p style={{marginTop: "2%", marginBottom: "1%", fontWeight: "bold", textAlign: "left", fontSize: "87.5%"}}><u>Docs sections: </u></p>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(0)}>All docs</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
+                                            <p style={{marginTop: "2%", marginBottom: "1%", fontWeight: "bold", textAlign: "left", fontSize: "92.5%"}}><u>Filter search: </u></p>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "All docs" ? "#6363f1": "", textDecoration: searchFilterSelected === "All docs" ? "underline": ""}} onClick={() => this.searchFilterClicked(0)}>All docs</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "User Management" ? "#6363f1": "", textDecoration: searchFilterSelected === "User Management" ? "underline": ""}} onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Standalone APIs" ? "#6363f1": "", textDecoration: searchFilterSelected === "Standalone APIs" ? "underline": ""}} onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Events and webhooks" ? "#6363f1": "", textDecoration: searchFilterSelected === "Events and webhooks" ? "underline": ""}} onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
                                         </div>
                                     </CSSTransition>
                                     {isSearchLoading && 
@@ -3304,7 +3345,7 @@ export default class DocsNavigationMenu extends Component {
                             </div>
                             {searchInput !== "" && (
                                 <div style={{marginTop: "9%"}} className='searchResults'>
-                                    <button onClick={this.displaySmallSearchFilters} className='filterSearchBtns-sidebar'>{this.state.searchFilterTitle}</button>
+                                    <button onClick={this.displaySmallSearchFilters} className='filterSearchBtns-sidebar' style={{fontWeight: searchFilterTitle !== "Close" ? "bold" : ""}}>{this.state.searchFilterTitle}</button>
                                     <CSSTransition
                                     in={this.state.showSmallSearchFilterOptions}
                                     timeout={500}
@@ -3312,12 +3353,12 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div className='filterSearchOptions'>
-                                            <p style={{marginTop: "2%", marginBottom: "1%", fontWeight: "bold", textAlign: "left", fontSize: "87.5%"}}><u>Docs sections: </u></p>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(0)}>All docs</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
-                                            <div className='filterSearchOption'><p><label onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
+                                            <p style={{marginTop: "2%", marginBottom: "1%", fontWeight: "bold", textAlign: "left", fontSize: "92.5%"}}><u>Filter search: </u></p>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "All docs" ? "#6363f1": "", textDecoration: searchFilterSelected === "All docs" ? "underline": ""}} onClick={() => this.searchFilterClicked(0)}>All docs</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "User Management" ? "#6363f1": "", textDecoration: searchFilterSelected === "User Management" ? "underline": ""}} onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Standalone APIs" ? "#6363f1": "", textDecoration: searchFilterSelected === "Standalone APIs" ? "underline": ""}} onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Events and webhooks" ? "#6363f1": "", textDecoration: searchFilterSelected === "Events and webhooks" ? "underline": ""}} onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
+                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
                                         </div>
                                     </CSSTransition>
                                     {isSearchLoading && 
