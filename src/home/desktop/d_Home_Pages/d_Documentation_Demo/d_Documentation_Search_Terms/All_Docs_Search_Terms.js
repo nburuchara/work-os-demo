@@ -7,10 +7,16 @@ const results = [
     "lastCat": "top"
   },
   {
+    "id": "999956",
+    "name": "Example Apps",
+    "category": "User Management",
+    "page": "Example Apps",
+    "lastCat": "top"
+  },
+  {
     "id": "999953",
     "name": "AuthKit",
     "category": "User Management",
-    "subCat1": "AuthKit",
     "page": "AuthKit",
     "lastCat": "top"
   },
@@ -193,14 +199,6 @@ const results = [
     "subCat1": "Quick Start",
     "page": "Quick Start",
     "lastCat": "Handle the user session"
-  },
-  {
-    "id": "999956",
-    "name": "Example Apps",
-    "category": "User Management",
-    "subCat1": "Example Apps",
-    "page": "Example Apps",
-    "lastCat": "Example apps"
   },
   {
     "id": "999952",

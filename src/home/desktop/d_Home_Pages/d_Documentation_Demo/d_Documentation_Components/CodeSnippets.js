@@ -5720,7 +5720,7 @@ const codeSnippets = [
           '8   <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Todd"</span>,',
           '9   <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Rundgren"</span>,',
           '10   <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"00u1a0ufowBJlzPlk357"</span>,',
-          '11   <span style="color: #0072dd;">"groups"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Admins"</span>, <span style="color: #143465;">"Developers"</span>, <span style="color: #143465;">"Engineering"</span>],',
+          '11   <span style="color: #0072dd;">"groups"</span><span style="color: #ce3559;">:</span> [<span style="color: #143465;">"Admins"</span>, <span style="color: #143465;">"Developers"</span>, <span style="color: #143465;">"Engineering"</span>],',
           '12   <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
           '13 }',
         ]

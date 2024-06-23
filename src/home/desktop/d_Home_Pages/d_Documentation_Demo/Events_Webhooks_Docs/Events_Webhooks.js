@@ -56,10 +56,11 @@ export default class EventsWebhooks extends Component {
         } else {
             // this.hideAllPages()
             this.getSelectedPage(this.props.scrollToID)
-            // setTimeout(() => {
-            //     this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            // }, 1000)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         }
+           
     }
 
     componentWillUnmount = () => {
@@ -217,6 +218,32 @@ export default class EventsWebhooks extends Component {
         this.setState((prevState) => ({
             [`hiddenDropdownBtn${num}`]: !prevState[`hiddenDropdownBtn${num}`]
         }));
+    }
+
+    navigateToNewPage = (page) => {
+        let pageObject = null;
+        const pageOptions = [
+
+            {"id": "998587", "name": "Event Types", "category": "Events and webhooks", "page": "Event types", "lastCat": "top"},
+
+            {"id": "998587", "name": "Data Syncing", "category": "Events and webhooks", "page": "Overview", "lastCat": "top"},
+
+            {"id": "998587", "name": "Data reconciliation", "category": "Events and webhooks", "page": "Data reconciliation", "lastCat": "top"},
+
+            {"id": "998587", "name": "Syncing with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+
+            {"id": "998587", "name": "Streaming to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+
+            {"id": "998587", "name": "Syncing with events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
+        ]
+        for (let i = 0; i < pageOptions.length; i++) {
+            if (page === pageOptions[i].page) {
+                pageObject = pageOptions[i]
+            }
+        }
+        if (pageObject !== null) {
+            this.props.navigateToNewPage(page, pageObject)
+        }
     }
 
     render () {
@@ -1922,7 +1949,7 @@ export default class EventsWebhooks extends Component {
 
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Overview')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Data Syncing</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Keep your app in sync with WorkOS.</p>
@@ -2047,7 +2074,7 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Syncing with events API')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Syncing with events API</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A step-by-step guide on how to start syncing data using the API.</p>
@@ -2079,10 +2106,10 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we will walk you through what you will need to integrate with the <label className="demo-docs-hyperlink">events API</label>:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a <i>cursor</i> for use with the events API</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update your cursor</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose a cursor if<i id="Before getting started"></i> you lose yours</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Handle event replay in your app</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a <i>cursor</i> for use with the events API</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update your cursor</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose a cursor if<i id="Before getting started"></i> you lose yours</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Handle event replay in your app</p></li>
                             </ul>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
@@ -2090,8 +2117,8 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className="demo-docs-hyperlink">SSO</label> or <label className="demo-docs-hyperlink">directory</label> connection configured in order to generate events<i id="Integrate the events API SDK"></i></p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className="demo-docs-hyperlink">SSO</label> or <label className="demo-docs-hyperlink">directory</label> connection configured in order to generate events<i id="Integrate the events API SDK"></i></p></li>
                             </ul>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2291,8 +2318,8 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When resuming event processing, you have two options to pick up where you left off:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using the latest known cursor</strong>: Retrieve the most recent cursor that was successfully processed and use it as the starting point for event resumption.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using a timestamp</strong>: Alternatively, you can make an API call with the range_start parameter and then use the cursor. Utilize the updated_at timestamp to prevent overwrites<i id="Scaling recommendations"></i>.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using the latest known cursor</strong>: Retrieve the most recent cursor that was successfully processed and use it as the starting point for event resumption.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Using a timestamp</strong>: Alternatively, you can make an API call with the range_start parameter and then use the cursor. Utilize the updated_at timestamp to prevent overwrites<i id="Scaling recommendations"></i>.</p></li>
                             </ul>
 
                         </div>
@@ -2324,7 +2351,7 @@ export default class EventsWebhooks extends Component {
 
                             </div>
                             
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Syncing with webhooks')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Syncing with webhooks</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A step-by-step guide on how to start syncing data using webhooks.</p>
@@ -2357,10 +2384,10 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, we will walk you through what you will need to set up webhooks:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create your endpoint to receive webhook events</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Register your endpoint with WorkOS</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Process the events received from WorkOS</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test your <i id="Set up your webhook endpoint"></i>endpoint</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create your endpoint to receive webhook events</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Register your endpoint with WorkOS</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Process the events received from WorkOS</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test your <i id="Set up your webhook endpoint"></i>endpoint</p></li>
                             </ul>
 
                         </div>
@@ -2531,7 +2558,7 @@ export default class EventsWebhooks extends Component {
                                         <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <span>.</span> character</p>
                                     </div>
                                 </li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The request’s body as a utf-8 decoded string</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The request’s body as a utf-8 decoded string</p></li>
                             </ol>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Hash the string using HMAC SHA256, using the webhook secret as the key. The expected signature will be the hex digest of the hash. Finally, compare signatures to make sure the webhook request is valid.</p>
@@ -2643,7 +2670,7 @@ export default class EventsWebhooks extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A small security measure you can incorporate is to make your webhook endpoint difficult to guess. Including a token comprised of series of random numbers and letters to your endpoint URL can prevent malicious actors from easily guessing your endpoint. For example: <span>https://api.example.com/webhooks/n0dbga5x…</span> is much more difficult to guess than <span>https://api.example.com/webhooks</span></p>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Data reconciliation')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Data Reconciliation</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Keep your app in sync with WorkOS.</p>
@@ -2740,9 +2767,9 @@ export default class EventsWebhooks extends Component {
 
                             <div className="api-keys">
                                 <ol>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Pull state from WorkOS API for the objects your app is interested in.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update based on <span>updated_at</span>. If the timestamp is out of date, update the object.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identify deactivated objects or deletions and sync that state.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Pull state from WorkOS API for the objects your app is interested in.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update based on <span>updated_at</span>. If the timestamp is out of date, update the object.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identify deactivated objects or deletions and sync that state.</p></li>
                                 </ol>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to force all objects to update state, perform a complete resynchronization of the affected data instead of relying solely on the <span>updated_at</span> timestamp. Update all objects <i id="Considerations for periodic reconciliation"></i>regardless of the individual <span>updated_at</span> timestamp.</p>
@@ -2753,7 +2780,7 @@ export default class EventsWebhooks extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In some cases, you may want to run periodic reconciliation jobs to proactively check and reconcile the state between WorkOS and your app. When implementing such jobs, it is important to account for potential race conditions for concurrent updates. Additionally, consider the specific characteristics of your app to determine the frequency and scope of periodic reconciliation.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Streaming to Datadog')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Stream events to Datadog</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Stream and analyze WorkOS activity in Datadog.</p>
@@ -2786,10 +2813,10 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports real-time streaming of events to Datadog. By analyzing WorkOS activity directly in Datadog, you are able to:</p>
 
                             <ul>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>View trends in user sign-ins, user growth, new SSO connections and more.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Debug customer issues related to sign-in, email verification, password resets and more</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generate reports of user activity per customer organization.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set alerts for unexpected activity, such as sudden spike in failed password attempts.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>View trends in user sign-ins, user growth, new SSO connections and more.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Debug customer issues related to sign-in, email verification, password resets and more</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generate reports of user activity per customer organization.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set alerts for unexpected activity, such as sudden spike in failed password attempts.</p></li>
                             </ul>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>See all of the WorkOS events that stream to Datadog in the <label className="demo-docs-hyperlink">event types<i id="Introduction"></i></label> documentation.</p>
@@ -2816,11 +2843,11 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, create a new Datadog API key to give WorkOS permission to send event activity as logs to your Datadog account. While you can use an existing API key, WorkOS recommends creating a new key that will only be used for WorkOS event streaming.</p>
 
                             <ol>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Organization Settings → <label className='demo-docs-hyperlink'>API Keys</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p> page.</li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Key</strong> button</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a name for your new API key.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Create Key</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Organization Settings → <label className='demo-docs-hyperlink'>API Keys</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p> page.</li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Key</strong> button</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a name for your new API key.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Create Key</strong> button.</p></li>
                             </ol>
 
 
@@ -2844,9 +2871,9 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The next step is to configure event streaming in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> using the Datadog API key that was created in the previous step.</p>
 
                             <ol>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <strong>Events</strong> page.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Stream to Datadog</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <strong>Events</strong> page.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Stream to Datadog</strong> button.</p></li>
                             </ol>
 
                             <div id='img127' className={`enlargable-image-container ${this.state.enlargedImageId === 'img127' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img127')}>
@@ -2854,9 +2881,9 @@ export default class EventsWebhooks extends Component {
                             </div>
 
                             <ol start={4}>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the Datadog API key.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your Datadog region.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Save Log Stream Details</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the Datadog API key.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your Datadog region.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>Save Log Stream Details</strong> button.</p></li>
                             </ol>
 
                             <div id='img128' className={`enlargable-image-container ${this.state.enlargedImageId === 'img128' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img128')}>
@@ -2882,9 +2909,9 @@ export default class EventsWebhooks extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The final step is to add the WorkOS Datadog dashboard to your Datadog account.</p>
 
                             <ol>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <label className='demo-docs-hyperlink'>Dashboard List</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the + <strong>New Dashboard</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your <label className='demo-docs-hyperlink'>Datadog account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <label className='demo-docs-hyperlink'>Dashboard List</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the + <strong>New Dashboard</strong> button.</p></li>
                             </ol>
 
                             <div id='img129' className={`enlargable-image-container ${this.state.enlargedImageId === 'img129' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img129')}>
@@ -2892,12 +2919,12 @@ export default class EventsWebhooks extends Component {
                             </div>
 
                             <ol start={4}>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a dashboard name.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Dashboard</strong> button.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the new dashboard, choose the <strong>Configure</strong> button.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Download the <label className='demo-docs-hyperlink'>WorkOS Datadog dashboard JSON file</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_download_color.png' alt='no img available'/></span></p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down in the context menu and choose <strong>Import dashboard JSON</strong>.</p></li>
-                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the WorkOS Datadog dashboard JSON file downloaded in the previous step.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a dashboard name.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose the <strong>New Dashboard</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the new dashboard, choose the <strong>Configure</strong> button.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Download the <label className='demo-docs-hyperlink'>WorkOS Datadog dashboard JSON file</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_download_color.png' alt='no img available'/></span></p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down in the context menu and choose <strong>Import dashboard JSON</strong>.</p></li>
+                                <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the WorkOS Datadog dashboard JSON file downloaded in the previous step.</p></li>
                             </ol>
 
                             <div id='img130' className={`enlargable-image-container ${this.state.enlargedImageId === 'img130' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img130')}>

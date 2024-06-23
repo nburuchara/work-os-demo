@@ -621,6 +621,81 @@ export default class StandaloneAPIs extends Component {
             [`hiddenDropdownBtn${num}`]: !prevState[`hiddenDropdownBtn${num}`]
         }));
     }
+
+    navigateToNewPage = (page) => {
+        let pageObject = null;
+        const pageOptions = [
+            {"id": "999444", "name": "Single Sign-On", "category": "Standalone APIs", "page": "Quick Start", "subCat1": "Single Sign-On", "lastCat": "top"},
+        
+            {"id": "999388", "name": "Test SSO", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Test SSO", "lastCat": "top"},
+
+            {"id": "999358", "name": "Example Apps", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Example Apps", "lastCat": "top"},
+
+            {"id": "999355", "name": "Sign-In UX", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Sign-In", "lastCat": "top"},
+
+            {"id": "999333", "name": "Login Flows", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Login Flows", "lastCat": "top"},
+
+            {"id": "999311", "name": "Redirect URIs", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Redirect URIs", "lastCat": "top"},
+
+            {"id": "999292", "name": "Signing Certificates", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Signing Certificates", "lastCat": "top"},
+
+            {"id": "999250", "name": "JIT Provisioning", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "JIT Provisioning", "lastCat": "top"},
+
+            {"id": "999213", "name": "Launch Checklist", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "Launch Checklist", "lastCat": "top"},
+
+            {"id": "999173", "name": "FAQ for IT teams", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "FAQ for IT teams", "lastCat": "top"},
+
+            {"id": "999158", "name": "SAML Security", "category": "Standalone APIs", "subCat1": "Single Sign-On", "page": "SAML Security", "lastCat": "top"},
+
+            {"id": "999129", "name": "Fundamentals", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Fundamentals", "lastCat": "top"},
+
+            {"id": "999075", "name": "Quick Start", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Quick Start (DS)", "lastCat": "top"},
+
+            {"id": "999015", "name": "Example Apps", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Example Apps (DS)", "lastCat": "top"},
+
+            {"id": "999012", "name": "Handle Inactive Users", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Handle Inactive Users", "lastCat": "top"},
+
+            {"id": "998991", "name": "Understanding Events", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Understanding Events", "lastCat": "top"},
+
+            {"id": "998933", "name": "User Attributes", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "User Attributes", "lastCat": "top"},
+
+            {"id": "998895", "name": "Role Data", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Role Data", "lastCat": "top"},
+
+            {"id": "998848", "name": "Role Architecture", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Role Architecture", "lastCat": "top"},
+
+            {"id": "998815", "name": "Quick Start", "category": "Standalone APIs", "subCat1": "Admin Portal", "page": "Quick Start (AP)", "lastCat": "top"},
+
+            {"id": "998755", "name": "Example Apps", "category": "Standalone APIs", "subCat1": "Admin Portal", "page": "Example Apps (AP)", "lastCat": "top"},
+
+            {"id": "998752", "name": "Custom Branding", "category": "Standalone APIs", "subCat1": "Admin Portal", "page": "Custom Branding", "lastCat": "top"},
+
+            {"id": "998722", "name": "Audit Logs", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Quick Start (AL)", "lastCat": "top"},
+
+            {"id": "998686", "name": "Exporting Events", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Exporting Events", "lastCat": "top"},
+
+            {"id": "998674", "name": "Metadata Schema", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Metadata Schema", "lastCat": "top"},
+
+            {"id": "998667", "name": "Editing Events", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Editing Events", "lastCat": "top"},
+
+            {"id": "998657", "name": "Admin Portal", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Admin Portal (AL)", "lastCat": "top"},
+
+            {"id": "998651", "name": "Log Streams", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Log Streams", "lastCat": "top"},
+
+            {"id": "998636", "name": "Quick Start", "category": "Standalone APIs", "subCat1": "Domain Verification", "page": "Quick Start (DV)", "lastCat": "top"},
+
+            {"id": "998609", "name": "API", "category": "Standalone APIs", "subCat1": "Domain Verification", "page": "API", "lastCat": "top"},
+
+            {"id": "998587", "name": "Event Types", "category": "Events and webhooks", "page": "Event types", "lastCat": "top"},
+        ]
+        for (let i = 0; i < pageOptions.length; i++) {
+            if (page === pageOptions[i].page) {
+                pageObject = pageOptions[i]
+            }
+        }
+        if (pageObject !== null) {
+            this.props.navigateToNewPage(page, pageObject)
+        }
+    }
     
     render () {
 
@@ -878,6 +953,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
@@ -951,6 +1027,7 @@ export default class StandaloneAPIs extends Component {
                                     <CodeSnippetStruct 
                                     id={18}
                                     headerTabs={0}
+                                    languagesToRemove={['cURL']}
                                     sideBarOpen={sidebarMenuClicked}
                                     snippet="Authentication Endpoint" 
                                     updateSelectedLang={this.newLangSelected}
@@ -966,6 +1043,7 @@ export default class StandaloneAPIs extends Component {
                                     <CodeSnippetStruct 
                                     id={19}
                                     headerTabs={0}
+                                    languagesToRemove={['cURL']}
                                     sideBarOpen={sidebarMenuClicked}
                                     snippet="Authentication Endpoint" 
                                     updateSelectedLang={this.newLangSelected}
@@ -992,6 +1070,7 @@ export default class StandaloneAPIs extends Component {
                                     <CodeSnippetStruct 
                                     id={20}
                                     headerTabs={0}
+                                    languagesToRemove={['cURL']}
                                     sideBarOpen={sidebarMenuClicked}
                                     snippet="Authentication Endpoint" 
                                     updateSelectedLang={this.newLangSelected}
@@ -1010,6 +1089,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={21}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Callback Endpoint" 
                             updateSelectedLang={this.newLangSelected}
@@ -1073,7 +1153,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/sso_section_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Test SSO')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Test SSO</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to test your Single Sign-On integration end-to-end.</p>
@@ -1255,7 +1335,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Example Apps')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Example Apps</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View sample Single Sign-On apps for each SDK.</p>
@@ -1278,7 +1358,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample Single Sign-On apps for each SDK.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to authenticate users via SSO:</p>
 
                             <div className='example-apps-container' style={{marginBottom: "5%"}}>
@@ -1335,7 +1415,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Sign-In')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Sign-In UX</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>User experience considerations for Single Sign-On.</p>
@@ -1574,7 +1654,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p style={{textAlign: "center", fontSize: "80%", marginBottom: "5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i>Try signing in with any <strong>@foo-corp.com</strong> email vs. credentials.</i></p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Login Flows')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Login Flows</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn the differences between SP‑initiated and IdP‑initiated SSO.</p>
@@ -1620,6 +1700,7 @@ export default class StandaloneAPIs extends Component {
                         <CodeSnippetStruct 
                         id={22}
                         headerTabs={0}
+                        languagesToRemove={['cURL']}
                         sideBarOpen={sidebarMenuClicked}
                         snippet="Get Authorization URL Call" 
                         updateSelectedLang={this.newLangSelected}
@@ -1683,6 +1764,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={24}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Callback Endpoint with IdP-Initiated error support" 
                             updateSelectedLang={this.newLangSelected}
@@ -1693,7 +1775,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
                             
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Redirect URIs')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Redirect URIs</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn what a redirect URI is and how it relates to Service Provider and Identity Provider initiated login flows.</p>
@@ -1766,7 +1848,7 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
                         
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Signing Certificates')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Signing Certificates</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Verify the authenticity of SAML responses and requests.</p>
@@ -1893,7 +1975,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('JIT Provisioning')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>JIT Provisioning</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to provision users in your app using Just-In-Time user provisioning.</p>
@@ -2079,7 +2161,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Launch Checklist')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Launch Checklist</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Make sure you’re ready to take your app to production.</p>
@@ -2249,7 +2331,7 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upon successful authentication, deep-link the user back into your native application.</p></li>
                             </ol>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('FAQ for IT teams')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>FAQ for IT teams</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Answers to common questions from your customer’s IT team.</p>
@@ -2305,7 +2387,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes, WorkOS is GDPR compliant. Reach out to <label className='demo-docs-hyperlink'>support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to request deletion of data.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('SAML Security')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>SAML Security</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn about additional SAML features that WorkOS supports.</p>
@@ -2506,7 +2588,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implementing SSO with WorkOS</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This document offers guidance to integrate Single Sign-On with our standalone API into your existing auth stack. You might also want to look at <label className='demo-docs-hyperlink'>User Management</label>, a complete authentication platform that leverages Single Sign-On functionality out of the box, following best practices.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Fundamentals')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Directory Sync</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Build frictionless onboarding for organizations with real‑time user provisioning and deprovisioning.</p>
@@ -2678,7 +2760,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can belong to multiple directory groups. Users have <label className='demo-docs-hyperlink'>attributes</label> associated with them. These attributes can be configured for your app’s needs.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Quick Start (DS)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Quick Start</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Set up a directory, install the SDK, and integrate Directory Sync.</p>
@@ -2979,6 +3061,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
@@ -3019,6 +3102,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={27}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Get directory user" 
                             updateSelectedLang={this.newLangSelected}
@@ -3034,6 +3118,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={28}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="List directory users" 
                             updateSelectedLang={this.newLangSelected}
@@ -3059,6 +3144,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={29}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Get directory group" 
                             updateSelectedLang={this.newLangSelected}
@@ -3074,6 +3160,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct 
                             id={30}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="List directory groups" 
                             updateSelectedLang={this.newLangSelected}
@@ -3111,7 +3198,7 @@ export default class StandaloneAPIs extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Optionally, stream events to Datadog. See the <label className='demo-docs-hyperlink'>observability guide</label>.</p></li>
                             </ul>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Example Apps (DS)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Example Apps</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View sample Directory Sync apps for each SDK.</p>
@@ -3135,7 +3222,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample Directory Sync apps for each SDK.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:</p>
 
@@ -3193,7 +3280,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Handle Inactive Users')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Handle Inactive Users</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn why inactive users are deleted from directories by default and how to configure this behavior.</p>
@@ -3281,7 +3368,7 @@ export default class StandaloneAPIs extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is temporarily removed, does the same user information need to be retained when they return? A new directory user will be created by default on return, whereas using the <span>inactive</span> user will retain the same information on reactivation.</p>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Understanding Events')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Understanding Events</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Understand the lifecycle of the events that occur in Directory Sync.</p>
@@ -3895,7 +3982,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can also reconcile directory data using the events API. See our <label className='demo-docs-hyperlink'>data syncing guide</label> to learn more.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('User Attributes')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>User Attributes</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Configure how attributes map from directory providers to Directory Users.</p>
@@ -4670,7 +4757,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>We do not currently support this functionality, as you have to define any custom attributes in the dashboard first. Please reach out to <label className='demo-docs-hyperlink'>support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> if you have a specific use case that you would like to discuss.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Role Data')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Role Data</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to map role data from directory providers to roles in your app.</p>
@@ -4900,7 +4987,7 @@ export default class StandaloneAPIs extends Component {
 
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Role Architecture')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Role Architecture</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn about common app architectures and edge cases for mapping roles.</p>
@@ -5001,7 +5088,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If no role information exists from any source, granting a user a default role with fewer permissions, such as a “Viewer” role is common.</p>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Quick Start (AP)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Admin Portal</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>A first-class Single Sign-On and Directory Sync onboarding experience for organization admins.</p>
@@ -5338,6 +5425,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
@@ -5379,6 +5467,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={45}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create an Organization"
                             updateSelectedLang={this.newLangSelected}
@@ -5407,6 +5496,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={46}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Redirect to Admin Portal"
                             updateSelectedLang={this.newLangSelected}
@@ -5464,7 +5554,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/admin_portal_img11.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Example Apps (AP)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Example Apps</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View sample Admin Portal apps for each SDK.</p>
@@ -5546,7 +5636,7 @@ export default class StandaloneAPIs extends Component {
                                 </div>
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Custom Branding')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Custom Branding</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Use your own logo and colors in the Admin Portal.</p>
@@ -5669,7 +5759,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/custom_branding_img9.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Quick Start (AL)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Audit Logs</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Ingest and export Audit Log Events from your application.</p>
@@ -5891,6 +5981,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
@@ -5941,6 +6032,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={48}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Emit event"
                             updateSelectedLang={this.newLangSelected}
@@ -5955,7 +6047,7 @@ export default class StandaloneAPIs extends Component {
                                 <img  src='/assets/audit_logs_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Exporting Events')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Exporting Events</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Export Audit Log Events through the WorkOS Dashboard and API.</p>
@@ -6006,6 +6098,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={49}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create an Export"
                             updateSelectedLang={this.newLangSelected}
@@ -6029,6 +6122,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={50}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Fetch Export"
                             updateSelectedLang={this.newLangSelected}
@@ -6040,7 +6134,7 @@ export default class StandaloneAPIs extends Component {
 
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Metadata Schema')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Metadata Schema</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Define strict JSON Schema for validating event metadata.</p>
@@ -6099,12 +6193,13 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={51}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Event with metadata"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Editing Events')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Editing Events</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Modify existing event configuration with backwards compatibility.</p>
@@ -6172,12 +6267,13 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={52}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Emit event"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Admin Portal (AL)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Admin Portal</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View Audit Log events for an organization in the WorkOS Admin Portal.</p>
@@ -6217,6 +6313,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={53}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create Admin Portal Link for Audit Logs"
                             updateSelectedLang={this.newLangSelected}
@@ -6228,7 +6325,7 @@ export default class StandaloneAPIs extends Component {
                                     <img  src='/assets/admin_portal_audit_logs_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Log Streams')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Log Streams</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Stream Audit Log Events to your customers’ SIEM providers.</p>
@@ -6315,6 +6412,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={55}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create Admin Portal Link for Log Streams"
                             updateSelectedLang={this.newLangSelected}
@@ -6326,7 +6424,7 @@ export default class StandaloneAPIs extends Component {
                                     <img  src='/assets/log_streams_img4.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('Quick Start (DV)')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Domain Verification</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Self-serve domain verification</p>
@@ -6434,6 +6532,7 @@ export default class StandaloneAPIs extends Component {
                             <CodeSnippetStruct
                             id={56}
                             headerTabs={2}
+                            dropdownDisabled={true}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Create Admin Portal Link for Domain Verification"
                             updateSelectedLang={this.newLangSelected}
@@ -6466,7 +6565,7 @@ export default class StandaloneAPIs extends Component {
 
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            <div onClick={() => this.navigateToNewPage('API')} className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>API</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Programmatic domain verification</p>
@@ -6490,7 +6589,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Programmatic domain verification</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Instead of leveraging the Admin Portal, the Domain Verification API can be used to verify domains programmatically.</p>
 
@@ -6575,6 +6674,16 @@ export default class StandaloneAPIs extends Component {
                             snippet="Initiate verification for existing domain"
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div onClick={() => this.navigateToNewPage('Event types')} className='demo-next-section-container'>
+                                <div className='demo-next-section-container-left'>
+                                    <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Events</h4>
+                                    <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
+                                </div>
+                                <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                    <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>

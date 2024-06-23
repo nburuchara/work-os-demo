@@ -105,7 +105,7 @@ handleItemClick = (index, item) => {
                 return activeParentIndex !== parentIndex || activeIndex === index;
             });
         }
-        console.log('clicked path', newActiveIndices)
+        
         this.props.setSearchPath(newActiveIndices); // Notify parent component
         this.props.setCurrentIndex(index);
         return { activeIndices: newActiveIndices };
@@ -303,7 +303,6 @@ handleSearchWithinNested = (searchTerm) => {
 };
 
 setSearchPath = (searchPath) => {
-    // this.sets
     this.setState({ searchPath });
 };
 

@@ -8,9 +8,14 @@ const results = [
 
     {"id": "999999", "name": "User Management", "category": "User Management", "page": "Quick Start", "lastCat": "top"},
 
+
+        //! - EXAMPLE APPS - !//
+
+    {"id": "999956", "name": "Example Apps", "category": "User Management",  "page": "Example Apps", "lastCat": "top"},
+
          //! - AUTHKIT - !//
 
-    {"id": "999953", "name": "AuthKit", "category": "User Management", "subCat1": "AuthKit",  "page": "AuthKit", "lastCat": "top"},
+    {"id": "999953", "name": "AuthKit", "category": "User Management", "page": "AuthKit", "lastCat": "top"},
 
         //! - EMAIL DOMAINS - !//
 
@@ -64,7 +69,6 @@ const results = [
 
     {"id": "999662", "name": "Domain Capture", "category": "User Management", "page": "Domain Capture", "lastCat": "top"},
 
-
         //! - IDENTITY LINKING - !//
 
     {"id": "999644", "name": "Identity Linking", "category": "User Management", "page": "Identity Linking", "lastCat": "top"},
@@ -111,7 +115,7 @@ const results = [
 
         //! - EXAMPLE APPS - !//
 
-    {"id": "999956", "name": "Example Apps", "category": "User Management", "subCat1": "Example Apps",  "page": "Example Apps", "lastCat": "Example apps"},
+    // {"id": "999956", "name": "Example Apps", "category": "User Management", "subCat1": "Example Apps",  "page": "Example Apps", "lastCat": "Example apps"},
 
         //! - AUTHKIT - !//
 

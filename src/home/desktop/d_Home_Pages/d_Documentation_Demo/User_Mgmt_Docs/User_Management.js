@@ -291,9 +291,45 @@ export default class UserManagement extends Component {
     usingNodeClicked = () => { this.setState({ usingNode: true, usingNextJs: false}) }
     usingNextJsClicked = () => { this.setState({usingNextJs: true, usingNode: false}) }
 
-
     codeSnippet1CopyEnter = () => {this.setState({codeSnippet1CopyHovered: true})}
     codeSnippet1CopyLeave = () => {this.setState({codeSnippet1CopyHovered: false})}
+
+    navigateToNewPage = (page) => {
+        let pageObject = null;
+        const pageOptions = [
+            {"id": "999956", "name": "Example Apps", "category": "User Management",  "page": "Example Apps", "lastCat": "top"},
+            {"id": "999953", "name": "AuthKit", "category": "User Management",  "page": "AuthKit", "lastCat": "top"},
+            {"id": "999925", "name": "Email Domains", "category": "User Management",  "page": "Email Domains", "lastCat": "top"},
+            {"id": "999908", "name": "Branding", "category": "User Management", "page": "Branding", "lastCat": "top"},
+            {"id": "999879", "name": "Migrations", "category": "User Management", "page": "Migrations", "lastCat": "top"},
+            {"id": "999444", "name": "Single Sign-On", "category": "Standalone APIs", "page": "Quick Start", "subCat1": "Single Sign-On", "lastCat": "top"},
+            {"id": "999860", "name": "Single Sign-On", "category": "User Management", "page": "Single Sign-On", "lastCat": "top"},
+            {"id": "999815", "name": "Email + Password", "category": "User Management", "page": "Email + Password", "lastCat": "top"},
+            {"id": "999797", "name": "Social Login", "category": "User Management", "page": "Social Login", "lastCat": "top"},
+            {"id": "999783", "name": "Multi-Factor Authentication", "category": "User Management", "page": "Multi-Factor Auth", "lastCat": "top"},
+            {"id": "999770", "name": "Magic Auth", "category": "User Management", "page": "Magic Auth", "lastCat": "top"},
+            {"id": "999757", "name": "Users and Organizations", "category": "User Management", "page": "Users and Organizations", "lastCat": "top"},
+            {"id": "999728", "name": "Sessions", "category": "User Management", "page": "Sessions", "lastCat": "top"},
+            {"id": "999697", "name": "Invitations", "category": "User Management", "page": "Invitations", "lastCat": "top"},
+            {"id": "999676", "name": "Email Verification", "category": "User Management", "page": "Email Verification", "lastCat": "top"},
+            {"id": "999662", "name": "Domain Capture", "category": "User Management", "page": "Domain Capture", "lastCat": "top"},
+            {"id": "999644", "name": "Identity Linking", "category": "User Management", "page": "Identity Linking", "lastCat": "top"},
+            {"id": "999621", "name": "JIT Provisioning", "category": "User Management", "page": "JIT Provisioning", "lastCat": "top"},
+            {"id": "999603", "name": "Roles", "category": "User Management", "page": "Roles", "lastCat": "top"},
+            {"id": "999586", "name": "Directory Provisioning", "category": "User Management", "page": "Directory Provisioning", "lastCat": "top"},
+            {"id": "999555", "name": "Organization Policies", "category": "User Management", "page": "Organization Policies", "lastCat": "top"},
+            {"id": "999544", "name": "Impersonation", "category": "User Management", "page": "Impersonation", "lastCat": "top"},
+            {"id": "999520", "name": "Custom Emails", "category": "User Management", "page": "Custom Emails", "lastCat": "top"},
+        ]
+        for (let i = 0; i < pageOptions.length; i++) {
+            if (page === pageOptions[i].page) {
+                pageObject = pageOptions[i]
+            }
+        }
+        if (pageObject !== null) {
+            this.props.navigateToNewPage(page, pageObject)
+        }
+    }
     
     render () {
 
@@ -365,8 +401,8 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
                                 <div></div>
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your WorkOS <label className='demo-docs-hyperlink'>API Key</label> and <label className='demo-docs-hyperlink'>Client ID</label><i id='Configure your project' ></i>.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your WorkOS <label className='demo-docs-hyperlink'>API Key</label> and <label className='demo-docs-hyperlink'>Client ID</label><i id='Configure your project' ></i>.</p></li>
                                 </ul>
                             </div>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
@@ -712,7 +748,7 @@ export default class UserManagement extends Component {
                                 updateSelectedLang={this.newLangSelected}
                                 selectedLang={this.state.currentSelectedLanguage}/>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Example Apps')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Example Apps</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>View sample User Management Apps</p>
@@ -734,8 +770,11 @@ export default class UserManagement extends Component {
                             <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample User Management apps.</p>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:</p>
-                            
+                            </div>
+                            <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:</p>
+
                                 <div className='example-apps-container'>
                                     <div className='example-app-container'>
                                         <img src='/assets/docs_example_apps_typescript_icon.png' alt='img not available'/>
@@ -753,6 +792,17 @@ export default class UserManagement extends Component {
                                         <h5>Java User Management app</h5>
                                     </div>
                                 </div>
+
+                                <div onClick={() => this.navigateToNewPage('AuthKit')} className='demo-next-section-container'>
+                                    <div className='demo-next-section-container-left'>
+                                        <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>AuthKit</h4>
+                                        <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
+                                    </div>
+                                    <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                        <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </CSSTransition>
@@ -766,7 +816,7 @@ export default class UserManagement extends Component {
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AuthKit</h1>
                                 
-                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px"}} id=''>Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}} >Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -774,10 +824,10 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Implementing authentication flows that handle every possible error state and edge case across multiple identity providers can be a daunting task. AuthKit makes this easy by providing a hosted, pre-built, customizable authentication UI with automatic handling of:</p>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign up, sign in, password reset, and <label className='demo-docs-hyperlink'>email verification</label> flows.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enterprise <label className='demo-docs-hyperlink'>SSO</label> routing and <label className='demo-docs-hyperlink'>MFA</label> enrollment.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Automatic bot detection and blocking, to protect against brute force attacks.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Customizable <label className='demo-docs-hyperlink'>domains</label> and <label className='demo-docs-hyperlink'>branding</label>.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign up, sign in, password reset, and <label className='demo-docs-hyperlink'>email verification</label> flows.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enterprise <label className='demo-docs-hyperlink'>SSO</label> routing and <label className='demo-docs-hyperlink'>MFA</label> enrollment.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Automatic bot detection and blocking, to protect against brute force attacks.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Customizable <label className='demo-docs-hyperlink'>domains</label> and <label className='demo-docs-hyperlink'>branding</label>.</p></li>
                                 </ul>
                                 <div></div>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "8%" : ""}} id='img3' className={`enlargable-image-container ${this.state.enlargedImageId === 'img3' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img3')}>
@@ -815,11 +865,11 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email + Password authentication is enabled by default, though set up may be required to enable additional methods. See the relevant feature section for more information:</p>
                             
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Single Sign-On</label></p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Email + Password</label></p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label  className='demo-docs-hyperlink'>Social Login</label></p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Multi-Factor Auth</label></p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label id = 'Integrating'className='demo-docs-hyperlink'>Magic Auth</label></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Single Sign-On</label></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Email + Password</label></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label  className='demo-docs-hyperlink'>Social Login</label></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Multi-Factor Auth</label></p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label id = 'Integrating'className='demo-docs-hyperlink'>Magic Auth</label></p></li>
                                 </ul>
                             </div>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
@@ -853,7 +903,7 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While the hosted solution is the fastest way to get started, if you’d prefer to build and manage your own authentication UI, you can do so via the <label className='demo-docs-hyperlink'>User Management API.</label></p>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are available on <label className='demo-docs-hyperlink'>GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Email Domains')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Email domains</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Guidance on configuring domains for emails</p>
@@ -883,10 +933,10 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Several User Management features require sending emails:</p>
                             
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Magic Auth.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Password resets</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Magic Auth.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Password resets</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations</p></li>
                                 </ul>
 
                                 <div className='api-keys'>
@@ -949,7 +999,7 @@ export default class UserManagement extends Component {
                                     <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once your domain is successfully verified, authentication emails and Admin Portal invites will be sent from <span>no-reply@your-domain.com</span>. It’s important to keep the CNAME records in place to ensure that WorkOS can deliver mail on your behalf.</p>
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Branding')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Branding</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Customize AuthKit to fit natively with your app's unique design</p>
@@ -980,9 +1030,9 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The brand editor allows you to:</p>
                             
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload logos and favicons</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set brand colors for buttons, links, and backgrounds</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Manage visual properties such as corner radius and dark mode appearance</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload logos and favicons</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set brand colors for buttons, links, and backgrounds</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Manage visual properties such as corner radius and dark mode appearance</p></li>
                                 </ul>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The AuthKit preview will update in real-time as you make changes and accurately reflect the available authentication methods, giving you a clear picture of the authentication experience with AuthKit.</p>
@@ -1009,9 +1059,9 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are three types of uploadable assets:</p>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo:</strong> Your full size brand logo, styles vary but this would typically include the wordmark.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo icon:</strong> A smaller, iconized version of the logo, this is often simply the logomark.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong  id='Logo style'>Favicon:</strong> The favicon is displayed in the browser tab alongside the address bar.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo:</strong> Your full size brand logo, styles vary but this would typically include the wordmark.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Logo icon:</strong> A smaller, iconized version of the logo, this is often simply the logomark.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong  id='Logo style'>Favicon:</strong> The favicon is displayed in the browser tab alongside the address bar.</p></li>
                                 </ul>
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Logo style</h3>
@@ -1024,10 +1074,10 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can control four colors across light and dark mode:</p>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Page background color</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Button background colors</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Button text color</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Link color</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Page background color</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Button background colors</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Button text color</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Link color</p></li>
                                 </ul>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Other colors used in the UI, like the focus outline, hover styles, or borders, are created automatically based on the four colors you provide, ensuring a consistent look and feel.</p>
@@ -1042,7 +1092,7 @@ export default class UserManagement extends Component {
                                     <img src='/assets/branding_img6.avif' alt="Enlargable" className="image" />
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Migrations')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Migrating to User Management</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Guidance on moving your existing users to WorkOS</p>
@@ -1105,7 +1155,7 @@ export default class UserManagement extends Component {
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Migrate an existing WorkOS integration</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you already have an integration with WorkOS (for example, using the <label className='demo-docs-hyperlink'>standalone API</label> to provide SSO to your customers), you can migrate to User Management and take advantage of all of the features it provides by following <label className='demo-docs-hyperlink'>this guide</label>.</p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Single Sign-On')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Single Sign-On</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Facilitate greater security, easier account management, and accelerated application onboarding and adoption.</p>
@@ -1307,7 +1357,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are also <label className='demo-docs-hyperlink'>available on GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Email + Password')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Email + Password</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Configuring email and password authentication and requirements</p>
@@ -1345,9 +1395,9 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A strong set of password rules are applied to all users by default. This ensures that:</p>
                             
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All passwords meet a minimum required length</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Low complexity passwords are rejected</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Breached passwords (flagged by <label className='demo-docs-hyperlink'>haveibeenpwned</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>) are rejected</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All passwords meet a minimum required length</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Low complexity passwords are rejected</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Breached passwords (flagged by <label className='demo-docs-hyperlink'>haveibeenpwned</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>) are rejected</p></li>
                                 </ul>
                             
                                 <p className={sidebarMenuClicked? "demo-docs-section-sidebar-p" : ""}>These defaults are recommended in the majority of cases, however, if you wish to modify the password policy you can do so in the Authentication section of the <label className='demo-docs-hyperlink'>WorkOS Dashbaord</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
@@ -1367,7 +1417,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are also <label className='demo-docs-hyperlink'>available on GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Social Login')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Social Login</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Quickly and easily integrate with social OAuth providers.</p>
@@ -1437,7 +1487,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are also <label className='demo-docs-hyperlink'>available on GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Multi-Factor Auth')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Multi-Factor Authentication</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Add an additional layer of security to your application.</p>
@@ -1497,7 +1547,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are also <label className='demo-docs-hyperlink'>available on GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Magic Auth')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Magic Auth</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Maximize user experience and security with passwordless authentication.</p>
@@ -1563,7 +1613,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Examples of building custom UI are also <label className='demo-docs-hyperlink'>available on GitHub</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Users and Organizations')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Users and Organizations</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Flexible application modeling with user and membership features.</p>
@@ -1630,8 +1680,8 @@ export default class UserManagement extends Component {
                                 </div>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Multiple Workspaces:</strong> A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly<i id='While these are two distinct models'></i> one organization.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Multiple Workspaces:</strong> A self-serve productivity app, like Figma, where each user can be in any number of organizations, can create their own workspace and join any number of other workspaces.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Single Workspace:</strong> An app that has no collaboration outside a customer’s company, like an employee survey tool, where each user is in exactly<i id='While these are two distinct models'></i> one organization.</p></li>
                                 </ul>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While these are two distinct models, your choice may depend on your go-to-market strategy, which may change over time. <strong>WorkOS User<i id='Organization access'></i> Management supports both</strong>.</p>
@@ -1651,7 +1701,7 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can also invite <label className='demo-docs-hyperlink'>individuals to organizations</label>, regardless of their email domain. This is handy for contractors within a company, or a collection of people without a shared domain.</p>
 
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Sessions')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Sessions</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn more about integrating sessions.</p>
@@ -1702,12 +1752,12 @@ export default class UserManagement extends Component {
                                     <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The access token is a JSON Web Token (JWT), which should be validated on each request using a library like jose. The signing <label className='demo-docs-hyperlink'>JWKS</label> can be found at <span>http://api.workos.com/sso/jwks/&lt;clientId&gt;</span>. The JWT includes the following claims:</p>
                                 
                                     <ul>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sub</span>: the WorkOS user id</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iss</span>: <span>https://api.workos.com/</span>the session ID (used for signing out)</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>org_id</span>: The organization that was selected at sign-in time (if applicable)</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>exp</span>: the standard <span>expires_at</span> claim (the token should not be trusted after this time<i id='Refresh Token'></i>)</p></li> 
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iat</span>: the standard <span>issued_at</span> claim</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sub</span>: the WorkOS user id</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>sid</span>: the session ID (used for signing out)</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iss</span>: <span>https://api.workos.com/</span>the session ID (used for signing out)</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>org_id</span>: The organization that was selected at sign-in time (if applicable)</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>exp</span>: the standard <span>expires_at</span> claim (the token should not be trusted after this time<i id='Refresh Token'></i>)</p></li> 
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>iat</span>: the standard <span>issued_at</span> claim</p></li>
                                     </ul>
                                 
 
@@ -1719,10 +1769,10 @@ export default class UserManagement extends Component {
                                 
 
                                     <ul>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get the session id (<span>sid</span> claim) out of the access token.</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Delete the user’s app session.</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s</p></li>
-                                        <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user will be redirected back to the URL<i id='Example'></i> configured as your <i>App homepage URL</i></p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get the session id (<span>sid</span> claim) out of the access token.</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Delete the user’s app session.</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Redirect the user’s browser to logout endpoint endpoint (this will ensure the user’s</p></li>
+                                        <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user will be redirected back to the URL<i id='Example'></i> configured as your <i>App homepage URL</i></p></li>
                                     </ul>
 
                                 </div>
@@ -1748,8 +1798,8 @@ export default class UserManagement extends Component {
                                 </div>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Maximum session length:</strong> the user will need to sign in again.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Access token duration:</strong> Your backend can verify the access token on each request (see the <label className='demo-docs-hyperlink'>Integrating Sessions</label> section above). It’s recommended to keep the access token duration short so that changes in the session are quickly reflected in your app.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Maximum session length:</strong> the user will need to sign in again.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Access token duration:</strong> Your backend can verify the access token on each request (see the <label className='demo-docs-hyperlink'>Integrating Sessions</label> section above). It’s recommended to keep the access token duration short so that changes in the session are quickly reflected in your app.</p></li>
                                 </ul>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally, make sure to review your settings in the <i>Redirect</i> section:</p>
@@ -1759,10 +1809,10 @@ export default class UserManagement extends Component {
                                 </div>
                                 <i id='App homepage URL'></i>
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>App homepage URL:</strong> Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>App homepage URL:</strong> Specifies where users are redirected after logging out. If not set, the user will be redirected to an error page.</p></li>
                                 </ul>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Invitations')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Invitations</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Easily add users as members to an organization.</p>
@@ -1797,8 +1847,8 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each invitation is a two step process:</p>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The inviter expresses intent for someone to join an organization.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The invitee chooses to <i id='Inviting new users'></i>join that organization.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The inviter expresses intent for someone to join an organization.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The invitee chooses to <i id='Inviting new users'></i>join that organization.</p></li>
                                 </ul>
 
 
@@ -1825,7 +1875,7 @@ export default class UserManagement extends Component {
                                     <img src='/assets/invitations_img1.avif' alt="Enlargable" className="image" />
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Email Verification')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Email Verification</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn more about the email verification process.</p>
@@ -1858,8 +1908,8 @@ export default class UserManagement extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verification is a two-step process:</p>
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A user signs up to your application and an email is sent with a verification code.</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user inputs the verification code to complete the sign-up process.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A user signs up to your application and an email is sent with a verification code.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user inputs the verification code to complete the sign-up process.</p></li>
                                 </ul>
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This applies to all authentication methods including <label className='demo-docs-hyperlink'>OAuth</label> and <label className='demo-docs-hyperlink'>SSO</label>. This unifying interface simplifies how your application considers the authenticity of your users.</p>
@@ -1872,7 +1922,7 @@ export default class UserManagement extends Component {
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sending verification requests</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>AuthKit</label> automatically handles email verification out of the box. When a user signs up via the hosted sign-up form, AuthKit will automatically send the verification email, prompt the user to input the code and route them through the authentication process before they gain access to the application.</p>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Domain Capture')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Domain Capture</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Understanding domain verification and domain-captured users.</p>
@@ -1942,7 +1992,7 @@ export default class UserManagement extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The organization can also <label className='demo-docs-hyperlink'>enforce specific authentication methods</label> on its domain-captured users.</p>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Identity Linking')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Identity Linking</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Automatic deduplication of user credentials across identity providers.</p>
@@ -2036,7 +2086,7 @@ export default class UserManagement extends Component {
                                     </div>
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('JIT Provisioning')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>JIT Provisioning</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Provision organization membership using Just-In-Time user provisioning.</p>
@@ -2099,7 +2149,7 @@ export default class UserManagement extends Component {
                             
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Turning off JIT provisioning disables user provisioning for new users. This may be useful when an organization wants to limit access to its workspace. <label className='demo-docs-hyperlink'>Invitations</label> can be used to allow specific email addresses to sign up and be provisioned.</p>
                             
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Roles')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Roles</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Manage and assign roles to users.</p>
@@ -2166,7 +2216,7 @@ export default class UserManagement extends Component {
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Role-aware sessions</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs into your app, a <label className='demo-docs-hyperlink'>user session</label> is initiated. The authentication response includes an access token, a JSON Web Token (JWT), with the "role" claim indicating the organization membership's role for that session.</p>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Directory Provisioning')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Directory Provisioning</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Manage users and organization memberships via directory sync providers.</p>
@@ -2215,15 +2265,15 @@ export default class UserManagement extends Component {
                             
 
                                 <ul>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Okta SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID (Azure AD) SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Google Workspace</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>OneLogin SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>CyberArk SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>PingFederate SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JumpCloud SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rippling SCIM</p></li>
-                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generic SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Okta SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID (Azure AD) SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Google Workspace</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>OneLogin SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>CyberArk SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>PingFederate SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JumpCloud SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rippling SCIM</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Generic SCIM</p></li>
                                 </ul>
 
                                 <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
@@ -2261,7 +2311,7 @@ export default class UserManagement extends Component {
 
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory users need to have a primary email address to be provisioned in user management. So if the directory user is missing a primary email, they won't be provisioned. Additionally, if the primary email of a directory user is shared by another directory user, only one will be provisioned in user management, as emails are unique to user management users.</p>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Organization Policies')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Organization Authentication Policies</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Customize available authentication methods per organization.</p>
@@ -2315,7 +2365,7 @@ export default class UserManagement extends Component {
                                     <img  src='/assets/org_policies_img2.avif' alt="Enlargable" className="image" />
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Impersonation')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Impersonation</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to sign into your application as one of your users.</p>
@@ -2428,7 +2478,7 @@ export default class UserManagement extends Component {
                                     <img  src='/assets/impersonation_img4.avif' alt="Enlargable" className="image" />
                                 </div>
 
-                                <div className='demo-next-section-container'>
+                                <div onClick={() => this.navigateToNewPage('Custom Emails')} className='demo-next-section-container'>
                                     <div className='demo-next-section-container-left'>
                                         <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Custom Emails</h4>
                                         <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Learn how to send your own emails for user lifecycle events.</p>
@@ -2775,8 +2825,18 @@ export default class UserManagement extends Component {
                                     <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The recipient of the <span>email</span> should be the email attribute in the password reset object retrieved via the API. The body of the email should include a link where the user can reset their password. For most use cases, you can use the <span>password_reset_url</span> as this link.</p>
                                     <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you aren’t using hosted AuthKit, and your password reset path diverges from this pattern, you may want to construct your own URL with the <span>password_reset_token</span>, rather than using the <span>password_reset_url</span>.</p>
                                 </div>
-                            </div>
 
+                                <div onClick={() => this.navigateToNewPage('Quick Start')} className='demo-next-section-container'>
+                                    <div className='demo-next-section-container-left'>
+                                        <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>Single Sign-On</h4>
+                                        <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Facilitate greater security, easier account management, and accelerated application onboarding and adoption.</p>
+                                    </div>
+                                    <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
+                                        <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </CSSTransition>
                 </div>

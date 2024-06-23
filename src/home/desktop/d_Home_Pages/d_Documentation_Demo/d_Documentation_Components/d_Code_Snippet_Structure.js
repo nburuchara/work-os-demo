@@ -409,6 +409,8 @@ export default class CodeSnippet extends Component {
             ],
             showRequestCode: false,
             showReponseCode: false,
+            showCodeCopyLogo: true,
+            showCodeCopiedLogo: false,
 
             //* - - API HYPERLINKS - - *//
             secretKeyApiPopup: false,
@@ -667,6 +669,46 @@ export default class CodeSnippet extends Component {
         return match ? match[0] : '';
     }
 
+    copyClicked = (codeSnippet) => {
+      if (this.state.showCodeCopyLogo === true) {
+        this.setState({
+          showCodeCopyLogo: false,
+          showCodeCopiedLogo: true,
+        }, () => {
+          setTimeout(() => {
+            this.setState({
+              showCodeCopyLogo: true,
+              showCodeCopiedLogo: false,
+            })
+          }, 2000)
+        })
+      }
+      const plainTextCode = codeSnippet.map(this.stripHtmlTags).join("\n");
+
+      const tempTextArea = document.createElement("textarea");
+      tempTextArea.value = plainTextCode;
+      document.body.appendChild(tempTextArea);
+
+      tempTextArea.select();
+      tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+
+      document.body.removeChild(tempTextArea);
+
+      // alert("Code copied to clipboard!");
+    }
+
+    stripHtmlTags = (html) => {
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = html;
+      let text = tempDiv.textContent || tempDiv.innerText || "";
+      // Remove all leading special characters and whitespace
+      text = text.replace(/^[>\$\d+\s]*/, '');
+      return text;
+    }
+
+
+
     render () {
 
       const SelectButtonRequest = styled.button`
@@ -805,8 +847,14 @@ export default class CodeSnippet extends Component {
                         className={sideBarOpen ? "code-snippet-copy-sidebar-button" : ""}
                         onMouseEnter={this.codeSnippetCopyEnter}
                         onMouseLeave={this.codeSnippetCopyLeave}
+                        onClick={() => this.copyClicked(codeForSelectedLang)}
                         style={{backgroundColor: this.state.copySnippetHovered ? "#e9e9f0": "transparent"}}>
-                            <span><img className={sideBarOpen ? "code-snippet-copy-sidebar-img" : ""} src='/assets/demo_doc_copy_icon.png' alt='no img available'/></span>
+                            {this.state.showCodeCopyLogo && 
+                              <span><img className={sideBarOpen ? "code-snippet-copy-sidebar-img" : ""} src='/assets/demo_doc_copy_icon.png' alt='no img available'/></span>
+                            }
+                            {this.state.showCodeCopiedLogo && 
+                              <span><img className={sideBarOpen ? "code-snippet-copy-sidebar-img" : ""} src='/assets/demo_doc_copied_icon.png' alt='no img available'/></span>
+                            }
                         </button>
                       </div>
                     </div>

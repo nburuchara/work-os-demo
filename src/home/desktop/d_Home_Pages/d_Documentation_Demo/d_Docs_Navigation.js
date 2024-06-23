@@ -243,6 +243,17 @@ const Styles = styled.div `
     font-size: 80% !important;
 }
 
+.demo-docs-section li {
+    font-family: poppins;
+    font-size: 90%;
+}
+
+.demo-docs-section-sidebar-p {
+    font-size: 80% !important;
+}
+
+
+
     // - DEMO DOCS HYPERLINK (EXTERNAL LINK) - //
 
     // # LINK
@@ -459,6 +470,10 @@ const Styles = styled.div `
     cursor: pointer;
 }
 
+    //! - - BULLET POINTS - - !//
+
+
+
     //! - - Loading Screen - - !//
 
 .loading-container {
@@ -647,7 +662,7 @@ const Styles = styled.div `
 
 .label-desc h1 {
     margin-top: 0px !important;
-    margin-left: 2.5%;
+    margin-left: 3.5%;
 }
 
     //! - - Image in docs - - !//
@@ -3028,6 +3043,9 @@ export default class DocsNavigationMenu extends Component {
         
     }
     
+    navigateToNewPage = async (page, pageObject) => {
+        await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
+    }
 
     render () {
             //* - SIDE BAR MENU VARS - *//
@@ -3511,11 +3529,11 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
-                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject} clearLatestSearch={this.clearRecentSearch}/>}
+                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage}/>}
 
-                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} searchedTerm={this.state.menuOption2SearchTermObject} clearLatestSearch={this.clearRecentSearch} ref={this.menuOption2Ref}/>}
+                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} searchedTerm={this.state.menuOption2SearchTermObject} clearLatestSearch={this.clearRecentSearch} ref={this.menuOption2Ref} navigateToNewPage={this.navigateToNewPage}/>}
 
-                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} />}
+                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
 
                     {/* {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>} */}
 
