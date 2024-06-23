@@ -141,7 +141,6 @@ export default class StandaloneAPIs extends Component {
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
-            this.hideAllPages()
             this.getSelectedPage(this.props.scrollToID)
         }
     }
@@ -268,9 +267,55 @@ export default class StandaloneAPIs extends Component {
         })
     }
 
+    closeAllPagesExceptSelectedPage = (searchedTerm) => {
+        const pageMap = {
+            "Quick Start": "gettingStarted",
+            "Test SSO": "testSSO",
+            "Example Apps": "exampleApps",
+            "Sign-In": "signInUX",
+            "Login Flows": "loginFlows",
+            "Redirect URIs": "redirectURIs",
+            "Signing Certificates": "signingCertificates",
+            "JIT Provisioning": "jitProvisioning",
+            "Launch Checklist": "launchChecklist",
+            "FAQ for IT teams": "faqForItTeams",
+            "SAML Security": "samlSecurity",
+            "Fundamentals": "directorySync",
+            "Quick Start (DS)": "quickStartDirectorySync",
+            "Example Apps (DS)": "exampleAppsDirectorySync",
+            "Handle Inactive Users": "handleInactieUsers",
+            "Understanding Events": "understandingEvents",
+            "User Attributes": "userAttributes",
+            "Role Data": "roleData",
+            "Role Architecture": "roleArchitecture",
+            "Quick Start (AP)": "adminPortal",
+            "Example Apps (AP)": "exampleAppsAdminPortal",
+            "Custom Branding": "customBranding",
+            "Quick Start (AL)": "auditLogs",
+            "Exporting Events": "exportingEvents",
+            "Metadata Schema": "metadataScheme",
+            "Editing Events": "editingEvents",
+            "Admin Portal (AL)": "adminPortalAuditLogs",
+            "Log Streams": "logStreams",
+            "Quick Start (DV)": "domainVerification",
+            "API": "apiDomainVerification",
+        };
+        const keys = Object.keys(pageMap);
+        for (let i = 0; i < keys.length; i++) {
+            if (searchedTerm !== keys[i]) {
+                this.setState({
+                    [`${pageMap[keys[i]]}`]: false
+                })
+            }
+        }
+    }
+
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)

@@ -2291,7 +2291,7 @@ export default class DocsNavigationMenu extends Component {
                 {id: 3, name: "Event types"},
                 {id: 4, name: "Overview"},
             ]
-            this.closeAllOpenPages()
+            // this.closeAllOpenPages()
                 for (let i = 1; i <= 4; i++) {
                     this.setState({
                         [`mOption${i}Gap`]: "0px"
@@ -2365,7 +2365,6 @@ export default class DocsNavigationMenu extends Component {
 
     closeSelectedMenuOption = async () => {
         await new Promise((resolve) => {
-            // this.nestedDropdownRef.exitActiveIndices()
             this.setState({
                 menuOption1: false,
                 menuOption2: false,
@@ -2385,23 +2384,26 @@ export default class DocsNavigationMenu extends Component {
         });
     }
 
-    closeAllOpenPages = () => {
-        if (this.state.prevSelectedOption === "menuOption1" && this.state.menuOption1 !== true) {
-            if (this.menuOption1Ref.current) {
-                this.setState({menuOption1SearchTermObject: null})
-                this.menuOption1Ref.current.hideAllPages();
+    closeAllOpenPages = async () => {
+        await new Promise((resolve) => {
+            if (this.state.prevSelectedOption === "menuOption1" && this.state.menuOption1 !== true) {
+                if (this.menuOption1Ref.current) {
+                    this.setState({menuOption1SearchTermObject: null})
+                    this.menuOption1Ref.current.hideAllPages();
+                }
+            } else if (this.state.prevSelectedOption === "menuOption2" && this.state.menuOption2 !== true) {
+                if (this.menuOption2Ref.current) {
+                    this.setState({menuOption2SearchTermObject: null})
+                    this.menuOption2Ref.current.hideAllPages();
+                }
+            } else if (this.state.prevSelectedOption === "menuOption3" && this.state.menuOption3 !== true) {
+                if (this.menuOption3Ref.current) {
+                    this.setState({menuOption3SearchTermObject: null})
+                    this.menuOption3Ref.current.hideAllPages();
+                }
             }
-        } else if (this.state.prevSelectedOption === "menuOption2" && this.state.menuOption2 !== true) {
-            if (this.menuOption2Ref.current) {
-                this.setState({menuOption2SearchTermObject: null})
-                this.menuOption2Ref.current.hideAllPages();
-            }
-        } else if (this.state.prevSelectedOption === "menuOption3" && this.state.menuOption3 !== true) {
-            if (this.menuOption3Ref.current) {
-                this.setState({menuOption3SearchTermObject: null})
-                this.menuOption3Ref.current.hideAllPages();
-            }
-        }
+            resolve();
+        });
     }
 
     handleMenuItemSelected = (item) => {

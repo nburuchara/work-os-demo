@@ -20,6 +20,8 @@ export default class EventsWebhooks extends Component {
             dataReconciliation: false,
             observabilityStreamToDatadog: false,
 
+            prevSelectedPage: "",
+
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
             codeSnippet1CopyHovered: false,
@@ -47,17 +49,20 @@ export default class EventsWebhooks extends Component {
         }
     }
 
-    componentDidMount = () => {
+    componentDidMount = async () => {
         window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
-            this.hideAllPages()
+            // this.hideAllPages()
             this.getSelectedPage(this.props.scrollToID)
+            // setTimeout(() => {
+            //     this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            // }, 1000)
         }
     }
 
-    componentWillUnmount() {
+    componentWillUnmount = () => {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
@@ -131,12 +136,34 @@ export default class EventsWebhooks extends Component {
         })
     }
 
+    closeAllPagesExceptSelectedPage = (searchedTerm) => {
+        const pageMap = {
+            "Event types": "eventTypes",
+            "Overview": "dataSyncing",
+            "Syncing with events API": "dataSyncingWithApi",
+            "Syncing with webhooks": "dataSyncingWithWebhooks",
+            "Data reconciliation": "dataReconciliation",
+            "Streaming to Datadog": "observabilityStreamToDatadog",
+        };
+        const keys = Object.keys(pageMap);
+        for (let i = 0; i < keys.length; i++) {
+            if (searchedTerm !== keys[i]) {
+                this.setState({
+                    [`${pageMap[keys[i]]}`]: false
+                })
+            }
+        }
+    }
+
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         }
     }
 

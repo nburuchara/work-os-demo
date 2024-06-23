@@ -63,12 +63,14 @@ export default class UserManagement extends Component {
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
-            this.hideAllPages()
             this.getSelectedPage(this.props.scrollToID)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         }
     }
 
-    componentWillUnmount() {
+    componentWillUnmount = () => {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
@@ -126,6 +128,43 @@ export default class UserManagement extends Component {
           console.error("Unknown selected page:", selectedPage);
         }
     };
+
+    closeAllPagesExceptSelectedPage = (searchedTerm) => {
+        const pageMap = {
+            "User Management": "gettingStarted",
+            "Quick Start": "gettingStarted",
+            "Example Apps": "exampleApps",
+            "AuthKit": "authKit",
+            "Email Domains": "emailDomains",
+            "Branding": "branding",
+            "Migrations": "migrations",
+            "Single Sign-On": "singleSignOn",
+            "Email + Password": "emailAndPassword",
+            "Social Login": "socialLogin",
+            "Multi-Factor Auth": "multiFactorAuth",
+            "Magic Auth": "magicAuth",
+            "Users and Organizations": "usersAndOrganizations",
+            "Sessions": "sessions",
+            "Invitations": "invitations",
+            "Email Verification": "emailVerification",
+            "Domain Capture": "domainCapture",
+            "Identity Linking": "identityLinking",
+            "JIT Provisioning": "jitProvisioning",
+            "Roles": "roles",
+            "Directory Provisioning": "directoryProvisioning",
+            "Organization Policies": "organizationPolicies",
+            "Impersonation": "impersonation",
+            "Custom Emails": "customEmails",
+        };
+        const keys = Object.keys(pageMap);
+        for (let i = 0; i < keys.length; i++) {
+            if (searchedTerm !== keys[i]) {
+                this.setState({
+                    [`${pageMap[keys[i]]}`]: false
+                })
+            }
+        }
+    }
 
     scrollToTop = (id) => {
         const element = document.getElementById(id);
@@ -191,6 +230,9 @@ export default class UserManagement extends Component {
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         }
     }
 
