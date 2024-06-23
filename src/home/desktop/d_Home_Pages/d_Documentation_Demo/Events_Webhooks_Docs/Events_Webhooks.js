@@ -2663,10 +2663,11 @@ export default class EventsWebhooks extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div className="demo-docs-container">
+                    <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data reconciliation</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Data reconciliation</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Keep your app in sync with WorkOS.</p>
+                            <div style={{paddingBottom: sidebarMenuClicked ? "3.5%" : ""}} id="Introduction"></div>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
@@ -2674,7 +2675,7 @@ export default class EventsWebhooks extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While the events API makes it easier to keep your app in sync with WorkOS, there may still be cases where your app gets out of sync. For example, your app may have a bug in its event processing logic or in rarer cases, may experience some data loss.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Data reconciliation refers to the process of comparing and aligning the state of objects between WorkOS and your app to ensure consistency. Depending on the scope of the issue, you can reconcile your app state by either replaying events from the <label className="demo-docs-hyperlink">events API</label> or by using the WorkOS <label className="demo-docs-hyperlink">state API</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Data reconciliation refers to the process of comparing and aligning the state of objects between WorkOS and your app to ensure consistency. Depending on the scope of the issue, you can reconcile your app state by either replaying events from<i id="Definitions"></i> the <label className="demo-docs-hyperlink">events API</label> or by using the WorkOS <label className="demo-docs-hyperlink">state API</label>.</p>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Definitions</h1>
 
@@ -2710,7 +2711,7 @@ export default class EventsWebhooks extends Component {
                                     <h5 style={{color: "black", cursor: "default"}}>Periodic reconciliation</h5>
                                 </div>
                                 <div className={sidebarMenuClicked ? "simple-table-sidebar-right" : "simple-table-right"}>
-                                    <p>Is the regular process of comparing and synchronizing data between systems to ensure accuracy and consistency. It involves scheduled checks to identify and resolve discrepancies in data integrity.</p>
+                                    <p>Is the regular process of comparing and synchronizing data between systems to ensure accuracy and consistency. It involves scheduled checks<i id="Reconciling via the events API"></i> to identify and resolve discrepancies in data integrity.</p>
                                 </div>
                             </div>
 
@@ -2719,14 +2720,14 @@ export default class EventsWebhooks extends Component {
                             <div className="api-keys">
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In general, reconciling state changes between WorkOS and your app using the events API is simplest. Pick your cursor, which is usually the last known cursor you have processed, and paginate through events using the <span>after</span> parameter.</p>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For special cases such as webhook migration or event replay, you can specify a starting time for event consumption using the <span>range_start</span> parameter.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For special cases such as webhook migration or event replay, you can specify a starting time for event consumption<i id="Handling side effects in the case of event replay"></i> using the <span>range_start</span> parameter.</p>
                             </div>
 
                             <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Handling side effects in the case of event replay</h3>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Side effects, such as sending emails, updating 3rd party APIs, or performing other actions specific to your app, present challenges during event replay.</p>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Separating data handling from business logic allows you to exercise control over what actions you want your app to make. This allows your app to replay events to sync data but bypass transactional logic e.g., not sending out the same email twice.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Separating data handling from business logic allows you to exercise control over what actions you want your app to make. This allows your app to replay events to sync data but bypass transactional logic e.g., not<i id="Reconciling via the WorkOS state API"></i> sending out the same email twice.</p>
 
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Reconciling via the WorkOS state API</h1>
@@ -2744,7 +2745,7 @@ export default class EventsWebhooks extends Component {
                                     <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identify deactivated objects or deletions and sync that state.</p></li>
                                 </ol>
 
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to force all objects to update state, perform a complete resynchronization of the affected data instead of relying solely on the <span>updated_at</span> timestamp. Update all objects regardless of the individual <span>updated_at</span> timestamp.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you need to force all objects to update state, perform a complete resynchronization of the affected data instead of relying solely on the <span>updated_at</span> timestamp. Update all objects <i id="Considerations for periodic reconciliation"></i>regardless of the individual <span>updated_at</span> timestamp.</p>
 
                             </div>
 
@@ -2771,7 +2772,7 @@ export default class EventsWebhooks extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div className="demo-docs-container">
+                    <div id="top" className="demo-docs-container">
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Stream events to Datadog</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Stream and analyze WorkOS activity in Datadog.</p>
@@ -2791,14 +2792,14 @@ export default class EventsWebhooks extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set alerts for unexpected activity, such as sudden spike in failed password attempts.</p></li>
                             </ul>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>See all of the WorkOS events that stream to Datadog in the <label className="demo-docs-hyperlink">event types</label> documentation.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>See all of the WorkOS events that stream to Datadog in the <label className="demo-docs-hyperlink">event types<i id="Introduction"></i></label> documentation.</p>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Setting up real-time streaming of WorkOS events to Datadog only takes a few minutes and can be done in three simple steps.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Setting up real-time streaming of WorkOS events to Datadog only takes a few minutes and can be done in three simple steps.<i id="Create a Datadog API key"></i></p>
 
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%"}} className='demo-docs-section'>
@@ -2825,6 +2826,7 @@ export default class EventsWebhooks extends Component {
 
                             <div id='img126' className={`enlargable-image-container ${this.state.enlargedImageId === 'img126' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img126')}>
                                     <img  src='/assets/stream_datadogs_img2.avif' alt="Enlargable" className="image" />
+                                    <i id="Configure event streaming in WorkOS"></i>
                             </div>
 
                         </div>
@@ -2862,7 +2864,7 @@ export default class EventsWebhooks extends Component {
                             </div>
 
                             <div className="api-keys">
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With event streaming configured, when new events occur, WorkOS will send the events to Datadog with the source <span>workos</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With event streaming configured, when new events occur, WorkOS will send the events to Datadog with the source <span>workos</span>.<i id="Add the WorkOS Datadog dashboard"></i></p>
                             </div>
 
                         </div>

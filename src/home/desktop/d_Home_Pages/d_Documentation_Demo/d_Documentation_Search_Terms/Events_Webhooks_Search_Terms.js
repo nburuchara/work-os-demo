@@ -23,6 +23,15 @@ const results = [
     {"id": "998587", "name": "Syncing with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
     {"id": "998587", "name": "Sync data with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
 
+    //! - DATA RECONCILIATION - !//        
+
+    {"id": "998587", "name": "Data reconciliation", "category": "Events and webhooks", "page": "Data reconciliation", "lastCat": "top"},
+
+    //! - STREAMING TO DATADOG - !//        
+
+    {"id": "998587", "name": "Streaming to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "Stream events to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
     //? - - - - - - - - - - - - - - - ?//
@@ -70,6 +79,20 @@ const results = [
     {"id": "998587", "name": "Process the events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Process the events"},
     {"id": "998587", "name": "Test your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Test your endpoint"},
     {"id": "998587", "name": "Best practices", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Best practices"},
+
+    //! - DATA RECONCILIATION - !//        
+
+    {"id": "998587", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Introduction"},
+    {"id": "998587", "name": "Definitions", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Reconciling via the events API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the events API"},
+    {"id": "998587", "name": "Reconciling via the WorkOS state API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+
+    //! - STREAMING TO DATADOG - !//        
+
+    {"id": "998587", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Introduction"},
+    {"id": "998587", "name": "Create a Datadog API key", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Configure event streaming in WorkOS", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Add the WorkOS Datadog dashboard", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -156,6 +179,11 @@ const results = [
     {"id": "998587", "name": "Ignore duplicate events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
     {"id": "998587", "name": "Obfuscate your endpoint URL", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
 
+    //! - DATA RECONCILIATION - !//        
+
+    {"id": "998587", "name": "Handling side effects in the case of event replay", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "page": "Data reconciliation", "lastCat": "Handling side effects in the case of event replay"},
+
+    {"id": "998587", "name": "Considerations for periodic reconciliation", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Considerations for periodic reconciliation"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
@@ -365,6 +393,77 @@ const results = [
     {"id": "998587", "name": "It is also possible that event data can be stale due to a retry of an older event being delivered after a newer event for the same object. Therefore, we recommend checking the timestamp of the incoming webhook data against the timestamp of the data in your system to ensure you do not overwrite your data with stale data. Each object in the payload includes a created_at field and an updated_at field.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Ignore duplicate events", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
 
     {"id": "998587", "name": "A small security measure you can incorporate is to make your webhook endpoint difficult to guess. Including a token comprised of series of random numbers and letters to your endpoint URL can prevent malicious actors from easily guessing your endpoint. For example: https://api.example.com/webhooks/n0dbga5x… is much more difficult to guess than https://api.example.com/webhooks", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "subCat3": "Obfuscate your endpoint URL", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
+
+    //! - DATA RECONCILIATION - !//        
+
+    {"id": "998587", "name": "Keep your app in sync with WorkOS.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "top"},
+
+    {"id": "998587", "name": "While the events API makes it easier to keep your app in sync with WorkOS, there may still be cases where your app gets out of sync. For example, your app may have a bug in its event processing logic or in rarer cases, may experience some data loss.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Introduction", "page": "Data reconciliation", "lastCat": "Introduction"},
+    {"id": "998587", "name": "Data reconciliation refers to the process of comparing and aligning the state of objects between WorkOS and your app to ensure consistency. Depending on the scope of the issue, you can reconcile your app state by either replaying events from the events API or by using the WorkOS state API.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Introduction", "page": "Data reconciliation", "lastCat": "Introduction"},
+
+    {"id": "998587", "name": "Data reconciliation", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Refers to the process of comparing and aligning data from different sources or systems to ensure consistency and accuracy. The goal of data reconciliation is to ensure that all relevant data sources are synchronized and reflect the same information.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Event replay", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Is the act of reprocessing recorded events in an app. It is used to recreate past event sequences for debugging, testing, auditing, or ensuring data consistency.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Side effects", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "These are secondary consequences that arise from data modifications in an app. They can alter related data, trigger additional processes, update external systems, or affect the app’s overall state. e.g., Sending an email on a user’s profile change.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Periodic reconciliation", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998587", "name": "Is the regular process of comparing and synchronizing data between systems to ensure accuracy and consistency. It involves scheduled checks to identify and resolve discrepancies in data integrity.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Definitions", "page": "Data reconciliation", "lastCat": "Definitions"},
+
+    {"id": "998587", "name": "In general, reconciling state changes between WorkOS and your app using the events API is simplest. Pick your cursor, which is usually the last known cursor you have processed, and paginate through events using the after parameter.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "page": "Data reconciliation", "lastCat": "Reconciling via the events API"},
+    {"id": "998587", "name": "For special cases such as webhook migration or event replay, you can specify a starting time for event consumption using the range_start parameter.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "page": "Data reconciliation", "lastCat": "Reconciling via the events API"},
+
+    {"id": "998587", "name": "Side effects, such as sending emails, updating 3rd party APIs, or performing other actions specific to your app, present challenges during event replay.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "subCat3": "Handling side effects in the case of event replay", "page": "Data reconciliation", "lastCat": "Handling side effects in the case of event replay"},
+    {"id": "998587", "name": "Separating data handling from business logic allows you to exercise control over what actions you want your app to make. This allows your app to replay events to sync data but bypass transactional logic e.g., not sending out the same email twice.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "subCat3": "Handling side effects in the case of event replay", "page": "Data reconciliation", "lastCat": "Handling side effects in the case of event replay"},
+
+    {"id": "998587", "name": "Your app may perform data reconciliation by syncing state via the WorkOS state APIs e.g., in disaster recovery scenarios.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "Data reconciliation using state APIs requires performing diffs to identify deletions to ensure the correct state is maintained. This introduces additional complexity, making it essential to carefully design and test the reconciliation process.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "The general approach for reconciling data via the state API is as follows:", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "Pull state from WorkOS API for the objects your app is interested in.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "SUpdate based on updated_at. If the timestamp is out of date, update the object.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "Identify deactivated objects or deletions and sync that state.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998587", "name": "If you need to force all objects to update state, perform a complete resynchronization of the affected data instead of relying solely on the updated_at timestamp. Update all objects regardless of the individual updated_at timestamp.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+
+    {"id": "998587", "name": "In some cases, you may want to run periodic reconciliation jobs to proactively check and reconcile the state between WorkOS and your app. When implementing such jobs, it is important to account for potential race conditions for concurrent updates. Additionally, consider the specific characteristics of your app to determine the frequency and scope of periodic reconciliation.", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "subCat3": "Considerations for periodic reconciliation", "page": "Data reconciliation", "lastCat": "Considerations for periodic reconciliation"},
+
+    //! - STREAMING TO DATADOG - !//        
+
+    {"id": "998587", "name": "Stream and analyze WorkOS activity in Datadog.", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "WorkOS supports real-time streaming of events to Datadog. By analyzing WorkOS activity directly in Datadog, you are able to:", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "View trends in user sign-ins, user growth, new SSO connections and more.", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "Debug customer issues related to sign-in, email verification, password resets and more", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "Generate reports of user activity per customer organization.", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "Set alerts for unexpected activity, such as sudden spike in failed password attempts.", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998587", "name": "See all of the WorkOS events that stream to Datadog in the event types documentation.", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+
+    {"id": "998587", "name": "Setting up real-time streaming of WorkOS events to Datadog only takes a few minutes and can be done in three simple steps.", "category": "Events and webhooks", "subCat1": "Introduction", "page": "Streaming to Datadog", "lastCat": "Introduction"},
+
+    {"id": "998587", "name": "First, create a new Datadog API key to give WorkOS permission to send event activity as logs to your Datadog account. While you can use an existing API key, WorkOS recommends creating a new key that will only be used for WorkOS event streaming.", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Sign in to your Datadog account.", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Navigate to the Organization Settings → API Keys page.", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Choose the New Key button", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Enter a name for your new API key.", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998587", "name": "Choose the Create Key button.", "category": "Events and webhooks", "subCat1": "Create a Datadog API key", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+
+    {"id": "998587", "name": "The next step is to configure event streaming in the WorkOS Dashboard using the Datadog API key that was created in the previous step.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Sign in to the WorkOS Dashboard", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Navigate to the Events page.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Choose the Stream to Datadog button.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Enter the Datadog API key.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Select your Datadog region.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "Choose the Save Log Stream Details button.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998587", "name": "With event streaming configured, when new events occur, WorkOS will send the events to Datadog with the source workos.", "category": "Events and webhooks", "subCat1": "Configure event streaming in WorkOS", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+
+    {"id": "998587", "name": "The final step is to add the WorkOS Datadog dashboard to your Datadog account.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Sign in to your Datadog account", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Navigate to the Dashboard List page", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Choose the + New Dashboard button.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Enter a dashboard name.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Choose the New Dashboard button.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "In the new dashboard, choose the Configure button.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Download the WorkOS Datadog dashboard JSON file", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Scroll down in the context menu and choose Import dashboard JSON.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998587", "name": "Upload the WorkOS Datadog dashboard JSON file downloaded in the previous step.", "category": "Events and webhooks", "subCat1": "Add the WorkOS Datadog dashboard", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
 
 ]
 
