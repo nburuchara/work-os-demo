@@ -3,22 +3,26 @@ import styled from 'styled-components'
 import CodeSnippetStruct from './d_Documentation_Components/d_Code_Snippet_Structure'
 import { hover } from '@testing-library/user-event/dist/hover'
 import { CSSTransition } from 'react-transition-group';
+import NestedDropdown from './d_Documentation_Components/NestedDropdown'
+
 import UserManagementOptions from './User_Mgmt_Docs/User_Mgmt_Options';
 import StandaloneAPIsOptions from './Standalone_APIs_Docs/Standalone_APIs_Options'
 import EventsWebhooksOptions from './Events_Webhooks_Docs/Events_Webhooks_Options';
 import ResourcesOptions from './Resources_Docs/Resources_Docs_Options'
-import NestedDropdown from './d_Documentation_Components/NestedDropdown'
-// import ResultsData from "../../d_Home_Components/d_Right_Pane_Header_Components/d_Docs_Results"; // Import options from separate file
+
 import AllDocsFullSearch from './d_Documentation_Search_Terms/All_Docs_Search_Terms'
 import UserManagementFullSearch from './d_Documentation_Search_Terms/User_Management_Search_Terms'
 import StandaloneAPIsFullSearch from './d_Documentation_Search_Terms/Standalone_APIs_Search_Terms'
 import EventsWebhooksFullSearch from './d_Documentation_Search_Terms/Events_Webhooks_Search_Terms'
+import ResourcesFullSearch from './d_Documentation_Search_Terms/Resources_Search_Terms'
 
 
 import APIReference from './Resources_Docs/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
 import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
 import EventsWebhooks from './Events_Webhooks_Docs/Events_Webhooks';
+import Resources from './Resources_Docs/Resources'
+
 
 const Styles = styled.div `
 
@@ -1658,7 +1662,6 @@ const Styles = styled.div `
     transform: rotate(90deg); /* Rotate the arrow 180 degrees */
 }
 
-
     // # TEXT
 
 .hdb-text p {
@@ -1667,8 +1670,6 @@ const Styles = styled.div `
 }
 
 //! - - Complex Sliding table - - !//
-
-
 
 
 // - COMPLEX TABLE HEADER - //
@@ -1706,9 +1707,6 @@ const Styles = styled.div `
    overflow-y: hidden; /* Prevent vertical scroll */
    display: flex;
 }
-
-
-
 
 .complex-sliding-table-left-cell {
    border-bottom: 1px solid #ccc;
@@ -1792,6 +1790,81 @@ const Styles = styled.div `
 .icst-cell img {
    width: 85%;
 }
+
+
+    //! - - Integrations Container (RESOURCES SECTION) - - !//
+
+    // - - INTEGRATIONS CONTAINERS - - //
+
+.integrationsContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.integrationsCol {
+    float: left;
+    text-align: left;
+    width: 46%;
+    border: 1px solid #ccc;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    border-radius: 8px;
+}
+
+.integrationsCol:hover {
+    border: 1px solid #999999;
+    cursor: pointer;
+}
+
+.integrationsCol:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.integrationsText {
+    float: left;
+    text-align: left;
+    width: 70%;
+}
+
+.integrationsLogo {
+    float: left;
+    text-align: center;
+    width: 30%;
+}
+
+    // # TEXT
+
+.integrationsText h3 {
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-bottom: 0px;
+    font-size: 80%;
+}
+
+.integrationsText-sidebar-h3 {
+    font-size: 75% !important;
+}
+
+.integrationsText p {
+    margin-top: 0px;
+    margin-left: 5%;
+    font-size 60%;
+}
+
+.integrationsText-sidebar-p {
+    font-size: 50% !important;
+}
+
+    // # LOGO
+    
+.integrationsLogo img {
+    width: 60%;
+    margin-top: 25%;
+}
+
 
     //? - - - - - END OF CONTENT CSS - - - - - //?
 
@@ -2259,6 +2332,7 @@ export default class DocsNavigationMenu extends Component {
             showStandAloneApis: false,
             showAPIReference: false ,
             showEventsWebhooks: false,
+            showResources: false,
             currentPage: "",
             currentSection: "",
             searchingSameSection: false,
@@ -2306,7 +2380,6 @@ export default class DocsNavigationMenu extends Component {
                 {id: 3, name: "Event types"},
                 {id: 4, name: "Overview"},
             ]
-            // this.closeAllOpenPages()
                 for (let i = 1; i <= 4; i++) {
                     this.setState({
                         [`mOption${i}Gap`]: "0px"
@@ -2335,6 +2408,7 @@ export default class DocsNavigationMenu extends Component {
                         standaloneAPIsDropdown: false,
                         showEventsWebhooks: false,
                         eventsAndWebhooksDropdown: false,
+                        showResources: false,
                         resourcesDropdown: false,
                         currentSection: "User Management",
                     })
@@ -2348,6 +2422,7 @@ export default class DocsNavigationMenu extends Component {
                         userManagementDropdown: false,
                         standaloneAPIsDropdown: true,
                         eventsAndWebhooksDropdown: false,
+                        showResources: false,
                         resourcesDropdown: false,
                         currentSection: "Standalone APIs",
                     })
@@ -2361,17 +2436,25 @@ export default class DocsNavigationMenu extends Component {
                         userManagementDropdown: false,
                         standaloneAPIsDropdown: false,
                         eventsAndWebhooksDropdown: true,
+                        showResources: false,
                         resourcesDropdown: false,
                         currentSection: "Events and webhooks",
                     })
                     if (this.state.searchFilterTitle === "🔎") {this.setState({searchFilterTitle: "🔎 EAW", searchFilterSelected: "Events and webhooks"})}
                 } else {
                     this.setState({
+                        showDocsHome: false,
+                        showStandAloneApis: false,
+                        showUserManagementDoc: false,
+                        showEventsWebhooks: false,
                         userManagementDropdown: false,
                         standaloneAPIsDropdown: false,
                         eventsAndWebhooksDropdown: false,
-                        resourcesDropdown: true
+                        showResources: true,
+                        resourcesDropdown: true,
+                        currentSection: "Resources",
                     })
+                    if (this.state.searchFilterTitle === "🔎") {this.setState({searchFilterTitle: "🔎 R", searchFilterSelected: "Resources"})}
                 }
             }, 500)
             resolve();
@@ -2399,50 +2482,24 @@ export default class DocsNavigationMenu extends Component {
         });
     }
 
-    closeAllOpenPages = async () => {
-        await new Promise((resolve) => {
-            if (this.state.prevSelectedOption === "menuOption1" && this.state.menuOption1 !== true) {
-                if (this.menuOption1Ref.current) {
-                    this.setState({menuOption1SearchTermObject: null})
-                    this.menuOption1Ref.current.hideAllPages();
-                }
-            } else if (this.state.prevSelectedOption === "menuOption2" && this.state.menuOption2 !== true) {
-                if (this.menuOption2Ref.current) {
-                    this.setState({menuOption2SearchTermObject: null})
-                    this.menuOption2Ref.current.hideAllPages();
-                }
-            } else if (this.state.prevSelectedOption === "menuOption3" && this.state.menuOption3 !== true) {
-                if (this.menuOption3Ref.current) {
-                    this.setState({menuOption3SearchTermObject: null})
-                    this.menuOption3Ref.current.hideAllPages();
-                }
-            }
-            resolve();
-        });
-    }
-
     handleMenuItemSelected = (item) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         this.setState({currentPage: item})
         if (menuOption1 === true) {
             this.setState({
-                // showUserManagementDoc: true,
-                // showStandAloneApis: false,
-                // showEventsWebhooks: false,
-                // showResources: false,
                 usrMgmtScrollID: item,
             })
         } else if (menuOption2 === true) {
             this.setState({
-                // showUserManagementDoc: false,
-                // showStandAloneApis: true,
-                // showEventsWebhooks: false,
-                // showResources: false,
                 standaloneApisScrollID: item,
             })
         } else if (menuOption3 === true) {
             this.setState({
                 eventsWebhooksScrollID: item
+            })
+        } else if (menuOption4 === true) {
+            this.setState({
+                resourcesScrollID: item
             })
         }
     }
@@ -2590,7 +2647,7 @@ export default class DocsNavigationMenu extends Component {
                 } else if (searchFilterSelected === "Events and webhooks") {
                     currentSectionSearching = EventsWebhooksFullSearch
                 } else if (searchFilterSelected === "Resources") {
-                    currentSectionSearching = AllDocsFullSearch
+                    currentSectionSearching = ResourcesFullSearch
                 } else if (searchFilterSelected === "All docs") {
                     currentSectionSearching = AllDocsFullSearch
                 }
@@ -2647,17 +2704,17 @@ export default class DocsNavigationMenu extends Component {
         const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        if (menuOption1 === true) {
-            currentSectionSearching = UserManagementFullSearch
-        } else if (menuOption2 === true) {
-            currentSectionSearching = StandaloneAPIsFullSearch
-        } else if (menuOption3 === true) {
-            currentSectionSearching = EventsWebhooksFullSearch
-        } else if (menuOption4 === true) {
-            currentSectionSearching = AllDocsFullSearch
-        } else {
-            currentSectionSearching = AllDocsFullSearch
-        }
+        // if (menuOption1 === true) {
+        //     currentSectionSearching = UserManagementFullSearch
+        // } else if (menuOption2 === true) {
+        //     currentSectionSearching = StandaloneAPIsFullSearch
+        // } else if (menuOption3 === true) {
+        //     currentSectionSearching = EventsWebhooksFullSearch
+        // } else if (menuOption4 === true) {
+        //     currentSectionSearching = AllDocsFullSearch
+        // } else {
+        //     currentSectionSearching = AllDocsFullSearch
+        // }
 
         if (searchFilterSelected === "User Management") {
             currentSectionSearching = UserManagementFullSearch
@@ -2666,7 +2723,7 @@ export default class DocsNavigationMenu extends Component {
         } else if (searchFilterSelected === "Events and webhooks") {
             currentSectionSearching = EventsWebhooksFullSearch
         } else if (searchFilterSelected === "Resources") {
-            currentSectionSearching = AllDocsFullSearch
+            currentSectionSearching = ResourcesFullSearch
         } else if (searchFilterSelected === "All docs") {
             currentSectionSearching = AllDocsFullSearch
         }
@@ -2811,6 +2868,10 @@ export default class DocsNavigationMenu extends Component {
                                 this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
                                     this.menuOptionClicked(3)
                                 })
+                            } else if (category === "Resources") {
+                                this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption3: false}, () => {
+                                    this.menuOptionClicked(4)
+                                })
                             }
                             resolve();
                         });
@@ -2834,6 +2895,10 @@ export default class DocsNavigationMenu extends Component {
                 } else if (category === "Events and webhooks") {
                     this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption4: false}, () => {
                         this.menuOptionClicked(3)
+                    })
+                } else if (category === "Resources") {
+                    this.setState({transitioningMenu: true, menuOption1: false, menuOption2: false, menuOption3: false}, () => {
+                        this.menuOptionClicked(4)
                     })
                 }
                 resolve();
@@ -2891,6 +2956,21 @@ export default class DocsNavigationMenu extends Component {
                             transitioningMenu: false
                         })
                     });
+                } else if (menuOption4 === true) {
+                    if (this.state.prevSelectedOption !== option.page) {
+                        this.handleSearchWithinNested(option.page, 4);
+                    }
+                    this.setState({
+                        menuOption4SearchCategory: category,
+                        menuOption4SearchTermObject: option,
+                        currentPage: searchedPage
+                    }, () => {
+                        // Call the callback function to perform search
+                        this.setState({
+                            previouslySearched: option.page,
+                            transitioningMenu: false
+                        })
+                    });
                 }
             }, searchingSamePage ? 0 : 1000)
             resolve();
@@ -2906,8 +2986,8 @@ export default class DocsNavigationMenu extends Component {
                 searchPath = this.nestedDropdownRef.searchMenuItems(StandaloneAPIsOptions, searchTerm);
             } else if (searchID === 3) {
                 searchPath = this.nestedDropdownRef.searchMenuItems(EventsWebhooksOptions, searchTerm);
-            } else {
-                
+            } else if (searchID === 4) {
+                searchPath = this.nestedDropdownRef.searchMenuItems(ResourcesOptions, searchTerm);
             }
           this.setSearchPath(searchPath)
         }
@@ -2922,6 +3002,7 @@ export default class DocsNavigationMenu extends Component {
             menuOption1SearchTermObject: null,
             menuOption2SearchTermObject: null,
             menuOption3SearchTermObject: null,
+            menuOption4SearchTermObject: null,
             searchedData: "",
             clearSearchBtn: false,
         })
@@ -3062,8 +3143,8 @@ export default class DocsNavigationMenu extends Component {
         const { sidebarMenuClicked } = this.state;
         
             //* - DOUMENTATION PAGES VARS - *//
-        const { showDocsHome, showDocsLoadingScreen, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks } = this.state;
-        const { usrMgmtScrollID, standaloneApisScrollID, eventsWebhooksScrollID } = this.state;
+        const { showDocsHome, showDocsLoadingScreen, showUserManagementDoc, showStandAloneApis, showAPIReference, showEventsWebhooks, showResources } = this.state;
+        const { usrMgmtScrollID, standaloneApisScrollID, eventsWebhooksScrollID, resourcesScrollID } = this.state;
 
             //* - SEARCH FILTERR VAR(S) - *//
         let searchFilterOptionFontWeight = "normal";
@@ -3186,7 +3267,7 @@ export default class DocsNavigationMenu extends Component {
                                             setSearchPath={this.setSearchPath}
                                             getMenuItemSelected={this.handleMenuItemSelected} 
                                             menuItems={ResourcesOptions} 
-                                            maximumDepth={2}
+                                            maximumDepth={5}
                                             ref={(ref) => { this.nestedDropdownRef = ref; }} 
                                             />
                                         </div>
@@ -3535,7 +3616,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
 
-                    {/* {showAPIReference && <APIReference sidebarMenuClicked={sidebarMenuClicked}/>} */}
+                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
 
             </Styles>
         )

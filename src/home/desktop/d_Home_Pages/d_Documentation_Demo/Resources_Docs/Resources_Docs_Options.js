@@ -4,387 +4,387 @@ const docs_sidebar_options = [
         levelName: "API Reference",
         sections: [
             { 
-                id: 0,
+                id: 1,
                 levelName: "Overview",
                 sections: [
                     {   
-                        id: 0, 
+                        id: 2, 
                         levelName: 'Overview',
                     },
                     {
-                        id: 1, 
+                        id: 3, 
                         levelName: 'Client libraries',
                     },
                     {
-                        id: 2, 
+                        id: 4, 
                         levelName: 'Testing',
                     },
                     {
-                        id: 3, 
+                        id: 5, 
                         levelName: 'API Keys',
                     },
                     {
-                        id: 4, 
+                        id: 6, 
                         levelName: 'Errors',
                     },
                     {
-                        id: 5, 
+                        id: 7, 
                         levelName: 'Pagination',
                     },
                     {
-                        id: 6, 
+                        id: 8, 
                         levelName: 'Idempotency',
                     },
                     {
-                        id: 7, 
+                        id: 9, 
                         levelName: 'Rate limits',
                     },
                 ]
             },
             {
-                id: 1,
+                id: 10,
                 levelName: "Events",
                 sections: [
                     {
-                        id: 0,
+                        id: 11,
                         levelName: "Overview",
                     },
                     {
-                        id: 1,
+                        id: 12,
                         levelName: "List events",
                     }
                 ]
             },
             {
-                id: 2,
+                id: 13,
                 levelName: "Organizations",
                 sections: [
                     {
-                        id: 0,
+                        id: 14,
                         levelName: "Organization",
                         sections: [
                             {
-                                id: 0,
+                                id: 15,
                                 levelName: "Get an Organization",
                             },
                             {
-                                id: 1,
+                                id: 16,
                                 levelName: "List Organizations",
                             },
                             {
-                                id: 2,
+                                id: 17,
                                 levelName: "Create an Organization",
                             },
                             {
-                                id: 3,
+                                id: 18,
                                 levelName: "Update an Organization",
                             },
                             {
-                                id: 4,
+                                id: 19,
                                 levelName: "Delete an Organization",
                             },
                         ]
                     },
                     {
-                        id: 1,
+                        id: 20,
                         levelName: "Organization Domain",
                     }
                 ]
             },
             {
-                id: 3,
+                id: 21,
                 levelName: "User Management",
                 sections: [
                     {
-                        id: 0,
+                        id: 22,
                         levelName: 'Overview',
                     },
                     {
-                        id: 1,
+                        id: 23,
                         levelName: 'User',
                         sections: [
                             {
-                                id: 0,
+                                id: 24,
                                 levelName: "Get a User",
                             },
                             {
-                                id: 1,
+                                id: 25,
                                 levelName: "List Users",
                             },
                             {
-                                id: 2,
+                                id: 26,
                                 levelName: "Create a User",
                             },
                             {
-                                id: 3,
+                                id: 27,
                                 levelName: "Update a User",
                             },
                             {
-                                id: 4,
+                                id: 28,
                                 levelName: "Delete a User",
                             },
                         ]
                     },
                     {
-                        id: 2,
+                        id: 29,
                         levelName: "Identity",
                         sections: [
                             {
-                                id: 0,
+                                id: 30,
                                 levelName: 'List identities',
                             }
                         ]
                     },
                     {
-                        id: 3,
+                        id: 31,
                         levelName: "Authentication",
                         sections: [
                             {
-                                id: 0,
+                                id: 32,
                                 levelName: "Get authorization URL",
                                 sections: [
                                     {
-                                        id: 0,
+                                        id: 33,
                                         levelName: "Redirect URI",
                                     },
                                     {
-                                        id: 1,
+                                        id: 34,
                                         levelName: "Error codes",
                                     }
                                 ]
                             },
                             {
-                                id: 1,
+                                id: 35,
                                 levelName: "Authkit, OAuth, SSO",
                             },
                             {
-                                id: 2,
+                                id: 36,
                                 levelName: "Password",
                             },
                             {
-                                id: 3,
+                                id: 37,
                                 levelName: "Magic Auth",
                             },
                             {
-                                id: 4,
+                                id: 38,
                                 levelName: "Refresh token",
                             },
                             {
-                                id: 5,
+                                id: 39,
                                 levelName: "Email verification code",
                             },
                             {
-                                id: 6,
+                                id: 40,
                                 levelName: "TOTP code",
                             },
                             {
-                                id: 7,
+                                id: 41,
                                 levelName: "Organization selection",
                             }
                         ]
                     },
                     {
-                        id: 4,
+                        id: 42,
                         levelName: "Session tokens",
                         sections: [
                             {
-                                id: 0,
+                                id: 43,
                                 levelName: "JWKS",
                             },
                             {
-                                id: 1,
+                                id: 44,
                                 levelName: "Access token",
                             },
                             {
-                                id: 2,
+                                id: 45,
                                 levelName: "Refresh token",
                             }
                         ]
                     },
                     {
-                        id: 5,
+                        id: 46,
                         levelName: "Authentication errors",
                         sections: [
                             {
-                                id: 0,
+                                id: 47,
                                 levelName: "Email verification",
                             },
                             {
-                                id: 1,
+                                id: 48,
                                 levelName: "MFA enrollments",
                             },
                             {
-                                id: 2,
+                                id: 49,
                                 levelName: "MFA challenge",
                             },
                             {
-                                id: 3,
+                                id: 50,
                                 levelName: "SSO required",
                             },
                             {
-                                id: 4,
+                                id: 51,
                                 levelName: "Organization auth. required",
                             }
                         ]
                     },
                     {
-                        id: 6,
+                        id: 52,
                         levelName: "Magic Auth",
                         sections: [
                             {
-                                id: 0, 
+                                id: 53, 
                                 levelName: "Get a Magic Auth code",
                             },
                             {
-                                id: 1,
+                                id: 54,
                                 levelName: "Create a Magic Auth code",
                             },
                             {
-                                id: 2,
+                                id: 55,
                                 levelName: "Send Magic Auth code",
                             }
                         ]
                     },
                     {
-                        id: 7,
+                        id: 56,
                         levelName: "Multi-Factor Auth",
                         sections: [
                             {
-                                id: 0,
+                                id: 57,
                                 levelName: "Authentication factor",
                             }, 
                             {
-                                id: 1,
+                                id: 58,
                                 levelName: "Authentication challenge",
                             },
                             {
-                                id: 2,
+                                id: 59,
                                 levelName: "Enroll an auth factor",
                             },
                             {
-                                id: 3,
+                                id: 60,
                                 levelName: "List auth factors",
                             }
                         ]
                     },
                     {
-                        id: 8,
+                        id: 61,
                         levelName: "Password reset",
                         sections: [
                             {
-                                id: 0,
+                                id: 62,
                                 levelName: "Send email",
                             },
                             {
-                                id: 1, 
+                                id: 63, 
                                 levelName: "Reset password",
                             }
                         ]
                     },
                     {
-                        id: 9,
+                        id: 64,
                         levelName: "Organization membership",
                         sections: [
                             {
-                                id: 0,
+                                id: 65,
                                 levelName: "Get membership",
                             },
                             {
-                                id: 1,
+                                id: 66,
                                 levelName: "List memberships",
                             },
                             {
-                                id: 2,
+                                id: 67,
                                 levelName: "Create membership",
                             },
                             {
-                                id: 3,
+                                id: 68,
                                 levelName: "Update membership",
                             },
                             {
-                                id: 4,
+                                id: 69,
                                 levelName: "Delete membership",
                             },
                         ]
                     },
                     {
-                        id: 10,
+                        id: 70,
                         levelName: "Invitation",
                         sections: [
                             {
-                                id: 0,
+                                id: 71,
                                 levelName: "Get an invitation",
                             },
                             {
-                                id: 1,
+                                id: 72,
                                 levelName: "List invitations",
                             },
                             {
-                                id: 2,
+                                id: 73,
                                 levelName: "Send an invitation",
                             },
                             {
-                                id: 3,
+                                id: 74,
                                 levelName: "Revoke an invitation",
                             },
                         ]
                     },
                     {
-                        id: 11,
+                        id: 75,
                         levelName: "Logout",
                     }
                 ]
             },
             {
-                id: 4,
+                id: 76,
                 levelName: "Single Sign-On",
                 sections: [
                     {
-                        id: 0,
+                        id: 77,
                         levelName: "Overview",
                     },
                     {
-                        id: 1,
+                        id: 78,
                         levelName: "Get authorization URL",
                         sections: [
                             {
-                                id: 0,
+                                id: 79,
                                 levelName: "Redirect URI",
                             },
                             {
-                                id: 1,
+                                id: 80,
                                 levelName: "Error codes",
                             }
                         ]
                     },
                     {
-                        id: 2,
+                        id: 81,
                         levelName: "Profile",
                         sections: [
                             {
-                                id: 0, 
+                                id: 82, 
                                 levelName: "Get a Profile and Token",
                             },
                             {
-                                id: 1,
+                                id: 83,
                                 levelName: "Get a User Profile",
                             }
                         ]
                     },
                     {
-                        id: 3,
+                        id: 84,
                         levelName: "Connections",
                         sections: [
                             {
-                                id: 0,
+                                id: 85,
                                 levelName: "Get a Connection",
                             },
                             {
-                                id: 1,
+                                id: 86,
                                 levelName: "List Connections",
                             },
                             {
-                                id: 2,
+                                id: 87,
                                 levelName: "Delete a Connection",
                             }
                         ]
@@ -392,55 +392,55 @@ const docs_sidebar_options = [
                 ]
             },
             {
-                id: 5,
+                id: 88,
                 levelName: "Directory Sync",
                 sections: [
                     {
-                        id: 0,
+                        id: 89,
                         levelName: "Overview",
                     },
                     {
-                        id: 1,
+                        id: 90,
                         levelName: "Directory",
                         sections: [
                             {
-                                id: 0,
+                                id: 91,
                                 levelName: "Get a Directory",
                             },
                             {
-                                id: 1,
+                                id: 92,
                                 levelName: "List Directories",
                             },
                             {
-                                id: 2,
+                                id: 93,
                                 levelName: "Delete directories",
                             }
                         ]
                     },
                     {
-                        id: 2,
+                        id: 94,
                         levelName: "Directory User",
                         sections: [
                             {
-                                id: 0,
+                                id: 95,
                                 levelName: "Get a Directory User",
                             },
                             {
-                                id: 1,
+                                id: 96,
                                 levelName: "List Directory Users",
                             }
                         ]
                     },
                     {
-                        id: 3,
+                        id: 97,
                         levelName: "Directory Group",
                         sections: [
                             {
-                                id: 0,
+                                id: 98,
                                 levelName: "Get a Directory Group",
                             },
                             {
-                                id: 1,
+                                id: 99,
                                 levelName: "List Directory Groups",
                             }
                         ]
@@ -448,87 +448,87 @@ const docs_sidebar_options = [
                 ]
             },
             {
-                id: 6,
+                id: 100,
                 levelName: "Admin Portal",
                 sections: [
                     {
-                        id: 0,
+                        id: 101,
                         levelName: "Overview",
                     },
                     {
-                        id: 1,
+                        id: 102,
                         levelName: "Portal Link",
                     },
                     {
-                        id: 2,
+                        id: 103,
                         levelName: "Generate a Portal Link",
                     }
                 ]
             },
             {
-                id: 7,
+                id: 104,
                 levelName: "Audit Logs",
                 sections: [
                     {
-                        id: 0,
+                        id: 105,
                         levelName: "Overview",
                     }, 
                     {
-                        id: 1,
+                        id: 106,
                         levelName: "Create Event",
                     },
                     {
-                        id: 2,
+                        id: 107,
                         levelName: "Create Schema",
                     },
                     {
-                        id: 3,
+                        id: 108,
                         levelName: "List Schemas",
                     },
                     {
-                        id: 4,
+                        id: 109,
                         levelName: "List Actions",
                     },
                     {
-                        id: 5,
+                        id: 110,
                         levelName: "Audit Log Export",
                     },
                     {
-                        id: 6,
+                        id: 111,
                         levelName: "Create Export",
                     },
                     {
-                        id: 7,
+                        id: 112,
                         levelName: "Get Export",
                     },
                     {
-                        id: 8,
+                        id: 113,
                         levelName: "Get Retention",
                     },
                     {
-                        id: 9,
+                        id: 114,
                         levelName: "Set Retention",
                     }
                 ]
             },
             {
-                id: 8,
+                id: 115,
                 levelName: "Domain Verification",
                 sections: [
                     {
-                        id: 0,
+                        id: 116,
                         levelName: "Organization Domain",
                         sections: [
                             {
-                                id: 0,
+                                id: 117,
                                 levelName: "Get",
                             },
                             {
-                                id: 1,
+                                id: 118,
                                 levelName: "Create",
                             },
                             {
-                                id: 2,
+                                id: 119,
                                 levelName: "Verify",
                             },
                         ]
@@ -536,57 +536,57 @@ const docs_sidebar_options = [
                 ]
             },
             {
-                id: 9,
+                id: 120,
                 levelName: "Multi-Factor Auth",
                 sections: [
                     {
-                        id: 0,
+                        id: 121,
                         levelName: "Authentication Factor",
                     },
                     {
-                        id: 1,
+                        id: 122,
                         levelName: "Authentication Challenge",
                     },
                     {
-                        id: 2,
+                        id: 123,
                         levelName: "Enroll Factor",
                     },
                     {
-                        id: 3,
+                        id: 124,
                         levelName: "Challenge Factor",
                     },
                     {
-                        id: 4,
+                        id: 125,
                         levelName: "Verify Challenge",
                     },
                     {
-                        id: 5,
+                        id: 126,
                         levelName: "Get Authentication Factor",
                     },
                     {
-                        id: 6,
+                        id: 127,
                         levelName: "Delete Authentication Factor",
                     },
                 ]
             },
             {
-                id: 10,
+                id: 128,
                 levelName: "Deprecated APIs",
                 sections: [
                     {
-                        id: 0,
+                        id: 129,
                         levelName: "Magic Link",
                         sections: [
                             {
-                                id: 0,
+                                id: 130,
                                 levelName: "Passwordless Session",
                             },
                             {
-                                id: 1,
+                                id: 131,
                                 levelName: "Create Passwordless Sessions",
                             },
                             {
-                                id: 2,
+                                id: 132,
                                 levelName: "Email a Magic Link"
                             }
                         ]
@@ -596,321 +596,321 @@ const docs_sidebar_options = [
         ]
     },
     {
-        id: 1,
+        id: 133,
         levelName: "Integrations",
         sections: [
             {
-                id: 0,
+                id: 134,
                 levelName: "SAML",
             },
             {
-                id: 1,
+                id: 135,
                 levelName: "SCIM"
             },
             {
-                id: 2,
+                id: 136,
                 levelName: "SFTP"
             },
             {
-                id: 3,
+                id: 137,
                 levelName: "OpenID Connect"
             },
             {
-                id: 4,
+                id: 138,
                 levelName: "Access People HR",
             },
             {
-                id: 5,
+                id: 139,
                 levelName: "ADP OpenID Connect"
             },
             {
-                id: 6,
+                id: 140,
                 levelName: "AuthO"
             },
             {
-                id: 7,
+                id: 141,
                 levelName: "AWS Cognito"
             },
             {
-                id: 8,
+                id: 142,
                 levelName: "Bamboo HR"
             },
             {
-                id: 9,
+                id: 143,
                 levelName: "Breathe HR"
             },
             {
-                id: 10,
+                id: 144,
                 levelName: "Bubble Plugin"
             },
             {
-                id: 11,
+                id: 145,
                 levelName: "CAS SAML"
             },
             {
-                id: 12,
+                id: 146,
                 levelName: "Cezanne HR"
             },
             {
-                id: 13,
+                id: 147,
                 levelName: "ClassLink"
             },
             {
-                id: 14,
+                id: 148,
                 levelName: "Cloudflare"
             },
             {
-                id: 15,
+                id: 149,
                 levelName: "CyberArk SAML"
             },
             {
-                id: 16,
+                id: 150,
                 levelName: "CyberArk SCIM"
             },
             {
-                id: 17,
+                id: 151,
                 levelName: "Duo"
             },
             {
-                id: 18,
+                id: 152,
                 levelName: "Entra ID SAML (fka Azure AD)"
             },
             {
-                id: 19,
+                id: 153,
                 levelName: "Entra ID SCIM (fka Azure AD)"
             },
             {
-                id: 20,
+                id: 154,
                 levelName: "Firebase"
             },
             {
-                id: 21,
+                id: 155,
                 levelName: "Fourth"
             },
             {
-                id: 22,
+                id: 156,
                 levelName: "GitHub OAuth"
             },
             {
-                id: 23,
+                id: 157,
                 levelName: "Google Directory Sync"
             },
             {
-                id: 24,
+                id: 158,
                 levelName: "Google OAuth"
             },
             {
-                id: 25,
+                id: 159,
                 levelName: "Google SAML"
             },
             {
-                id: 26,
+                id: 160,
                 levelName: "HiBob"
             },
             {
-                id: 27,
+                id: 161,
                 levelName: "JumpCloud SAML"
             },
             {
-                id: 28,
+                id: 162,
                 levelName: "JumpCloud SCIM"
             },
             {
-                id: 29,
+                id: 163,
                 levelName: "Keycloak"
             },
             {
-                id: 30,
+                id: 164,
                 levelName: "Last Pass"
             },
             {
-                id: 31,
+                id: 165,
                 levelName: "Login.gov OpenID Connect"
             },
             {
-                id: 32,
+                id: 166,
                 levelName: "Microsoft AD FS SAML"
             },
             {
-                id: 33,
+                id: 167,
                 levelName: "Microsoft OAuth"
             },
             {
-                id: 34,
+                id: 168,
                 levelName: "miniOrange"
             },
             {
-                id: 35,
+                id: 169,
                 levelName: "NetIQ"
             },
             {
-                id: 36,
+                id: 170,
                 levelName: "NextAuth.js"
             },
             {
-                id: 37,
+                id: 171,
                 levelName: "Okta SAML"
             },
             {
-                id: 38,
+                id: 172,
                 levelName: "Okta SCIM"
             },
             {
-                id: 39,
+                id: 173,
                 levelName: "OneLogin SAML"
             },
             {
-                id: 40,
+                id: 174,
                 levelName: "OneLogin SCIM"
             },
             {
-                id: 41,
+                id: 175,
                 levelName: "Oracle SAML"
             },
             {
-                id: 42,
+                id: 176,
                 levelName: "PingFederate SAML"
             },
             {
-                id: 43,
+                id: 177,
                 levelName: "PingFederate SCIM"
             },
             {
-                id: 44,
+                id: 178,
                 levelName: "PingOne SAML"
             },
             {
-                id: 45,
+                id: 179,
                 levelName: "React Native Expo"
             },
             {
-                id: 46,
+                id: 180,
                 levelName: "Rippling SAML"
             },
             {
-                id: 47,
+                id: 181,
                 levelName: "Rippling SCIM"
             },
             {
-                id: 48,
+                id: 182,
                 levelName: "Salesforce"
             },
             {
-                id: 49,
+                id: 183,
                 levelName: "Shibboleth Generic SAML"
             },
             {
-                id: 50,
+                id: 184,
                 levelName: "Shibboleth Unsolicited SAML"
             },
             {
-                id: 51,
+                id: 185,
                 levelName: "SimpleSAMLphp"
             },
             {
-                id: 52,
+                id: 186,
                 levelName: "Supabase"
             },
             {
-                id: 53,
+                id: 187,
                 levelName: "VMWare"
             },
             {
-                id: 54,
+                id: 188,
                 levelName: "Workday"
             },
         ]
     },
     {
-        id: 2,
+        id: 189,
         levelName: "Migrate to WorkOS",
         sections: [
             {
-                id: 0,
+                id: 190,
                 levelName: "AuthO"
             },
             {
-                id: 1,
+                id: 191,
                 levelName: "AWS Cognito"
             },
             {
-                id: 2,
+                id: 192,
                 levelName: "Firebase"
             },
             {
-                id: 3,
+                id: 193,
                 levelName: "Other Services"
             },
             {
-                id: 4,
+                id: 194,
                 levelName: "Single Sign-On"
             }
         ]
     },
     {
-        id: 3,
+        id: 195,
         levelName: "SDKs",
         sections: [
             {
-                id: 0,
+                id: 196,
                 levelName: "Node.js"
             },
             {
-                id: 1,
+                id: 197,
                 levelName: "Go",
             },
             {
-                id: 2,
+                id: 198,
                 levelName: "Ruby"
             },
             {
-                id: 3,
+                id: 199,
                 levelName: "Python"
             },
             {
-                id: 4,
+                id: 200,
                 levelName: "PHP"
             },
             {
-                id: 5,
+                id: 201,
                 levelName: "Laravel"
             },
             {
-                id: 6,
+                id: 202,
                 levelName: "Java"
             },
             {
-                id: 7,
+                id: 203,
                 levelName: ".NET"
             },
             {
-                id: 8,
+                id: 204,
                 levelName: "Elixir"
             },
             {
-                id: 9,
+                id: 205,
                 levelName: "Django"
             },
             {
-                id: 10,
+                id: 206,
                 levelName: "OmniAuth"
             },
             {
-                id: 11,
+                id: 207,
                 levelName: "Ueberauth"
             }
         ]
     },
     {
-        id: 4,
+        id: 208,
         levelName: "Dashboard"
     },
     {
-        id: 5,
+        id: 209,
         levelName: "Glossary"
     },
     {
-        id: 6,
+        id: 210,
         levelName: "Changelog"
     }
 ]

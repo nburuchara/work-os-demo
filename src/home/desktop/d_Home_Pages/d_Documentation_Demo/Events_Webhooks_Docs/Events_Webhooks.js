@@ -54,7 +54,6 @@ export default class EventsWebhooks extends Component {
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
-            // this.hideAllPages()
             this.getSelectedPage(this.props.scrollToID)
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
