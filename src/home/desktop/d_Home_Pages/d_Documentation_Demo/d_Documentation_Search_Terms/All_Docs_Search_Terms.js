@@ -16505,6 +16505,30 @@ const results = [
     "subCat1": "Integrations",
     "page": "SFTP",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "OpenID Connect",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "OpenID Connect",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Access People HR",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Access People HR",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "ADP OpenID Connect",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "ADP OpenID Connect",
+    "lastCat": "top"
   }
 ];
 export default results;

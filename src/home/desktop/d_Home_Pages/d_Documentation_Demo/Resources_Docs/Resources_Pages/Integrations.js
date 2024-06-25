@@ -16,6 +16,9 @@ export default class Integrations extends Component {
                 //* - INTEGRATIONS SECTIONS - *//
             saml: false,
             scim: false,
+            openIDConnect: false,
+            accessPeopleHR: false,
+            adpOpenIDConnect: false,
 
             prevSelectedPage: "",
 
@@ -57,12 +60,18 @@ export default class Integrations extends Component {
             "saml": "saml",
             "scim": "scim",
             "sftp": "sftp",
+            "openIDConnect": "openIDConnect",
+            "accessPeopleHR": "accessPeopleHR",
+            "adpOpenIDConnect": "adpOpenIDConnect",
         };
       
         const page = pageMap[selectedPage];
         if (page) {
-          this.loadSelectedPage(page);
-          this.props.hideIntegrationsPage()
+            this.loadSelectedPage(page);
+            this.props.hideIntegrationsPage()
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
@@ -89,8 +98,10 @@ export default class Integrations extends Component {
 
     closeAllPagesExceptSelectedPage = (searchedTerm) => {
         const pageMap = {
-            "Overview": "apiReference",
-            "Integrations" : "integrations",
+            "saml": "saml",
+            "scim": "scim",
+            "sftp": "sftp",
+            "openIDConnect": "openIDConnect",
         };
         const keys = Object.keys(pageMap);
         for (let i = 0; i < keys.length; i++) {
@@ -144,7 +155,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -253,7 +264,7 @@ export default class Integrations extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>contact support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
                                 </div>
                             </div>
 
@@ -304,7 +315,7 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Organization you’d like to enable a SCIM Directory Sync connection for.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Organization’s page go to “Actions” and then click “Add Directory”.</p>
 
-                            <div style={{marginBottom: "5%"}} id='img135' className={`enlargable-image-container ${this.state.enlargedImageId === 'img135' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img135')}>
+                            <div id='img135' className={`enlargable-image-container ${this.state.enlargedImageId === 'img135' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img135')}>
                                 <img  src='/assets/scim_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -312,7 +323,7 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Create Directory” button.</p>
 
-                            <div style={{marginBottom: "5%"}} id='img136' className={`enlargable-image-container ${this.state.enlargedImageId === 'img136' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img136')}>
+                            <div id='img136' className={`enlargable-image-container ${this.state.enlargedImageId === 'img136' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img136')}>
                                 <img  src='/assets/scim_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -371,6 +382,7 @@ export default class Integrations extends Component {
                         </div>
                     </div>
                 </CSSTransition>
+
                 <CSSTransition in={sftp}
                 timeout={500}
                 classNames="docs-side-panel"
@@ -729,7 +741,7 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”. Select “SFTP” as the directory type, and then enter a name for this directory.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Create Directory”.</p>
 
-                            <div style={{marginBottom: "5%"}} id='img139' className={`enlargable-image-container ${this.state.enlargedImageId === 'img139' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img139')}>
+                            <div id='img139' className={`enlargable-image-container ${this.state.enlargedImageId === 'img139' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img139')}>
                                 <img  src='/assets/sftp_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -745,7 +757,7 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Retrieve the public key that will be used for SFTP from the organization’s admin.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Update Directory” in the WorkOS Dashboard.</p>
 
-                            <div style={{marginBottom: "5%"}} id='img140' className={`enlargable-image-container ${this.state.enlargedImageId === 'img140' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img140')}>
+                            <div id='img140' className={`enlargable-image-container ${this.state.enlargedImageId === 'img140' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img140')}>
                                 <img  src='/assets/sftp_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -765,7 +777,7 @@ export default class Integrations extends Component {
 
                             </div>
 
-                            <div style={{marginBottom: "5%"}} id='img141' className={`enlargable-image-container ${this.state.enlargedImageId === 'img141' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img141')}>
+                            <div id='img141' className={`enlargable-image-container ${this.state.enlargedImageId === 'img141' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img141')}>
                                     <img  src='/assets/sftp_img4.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -780,7 +792,7 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After adding the public key, WorkOS generates a username. You will see the green “Linked” icon appear.</p>
 
-                            <div style={{marginBottom: "5%"}} id='img142' className={`enlargable-image-container ${this.state.enlargedImageId === 'img142' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img142')}>
+                            <div id='img142' className={`enlargable-image-container ${this.state.enlargedImageId === 'img142' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img142')}>
                                     <img  src='/assets/sftp_img5.avif' alt="Enlargable" className="image" />
                             </div>
 
@@ -848,9 +860,460 @@ export default class Integrations extends Component {
                     </div>
                 </CSSTransition>
 
+                <CSSTransition in={openIDConnect}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>OpenID Connect</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a new generic OIDC connection.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>connection</label>. Often, the information required to create a connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create an OpenID Connect (OIDC) connection, you’ll need four pieces of information: a <label className='demo-docs-hyperlink'>Redirect URI</label>, a <label className='demo-docs-hyperlink'>Client ID</label>, a <label className='demo-docs-hyperlink'>Client Secret</label>, and a <label className='demo-docs-hyperlink'>Discovery Endpoint</label>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the Redirect URI. It’s readily available in your connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. The Redirect URI is the location an Identity Provider redirects its authentication response to.</p>  
+
+                            <div id='img144' className={`enlargable-image-container ${this.state.enlargedImageId === 'img144' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img144')}>
+                                    <img  src='/assets/openid_connect_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Client ID, Client Secret, as well as the Discovery Endpoint.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s OpenID Connect configuration in their Identity Provider admin dashboard. But, should that not be the case during your setup, here’s how to obtain them.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an Application with your IdP</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For SSO to properly function with your Identity Provider, you’ll need to create and configure your OpenID Connect application to support the authorization code grant type and have the redirect URI from WorkOS listed as your login redirect URI.</p>
+                            
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add claims to the ID token</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add the <span>sub</span>, <span>email</span>, <span>given_name</span>, and <span>family_name</span> claims to the user ID token in your OIDC provider settings. These claims map to the <span>idp_id</span>, <span>email</span>, <span>first_name</span>, and <span>last_name</span> attributes in the user profile returned by WorkOS. If the <span>given_name</span> claim is not available, the <span>name</span> claim will be mapped to the <span>first_name</span> attribute instead. For many providers, these claims are included by default, but for other providers you will need to add these claims.</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add the <span>groups</span> claim to the user ID token in your OIDC provider settings. This claim should map to a user’s group membership.</p>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provide your Client Credentials</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After creating an OpenID Connect application, a Client ID and Client Secret will be provisioned for you by your Identity Provider. Enter these in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Discovery Endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Identity Provider’s Discovery Endpoint contains important configuration information. Enter this in your connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Your Connection will then be verified and good to go!</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The OIDC discovery endpoint will always end with <span>/.well-known/openid-configuration</span> as described in the <label className='demo-docs-hyperlink'>OpenID Provider Configuration Request documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can confirm that the discovery endpoint is correct by entering it in a browser window. If there is a JSON object with metadata about the connection returned, the endpoint is correct.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={accessPeopleHR}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Access People HR</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Access People HR.</p>
+                            </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Access People HR directories.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need the following information from the organization:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Access People HR API key</p></li>
+                            </ul>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Note: The Access People HR integration isn’t enabled by default in the WorkOS Dashboard or Admin Portal. Please reach out to <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team’s WorkOS Slack channel if you would like Access People HR enabled.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an API Key</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The organization will need to create an API key for you. First, they’ll need to log in to their Access People HR admin dashboard and select to the “Settings” page from the side bar menu. Then, select “API” from the Settings side bar menu. On the API Key Management page, select the plus sign to add a new API Key.</p>
+
+                            <div id='img145' className={`enlargable-image-container ${this.state.enlargedImageId === 'img145' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img145')}>
+                                    <img  src='/assets/aphr_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the API Key Generator, give the API Key a descriptive name. Under “Application”, select “Employee”.</p>
+
+                            <div id='img146' className={`enlargable-image-container ${this.state.enlargedImageId === 'img146' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img146')}>
+                                    <img  src='/assets/aphr_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Select Permissions page, check only “Get All Employee Detail” and then select “Save”.</p>
+
+                            <div id='img147' className={`enlargable-image-container ${this.state.enlargedImageId === 'img147' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img147')}>
+                                    <img  src='/assets/aphr_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the API Key Generator page, select “Save”.</p>
+
+                            <div id='img148' className={`enlargable-image-container ${this.state.enlargedImageId === 'img148' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img148')}>
+                                    <img  src='/assets/aphr_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy and save the API key – this will be used in Step 3.</p>
+
+                            <div id='img149' className={`enlargable-image-container ${this.state.enlargedImageId === 'img149' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img149')}>
+                                    <img  src='/assets/aphr_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS dashboard and select “Organizations” from the left hand Navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Organization you’d like to enable an Access People HR Directory Sync connection for.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Organization’s page click “Manually Configure Directory”.</p>
+
+                            <div id='img150' className={`enlargable-image-container ${this.state.enlargedImageId === 'img150' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img150')}>
+                                    <img  src='/assets/aphr_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Access People HR” as the Directory Provider, and then provide a descriptive name for the connection. Select “Create Directory”.</p>
+
+                            <div id='img151' className={`enlargable-image-container ${this.state.enlargedImageId === 'img151' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img151')}>
+                                    <img  src='/assets/aphr_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Setup your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the directory details section, select “Update Directory”.</p>
+
+                            <div id='img152' className={`enlargable-image-container ${this.state.enlargedImageId === 'img152' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img152')}>
+                                    <img  src='/assets/aphr_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter your API Key from Step 1, and select “Save Directory Details”.</p>
+
+                            <div id='img153' className={`enlargable-image-container ${this.state.enlargedImageId === 'img153' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img153')}>
+                                    <img  src='/assets/aphr_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section' >
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync Users and Groups to Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now, you should see users and groups synced over from Access People HR.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Departments from Access People HR are synced as groups in WorkOS. All users are synced, but only those marked as “ACTIVE” or “LEAVER_MARKED” have a state of active.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do Access People HR directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Access People HR directories poll every 30 minutes starting from the time of the initial sync.</p>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={adpOpenIDConnect}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>ADP OpenID Connect</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to ADP via OIDC.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ADP is unique in that it authenticates using the Open ID Connect (OIDC) protocol instead of <label className='demo-docs-hyperlink'>SAML</label>. This means that instead of providing an <label className='demo-docs-hyperlink'>ACS URL</label> and <label className='demo-docs-hyperlink'>SP Entity ID</label> into the IdP, The IdP will provide a client ID and secret. ADP also provides an SSL Certificate and Private RSA Key file to authenticate. These four pieces of information will all need to be uploaded into the WorkOS dashboard in the steps below.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a New ADP OIDC Connection in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Organization in your WorkOS Dashboard under which you would like to set up this new SSO connection. Click on the “Manually Configure Connection” button.</p>
+
+                            <div id='img154' className={`enlargable-image-container ${this.state.enlargedImageId === 'img154' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img154')}>
+                                    <img  src='/assets/adpoic_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select ADP OIDC as the Identity Provider and select “Create Connection”.</p>
+
+                            <div id='img155' className={`enlargable-image-container ${this.state.enlargedImageId === 'img155' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img155')}>
+                                    <img  src='/assets/adpoic_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or Create a Project in ADP</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to the <label className='demo-docs-hyperlink'>ADP Partner Self Service Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From this page there are two environments to select from, Development and Production. Please use the environment that best suits your use-case for this SSO connection.</p>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the selected environment select “Create New Project”.</p>
+
+                            <div id='img156' className={`enlargable-image-container ${this.state.enlargedImageId === 'img156' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img156')}>
+                                    <img  src='/assets/adpoic_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the project a meaningful name to designate the SSO connection, there is no need to add a description.</p>
+
+                            <div id='img157' className={`enlargable-image-container ${this.state.enlargedImageId === 'img157' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img157')}>
+                                    <img  src='/assets/adpoic_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make the selections “US Marketplace” and “ADP Workforce Now” respectively for the next selections and then click “Next”.</p>
+
+                            <div id='img158' className={`enlargable-image-container ${this.state.enlargedImageId === 'img158' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img158')}>
+                                    <img  src='/assets/adpoic_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, select “Other” for the use case that best describes your application and click “Submit”.</p>
+
+                            <div id='img159' className={`enlargable-image-container ${this.state.enlargedImageId === 'img159' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img159')}>
+                                    <img  src='/assets/adpoic_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload the WorkOS Redirect URI in ADP</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After configuring the ADP project, the next step is to provide ADP with the redirect URI generated by WorkOS.</p>
+
+                            <div id='img160' className={`enlargable-image-container ${this.state.enlargedImageId === 'img160' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img160')}>
+                                    <img  src='/assets/adpoic_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that a new project has been created browse to the “Development API Credentials” Tab within the project.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the “End-User/SSO sub-tab” from this view.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the <label className='demo-docs-hyperlink'>Redirect URI</label> into the App redirect URI field and click “Update Redirect”.</p>
+
+                            <div id='img161' className={`enlargable-image-container ${this.state.enlargedImageId === 'img161' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img161')}>
+                                    <img  src='/assets/adpoic_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enter ADP OIDC Client Settings in your WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that the redirect URI has been provided, the next step is to gather the <label className='demo-docs-hyperlink'>Client ID</label> and <label className='demo-docs-hyperlink'>Client Secret</label> from ADP and add it into the WorkOS Dashboard.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the same tab used in the previous step, you’ll provide the Client ID and Client Secret from ADP. Click to reveal the secret and copy and paste both the client ID and client secret into the WorkOS dashboard.</p>
+
+                            <div style={{marginBottom: "5%"}} id='img162' className={`enlargable-image-container ${this.state.enlargedImageId === 'img162' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img162')}>
+                                    <img  src='/assets/adpoic_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img163' className={`enlargable-image-container ${this.state.enlargedImageId === 'img163' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img163')}>
+                                    <img  src='/assets/adpoic_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload the ADP SSL Cert and Private Key in your WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that the Client ID and Secret have been provided, the next step is to gather the SSL Certificate and Private Key from ADP and add it into the WorkOS Dashboard.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>ADP uses a two fold certificate method with an SSL certificate and an SSL Private Key. The SSL Private Key is only displayed one time when the certificate is generated. If the certificate has already been generated, the IT Administrator who generated it should have also received the Private Key otherwise a new certificate and key can be generated by browsing to the certificates tab on the left hand navigation.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SSL Certificate can be found in ADP by browsing to “Certificate” on the left hand nav bar. You can also create a new SSL Certificate and Private Key pair if necessary.</p>
+
+                            <div id='img164' className={`enlargable-image-container ${this.state.enlargedImageId === 'img164' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img164')}>
+                                    <img  src='/assets/adpoic_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the two files into your WorkOS dashboard in their respective portals on the connection page and click “Update Connection”.</p>
+
+                            <div id='img165' className={`enlargable-image-container ${this.state.enlargedImageId === 'img165' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img165')}>
+                                    <img  src='/assets/adpoic_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Verify Connection Status in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate back to the connection in your WorkOS dashboard. After a minute or two you should see the connection become Active as indicated by the green badge next to the connection name.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>All that’s left to do now is test out the connection. You can use your own application if it’s connected to WorkOS already, or feel free to use one of our example applications like this <label className='demo-docs-hyperlink'>Python Flask SSO app</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to get up and running with a PoC quickly.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
             </Styles>
         )
     }
 }
 
-//* IMAGE 141 (latest)
+//* IMAGE 165 (latest)
