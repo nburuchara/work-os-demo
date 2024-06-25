@@ -5,7 +5,7 @@ const docs_sidebar_options = [
         sections: [
             { 
                 id: 1,
-                levelName: "Overview",
+                levelName: "Introduction",
                 sections: [
                     {   
                         id: 2, 
@@ -903,14 +903,18 @@ const docs_sidebar_options = [
     },
     {
         id: 208,
-        levelName: "Dashboard"
+        levelName: "Email delivery"
     },
     {
         id: 209,
-        levelName: "Glossary"
+        levelName: "Dashboard"
     },
     {
         id: 210,
+        levelName: "Glossary"
+    },
+    {
+        id: 211,
         levelName: "Changelog"
     }
 ]

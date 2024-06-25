@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import CodeSnippetStruct from '../d_Documentation_Components/d_Code_Snippet_Structure'
+import CodeSnippetStruct from '../../d_Documentation_Components/d_Code_Snippet_Structure'
 
 const Styles = styled.div `
 

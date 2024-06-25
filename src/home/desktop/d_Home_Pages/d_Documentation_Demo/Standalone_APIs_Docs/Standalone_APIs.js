@@ -196,7 +196,10 @@ export default class StandaloneAPIs extends Component {
       
         const page = pageMap[selectedPage];
         if (page) {
-          this.loadSelectedPage(page);
+            this.loadSelectedPage(page);
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
@@ -313,9 +316,6 @@ export default class StandaloneAPIs extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
-            setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)

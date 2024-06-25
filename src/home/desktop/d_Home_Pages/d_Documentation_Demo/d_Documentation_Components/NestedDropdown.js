@@ -84,6 +84,7 @@ componentDidUpdate(prevProps) {
     if (prevProps.searchPath !== this.props.searchPath) {
         this.setState({ activeIndices: this.props.searchPath || []});
     }
+    console.log(this.props.pageSelected)
 }
 
 handleItemClick = (index, item) => {
@@ -96,7 +97,7 @@ handleItemClick = (index, item) => {
         let newActiveIndices;
         if (itemIndex !== -1) {
             // Deselect the clicked item
-            newActiveIndices = activeIndices.filter((_, i) => i !== itemIndex);
+            newActiveIndices = activeIndices.filter((_, i) => i === itemIndex);
         } else {
             // Select the clicked item and collapse other items with the same parent
             const parentIndex = this.getParentIndex(index);
@@ -105,6 +106,7 @@ handleItemClick = (index, item) => {
                 return activeParentIndex !== parentIndex || activeIndex === index;
             });
         }
+        
         
         this.props.setSearchPath(newActiveIndices); // Notify parent component
         this.props.setCurrentIndex(index);
@@ -256,7 +258,6 @@ searchMenuItems = (menuItems, searchTerm) => {
         for (let i = 0; i < items.length; i++) {
           const item = items[i];
           if (!item) continue; // Add defensive check for undefined item
-          console.log('we entered search & the for loop')
           const newPath = [...currentPath, item.id];
           
           if (item.levelName && item.levelName.toLowerCase().includes(term.toLowerCase())) {
@@ -343,6 +344,7 @@ renderMenuItems = (menuItems, level = 0) => {
                         <div>
                             {activeIndices.includes(item.id) && item.sections && (
                                 <NestedDropdown
+                                pageSelected={this.props.currentPage}
                                 searchPath={this.props.searchPath}
                                 setCurrentIndex={this.props.setCurrentIndex}
                                 setSearchPath={this.setSearchPath}

@@ -2,22 +2,27 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import CodeSnippetStruct from '../d_Documentation_Components/d_Code_Snippet_Structure'
 import { CSSTransition } from 'react-transition-group';
-import APIReference from './d_API_Reference';
+import APIReference from './Resources_Pages/d_API_Reference';
+import Integrations from './Resources_Pages/Integrations';
 
 const Styles = styled.div  `
 
 `
 
-export default class EventsWebhooks extends Component {
+export default class Resources extends Component {
     constructor (props) {
         super(props)
         this.state = {
 
                 //* - RESOURCES SECTIONS - *//
             apiReference: false,
-            integrations: true,
+            integrations: false,
+            integrationsPages: false,
 
+                //* - INTEGRATIONS COMPONENTS - *//
+            integrationsPage: "",
             prevSelectedPage: "",
+            integrationsSearchedObect: null,
 
                 //* - CODE SNIPPET - *//
             currentSelectedLanguage: "javascript",
@@ -54,8 +59,6 @@ export default class EventsWebhooks extends Component {
             this.getSelectedPage(this.props.scrollToID)
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-                    //! remove this later 👇 
-                this.setState({apiReference: false})
             }, 1000)
         }   
     }
@@ -68,10 +71,33 @@ export default class EventsWebhooks extends Component {
       
         const page = pageMap[selectedPage];
         if (page) {
-          this.loadSelectedPage(page);
+            if (this.state.integrationsPages === true) {
+                this.setState({integrationsPages: false})
+            }
+            this.loadSelectedPage(page);
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
+
+        const integrationsPageMap = {
+            "SAML": "saml",
+            "SCIM": "scim",
+            "SFTP": "sftp",
+        }
+        const integrationsPage = integrationsPageMap[selectedPage];
+        if (integrationsPage) {
+            this.setState({
+                integrationsPage: integrationsPage,
+                integrationsSearchedObect: selectedPage
+            })
+          this.loadSelectedPage("integrationsPages");
+        } else {
+          console.error("Unknown selected integrations page:", selectedPage);
+        }
+
     };
 
     scrollToTop = (id) => {
@@ -117,12 +143,8 @@ export default class EventsWebhooks extends Component {
 
     closeAllPagesExceptSelectedPage = (searchedTerm) => {
         const pageMap = {
-            "Event types": "eventTypes",
-            "Overview": "dataSyncing",
-            "Syncing with events API": "dataSyncingWithApi",
-            "Syncing with webhooks": "dataSyncingWithWebhooks",
-            "Data reconciliation": "dataReconciliation",
-            "Streaming to Datadog": "observabilityStreamToDatadog",
+            "Overview": "apiReference",
+            "Integrations" : "integrations",
         };
         const keys = Object.keys(pageMap);
         for (let i = 0; i < keys.length; i++) {
@@ -207,11 +229,31 @@ export default class EventsWebhooks extends Component {
         }
     }
 
+    goToIntegrations = (page) => {
+        const integrationsPageMap = [
+            {"id": "999995", "name": "SAML", "category": "Resources", "subCat1": "Integrations", "page": "SAML", "lastCat": "top"},
+            {"id": "999995", "name": "SCIM", "category": "Resources", "subCat1": "Integrations", "page": "SCIM", "lastCat": "top"},
+        ]
+        for (let i = 0; i < integrationsPageMap.length; i++) {
+            if (integrationsPageMap[i].page === page) {
+                this.props.selectInternalPage(integrationsPageMap[i].category, integrationsPageMap[i], integrationsPageMap[i].page)
+            }
+        }
+    }
+
+    hideIntegrationsPage = () => {
+        if (this.state.integrations === true) {
+            this.setState({
+                integrations: false
+            })
+        }
+    }
 
     render () {
 
                 //* - RESOURCES SECTION VAR(S) - *//
-            const { apiReference, integrations } = this.state;
+            const { apiReference, integrations, integrationsPages } = this.state;
+
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
              const { sidebarMenuClicked } = this.props;
@@ -222,12 +264,22 @@ export default class EventsWebhooks extends Component {
         return (
             <Styles>
 
+                {/* TOP OF SECTION 👇 */}
+
+                <CSSTransition in={apiReference}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <APIReference sidebarMenuClicked={sidebarMenuClicked}/>
+                </CSSTransition>
+
                 <CSSTransition in={integrations}
                 timeout={500}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div className='demo-docs-container'>
+                    <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Integrations</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Guides on integrating WorkOS with third-party services.</p>
@@ -239,7 +291,7 @@ export default class EventsWebhooks extends Component {
                             {/* - HEADER - */}
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a new custom SAML connection.</p>
@@ -248,7 +300,7 @@ export default class EventsWebhooks extends Component {
                                         {/* <img className={sidebarMenuClicked ? "" : ""} src='/assets/access_logo_icon.png'/> */}
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('SCIM')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>SCIM</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with a custom SCIM provider.</p>
@@ -259,9 +311,8 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('SFTP')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>SFTP</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list using an SFTP connection.</p>
@@ -1055,19 +1106,16 @@ export default class EventsWebhooks extends Component {
                                 </div>
                             </div>
 
-
                         </div>
                     </div>
                 </CSSTransition>
 
-                {/* TOP OF SECTION 👇 */}
-
-                <CSSTransition in={apiReference}
+                <CSSTransition in={integrationsPages}
                 timeout={500}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <APIReference sidebarMenuClicked={sidebarMenuClicked}/>
+                    <Integrations hideIntegrationsPage={this.hideIntegrationsPage} scrollToID={this.state.integrationsPage} searchedTerm={this.state.integrationsSearchedObect} sidebarMenuClicked={sidebarMenuClicked} />
                 </CSSTransition>
 
 

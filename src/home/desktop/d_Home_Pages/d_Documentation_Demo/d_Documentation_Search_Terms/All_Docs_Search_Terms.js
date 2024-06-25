@@ -16465,6 +16465,46 @@ const results = [
     "subCat1": "Add the WorkOS Datadog dashboard",
     "page": "Streaming to Datadog",
     "lastCat": "Add the WorkOS Datadog dashboard"
+  },
+  {
+    "id": "999999",
+    "name": "API Reference",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "top"
+  },
+  {
+    "id": "999990",
+    "name": "Integrations",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Integrations",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "SCIM",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "SFTP",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "SFTP",
+    "lastCat": "top"
   }
 ];
 export default results;

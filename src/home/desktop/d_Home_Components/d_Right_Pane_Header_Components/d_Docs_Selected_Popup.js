@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import APIReference from '../../d_Home_Pages/d_Documentation_Demo/Resources_Docs/d_API_Reference'
 import DocsNavigationMenu from '../../d_Home_Pages/d_Documentation_Demo/d_Docs_Navigation'
 
 const Styles = styled.div  `

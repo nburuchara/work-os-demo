@@ -17,7 +17,7 @@ import EventsWebhooksFullSearch from './d_Documentation_Search_Terms/Events_Webh
 import ResourcesFullSearch from './d_Documentation_Search_Terms/Resources_Search_Terms'
 
 
-import APIReference from './Resources_Docs/d_API_Reference';
+import APIReference from './Resources_Docs/Resources_Pages/d_API_Reference';
 import UserManagement from './User_Mgmt_Docs/User_Management';
 import StandaloneAPIs from './Standalone_APIs_Docs/Standalone_APIs';
 import EventsWebhooks from './Events_Webhooks_Docs/Events_Webhooks';
@@ -2346,7 +2346,7 @@ export default class DocsNavigationMenu extends Component {
             menuOption3SearchCategory: "",
             menuOption3SearchTermObject: null,
             menuOption4SearchCategory: "",
-            menuOptionSearchTermObject: null,
+            menuOption4SearchTermObject: null,
 
         }
 
@@ -2908,6 +2908,7 @@ export default class DocsNavigationMenu extends Component {
     }
 
     getSearchedTerm = (category, option, searchedPage, searchingSamePage) => {
+        console.log("did we get here")
         new Promise((resolve) => {
             const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
             setTimeout(() => {
@@ -3128,6 +3129,10 @@ export default class DocsNavigationMenu extends Component {
         await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
     }
 
+    searchInternalPage = () => {
+        
+    }
+
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn } = this.state;
@@ -3198,7 +3203,8 @@ export default class DocsNavigationMenu extends Component {
                                     unmountOnExit
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
-                                            <NestedDropdown 
+                                            <NestedDropdown
+                                            pageSelected={this.state.currentPage} 
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3220,6 +3226,7 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
+                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3241,6 +3248,7 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
+                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3262,6 +3270,7 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
+                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3616,7 +3625,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
 
-                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
+                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} selectInternalPage={this.searchedTermClicked} />}
 
             </Styles>
         )

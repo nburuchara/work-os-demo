@@ -6,7 +6,7 @@ const files = [
    path.join(__dirname, './User_Management_Search_Terms.js'),
    path.join(__dirname, './Standalone_APIs_Search_Terms.js'),
    path.join(__dirname, './Events_Webhooks_Search_Terms.js'),
-//   path.join(__dirname, 'terms4.js')
+   path.join(__dirname, './Resources_Search_Terms.js')
 ];
 
 // Path to the output file
@@ -33,7 +33,7 @@ const readJsFile = (filePath) => {
 
                 // Parse each line as a JSON object with detailed logging
                 const jsonData = objectLines.map((line, index) => {
-                    console.log(`Parsing line ${index + 1}:`, line);
+                    // console.log(`Parsing line ${index + 1}:`, line);
                     try {
                       // Remove trailing comma
                       const cleanedLine = line.replace(/,\s*$/, '');
@@ -45,7 +45,7 @@ const readJsFile = (filePath) => {
                   });
                 resolve(jsonData);
             } catch (error) {
-                console.error(`Error processing file ${filePath}:`, error);x
+                console.error(`Error processing file ${filePath}:`, error);
                 reject(error);
             }
         });

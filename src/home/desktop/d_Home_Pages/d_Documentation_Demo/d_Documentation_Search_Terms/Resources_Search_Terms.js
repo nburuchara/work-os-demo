@@ -5,7 +5,14 @@ const results = [
     //? - - - - - - - - - - - - - ?//
 
     {"id": "999999", "name": "API Reference", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "top"},
-    {"id": "999999", "name": "Integrations", "category": "Resources", "subCat1": "Integrations", "page": "Integrations", "lastCat": "top"},
+    {"id": "999990", "name": "Integrations", "category": "Resources", "subCat1": "Integrations", "page": "Integrations", "lastCat": "top"},
+
+
+        //! - - INTEGRATIONS - - !//
+
+    {"id": "999995", "name": "SAML", "category": "Resources", "subCat1": "Integrations", "page": "SAML", "lastCat": "top"},
+    {"id": "999995", "name": "SCIM", "category": "Resources", "subCat1": "Integrations", "page": "SCIM", "lastCat": "top"},
+    {"id": "999995", "name": "SFTP", "category": "Resources", "subCat1": "Integrations", "page": "SFTP", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -25,6 +32,41 @@ const results = [
     //? - - - - - - - - - - - - ?//
     //? - - - - P TAGS - - - - ?//
     //? - - - - - - - - - - - - ?//
+
+
+
+    //* - - - - - - - - - - - - - - *//
+    //* - - INTEGRATIONS PAGES - - *//
+    //* - - - - - - - - - - - - -  *//
+    
+
+    //? - - - - - - - - - - - - - ?//
+    //? - - H1 (TOP) HEADERS - - ?//
+    //? - - - - - - - - - - - - - ?//
+
+    
+    // {"id": "999999", "name": "Integrations", "category": "Resources", "subCat1": "Integrations", "page": "Integrations", "lastCat": "top"},
+
+    //? - - - - - - - - - - - - - - - ?//
+    //? - - H1 (IN-TEXT) HEADERS - - ?//
+    //? - - - - - - - - - - - - - - - ?//
+
+
+    //? - - - - - - - - - - - - - - ?//
+    //? - - - - H3 HEADERS - - - - ?//
+    //? - - - - - - - - - - - - - - ?//
+
+
+    //? - - - - - - - - - - - - - - ?//
+    //? - - H3 LABELED HEADERS - - !?/
+    //? - - - - - - - - - - - - - - ?//
+
+
+    //? - - - - - - - - - - - - ?//
+    //? - - - - P TAGS - - - - ?//
+    //? - - - - - - - - - - - - ?//
+
+
 
 
 ]
