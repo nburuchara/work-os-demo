@@ -89,6 +89,10 @@ export default class Resources extends Component {
             "OpenID Connect": "openIDConnect",
             "Access People HR": "accessPeopleHR",
             "ADP OpenID Connect": "adpOpenIDConnect",
+            "Apple": "apple",
+            "Auth0": "auth0",
+            "AWS Cognito": "awsCognito",
+            "BambooHR": "bambooHR"
         }
         const integrationsPage = integrationsPageMap[selectedPage];
         if (integrationsPage) {
@@ -368,7 +372,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('')} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('Apple')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Apple</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to set up Sign in with Apple.</p>
@@ -377,7 +381,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/apple_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Auth0')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Auth0</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to Auth0 via SAML.</p>
@@ -389,7 +393,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('AWS Cognito')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>AWS Cognito</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to use WorkOS with your existing AWS Cognito applications.</p>
@@ -413,7 +417,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('BambooHR')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>BambooHR</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with BambooHR.</p>

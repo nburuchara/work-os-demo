@@ -16529,6 +16529,38 @@ const results = [
     "subCat1": "Integrations",
     "page": "ADP OpenID Connect",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Apple",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Apple",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Auth0",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Auth0",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "AWS Cognito",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "AWS Cognito",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "BambooHR",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "BambooHR",
+    "lastCat": "top"
   }
 ];
 export default results;

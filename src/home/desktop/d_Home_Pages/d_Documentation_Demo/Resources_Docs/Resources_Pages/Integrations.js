@@ -16,9 +16,14 @@ export default class Integrations extends Component {
                 //* - INTEGRATIONS SECTIONS - *//
             saml: false,
             scim: false,
+            sftp: false,
             openIDConnect: false,
             accessPeopleHR: false,
             adpOpenIDConnect: false,
+            apple: false,
+            auth0: false,
+            awsCognito: false,
+            bambooHR: false,
 
             prevSelectedPage: "",
 
@@ -63,6 +68,10 @@ export default class Integrations extends Component {
             "openIDConnect": "openIDConnect",
             "accessPeopleHR": "accessPeopleHR",
             "adpOpenIDConnect": "adpOpenIDConnect",
+            "apple": "apple",
+            "auth0": "auth0",
+            "awsCognito": "awsCognito",
+            "bambooHR": "bambooHR",
         };
       
         const page = pageMap[selectedPage];
@@ -102,6 +111,12 @@ export default class Integrations extends Component {
             "scim": "scim",
             "sftp": "sftp",
             "openIDConnect": "openIDConnect",
+            "accessPeopleHR": "accessPeopleHR",
+            "adpOpenIDConnect": "adpOpenIDConnect",
+            "apple": "apple",
+            "auth0": "auth0",
+            "awsCognito": "awsCognito",
+            "bambooHR": "bambooHR",
         };
         const keys = Object.keys(pageMap);
         for (let i = 0; i < keys.length; i++) {
@@ -155,7 +170,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -1311,9 +1326,748 @@ export default class Integrations extends Component {
                     </div>
                 </CSSTransition>
 
+                <CSSTransition in={apple}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Apple</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to set up Sign in with Apple.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure your global Apple integration you’ll need two pieces of information from WorkOS: a <label className='demo-docs-hyperlink'>Redirect URI</label> and an outbound email domain for Apple’s Private Relay email service.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll also need four pieces of information from an active Apple Developer Account: an Apple Team ID, Apple Service ID, Apple Private Key and Private Key ID.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing with default credentials in the staging environment</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a default set of Apple credentials, which allow you to quickly enable and test Sign in with Apple. WorkOS will automatically use the default credentials until you add your own Apple Team ID, Apple Service ID, and Apple Private Key to the configuration in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The default credentials are only intended for testing and therefore only available in the Staging environment. For your production environment, please follow the steps below to create and specify your own Apple Team ID, Apple Service ID, and Apple Private Key.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please note that when you are using WorkOS default credentials, Apple’s authentication flow will display the WorkOS name, logo, and other information to users. Once you register your own application and use its credentials for the authentication flow, you will have the opportunity to customize the app.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Authentication section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Scroll down to the Apple OAuth section and find the following values in the configuration:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Redirect URI</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>outbound email domains</p></li>
+                            </ul>
+
+                            <div id='img166' className={`enlargable-image-container ${this.state.enlargedImageId === 'img166' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img166')}>
+                                    <img  src='/assets/apple_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After the authentication process has completed and a authorization code is granted, the user will be sent to the Redirect URI.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Outbound email domains are registered with Apple’s Private Relay email service. Apple requires outbound email domains and/or email addresses to be registered with Private Relay to deliver email to those users. For more information, see Apple’s documentation on <label className='demo-docs-hyperlink'>Private Relay</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These values will be used later in the guide.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need an active Apple Developer account. From that Apple Developer account you’ll need:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A Team ID</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A Service ID</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A private key ID</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The private key contents</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Follow these steps to retrieve these values and configure your integration with Apple.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Retrieve the Apple Team ID</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to the <label className='demo-docs-hyperlink'>certificates, identifiers, and profiles</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> section of your Apple Developer account. The landing page will have your name, company name, and your Team ID. Note the Team ID value for later.</p>
+
+                            <div id='img167' className={`enlargable-image-container ${this.state.enlargedImageId === 'img167' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img167')}>
+                                    <img  src='/assets/apple_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The Team ID is sensitive and will only be used by the server to communicate with Apple. It should not be shared with the client.</p>
+                                </div>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Register an App ID</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Skip this step if you already have an App ID.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on <i>Identifiers</i> on the sidebar, then click on the + button to create a new identifier.</p>
+
+                            <div id='img168' className={`enlargable-image-container ${this.state.enlargedImageId === 'img168' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img168')}>
+                                    <img  src='/assets/apple_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the next page, select <i>App IDs</i> and click <i>Continue</i>.</p>
+
+                            <div id='img169' className={`enlargable-image-container ${this.state.enlargedImageId === 'img169' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img169')}>
+                                    <img  src='/assets/apple_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, select <i>App</i> and click <i>Continue</i>.</p>
+
+                            <div id='img170' className={`enlargable-image-container ${this.state.enlargedImageId === 'img170' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img170')}>
+                                    <img  src='/assets/apple_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the next page, fill in a description and a bundle ID. The bundle ID should be unique and in reverse domain notation, e.g., <span>com.example.myapp</span>.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Also, check the <i>Sign in</i> with <i>Apple</i> box in the Capabilities section. There is no need to update anything in the <i>Edit</i> modal.</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} id='img171' className={`enlargable-image-container ${this.state.enlargedImageId === 'img171' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img171')}>
+                                    <img  src='/assets/apple_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img172' className={`enlargable-image-container ${this.state.enlargedImageId === 'img172' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img172')}>
+                                    <img  src='/assets/apple_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then click <i>Continue</i>. Review your selections and click <i>Register</i>.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Register a Service ID</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next we need to create a linked Service ID. Click on <i>Identifiers</i> on the sidebar, then click on the + button.</p>
+
+                            <div id='img173' className={`enlargable-image-container ${this.state.enlargedImageId === 'img173' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img173')}>
+                                    <img  src='/assets/apple_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the next page, select <i>Services IDs</i> and click <i>Continue</i>.</p>
+
+                            <div id='img174' className={`enlargable-image-container ${this.state.enlargedImageId === 'img174' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img174')}>
+                                    <img  src='/assets/apple_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a description and a Service ID. The Service ID should be unique and in reverse domain notation, e.g. <span>com.example.myapp</span>.</p>
+
+                            </div>
+
+                            <div id='img175' className={`enlargable-image-container ${this.state.enlargedImageId === 'img175' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img175')}>
+                                    <img  src='/assets/apple_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click <i>Continue</i>. Note the Service ID for later and click <i>Register</i> to create the service.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now we will configure our new service for Sign in with Apple. First select the new service from the list of Service IDs.</p>
+
+                            <div id='img176' className={`enlargable-image-container ${this.state.enlargedImageId === 'img176' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img176')}>
+                                    <img  src='/assets/apple_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Check the <i>Sign in</i> with <i>Apple</i> box and click <i>Configure</i>.</p>
+
+                            <div id='img177' className={`enlargable-image-container ${this.state.enlargedImageId === 'img177' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img177')}>
+                                    <img  src='/assets/apple_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Ensure the App ID we created earlier is selected in the dropdown. Then enter <span>api.workos.com</span> in the <i>Domains and Subdomains</i> field and paste the Return URI from the WorkOS dashboard in the <i>Return URLs</i> field.</p>
+
+                            </div>
+
+                            <div id='img178' className={`enlargable-image-container ${this.state.enlargedImageId === 'img178' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img178')}>
+                                    <img  src='/assets/apple_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click <i>Done</i> and then <i>Continue</i>. Review your changes and click <i>Save</i>.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Register a private key</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on <i>Keys</i> on the sidebar, then click on the + button to create a new key.</p>
+
+                            <div id='img179' className={`enlargable-image-container ${this.state.enlargedImageId === 'img179' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img179')}>
+                                    <img  src='/assets/apple_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the next page, enter a human-readable <i>Key Name</i>. Then check the <i>Sign in</i> with <i>Apple</i> box and click <i>Configure</i>.</p>
+
+                            <div id='img180' className={`enlargable-image-container ${this.state.enlargedImageId === 'img180' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img180')}>
+                                    <img  src='/assets/apple_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the <i>Configure</i> dialog, select the App ID we created earlier and click <i>Save</i>.</p>
+
+                            <div id='img181' className={`enlargable-image-container ${this.state.enlargedImageId === 'img181' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img181')}>
+                                    <img  src='/assets/apple_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click <i>Continue</i>. Review your changes and click <i>Register</i> to create your key.</p>
+
+                            <div id='img182' className={`enlargable-image-container ${this.state.enlargedImageId === 'img182' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img182')}>
+                                    <img  src='/assets/apple_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure to download your new private key. Also note the Key ID for later.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Provide credentials to WorkOS</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate back to the <i>Authentication</i> section in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, and click on <i>Edit</i> under <i>Sign in</i> with <i>Apple</i>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Toggle <i>Enabled</i> on and provide the credentials from Apple that you generated in the previous steps.</p>
+
+                            <div id='img183' className={`enlargable-image-container ${this.state.enlargedImageId === 'img183' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img183')}>
+                                    <img  src='/assets/apple_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Set up Private Email Relay</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in with Apple users can opt to hide their email address when signing in. In order for emails to be sent to those users, we need to configure Private Email Relay.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the <i>Sign in</i> with <i>Apple</i> modal, copy the list of outbound email domains.</p>
+
+                            <div id='img184' className={`enlargable-image-container ${this.state.enlargedImageId === 'img184' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img184')}>
+                                    <img  src='/assets/apple_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then open your Apple Developer account and click on <i>Services</i> on the sidebar. Then click on <i>Configure</i> under <i>Sign in</i> with Apple for <i>Email Communication</i>.</p>
+
+                            <div id='img185' className={`enlargable-image-container ${this.state.enlargedImageId === 'img185' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img185')}>
+                                    <img  src='/assets/apple_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the + button next to <i>Email Sources</i> and enter the outbound email domains from the WorkOS dashboard in the <i>Domains and Subdomains</i> text box. Then click <i>Next</i> and <i>Register</i>.</p>
+
+                            <div style={{marginBottom: "5%"}} id='img186' className={`enlargable-image-container ${this.state.enlargedImageId === 'img186' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img186')}>
+                                    <img  src='/assets/apple_img21.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img187' className={`enlargable-image-container ${this.state.enlargedImageId === 'img187' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img187')}>
+                                    <img  src='/assets/apple_img22.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You are now ready to start authenticating with Sign in with Apple. Your users will see the option to Sign in with Apple when visiting your <label className='demo-docs-hyperlink'>AuthKit</label> domain. Alternatively if you’re using the <label className='demo-docs-hyperlink'>standalone SSO API</label>, you can initiate Sign in with Apple by passing <span>AppleOAuth</span> as the <span>provider</span>.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={auth0}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Auth0</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Auth0 via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Auth0 SAML Connection, you’ll need the Identity Provider metadata that is available from the organization’s Auth0 instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure an Auth0 SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img188' className={`enlargable-image-container ${this.state.enlargedImageId === 'img188' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img188')}>
+                                    <img  src='/assets/auth0_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Auth0 SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img189' className={`enlargable-image-container ${this.state.enlargedImageId === 'img189' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img189')}>
+                                    <img  src='/assets/auth0_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS Provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and SP Entity ID, which are readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img190' className={`enlargable-image-container ${this.state.enlargedImageId === 'img190' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img190')}>
+                                    <img  src='/assets/auth0_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Auth0’s case, the ACS URL needs to be set by the organization when configuring your application in their Auth0 instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request and the audience of a SAML response. In this case, the SP Entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Auth0 instance, and that WorkOS is the intended audience of the SAML responses from the Auth0 instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL will need to be set as the “Application Callback URL” on the SAML2 Web App Settings page found under the “Addons” tab in an Auth0 application. You will need to toggle on the SAML2 Web App for the settings modal to appear where you can add the ACS URL under the Application Callback URL input.</p>
+
+                            <div style={{marginBottom: "5%"}} id='img191' className={`enlargable-image-container ${this.state.enlargedImageId === 'img191' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img191')}>
+                                    <img  src='/assets/auth0_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img192' className={`enlargable-image-container ${this.state.enlargedImageId === 'img192' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img192')}>
+                                    <img  src='/assets/auth0_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID will need to be set as the “audience” value in the Settings JSON object on the SAML2 Web App Settings page.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After the Application Callback URL and Audience have been added, scroll to the bottom and click “Enable”.</p>
+
+                            <div id='img193' className={`enlargable-image-container ${this.state.enlargedImageId === 'img193' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img193')}>
+                                    <img  src='/assets/auth0_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Auth0 IdP Metadata URL.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their Auth0 admin dashboard. Here’s how to obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log In and Select Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>Auth0</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin dashboard, select “Applications” in the sidebar, and then select the “Applications” menu option. Next, select your application from the list of applications.</p>
+
+                            <div id='img194' className={`enlargable-image-container ${this.state.enlargedImageId === 'img194' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img194')}>
+                                    <img  src='/assets/auth0_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Metadata</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the application’s Settings page, scroll down to the bottom and expand the “Advanced Settings” section. Select the “Endpoints” tab and copy the SAML Metadata URL. You’ll need this in the next step.</p>
+
+                            <div id='img195' className={`enlargable-image-container ${this.state.enlargedImageId === 'img195' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img195')}>
+                                    <img  src='/assets/auth0_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, upload the SAML Metadata URL you saved earlier in your WorkOS Connection settings. Your Connection will then be linked and good to go!</p>
+
+                            <div id='img196' className={`enlargable-image-container ${this.state.enlargedImageId === 'img196' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img196')}>
+                                    <img  src='/assets/auth0_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={awsCognito}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AWS Cognito</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to use WorkOS with your existing AWS Cognito applications.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines the steps to make WorkOS SSO Connections available to AWS Cognito applications without requiring changes to your existing application code.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The integration works by configuring WorkOS connections as third-party <label className='demo-docs-hyperlink'>Identity Providers</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> inside a Cognito User Pool which enables users to sign in to a Cognito application leveraging all SSO integrations supported by WorkOS.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The AWS Cognito integration is in feature preview. Reach out to <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> if you want early access.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure AWS IAM role</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS manages the configuration of the Cognito Identity Providers by leveraging AWS role delegation. You will need to create an IAM role in your AWS account that grants permissions to the WorkOS AWS account. This is can be easily accomplished through the AWS Console.</p>
+
+                            <div id='img197' className={`enlargable-image-container ${this.state.enlargedImageId === 'img197' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img197')}>
+                                    <img  src='/assets/aws_cognito_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The external ID will be provided by the WorkOS support team upon request. The AWS account ID should be <span>611361754156</span> which is the ID of a dedicated WorkOS AWS account used for Cognito integrations.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will need to attach the following policy to the role so that the Identity Providers can be managed when the role is assumed by WorkOS.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={109}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="IAM Policy" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Complete the creation of the role and take note of the name you provide as it will be used in the following step.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provide AWS details to WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once the role has been configured you will need to provide the following details from your AWS account to the WorkOS support team.</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Account ID</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Role name</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User pool ID</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once the WorkOS support team has configured your AWS details, you should see Identity Providers configured in the specified User Pool for every connection configured in WorkOS. Newly added WorkOS connections will automatically be created in the specified User Pool.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enable Identity Providers for App Client</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that the Identity Providers have been configured, they will need to be enabled for the App Client you wish to use the WorkOS Connections with.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From the user pool navigate to <strong>App integration → <i>Your App Client</i> → Edit hosted UI settings</strong> and select the newly created Identity Providers.</p>
+
+                            <div id='img198' className={`enlargable-image-container ${this.state.enlargedImageId === 'img198' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img198')}>
+                                    <img  src='/assets/aws_cognito_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>If you do not complete this step you will receive a <strong>Login option is not available</strong> error from Cognito upon sign in.</p>
+                                </div>
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure redirect URI</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Locate the domain of the Cognito User Pool and configure the following redirect URI in the WorkOS Dashboard under <strong>Configuration → Settings → Redirect URIs</strong>.</p>
+
+                            <CodeSnippetStruct 
+                            id={110}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Cognito callback URI" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sign in with WorkOS connection</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once an Identity Provider has been created in the Cognito User Pool, you may initiate authentication by passing the <span>idp_identifier</span> query parameter to the <label className='demo-docs-hyperlink'>OAuth2 Authorize endpoint</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> provided by Cognito using the details from the App Client that was previously configured with the Identity Providers.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may pass either a WorkOS <label className='demo-docs-hyperlink'>Organization</label> or <label className='demo-docs-hyperlink'>Connection</label> ID as the <span>idp_identifier</span>. Passing this query parameter will result in Cognito bypassing it’s standard sign-in page and immediately redirecting the user to the appropriate sign-in page of the upstream identity provider configured in the WorkOS Connection.</p>
+                            
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once the user is authenticated they will be redirected to your Cognito App Client redirect URL with the Cognito <span>code</span> query parameter.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={bambooHR}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>BambooHR</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with BambooHR.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s BambooHR directories.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need the following information from the organization:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The BambooHR subdomain.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A BambooHR API key to authenticate requests.</p></li>
+                            </ul>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Note: The BambooHR integration isn’t enabled by default in the WorkOS Dashboard or Admin Portal. Please reach out to <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team’s WorkOS Slack channel if you would like BambooHR enabled.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync Connection with.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Manually Configure Connection”.</p>
+
+                            <div id='img199' className={`enlargable-image-container ${this.state.enlargedImageId === 'img199' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img199')}>
+                                    <img  src='/assets/bamboo_hr_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the Name, and select “BambooHR” as the directory type.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Create Directory” button.</p>
+
+                            <div id='img200' className={`enlargable-image-container ${this.state.enlargedImageId === 'img200' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img200')}>
+                                    <img  src='/assets/bamboo_hr_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will now see your BambooHR directory sync has created successfully with an <label className='demo-docs-hyperlink'>Endpoint</label>, as well as fields to input your subdomain and API Key from BambooHR.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Retrieve the details from an organization IT Admin</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To generate an API key, an IT Admin should log into BambooHR and click their name in the upper right-hand corner of the BambooHR console. Select “API Keys” from the list.</p>
+
+                            <div id='img201' className={`enlargable-image-container ${this.state.enlargedImageId === 'img201' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img201')}>
+                                    <img  src='/assets/bamboo_hr_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, the IT Admin should click “Add New Key”.</p>
+
+                            <div id='img202' className={`enlargable-image-container ${this.state.enlargedImageId === 'img202' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img202')}>
+                                    <img  src='/assets/bamboo_hr_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give your key a descriptive name and select “Generate Key.”</p>
+
+                            <div id='img203' className={`enlargable-image-container ${this.state.enlargedImageId === 'img203' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img203')}>
+                                    <img  src='/assets/bamboo_hr_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Copy Key” and save this API key, which you’ll upload in the next step.</p>
+
+                            <div id='img204' className={`enlargable-image-container ${this.state.enlargedImageId === 'img204' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img204')}>
+                                    <img  src='/assets/bamboo_hr_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Update Directory”.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are two fields to enter, one is the API key you created in step 2.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The other is “Subdomain” which is the subdomain name of the Company’s BambooHR instance.</p>
+
+                            <div id='img205' className={`enlargable-image-container ${this.state.enlargedImageId === 'img205' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img205')}>
+                                    <img  src='/assets/bamboo_hr_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync Users and Groups to Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the connection is successfully made, you will see the green “Linked” icon appear. Now, whenever your customer assigns users or groups to your application, you’ll receive Dashboard updates based on changes in their directory.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently Asked Questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How do I add BambooHR’s custom fields?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For BambooHR’s custom fields, please contact <label className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> with your directory ID and a list of the custom fields you would like to be added.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do BambooHR directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>BambooHR directories poll every 30 minutes starting from the time of the initial sync.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+
             </Styles>
         )
     }
 }
 
-//* IMAGE 165 (latest)
+//* IMAGE 201 (latest)

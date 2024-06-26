@@ -16,6 +16,10 @@ const results = [
     {"id": "999995", "name": "OpenID Connect", "category": "Resources", "subCat1": "Integrations", "page": "OpenID Connect", "lastCat": "top"},
     {"id": "999995", "name": "Access People HR", "category": "Resources", "subCat1": "Integrations", "page": "Access People HR", "lastCat": "top"},
     {"id": "999995", "name": "ADP OpenID Connect", "category": "Resources", "subCat1": "Integrations", "page": "ADP OpenID Connect", "lastCat": "top"},
+    {"id": "999995", "name": "Apple", "category": "Resources", "subCat1": "Integrations", "page": "Apple", "lastCat": "top"},
+    {"id": "999995", "name": "Auth0", "category": "Resources", "subCat1": "Integrations", "page": "Auth0", "lastCat": "top"},
+    {"id": "999995", "name": "AWS Cognito", "category": "Resources", "subCat1": "Integrations", "page": "AWS Cognito", "lastCat": "top"},
+    {"id": "999995", "name": "BambooHR", "category": "Resources", "subCat1": "Integrations", "page": "BambooHR", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

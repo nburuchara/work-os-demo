@@ -15219,9 +15219,41 @@ const codeSnippets = [
       }
     },
 
+    {
+      id: 109,
+      title: "IAM Policy",
+      code: {
+        javascript: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"Version"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2012-10-17"</span>,',
+          '3   <span style="color: #0072dd;">"Statement"</span><span style="color: #ce3559;">:</span> [',
+          '4     {',
+          '5       <span style="color: #0072dd;">"Sid"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"VisualEditor"</span>,',
+          '6       <span style="color: #0072dd;">"Effect"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Allow"</span>,',
+          '7       <span style="color: #0072dd;">"Action"</span><span style="color: #ce3559;">:</span> [<span style="color: #143465;">"cognito-idp:*"</span>],',
+          '8       <span style="color: #0072dd;">"Resource"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"*"</span>,',
+          '9     }',
+          '10   ]',
+          '11 }'
+        ]
+      }
+    },
+
+    {
+      id: 110,
+      title: "Cognito callback URI",
+      code: {
+        javascript: [
+          '1 https://&ltcognito-user-pool-domain&gt/oauth2/idpresponse'
+        ]
+      }
+    }
+
 ]
 
 export default codeSnippets;
+
+
 
 
 

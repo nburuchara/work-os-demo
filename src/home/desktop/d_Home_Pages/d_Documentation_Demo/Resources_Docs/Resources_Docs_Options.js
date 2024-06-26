@@ -624,8 +624,12 @@ const docs_sidebar_options = [
                 levelName: "ADP OpenID Connect"
             },
             {
+                id: 1390,
+                levelName: "Apple",
+            },
+            {
                 id: 140,
-                levelName: "AuthO"
+                levelName: "Auth0"
             },
             {
                 id: 141,
@@ -633,7 +637,7 @@ const docs_sidebar_options = [
             },
             {
                 id: 142,
-                levelName: "Bamboo HR"
+                levelName: "BambooHR"
             },
             {
                 id: 143,
