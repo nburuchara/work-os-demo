@@ -16569,6 +16569,14 @@ const results = [
     "subCat1": "Integrations",
     "page": "Breathe HR",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Bubble Plugin",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Bubble Plugin",
+    "lastCat": "top"
   }
 ];
 export default results;

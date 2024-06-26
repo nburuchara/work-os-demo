@@ -2244,7 +2244,50 @@ export default class Integrations extends Component {
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
-                            
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Install the WorkOS SSO and API Plugins</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the <strong>Plugins</strong> tab of your app editor in Bubble, click <strong>Add Plugins</strong>, then search for WorkOS. Install the plugins for both WorkOS SSO and WorkOS API and then click <strong>Done</strong>.</p>
+
+                            <div style={{marginBottom: "5%"}} id='img216' className={`enlargable-image-container ${this.state.enlargedImageId === 'img216' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img216')}>
+                                    <img  src='/assets/bubble_img1.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img217' className={`enlargable-image-container ${this.state.enlargedImageId === 'img217' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img217')}>
+                                    <img  src='/assets/bubble_img2.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The next step is to enter your secret keys/parameters on the <strong>Plugins</strong> settings page as seen below. The API key can be found in your WorkOS dashboard under <strong>API Keys</strong>.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>In the WorkOS SSO plugin the API Key value can be entered directly.</p>
+                                </div>
+                            </div>
+
+                            <div id='img218' className={`enlargable-image-container ${this.state.enlargedImageId === 'img218' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img218')}>
+                                    <img  src='/assets/bubble_img3.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>In the WorkOS API plugin the API Key value needs to be preceded by <strong>Bearer</strong>.</p>
+                                </div>
+                            </div>
+
+
 
                         </div>
                     </div>
