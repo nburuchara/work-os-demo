@@ -2256,11 +2256,11 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the <strong>Plugins</strong> tab of your app editor in Bubble, click <strong>Add Plugins</strong>, then search for WorkOS. Install the plugins for both WorkOS SSO and WorkOS API and then click <strong>Done</strong>.</p>
 
                             <div style={{marginBottom: "5%"}} id='img216' className={`enlargable-image-container ${this.state.enlargedImageId === 'img216' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img216')}>
-                                    <img  src='/assets/bubble_img1.png' alt="Enlargable" className="image" />
+                                    <img  src='/assets/bubble_img1.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <div id='img217' className={`enlargable-image-container ${this.state.enlargedImageId === 'img217' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img217')}>
-                                    <img  src='/assets/bubble_img2.png' alt="Enlargable" className="image" />
+                                    <img  src='/assets/bubble_img2.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The next step is to enter your secret keys/parameters on the <strong>Plugins</strong> settings page as seen below. The API key can be found in your WorkOS dashboard under <strong>API Keys</strong>.</p>
@@ -2275,7 +2275,7 @@ export default class Integrations extends Component {
                             </div>
 
                             <div id='img218' className={`enlargable-image-container ${this.state.enlargedImageId === 'img218' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img218')}>
-                                    <img  src='/assets/bubble_img3.png' alt="Enlargable" className="image" />
+                                    <img  src='/assets/bubble_img3.avif' alt="Enlargable" className="image" />
                             </div>
 
                             <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
@@ -2287,9 +2287,143 @@ export default class Integrations extends Component {
                                 </div>
                             </div>
 
+                            <div id='img219' className={`enlargable-image-container ${this.state.enlargedImageId === 'img219' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img219')}>
+                                    <img  src='/assets/bubble_img4.avif' alt="Enlargable" className="image" />
+                            </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now you’re set up to use the plugin directly in your workflows.</p>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Single Sign-On</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Whether you are implementing a Single Sign-On authorization flow for your application using a no-code platform or building your app from the ground up, the steps that you need to take on a high level are the same. You can find more information in our SSO Quickstart Guide.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Use SSO in a Workflow</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure SSO, you will need:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An active SSO connection, which can be configured manually or by using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>connection</label> ID or <label className='demo-docs-hyperlink'>organization</label> ID associated with the user logging in. If WorkOS does not handle user management on your application’s behalf, it is necessary to keep track of the association between your users and their WorkOS connection or organization IDs in your database.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Redirect URI</label>, which is the URL to redirect the user to when they are authorized. This is provided by Bubble in the <strong>Plugins</strong> tab.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <strong>Workflow</strong> page in your application and add a new event. Select the action that will trigger the workflow to start. In this case, the workflow is triggered when the submit button is clicked.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the <strong>Account</strong> menu option, select <strong>Signup/login with a social network</strong>, then select <strong>WorkOS SSO</strong> from the <strong>OAuth provider</strong> dropdown menu. Enter either the connection ID, organization ID, or provider.</p>
+
+                            <div className='api-keys'>
+
+                                <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                    <div className='api-info-box-img'>
+                                        <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                    </div>
+                                    <div className='api-info-box-text'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Select whether you will use connection, organization, or provider (OAuth connections only), and delete the other defaults. The value should be entered in the <span style={{backgroundColor: "#ccc"}}>organization=&lt;organization_id&gt;</span> format.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id='img220' className={`enlargable-image-container ${this.state.enlargedImageId === 'img220' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img220')}>
+                                    <img  src='/assets/bubble_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user launches this workflow, they will be prompted to log in through the associated WorkOS SSO connection.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upon a successful login, if the user does not exist in the application database, a new user will be created and logged in as the current user. If the user already exists, that user will be logged in as the current user.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Directory Sync</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To start using <label className='demo-docs-hyperlink'>Directory Sync</label>, you will need to configure a new directory connection between your customer’s directory provider and WorkOS. This can be completed manually or by using the <label className='demo-docs-hyperlink'>Admin Portal</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once a directory connection is activated in WorkOS, you can configure webhooks to send events to your Bubble application using the WorkOS plugin through a backend workflow.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Enable backend workflows</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To enable backend workflows, navigate to the <strong>Settings</strong> page of your Bubble app under the <strong>API</strong> tab, and select <strong>Enable Workflow API and backend workflows</strong>. You are now able to configure backend workflows in the <strong>Workflow</strong> section.</p>
+
+                            <div id='img221' className={`enlargable-image-container ${this.state.enlargedImageId === 'img221' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img221')}>
+                                    <img  src='/assets/bubble_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create a new workflow to receive webhooks</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a new workflow that subscribes to WorkOS webhooks, navigate to the <strong>Workflows</strong> section of your app in Bubble and select <strong>backend workflows</strong> from the page selection dropdown.</p>
+
+                            <div id='img222' className={`enlargable-image-container ${this.state.enlargedImageId === 'img222' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img222')}>
+                                    <img  src='/assets/bubble_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a new API Workflow. In the <strong>detected data option</strong> ensure that <strong>include headers</strong> is selected before clicking <strong>Detect data</strong>.</p>
+
+                            <div id='img223' className={`enlargable-image-container ${this.state.enlargedImageId === 'img223' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img223')}>
+                                    <img  src='/assets/bubble_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A pop-up window will show a test URL to validate the webhook body.</p>
+
+                            <div id='img224' className={`enlargable-image-container ${this.state.enlargedImageId === 'img224' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img224')}>
+                                    <img  src='/assets/bubble_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the <strong>Webhooks</strong> tab in your WorkOS dashboard and enter this test URL as your webhook endpoint.</p>
+
+                            <div id='img225' className={`enlargable-image-container ${this.state.enlargedImageId === 'img225' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img225')}>
+                                    <img  src='/assets/bubble_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, click the <strong>Send Test Event</strong> button to send a test event.</p>
+
+                            <div id='img226' className={`enlargable-image-container ${this.state.enlargedImageId === 'img226' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img226')}>
+                                    <img  src='/assets/bubble_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Bubble will recognize the event and validate the endpoint. Click save to complete the subscription to WorkOS webhook events for this workflow.</p>
+
+                            <div id='img227' className={`enlargable-image-container ${this.state.enlargedImageId === 'img227' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img227')}>
+                                    <img  src='/assets/bubble_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Implement the webhook validation action</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After the new workflow is set up to listen for new events, it is recommended that you use the webhook validation action to verify that the webhooks being received are from WorkOS.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This action verifies the request is valid by using the webhook body, signature, and secret that you provide from your WorkOS dashboard. To properly define the webhook parameter, you should use the raw body text of the request data. Similarly, the <span>webhook_signature</span> should be defined using the <span>workos-signature</span> in the request data headers.</p>
+
+                            </div>
+
+                            <div id='img228' className={`enlargable-image-container ${this.state.enlargedImageId === 'img228' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img228')}>
+                                    <img  src='/assets/bubble_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After the event is validated, you can use the data from the body to log the webhook and make changes to users.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Reconcile the users</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The plugin also includes endpoints, documented under the directory sync section of the <label className='demo-docs-hyperlink'>API Reference</label>, that can be used to reconcile users.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Periodically calling the <label className='demo-docs-hyperlink'>List Directory Users</label> endpoint and verifying that the returned date matches what you have stored in your user table helps ensure your application has up-to-date information about your users, so you can use it with confidence.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Admin Portal</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <label className='demo-docs-hyperlink'>Admin Portal</label> provides an out-of-the-box UI for organization admins to configure SSO and Directory Sync connections.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API plugin provides an API call that launches the Admin Portal if you would like to display it on the settings page of your application. You can also copy and paste these links directly from the WorkOS dashboard in the connection settings.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upon completing the setup flow with the Admin Portal, the organization admin will be able to test the new connection and validate that it has been configured correctly.</p>
+
+                            <div id='img229' className={`enlargable-image-container ${this.state.enlargedImageId === 'img229' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img229')}>
+                                    <img  src='/assets/bubble_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 
@@ -2299,4 +2433,4 @@ export default class Integrations extends Component {
     }
 }
 
-//* IMAGE 205 (latest)
+//* IMAGE 229 (latest)
