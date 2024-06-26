@@ -24,6 +24,8 @@ export default class Integrations extends Component {
             auth0: false,
             awsCognito: false,
             bambooHR: false,
+            breatheHR: false,
+            bubblePlugin: false,
 
             prevSelectedPage: "",
 
@@ -72,6 +74,9 @@ export default class Integrations extends Component {
             "auth0": "auth0",
             "awsCognito": "awsCognito",
             "bambooHR": "bambooHR",
+            "breatheHR": "breatheHR",
+            "bubblePlugin": "bubblePlugin",
+            
         };
       
         const page = pageMap[selectedPage];
@@ -117,6 +122,8 @@ export default class Integrations extends Component {
             "auth0": "auth0",
             "awsCognito": "awsCognito",
             "bambooHR": "bambooHR",
+            "breatheHR": "breatheHR",
+            "bubblePlugin": "bubblePlugin",
         };
         const keys = Object.keys(pageMap);
         for (let i = 0; i < keys.length; i++) {
@@ -170,7 +177,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -2064,10 +2071,189 @@ export default class Integrations extends Component {
                     </div>
                 </CSSTransition>
 
+                <CSSTransition in={breatheHR}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Breathe HR</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Breathe HR.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Breathe HR directories.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need the following information from the organization:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Breathe HR API key</p></li>
+                            </ul>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Note: The Breathe HR integration isn’t enabled by default in the WorkOS Dashboard or Admin Portal. Please reach out to <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>support@workos.com</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> or via your team’s WorkOS Slack channel if you would like Breathe HR enabled.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an API Key</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The organization will need to create an API key for you. An API key can be generated from the Admin Settings menu.</p>
+
+                            <div id='img206' className={`enlargable-image-container ${this.state.enlargedImageId === 'img206' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img206')}>
+                                    <img  src='/assets/breathe_hr_img1.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “Integrations”, select “API Setup”.</p>
+
+                            <div id='img207' className={`enlargable-image-container ${this.state.enlargedImageId === 'img207' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img207')}>
+                                    <img  src='/assets/breathe_hr_img2.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, select “Enable API”.</p>
+
+                            <div id='img208' className={`enlargable-image-container ${this.state.enlargedImageId === 'img208' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img208')}>
+                                    <img  src='/assets/breathe_hr_img3.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verify that you’d like to enable the API to access user information.</p>
+
+                            <div id='img209' className={`enlargable-image-container ${this.state.enlargedImageId === 'img209' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img209')}>
+                                    <img  src='/assets/breathe_hr_img4.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Save the production API key – this will be used in the next step.</p>
+
+                            <div id='img210' className={`enlargable-image-container ${this.state.enlargedImageId === 'img210' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img210')}>
+                                    <img  src='/assets/breathe_hr_img5.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS dashboard and select “Organizations” from the left hand Navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Organization you’d like to enable a Breathe HR Directory Sync connection for.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Organization’s page click “Add Directory”.</p>
+
+                            <div id='img211' className={`enlargable-image-container ${this.state.enlargedImageId === 'img211' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img211')}>
+                                    <img  src='/assets/breathe_hr_img6.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Breathe HR” as the Directory Provider, and then provide a descriptive name for the connection. Select “Create Directory”.</p>
+
+                            <div id='img212' className={`enlargable-image-container ${this.state.enlargedImageId === 'img212' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img212')}>
+                                    <img  src='/assets/breathe_hr_img7.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your Directory Sync Connection</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Update Directory” on the Directory details page.</p>
+                            
+                            <div id='img213' className={`enlargable-image-container ${this.state.enlargedImageId === 'img213' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img213')}>
+                                    <img  src='/assets/breathe_hr_img8.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the Breathe HR API key and click “Save Directory Details”.</p>
+
+                            <div id='img214' className={`enlargable-image-container ${this.state.enlargedImageId === 'img214' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img214')}>
+                                    <img  src='/assets/breathe_hr_img9.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync Users and Groups to Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now, you should see users and groups synced over from Breathe HR.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Departments from Breathe HR are synced as groups in WorkOS. All users are synced, but only those marked as “Current employee” or “Pending leaver” are active.</p>
+
+                            <div id='img215' className={`enlargable-image-container ${this.state.enlargedImageId === 'img215' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img215')}>
+                                    <img  src='/assets/breathe_hr_img10.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do Breathe HR directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Breathe HR directories poll every 30 minutes starting from the time of the initial sync.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={bubblePlugin}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Bubble Plugin</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Add WorkOS features to your Bubble application.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <label className='demo-docs-hyperlink'>Bubble plugin for WorkOS</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> allows you to easily integrate <label className='demo-docs-hyperlink'>WorkOS API</label> endpoints in your application’s workflows. This plugin includes actions for SSO, Directory Sync, Admin Portal, and webhook validation.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
 
             </Styles>
         )
     }
 }
 
-//* IMAGE 201 (latest)
+//* IMAGE 205 (latest)

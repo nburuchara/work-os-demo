@@ -16561,6 +16561,14 @@ const results = [
     "subCat1": "Integrations",
     "page": "BambooHR",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Breathe HR",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Breathe HR",
+    "lastCat": "top"
   }
 ];
 export default results;

@@ -20,6 +20,8 @@ const results = [
     {"id": "999995", "name": "Auth0", "category": "Resources", "subCat1": "Integrations", "page": "Auth0", "lastCat": "top"},
     {"id": "999995", "name": "AWS Cognito", "category": "Resources", "subCat1": "Integrations", "page": "AWS Cognito", "lastCat": "top"},
     {"id": "999995", "name": "BambooHR", "category": "Resources", "subCat1": "Integrations", "page": "BambooHR", "lastCat": "top"},
+    {"id": "999995", "name": "Breathe HR", "category": "Resources", "subCat1": "Integrations", "page": "Breathe HR", "lastCat": "top"},
+    {"id": "999995", "name": "Bubble Plugin", "category": "Resources", "subCat1": "Integrations", "page": "Bubble Plugin", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
