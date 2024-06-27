@@ -16585,6 +16585,22 @@ const results = [
     "subCat1": "Integrations",
     "page": "CAS SAML",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Cezanne HR",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Cezanne HR",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "C",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Cezanne HR",
+    "lastCat": "top"
   }
 ];
 export default results;

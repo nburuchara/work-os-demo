@@ -2695,7 +2695,9 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
 
-                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a ClassLink SAML Connection, you’ll need the Identity Provider Metadata URL that is available from the organization’s ClassLink SAML instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a ClassLink SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
 
                         </div>
                         </div>
