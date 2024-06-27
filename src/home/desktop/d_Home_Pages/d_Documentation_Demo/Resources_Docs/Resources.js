@@ -95,6 +95,8 @@ export default class Resources extends Component {
             "BambooHR": "bambooHR",
             "Breathe HR": "breatheHR",
             "Bubble Plugin": "bubblePlugin",
+            "CAS SAML": "casSaml",
+
         }
         const integrationsPage = integrationsPageMap[selectedPage];
         if (integrationsPage) {
@@ -252,6 +254,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "BambooHR", "category": "Resources", "subCat1": "Integrations", "page": "BambooHR", "lastCat": "top"},
             {"id": "999995", "name": "Breathe HR", "category": "Resources", "subCat1": "Integrations", "page": "Breathe HR", "lastCat": "top"},
             {"id": "999995", "name": "Bubble Plugin", "category": "Resources", "subCat1": "Integrations", "page": "Bubble Plugin", "lastCat": "top"},
+            {"id": "999995", "name": "CAS SAML", "category": "Resources", "subCat1": "Integrations", "page": "CAS SAML", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -473,7 +476,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('CAS SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>CAS SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to CAS via SAML.</p>
