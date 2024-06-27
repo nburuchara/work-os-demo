@@ -15247,7 +15247,48 @@ const codeSnippets = [
           '1 https://&ltcognito-user-pool-domain&gt/oauth2/idpresponse'
         ]
       }
-    }
+    },
+
+    {
+      id: 111,
+      title: "Certificate format",
+      code: {
+        javascript: [
+          '1 -----BEGIN CERTIFICATE-----',
+          '2 <span style="color: #ce3559;"><</span>PUBLIC KEY VALUE<span style="color: #ce3559;">></span>',
+          '3 -----END CERTIFICATE-----',
+        ]
+      }
+    },
+
+    {
+      id: 112,
+      title: "Completed Certificate Format",
+      code: {
+        javascript: [
+          '1 -----BEGIN CERTIFICATE-----',
+          '2 MIIDUTCCAjmgAwIBAgIRAN557boQ2ZxW4Ww08cZYK2IwDQYJKoZIhvcNAQELBQAw',
+          '3 YjELMAkGA1UEBhMCVVMxDjAMxxxxxAgTBVRleGFzMQ8wDQYDVQQHEwZBdXN0aW4x',
+          '4 EzARBgNVBAoTCkNsb3VkZmxhcmUxHTAbBgNVBAMTFGNsb3VkZmxhcmVhY2Nlc3Mu',
+          '5 Y29tMB4XDTxxxxxwMjE5MzMxM1oXDTMyMDIwMjE5MzMxM1owYjELMAkGA1UEBhMC',
+          '6 VVMxDjAMBgNVBAgTBVRleGFzMQ8wDQYDVQQHEwZBdXN0aW4xEzARBgNVBAoTCkNs',
+          '7 b3VkZmxhcmUxHTAbBgNVBAMTFGNsb3VkZmxxxxxhY2Nlc3MuY29tMIIBIjANBgkq',
+          '8 hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA49p6jXzk65DeG4DI2NgW0UOOJrd+9qYS',
+          '9 OCuBYq/e4IqSeqchsm1JDY9MjB6xmiw+urC1qWuj0MS4dwAJQwiGFbCGDh5m4FAF',
+          '10 mZm5VaMkW5Q+MG5zXRfeLmhvLuT0XVBcDlkwPC3k28/moKi1KlwPcujLF43+rf2d',
+          '11 8Rm6ZNCJgfVzRxxxxxPd5NGpNlEZ0ViPXM1gsO15/1Iginevv+xKqRTx0vMsNLWJ',
+          '12 BwWLAAqm5b6U9XQefwy9lPqPywFwCuZEMXwI9Rpm0f2xmOK56EudtdSkQ1JtSgYX',
+          '13 x9rf/97NfP8wI2x1IncQtwdWNdW5cvxMqYU/Za6WZvjNCnpFQGXLJQIDAQABowIw',
+          '14 ADANBgkqhkiG9w0BAQsFAAOCAQEARZ0h2ZeNXSme0EbQeJfEFOX+mj9rPkHIJFfQ',
+          '15 G7+dRG6DwDubxG56TsvUINcJX8O5C6oQ0T6dRutO/jG5LxJqmCz5wLUTA/6/YLDk',
+          '16 95gbYyJ/yfLm4sd6DEoXzWSld+EZ5b86pxFnvR/+cPY2tcSghQ+moZKR5THwHLsZ',
+          '17 hie2Pr6UVvuS5D9BC4ijR+cPyB5r4qliI9C1p8phuZctoX9dPpFY+UwkWgUDx9sz',
+          '18 UXFJsqueoibxfVqh4Jzdw+2XH6xN3WvTdJN4Sh1fqEpBeOxxxxxlRrCAJiMnLtG6',
+          '19 QgHF9ZnNRbIFcUHF/lyWY3oxcvgeUwEnE5QVVbdoMMGKKgffbQ<span style="color: #ce3559;">==</span>',
+          '20 -----END CERTIFICATE-----',
+        ]
+      }
+    },
 
 ]
 

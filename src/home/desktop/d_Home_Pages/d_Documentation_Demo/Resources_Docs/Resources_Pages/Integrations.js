@@ -2866,10 +2866,10 @@ export default class Integrations extends Component {
                 >
                     <div className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
-                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>ClassLink</h1>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Cloudflare</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to ClassLink via SAML.</p>
-                            </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
@@ -2886,18 +2886,249 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a Cloudflare SAML Connection for, and from the dropdown menu select “Add Connection”.</p>
 
-                            
+                            <div id='img248' className={`enlargable-image-container ${this.state.enlargedImageId === 'img248' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img248')}>
+                                    <img  src='/assets/cloudflare_img1.avif' alt="Enlargable" className="image" />
+                            </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Cloudflare SAML” as the Identity Provider and give the Connection a descriptive name. Once this is filled out, click “Create Connection”.</p>
+
+                            <div id='img249' className={`enlargable-image-container ${this.state.enlargedImageId === 'img249' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img249')}>
+                                    <img  src='/assets/cloudflare_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label> and the <label className='demo-docs-hyperlink'>SP Entity ID</label>. These are available in your Connection’s Settings in the Developer Dashboard.</p>
+
+                            <div id='img249' className={`enlargable-image-container ${this.state.enlargedImageId === 'img249' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img249')}>
+                                    <img  src='/assets/cloudflare_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Cloudflare’s case, it needs to be set by the organization when configuring the application in the Cloudflare instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request. In this case, the entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Cloudflare instance.</p>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Cloudflare SAML is a unique integration in that it sits between WorkOS and the Identity Provider. This allows for additional rules to be configured, but also means there are two connections that need to be made. The first necessary connection is between Cloudflare and the IdP, and the second connection is between WorkOS and Cloudflare.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Connect Cloudflare with your Identity Provider</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First, create the connection between Cloudflare and the Identity Provider. Cloudflare Access allows you to connect with any IdP that supports a SAML 2.0 connection. Follow the <label className='demo-docs-hyperlink'>documentation from Cloudflare</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to configure a SAML application connection between Cloudflare and your IdP.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The one deviation from the CloudFlare documentation is that the SAML attributes must include <span>email</span>, <span>firstName</span>, <span>lastName</span>, and <span>id</span>. Email is included by default as the “Email attribute name”, but you will need to add the other three as SAML attributes.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When setting up the connection, be sure to enter <span>email</span>, <span>firstName</span>, <span>lastName</span>, and <span>id</span> as SAML attributes.</p>
+
+
+                                <div id='img250' className={`enlargable-image-container ${this.state.enlargedImageId === 'img250' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img250')}>
+                                        <img  src='/assets/cloudflare_img4.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Save the connection and then click the “Test” button. When successful, you will see a success screen including your <span>saml_attributes</span> that have been added.</p>
+
+                            </div>
+
+                            <div id='img251' className={`enlargable-image-container ${this.state.enlargedImageId === 'img251' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img251')}>
+                                        <img  src='/assets/cloudflare_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add an Application in Cloudflare Access</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, create the connection between Cloudflare and WorkOS. From the Cloudflare Zero Trust dashboard Access menu, select “Applications”, then “Add an application”.</p>
+
+                            <div id='img252' className={`enlargable-image-container ${this.state.enlargedImageId === 'img252' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img252')}>
+                                        <img  src='/assets/cloudflare_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “SaaS” for the type of application.</p>
+
+                            <div id='img253' className={`enlargable-image-container ${this.state.enlargedImageId === 'img253' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img253')}>
+                                        <img  src='/assets/cloudflare_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy the ACS URL and Entity ID from the Connection Settings in your WorkOS Dashboard.</p>
+
+                            <div id='img254' className={`enlargable-image-container ${this.state.enlargedImageId === 'img254' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img254')}>
+                                        <img  src='/assets/cloudflare_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the name of your application from the dropdown menu. If your application is not listed, type the name to save it.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the ACS URL and SP Entity ID to the corresponding fields in Cloudflare. Then select the Name ID Format that you would like to use for this application. For this example we’ll use Unique ID.</p>
+
+                            <div id='img255' className={`enlargable-image-container ${this.state.enlargedImageId === 'img255' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img255')}>
+                                        <img  src='/assets/cloudflare_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Mapping</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now, Configure the attribute statements. WorkOS requires that <span>email</span>, <span>firstName</span>, <span>lastName</span>, and <span>id</span> be included. Cloudflare automatically sends <span>id</span> and <span>email</span>, so you only need to add <span>firstName</span> and <span>lastName</span>. These attributes were configured in Step 1, and the mapped values are the same here.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add <span>firstName</span> and <span>lastName</span> to both the right and left sides of the SAML attribute statements.</p>
+
+                            </div>
+
+                            <div id='img256' className={`enlargable-image-container ${this.state.enlargedImageId === 'img256' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img256')}>
+                                        <img  src='/assets/cloudflare_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add a new attribute statement with <span>groups</span> as the “Name” and map it to the “IdP attribute” for <span>groups</span>, as shown in the example below.</p>
+
+                            </div>
+
+                            <div id='img257' className={`enlargable-image-container ${this.state.enlargedImageId === 'img257' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img257')}>
+                                        <img  src='/assets/cloudflare_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Finish SSO Application Configuration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Identity Provider that you are using from the list. In this example we are using an Okta SAML connection.</p>
+
+                            <div id='img258' className={`enlargable-image-container ${this.state.enlargedImageId === 'img258' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img258')}>
+                                        <img  src='/assets/cloudflare_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configure at least one policy and one rule, then click next. For this example the Policy sets the session length to 30 minutes for everyone.</p>
+
+                            <div id='img259' className={`enlargable-image-container ${this.state.enlargedImageId === 'img259' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img259')}>
+                                        <img  src='/assets/cloudflare_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy Connection Credentials</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SSO endpoint, Entity ID, and Public key (X.509 certificate) all will be entered in the Connection details in the <label className='demo-docs-hyperlink'>Developer Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. The SSO endpoint and Entity ID can be entered as-is, but the Public Key needs to be formatted as an X.509 certificate.</p>
+
+                            <div id='img260' className={`enlargable-image-container ${this.state.enlargedImageId === 'img260' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img260')}>
+                                        <img  src='/assets/cloudflare_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To format the Public Key, copy the value to a text editor and add the following header and footer to the Public Key. Ensure there are no spaces above or below the Key value, then save with the file extension “.cert”.</p>
+
+                            <CodeSnippetStruct 
+                            id={111}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Certificate format" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The format of the file should look like this when you’re finished.</p>
+
+                            <CodeSnippetStruct 
+                            id={112}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Completed Certificate Format" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provide Connection Credentials</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Connection in your Developer Dashboard. Enter the SSO endpoint in the <label className='demo-docs-hyperlink'>IdP SSO URL</label> field and enter the “Access Entity ID or Issuer” value into the “IdP URI (Entity ID)” field.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the file that you saved for the X.509 certificate to the “Add an X.509 Certificate” field. Click Save Configuration.</p>
+
+                            <div id='img261' className={`enlargable-image-container ${this.state.enlargedImageId === 'img261' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img261')}>
+                                        <img  src='/assets/cloudflare_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be Active and good to go!</p>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 
+                {/* <CSSTransition in={cloudflare}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
 
+                </CSSTransition> */}
 
             </Styles>
         )
     }
 }
 
-//* IMAGE 237 (latest)
+//* IMAGE 257 (latest)
