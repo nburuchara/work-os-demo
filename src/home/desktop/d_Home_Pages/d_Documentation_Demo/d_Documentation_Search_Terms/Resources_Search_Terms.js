@@ -27,6 +27,7 @@ const results = [
     {"id": "999995", "name": "Cloudflare", "category": "Resources", "subCat1": "Integrations", "page": "Cloudflare", "lastCat": "top"},
     {"id": "999995", "name": "CyberArk SAML", "category": "Resources", "subCat1": "Integrations", "page": "CyberArk SAML", "lastCat": "top"},
     {"id": "999995", "name": "CyberArk SCIM", "category": "Resources", "subCat1": "Integrations", "page": "CyberArk SCIM", "lastCat": "top"},
+    {"id": "999995", "name": "Duo", "category": "Resources", "subCat1": "Integrations", "page": "Duo", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

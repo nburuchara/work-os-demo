@@ -16596,10 +16596,26 @@ const results = [
   },
   {
     "id": "999995",
-    "name": "C",
+    "name": "Cloudflare",
     "category": "Resources",
     "subCat1": "Integrations",
-    "page": "Cezanne HR",
+    "page": "Cloudflare",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "CyberArk SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "CyberArk SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "CyberArk SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "CyberArk SCIM",
     "lastCat": "top"
   }
 ];

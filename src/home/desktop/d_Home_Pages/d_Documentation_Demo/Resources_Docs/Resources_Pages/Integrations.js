@@ -31,6 +31,8 @@ export default class Integrations extends Component {
             classLink: false,
             cloudflare: false,
             cyberarkSaml: false,
+            cyberarkScim: false,
+            duo: false,
 
             prevSelectedPage: "",
 
@@ -85,7 +87,9 @@ export default class Integrations extends Component {
             "cezanneHR": "cezanneHR",
             "classLink": "classLink",
             "cloudflare": "cloudflare",
+            "cyberarkSaml": "cyberarkSaml",
             "cyberarkScim": "cyberarkScim",
+            "duo": "duo",
             
         };
       
@@ -140,6 +144,7 @@ export default class Integrations extends Component {
             "cloudflare": "cloudflare",
             "cyberarkSaml": "cyberarkSaml",
             "cyberarkScim": "cyberarkScim",
+            "duo": "duo",
 
         };
         const keys = Object.keys(pageMap);
@@ -194,7 +199,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -3386,7 +3391,193 @@ export default class Integrations extends Component {
                 unmountOnExit    
                 >
                     <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>CyberArk SCIM</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with CyberArk SCIM.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s CyberArk directories using SCIM.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need to provide the organization with two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className='demo-docs-hyperlink'>Endpoint</label> that CyberArk will make requests to.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for CyberArk to authenticate its endpoint requests.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After completing step 1 below, both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The rest of the steps below will need to be carried out by the organization when configuring your application in their CyberArk instance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your directory in the WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In your WorkOS Dashboard, select or create an Organization. Then select “Manually Configure Directory”.</p>
+
+                            <div id='img278' className={`enlargable-image-container ${this.state.enlargedImageId === 'img278' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img278')}>
+                                        <img  src='/assets/cyberark_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “CyberArk” as the Directory Provider and add a descriptive name for the directory sync connection.</p>
+
+                            <div id='img279' className={`enlargable-image-container ${this.state.enlargedImageId === 'img279' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img279')}>
+                                        <img  src='/assets/cyberark_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Directory Sync connection settings page, save the Endpoint and the Bearer Token. You’ll input these in the CyberArk settings.</p>
+
+                            <div id='img280' className={`enlargable-image-container ${this.state.enlargedImageId === 'img280' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img280')}>
+                                        <img  src='/assets/cyberark_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>We have support for whitelabeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your CyberArk application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>CyberArk supports SCIM provisioning in the context of a SAML app. The usual set up is to enable SAML first, following <label className='demo-docs-hyperlink'>our docs here</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the CyberArk Admin Portal, and navigate to your SAML app. Open the “Provisioning” tab, and select the box to “Enable provisioning for this application”.</p>
+
+                            <div id='img281' className={`enlargable-image-container ${this.state.enlargedImageId === 'img281' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img281')}>
+                                        <img  src='/assets/cyberark_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Yes” in the confirmation modal.</p>
+
+                            <div id='img282' className={`enlargable-image-container ${this.state.enlargedImageId === 'img282' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img282')}>
+                                        <img  src='/assets/cyberark_scim_img5.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the Endpoint from the WorkOS Dashboard into the “SCIM Service URL” field, and enter the Bearer Token from the WorkOS Dashboard into the corresponding field in the Provisioning tab. Select “Verify” to save these credentials.</p>
+
+                            <div id='img283' className={`enlargable-image-container ${this.state.enlargedImageId === 'img283' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img283')}>
+                                        <img  src='/assets/cyberark_scim_img6.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once the credentials have been verified, more options will be appear below. Deselect “Do not de-provision (deactivate or delete) users in target application” as seen below.</p>
+
+                            <div id='img284' className={`enlargable-image-container ${this.state.enlargedImageId === 'img284' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img284')}>
+                                        <img  src='/assets/cyberark_scim_img7.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure your role mappings in CyberArk</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users assigned to the SAML app will be synced, and roles mapped will be synced as groups. The roles are mapped on the Provisioning settings page, by selecting the “Add” button.</p>
+
+                            <div id='img285' className={`enlargable-image-container ${this.state.enlargedImageId === 'img285' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img285')}>
+                                        <img  src='/assets/cyberark_scim_img8.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the role mapping modal, select the role you’d like to map, and then create a destination group. The name will be what you see as the group name in directory sync. All users assigned to that role will be members of the mapped group. Select “Done”.</p>
+
+                            <div id='img286' className={`enlargable-image-container ${this.state.enlargedImageId === 'img286' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img286')}>
+                                        <img  src='/assets/cyberark_scim_img9.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After the role mapping is completed, click “Save”. The SCIM configuration part of the setup is complete.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Trigger the directory sync run in CyberArk</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In CyberArk, navigate to the Settings → Users → Outbound Provisioning page. Under Synchronizations, start the sync. You can also set up scheduled syncs here.</p>
+
+                            <div id='img287' className={`enlargable-image-container ${this.state.enlargedImageId === 'img287' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img287')}>
+                                        <img  src='/assets/cyberark_scim_img10.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the CyberArk SCIM directory in the WorkOS dashboard, select the “Users” tab and you will now see the users and groups synced over.</p>
+
+                            <div id='img288' className={`enlargable-image-container ${this.state.enlargedImageId === 'img288' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img288')}>
+                                        <img  src='/assets/cyberark_scim_img11.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <div className='api-keys'>
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>When a group is removed, I don’t see a <span style={{fontFamily: "inconsolata", fontWeight: "bold"}}>dsync.group.deleted</span> or <span style={{fontFamily: "inconsolata", fontWeight: "bold"}}>dsync.group.user_removed</span> events – is this expected?</h3>
+                            </div>
+
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Instead of individually assigning users to a SCIM application, CyberArk SCIM requires that users are assigned to the application through group membership.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It is a known issue with CyberArk SCIM that when a group is removed from the app, no indication is received that the group has changed.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The users of the group must be cleaned up before the group itself is removed from the SCIM application.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={duo}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Duo</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Duo via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                        </div>
                     </div>
                 </CSSTransition>
 
@@ -3395,4 +3586,4 @@ export default class Integrations extends Component {
     }
 }
 
-//* IMAGE 266 (latest)
+//* IMAGE 280 (latest)
