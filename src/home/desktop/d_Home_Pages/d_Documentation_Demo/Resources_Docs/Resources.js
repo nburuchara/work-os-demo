@@ -103,6 +103,8 @@ export default class Resources extends Component {
             "CyberArk SCIM": "cyberarkScim",
             "Duo": "duo",
             "Entra ID SAML (fka Azure AD)": "entraIdSaml",
+            "Entra ID SCIM (fka Azure AD)": "entraIdScim",
+            "Firebase": "firebase",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -269,6 +271,8 @@ export default class Resources extends Component {
             {"id": "999995", "name": "CyberArk SCIM", "category": "Resources", "subCat1": "Integrations", "page": "CyberArk SCIM", "lastCat": "top"},
             {"id": "999995", "name": "Duo", "category": "Resources", "subCat1": "Integrations", "page": "Duo", "lastCat": "top"},
             {"id": "999995", "name": "Entra ID SAML (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SAML (fka Azure AD)", "lastCat": "top"},
+            {"id": "999995", "name": "Entra ID SCIM (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SCIM (fka Azure AD)", "lastCat": "top"},
+            {"id": "999995", "name": "Firebase", "category": "Resources", "subCat1": "Integrations", "page": "Firebase", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -596,7 +600,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/microsoft_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Entra ID SCIM (fka Azure AD)')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Entra ID SCIM (formerly Azure AD)</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with Entra ID SCIM.</p>
@@ -619,7 +623,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('Firebase')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Firebase</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Add Single Sign-On to your Firebase application with WorkOS.</p>

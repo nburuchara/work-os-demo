@@ -33,6 +33,10 @@ export default class Integrations extends Component {
             cyberarkSaml: false,
             cyberarkScim: false,
             duo: false,
+            entraIdSaml: false,
+            entraIdScim: false,
+            firebase: false,
+
 
             prevSelectedPage: "",
 
@@ -91,6 +95,8 @@ export default class Integrations extends Component {
             "cyberarkScim": "cyberarkScim",
             "duo": "duo",
             "entraIdSaml": "entraIdSaml",
+            "entraIdScim": "entraIdScim",
+            "firebase": "firebase",
             
         };
       
@@ -147,6 +153,8 @@ export default class Integrations extends Component {
             "cyberarkScim": "cyberarkScim",
             "duo": "duo",
             "entraIdSaml": "entraIdSaml",
+            "entraIdScim": "entraIdScim",
+            "firebase": "firebase",
 
         };
         const keys = Object.keys(pageMap);
@@ -201,7 +209,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -4091,8 +4099,253 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync for.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”.</p>
 
-                            
+                            <div id='img326' className={`enlargable-image-container ${this.state.enlargedImageId === 'img326' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img326')}>
+                                <img  src='/assets/entra_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Entra ID” from the dropdown, and enter the organization name.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, click “Create Directory.”</p>
+
+                            <div id='img327' className={`enlargable-image-container ${this.state.enlargedImageId === 'img327' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img327')}>
+                                <img  src='/assets/entra_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>We have support for whitelabeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Entra ID directory sync has now been created successfully with an Endpoint and Bearer Token.</p>
+
+                            <div id='img328' className={`enlargable-image-container ${this.state.enlargedImageId === 'img328' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img328')}>
+                                <img  src='/assets/entra_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your Azure application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to the Entra ID Admin Center Dashboard. Select “Enterprise applications” from the list of Azure services.</p>
+
+                            <div id='img329' className={`enlargable-image-container ${this.state.enlargedImageId === 'img329' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img329')}>
+                                <img  src='/assets/entra_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of applications and move to Step 3.</p>
+
+                            <div id='img330' className={`enlargable-image-container ${this.state.enlargedImageId === 'img330' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img330')}>
+                                <img  src='/assets/entra_scim_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you haven’t created a SCIM application in Azure, select “New Application”.</p>
+
+                            <div id='img331' className={`enlargable-image-container ${this.state.enlargedImageId === 'img331' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img331')}>
+                                <img  src='/assets/entra_scim_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create your own application” and continue.</p>
+
+                            <div id='img332' className={`enlargable-image-container ${this.state.enlargedImageId === 'img332' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img332')}>
+                                <img  src='/assets/entra_scim_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give your application a descriptive name, and select the “Integrate any other application you don’t find in the gallery (Non-gallery)” option, then click “Create”.</p>
+
+                            <div id='img333' className={`enlargable-image-container ${this.state.enlargedImageId === 'img333' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img333')}>
+                                <img  src='/assets/entra_scim_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure your integration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Provisioning” from the “Manage” section found in the navigation menu.</p>
+
+                            <div id='img334' className={`enlargable-image-container ${this.state.enlargedImageId === 'img334' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img334')}>
+                                <img  src='/assets/entra_scim_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Get Started” button.</p>
+
+                            <div id='img335' className={`enlargable-image-container ${this.state.enlargedImageId === 'img335' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img335')}>
+                                <img  src='/assets/entra_scim_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Automatic” Provisioning Mode from the dropdown menu.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the “Admin Credentials” section, copy and paste the Endpoint from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> in the “Tenant URL” field.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, copy and paste the Bearer Token from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> into the Secret Token field.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Test Connection” to receive confirmation that your connection has been set up correctly. Then, select “Save” to persist the credentials.</p>
+
+                            <div id='img336' className={`enlargable-image-container ${this.state.enlargedImageId === 'img336' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img336')}>
+                                <img  src='/assets/entra_scim_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set and enable Attribute mappings</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Expand the “Mappings” section.</p>
+
+                            <div id='img337' className={`enlargable-image-container ${this.state.enlargedImageId === 'img337' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img337')}>
+                                <img  src='/assets/entra_scim_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure the group and user attribute mappings are enabled, and are mapping the correct fields. The default mapping should work, but your specific Azure setup may require you to add a custom mapping.</p>
+
+                            <div id='img338' className={`enlargable-image-container ${this.state.enlargedImageId === 'img338' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img338')}>
+                                <img  src='/assets/entra_scim_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure that you are mapping <span>objectId</span> to <span>externalId</span> within the Attribute Mapping section.</p>
+                            </div>
+
+                            <div id='img339' className={`enlargable-image-container ${this.state.enlargedImageId === 'img339' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img339')}>
+                                <img  src='/assets/entra_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assign users and groups to your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order for your users and groups to be synced, you will need to assign them to your Entra ID SCIM Application. Select “Users and groups” from the “Manage” section of the navigation menu.</p>
+
+                            <div id='img340' className={`enlargable-image-container ${this.state.enlargedImageId === 'img340' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img340')}>
+                                <img  src='/assets/entra_scim_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Add user/group” from the top menu.</p>
+
+                            <div id='img341' className={`enlargable-image-container ${this.state.enlargedImageId === 'img341' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img341')}>
+                                <img  src='/assets/entra_scim_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “None selected” under the “Users and Groups”. In the menu, select the users and groups that you want to add to the SCIM application, and click “Select”.</p>
+
+                            <div id='img342' className={`enlargable-image-container ${this.state.enlargedImageId === 'img342' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img342')}>
+                                <img  src='/assets/entra_scim_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Assign” to add the selected users and groups to your SCIM application.</p>
+
+                            <div id='img343' className={`enlargable-image-container ${this.state.enlargedImageId === 'img343' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img343')}>
+                                <img  src='/assets/entra_scim_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Turn on provisioning for your SCIM application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Provisioning menu, confirm the “Provisioning Status” is set to “On” and that the “Scope” is set to “Sync only assigned users and groups”.</p>
+
+                            <div id='img344' className={`enlargable-image-container ${this.state.enlargedImageId === 'img344' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img344')}>
+                                <img  src='/assets/entra_scim_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Begin provisioning users and groups and witness realtime changes in your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>No emails are coming through for users from Azure. How do I get emails for my Azure users?</h3>
+
+                            <div className='api-keys'>
+            
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For cloud-managed users, Entra ID pulls the email from the mail attribute in Exchange. If your customer doesn’t have this set up, they will need to configure attribute mapping in their SCIM app in Azure in order to provision users with WorkOS. They can use <label className='demo-docs-hyperlink'>this tutorial from Microsoft</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. They’ll want to map a known email attribute, such as UPN, to the <span>emails[type eq “work”].value</span> SCIM attribute. For directories with synchronized-users, they will need to map the <span>userPrincipalName</span> attribute into the <span>emails[type eq “work”].value</span> SCIM attribute.</p>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Sometimes, reactivating “suspended” users does not re-add them to their Azure groups. Why is that and how can I fix it?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user is deleted from the entire directory, instead of only being deprovisioned from the SCIM app, the user may be soft-deleted (their state is set as “suspended”). Reactivating these suspended users will not send SCIM requests to re-add the user to the groups. To do so, the IT admin will need to select the “Restart Provisioning” button for the SCIM app in Azure.</p>
+                            
+                            <div id='img345' className={`enlargable-image-container ${this.state.enlargedImageId === 'img345' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img345')}>
+                                <img  src='/assets/entra_scim_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can profile images be accessed with Azure SCIM?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID’s SCIM provisioning does not support transmitting image.</p>
+
+                            <div className='api-keys'>
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Why do I receive a <span style={{fontWeight: "bold"}}>dsync.user.updated</span> event after <span style={{fontWeight: "bold"}}>dsync.user.created?</span></h3>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID sends a newly provisioned user over to WorkOS in two separate actions. WorkOS will then send these actions as two individual events to your app. This is expected behavior.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do Entra ID SCIM 2.0 directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Entra ID SCIM 2.0 Directory Sync Interval:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>By default, Entra ID SCIM 2.0 directories sync events on a scheduled time interval, typically every 40 minutes.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more details, please refer to Entra ID’s <label className='demo-docs-hyperlink'>official documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On-Demand Provisioning:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There’s also an option for  <label className='demo-docs-hyperlink'>On-demand provisioning</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> which syncs events in real-time.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={firebase}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Firebase</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Add Single Sign-On to your Firebase application with WorkOS.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                         </div>
                     </div>
                 </CSSTransition>
