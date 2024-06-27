@@ -96,6 +96,8 @@ export default class Resources extends Component {
             "Breathe HR": "breatheHR",
             "Bubble Plugin": "bubblePlugin",
             "CAS SAML": "casSaml",
+            "Cezanne HR": "cezanneHR",
+            "ClassLink": "classLink",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -255,6 +257,8 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Breathe HR", "category": "Resources", "subCat1": "Integrations", "page": "Breathe HR", "lastCat": "top"},
             {"id": "999995", "name": "Bubble Plugin", "category": "Resources", "subCat1": "Integrations", "page": "Bubble Plugin", "lastCat": "top"},
             {"id": "999995", "name": "CAS SAML", "category": "Resources", "subCat1": "Integrations", "page": "CAS SAML", "lastCat": "top"},
+            {"id": "999995", "name": "Cezanne HR", "category": "Resources", "subCat1": "Integrations", "page": "Cezanne HR", "lastCat": "top"},
+            {"id": "999995", "name": "ClassLink", "category": "Resources", "subCat1": "Integrations", "page": "ClassLink", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -485,7 +489,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/cas_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Cezanne HR')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Cezanne HR</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with Cezanne HR.</p>
@@ -497,7 +501,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('ClassLink')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>ClassLink</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to ClassLink via SAML.</p>

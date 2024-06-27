@@ -16577,6 +16577,14 @@ const results = [
     "subCat1": "Integrations",
     "page": "Bubble Plugin",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "CAS SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "CAS SAML",
+    "lastCat": "top"
   }
 ];
 export default results;
