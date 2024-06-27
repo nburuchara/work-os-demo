@@ -27,6 +27,10 @@ export default class Integrations extends Component {
             breatheHR: false,
             bubblePlugin: false,
             casSaml: false,
+            cezanneHR: false,
+            classLink: false,
+            cloudflare: false,
+            cyberarkSaml: false,
 
             prevSelectedPage: "",
 
@@ -81,6 +85,7 @@ export default class Integrations extends Component {
             "cezanneHR": "cezanneHR",
             "classLink": "classLink",
             "cloudflare": "cloudflare",
+            "cyberarkScim": "cyberarkScim",
             
         };
       
@@ -133,6 +138,8 @@ export default class Integrations extends Component {
             "cezanneHR": "cezanneHR",
             "classLink": "classLink",
             "cloudflare": "cloudflare",
+            "cyberarkSaml": "cyberarkSaml",
+            "cyberarkScim": "cyberarkScim",
 
         };
         const keys = Object.keys(pageMap);
@@ -187,7 +194,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -2519,7 +2526,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -2651,7 +2658,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -2823,7 +2830,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -2867,7 +2874,7 @@ export default class Integrations extends Component {
                     <div className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Cloudflare</h1>
-                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to ClassLink via SAML.</p>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Cloudflare via SAML.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
@@ -3093,7 +3100,7 @@ export default class Integrations extends Component {
                             selectedLang={this.state.currentSelectedLanguage}/>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -3118,17 +3125,274 @@ export default class Integrations extends Component {
                     </div>
                 </CSSTransition>
 
-                {/* <CSSTransition in={cloudflare}
+                <CSSTransition in={cyberarkSaml}
                 timeout={500}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>CyberArk SAML</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to CyberArk via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
-                </CSSTransition> */}
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a CyberArk SAML Connection, you’ll need the Identity Provider metadata that is available from your CyberArk instance.</p>
+                            
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The first thing you’ll need to do is create a new CyberArk SAML connection in your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a CyberArk SAML Connection for, and then click “Manually Configure Connection”.</p>
+
+                            <div id='img262' className={`enlargable-image-container ${this.state.enlargedImageId === 'img262' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img262')}>
+                                        <img  src='/assets/cyberark_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “CyberArk SAML” as the Identity Provider, give the Connection a descriptive name, and click “Create Connection”.</p>
+
+                            <div id='img263' className={`enlargable-image-container ${this.state.enlargedImageId === 'img263' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img263')}>
+                                        <img  src='/assets/cyberark_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label> and <label className='demo-docs-hyperlink'>SP Entity ID</label>. They are readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img264' className={`enlargable-image-container ${this.state.enlargedImageId === 'img264' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img264')}>
+                                        <img  src='/assets/cyberark_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In CyberArk’s case, it needs to be set by the organization when configuring your application in their CyberArk instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request and the audience of a SAML response. In this case, the SP Entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s CyberArk instance, and that WorkOS is the intended audience of the SAML responses from the CyberArk instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL will need to be set as the “Assertion Consumer Service (ACS) URL”, and the SP Entity ID will need to be set as the “SP Entity Id / Issuer / Audience”, in the “Service Provider Configuration” section of the “Trust” tab in the SAML App.</p>
+
+                            <div id='img265' className={`enlargable-image-container ${this.state.enlargedImageId === 'img265' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img265')}>
+                                        <img  src='/assets/cyberark_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, provide the Identity Provider metadata.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML configuration in their CyberArk Identity Admin Portal. If that’s not the case during your setup, the following steps describe how to get the necessary information.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log in</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the  <label className='demo-docs-hyperlink'>CyberArk Identity Admin Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and select “Web Apps” from the left-side navigation.</p>
+
+                            <div id='img266' className={`enlargable-image-container ${this.state.enlargedImageId === 'img266' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img266')}>
+                                        <img  src='/assets/cyberark_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of applications and move to Step 4. If you haven’t created a SAML application in CyberArk, select “Add Web Apps”.</p>
+
+                            <div id='img267' className={`enlargable-image-container ${this.state.enlargedImageId === 'img267' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img267')}>
+                                        <img  src='/assets/cyberark_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Custom” tab and then click to add “SAML”.</p>
+
+                            <div id='img268' className={`enlargable-image-container ${this.state.enlargedImageId === 'img268' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img268')}>
+                                        <img  src='/assets/cyberark_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Yes” to begin setting up the SAML App.</p>
+
+                            <div id='img269' className={`enlargable-image-container ${this.state.enlargedImageId === 'img269' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img269')}>
+                                        <img  src='/assets/cyberark_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a descriptive App Name and Description, then click “Save”.</p>
+
+                            <div id='img270' className={`enlargable-image-container ${this.state.enlargedImageId === 'img270' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img270')}>
+                                        <img  src='/assets/cyberark_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, navigate to the “Trust” tab and enter the SP Entity ID from the Connection Settings into “SP Entity Id / Issuer / Audience” and the ACS URL from the Connection Settings into “Assertion Consumer Service (ACS) URL” in the “Service Provider Configuration” section of the “Trust” tab in the SAML App.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>IMPORTANT: Be sure to check “Both” under “Sign Response or Assertion?”.</p>
+                                </div>
+                            </div>
+
+                            <div id='img271' className={`enlargable-image-container ${this.state.enlargedImageId === 'img271' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img271')}>
+                                        <img  src='/assets/cyberark_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Mapping</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “SAML Response” tab and use the “Add” button to add the following key-value pairs. Then, click “Save”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>LoginUser.Uuid</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>LoginUser.Email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>LoginUser.FirstName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>LoginUser.LastName</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img272' className={`enlargable-image-container ${this.state.enlargedImageId === 'img272' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img272')}>
+                                        <img  src='/assets/cyberark_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add a new attribute in the “SAML Response” tab. In the “Attribute Name” column, input <span>groups</span>, and map it to the “Attribute Value” for a user’s group membership, such as <span>LoginUser.GroupNames</span>, as shown in the example below.</p>
+
+                            </div>
+
+                            <div id='img273' className={`enlargable-image-container ${this.state.enlargedImageId === 'img273' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img273')}>
+                                        <img  src='/assets/cyberark_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Users to SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To give users permission to authenticate via this SAML app, you will need to assign individual users and/or groups of users to the CyberArk SAML app.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the “Permissions” tab, and select “Add”.</p>
+
+                            <div id='img274' className={`enlargable-image-container ${this.state.enlargedImageId === 'img274' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img274')}>
+                                        <img  src='/assets/cyberark_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Search for the individual user(s) and/or group(s) that you would like to assign to the app, and check the box next to them. Click “Add” when you are finished. Once users have been successfully added, you should also notice the “Status” of your CyberArk SAML app change to “Deployed”.</p>
+
+                            <div id='img275' className={`enlargable-image-container ${this.state.enlargedImageId === 'img275' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img275')}>
+                                        <img  src='/assets/cyberark_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy Metadata</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the “Trust” tab of the SAML App, go to the “Service Provider Configuration Section” and select “Metadata”. Then click on “Copy URL” button to copy the Metadata URL. This URL will get entered in the WorkOS dashboard in the next step.</p>
+
+                            <div id='img276' className={`enlargable-image-container ${this.state.enlargedImageId === 'img276' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img276')}>
+                                        <img  src='/assets/cyberark_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>7</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provide Metadata</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, select “Edit Metadata Configuration” and input the Metadata URL in your WorkOS Connection Settings. Your Connection will then be verified and good to go!</p>
+
+                            <div id='img277' className={`enlargable-image-container ${this.state.enlargedImageId === 'img277' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img277')}>
+                                        <img  src='/assets/cyberark_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={cyberarkScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+
+                    </div>
+                </CSSTransition>
 
             </Styles>
         )
     }
 }
 
-//* IMAGE 257 (latest)
+//* IMAGE 266 (latest)
