@@ -80,6 +80,7 @@ export default class Integrations extends Component {
             "casSaml": "casSaml",
             "cezanneHR": "cezanneHR",
             "classLink": "classLink",
+            "cloudflare": "cloudflare",
             
         };
       
@@ -131,6 +132,7 @@ export default class Integrations extends Component {
             "casSaml": "casSaml",
             "cezanneHR": "cezanneHR",
             "classLink": "classLink",
+            "cloudflare": "cloudflare",
 
         };
         const keys = Object.keys(pageMap);
@@ -185,7 +187,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -2825,7 +2827,7 @@ export default class Integrations extends Component {
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
-                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
                                 </div>
                                 <div className='label-desc'>
                                     <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
@@ -2840,8 +2842,42 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Connection settings in the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
 
+                            <div id='img246' className={`enlargable-image-container ${this.state.enlargedImageId === 'img246' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img246')}>
+                                    <img  src='/assets/classlink_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the Metadata URL from ClassLink into the “Metadata URL” field and select “Save Metadata Configuration”.</p>
+
+                            <div id='img247' className={`enlargable-image-container ${this.state.enlargedImageId === 'img247' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img247')}>
+                                    <img  src='/assets/classlink_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be linked and good to go!</p>
+
                         </div>
 
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={cloudflare}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>ClassLink</h1>
+                                <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to ClassLink via SAML.</p>
+                            </div>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                                <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+                                
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+
+                        </div>
                     </div>
                 </CSSTransition>
 

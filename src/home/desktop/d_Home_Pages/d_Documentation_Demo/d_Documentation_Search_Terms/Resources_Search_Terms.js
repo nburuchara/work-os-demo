@@ -24,7 +24,7 @@ const results = [
     {"id": "999995", "name": "Bubble Plugin", "category": "Resources", "subCat1": "Integrations", "page": "Bubble Plugin", "lastCat": "top"},
     {"id": "999995", "name": "CAS SAML", "category": "Resources", "subCat1": "Integrations", "page": "CAS SAML", "lastCat": "top"},
     {"id": "999995", "name": "Cezanne HR", "category": "Resources", "subCat1": "Integrations", "page": "Cezanne HR", "lastCat": "top"},
-    {"id": "999995", "name": "C", "category": "Resources", "subCat1": "Integrations", "page": "Cezanne HR", "lastCat": "top"},
+    {"id": "999995", "name": "Cloudflare", "category": "Resources", "subCat1": "Integrations", "page": "Cloudflare", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
