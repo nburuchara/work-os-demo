@@ -90,6 +90,7 @@ export default class Integrations extends Component {
             "cyberarkSaml": "cyberarkSaml",
             "cyberarkScim": "cyberarkScim",
             "duo": "duo",
+            "entraIdSaml": "entraIdSaml",
             
         };
       
@@ -145,6 +146,7 @@ export default class Integrations extends Component {
             "cyberarkSaml": "cyberarkSaml",
             "cyberarkScim": "cyberarkScim",
             "duo": "duo",
+            "entraIdSaml": "entraIdSaml",
 
         };
         const keys = Object.keys(pageMap);
@@ -199,7 +201,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -3576,7 +3578,225 @@ export default class Integrations extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Duo SAML Connection, you’ll need three pieces of information: an <label className='demo-docs-hyperlink'>ACS URL</label> (provide by WorkOS), an <label className='demo-docs-hyperlink'>SP Entity ID</label> (provided by WorkOS), and the <label className='demo-docs-hyperlink'>Metadata URL</label> (provided by Duo).</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Duo is also unique in that it requires a 3rd party IdP to federate the authentication. This means that along with the three pieces of information, you’ll also need to configure a Single Sign-On Authentication Source and a Cloud Application in your Duo Workspace.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The high level overview of the authentication flow:</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your App → WorkOS → Duo → Your SSO IdP → Duo → WorkOS → Your App</p>
+
+                            <div id='img289' className={`enlargable-image-container ${this.state.enlargedImageId === 'img289' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img289')}>
+                                        <img  src='/assets/duo_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a new Duo SAML Connection in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Organization in your WorkOS Dashboard under which you would like to set up this new SSO Connection. Click “Manually Configure Connection” and select Duo SAML from the list of SSO Identity Providers. You’ll want to select “Duo SAML” as the Identity Provider and give the Connection a descriptive name. Once this is filled out, click “Create Connection”.</p>
+
+                            <div id='img290' className={`enlargable-image-container ${this.state.enlargedImageId === 'img290' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img290')}>
+                                        <img  src='/assets/duo_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Take note of the Connection Details as you’ll need to enter those in Duo later on. This page is also where you’ll enter the Metadata URL in a later step.</p>
+
+                            <div id='img291' className={`enlargable-image-container ${this.state.enlargedImageId === 'img291' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img291')}>
+                                        <img  src='/assets/duo_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS will allow you to use any Duo supported IdP to handle the Federated authentication. Since each IdP will have different ways of setting up the SSO connection between Duo and the IdP, please refer to the <label className='demo-docs-hyperlink'>documentation that Duo provides to configure a Duo SSO Connection</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a Cloud Application in Duo</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After configuring the Duo SSO Connection with the IdP of your choice, the next step is to create a Cloud Application in Duo. This app will handle the connection between WorkOS and Duo.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Duo Admin Panel and click on Applications on the left sidebar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Protect an Application” and locate the entry for “Generic SAML Service Provider” with a protection type of “2FA with SSO hosted by Duo (Single Sign-On)” in the applications list. Click Protect to the far-right to start configuring “Generic SAML Service Provider”.</p>
+
+                            <div id='img292' className={`enlargable-image-container ${this.state.enlargedImageId === 'img292' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img292')}>
+                                        <img  src='/assets/duo_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, configure the Generic Service Provider settings. There are pieces of information on this page that need to come from WorkOS and your Duo SSO Connection, and also information to copy and enter in the WorkOS Connection.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by gathering the Metadata URL to enter in the WorkOS Duo SAML Connection that you created in the prior step.</p>
+
+                            <div id='img293' className={`enlargable-image-container ${this.state.enlargedImageId === 'img293' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img293')}>
+                                        <img  src='/assets/duo_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enter Duo SAML Settings in your WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to your WorkOS Duo SAML Connection and paste the Metadata URL in to the Metadata field.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You won’t see the connection flip to Active yet as there is still some configuration to do on the Duo side.</p>
+
+                            <div id='img294' className={`enlargable-image-container ${this.state.enlargedImageId === 'img294' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img294')}>
+                                        <img  src='/assets/duo_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From the WorkOS Connection page you are currently on, copy the ACS URL value from the field just above the SAML Settings.</p>
+
+                            <div id='img295' className={`enlargable-image-container ${this.state.enlargedImageId === 'img295' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img295')}>
+                                        <img  src='/assets/duo_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate to the Duo Applications Generic Service Provider configuration settings and paste the ACS URL in the Assertion Consumer Service (ACS) URL field under the Service Provider section.</p>
+
+                            <div id='img296' className={`enlargable-image-container ${this.state.enlargedImageId === 'img296' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img296')}>
+                                        <img  src='/assets/duo_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, copy the SP Entity ID value from the WorkOS Connection page.</p>
+
+                            <div id='img297' className={`enlargable-image-container ${this.state.enlargedImageId === 'img297' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img297')}>
+                                        <img  src='/assets/duo_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the SP Entity ID into the Entity ID field under the Service Provider section in the Duo Applications Generic Service Provider configuration.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may leave the Single Logout URL, Service Provider Login URL, and Default Relay State fields empty.</p>
+
+                            <div id='img298' className={`enlargable-image-container ${this.state.enlargedImageId === 'img298' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img298')}>
+                                        <img  src='/assets/duo_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down on this page to the SAML Response section. Ensure that the NameID format has the id that you’d like to use for the unique identifier selected and matches the NameID attribute that you’d like to use as the value. If you’re using email as the unique ID, the options would look like the below.</p>
+
+                            <div id='img299' className={`enlargable-image-container ${this.state.enlargedImageId === 'img299' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img299')}>
+                                        <img  src='/assets/duo_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Ensure the Signature algorithm is SHA256 and that the Signing options have both Sign response and Sign assertion selected.</p>
+
+                            <div id='img300' className={`enlargable-image-container ${this.state.enlargedImageId === 'img300' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img300')}>
+                                        <img  src='/assets/duo_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next make sure that you are mapping the attributes which WorkOS requires: <span>id</span>, <span>email</span>, <span>firstName</span>, and <span>lastName</span>. In the Map Attributes section enter these on the right side under SAML Response Attribute. on the left side, click the empty field box and select the pre-populated values that look like <span>&lt;Email Address&gt;</span>. Duo will automatically grab the corresponding fields and map them to the expected values.</p>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can map any values you like, but WorkOS requires that these four values are included in SAML responses. If your users don’t have a last name value for instance, you could map Display Name or any other value to <span>lastName</span>, but <span>lastName</span> still needs to be included or WorkOS will reject the SAML Response.</p>
+
+                            </div>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Here’s an example of the attribute mappings:</p>
+
+                            <div id='img301' className={`enlargable-image-container ${this.state.enlargedImageId === 'img301' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img301')}>
+                                        <img  src='/assets/duo_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the “Role Attributes” section, enter <span>groups</span> as the “Attribute name”. Then map the role names to their corresponding Duo groups. In the example below, the “Admins” role is mapped to the Admins group and the “Developers” role is mapped to the Developers group.</p>
+                            
+                            </div>
+
+                            <div id='img302' className={`enlargable-image-container ${this.state.enlargedImageId === 'img302' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img302')}>
+                                        <img  src='/assets/duo_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You may leave all of the other fields as their defaults. Scroll to the very bottom of the page and click the Save button.</p>
+
+                            <div id='img303' className={`enlargable-image-container ${this.state.enlargedImageId === 'img303' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img303')}>
+                                        <img  src='/assets/duo_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Verify Connection Status in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate back to the WorkOS dashboard. After a minute or two you should see the Connection become Active as indicated by the green badge next to the connection name.</p>
+
+                            <div id='img304' className={`enlargable-image-container ${this.state.enlargedImageId === 'img304' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img304')}>
+                                        <img  src='/assets/duo_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+                    
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={entraIdSaml}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Entra ID SAML (formerly Azure AD)</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection Entra ID via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Entra ID SAML Connection, you’ll need the Identity Provider Metadata URL that is available from the organization’s Entra ID instance.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS Provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and IdP URI (Entity ID). It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
                         </div>
                     </div>
                 </CSSTransition>
@@ -3586,4 +3806,4 @@ export default class Integrations extends Component {
     }
 }
 
-//* IMAGE 280 (latest)
+//* IMAGE 300 (latest)

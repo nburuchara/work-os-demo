@@ -102,6 +102,7 @@ export default class Resources extends Component {
             "CyberArk SAML": "cyberarkSaml",
             "CyberArk SCIM": "cyberarkScim",
             "Duo": "duo",
+            "Entra ID SAML (formerly Azure AD)": "entraIdSaml",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -267,6 +268,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "CyberArk SAML", "category": "Resources", "subCat1": "Integrations", "page": "CyberArk SAML", "lastCat": "top"},
             {"id": "999995", "name": "CyberArk SCIM", "category": "Resources", "subCat1": "Integrations", "page": "CyberArk SCIM", "lastCat": "top"},
             {"id": "999995", "name": "Duo", "category": "Resources", "subCat1": "Integrations", "page": "Duo", "lastCat": "top"},
+            {"id": "999995", "name": "Entra ID SAML (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SAML (formerly Azure AD)", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -585,7 +587,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('Entra ID SAML (formerly Azure AD)')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Entra ID SAML (formerly Azure AD)</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection Entra ID via SAML.</p>
