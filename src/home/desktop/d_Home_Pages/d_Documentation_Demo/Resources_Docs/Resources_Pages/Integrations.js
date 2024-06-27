@@ -4383,6 +4383,106 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log into Firebase and navigate to your project. Click on the Authentication tile to set up a new Authentication method for your project.</p>
 
+                            <div id='img346' className={`enlargable-image-container ${this.state.enlargedImageId === 'img346' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img346')}>
+                                <img  src='/assets/firebase_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, click <strong>Get started</strong>.</p>
+
+                            <div id='img347' className={`enlargable-image-container ${this.state.enlargedImageId === 'img347' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img347')}>
+                                <img  src='/assets/firebase_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the Sign-in method tab and then select the OpenID Connect custom provider.</p>
+
+                            <div id='img348' className={`enlargable-image-container ${this.state.enlargedImageId === 'img348' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img348')}>
+                                <img  src='/assets/firebase_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the configuration details for the connection between WorkOS and Firebase.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will need the following pieces of information:</p>
+
+                            <div className='api-keys'>
+                                
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>WorkOS Client ID</strong>: Found on the <strong>Configuration</strong> tab of the WorkOS Dashboard</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>WorkOS API Key</strong>: Located on the <strong>API Keys</strong> tab of the WorkOS Dashboard</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Issuer (URL)</strong>: This will be <span>https://auth.workos.com/sso/</span> appended with your client ID, ex: <span>https://auth.workos.com/sso/client_123</span>.</p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><strong>Provider ID</strong>: This is found in Firebase under the Name of your OIDC provider. This will be important for a later step.</p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img349' className={`enlargable-image-container ${this.state.enlargedImageId === 'img349' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img349')}>
+                                <img  src='/assets/firebase_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure the Redirect URI in WorkOS</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click Next, then copy the <strong>Callback URL</strong> provided by Firebase.</p>
+
+                            <div id='img350' className={`enlargable-image-container ${this.state.enlargedImageId === 'img350' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img350')}>
+                                <img  src='/assets/firebase_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the Callback URL in the list of Redirect URI’s in the configuration tab of your WorkOS dashboard.</p>
+
+                            <div id='img351' className={`enlargable-image-container ${this.state.enlargedImageId === 'img351' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img351')}>
+                                <img  src='/assets/firebase_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a Firebase web app and get configuration details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Firebase Project Overview page, click the web icon above <strong>Add an app to get started</strong>, or navigate to your project settings page if your project is already set up.</p>
+
+                            <div id='img352' className={`enlargable-image-container ${this.state.enlargedImageId === 'img352' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img352')}>
+                                <img  src='/assets/firebase_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Choose a name for your application, and then take note of the firebaseConfig from the Add Firebase SDK step.</p>
+
+                            <div id='img353' className={`enlargable-image-container ${this.state.enlargedImageId === 'img353' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img353')}>
+                                <img  src='/assets/firebase_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Firebase login in your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Firebase configuration and Provider ID can now be used along with any Organization ID from an Active WorkOS SSO connection to log users in to your Firebase app. Here is a basic example showing how this can be set up.</p>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Replace the <span>firebaseConfig</span> variable value with the config from your Firebase app, the <span>OAuthProvider</span> value with your Provider ID, and the organization under <span>provider.setCustomParameters</span> with the organization to target. This organization should have an active SSO connection already set up.</p>
+                            </div>
+
                         </div>
                     </div>
                 </CSSTransition>
@@ -4392,4 +4492,4 @@ export default class Integrations extends Component {
     }
 }
 
-//* IMAGE 300 (latest)
+//* IMAGE 346 (latest)
