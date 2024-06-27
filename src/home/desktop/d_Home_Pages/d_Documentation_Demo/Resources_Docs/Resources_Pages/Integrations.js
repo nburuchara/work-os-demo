@@ -3751,7 +3751,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -3796,6 +3796,302 @@ export default class Integrations extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS Provides</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and IdP URI (Entity ID). It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img305' className={`enlargable-image-container ${this.state.enlargedImageId === 'img305' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img305')}>
+                                        <img  src='/assets/entra_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Entra ID’s case, it needs to be set by the organization when configuring your application in their Entra ID instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL will need to be set as the “Reply URL (Assertion Consumer Service URL)” in the “Basic SAML Configuration” step of the Entra ID “Set up Single Sign-On with SAML” wizard:</p>
+
+                            <div id='img306' className={`enlargable-image-container ${this.state.enlargedImageId === 'img306' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img306')}>
+                                        <img  src='/assets/entra_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The <label className='demo-docs-hyperlink'>Entity ID</label> is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Entra ID instance.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the Entity ID will need to be set as the “Identifier (Entity ID)” in the “Basic SAML Configuration” step of the Entra ID “Set up Single Sign-On with SAML” wizard:</p>
+
+                            <div id='img307' className={`enlargable-image-container ${this.state.enlargedImageId === 'img307' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img307')}>
+                                        <img  src='/assets/entra_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Entra ID IdP Metadata URL.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their Azure admin dashboard. Here’s how to obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log in</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the <label className='demo-docs-hyperlink'>Entra ID Active Directory Admin dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Select “Enterprise Applications” from the list of Azure services.</p>
+
+                            <div id='img308' className={`enlargable-image-container ${this.state.enlargedImageId === 'img308' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img308')}>
+                                        <img  src='/assets/entra_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of Enterprise applications and move to Step 7.</p>
+
+                            <div id='img309' className={`enlargable-image-container ${this.state.enlargedImageId === 'img309' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img309')}>
+                                        <img  src='/assets/entra_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you haven’t created a SAML Application in Azure, select “New Application”.</p>
+
+                            <div id='img310' className={`enlargable-image-container ${this.state.enlargedImageId === 'img310' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img310')}>
+                                        <img  src='/assets/entra_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create your own application”, then enter a descriptive app name. Under “What are you looking to do with your application?”, select “Integrate any other application you don’t find in the gallery (Non-gallery)”, then select “Create”.</p>
+
+                            <div id='img311' className={`enlargable-image-container ${this.state.enlargedImageId === 'img311' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img311')}>
+                                        <img  src='/assets/entra_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Single Sign-On” from the “Manage” section in the left sidebar navigation menu, and then “SAML”.</p>
+
+                            <div id='img312' className={`enlargable-image-container ${this.state.enlargedImageId === 'img312' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img312')}>
+                                        <img  src='/assets/entra_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the Edit icon in the top right corner of the first step “Basic SAML Configuration”.</p>
+
+                            <div id='img313' className={`enlargable-image-container ${this.state.enlargedImageId === 'img313' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img313')}>
+                                        <img  src='/assets/entra_saml_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the IdP URI (Entity ID) from your WorkOS Dashboard as the “Identifier (Entity ID)”. Input the ACS URL from your WorkOS Dashboard as the “Reply URL (Assertion Consumer Service URL)”.</p>
+
+                            <div id='img314' className={`enlargable-image-container ${this.state.enlargedImageId === 'img314' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img314')}>
+                                        <img  src='/assets/entra_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure User Attributes and Claims</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the Edit icon in the top right corner of the second step “Attributes & Claims”.</p>
+
+                            <div id='img315' className={`enlargable-image-container ${this.state.enlargedImageId === 'img315' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img315')}>
+                                        <img  src='/assets/entra_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure the following attribute mapping is set:</p>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</span> → <span>user.mail</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</span> → <span>user.givenname</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name</span> → <span>user.userprincipalname</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</span> → <span>user.surname</span></p></li>
+                                </ul>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Below is an example of how to format your claim within the Azure claim editor. Make sure the ‘Namespace’ value ends in <span>/claims</span>.</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} id='img316' className={`enlargable-image-container ${this.state.enlargedImageId === 'img316' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img316')}>
+                                <img  src='/assets/entra_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img317' className={`enlargable-image-container ${this.state.enlargedImageId === 'img317' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img317')}>
+                                <img  src='/assets/entra_saml_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Add a group claim” from the top menu. Next, select which groups you’d like to return in the Group Claims settings. For example, in Entra ID, you could select “Groups assigned to the application” to only send groups assigned to the SAML app. Finally, select “Save” once finished configuring the groups.</p>
+
+                            <div id='img318' className={`enlargable-image-container ${this.state.enlargedImageId === 'img318' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img318')}>
+                                        <img  src='/assets/entra_saml_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Users to SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order for your users or groups of users to be authenticated, you will need to assign them to your Entra ID SAML application. Select “Users and groups” from the “Manage” section of the navigation menu.</p>
+
+                            <div id='img319' className={`enlargable-image-container ${this.state.enlargedImageId === 'img319' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img319')}>
+                                <img  src='/assets/entra_saml_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Add user/group” from the top menu.</p>
+
+                            <div id='img320' className={`enlargable-image-container ${this.state.enlargedImageId === 'img320' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img320')}>
+                                <img  src='/assets/entra_saml_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “None selected” under the “Users and Groups”. In the menu, select the users and groups of users that you want to add to the SAML application, and click “Select”.</p>
+
+                            <div id='img321' className={`enlargable-image-container ${this.state.enlargedImageId === 'img321' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img321')}>
+                                <img  src='/assets/entra_saml_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Assign” to add the selected users and groups of users to your SAML application.</p>
+
+                            <div id='img322' className={`enlargable-image-container ${this.state.enlargedImageId === 'img322' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img322')}>
+                                <img  src='/assets/entra_saml_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>7</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Single Sign-On” from the “Manage” section in the left sidebar navigation menu.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate down to Section 3 of the “Single Sign-On” page, to “SAML Signing Certificate”. Copy the URL provided in “App Federation Metadata URL”.</p>
+
+                            <div id='img323' className={`enlargable-image-container ${this.state.enlargedImageId === 'img323' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img323')}>
+                                <img  src='/assets/entra_saml_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, within your connection settings under “Identity Provider Configuration”, select “Edit Metadata Configuration” and enter the Azure metadata URL.</p>
+
+                            <div id='img324' className={`enlargable-image-container ${this.state.enlargedImageId === 'img324' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img324')}>
+                                <img  src='/assets/entra_saml_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be verified and good to go!</p>
+
+                            <div id='img325' className={`enlargable-image-container ${this.state.enlargedImageId === 'img325' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img325')}>
+                                <img  src='/assets/entra_saml_img21.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={entraIdScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Entra ID SCIM (formerly Azure AD)</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Entra ID SCIM.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Entra ID directories using SCIM.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need to provide the organization with two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className='demo-docs-hyperlink'>Endpoint</label> that Entra ID will make requests to.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for Entra ID to authenticate its endpoint requests.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Steps 2, 3, and 4 below will need to be carried out by the organization admin when configuring your application in their Entra ID instance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your Directory Sync endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync for.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”.</p>
+
+                            
 
                         </div>
                     </div>
