@@ -4483,6 +4483,29 @@ export default class Integrations extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Replace the <span>firebaseConfig</span> variable value with the config from your Firebase app, the <span>OAuthProvider</span> value with your Provider ID, and the organization under <span>provider.setCustomParameters</span> with the organization to target. This organization should have an active SSO connection already set up.</p>
                             </div>
 
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <div className='api-keys'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The <span style={{backgroundColor: "#ccc"}}>connection</span> parameter may be used in place of the <span style={{backgroundColor: "#ccc"}}>organization</span> parameter to target a connection.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={113}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            showOnlyHTMLTab={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Update Firebase Profile" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
                         </div>
                     </div>
                 </CSSTransition>

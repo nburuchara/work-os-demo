@@ -15290,11 +15290,71 @@ const codeSnippets = [
       }
     },
 
+    {
+      id: 113,
+      title: "Update Firebase Profile",
+      code: {
+        javascript: [
+          '1 &lt<span style="color: #0072dd;">html</span>&gt',
+          '2   &lt<span style="color: #0072dd;">body</span>&gt',
+          '3     &lt<span style="color: #0072dd;">button</span> <span style="color: #143465;">id</span>="<span style="color: #148a68;">signIn</span>"&gtSign In&lt/<span style="color: #0072dd;">button</span>&gt',
+          '4   &lt/<span style="color: #0072dd;">body</span>&gt',
+          '5   &lt<span style="color: #0072dd;">script</span> <span style="color: #143465;">type</span>="<span style="color: #148a68;">module</span>"&gt',
+          '6     <span style="color: #148a68;">import</span> { initializeApp } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js\'</span>;',
+          '7 ',
+          '8     <span style="color: #148a68;">import</span> {',
+          '9       <span style="color: #5854c6;">OAuthProvider</span>,',
+          '10       getAuth,',
+          '11       signInWithRedirect,',
+          '12       getRedirectResult,',
+          '13       signInWithPopup,',
+          '14     } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js\'</span>;',
+          '15 ',
+          '16     <span style="color: #8b8d98;">// Your web app\'s Firebase configuration</span>',
+          '17     <span style="color: #148a68;">const</span> firebaseConfig <span style="color: #ce3559;">=</span> {',
+          '18       apiKey<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltapi_key_from_firebase_config&gt\'</span>,',
+          '19       authDomain<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltauth_domain_from_firebase_config&gt\'</span>,',
+          '20       projectId<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltproject_id_from_firebase_config&gt\'</span>,',
+          '21       storageBucket<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltstorage_bucket_from_firebase_config&gt\'</span>,',
+          '22       messagingSenderId<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltmessaging_sender_id_from_firebase_config&gt\'</span>,',
+          '23       appId<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltapp_id_from_firebase_config&gt\'</span>,',
+          '24     };',
+          '25 ',
+          '26     <span style="color: #8b8d98;">// Initialize Firebase</span>',
+          '27     <span style="color: #148a68;">const</span> app <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">initializeApp</span>(firebaseConfig);',
+          '28 ',
+          '29     <span style="color: #8b8d98;">// Provider ID can be found in Firebase console</span>',
+          '30     <span style="color: #148a68;">const</span> provider <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> <span style="color: #5854c6;">OAuthProvider</span>(<span style="color: #143465;">\'<your_provider_id_from_firebase>\'</span>);',
+          '31 ',
+          '32     <span style="color: #8b8d98;">// Pass additional query parameters required by WorkOS</span>',
+          '33     provider.<span style="color: #5854c6;">setCustomParameters</span>({',
+          '34       organization<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltyour_organization_id&gt\'</span>,',
+          '35     });',
+          '36 ',
+          '37     const auth = getAuth(app);',
+          '38 ',
+          '39     const button = document.getElementById(\'signIn\');',
+          '40 ',
+          '41     button.addEventListener(\'click\', () => {',
+          '42       signInWithPopup(auth, provider)',
+          '43         .then((result) => {',
+          '44           const credential = OAuthProvider.credentialFromResult(result);',
+          '45           const accessToken = credential.accessToken;',
+          '46           const idToken = credential.idToken;',
+          '47 ',
+          '48           console.log(credential, accessToken, idToken);',
+          '49         })',
+          '50         .catch((error) => {',
+          '51           console.error(error.code);',
+          '51           console.log(error);',
+          '53         });',
+          '54     });',
+          '55   </script>',
+          '56 </html>',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;
-
-
-
-
-

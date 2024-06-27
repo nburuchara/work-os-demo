@@ -839,7 +839,7 @@ export default class CodeSnippet extends Component {
                           <SelectButtonResponse>JSON</SelectButtonResponse>
                         }
                         {this.props.showOnlyJSONTab && 
-                          <SelectButtonResponse>JSON</SelectButtonResponse>
+                          <SelectButtonResponse>{this.props.showOnlyHTMLTab ? "HTML" : "JSON"}</SelectButtonResponse>
                         }
                       </div>
                       <div style={{float: sideBarOpen ? "right" : "left", textAlign: sideBarOpen ? "right" : "center"}} className='code-snippet-copy'>
