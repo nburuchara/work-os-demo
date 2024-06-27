@@ -2699,8 +2699,111 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a ClassLink SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
 
+                            <div id='img238' className={`enlargable-image-container ${this.state.enlargedImageId === 'img238' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img238')}>
+                                    <img  src='/assets/classlink_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “ClassLink SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img239' className={`enlargable-image-container ${this.state.enlargedImageId === 'img239' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img239')}>
+                                    <img  src='/assets/classlink_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label>, the <label className='demo-docs-hyperlink'>SP Metadata</label> link and the <label className='demo-docs-hyperlink'>SP Entity ID</label>. They are readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>Developer Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Metadata link contains a metadata file that the organization can use to set up the SAML integration.</p>
+
+                            <div id='img240' className={`enlargable-image-container ${this.state.enlargedImageId === 'img240' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img240')}>
+                                    <img  src='/assets/classlink_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the <label className='demo-docs-hyperlink'>IdP Metadata URL</label>.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their ClassLink instance. Here’s how to obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to the ClassLink Management Console (CMC), click Single Sign-On and select SAML Console.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click ADD NEW or COPY EXISTING. Copy Existing contains pre-configured SAML apps which need to be updated to fit your unique settings.</p>
+
+                            <div id='img241' className={`enlargable-image-container ${this.state.enlargedImageId === 'img241' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img241')}>
+                                    <img  src='/assets/classlink_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Edit the new application by click the three dots menu icon, and then selecting Edit.</p>
+
+                            <div id='img242' className={`enlargable-image-container ${this.state.enlargedImageId === 'img242' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img242')}>
+                                    <img  src='/assets/classlink_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update the Metadata URL in the ClassLink application settings with the SP Metadata URL provided to you by WorkOS.</p>
+
+                            <div id='img243' className={`enlargable-image-container ${this.state.enlargedImageId === 'img243' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img243')}>
+                                    <img  src='/assets/classlink_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the “Attribute Mapping” section of the SAML app, map the following four attributes as shown below, and the select “Update”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>Login id</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>Email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>Given Name</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>Family Name</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            
+
+                        </div>
+
+                    </div>
                 </CSSTransition>
 
 
