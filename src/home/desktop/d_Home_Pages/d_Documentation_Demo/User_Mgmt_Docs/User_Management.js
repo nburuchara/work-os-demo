@@ -388,7 +388,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>    
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>User Management</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Easy to authenticate APIs designed to provide a flexible, secure, and fast integration.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "0%" : ""}} id='Introduction' ></div>
@@ -872,7 +872,7 @@ export default class UserManagement extends Component {
                                     <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label id = 'Integrating'className='demo-docs-hyperlink'>Magic Auth</label></p></li>
                                 </ul>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integration into your app is quick and easy, though the route you choose varies depending on your specific requirements:</p>
                                 
@@ -1725,7 +1725,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn more about integrating sessions.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Inroduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs in to your app, a user session is created. Along with the <label className='demo-docs-hyperlink'>User object</label>, a successful authentication response will include an access token and refresh token. Your application can use these tokens to ensure that the user’s session is still active. </p>
                             
@@ -1837,7 +1837,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Easily add users as members to an organization.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Invitations are a way of adding a specific user as a member to an organization. They provide a flow for end-users to engage in <i id='The invitation flow'></i> collaboration that takes into consideration security and user choice.</p>
                             
@@ -1900,7 +1900,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn more about the email verification process.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email verification is a process in which a new user must validate ownership of their email inbox before they can access<i id='The email verification flow'></i> the application, ensuring authenticity of inbox ownership.</p>
                             
@@ -1947,7 +1947,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Understanding domain verification and domain-captured users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Domain capture is a set of controls the IT admin of an organization can apply to everything related to its organizational resources on WorkOS. This currently enables <label className='demo-docs-hyperlink'>provisioning of new users</label> into an organization, but will soon support organization-level control of authentication and user membership policies.</p>
                             
@@ -2017,7 +2017,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Automatic deduplication of user credentials across identity providers.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users have unique email addresses, because each user’s access to their inbox represents ultimate access to all of their credentials and thus services they control. The <label className='demo-docs-hyperlink'>User object</label> unifies all of the identities they use so that your application does not have to consider different identity systems.</p>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Identity linking is the process in which WorkOS safely deduplicates various credentials across identity providers to offer a single, unified user interface. It does this by using the <strong>email address</strong> as the unique identifier and access to the email inbox as the source of truth.</p>
@@ -2111,7 +2111,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Provision organization membership using Just-In-Time user provisioning.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>JIT provisioning automatically assigns user membership to an organization when a user authenticates for the first time. It is helpful to provide access to an organization’s resources<i id='Domain-captured user provisioning'></i> without manual entry of all users by the IT admin.</p>
                             
@@ -2174,7 +2174,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Manage and assign roles to users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A role represents a logical grouping of permissions, defining access control levels for users within your application. Roles are identified by a unique, immutable slug and are assigned to usersthrough  <label className='demo-docs-hyperlink'>organization memberships</label>.</p>
                             
@@ -2335,7 +2335,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Customize available authentication methods per organization.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>While your application provides a set of authentication methods, certain organizations may want to restrict their users to a subset of those methods for customized security constraints. These organization-level customizations can be <i id='Controls for domain-captured users'></i>configured on the organization page in the Dashboard.</p>
                             
@@ -2389,7 +2389,7 @@ export default class UserManagement extends Component {
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to sign into your application as one of your users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Impersonation allows administrators and support team members to assume the identity of any of your users, allowing them to reproduce or debug issues the user may be having in your application. The ability to see the application in an identical state as the user<i id='Enabling impersonation'></i> helps to greatly speed up the support process.</p>
                             
@@ -2748,7 +2748,7 @@ export default class UserManagement extends Component {
                                 </div><i id='Password reset'></i>
 
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Password reset</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve turned off the default password reset emails, use the information below to send custom password reset emails.</p>

@@ -213,7 +213,7 @@ const Styles = styled.div `
 .demo-docs-section {
     width: 63%;
     float: right;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 1.5px solid #ccc;
     padding-bottom: 5%;
     margin-bottom: 1%;
 }
