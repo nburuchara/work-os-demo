@@ -128,7 +128,7 @@ export default class Resources extends Component {
                 integrationsPage: integrationsPage,
                 integrationsSearchedObect: selectedPage
             })
-            this.loadSelectedPage("integrationsPages");
+            this.loadSelectedIntegraionsPage("integrationsPages");
         } else {
           console.error("Unknown selected integrations page:", selectedPage);
         }
@@ -163,6 +163,16 @@ export default class Resources extends Component {
                 [`${selectedPage}`]: true
             })
         }, 750)
+    }
+
+    loadSelectedIntegraionsPage = (selectedPage) => {
+        this.hideAllPages() 
+        setTimeout (() => {
+            this.setState({
+                currentSelectedLanguage: "javascript",
+                [`${selectedPage}`]: true
+            })
+        }, 500)
     }
 
     hideAllPages = () => {
