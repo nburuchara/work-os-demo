@@ -6920,6 +6920,166 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Open your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, and browse to the “Configuration” tab on the left hand nav bar. Scroll down to the “Microsoft OAuth” section, click “Edit Microsoft OAuth”, and you’ll see the Redirect URI as well as the fields you’ll populate later with information from Microsoft. If you are in the Staging environment, you’ll see demo values for the Client ID and Client Secret.</p>
 
+                            <div id='img488' className={`enlargable-image-container ${this.state.enlargedImageId === 'img488' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img488')}>
+                                <img  src='/assets/microsoft_oauth_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing with default credentials in the Staging environment</h1>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a default Microsoft Client ID/Microsoft Client Secret combination, which allows you to quickly enable and test Microsoft OAuth. Use the <label className='demo-docs-hyperlink'>WorkOS API to initiate SSO</label>, setting the <span>provider</span> parameter to <span>MicrosoftOAuth</span>, and WorkOS will automatically use the default credentials, until you add your own Microsoft Client ID and Microsoft Client Secret to the Configuration in the WorkOS Dashboard.</p>
+
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The default credentials are only intended for testing and therefore only available in the Staging environment. For your production environment, please follow the steps below to create and specify your own Microsoft Client ID and Microsoft Client Secret.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please note that when you are using WorkOS default credentials, Microsoft’s authentication flow will display WorkOS’ name, logo, and other information to users. Once you register your own application and use its Microsoft Client ID and Microsoft Client Secret for the OAuth flow, you will have the opportunity to customize the app, including its name, logo, contact email, etc.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you haven’t already, be sure to <label className='demo-docs-hyperlink'>register an application with Microsoft</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> following their documentation.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>IMPORTANT: When registering your app, select “Personal Microsoft accounts only” for “Supported Account Types”.</p>
+                                </div>
+                            </div>
+
+                            <div id='img489' className={`enlargable-image-container ${this.state.enlargedImageId === 'img489' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img489')}>
+                                <img  src='/assets/microsoft_oauth_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, you’ll provide the Microsoft Client ID and the Microsoft Client Secret to the WorkOS Dashboard Configuration. These are a pair of credentials provided by Microsoft that you’ll use to authenticate your application via Microsoft’s OAuth protocol. To obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log In and Select Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the <label className='demo-docs-hyperlink'>Microsoft Azure Portal</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. Select “Microsoft Entra ID” from the left hand navigation. Then select “App registrations” and select your relevant application.</p>
+
+                            <div id='img490' className={`enlargable-image-container ${this.state.enlargedImageId === 'img490' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img490')}>
+                                <img  src='/assets/microsoft_oauth_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enter WorkOS Redirect URI</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Authentication” option for the application. In the “Redirect URIs” section, add the Redirect URI provided for you in the Microsoft OAuth section of the WorkOS Dashboard Configuration.</p>
+
+                            <div id='img491' className={`enlargable-image-container ${this.state.enlargedImageId === 'img491' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img491')}>
+                                <img  src='/assets/microsoft_oauth_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Claims</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “Token configuration”, select “Add optional claim”. Select <span>email</span>, <span>family_name</span> and <span>given_name</span>.</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order for the email claim to come through, the “Email” field for the user in Azure needs to be populated.</p>
+
+                            <div id='img492' className={`enlargable-image-container ${this.state.enlargedImageId === 'img492' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img492')}>
+                                <img  src='/assets/microsoft_oauth_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need to add your Microsoft Client ID and Microsoft Client Secret to their respective fields in your Microsoft OAuth settings.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get your Microsoft Client Secret, navigate to “Certificates & secrets” and click on “New client secret”. Give your client secret a Description and select “Add”.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Microsoft’s client secrets have an expiration date, with the highest value being 24 months. You will need to track these and rotate them before the expiration time.</p>
+
+                            <div id='img493' className={`enlargable-image-container ${this.state.enlargedImageId === 'img493' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img493')}>
+                                <img  src='/assets/microsoft_oauth_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy your new client secret to the clipboard in order to add it to the WorkOS Dashboard.</p>
+
+                            <div id='img494' className={`enlargable-image-container ${this.state.enlargedImageId === 'img494' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img494')}>
+                                <img  src='/assets/microsoft_oauth_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To obtain the Microsoft Client ID, navigate to the “Overview” tab of your application and copy the “Application (client) ID”.</p>
+
+                            <div id='img495' className={`enlargable-image-container ${this.state.enlargedImageId === 'img495' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img495')}>
+                                <img  src='/assets/microsoft_oauth_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Microsoft OAuth section of your WorkOS Dashboard Configuration, click “Edit Microsoft OAuth”.</p>
+
+                            <div id='img496' className={`enlargable-image-container ${this.state.enlargedImageId === 'img496' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img496')}>
+                                <img  src='/assets/microsoft_oauth_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add the Microsoft Client ID and Microsoft Client Secret and click “Save Microsoft OAuth”.</p>
+
+                            <div id='img497' className={`enlargable-image-container ${this.state.enlargedImageId === 'img497' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img497')}>
+                                <img  src='/assets/microsoft_oauth_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After that, you’re now able to authenticate users with Microsoft OAuth. Provide the <span>provider</span> parameter when authenticating Microsoft OAuth users, because Microsoft OAuth does not take a user’s domain into account when logging in with a “Sign in with Microsoft” button. You will use the <span>provider</span> query parameter in the Get Authorization URL API endpoint to support global Microsoft OAuth for any domain. The <span>provider</span> query parameter should be set to <span>MicrosoftOAuth</span>.</p>
+
+                            </div>
+
                         </div>
 
                     </div>
