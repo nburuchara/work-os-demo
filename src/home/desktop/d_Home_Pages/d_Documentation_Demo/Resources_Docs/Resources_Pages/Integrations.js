@@ -4647,6 +4647,137 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure your global GitHub OAuth setup, you’ll need three pieces of information: a <label className='demo-docs-hyperlnk'>Redirect URI</label>, a GitHub Client ID, and a GitHub Client Secret.</p>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the Redirect URI, an allowlisted callback URL. It indicates the location to return an authorized user to after both an authorization code is granted, and the authentication process is complete.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Open your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and browse to the <i>Authentication</i> section on the left hand navigation bar. Scroll down to the <i>GitHub OAuth</i> section and click <i>Edit</i>.</p>
+
+                            <div id='img359' className={`enlargable-image-container ${this.state.enlargedImageId === 'img359' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img359')}>
+                                <img  src='/assets/github_oauth_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the modal, you’ll see the Redirect URI as well as the fields you’ll populate later with information from GitHub. This URI will be used as part of the registration process later in the GitHub developer settings page.</p>
+
+                            <div id='img360' className={`enlargable-image-container ${this.state.enlargedImageId === 'img360' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img360')}>
+                                <img  src='/assets/github_oauth_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing with default credentials in the Staging environment</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a default GitHub Client ID/GitHub Client Secret combination, which allows you to quickly enable and test GitHub OAuth. WorkOS will automatically use the default credentials, until you add your own GitHub Client ID and GitHub Client Secret to the Configuration in the WorkOS Dashboard.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The default credentials are only intended for testing and therefore only available in the Staging environment. For your production environment, please follow the steps below to create and specify your own GitHub Client ID and GitHub Client Secret.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please note that when you are using WorkOS default credentials, GitHub’s authentication flow will display WorkOS’ name, logo, and other information to users. Once you register your own application and use its GitHub Client ID and GitHub Client Secret for the OAuth flow, you will have the opportunity to customize the app, including its name, logo, etc.</p>
+                            
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the GitHub Client ID and the GitHub Client Secret.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These are a pair of credentials provided by GitHub that you’ll use to authenticate your application via the OAuth protocol. To obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Create the GitHub OAuth Application</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to your GitHub account and go to the  <label className='demo-docs-hyperlink'><i>Developer Settings</i></label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> page in your GitHub settings dashboard and click on <i>Register a new application</i>.</p>
+
+                            <div style={{marginBottom: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>You can also register a new application under a GitHub Organization, which may be more appropriate if it is maintained by a team of developers. You can also <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>transfer ownership</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> of your GitHub OAuth application to a GitHub organization later.</p>
+                                </div>
+                            </div>
+
+                            <div id='img361' className={`enlargable-image-container ${this.state.enlargedImageId === 'img361' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img361')}>
+                                <img  src='/assets/github_oauth_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by filling out the form with relevant details about your application, like the application name and description.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For <i>Authorization callback URL</i>, use the Redirect URI in the GitHub OAuth configuration modal in the WorkOS Dashboard.</p>
+
+                            <div id='img362' className={`enlargable-image-container ${this.state.enlargedImageId === 'img362' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img362')}>
+                                <img  src='/assets/github_oauth_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, click on <i>Register application</i>.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Generate client credentials</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the next page, you will see the GitHub <i>Client ID</i> for your new OAuth application.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on <i>Generate a new client secret</i> to generate a new GitHub Client Secret. Note that this value is only temporarily available, so make sure to save it before proceeding.</p>
+
+                            <div id='img363' className={`enlargable-image-container ${this.state.enlargedImageId === 'img363' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img363')}>
+                                <img  src='/assets/github_oauth_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the next step, you will provide both the GitHub Client ID and Client Secret to the WorkOS dashboard.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span style={{padding: sidebarMenuClicked ? "15%" : "8%", paddingLeft: sidebarMenuClicked ? "5%" : "19%", paddingRight: sidebarMenuClicked ? "5%" : "19%", fontSize: sidebarMenuClicked ? "70%" : "90%", marginLeft: sidebarMenuClicked ? "5%" : "0%"}} className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <div className='api-keys'>
+                                        <h3 style={{marginTop: "0.75%", marginLeft: "2.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Provide client credentials to WorkOS</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Go back to the <i>Authentication</i> section in the WorkOS Dashboard, and click on <i>Edit</i> under <i>GitHub OAuth</i>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Toggle <i>Enabled</i> on and provide the client credentials from GitHub that you generated in the previous step.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, click <i>Save</i>.</p>
+
+                            <div id='img364' className={`enlargable-image-container ${this.state.enlargedImageId === 'img364' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img364')}>
+                                <img  src='/assets/github_oauth_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You are now ready to start authenticating with GitHub OAuth. Your users will see the option to sign-in with GitHub when visiting your <label className='demo-docs-hyperlink'>AuthKit</label> domain. Or, you can initiate sign-in with GitHub through the <label className='demo-docs-hyperlink'>standalone SSO API</label> by passing <span>GitHubOAuth</span> as the <span>provider</span>.</p>
+                            </div>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 
