@@ -48,6 +48,7 @@ export default class Integrations extends Component {
             lastPass: false,
             loginGov: false,
             microsoftSaml: false,
+            miniOrange: false,
 
 
 
@@ -123,6 +124,7 @@ export default class Integrations extends Component {
             "loginGov": "loginGov",
             "microsoftSaml": "microsoftSaml",
             "microsoftOAuth": "microsoftOAuth",
+            "miniOrange": "miniOrange",
             
         };
       
@@ -194,6 +196,7 @@ export default class Integrations extends Component {
             "loginGov": "loginGov",
             "microsoftSaml": "microsoftSaml",
             "microsoftOAuth": "microsoftOAuth",
+            "miniOrange": "miniOrange",
 
         };
         const keys = Object.keys(pageMap);
@@ -248,7 +251,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -6911,6 +6914,7 @@ export default class Integrations extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure your global Microsoft OAuth setup, you’ll need three pieces of information: a <label className='demo-docs-hyperlink'>Redirect URI</label>, a Microsoft Client ID, and a Microsoft Client Secret.</p>
+
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
@@ -7081,7 +7085,239 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
+                    </div>
+                </CSSTransition>
 
+                <CSSTransition in={miniOrange}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>miniOrange</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to miniOrange via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a miniOrange SAML Connection, you’ll need an IdP Metadata URL.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a miniOrange SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img498' className={`enlargable-image-container ${this.state.enlargedImageId === 'img498' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img498')}>
+                                <img  src='/assets/mini_orange_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “miniOrange SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img499' className={`enlargable-image-container ${this.state.enlargedImageId === 'img499' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img499')}>
+                                <img  src='/assets/mini_orange_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label>, <label className='demo-docs-hyperlink'>SP Entity ID</label> and <label className='demo-docs-hyperlink'>SP Metadata URL</label>. They’re readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. For this configuration, you should only need to use the SP Metadata URL, but other fields are provided should you choose to do a more manual configuration.</p>
+
+                            <div id='img500' className={`enlargable-image-container ${this.state.enlargedImageId === 'img500' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img500')}>
+                                <img  src='/assets/mini_orange_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, provide the IdP Metadata URL. Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their miniOrange admin dashboard. But, should that not be the case during your setup, the next steps will show you how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div> 
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>miniOrange</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin dashboard and select “Apps” on the left side navigation. If your application is already created, select it from the list of applications and move to Step 2. Otherwise, select “Add Application”.</p>
+
+                            <div id='img501' className={`enlargable-image-container ${this.state.enlargedImageId === 'img501' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img501')}>
+                                <img  src='/assets/mini_orange_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “SAML/WS-FED”, select “Create App”.</p>
+
+                            <div id='img502' className={`enlargable-image-container ${this.state.enlargedImageId === 'img502' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img502')}>
+                                <img  src='/assets/mini_orange_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Search for “custom” in the search box and select “Custom SAML App”.</p>
+
+                            <div id='img503' className={`enlargable-image-container ${this.state.enlargedImageId === 'img503' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img503')}>
+                                <img  src='/assets/mini_orange_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the “Basic Settings” tab of the SAML app, select “Import SP Metadata”.</p>
+
+                             <div id='img504' className={`enlargable-image-container ${this.state.enlargedImageId === 'img504' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img504')}>
+                                <img  src='/assets/mini_orange_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the SAML app a descriptive name under “App Name”. Under “SP Metadata”, select “URL” and input the SP Metadata URL from your SSO Connection settings in the WorkOS Dashboard. Then, hit “Import”.</p>
+
+                            <div id='img505' className={`enlargable-image-container ${this.state.enlargedImageId === 'img505' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img505')}>
+                                <img  src='/assets/mini_orange_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure that you have the “Sign Assertion” field toggled on.</p>
+
+                            <div id='img506' className={`enlargable-image-container ${this.state.enlargedImageId === 'img506' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img506')}>
+                                <img  src='/assets/mini_orange_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Next”.</p>
+
+                            <div id='img507' className={`enlargable-image-container ${this.state.enlargedImageId === 'img507' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img507')}>
+                                <img  src='/assets/mini_orange_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the “Attribute Mapping” section of the SAML app, select “Add Attribute”.</p>
+
+                            <div id='img508' className={`enlargable-image-container ${this.state.enlargedImageId === 'img508' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img508')}>
+                                <img  src='/assets/mini_orange_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Map the following four attributes as shown below, and the select “Save”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>Username</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>E-Mail Address</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>First Name</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>Last Name</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img509' className={`enlargable-image-container ${this.state.enlargedImageId === 'img509' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img509')}>
+                                <img  src='/assets/mini_orange_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On your SAML app’s Settings page, scroll down to “Attributes” and add a new attribute. Set the attribute’s name to <span>groups</span> and map it to the “User Groups” field. Click “Save”.</p>
+
+                            </div>
+
+                            <div id='img510' className={`enlargable-image-container ${this.state.enlargedImageId === 'img510' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img510')}>
+                                <img  src='/assets/mini_orange_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Back on the “Apps” tab of the miniOrange Dashboard, click “Select” next to the app you’ve created. From the dropdown, select “Metadata”.</p>
+
+                            <div id='img511' className={`enlargable-image-container ${this.state.enlargedImageId === 'img511' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img511')}>
+                                <img  src='/assets/mini_orange_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the “Information required to set miniOrange as IdP” section, click the icon next to “Metadata URL” to copy it to your clipboard.</p>
+
+                            <div id='img512' className={`enlargable-image-container ${this.state.enlargedImageId === 'img512' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img512')}>
+                                <img  src='/assets/mini_orange_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Connection settings in the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
+
+                            <p style={{fontWeight: "bold", color: "red"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>[INCOMPLETE IMAGE URL]</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Paste the Metadata URL from miniOrange into the “Metadata URL” field and select “Save Metadata Configuration”.</p>
+
+                            <div id='img513' className={`enlargable-image-container ${this.state.enlargedImageId === 'img513' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img513')}>
+                                <img  src='/assets/mini_orange_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be linked and good to go!</p>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={miniOrange}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>miniOrange</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to miniOrange via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            
+                        </div>
                     </div>
                 </CSSTransition>
 
