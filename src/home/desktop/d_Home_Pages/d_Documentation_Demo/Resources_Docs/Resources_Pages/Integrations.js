@@ -43,6 +43,9 @@ export default class Integrations extends Component {
             googleSaml: false,
             hibob: false,
             jumpcloudSaml: false,
+            jumpcloudScim: false,
+            keycloak: false,
+            lastPass: false,
 
 
 
@@ -113,6 +116,8 @@ export default class Integrations extends Component {
             "hiBob": "hiBob",
             "jumpcloudSaml": "jumpcloudSaml",
             "jumpcloudScim": "jumpcloudScim",
+            "keycloak": "keycloak",
+            "lastPass": "lastPass",
             
         };
       
@@ -179,6 +184,8 @@ export default class Integrations extends Component {
             "hiBob": "hiBob",
             "jumpcloudSaml": "jumpcloudSaml",
             "jumpcloudScim": "jumpcloudScim",
+            "keycloak": "keycloak",
+            "lastPass": "lastPass",
 
         };
         const keys = Object.keys(pageMap);
@@ -233,7 +240,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -6040,7 +6047,254 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To remove an entire group, the group can be deleted from the JumpCloud User Management area while it is connected to the SCIM application.</p>
 
                         </div>
+                    </div>
+                </CSSTransition>
 
+                <CSSTransition in={keycloak}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Keycloak</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Keycloak via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create an Keycloak SAML Connection, you’ll need three pieces of information: an <label className='demo-docs-hyperlink'>ACS URL</label>, an Identity Provider Issuer (also known as an Entity ID), and a Metadata URL.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and IdP URI (Entity ID). It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img429' className={`enlargable-image-container ${this.state.enlargedImageId === 'img429' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img429')}>
+                                <img  src='/assets/keycloak_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Keycloak’s case, it needs to be set by the organization when configuring your application in their Keycloak instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL will need to be set as the “Valid Redirect URI” and “Master SAML Processing URL” in the SAML client setup in Keycloak.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Entity ID is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Keycloak instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the Entity ID will need to be set as the “Client ID” when creating a SAML client in Keycloak.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Keycloak Metadata URL. Normally, the this will come from the organization’s IT Management team when they set up your application’s SAML client in their Keycloak instance. But, should that not be the case during your setup, here’s how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log in</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to your Keycloak Admin Console, and navigate to the Realm you want to set up the SAML client in. Select “Clients” from the side menu. If your client is already created, select it from the list of and move to Step 4. If you haven’t created a SAML client in Keycloak, select “Create client”.</p>
+
+                            <div id='img430' className={`enlargable-image-container ${this.state.enlargedImageId === 'img430' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img430')}>
+                                <img  src='/assets/keycloak_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Create Client setup step, select SAML as the “Client type”, input the IdP URI (Entity ID) from your WorkOS Dashboard as the “Client ID”, and set a name for your Client. Click “Save”.</p>
+
+                            <div id='img431' className={`enlargable-image-container ${this.state.enlargedImageId === 'img431' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img431')}>
+                                <img  src='/assets/keycloak_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Settings page, scroll down and input the ACS URL from your WorkOS Dashboard in the “Valid Redirect URIs” and “Master SAML Processing URL” boxes.</p>
+
+                            <div id='img432' className={`enlargable-image-container ${this.state.enlargedImageId === 'img432' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img432')}>
+                                <img  src='/assets/keycloak_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down further on the Settings page to “Signature and Encryption”, and make sure that “Sign assertions” is toggled <span>On</span>. Click “Save”.</p>
+
+                            </div>
+
+                            <div id='img433' className={`enlargable-image-container ${this.state.enlargedImageId === 'img433' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img433')}>
+                                <img  src='/assets/keycloak_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure User Attributes and Claims</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Client scopes” top menu option and click into your Client.</p>
+
+                            <div id='img434' className={`enlargable-image-container ${this.state.enlargedImageId === 'img434' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img434')}>
+                                <img  src='/assets/keycloak_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Configure a new mapper”.</p>
+
+                            <div id='img435' className={`enlargable-image-container ${this.state.enlargedImageId === 'img435' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img435')}>
+                                <img  src='/assets/keycloak_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then select “User Property”.</p>
+
+                            <div id='img436' className={`enlargable-image-container ${this.state.enlargedImageId === 'img436' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img436')}>
+                                <img  src='/assets/keycloak_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll need to create a “User Property” mapper for the following four attributes:</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span></p></li>
+                                </ul>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This is an example of how to fill out the fields for <span>id</span>:</p>
+
+                                <div id='img437' className={`enlargable-image-container ${this.state.enlargedImageId === 'img437' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img437')}>
+                                    <img  src='/assets/keycloak_img9.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Also do this for the <span>email</span>, <span>firstName</span>, and <span>lastName</span> attributes:</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} id='img438' className={`enlargable-image-container ${this.state.enlargedImageId === 'img438' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img438')}>
+                                <img  src='/assets/keycloak_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} id='img439' className={`enlargable-image-container ${this.state.enlargedImageId === 'img439' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img439')}>
+                                <img  src='/assets/keycloak_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div id='img440' className={`enlargable-image-container ${this.state.enlargedImageId === 'img440' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img440')}>
+                                <img  src='/assets/keycloak_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the “Dedicated scopes” page, select “Add mapper” and then “By configuration”.</p>
+
+                            <div id='img441' className={`enlargable-image-container ${this.state.enlargedImageId === 'img441' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img441')}>
+                                <img  src='/assets/keycloak_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can choose either “Group list” or “Role list”, whichever option best fits your use case. The example below uses “Group list”. For more information on sending group information, refer to the <label className='demo-docs-hyperlink'>Keycloak documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img442' className={`enlargable-image-container ${this.state.enlargedImageId === 'img442' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img442')}>
+                                <img  src='/assets/keycloak_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set the Name and the Group attribute name to “groups”, and make sure the Single Group Attribute toggle is On. Select “Save”.</p>
+
+                            <div id='img443' className={`enlargable-image-container ${this.state.enlargedImageId === 'img443' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img443')}>
+                                <img  src='/assets/keycloak_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Realm Settings” in the left sidebar navigation menu, and copy the “SAML 2.0 Identity Provider Metadata” link on the General page.</p>
+
+                            <div id='img444' className={`enlargable-image-container ${this.state.enlargedImageId === 'img444' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img444')}>
+                                <img  src='/assets/keycloak_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, within your connection settings, edit the Metadata Configuration and provide the Metadata URL you obtained from Keycloak. Your Connection will then be verified and good to go!</p>
+
+                            <div id='img445' className={`enlargable-image-container ${this.state.enlargedImageId === 'img445' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img445')}>
+                                <img  src='/assets/keycloak_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={lastPass}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>LastPass</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Keycloak via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                        </div>
                     </div>
                 </CSSTransition>
 

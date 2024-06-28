@@ -725,7 +725,7 @@ const docs_sidebar_options = [
             },
             {
                 id: 164,
-                levelName: "Last Pass"
+                levelName: "LastPass"
             },
             {
                 id: 165,

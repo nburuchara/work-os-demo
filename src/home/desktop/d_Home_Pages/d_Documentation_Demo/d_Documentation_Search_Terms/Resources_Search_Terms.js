@@ -39,6 +39,7 @@ const results = [
     {"id": "999995", "name": "HiBob", "category": "Resources", "subCat1": "Integrations", "page": "HiBob", "lastCat": "top"},
     {"id": "999995", "name": "JumpCloud SAML", "category": "Resources", "subCat1": "Integrations", "page": "JumpCloud SAML", "lastCat": "top"},
     {"id": "999995", "name": "JumpCloud SCIM", "category": "Resources", "subCat1": "Integrations", "page": "JumpCloud SCIM", "lastCat": "top"},
+    {"id": "999995", "name": "Keycloak", "category": "Resources", "subCat1": "Integrations", "page": "Keycloak", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
