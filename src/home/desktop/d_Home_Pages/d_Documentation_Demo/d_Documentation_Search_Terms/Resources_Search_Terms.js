@@ -35,6 +35,8 @@ const results = [
     {"id": "999995", "name": "GitHub OAuth", "category": "Resources", "subCat1": "Integrations", "page": "GitHub OAuth", "lastCat": "top"},
     {"id": "999995", "name": "Google Directory Sync", "category": "Resources", "subCat1": "Integrations", "page": "Google Directory Sync", "lastCat": "top"},
     {"id": "999995", "name": "Google OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Google OAuth", "lastCat": "top"},
+    {"id": "999995", "name": "Google SAML", "category": "Resources", "subCat1": "Integrations", "page": "Google SAML", "lastCat": "top"},
+    {"id": "999995", "name": "HiBob", "category": "Resources", "subCat1": "Integrations", "page": "HiBob", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
