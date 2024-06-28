@@ -105,6 +105,7 @@ export default class Resources extends Component {
             "Entra ID SAML (fka Azure AD)": "entraIdSaml",
             "Entra ID SCIM (fka Azure AD)": "entraIdScim",
             "Firebase": "firebase",
+            "Fourth": "fourth",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -273,6 +274,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Entra ID SAML (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SAML (fka Azure AD)", "lastCat": "top"},
             {"id": "999995", "name": "Entra ID SCIM (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SCIM (fka Azure AD)", "lastCat": "top"},
             {"id": "999995", "name": "Firebase", "category": "Resources", "subCat1": "Integrations", "page": "Firebase", "lastCat": "top"},
+            {"id": "999995", "name": "Fourth", "category": "Resources", "subCat1": "Integrations", "page": "Fourth", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -632,7 +634,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/firebase_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Fourth')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Fourth</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with Fourth.</p>
