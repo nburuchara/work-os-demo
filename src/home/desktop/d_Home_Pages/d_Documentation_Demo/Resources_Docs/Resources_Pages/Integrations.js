@@ -99,6 +99,7 @@ export default class Integrations extends Component {
             "entraIdScim": "entraIdScim",
             "firebase": "firebase",
             "fourth": "fourth",
+            "githubOAuth": "githubOAuth",
             
         };
       
@@ -158,6 +159,7 @@ export default class Integrations extends Component {
             "entraIdScim": "entraIdScim",
             "firebase": "firebase",
             "fourth": "fourth",
+            "githubOAuth": "githubOAuth",
 
         };
         const keys = Object.keys(pageMap);
@@ -212,7 +214,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -4565,7 +4567,84 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in into your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
 
-                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync connection with.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Manually Configure Directory”.</p>
+
+                            <div id='img355' className={`enlargable-image-container ${this.state.enlargedImageId === 'img355' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img355')}>
+                                <img  src='/assets/fourth_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the Name, and select “Fourth” as the directory type. Click the “Create Directory” button.</p>
+
+                            <div id='img356' className={`enlargable-image-container ${this.state.enlargedImageId === 'img356' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img356')}>
+                                <img  src='/assets/fourth_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will now see your Fourth directory sync has been created successfully with an input for the Organization ID, username, and password.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain and update directory details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Retrieve the Fourth Organization ID from the organization’s IT Admin, as well as the username and password that will be used for authentication.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Update Directory” in the WorkOS Dashboard.</p>
+
+                            <div id='img357' className={`enlargable-image-container ${this.state.enlargedImageId === 'img357' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img357')}>
+                                <img  src='/assets/fourth_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>View users and groups in your dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the connection is successfully made, you will see the green “Linked” icon appear. Now, whenever the organization assigns users or groups to your application, you’ll receive Dashboard updates based on changes in their directory.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the “Users” tab in the Dashboard to view synced users.</p>
+
+                            <div id='img358' className={`enlargable-image-container ${this.state.enlargedImageId === 'img358' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img358')}>
+                                <img  src='/assets/fourth_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do Fourth directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Fourth directories poll every 30 minutes starting from the time of the initial sync.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={githubOAuth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>GitHub OAuth</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to set up OAuth with GitHub.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure your global GitHub OAuth setup, you’ll need three pieces of information: a <label className='demo-docs-hyperlnk'>Redirect URI</label>, a GitHub Client ID, and a GitHub Client Secret.</p>
 
                         </div>
                     </div>
@@ -4576,4 +4655,4 @@ export default class Integrations extends Component {
     }
 }
 
-//* IMAGE 346 (latest)
+//* IMAGE 355 (latest)

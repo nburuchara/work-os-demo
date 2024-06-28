@@ -106,6 +106,7 @@ export default class Resources extends Component {
             "Entra ID SCIM (fka Azure AD)": "entraIdScim",
             "Firebase": "firebase",
             "Fourth": "fourth",
+            "GitHub OAuth": "githubOAuth",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -275,6 +276,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Entra ID SCIM (formerly Azure AD)", "category": "Resources", "subCat1": "Integrations", "page": "Entra ID SCIM (fka Azure AD)", "lastCat": "top"},
             {"id": "999995", "name": "Firebase", "category": "Resources", "subCat1": "Integrations", "page": "Firebase", "lastCat": "top"},
             {"id": "999995", "name": "Fourth", "category": "Resources", "subCat1": "Integrations", "page": "Fourth", "lastCat": "top"},
+            {"id": "999995", "name": "GitHub OAuth", "category": "Resources", "subCat1": "Integrations", "page": "GitHub OAuth", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -657,7 +659,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('GitHub OAuth')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>GitHub OAuth</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to set up OAuth with GitHub.</p>
