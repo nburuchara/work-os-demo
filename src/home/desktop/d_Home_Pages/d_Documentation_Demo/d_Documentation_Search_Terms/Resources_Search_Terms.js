@@ -33,6 +33,8 @@ const results = [
     {"id": "999995", "name": "Firebase", "category": "Resources", "subCat1": "Integrations", "page": "Firebase", "lastCat": "top"},
     {"id": "999995", "name": "Fourth", "category": "Resources", "subCat1": "Integrations", "page": "Fourth", "lastCat": "top"},
     {"id": "999995", "name": "GitHub OAuth", "category": "Resources", "subCat1": "Integrations", "page": "GitHub OAuth", "lastCat": "top"},
+    {"id": "999995", "name": "Google Directory Sync", "category": "Resources", "subCat1": "Integrations", "page": "Google Directory Sync", "lastCat": "top"},
+    {"id": "999995", "name": "Google OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Google OAuth", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

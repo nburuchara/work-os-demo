@@ -37,6 +37,9 @@ export default class Integrations extends Component {
             entraIdScim: false,
             firebase: false,
             fourth: false,
+            githubOAuth: false,
+            googleDirectorySync: false,
+            googleOAuth: false,
 
 
             prevSelectedPage: "",
@@ -100,6 +103,8 @@ export default class Integrations extends Component {
             "firebase": "firebase",
             "fourth": "fourth",
             "githubOAuth": "githubOAuth",
+            "googleDirectorySync": "googleDirectorySync",
+            "googleOAuth": "googleOAuth",
             
         };
       
@@ -160,6 +165,8 @@ export default class Integrations extends Component {
             "firebase": "firebase",
             "fourth": "fourth",
             "githubOAuth": "githubOAuth",
+            "googleDirectorySync": "googleDirectorySync",
+            "googleOAuth": "googleOAuth",
 
         };
         const keys = Object.keys(pageMap);
@@ -214,7 +221,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -4781,9 +4788,168 @@ export default class Integrations extends Component {
                     </div>
                 </CSSTransition>
 
+                <CSSTransition in={googleDirectorySync}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Google Directory Sync</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Google Workspace.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Google Workspace directories.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select environment</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS dashboard and ensure you have the desired environment selected.</p>
+
+                            <div id='img365' className={`enlargable-image-container ${this.state.enlargedImageId === 'img365' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img365')}>
+                                <img  src='/assets/google_dsync_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Send an admin invite link</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Organizations” in the navigation.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization that’d like to enable a Google Directory Sync connection.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Organization page, under “Invite an admin to set up this organization,” select “Invite Admin.”</p>
+
+                            <div id='img366' className={`enlargable-image-container ${this.state.enlargedImageId === 'img366' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img366')}>
+                                <img  src='/assets/google_dsync_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Directory Sync” and any other features you’d like the organization to be able to onboard.</p>
+
+                            <div id='img367' className={`enlargable-image-container ${this.state.enlargedImageId === 'img367' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img367')}>
+                                <img  src='/assets/google_dsync_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the email address of the organization admin, or copy the setup link and send it to the organization admin.</p>
+
+                            <div id='img368' className={`enlargable-image-container ${this.state.enlargedImageId === 'img368' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img368')}>
+                                <img  src='/assets/google_dsync_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Authenticate with admin credentials</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Have the organization choose Google as a provider and follow the Google prompts to authenticate with admin credentials.</p>
+
+                            <div id='img369' className={`enlargable-image-container ${this.state.enlargedImageId === 'img369' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img369')}>
+                                <img  src='/assets/google_dsync_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select which groups to sync to Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The organization admin can then select to filter which groups and memberships are synced to the directory. If groups are being filtered, then only users with a membership within one of the synced groups will be synced.</p>
+
+                            <div id='img370' className={`enlargable-image-container ${this.state.enlargedImageId === 'img370' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img370')}>
+                                <img  src='/assets/google_dsync_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Sync users and groups to Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Changes will appear live in the Directory Sync portal under the “Users” tab:</p>
+
+                            <div id='img371' className={`enlargable-image-container ${this.state.enlargedImageId === 'img371' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img371')}>
+                                <img  src='/assets/google_dsync_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can you selectively sync users and groups from Google Workspace?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can select to sync certain groups during setup within the Admin Portal as seen in <label className='demo-docs-hyperlink'>Step 4</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>When do users get removed from a directory?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are 2 ways a user can be deleted from a Google Workspace directory.</p>
+
+                            <ol>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The user is removed or archived on Google and no longer returned by their API.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the directory is <label className='demo-docs-hyperlink'>filtering specific groups</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, if a user is removed from all groups that are being filtered in, the user is removed from the directory as well.</p></li>
+                            </ol>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do Google Workspace directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Google Workspace directories poll every 30 minutes starting from the time of the initial sync.</p>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={googleOAuth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+
+                    </div>
+                </CSSTransition>
+
             </Styles>
         )
     }
 }
 
-//* IMAGE 355 (latest)
+//* IMAGE 370 (latest)
