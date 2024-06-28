@@ -118,6 +118,7 @@ export default class Integrations extends Component {
             "jumpcloudScim": "jumpcloudScim",
             "keycloak": "keycloak",
             "lastPass": "lastPass",
+            "loginGov": "loginGov",
             
         };
       
@@ -186,6 +187,7 @@ export default class Integrations extends Component {
             "jumpcloudScim": "jumpcloudScim",
             "keycloak": "keycloak",
             "lastPass": "lastPass",
+            "loginGov": "loginGov",
 
         };
         const keys = Object.keys(pageMap);
@@ -240,7 +242,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -6275,7 +6277,6 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-
                     </div>
                 </CSSTransition>
 
@@ -6287,13 +6288,263 @@ export default class Integrations extends Component {
                     <div className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>LastPass</h1>
-                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Keycloak via SAML.</p>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to LastPass via SAML.</p>
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a LastPass SAML Connection, you’ll need an IdP Metadata XML file.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a LastPass SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img446' className={`enlargable-image-container ${this.state.enlargedImageId === 'img446' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img446')}>
+                                <img  src='/assets/lastpass_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “LastPass SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img447' className={`enlargable-image-container ${this.state.enlargedImageId === 'img447' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img447')}>
+                                <img  src='/assets/lastpass_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label>, <label className='demo-docs-hyperlink'>SP Entity ID</label>, and <label className='demo-docs-hyperlink'>SP Metadata URL</label>. They’re readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img448' className={`enlargable-image-container ${this.state.enlargedImageId === 'img448' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img448')}>
+                                <img  src='/assets/lastpass_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, provide the IdP Metadata file. Normally, this information will come from your enterprise customer’s IT Management team when they set up your application’s SAML 2.0 configuration in their LastPass admin console. But, should that not be the case during your setup, the next steps will show you how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>LastPass</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin console and select “Applications” on the top navigation. Then select “SSO apps” from the left side navigation. If your application is already created, select it from the list of applications and move to Step 2. Otherwise, select “Add app”.</p>
+
+                            <div id='img449' className={`enlargable-image-container ${this.state.enlargedImageId === 'img449' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img449')}>
+                                <img  src='/assets/lastpass_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the modal that pops up, click on “Add an unlisted app”.</p>
+
+                            <div id='img450' className={`enlargable-image-container ${this.state.enlargedImageId === 'img450' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img450')}>
+                                <img  src='/assets/lastpass_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give your SAML App a descriptive name and select “Continue”.</p>
+
+                            <div id='img451' className={`enlargable-image-container ${this.state.enlargedImageId === 'img451' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img451')}>
+                                <img  src='/assets/lastpass_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under the “Set up LastPass” section of the “Configure app” modal, input the ACS URL from the WorkOS Dashboard Connection details under “ACS”. Then click on “Advanced Settings”.</p>
+
+                            <div id='img452' className={`enlargable-image-container ${this.state.enlargedImageId === 'img452' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img452')}>
+                                <img  src='/assets/lastpass_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “Entity ID”, input the SP Entity ID from the WorkOS Dashboard Connection details. Next, under “SAML signature method”, select “SHA256”.</p>
+
+                            <div id='img453' className={`enlargable-image-container ${this.state.enlargedImageId === 'img453' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img453')}>
+                                <img  src='/assets/lastpass_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “Signing and encryption”, ensure that you have at least selected “Sign assertion”. Then, click on “Add SAML attribute”.</p>
+
+                            <div id='img454' className={`enlargable-image-container ${this.state.enlargedImageId === 'img454' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img454')}>
+                                <img  src='/assets/lastpass_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Map the following four attributes as shown below, and select “Save & assign users”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>First Name → <span>firstName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Last Name → <span>lastName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Email → <span>email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User ID → <span>id</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img455' className={`enlargable-image-container ${this.state.enlargedImageId === 'img455' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img455')}>
+                                <img  src='/assets/lastpass_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add a new SAML attribute for the “Groups” field and input <span>groups</span> as the attribute name, as shown below. Then, select “Save & assign users”.</p>
+                            </div>
+
+                            <div id='img456' className={`enlargable-image-container ${this.state.enlargedImageId === 'img456' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img456')}>
+                                <img  src='/assets/lastpass_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Users and Groups to SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the “Users, groups & roles” page, click on “Assign users, groups & roles”.</p>
+
+                            <div id='img457' className={`enlargable-image-container ${this.state.enlargedImageId === 'img457' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img457')}>
+                                <img  src='/assets/lastpass_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Search and select any users or groups that you would like to provision to this SAML app. Then, click “Assign”.</p>
+
+                            <div id='img458' className={`enlargable-image-container ${this.state.enlargedImageId === 'img458' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img458')}>
+                                <img  src='/assets/lastpass_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on “Save & continue”.</p>
+
+                            <div id='img459' className={`enlargable-image-container ${this.state.enlargedImageId === 'img459' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img459')}>
+                                <img  src='/assets/lastpass_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata file</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Back on the “SSO apps” tab of the LastPass admin console, select the SAML app that you just created.</p>
+
+                            <p style={{fontWeight: "bold", color: "red"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>[INCOMPLETE IMAGE URL]</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the “Configure app” modal, click on “Expand” to the right of “Set up app”.</p>
+
+                            <div id='img460' className={`enlargable-image-container ${this.state.enlargedImageId === 'img460' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img460')}>
+                                <img  src='/assets/lastpass_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>At the bottom of the “Set up app” section, click on “Download metadata (XML)”. Save the downloaded XML metadata somewhere accessible.</p>
+
+                            <div id='img461' className={`enlargable-image-container ${this.state.enlargedImageId === 'img461' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img461')}>
+                                <img  src='/assets/lastpass_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Connection settings in the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
+
+                            <div id='img462' className={`enlargable-image-container ${this.state.enlargedImageId === 'img462' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img462')}>
+                                <img  src='/assets/lastpass_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the XML metadata file from LastPass into the “Metadata File” field and select “Save Metadata Configuration”.</p>
+
+                            <div id='img463' className={`enlargable-image-container ${this.state.enlargedImageId === 'img463' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img463')}>
+                                <img  src='/assets/lastpass_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be linked and good to go!</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={loginGov}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Login.gov OpenID Connect</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Login.gov via OIDC.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Note: <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Login.gov</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> is used for government agencies. You will need to go through Login.gov to obtain a test account and get your application cleared for production. Please reference <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Login.gov’s developer documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Login.gov OpenID Connect (OIDC) Connection, you’ll need four pieces of information: a <label className='demo-docs-hyperlink'>Redirect URI</label>, a Public Certificate, a <label className='demo-docs-hyperlink'>Client ID</label>, and a Discovery Endpoint.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left-hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a Login.gov OIDC Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+                            
                         </div>
                     </div>
                 </CSSTransition>

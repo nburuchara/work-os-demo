@@ -115,6 +115,7 @@ export default class Resources extends Component {
             "JumpCloud SCIM": "jumpcloudScim",
             "Keycloak": "keycloak",
             "LastPass": "lastPass",
+            "Login.gov OpenID Connect": "loginGov",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -293,6 +294,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "JumpCloud SCIM", "category": "Resources", "subCat1": "Integrations", "page": "JumpCloud SCIM", "lastCat": "top"},
             {"id": "999995", "name": "Keycloak", "category": "Resources", "subCat1": "Integrations", "page": "Keycloak", "lastCat": "top"},
             {"id": "999995", "name": "LastPass", "category": "Resources", "subCat1": "Integrations", "page": "LastPass", "lastCat": "top"},
+            {"id": "999995", "name": "Login.gov OpenID Connect", "category": "Resources", "subCat1": "Integrations", "page": "Login.gov OpenID Connect", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -815,7 +817,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/lastpass_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Login.gov OpenID Connect')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Login.gov OpenID Connect</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to Login.gov via OIDC.</p>
