@@ -116,6 +116,8 @@ export default class Resources extends Component {
             "Keycloak": "keycloak",
             "LastPass": "lastPass",
             "Login.gov OpenID Connect": "loginGov",
+            "Microsoft AD FS SAML": "microsoftSaml",
+            "Microsoft OAuth": "microsoftOAuth",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -295,6 +297,8 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Keycloak", "category": "Resources", "subCat1": "Integrations", "page": "Keycloak", "lastCat": "top"},
             {"id": "999995", "name": "LastPass", "category": "Resources", "subCat1": "Integrations", "page": "LastPass", "lastCat": "top"},
             {"id": "999995", "name": "Login.gov OpenID Connect", "category": "Resources", "subCat1": "Integrations", "page": "Login.gov OpenID Connect", "lastCat": "top"},
+            {"id": "999995", "name": "Microsoft AD FS SAML", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft AD FS SAML", "lastCat": "top"},
+            {"id": "999995", "name": "Microsoft OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft OAuth", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -840,7 +844,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('Microsoft AD FS SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Microsoft AD FS SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Configure a connection to Microsoft Active Directory Federation Services.</p>
@@ -849,7 +853,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/microsoft_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Microsoft OAuth')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Microsoft OAuth</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to set up OAuth with Microsoft.</p>

@@ -42,6 +42,8 @@ const results = [
     {"id": "999995", "name": "Keycloak", "category": "Resources", "subCat1": "Integrations", "page": "Keycloak", "lastCat": "top"},
     {"id": "999995", "name": "LastPass", "category": "Resources", "subCat1": "Integrations", "page": "LastPass", "lastCat": "top"},
     {"id": "999995", "name": "Login.gov OpenID Connect", "category": "Resources", "subCat1": "Integrations", "page": "Login.gov OpenID Connect", "lastCat": "top"},
+    {"id": "999995", "name": "Microsoft AD FS SAML", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft AD FS SAML", "lastCat": "top"},
+    {"id": "999995", "name": "Microsoft OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft OAuth", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

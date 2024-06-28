@@ -46,6 +46,8 @@ export default class Integrations extends Component {
             jumpcloudScim: false,
             keycloak: false,
             lastPass: false,
+            loginGov: false,
+            microsoftSaml: false,
 
 
 
@@ -119,6 +121,8 @@ export default class Integrations extends Component {
             "keycloak": "keycloak",
             "lastPass": "lastPass",
             "loginGov": "loginGov",
+            "microsoftSaml": "microsoftSaml",
+            "microsoftOAuth": "microsoftOAuth",
             
         };
       
@@ -188,6 +192,8 @@ export default class Integrations extends Component {
             "keycloak": "keycloak",
             "lastPass": "lastPass",
             "loginGov": "loginGov",
+            "microsoftSaml": "microsoftSaml",
+            "microsoftOAuth": "microsoftOAuth",
 
         };
         const keys = Object.keys(pageMap);
@@ -242,7 +248,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -6544,8 +6550,378 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left-hand navigation bar.</p>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure a Login.gov OIDC Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img464' className={`enlargable-image-container ${this.state.enlargedImageId === 'img464' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img464')}>
+                                <img  src='/assets/login_gov_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Login.gov OpenID Connect” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img465' className={`enlargable-image-container ${this.state.enlargedImageId === 'img465' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img465')}>
+                                <img  src='/assets/login_gov_img2.avif' alt="Enlargable" className="image" />
+                            </div>
                             
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the Redirect URI and the Public Certificate. They are readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img466' className={`enlargable-image-container ${this.state.enlargedImageId === 'img466' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img466')}>
+                                <img  src='/assets/login_gov_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Redirect URI is the location Login.gov redirects its authentication and token responses to, and the Public Certificate is used by Login.gov to verify the signed request from WorkOS.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the Redirect URI will need to be set as one of the “Redirect URIs” and the Public Certificate will need to be set as one of the “Public Certificates” in the Login.gov application settings:</p>
+
+                            <div id='img467' className={`enlargable-image-container ${this.state.enlargedImageId === 'img467' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img467')}>
+                                <img  src='/assets/login_gov_img4.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the <label className='demo-docs-hyperlink'>Client ID</label> and the Discovery Endpoint.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s Login.gov OpenID Connect configuration in their Identity Provider admin dashboard. But, should that not be the case during your setup, here’s how to obtain them.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Access the Login.gov Developer Sandbox</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your <label className='demo-docs-hyperlink'>Login.gov sandbox dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, and select “Apps” from the top menu.</p>
+
+                            <div id='img468' className={`enlargable-image-container ${this.state.enlargedImageId === 'img468' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img468')}>
+                                <img  src='/assets/login_gov_img5.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Note: Login.gov is used exclusively by government agencies. If you don’t have dashboard access for your Sandbox account, please reach out to the government agency you’re working with to get access to their sandbox dashboard. Please reference <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Login.gov’s developer documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of applications and move to Step 4. If you haven’t created an application, select “Create a new test app.”</p>
+
+                            <div id='img469' className={`enlargable-image-container ${this.state.enlargedImageId === 'img469' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img469')}>
+                                <img  src='/assets/login_gov_img6.png' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the New test app page, select “Yes” under the Production configuration setting. Then, add an App name, Friendly name, and Description for the app. Next, assign an agency team to this client.</p>
+
+                            <div id='img470' className={`enlargable-image-container ${this.state.enlargedImageId === 'img470' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img470')}>
+                                <img  src='/assets/login_gov_img7.png' alt="Enlargable" className="image" />
+                            </div>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “OpenID Connect Private Key JWT” as the Authentication protocol. Select the appropriate Level of Service, Default Authentication Assurance Level (AAL), and Attribute bundle for your application.</p>
+
+                            <div id='img471' className={`enlargable-image-container ${this.state.enlargedImageId === 'img471' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img471')}>
+                                <img  src='/assets/login_gov_img8.png' alt="Enlargable" className="image" />
+                            </div>
+                            
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, you’ll need to define an Issuer – something like <span>urn:gov:gsa:openidconnect.profiles:sp:sso:agency_name:app_name</span> – replacing your agency and app name. Then, upload a logo and the public certificate file you downloaded from the WorkOS dashboard.</p>
+
+                            </div>
+
+                            <div id='img472' className={`enlargable-image-container ${this.state.enlargedImageId === 'img472' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img472')}>
+                                <img  src='/assets/login_gov_img9.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, you’ll need to add the Redirect URIs. The first one you’ll need to add is the Redirect URI you copied from the WorkOS Dashboard. You’ll also need to add the <label className='demo-docs-hyperlink'>Redirect URI for your application</label>. There is a Content Security Policy (CSP) check from Login.gov, so all URIs that could potentially be redirected to the authentication flow should be listed here.</p>
+
+                            <div id='img473' className={`enlargable-image-container ${this.state.enlargedImageId === 'img473' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img473')}>
+                                <img  src='/assets/login_gov_img10.png' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down to the bottom of the page and select “Create test app” to finish the setup.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Provide the Client ID and Discovery Endpoint</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the Issuer you created in the previous step as the Client ID in the WorkOS Dashboard. Additionally, add the discovery endpoint, which for production accounts in Login.gov is: <span>https://secure.login.gov/.well-known/openid-configuration</span>.</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Update connection”.</p>
+
+                            <div id='img474' className={`enlargable-image-container ${this.state.enlargedImageId === 'img474' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img474')}>
+                                <img  src='/assets/login_gov_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Request Production Deployment</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please follow the <label className='demo-docs-hyperlink'>Login.gov docs to request a production deployment</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> and finish your Login.gov application.</p>
+                        
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={microsoftSaml}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Microsoft AD FS SAML</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Configure a connection to Microsoft Active Directory Federation Services.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create an AD FS SAML Connection, you’ll need two pieces of information: an SP Metadata file and an <label className='demo-docs-hyperlink'>IdP Metadata URL</label>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure a Relying Party Trust</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Open the AD FS Management console.</p>
+
+                            <div id='img475' className={`enlargable-image-container ${this.state.enlargedImageId === 'img475' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img475')}>
+                                <img  src='/assets/microsoft_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Relying Party Trusts” on the left sidebar. Click “Add Relying Party Trust…” on the right sidebar to open the “AD FS Relying Party Trust Wizard”.</p>
+
+                            <div id='img476' className={`enlargable-image-container ${this.state.enlargedImageId === 'img476' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img476')}>
+                                <img  src='/assets/microsoft_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Claims aware” and then “Start”.</p>
+
+                            <div id='img477' className={`enlargable-image-container ${this.state.enlargedImageId === 'img477' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img477')}>
+                                <img  src='/assets/microsoft_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Download the provided Metadata file from WorkOS by heading to the SP Metadata link in the Dashboard. Select “Import data about the relying party from a file” then select the SP Metadata file you downloaded, and click “Next”.</p>
+
+                            <div id='img478' className={`enlargable-image-container ${this.state.enlargedImageId === 'img478' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img478')}>
+                                <img  src='/assets/microsoft_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Permit everyone” and then “Next”.</p>
+
+                            <div id='img479' className={`enlargable-image-container ${this.state.enlargedImageId === 'img479' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img479')}>
+                                <img  src='/assets/microsoft_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Choose Access Policy</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Endpoints” tab and confirm that the “SAML Assertion Consumer Endpoints” matches the SAML Assertion Consumer Endpoint https://auth.workos.com/sso/saml/acs/:id and click “Next”.</p>
+                            </div>
+
+                            <div id='img480' className={`enlargable-image-container ${this.state.enlargedImageId === 'img480' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img480')}>
+                                <img  src='/assets/microsoft_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Configure claims issuance policy for this application” and “Close”.</p>
+
+                            <div id='img481' className={`enlargable-image-container ${this.state.enlargedImageId === 'img481' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img481')}>
+                                <img  src='/assets/microsoft_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Claims Issuance Policy</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Rule” in the “Edit Claims Issuance Policy” window.</p>
+
+                            <div id='img482' className={`enlargable-image-container ${this.state.enlargedImageId === 'img482' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img482')}>
+                                <img  src='/assets/microsoft_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Send LDAP Attributes as Claims” and then “Next”.</p>
+
+                            <div id='img483' className={`enlargable-image-container ${this.state.enlargedImageId === 'img483' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img483')}>
+                                <img  src='/assets/microsoft_saml_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Submit “Attributes” as “Claim rule name”, then select “Active Directory” as “Attribute Store”, and configure the following attribute mappings. Then click “OK”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>E-Mail-Addresses</span> → <span>E-Mail Address</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>Given-Name</span> → <span>Given Name</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>Surname</span> → <span>Surname</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>User-Principal-Name</span> → <span>UPN</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img484' className={`enlargable-image-container ${this.state.enlargedImageId === 'img484' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img484')}>
+                                <img  src='/assets/microsoft_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Group” as the “Outgoing Claim Type” and map an LDAP Attribute to send groups. For example, to send all groups, map the “Token-Groups – Unqualified Names” attribute.</p>
+
+                            <div id='img485' className={`enlargable-image-container ${this.state.enlargedImageId === 'img485' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img485')}>
+                                <img  src='/assets/microsoft_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next you will want to obtain the Metadata URL from your AD FS server. AD FS publishes its metadata to a standard URL by default: <span>https://SERVER/federationmetadata/2007-06/federationmetadata.xml</span> where “SERVER” is your federation service FQDN. You can also find your ADFS Federation Metadata URL through the AD FS Management in “AD FS → Service → Endpoints” and navigate to the Metadata section.</p>
+
+                            </div>
+
+                            <div id='img486' className={`enlargable-image-container ${this.state.enlargedImageId === 'img486' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img486')}>
+                                <img  src='/assets/microsoft_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you have obtained the Metadata URL you will then navigate to the connection settings in WorkOS, click “Edit Metadata configuration”, and upload the Metadata URL.</p>
+
+                            <div id='img487' className={`enlargable-image-container ${this.state.enlargedImageId === 'img487' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img487')}>
+                                <img  src='/assets/microsoft_saml_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once uploaded the connection will be verified and linked!</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={microsoftOAuth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Microsoft OAuth</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to set up OAuth with Microsoft.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To configure your global Microsoft OAuth setup, you’ll need three pieces of information: a <label className='demo-docs-hyperlink'>Redirect URI</label>, a Microsoft Client ID, and a Microsoft Client Secret.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the Redirect URI, an allowlisted callback URL. It indicates the location to return an authorized user to after both an authorization code is granted, and the authentication process is complete.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Open your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, and browse to the “Configuration” tab on the left hand nav bar. Scroll down to the “Microsoft OAuth” section, click “Edit Microsoft OAuth”, and you’ll see the Redirect URI as well as the fields you’ll populate later with information from Microsoft. If you are in the Staging environment, you’ll see demo values for the Client ID and Client Secret.</p>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 
