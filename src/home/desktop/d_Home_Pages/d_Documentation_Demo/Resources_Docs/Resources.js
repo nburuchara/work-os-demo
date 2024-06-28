@@ -111,6 +111,8 @@ export default class Resources extends Component {
             "Google OAuth": "googleOAuth",
             "Google SAML": "googleSaml",
             "HiBob": "hiBob",
+            "JumpCloud SAML": "jumpcloudSaml",
+            "JumpCloud SCIM": "jumpcloudScim",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -285,6 +287,8 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Google OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Google OAuth", "lastCat": "top"},
             {"id": "999995", "name": "Google SAML", "category": "Resources", "subCat1": "Integrations", "page": "Google SAML", "lastCat": "top"},
             {"id": "999995", "name": "HiBob", "category": "Resources", "subCat1": "Integrations", "page": "HiBob", "lastCat": "top"},
+            {"id": "999995", "name": "JumpCloud SAML", "category": "Resources", "subCat1": "Integrations", "page": "JumpCloud SAML", "lastCat": "top"},
+            {"id": "999995", "name": "JumpCloud SCIM", "category": "Resources", "subCat1": "Integrations", "page": "JumpCloud SCIM", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -743,7 +747,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('JumpCloud SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>JumpCloud SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to JumpCloud via SAML.</p>
@@ -752,7 +756,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/jumpcloud_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('JumpCloud SCIM')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>JumpCloud SCIM</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with JumpCloud SCIM.</p>
