@@ -16769,6 +16769,22 @@ const results = [
     "subCat1": "Integrations",
     "page": "NetIQ",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "NextAuth.js",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "NextAuth.js",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Okta SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Okta SAML",
+    "lastCat": "top"
   }
 ];
 export default results;

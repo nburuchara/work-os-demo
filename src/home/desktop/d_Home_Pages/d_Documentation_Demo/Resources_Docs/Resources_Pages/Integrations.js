@@ -52,6 +52,7 @@ export default class Integrations extends Component {
             netIQ: false,
             nextAuth: false,
             oktaSaml: false,
+            oktaScim: false,
 
 
 
@@ -131,6 +132,7 @@ export default class Integrations extends Component {
             "netIQ": "netIQ",
             "nextAuth": "nextAuth",
             "oktaSaml": "oktaSaml",
+            "oktaScim": "oktaScim",
             
         };
       
@@ -206,6 +208,7 @@ export default class Integrations extends Component {
             "netIQ": "netIQ",
             "nextAuth": "nextAuth",
             "oktaSaml": "oktaSaml",
+            "oktaScim": "oktaScim",
 
         };
         const keys = Object.keys(pageMap);
@@ -260,7 +263,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -7724,7 +7727,472 @@ export default class Integrations extends Component {
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure an Okta Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
 
+                            <div id='img524' className={`enlargable-image-container ${this.state.enlargedImageId === 'img524' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img524')}>
+                                <img  src='/assets/okta_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Okta” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img525' className={`enlargable-image-container ${this.state.enlargedImageId === 'img525' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img525')}>
+                                <img  src='/assets/okta_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and the SP Entity ID. It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img526' className={`enlargable-image-container ${this.state.enlargedImageId === 'img526' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img526')}>
+                                <img  src='/assets/okta_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Okta’s case, it needs to be set by the organization when configuring your application in their Okta instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Okta instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL will need to be set as the “Single Sign-On URL” and the SP Entity ID will need to be set as the “Audience URI (SP Entity ID)” in the “Configure SAML” step of the Okta “Edit SAML Integration” wizard:</p>
+
+                            <div id='img527' className={`enlargable-image-container ${this.state.enlargedImageId === 'img527' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img527')}>
+                                <img  src='/assets/okta_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, provide the <label className='demo-docs-hyperlink'>IdP Metadata URL</label>. Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their Okta admin dashboard. But, should that not be the case during your setup, the next steps will show you how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log in</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>Okta</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin dashboard, and select “Applications” in the navigation bar.</p>
+
+                            <div id='img528' className={`enlargable-image-container ${this.state.enlargedImageId === 'img528' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img528')}>
+                                <img  src='/assets/okta_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of applications and move to Step 7.</p>
+
+                            <div id='img529' className={`enlargable-image-container ${this.state.enlargedImageId === 'img529' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img529')}>
+                                <img  src='/assets/okta_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you haven’t created a SAML application in Okta, select “Create App Integration”.</p>
+
+                            <div id='img530' className={`enlargable-image-container ${this.state.enlargedImageId === 'img530' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img530')}>
+                                <img  src='/assets/okta_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Initial SAML Application Setup</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create New App”, then select “SAML 2.0” as a Sign on method, then click “Next”.</p>
+
+                            <div id='img531' className={`enlargable-image-container ${this.state.enlargedImageId === 'img531' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img531')}>
+                                <img  src='/assets/okta_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a descriptive App name, then click “Next”.</p>
+
+                            <div id='img532' className={`enlargable-image-container ${this.state.enlargedImageId === 'img532' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img532')}>
+                                <img  src='/assets/okta_saml_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the ACS URL from your WorkOS Dashboard as the “Single Sign-On URL” and input the SP Entity ID from your WorkOS Dashboard as the “Audience URI (SP Entity ID)”.</p>
+
+                            <div id='img533' className={`enlargable-image-container ${this.state.enlargedImageId === 'img533' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img533')}>
+                                <img  src='/assets/okta_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down to the “Attribute Statements” section and use the “Add Another” button to add the following key-value pairs.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>user.id</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>user.email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>user.firstName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>user.lastName</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img534' className={`enlargable-image-container ${this.state.enlargedImageId === 'img534' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img534')}>
+                                <img  src='/assets/okta_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down to the Group Attribute Statements configuration. The Name should be set to <span>groups</span>, and you can define a filter to map the necessary Okta groups. To map all groups, filter by matching the regex <span>.*</span>, as shown in the screenshot below. You can preview the SAML Assertion to check that all attributes have been mapped correctly. Then, click “Next”.</p>
+
+                            </div>
+
+                            <div id='img535' className={`enlargable-image-container ${this.state.enlargedImageId === 'img535' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img535')}>
+                                <img  src='/assets/okta_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Submit Application Feedback</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “I’m an Okta customer adding an internal app” from the options menu. Complete the form with any comments and select “Finish”.</p>
+
+                            <div id='img536' className={`enlargable-image-container ${this.state.enlargedImageId === 'img536' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img536')}>
+                                <img  src='/assets/okta_saml_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add Users to SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To give users permission to authenticate via this SAML app, you will need to assign individual users and/or groups of users to the Okta app.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the “Assignments” tab, and select either “Assign to People” or “Assign to Groups”.</p>
+
+                            <div id='img537' className={`enlargable-image-container ${this.state.enlargedImageId === 'img537' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img537')}>
+                                <img  src='/assets/okta_saml_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Find the individual user(s) and/or group(s) that you would like to assign to the app, and click “Assign” next to them. Click “Done” when you are finished.</p>
+
+                            <div id='img538' className={`enlargable-image-container ${this.state.enlargedImageId === 'img538' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img538')}>
+                                <img  src='/assets/okta_saml_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>7</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the “Sign On” tab of the SAML app you just created.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Actions” dropdown for the correct certificate and select “View IdP Metadata.”</p>
+
+                            <div id='img539' className={`enlargable-image-container ${this.state.enlargedImageId === 'img539' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img539')}>
+                                <img  src='/assets/okta_saml_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A separate tab will open. Copy the link in the browser.</p>
+
+                            <div id='img540' className={`enlargable-image-container ${this.state.enlargedImageId === 'img540' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img540')}>
+                                <img  src='/assets/okta_saml_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Back in the WorkOS Dashboard, click on “Edit Metadata Configuration” in the “Identity Provider Configuration” section of the Connection. Input the Metadata URL and click “Save Metadata Configuration”. Your Connection will then be linked and good to go!</p>
+
+                            <div id='img541' className={`enlargable-image-container ${this.state.enlargedImageId === 'img541' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img541')}>
+                                <img  src='/assets/okta_saml_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={oktaScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Okta SCIM</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Okta SCIM.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Okta directories using SCIM.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need to provide the organization with two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An Endpoint that Okta will make requests to.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A Bearer Token for Okta to authenticate its endpoint requests.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After completing step 1 below, both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The rest of the steps below will need to be carried out by the organization when configuring your application in their Okta instance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your Directory Sync endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync with.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”.</p>
+
+                            <div id='img542' className={`enlargable-image-container ${this.state.enlargedImageId === 'img542' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img542')}>
+                                <img  src='/assets/okta_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Okta” from the Directory Provider dropdown and provide the Name for the Directory Sync connection. Then, click “Create Directory”.</p>
+
+                            <div id='img543' className={`enlargable-image-container ${this.state.enlargedImageId === 'img543' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img543')}>
+                                <img  src='/assets/okta_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll see WorkOS has created the Endpoint and Bearer Token which you will provide to Okta in the steps below.</p>
+
+                            <div id='img544' className={`enlargable-image-container ${this.state.enlargedImageId === 'img544' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img544')}>
+                                <img  src='/assets/okta_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>We have support for custom labeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your Okta application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>Okta</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin dashboard, and select “Applications” in the navigation bar.</p>
+
+                            <div id='img545' className={`enlargable-image-container ${this.state.enlargedImageId === 'img545' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img545')}>
+                                <img  src='/assets/okta_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If your application is already created, select it from the list of applications and move to Step 3.</p>
+
+                            <div id='img546' className={`enlargable-image-container ${this.state.enlargedImageId === 'img546' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img546')}>
+                                <img  src='/assets/okta_scim_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you haven’t created a SAML application in Okta, select “Browse App Catalog”.</p>
+
+                            <div id='img547' className={`enlargable-image-container ${this.state.enlargedImageId === 'img547' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img547')}>
+                                <img  src='/assets/okta_scim_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From your Okta Application dashboard, search for “SCIM 2.0 Test App (OAuth Bearer Token)” and select the corresponding result.</p>
+
+                            <div id='img548' className={`enlargable-image-container ${this.state.enlargedImageId === 'img548' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img548')}>
+                                <img  src='/assets/okta_scim_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the following page, click “Add Integration”.</p>
+
+                            <div id='img549' className={`enlargable-image-container ${this.state.enlargedImageId === 'img549' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img549')}>
+                                <img  src='/assets/okta_scim_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter a descriptive App name, then click “Next”.</p>
+
+                            <div id='img550' className={`enlargable-image-container ${this.state.enlargedImageId === 'img550' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img550')}>
+                                <img  src='/assets/okta_scim_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Many applications will work with the default configuration that is set on your new application. If you require any additional configuration for your directory such as configuring Attribute Statements, do so on the Sign-On Options page. Click “Done” to complete creating your application.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure your Okta provisioning API integration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In your application’s Enterprise Okta admin panel, click the “Provisioning” tab. Then, click “Configure API Integration”.</p>
+
+                            <div id='img551' className={`enlargable-image-container ${this.state.enlargedImageId === 'img551' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img551')}>
+                                <img  src='/assets/okta_scim_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Check “Enable API Integration”. After that, copy and paste the Endpoint from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> in the SCIM 2.0 Base URL field.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, copy and paste the Bearer Token from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> into the OAuth Bearer Token field.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Test API Credentials”, and then click “Save”.</p>
+
+                            <div id='img552' className={`enlargable-image-container ${this.state.enlargedImageId === 'img552' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img552')}>
+                                <img  src='/assets/okta_scim_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The provisioning tab will now show a new suite of options which we’ll utilize in the next Guide Section to continue provisioning your application.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select options to provision to your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the “To App” navigation section, check to enable:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create Users</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Update User Attributes</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Deactivate Users</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Save”.</p>
+
+                            <div id='img553' className={`enlargable-image-container ${this.state.enlargedImageId === 'img553' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img553')}>
+                                <img  src='/assets/okta_scim_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assign users and groups to your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To assign users to the SAML Application, navigate to the “Assignments” tab, from the “Assign” dropdown, select “Assign to People”.</p>
+
+                            <div id='img554' className={`enlargable-image-container ${this.state.enlargedImageId === 'img554' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img554')}>
+                                <img  src='/assets/okta_scim_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select users you’d like to provision and select “Assign”.</p>
+
+                            <div id='img555' className={`enlargable-image-container ${this.state.enlargedImageId === 'img555' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img555')}>
+                                <img  src='/assets/okta_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When you click “Assign” a lengthy form will open where you can populate all of the user’s metadata. Confirm the metadata fields, scroll down to the bottom, and press “Save and Go Back”. Repeat this for all users and select “Done”.</p>
+
+                            <div id='img556' className={`enlargable-image-container ${this.state.enlargedImageId === 'img556' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img556')}>
+                                <img  src='/assets/okta_scim_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To push groups in order to sync group membership, navigate to the “Push Groups” tab, from the “Push Groups” dropdown, select: “Find groups by name”.</p>
+
+                            <div style={{marginTop: "5%", backgroundColor: "#fcf5bf"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    {/* <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/> */}
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%", marginLeft: "2.5%", color: "#a17000"}}>We have support for custom labeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info!</p>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 

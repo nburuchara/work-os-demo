@@ -122,6 +122,7 @@ export default class Resources extends Component {
             "NetIQ": "netIQ",
             "NextAuth.js": "nextAuth",
             "Okta SAML": "oktaSaml",
+            "Okta SCIM": "oktaScim",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -317,6 +318,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "NetIQ", "category": "Resources", "subCat1": "Integrations", "page": "NetIQ", "lastCat": "top"},
             {"id": "999995", "name": "NextAuth.js", "category": "Resources", "subCat1": "Integrations", "page": "NextAuth.js", "lastCat": "top"},
             {"id": "999995", "name": "Okta SAML", "category": "Resources", "subCat1": "Integrations", "page": "Okta SAML", "lastCat": "top"},
+            {"id": "999995", "name": "Okta SCIM", "category": "Resources", "subCat1": "Integrations", "page": "Okta SCIM", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
