@@ -15549,6 +15549,37 @@ const codeSnippets = [
       }
     },
 
+    { //* Start Server (120)
+      id: 120,
+      title: "Start Server",
+      code: {
+        javascript: [
+          '$ <span style="color: #5854c6;">npm</span> run dev'
+        ]
+      }
+    },
+
+    { //* pages/login.tsx (121)
+      id: 121,
+      title: "pages/login.tsx",
+      code: {
+        javascript: [
+          '1 <span style="color: grey;">// code above unchanged</span>',
+          '2   ',
+          '3   <span style="color: #148a68;">const</span> <span style="color: #5854c6;">onSubmit</span> <span style="color: #ce3559;">=</span> <span style="color: #148a68;">async</span> ({ team }) <span style="color: #ce3559;">=></span> {',
+          '4     <span style="color: grey;">// TODO: create an endpoint that returns the</span>',
+          '5     <span style="color: grey;">// organizationId from your database</span>',
+          '+     <span style="background-color: #e6f7ed;"><span style="color: #148a68;">const</span> organization <span style="color: #ce3559;">=</span> <span style="color: #143465;">\'ORGANIZATION_ID\'</span>;</span>',
+          '7     <span style="color: #5854c6;">signIn</span>(<span style="color: #143465;">\'workos\'</span>, <span style="color: #148a68;">undefined</span>, {',
+          '8       organization,',
+          '9     });',
+          '10   };',
+          '11 ',
+          '12 <span style="color: grey;">// code below unchanged</span>',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;

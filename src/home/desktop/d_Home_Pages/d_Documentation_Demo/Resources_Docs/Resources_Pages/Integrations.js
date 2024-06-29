@@ -51,6 +51,7 @@ export default class Integrations extends Component {
             miniOrange: false,
             netIQ: false,
             nextAuth: false,
+            oktaSaml: false,
 
 
 
@@ -129,6 +130,7 @@ export default class Integrations extends Component {
             "miniOrange": "miniOrange",
             "netIQ": "netIQ",
             "nextAuth": "nextAuth",
+            "oktaSaml": "oktaSaml",
             
         };
       
@@ -203,6 +205,7 @@ export default class Integrations extends Component {
             "miniOrange": "miniOrange",
             "netIQ": "netIQ",
             "nextAuth": "nextAuth",
+            "oktaSaml": "oktaSaml",
 
         };
         const keys = Object.keys(pageMap);
@@ -257,7 +260,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -7635,6 +7638,91 @@ export default class Integrations extends Component {
                             snippet="pages/login.tsx" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, start the development server by running the following command:</p>
+
+                            <CodeSnippetStruct 
+                            id={120}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Start Server" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The application will be running at <span>http://localhost:3000/login</span> and you’ll be able to see the following page:</p>
+
+                            </div>
+
+                            <div id='img522' className={`enlargable-image-container ${this.state.enlargedImageId === 'img522' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img522')}>
+                                <img  src='/assets/nextauth_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>7</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the Single Sign-On flow</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You should persist The Organization ID in your application’s database and associate it with your enterprise customer. Then when a user tries to log in, you first check if they’re an enterprise customer and then use the <span>signIn()</span> function from NextAuth.js to start the login flow.</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To test the login flow, hardcode the Organization ID in the form submission handler.</p>
+
+                            <CodeSnippetStruct 
+                            id={121}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="pages/login.tsx" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you type anything in the login form and click submit, you’ll be redirected to Okta. You’ll then need to use your IdP login credentials.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After you complete the login process you’ll see the logged-in user’s email and a “Sign out” button.</p>
+
+                            <div id='img523' className={`enlargable-image-container ${this.state.enlargedImageId === 'img523' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img523')}>
+                                <img  src='/assets/nextauth_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’re interested in setting up a different Identity Provider, check out the <label className='demo-docs-hyperlink'>full list of tutorials</label> for setting up an SSO connection.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={oktaSaml}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Okta SAML</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Okta via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create an Okta Connection, you’ll need three pieces of information: an <label className='demo-docs-hyperlink'>ACS URL</label>, an <label className='demo-docs-hyperlink'>SP Entity ID</label>, and an <label className='demo-docs-hyperlink'>IdP Metadata URL</label>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+                            
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’d like to configure an Okta Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
 
                         </div>
                     </div>
