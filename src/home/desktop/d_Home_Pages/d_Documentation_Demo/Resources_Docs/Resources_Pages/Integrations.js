@@ -8182,15 +8182,62 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To push groups in order to sync group membership, navigate to the “Push Groups” tab, from the “Push Groups” dropdown, select: “Find groups by name”.</p>
 
-                            <div style={{marginTop: "5%", backgroundColor: "#fcf5bf"}} className='testing-the-api-info-box'>
+                            <div style={{marginBottom: "5%", backgroundColor: "#fcf5bf"}} className='testing-the-api-info-box'>
                                 <div className='api-info-box-img'>
                                     {/* <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/> */}
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%", marginLeft: "2.5%", color: "#a17000"}}>We have support for custom labeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info!</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%", marginLeft: "2.5%", color: "#a17000"}}>Caution: Okta advises <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>using separate groups for push groups and group assignments</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span>. Otherwise, memberships won't be accurately reflected without manual group pushes for membership changes.</p>
                                 </div>
                             </div>
 
+                            <div id='img557' className={`enlargable-image-container ${this.state.enlargedImageId === 'img557' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img557')}>
+                                <img  src='/assets/okta_scim_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Search for the group you’d like to push and select it. Make sure the box is checked for “Push Immediately” and click “Save”.</p>
+
+                            <div id='img558' className={`enlargable-image-container ${this.state.enlargedImageId === 'img558' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img558')}>
+                                <img  src='/assets/okta_scim_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the WorkOS dashboard, you should now see the users and groups synced over.</p>
+
+                            <div id='img559' className={`enlargable-image-container ${this.state.enlargedImageId === 'img559' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img559')}>
+                                <img  src='/assets/okta_scim_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>When a user is assigned to the SCIM app via a group, I don’t see a user removed webhook if the user is removed from the group – is this expected?</h3>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It is a known issue with Okta SCIM that if a user is assigned to a SCIM app via a group, you won’t see a <span>dsync.group.user_removed</span> event if the user is removed from the group. This is a limitation in Okta, where group memberships are not updated in this case. The user needs to be assigned directly to the SCIM app, and the group needs to be pushed in the SCIM app. If those two conditions are met, Okta will send the correct group membership updates.</p>
+
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>How often do the Okta SCIM 2.0 directories perform a sync?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Okta SCIM 2.0 directory syncs events in real time.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Why is a user suspended in Okta still active in WorkOS?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Suspending a User in Okta will only affect their login and will not alter their status in any connected applications.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Deactivating or Deleting a User in Okta will result in a <span>inactive</span> status in connected applications (i.e., WorkOS).</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>For more details, please refer to Okta’s official documentation <label className='demo-docs-hyperlink'>User Suspension</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> <label className='demo-docs-hyperlink'>User Deactivation and Deletion</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                            
                         </div>
 
                     </div>
