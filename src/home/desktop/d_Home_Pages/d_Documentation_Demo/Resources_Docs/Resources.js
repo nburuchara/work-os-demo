@@ -124,6 +124,7 @@ export default class Resources extends Component {
             "Okta SAML": "oktaSaml",
             "Okta SCIM": "oktaScim",
             "OneLogin SAML": "oneLoginSaml",
+            "OneLogin SCIM": "oneLoginScim",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -321,6 +322,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Okta SAML", "category": "Resources", "subCat1": "Integrations", "page": "Okta SAML", "lastCat": "top"},
             {"id": "999995", "name": "Okta SCIM", "category": "Resources", "subCat1": "Integrations", "page": "Okta SCIM", "lastCat": "top"},
             {"id": "999995", "name": "OneLogin SAML", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SAML", "lastCat": "top"},
+            {"id": "999995", "name": "OneLogin SCIM", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SCIM", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -972,7 +974,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/onelogin_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('OneLogin SCIM')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>OneLogin SCIM</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn about syncing your user list with OneLogin SCIM.</p>

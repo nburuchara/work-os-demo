@@ -135,6 +135,7 @@ export default class Integrations extends Component {
             "oktaSaml": "oktaSaml",
             "oktaScim": "oktaScim",
             "oneLoginSaml": "oneLoginSaml",
+            "oneLoginScim": "oneLoginScim",
             
         };
       
@@ -212,6 +213,7 @@ export default class Integrations extends Component {
             "oktaSaml": "oktaSaml",
             "oktaScim": "oktaScim",
             "oneLoginSaml": "oneLoginSaml",
+            "oneLoginScim": "oneLoginScim",
 
         };
         const keys = Object.keys(pageMap);
@@ -266,7 +268,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -8267,8 +8269,243 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click on the organization you’d like to configure a OneLogin SAML connection for and select “Manually Configure Connection”.</p>
 
-                        </div>
+                            <div id='img560' className={`enlargable-image-container ${this.state.enlargedImageId === 'img560' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img560')}>
+                                <img  src='/assets/one_login_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “OneLogin SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img561' className={`enlargable-image-container ${this.state.enlargedImageId === 'img561' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img561')}>
+                                <img  src='/assets/one_login_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label> and <label className='demo-docs-hyperlink'>SP Entity ID</label>. They are readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In OneLogin’s case, it needs to be set by the organization when configuring your application in their OneLogin instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request and the audience of a SAML response. In this case, the SP Entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s OneLogin instance, and that WorkOS is the intended audience of the SAML responses from the OneLogin instance.</p>
+
+                            <div id='img562' className={`enlargable-image-container ${this.state.enlargedImageId === 'img562' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img562')}>
+                                <img  src='/assets/one_login_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, provide the <label className='demo-docs-hyperlink'>OneLogin SAML Metadata file</label>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their OneLogin admin dashboard. But, should that not be the case during your setup, the next steps will show you how to obtain it.</p>
+
+                            <div id='img563' className={`enlargable-image-container ${this.state.enlargedImageId === 'img563' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img563')}>
+                                <img  src='/assets/one_login_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log in</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to <label className='demo-docs-hyperlink'>OneLogin</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>, go to the admin dashboard, and select “Applications” in the navigation bar.</p>
+
+                            <div id='img564' className={`enlargable-image-container ${this.state.enlargedImageId === 'img564' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img564')}>
+                                <img  src='/assets/one_login_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your application from the list of applications.</p>
+
+                            <div id='img565' className={`enlargable-image-container ${this.state.enlargedImageId === 'img565' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img565')}>
+                                <img  src='/assets/one_login_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Configuration” from the left-hand navigation:</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the SP Entity ID as the Audience (EntityID) e.g. <span>https://auth.workos.com/wz5SpShhRIcSEyMM</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter the ACS URL as the Recipient e.g. <span>https://auth.workos.com/sso/saml/acs/wz5SpShhRIcSEyMM</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter your ACS URL Validator e.g. <span>^https:\/\/auth\.workos\.com\/sso\/saml\/acs\/wz5SpShhRIcSEyMM$</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter your ACS URL e.g. <span>https://auth.workos.com/sso/saml/acs/wz5SpShhRIcSEyMM</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter your application’s login URL</p></li>
+                                </ul>
+
+                            </div>
+
+                            <div id='img566' className={`enlargable-image-container ${this.state.enlargedImageId === 'img566' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img566')}>
+                                <img  src='/assets/one_login_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Service Provider” from the “SAML Initiator” dropdown menu</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Assertion” from the “SAML Signature Element” dropdown menu</p></li>
+                            </ul>
+
+                            <div id='img567' className={`enlargable-image-container ${this.state.enlargedImageId === 'img567' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img567')}>
+                                <img  src='/assets/one_login_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up attribute mapping parameters</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Parameters” from the left-hand navigation and add the following field-value parameter pairs:</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>Email</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>First Name</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>UUID</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>Last Name</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Check the “Include in SAML assertion” flag for each pair.</p>
+
+                            <div id='img568' className={`enlargable-image-container ${this.state.enlargedImageId === 'img568' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img568')}>
+                                <img  src='/assets/one_login_saml_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add a new parameter, and set the “Field name” to <span>groups</span>. Under “Flags”, click the checkboxes for both “Include in SAML assertion” and “Multi-value parameter”.</p>
+
+                            </div>
+
+                            <div id='img569' className={`enlargable-image-container ${this.state.enlargedImageId === 'img569' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img569')}>
+                                <img  src='/assets/one_login_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Map the <span>groups</span> field to the attribute in OneLogin containing a user’s group membership, such as “MemberOf”, shown in the example below. For more information on sending group information, refer to the <label className='demo-docs-hyperlink'>OneLogin documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            </div>
+
+                            <div id='img570' className={`enlargable-image-container ${this.state.enlargedImageId === 'img570' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img570')}>
+                                <img  src='/assets/one_login_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata File</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “SSO” from the left-hand navigation.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “More Actions” dropdown and click on “SAML Metadata”. This will download an XML metadata file.</p>
+
+                            <div id='img571' className={`enlargable-image-container ${this.state.enlargedImageId === 'img571' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img571')}>
+                                <img  src='/assets/one_login_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Connection Settings of the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
+
+                            <div id='img572' className={`enlargable-image-container ${this.state.enlargedImageId === 'img572' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img572')}>
+                                <img  src='/assets/one_login_saml_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the modal that pops up, upload the OneLogin Metadata file and then select “Save Metadata Configuration”.</p>
+
+                            <div id='img573' className={`enlargable-image-container ${this.state.enlargedImageId === 'img573' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img573')}>
+                                <img  src='/assets/one_login_saml_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once the file has uploaded, your Connection will then be linked and good to go!</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={oneLoginScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>OneLogin SCIM</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with OneLogin SCIM.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s OneLogin directories using SCIM.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need to provide the organization with two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className='demo-docs-hyperlink'>Endpoint</label> that OneLogin will make requests to.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for OneLogin to authenticate its endpoint requests.</p></li>
+                            </ul>
+
+                        </div>
                     </div>
                 </CSSTransition>
 
