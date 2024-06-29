@@ -120,6 +120,7 @@ export default class Resources extends Component {
             "Microsoft OAuth": "microsoftOAuth",
             "miniOrange": "miniOrange",
             "NetIQ": "netIQ",
+            "NextAuth.js": "nextAuth",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -313,6 +314,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Microsoft OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft OAuth", "lastCat": "top"},
             {"id": "999995", "name": "miniOrange", "category": "Resources", "subCat1": "Integrations", "page": "miniOrange", "lastCat": "top"},
             {"id": "999995", "name": "NetIQ", "category": "Resources", "subCat1": "Integrations", "page": "NetIQ", "lastCat": "top"},
+            {"id": "999995", "name": "NextAuth.js", "category": "Resources", "subCat1": "Integrations", "page": "NextAuth.js", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -911,7 +913,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/netiq_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('NextAuth.js')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>NextAuth.js</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Create a Next.js application with WorkOS SSO and NextAuth.js.</p>

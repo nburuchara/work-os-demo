@@ -15219,7 +15219,8 @@ const codeSnippets = [
       }
     },
 
-    {
+    
+    { //* IAM Policy
       id: 109,
       title: "IAM Policy",
       code: {
@@ -15239,7 +15240,7 @@ const codeSnippets = [
       }
     },
 
-    {
+    { //* Cognito callback URI
       id: 110,
       title: "Cognito callback URI",
       code: {
@@ -15249,7 +15250,7 @@ const codeSnippets = [
       }
     },
 
-    {
+    { //* Certificate format
       id: 111,
       title: "Certificate format",
       code: {
@@ -15261,7 +15262,7 @@ const codeSnippets = [
       }
     },
 
-    {
+    { //* Completed Certificate Format
       id: 112,
       title: "Completed Certificate Format",
       code: {
@@ -15290,7 +15291,7 @@ const codeSnippets = [
       }
     },
 
-    {
+    { //* Update Firebase Profile
       id: 113,
       title: "Update Firebase Profile",
       code: {
@@ -15351,6 +15352,199 @@ const codeSnippets = [
           '54     });',
           '55   &lt/<span style="color: #0072dd;">script</span>&gt',
           '56 &lt/<span style="color: #0072dd;">html</span>&gt',
+        ]
+      }
+    },
+
+    { //* Clone the Sample App
+      id: 114,
+      title: "Clone the Sample App",
+      code: {
+        javascript: [
+          '$ <span style="color: #5854c6;">git</span> clone -b start-branch https://github.com/workos-inc/workos-next-auth',
+        ]
+      }
+    },
+
+    { //* Install the Dependencies (115)
+      id: 115,
+      title: "Install the Dependencies",
+      code: {
+        javascript: [
+          '$ <span style="color: #5854c6;">npm install</span>',
+        ]
+      }
+    },
+
+    { //* .env (116)
+      id: 116,
+      title: ".env",
+      code: {
+        javascript: [
+          '$ WORKOS_API_KEY<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>\'',
+          '> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\''
+        ]
+      }
+    },
+
+    { //* pages/api/auth/[...nextAuth].ts (117)
+      id: 117,
+      title: "pages/api/auth/[...nextAuth].ts",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">NextAuth</span> <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next-auth\'</span>;',
+          '2 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">WorkOSProvider</span> <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next-auth/providers/workos\'</span>;',
+          '3 ',
+          '4 <span style="color: #148a68;">export default</span> <span style="color: #5854c6;">NextAuth</span>({',
+          '5   providers<span style="color: #ce3559;">:</span> [',
+          '6     <span style="color: #5854c6;">WorkOSProvider</span>({',
+          '7       clientId<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_CLIENT_ID</span>,',
+          '8       clientSecret<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">WORKOS_API_KEY</span>,',
+          '9       client<span style="color: #ce3559;">:</span> {',
+          '10         token_endpoint_auth_method<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'client_secret_post\'</span>,',
+          '11       },',
+          '12     }),',
+          '13   ],',
+          '14   pages<span style="color: #ce3559;">:</span> {',
+          '15     signIn<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'/login\'</span>,',
+          '16   },',
+          '17   debug<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '18   secret<span style="color: #ce3559;">:</span> process.env.<span style="color: #0072dd;">SECRET</span>,',
+          '19 });',
+          
+        ]
+      }
+    },
+
+    { //* pages/_app.tsx (118)
+      id: 118,
+      title: "pages/_app.tsx",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #143465;">\'../styles/index.css\'</span>; ',
+          '2 <span style="color: #148a68;">import</span> type { <span style="color: #5854c6;">AppProps</span> } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next/app\'</span>;',
+          '3 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">SessionProvider</span> } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next-auth/react\'</span>;',
+          '4 ',
+          '5 <span style="color: #148a68;">export default</span> function <span style="color: #5854c6;">App</span>({',
+          '6   <span style="color: #5854c6;">Component</span>,',
+          '7   pageProps<span style="color: #ce3559;">:</span> { session, <span style="color: #ce3559;">...</span>pageProps },',
+          '8 }<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">AppProps</span>) {',
+          '9   <span style="color: #148a68;">return</span> (',
+          '10     <span style="color: #ce3559;">&lt</span><span style="color: #5854c6;">SessionProvider</span> session<span style="color: #ce3559;">=</span>{session}<span style="color: #ce3559;">&gt</span>',
+          '11       <span style="color: #ce3559;">&lt</span><span style="color: #5854c6;">Component</span> {<span style="color: #ce3559;">...</span>pageProps} <span style="color: #ce3559;">/&gt</span>',
+          '12     <span style="color: #ce3559;">&lt/</span><span style="color: #5854c6;">SessionProvider</span><span style="color: #ce3559;">&gt</span>',
+          '13   );',
+          '14 }',
+        ]
+      }
+    },
+
+    { //* pages/_app.tsx (119)
+      id: 119,
+      title: "pages/login.tsx",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">React</span> <span style="color: #148a68;">from</span> <span style="color: #143465;">\'react\'</span>;',
+          '2 <span style="color: #148a68;">import</span> { useForm } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'react-hook-form\'</span>;',
+          '3 <span style="color: #148a68;">import</span> <span style="color: #5854c6;">Head</span> <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next/head\'</span>;',
+          '4 <span style="color: #148a68;">import</span> { signIn, signOut, useSession } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'next-auth/react\'</span>;',
+          '5 ',
+          '6 <span style="color: #148a68;">const</span> <span style="color: #5854c6;">Login</span> <span style="color: #ce3559;">=</span> () <span style="color: #ce3559;">=></span> {',
+          '7   <span style="color: #148a68;">const</span> {',
+          '8     register,',
+          '9     handleSubmit,',
+          '10     formState<span style="color: #ce3559;">:</span> { errors },',
+          '11   } <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">useForm</span>();',
+          '12 ',
+          '13   <span style="color: #148a68;">const</span> { data<span style="color: #ce3559;">:</span> session } <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">useSession</span>();',
+          '14 ',
+          '15   <span style="color: #148a68;">const</span> <span style="color: #5854c6;">onSubmit</span> <span style="color: #ce3559;">=</span> <span style="color: #148a68;">async</span> ({ team }) <span style="color: #ce3559;">=></span> {',
+          '16     <span style="color: grey;">// TODO: send a request to the get-organization endpoint and return the</span>,',
+          '17     <span style="color: grey;">// organizationId from your database</span>',
+          '18     <span style="color: #148a68;">const</span> organization <span style="color: #ce3559;">=</span> <span style="color: #143465;">\'ORGANIZATION_ID\'</span>;',
+          '19     <span style="color: #5854c6;">signIn</span>(<span style="color: #143465;">\'workos\'</span>, <span style="color: #148a68;">undefined</span>, {',
+          '20       organization,',
+          '21     });',
+          '22   };',
+          '23 ',
+          '24   <span style="color: #148a68;">return</span> (',
+          '25     <span style="color: #ce3559;"><></span>',
+          '26       <span style="color: #ce3559;">&lt</span><span style="color: #5854c6;">Head</span><span style="color: #ce3559;">&gt</span>',
+          '27         <span style="color: #ce3559;">&lt</span>title<span style="color: #ce3559;">&gt</span><span style="color: #5854c6;">Next Enterprise</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">Login</span><span style="color: #ce3559;">&lt/</span>title<span style="color: #ce3559;">&gt</span>',
+          '28         <span style="color: #ce3559;">&lt</span>meta name<span style="color: #ce3559;">=</span><span style="color: #143465;">"description"</span> content<span style="color: #ce3559;">=</span><span style="color: #143465;">"Generated by create next app"</span> <span style="color: #ce3559;">/&gt</span>',
+          '29         <span style="color: #ce3559;">&lt</span>link rel<span style="color: #ce3559;">=</span><span style="color: #143465;">"icon"</span> href<span style="color: #ce3559;">=</span><span style="color: #143465;">"/favicon.ico"</span> <span style="color: #ce3559;">/&gt</span>',
+          '30       <span style="color: #ce3559;">&lt/</span><span style="color: #5854c6;">Head</span><span style="color: #ce3559;">&gt</span>',
+          '31       {session <span style="color: #ce3559;">&&</span> (',
+          '32         <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"py-32 flex flex-col items-center justify-center px-8"</span><span style="color: #ce3559;">&gt</span>',
+          '33           <span style="color: #ce3559;">&lt</span>p<span style="color: #ce3559;">&gt</span><span style="color: #5854c6;">Signed</span> <span style="color: #148a68;">in as</span> {session.user.email}<span style="color: #ce3559;">&lt/</span>p<span style="color: #ce3559;">&gt</span>',
+          '34           <span style="color: #ce3559;">&lt</span>br <span style="color: #ce3559;">/&gt</span>',
+          '35           <span style="color: #ce3559;">&lt</span>button',
+          '36             onClick<span style="color: #ce3559;">=</span>{() <span style="color: #ce3559;">=></span> <span style="color: #5854c6;">signOut</span>()}',
+          '37             className<span style="color: #ce3559;">=</span><span style="color: #143465;">"max-w-sm flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"</span>',
+          '38           <span style="color: #ce3559;">&gt</span>',
+          '39             <span style="color: #5854c6;">Sign</span> out',
+          '40           <span style="color: #ce3559;">&lt</span>button<span style="color: #ce3559;">/&gt</span>',
+          '41         <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '42       )}',
+          '43       {<span style="color: #ce3559;">!</span>session <span style="color: #ce3559;">&&</span> (',
+          '44         <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"py-32 flex flex-col items-center justify-center px-8"</span><span style="color: #ce3559;">&gt</span>',
+          '45           <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"sm:mx-auto sm:w-full sm:max-w-md"</span><span style="color: #ce3559;">&gt</span>',
+          '46             <span style="color: #ce3559;">&lt</span>svg',
+          '47               className<span style="color: #ce3559;">=</span><span style="color: #143465;">"mx-auto h-12 w-auto"</span>',
+          '48               xmlns<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://www.w3.org/2000/svg"</span>',
+          '49               fill<span style="color: #ce3559;">=</span><span style="color: #143465;">"none"</span>',
+          '50               viewBox<span style="color: #ce3559;">=</span><span style="color: #143465;">"0 0 35 32"</span>',
+          '51             <span style="color: #ce3559;">&gt</span>',
+          '52               <span style="color: #ce3559;">&lt</span>path',
+          '53                 fill<span style="color: #ce3559;">=</span><span style="color: #143465;">"#2563eb"</span>',
+          '54                 d<span style="color: #ce3559;">=</span><span style="color: #143465;">"M15.258 26.865a4.043 4.043 0 01-1.133 2.917A4.006 4.006 0 0111.253 31a3.992 3.992 0 01-2.872-1.218 4.028 4.028 0 01-1.133-2.917c.009-.698.2-1.382.557-1.981.356-.6.863-1.094 1.47-1.433-.024.109.09-.055 0 0l1.86-1.652a8.495 8.495 0 002.304-5.793c0-2.926-1.711-5.901-4.17-7.457.094.055-.036-.094 0 0A3.952 3.952 0 017.8 7.116a3.975 3.975 0 01-.557-1.98 4.042 4.042 0 011.133-2.918A4.006 4.006 0 0111.247 1a3.99 3.99 0 012.872 1.218 4.025 4.025 0 011.133 2.917 8.521 8.521 0 002.347 5.832l.817.8c.326.285.668.551 1.024.798.621.33 1.142.826 1.504 1.431a3.902 3.902 0 01-1.504 5.442c.033-.067-.063.036 0 0a8.968 8.968 0 00-3.024 3.183 9.016 9.016 0 00-1.158 4.244zM19.741 5.123c0 .796.235 1.575.676 2.237a4.01 4.01 0 001.798 1.482 3.99 3.99 0 004.366-.873 4.042 4.042 0 00.869-4.386 4.02 4.02 0 00-1.476-1.806 3.994 3.994 0 00-5.058.501 4.038 4.038 0 00-1.175 2.845zM23.748 22.84c-.792 0-1.567.236-2.226.678a4.021 4.021 0 00-1.476 1.806 4.042 4.042 0 00.869 4.387 3.99 3.99 0 004.366.873A4.01 4.01 0 0027.08 29.1a4.039 4.039 0 00-.5-5.082 4 4 0 00-2.832-1.18zM34 15.994c0-.796-.235-1.574-.675-2.236a4.01 4.01 0 00-1.798-1.483 3.99 3.99 0 00-4.367.873 4.042 4.042 0 00-.869 4.387 4.02 4.02 0 001.476 1.806 3.993 3.993 0 002.226.678 4.003 4.003 0 002.832-1.18A4.04 4.04 0 0034 15.993z M5.007 11.969c-.793 0-1.567.236-2.226.678a4.021 4.021 0 00-1.476 1.807 4.042 4.042 0 00.869 4.386 4.001 4.001 0 004.366.873 4.011 4.011 0 001.798-1.483 4.038 4.038 0 00-.5-5.08 4.004 4.004 0 00-2.831-1.181z"</span>',
+          '55               <span style="color: #ce3559;">/&gt</span>',
+          '56             <span style="color: #ce3559;">&lt/</span>svg<span style="color: #ce3559;">&gt</span>',
+          '57             <span style="color: #ce3559;">&lt</span>h2 className<span style="color: #ce3559;">=</span><span style="color: #143465;">"mt-6 text-center text-3xl font-extrabold text-gray-900"</span><span style="color: #ce3559;">&gt</span>',
+          '58               <span style="color: #5854c6;">Continue</span> using enterprise SSO',
+          '59             <span style="color: #ce3559;">&lt/</span>h2<span style="color: #ce3559;">&gt</span>',
+          '60           <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '61 ',
+          '62           <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"mt-8 sm:mx-auto w-full max-w-sm"</span><span style="color: #ce3559;">&gt</span>',
+          '63             <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"</span><span style="color: #ce3559;">&gt</span>',
+          '64               <span style="color: #ce3559;">&lt</span>form className<span style="color: #ce3559;">=</span><span style="color: #143465;">"space-y-6"</span> onSubmit<span style="color: #ce3559;">=</span>{<span style="color: #5854c6;">handleSubmit</span>(onSubmit)}<span style="color: #ce3559;">&gt</span>',
+          '65                 <span style="color: #ce3559;">&lt</span>div<span style="color: #ce3559;">&gt</span>',
+          '66                   <span style="color: #ce3559;">&lt</span>label',
+          '67                     htmlFor<span style="color: #ce3559;">=</span><span style="color: #143465;">"team"</span>',
+          '68                     className<span style="color: #ce3559;">=</span><span style="color: #143465;">"block text-sm font-medium text-gray-700"</span>',
+          '69                   <span style="color: #ce3559;">&gt</span>',
+          '70                     <span style="color: #5854c6;">Team</span> name',
+          '71                   <span style="color: #ce3559;">&lt/</span>label<span style="color: #ce3559;">&gt</span>',
+          '72                   <span style="color: #ce3559;">&lt</span>div className<span style="color: #ce3559;">=</span><span style="color: #143465;">"mt-1"</span><span style="color: #ce3559;">&gt</span>',
+          '73                     <span style="color: #ce3559;">&lt</span>input',
+          '74                       {<span style="color: #ce3559;">...</span><span style="color: #5854c6;">register</span>(<span style="color: #143465;">\'team\'</span>, { required<span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span> })}',
+          '75                       id<span style="color: #ce3559;">=</span><span style="color: #143465;">"team"</span>',
+          '76                       name<span style="color: #ce3559;">=</span><span style="color: #143465;">"team"</span>',
+          '77                       type<span style="color: #ce3559;">=</span><span style="color: #143465;">"text"</span>',
+          '78                       placeholder<span style="color: #ce3559;">=</span><span style="color: #143465;">"team name"</span>',
+          '79                       className<span style="color: #ce3559;">=</span><span style="color: #143465;">"appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"</span>',
+          '80                     <span style="color: #ce3559;">/&gt</span>',
+          '81                   <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '82                 <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '83 ',
+          '84                 <span style="color: #ce3559;">&lt</span>div<span style="color: #ce3559;">&gt</span>',
+          '85                   <span style="color: #ce3559;">&lt</span>button',
+          '86                     type<span style="color: #ce3559;">=</span><span style="color: #143465;">"submit"</span>',
+          '87                     className<span style="color: #ce3559;">=</span><span style="color: #143465;">"w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"</span>',
+          '88                   <span style="color: #ce3559;">&gt</span>',
+          '89                     <span style="color: #5854c6;">Sign</span> <span style="color: #148a68;">in</span>',
+          '90                   <span style="color: #ce3559;">&lt/</span>button<span style="color: #ce3559;">&gt</span>',
+          '91                 <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '92               <span style="color: #ce3559;">&lt/</span>form<span style="color: #ce3559;">></span>',
+          '93             <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '94           <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '95         <span style="color: #ce3559;">&lt/</span>div<span style="color: #ce3559;">&gt</span>',
+          '96       )}',
+          '97     <span style="color: #ce3559;">&lt/&gt</span>',
+          '98   );',
+          '99 };',
+          '100 ',
+          '101 <span style="color: #148a68;">export default</span> <span style="color: #5854c6;">Login</span>;',
         ]
       }
     },

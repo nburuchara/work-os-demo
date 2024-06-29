@@ -50,6 +50,7 @@ export default class Integrations extends Component {
             microsoftSaml: false,
             miniOrange: false,
             netIQ: false,
+            nextAuth: false,
 
 
 
@@ -127,6 +128,7 @@ export default class Integrations extends Component {
             "microsoftOAuth": "microsoftOAuth",
             "miniOrange": "miniOrange",
             "netIQ": "netIQ",
+            "nextAuth": "nextAuth",
             
         };
       
@@ -200,6 +202,7 @@ export default class Integrations extends Component {
             "microsoftOAuth": "microsoftOAuth",
             "miniOrange": "miniOrange",
             "netIQ": "netIQ",
+            "nextAuth": "nextAuth",
 
         };
         const keys = Object.keys(pageMap);
@@ -254,7 +257,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -7433,6 +7436,205 @@ export default class Integrations extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Map the groups in your identity provider to a SAML attribute named <span>groups</span> to return this information in the attribute statement.</p>
 
                             </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={nextAuth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>NextAuth.js</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Create a Next.js application with WorkOS SSO and NextAuth.js.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this guide, you’ll learn how to use WorkOS to add Single Sign-On (SSO) to a Next.js app that uses <label className='demo-docs-hyperlink'>NextAuth.js</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for handling authentication. You can check out the <label className='demo-docs-hyperlink'>complete source code</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> of this guide on GitHub.</p>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To get the most out of this guide, you’ll need:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS Account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An IdP (e.g. Okta) account</p></li>
+                            </ul>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Install sample application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In your a terminal, browse to the directory of your choice and run the following command to clone the starter project:</p>
+
+                            <CodeSnippetStruct 
+                            id={114}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Clone the Sample App" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>And install the dependencies</p>
+
+                            <CodeSnippetStruct 
+                            id={115}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Install the Dependencies" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This is a basic Next.js app built using TypeScript and styled using TailwindCSS.</p>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuring the environment variables</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the project’s root folder, rename the <span>.env.example</span> file to <span>.env</span>. You can find down below the values for the WorkOS client ID and API key.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={116}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet=".env" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>As a best practice, your WorkOS API key should be kept secret and set as an environment variable on process start. The SDK is able to read the key automatically if you store it in an environment variable named <span>WORKOS_API_KEY</span>; otherwise, you will need to set it manually. The <label className='demo-docs-hyperlink'>Client ID</label> should also be set dynamically based on the release environment.</p>
+
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuring the environment variables</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The first step is to create an organization, which can be done using the dashboard or <label className='demo-docs-hyperlink'>via the API</label>. By default, WorkOS creates a demo organization called “foo-corp.com” which you can use for testing purposes.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Take note of the “Organization ID” which can be found in the organization’s detailed view. You’re going to need it to make SSO work.</p>
+
+                            <div id='img520' className={`enlargable-image-container ${this.state.enlargedImageId === 'img520' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img520')}>
+                                <img  src='/assets/nextauth_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure redirect URIs</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the “Configuration” tab in the dashboard, add <span>http://localhost:3000/api/auth/callback/workos</span> to the list of redirect URIs to test the SSO login flow locally. You’ll also need to add the domain of your application when deploying to production.</p>
+
+                            </div>
+
+                            <div id='img521' className={`enlargable-image-container ${this.state.enlargedImageId === 'img521' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img521')}>
+                                <img  src='/assets/nextauth_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an API endpoint</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The next step is to create a <span>pages/api/auth/[...nextauth].ts</span> file which will contain all of your NextAuth.js configurations:</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={117}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="pages/api/auth/[...nextAuth].ts" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’re first configuring WorkOS by passing the necessary options to the <span>WorkOSProvider()</span> function. You’re then defining a custom login page using the pages option which will be located at <span>/login</span>.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You then need to wrap the global <span>App</span> component with <span>SessionProvider</span> from <span>NextAuth.js</span>. Add the following code to the <span>pages/_app.tsx</span> file:</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={118}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="pages/_app.tsx" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create an API endpoint</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In this step, you’ll create a custom login page. To do that, create a new file located at <span>pages/login.tsx</span> and add the following code to it:</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={119}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="pages/login.tsx" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
 
                         </div>
                     </div>

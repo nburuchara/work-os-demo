@@ -46,6 +46,7 @@ const results = [
     {"id": "999995", "name": "Microsoft OAuth", "category": "Resources", "subCat1": "Integrations", "page": "Microsoft OAuth", "lastCat": "top"},
     {"id": "999995", "name": "miniOrange", "category": "Resources", "subCat1": "Integrations", "page": "miniOrange", "lastCat": "top"},
     {"id": "999995", "name": "NetIQ", "category": "Resources", "subCat1": "Integrations", "page": "NetIQ", "lastCat": "top"},
+    {"id": "999995", "name": "NextAuth.js", "category": "Resources", "subCat1": "Integrations", "page": "NextAuth.js", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
