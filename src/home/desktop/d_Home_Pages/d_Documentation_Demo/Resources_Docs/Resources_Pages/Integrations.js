@@ -8445,7 +8445,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -8505,7 +8505,235 @@ export default class Integrations extends Component {
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for OneLogin to authenticate its endpoint requests.</p></li>
                             </ul>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Steps 2, 3, and 4 below will need to be carried out by the organization when configuring your application in their OneLogin instance.</p>
+                                </div>
+                            </div>
+
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your directory sync endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Organization you’ll be configuring a new Directory Sync for.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”.</p>
+
+                            <div id='img574' className={`enlargable-image-container ${this.state.enlargedImageId === 'img574' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img574')}>
+                                <img  src='/assets/one_login_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “OneLogin” from the dropdown and enter the organization name.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, click “Create Directory.”</p>
+
+                            <div id='img575' className={`enlargable-image-container ${this.state.enlargedImageId === 'img575' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img575')}>
+                                <img  src='/assets/one_login_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your OneLogin directory sync has now been created successfully with an Endpoint and Bearer Token.</p>
+
+                            <div id='img576' className={`enlargable-image-container ${this.state.enlargedImageId === 'img576' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img576')}>
+                                <img  src='/assets/one_login_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your OneLogin application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the OneLogin admin dashboard, select the “Applications” tab at the top. If the application has already been created, select it and move to step 3. Otherwise, select “Add App”.</p>
+
+                            <div id='img577' className={`enlargable-image-container ${this.state.enlargedImageId === 'img577' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img577')}>
+                                <img  src='/assets/one_login_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Search for “SCIM” in the text field and select the Application with type “SCIM Provisioner with SAML (SCIM V2 Enterprise)”.</p>
+
+                            <div id='img578' className={`enlargable-image-container ${this.state.enlargedImageId === 'img578' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img578')}>
+                                <img  src='/assets/one_login_scim_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give your Application a descriptive Display Name and hit “Save”.</p>
+
+                            <div id='img579' className={`enlargable-image-container ${this.state.enlargedImageId === 'img579' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img579')}>
+                                <img  src='/assets/one_login_scim_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure your integration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Within the SCIM Application, select the “Configuration” tab on the left.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy and paste the Endpoint from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> into the “SCIM Base URL” field.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, copy and paste the Bearer Token from your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> into the “SCIM Bearer Token” field.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Hit “Enable” under “API Status” and then hit “Save”.</p>
+
+                            <div id='img580' className={`enlargable-image-container ${this.state.enlargedImageId === 'img580' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img580')}>
+                                <img  src='/assets/one_login_scim_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Provisioning” tab on the left. Check the “Enable provisioning” box and hit “Save”.</p>
+
+                            <div id='img581' className={`enlargable-image-container ${this.state.enlargedImageId === 'img581' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img581')}>
+                                <img  src='/assets/one_login_scim_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Parameters” tab on the left. Then select “Groups”.</p>
+
+                            <div id='img582' className={`enlargable-image-container ${this.state.enlargedImageId === 'img582' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img582')}>
+                                <img  src='/assets/one_login_scim_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the modal that pops up, check the box next to “Include in User Provisioning” and hit “Save”.</p>
+
+                            <div id='img583' className={`enlargable-image-container ${this.state.enlargedImageId === 'img583' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img583')}>
+                                <img  src='/assets/one_login_scim_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assign users and groups to your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order for your users and groups to be synced, you will need to assign them to your OneLogin Application. Select “Users” from the top navigation menu.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, find a user you’d like to provision to the SCIM app. Within that user profile, select the “Applications” tab on the left. Then, click the “+” symbol.</p>
+
+                            <div id='img584' className={`enlargable-image-container ${this.state.enlargedImageId === 'img584' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img584')}>
+                                <img  src='/assets/one_login_scim_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the appropriate app and hit “Continue”.</p>
+
+                            <div id='img585' className={`enlargable-image-container ${this.state.enlargedImageId === 'img585' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img585')}>
+                                <img  src='/assets/one_login_scim_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Save” in the next modal to confirm the change.</p>
+
+                            <div id='img586' className={`enlargable-image-container ${this.state.enlargedImageId === 'img586' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img586')}>
+                                <img  src='/assets/one_login_scim_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>There are many ways to provision groups in OneLogin. Below is one method that we recommend, but other methods can be used.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the top navigation, Select “Users” and then “Roles” from the dropdown. Select “New Role”.</p>
+
+                            <div id='img587' className={`enlargable-image-container ${this.state.enlargedImageId === 'img587' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img587')}>
+                                <img  src='/assets/one_login_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the Role a name (this will be the name of the group), select the appropriate SCIM application, and hit “Save”.</p>
+
+                            <div id='img588' className={`enlargable-image-container ${this.state.enlargedImageId === 'img588' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img588')}>
+                                <img  src='/assets/one_login_scim_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Users” tab for the role. Search for any users you’d like to assign to that role and hit “Add To Role”. Then hit “Save”.</p>
+
+                            <div id='img589' className={`enlargable-image-container ${this.state.enlargedImageId === 'img589' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img589')}>
+                                <img  src='/assets/one_login_scim_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Save” in the next modal to confirm.</p>
+
+                            <div id='img590' className={`enlargable-image-container ${this.state.enlargedImageId === 'img590' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img590')}>
+                                <img  src='/assets/one_login_scim_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate back to your SCIM app and click on the “Rules” tab on the left. Then, hit “Add Rule”.</p>
+
+                            <div id='img591' className={`enlargable-image-container ${this.state.enlargedImageId === 'img591' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img591')}>
+                                <img  src='/assets/one_login_scim_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give your Rule a name. Under “Actions”, select “Set Groups in your-app-name”. Then, set it to “For each role with value that matches your-role-name”. Hit “Save”.</p>
+
+                            <div id='img592' className={`enlargable-image-container ${this.state.enlargedImageId === 'img592' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img592')}>
+                                <img  src='/assets/one_login_scim_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Within your SCIM app under the “Users” tab, you may then need to click on any “Pending” notifications to confirm the update for users.</p>
+
+                            <div id='img593' className={`enlargable-image-container ${this.state.enlargedImageId === 'img593' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img593')}>
+                                <img  src='/assets/one_login_scim_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Begin provisioning users and groups and witness realtime changes in your <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img594' className={`enlargable-image-container ${this.state.enlargedImageId === 'img594' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img594')}>
+                                <img  src='/assets/one_login_scim_img21.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <div className='api-keys'>
+
+                                <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>When a group is removed, I don’t see a <span style={{fontWeight: "bold", fontFamily: "inconsolata"}}>dsync.group.deleted</span> or <span style={{fontWeight: "bold", fontFamily: "inconsolata"}}>dsync.group.user_removed</span> events – is this expected?</h3>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>It is a known issue with OneLogin SCIM that when a group is removed from the application, any user that is only provisioned through that group will be “inactive” but otherwise no indication is received that the group has changed.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The users of the group must be cleaned up before the group itself is removed from the SCIM application.</p>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
 
