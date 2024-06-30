@@ -60,8 +60,8 @@ export default class Integrations extends Component {
             pingFedScim: false,
             pingOneSaml: false,
             reactNative: false,
-
-
+            ripplingSaml: false,
+            ripplingScim: false,
 
             prevSelectedPage: "",
 
@@ -147,6 +147,8 @@ export default class Integrations extends Component {
             "pingFedScim": "pingFedScim",
             "pingOneSaml": "pingOneSaml",
             "reactNative": "reactNative",
+            "ripplingSaml": "ripplingSaml",
+            "ripplingScim": "ripplingScim",
             
         };
       
@@ -230,6 +232,8 @@ export default class Integrations extends Component {
             "pingFedScim": "pingFedScim",
             "pingOneSaml": "pingOneSaml",
             "reactNative": "reactNative",
+            "ripplingSaml": "ripplingSaml",
+            "ripplingScim": "ripplingScim",
 
         };
         const keys = Object.keys(pageMap);
@@ -284,7 +288,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -9652,8 +9656,323 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To test the React Native Expo flow for yourself, head over to the GitHub repository of our example React Native Expo application and give it a whirl for yourself!</p>
 
                         </div>
-
                     </div>  
+                </CSSTransition>
+
+                <CSSTransition in={ripplingSaml}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Rippling SAML</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Rippling via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Rippling SAML Connection, you’ll need the Identity Provider metadata that is available from creating an app within the Rippling instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you wish to configure a Rippling SAML Connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img639' className={`enlargable-image-container ${this.state.enlargedImageId === 'img639' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img639')}>
+                                    <img  src='/assets/rippling_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Rippling SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img639' className={`enlargable-image-container ${this.state.enlargedImageId === 'img639' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img639')}>
+                                    <img  src='/assets/rippling_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the SP Metadata URL. It is readily available in your Connection settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img640' className={`enlargable-image-container ${this.state.enlargedImageId === 'img640' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img640')}>
+                                    <img  src='/assets/rippling_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Entity ID is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the Entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Rippling instance.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Rippling IdP metadata.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s Rippling configuration. But, should that not be the case during your setup, here’s how to obtain them.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create A New SAML Application In Rippling</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to Rippling as an administrator and select “IT Management” then “Custom App” from the left-side navigation bar.</p>
+
+                            <div id='img641' className={`enlargable-image-container ${this.state.enlargedImageId === 'img641' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img641')}>
+                                    <img  src='/assets/rippling_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create New App” to begin creating a new SAML application.</p>
+
+                            <div id='img642' className={`enlargable-image-container ${this.state.enlargedImageId === 'img642' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img642')}>
+                                    <img  src='/assets/rippling_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the app a descriptive name, select a category, and upload a logo file. Make sure to check the box for “Single Sign-On (SAML)”, then click “Continue”.</p>
+
+                            <div id='img643' className={`enlargable-image-container ${this.state.enlargedImageId === 'img643' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img643')}>
+                                    <img  src='/assets/rippling_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the option confirming that you are the Application Admin. Rippling will display a new page with “SSO Setup Instructions” we will use in the next step.</p>
+
+                            <div id='img644' className={`enlargable-image-container ${this.state.enlargedImageId === 'img644' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img644')}>
+                                    <img  src='/assets/rippling_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Download IdP Metadata From Rippling</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rippling will present the SSO Setup instructions which will include the <label className='demo-docs-hyperlink'>IdP Metadata</label> XML file. Click to download the file from Rippling.</p>
+
+                            <div id='img645' className={`enlargable-image-container ${this.state.enlargedImageId === 'img645' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img645')}>
+                                    <img  src='/assets/rippling_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Save this file in a memorable place, as we will upload it to the WorkOS dashboard in a later step.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enter Service Provider Details and Configure App Settings</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scrolling down on the SSO Setup Instructions, Rippling will request the ACS URL and Service Provider Entity ID.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the ACS URL and SP Entity ID from the WorkOS dashboard into the respective fields.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once complete, click the “Move to Next Step Button”.</p>
+
+                            <div id='img646' className={`enlargable-image-container ${this.state.enlargedImageId === 'img646' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img646')}>
+                                    <img  src='/assets/rippling_saml_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your desired Access Rules.</p>
+
+                            <div id='img647' className={`enlargable-image-container ${this.state.enlargedImageId === 'img647' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img647')}>
+                                    <img  src='/assets/rippling_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select your desired Provision Time.</p>
+
+                            <div id='img648' className={`enlargable-image-container ${this.state.enlargedImageId === 'img648' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img648')}>
+                                    <img  src='/assets/rippling_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configure SSO for Admins if necessary.</p>
+
+                            <div id='img649' className={`enlargable-image-container ${this.state.enlargedImageId === 'img649' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img649')}>
+                                    <img  src='/assets/rippling_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configure Group Attributes if necessary.</p>
+
+                            <div id='img650' className={`enlargable-image-container ${this.state.enlargedImageId === 'img650' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img650')}>
+                                    <img  src='/assets/rippling_saml_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Verify your SSO integration if you want to test the connection.</p>
+
+                            <div id='img651' className={`enlargable-image-container ${this.state.enlargedImageId === 'img651' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img651')}>
+                                    <img  src='/assets/rippling_saml_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Visit the app”. The application settings will be presented, here we will configure the SAML attribute mapping in the next step.</p>
+
+                            <div id='img652' className={`enlargable-image-container ${this.state.enlargedImageId === 'img652' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img652')}>
+                                    <img  src='/assets/rippling_saml_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Mapping</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the “Settings” tab then on the left navigation select “SAML Attributes” and use the “Create new” button. Add attributes as “Global attributes”.</p>
+
+                            <div id='img653' className={`enlargable-image-container ${this.state.enlargedImageId === 'img653' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img653')}>
+                                    <img  src='/assets/rippling_saml_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Input the attributes as follows:</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>User’s ID</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>User’s email address</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>User’s Legal first name</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>User’s Legal last name</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Here is a screenshot showing the proper final configuration:</p>
+
+                            <div id='img654' className={`enlargable-image-container ${this.state.enlargedImageId === 'img654' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img654')}>
+                                    <img  src='/assets/rippling_saml_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a new SAML attribute and select the “Group attribute” type. Click “Continue”.</p>
+
+                            <div id='img655' className={`enlargable-image-container ${this.state.enlargedImageId === 'img655' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img655')}>
+                                    <img  src='/assets/rippling_saml_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enter <span>groups</span> for the “Group attribute name”.</p>
+
+                            </div>
+
+                            <div id='img656' className={`enlargable-image-container ${this.state.enlargedImageId === 'img656' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img656')}>
+                                    <img  src='/assets/rippling_saml_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the attribute values to map to the group attribute. The example below shows two values, “Admins” and “Engineers”, that map to the “All Admins” user group and the “Engineering Department” user group, respectively.</p>
+
+                            <div id='img657' className={`enlargable-image-container ${this.state.enlargedImageId === 'img657' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img657')}>
+                                    <img  src='/assets/rippling_saml_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Disable the ‘InResponseTo’ Field</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the “Settings” tab, on the left navigation select “Advanced SAML Settings” and use the “Edit” button to set “Disable ‘InResponseTo’ field in assertions for IdP initiated SSO” to true by checking the box to enable the setting.</p>
+
+                            <div id='img658' className={`enlargable-image-container ${this.state.enlargedImageId === 'img658' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img658')}>
+                                    <img  src='/assets/rippling_saml_img21.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ‘InResponseTo’ field is primarily used for IdP-initiated SSO and enabling this setting allows WorkOS to accept both SP and IdP initiated SSO from Rippling.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Save” button to save this setting. In the next step, we will complete the integration by uploading the Metadata XML file to the WorkOS Dashboard.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Update Metadata File</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Return to the Rippling connection in the WorkOS dashboard and select “Edit Metadata Configuration”.</p>
+
+                            <div id='img659' className={`enlargable-image-container ${this.state.enlargedImageId === 'img659' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img659')}>
+                                    <img  src='/assets/rippling_saml_img22.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the XML metadata file from Rippling into the “Metadata File” field and select “Save Metadata Configuration”.</p>
+
+                            <div id='img660' className={`enlargable-image-container ${this.state.enlargedImageId === 'img660' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img660')}>
+                                    <img  src='/assets/rippling_saml_img23.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be linked and good to go!</p>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={ripplingScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Rippling SCIM</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with Rippling SCIM v2.0.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+
+                        </div>
+
+                    </div>
                 </CSSTransition>
 
             </Styles>
