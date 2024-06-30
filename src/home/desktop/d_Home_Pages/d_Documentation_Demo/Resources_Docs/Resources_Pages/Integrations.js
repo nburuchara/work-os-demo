@@ -285,6 +285,12 @@ export default class Integrations extends Component {
             enlargedImageId: prevState.enlargedImageId === imageId ? null : imageId
         }));
     };
+
+    hiddenDropdownBtnClicked = (num) => {
+        this.setState((prevState) => ({
+            [`hiddenDropdownBtn${num}`]: !prevState[`hiddenDropdownBtn${num}`]
+        }));
+    }
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
@@ -295,6 +301,10 @@ export default class Integrations extends Component {
 
                 //* - LANGUAGE SELECTION VAR(S) - *//
             const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
+
+                //* - - HIDDEN DROPDOWN - - *//
+
+            const { hiddenDropdownBtn1 } = this.state;
 
         return (
             <Styles>
@@ -9948,7 +9958,6 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be linked and good to go!</p>
 
                         </div>
-
                     </div>
                 </CSSTransition>
 
@@ -9966,11 +9975,288 @@ export default class Integrations extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines how to synchronize your application’s Rippling directories using SCIM.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need to provide the organization with two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className='demo-docs-hyperlink'>Endpoint</label> that Rippling will make requests to.</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for Rippling to authenticate its endpoint requests.</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>Steps 2, 3, and 4 below will need to be carried out by the organization when configuring your application in their Rippling instance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your Directory Sync endpoint</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync for.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Under “Actions” click “Add Directory”.</p>
+
+                            <div id='img661' className={`enlargable-image-container ${this.state.enlargedImageId === 'img661' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img661')}>
+                                    <img  src='/assets/rippling_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Rippling” from the dropdown, and enter the organization name.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, click “Create Directory.”</p>
+
+                            <div id='img662' className={`enlargable-image-container ${this.state.enlargedImageId === 'img662' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img662')}>
+                                    <img  src='/assets/rippling_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Rippling directory sync has now been created successfully with an Endpoint and Bearer Token.</p>
+
+                            <div id='img663' className={`enlargable-image-container ${this.state.enlargedImageId === 'img663' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img663')}>
+                                    <img  src='/assets/rippling_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>We have support for custom URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create your Rippling application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to the Rippling admin dashboard and select the “Custom App” option in the menu under the “Identity Management” category.</p>
+
+                            <div id='img664' className={`enlargable-image-container ${this.state.enlargedImageId === 'img664' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img664')}>
+                                    <img  src='/assets/rippling_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create New App” in the Custom App page.</p>
+
+                            <div id='img665' className={`enlargable-image-container ${this.state.enlargedImageId === 'img665' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img665')}>
+                                    <img  src='/assets/rippling_scim_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Fill out the application’s name, select categories, upload an image for the logo, and check the “User Management via SCIM” box. Click “Continue” and the next page will populate more option fields regarding SCIM setup.</p>
+
+                            <div id='img666' className={`enlargable-image-container ${this.state.enlargedImageId === 'img666' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img666')}>
+                                    <img  src='/assets/rippling_scim_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure your integration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set the SCIM version to 2.0.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Fill in the endpoint into the “SCIM Base URL” field.</p>
+
+                            <div id='img667' className={`enlargable-image-container ${this.state.enlargedImageId === 'img667' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img667')}>
+                                    <img  src='/assets/rippling_scim_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Set the SCIM authorization method to “Bearer Token” in the “SCIM Authorization Method” dropdown list. Check off features for groups, pagination, delete groups and PATCH groups.</p>
+
+                            <div id='img668' className={`enlargable-image-container ${this.state.enlargedImageId === 'img668' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img668')}>
+                                    <img  src='/assets/rippling_scim_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Add SCIM attributes <span>externalId</span>, <span>emails.primary</span>, <span>name.givenName</span>, <span>name.familyName</span> to the “Supported SCIM Attributes” input box. If you have additional custom attributes, add the appropriate corresponding Rippling values of the custom attributes. Click “Continue” to move to the next step.</p>
+                        
+                            </div>
+
+                            <div id='img669' className={`enlargable-image-container ${this.state.enlargedImageId === 'img669' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img669')}>
+                                    <img  src='/assets/rippling_scim_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rippling will then prompt you to install the app. Click “Install now” and proceed through the next step. Then, copy and paste the Bearer Token into the “Bearer Token” field and click “Continue”.</p>
+
+                            <div id='img670' className={`enlargable-image-container ${this.state.enlargedImageId === 'img670' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img670')}>
+                                    <img  src='/assets/rippling_scim_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Assign users and groups to your application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After entering the Bearer Token, the following two pages “App Access Rules” and “Provision Time”, can be filled out by your own preference. You should then arrive at the “Account Matching” page.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order for your users and groups to be synced, you will need to assign them to your Rippling Application. Match the Rippling users to the account, or create a new application account for the user(s).</p>
+
+                            <div id='img671' className={`enlargable-image-container ${this.state.enlargedImageId === 'img671' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img671')}>
+                                    <img  src='/assets/rippling_scim_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create groups for the application as needed.</p>
+
+                            <div id='img672' className={`enlargable-image-container ${this.state.enlargedImageId === 'img672' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img672')}>
+                                    <img  src='/assets/rippling_scim_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Name the group.</p>
+
+                            <div id='img673' className={`enlargable-image-container ${this.state.enlargedImageId === 'img673' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img673')}>
+                                    <img  src='/assets/rippling_scim_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Assign Rippling users/groups to the newly created application group.</p>
+
+                            <div id='img674' className={`enlargable-image-container ${this.state.enlargedImageId === 'img674' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img674')}>
+                                    <img  src='/assets/rippling_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Make sure all attributes previously added are enabled, and that their cadence is set to “On user creation and updates”. Then, click “Save” and “Continue” to finish setup.</p>
+
+                            <div id='img675' className={`enlargable-image-container ${this.state.enlargedImageId === 'img675' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img675')}>
+                                    <img  src='/assets/rippling_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In your WorkOS dashboard, you should now see the users and groups synced over.</p>
+
+                            <div id='img676' className={`enlargable-image-container ${this.state.enlargedImageId === 'img676' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img676')}>
+                                    <img  src='/assets/rippling_scim_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Can I add additional custom fields to this SCIM integration?</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Yes, however Rippling allows only a limited set of custom fields in SCIM applications.</p>
+
+                                <div style={{paddingBottom: "2%", paddingTop: "1%"}}>
+
+                                    <div onClick={() => this.hiddenDropdownBtnClicked(1)} className='hidden-dropdown-btn'>
+                                        <div className='hdb-icon'>
+                                            <img style={{width: sidebarMenuClicked ? "55%" : "", marginTop: sidebarMenuClicked ? "21%" : "11.5%"}} className={hiddenDropdownBtn1 ? "hdb-icon-img hdb-icon-img-rotated" : ""} src='/assets/hidden_dropdown_btn_icon.png' alt='no img available'/>
+                                        </div>
+                                        <div className='hdb-text'>
+                                        <p style={{fontSize: sidebarMenuClicked ? "50%" : "70%", marginTop: sidebarMenuClicked ? "1.75%" : ""}}><strong>Available custom fields</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <CSSTransition
+                                    in={hiddenDropdownBtn1}
+                                    timeout={500}
+                                    classNames="dialog-slide"
+                                    unmountOnExit
+                                    >
+                                        <div className='api-keys'>
+                                            <ul>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.country</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.formatted</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.locality</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.postalCode</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.region</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.home.streetAddress</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.country</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.formatted</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.locality</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.postalCode</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.region</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>addresses.work.streetAddress</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>department</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>displayName</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>emails.primary</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>employeeNumber</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>externalId</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>manager.displayName</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>manager.email</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>manager.managerId</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>name.familyName</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>name.formatted</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>name.givenName</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>phoneNumbers.mobile</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>phoneNumbers.work</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>photos.photo</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>title</span></p></li>
+                                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>userType</span></p></li>
+                                            </ul>
+                                        </div>
+                                    </CSSTransition>
+
+                                </div>
+
+                        </div>   
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={salesforce}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Salesforce</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to Salesforce via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create an Salesforce SAML connection, you’ll need three pieces of information: an <label className='demo-docs-hyperlink'>ACS URL</label>, an <label className='demo-docs-hyperlink'>SP Entity ID</label>, and a <label className='demo-docs-hyperlink'>Metadata URL</label>.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
 
                         </div>
+
 
                     </div>
                 </CSSTransition>
