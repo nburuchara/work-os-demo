@@ -57,6 +57,7 @@ export default class Integrations extends Component {
             oneLoginScim: false,
             oracleSaml: false,
             pingFedSaml: false,
+            pingFedScim: false,
 
 
 
@@ -141,6 +142,7 @@ export default class Integrations extends Component {
             "oneLoginScim": "oneLoginScim",
             "oracleSaml": "oracleSaml",
             "pingFedSaml": "pingFedSaml",
+            "pingFedScim": "pingFedScim",
             
         };
       
@@ -221,6 +223,7 @@ export default class Integrations extends Component {
             "oneLoginScim": "oneLoginScim",
             "oracleSaml": "oracleSaml",
             "pingFedSaml": "pingFedSaml",
+            "pingFedScim": "pingFedScim",
 
         };
         const keys = Object.keys(pageMap);
@@ -275,7 +278,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -8872,7 +8875,6 @@ export default class Integrations extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your connection will then be Active and good to go!</p>
 
                         </div>
-
                     </div>
                 </CSSTransition>
 
@@ -8890,8 +8892,189 @@ export default class Integrations extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a PingFederate SAML Connection, you’ll need the Identity Provider metadata that is available from your PingFederate instance.</p>
                         
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and the SP Entity ID. They are readily available in your connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img598' className={`enlargable-image-container ${this.state.enlargedImageId === 'img598' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img598')}>
+                                <img  src='/assets/pingfed_saml_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In PingFederate’s case, the ACS URL needs to be set by the organization when configuring your application in their PingFederate instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL needs to be set as the “Endpoint URL” when defining the Protocol Settings in the SP Connection for WorkOS.</p>
+
+                            <div id='img599' className={`enlargable-image-container ${this.state.enlargedImageId === 'img599' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img599')}>
+                                <img  src='/assets/pingfed_saml_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the entity ID is used to communicate to that WorkOS will be the party performing SAML requests to the organization’s PingFederate instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the SP Entity ID needs to be set as the “Partner’s Entity ID (Connection ID)” when defining the General Info Settings in the SP Connection for WorkOS.</p>
+
+                            <div id='img600' className={`enlargable-image-container ${this.state.enlargedImageId === 'img600' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img600')}>
+                                <img  src='/assets/pingfed_saml_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the PingFederate IdP metadata.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their PingFederate admin dashboard. However, that should not be the case during your setup. Here’s how to obtain them:</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Log In and Select Your Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to your PingFederate instance, go to the admin dashboard, select “Applications” at the top, and select the “SP Connections” menu option.</p>
+
+                            <div id='img601' className={`enlargable-image-container ${this.state.enlargedImageId === 'img601' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img601')}>
+                                <img  src='/assets/pingfed_saml_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Metadata</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the SP Connection list, find your WorkOS SAML 2.0 connection. Click on the “Select Action” menu and then select “Export Metadata” to download the IdP metadata.</p>
+
+                            <div id='img602' className={`enlargable-image-container ${this.state.enlargedImageId === 'img602' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img602')}>
+                                <img  src='/assets/pingfed_saml_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Keep in mind where the file was saved, as we’ll be later uploading it to configure the Connection.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Mapping</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the SP Connections dashboard, click into your desired connection. From there, click into the “Activation & Summary” tab, then click “Attribute Contract”. You will need to add <span>id</span>, <span>email</span>, <span>firstName</span>, and <span>lastName</span> as attributes. Once configured, click “Next”.</p>
+
+                            </div>
+
+                            <div id='img603' className={`enlargable-image-container ${this.state.enlargedImageId === 'img603' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img603')}>
+                                <img  src='/assets/pingfed_saml_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will now need to configure an Authentication Policy Contract. To do so, click “Map New Authentication Policy”, then click “Manage Policy Contracts” and “Create New Contract”. Name your contract, then go to the next step and add the same four attributes we configured above. Continue through the steps, then click “Save”.</p>
+
+                            <div id='img604' className={`enlargable-image-container ${this.state.enlargedImageId === 'img604' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img604')}>
+                                <img  src='/assets/pingfed_saml_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the “Authentication Policy Mapping” page, select the Authentication Policy Contract you just made and click “Next”. In the “Attribute Contract Fulfillment” tab, How you map values to the attributes listed above may differ based on how your PingFederate instance is set up. Below is an example of mapped values from both an Authentication Policy Contract and an LDAP directory. From there, save your settings on the “Summary” tab to lock in the configuration.</p>
+
+                            <div id='img605' className={`enlargable-image-container ${this.state.enlargedImageId === 'img605' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img605')}>
+                                <img  src='/assets/pingfed_saml_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Navigate back to the “Attribute Contact” page and define a <span>groups</span> attribute.</p>
+
+                                <div id='img606' className={`enlargable-image-container ${this.state.enlargedImageId === 'img606' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img606')}>
+                                    <img  src='/assets/pingfed_saml_img9.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Then, navigate to the “Attribute Contract Fulfillment” page and map the new <span>groups</span> attribute to the data in your provider that includes group memberships, such as the <span>isMemberOf</span> LDAP attribute in the example below.</p>
+
+                            </div>
+
+                            <div id='img607' className={`enlargable-image-container ${this.state.enlargedImageId === 'img607' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img607')}>
+                                    <img  src='/assets/pingfed_saml_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata File</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the connection settings of the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
+
+                            <div id='img608' className={`enlargable-image-container ${this.state.enlargedImageId === 'img608' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img608')}>
+                                    <img  src='/assets/pingfed_saml_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the modal, upload the PingFederate Metadata file and then select “Save Metadata Configuration”. Once the file is uploaded into WorkOS, your connection will then be linked and good to go!</p>
+
+                            <div id='img609' className={`enlargable-image-container ${this.state.enlargedImageId === 'img609' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img609')}>
+                                    <img  src='/assets/pingfed_saml_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={pingFedScim}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>PingFederate SCIM</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about syncing your user list with PingFederate SCIM.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+
                         </div>
 
                     </div>
