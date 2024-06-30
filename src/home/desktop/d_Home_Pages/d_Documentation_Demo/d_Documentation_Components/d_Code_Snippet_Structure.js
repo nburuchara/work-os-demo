@@ -699,15 +699,13 @@ export default class CodeSnippet extends Component {
     }
 
     stripHtmlTags = (html) => {
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = html;
-      let text = tempDiv.textContent || tempDiv.innerText || "";
-      // Remove all leading special characters and whitespace
-      text = text.replace(/^[>\$\d+\s]*/, '');
-      return text;
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = html;
+        let text = tempDiv.textContent || tempDiv.innerText || "";
+        // Remove leading special characters, numbers, and a space or period followed by a space
+        text = text.replace(/^[>\+\-\$\d]+\.\s|^[>\+\-\$\d]+\s/, '');
+        return text;
     }
-
-
 
     render () {
 

@@ -15580,6 +15580,69 @@ const codeSnippets = [
       }
     },
 
+    { //* Install Expo’s AuthSession Package (122)
+      id: 122,
+      title: "Install Expo’s AuthSession Package",
+      code: {
+        javascript: [
+          '$ expo <span style="color: #5854c6;">install</span> expo-auth-session expo-random',
+        ]
+      }
+    },
+
+    { //* Install Expo’s WebBrowser Package (123)
+      id: 123,
+      title: "Install Expo’s WebBrowser Package",
+      code: {
+        javascript: [
+          '$ expo <span style="color: #5854c6;">install</span> expo-web-browser',
+        ]
+      }
+    },
+
+    { //* Get Authorization URL Call (124)
+      id: 124,
+      title: "Get Authorization URL Call",
+      code: {
+        javascript: [
+          '1 <span style="color: grey;">// Generate the RedirectUri and save it to a redirect variable</span>',
+          '2 <span style="color: grey;">// You will also need to add this redirect URI to the allow list in the WorkOS Dashboard</span>',
+          '3 <span style="color: #148a68;">const</span> redirect <span style="color: #ce3559;">=</span> <span style="color: #5854c6;">AuthSession</span>.<span style="color: #5854c6;">makeRedirectUri</span>().<span style="color: #5854c6;">toString</span>();',
+          '4 ',
+          '5 <span style="color: grey;">// Pull Connection ID from environment variables</span>',
+          '6 <span style="color: #148a68;">const</span> connection_id <span style="color: #ce3559;">=</span> process.env.<span style="color: #0072dd;">WORKOS_CONNECTION_ID</span>;',
+          '7 ',
+          '8 <span style="color: grey;">// Pull Client ID from evnironment variables</span>',
+          '9 <span style="color: #148a68;">const</span> client_id <span style="color: #ce3559;">=</span> process.env.<span style="color: #0072dd;">WORKOS_CLIENT_ID</span>;',
+          '10 ',
+          '11 <span style="color: grey;">// Format the URL for the Get Authorization URL call and pass in the Client ID, Redirect URI, and Connection ID</span>',
+          '12 <span style="color: #148a68;">const</span> url <span style="color: #ce3559;">=</span> <span style="color: #143465;">`https://api.workos.com/sso/authorize?response_type=code&client_id=${client_id}&redirect_uri=${redirect}&state=&connection=${connection_id}`</span>;',
+          '13 ',
+          '14 <span style="color: grey;">// Call openAuthSessionAsync with the url and redirect from above, and save the returned object to a variable</span>',
+          '15 <span style="color: #148a68;">const</span> result <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> <span style="color: #5854c6;">WebBrowser</span>.<span style="color: #5854c6;">openAuthSessionAsync</span>(url, redirect);',
+          '16 ',
+          '17 <span style="color: grey;">// Pull the code returned in the result stored as a param in the url field. In this case, we are using a regular expression pattern to pull it from the url.</span>',
+          '18 <span style="color: #148a68;">const</span> codeRegex <span style="color: #ce3559;">=</span> /code=([<span style="color: #ce3559;">^</span>&]<span style="color: #0072dd;">+</span>)/;',
+          '19 <span style="color: #148a68;">const</span> matches <span style="color: #ce3559;">=</span> result.url.<span style="color: #5854c6;">match</span>(codeRegex);',
+          '20 <span style="color: #148a68;">const</span> code <span style="color: #ce3559;">=</span> matches <span style="color: #ce3559;">?</span> matches[<span style="color: #0072dd;">1</span>] <span style="color: #ce3559;">:</span> <span style="color: #148a68;">null</span>;',
+        ]
+      }
+    },
+
+    { //* Exchange OAuth Code for Profile and Token (125)
+      id: 125,
+      title: "Exchange OAuth Code for Profile and Token",
+      code: {
+        javascript: [
+          '1 <span style="color: grey;">// Use the profile returned in response.data as you need!</span>',
+          '2 <span style="color: #5854c6;">axios</span>({',
+          '3   method<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'post\'</span>,',
+          '4   url<span style="color: #ce3559;">:</span> <span style="color: #143465;">`https://api.workos.com/sso/token?client_id=${client_id}&client_secret=${apiKey}&grant_type=authorization_code&code=${code}`</span>,',
+          '5 }).<span style="color: #5854c6;">then</span>((response) <span style="color: #ce3559;">=></span> {});',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;
