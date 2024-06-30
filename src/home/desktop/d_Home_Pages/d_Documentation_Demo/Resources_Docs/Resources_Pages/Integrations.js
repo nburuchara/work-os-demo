@@ -62,6 +62,7 @@ export default class Integrations extends Component {
             reactNative: false,
             ripplingSaml: false,
             ripplingScim: false,
+            salesforce: false,
 
             prevSelectedPage: "",
 
@@ -149,6 +150,7 @@ export default class Integrations extends Component {
             "reactNative": "reactNative",
             "ripplingSaml": "ripplingSaml",
             "ripplingScim": "ripplingScim",
+            "salesforce": "salesforce",
             
         };
       
@@ -234,6 +236,7 @@ export default class Integrations extends Component {
             "reactNative": "reactNative",
             "ripplingSaml": "ripplingSaml",
             "ripplingScim": "ripplingScim",
+            "salesforce": "salesforce",
 
         };
         const keys = Object.keys(pageMap);
@@ -294,7 +297,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -10251,12 +10254,239 @@ export default class Integrations extends Component {
                         </div>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the ACS URL and SP Entity ID. It’s readily available in your Connection Settings in the</p>
+
+                            <div id='img677' className={`enlargable-image-container ${this.state.enlargedImageId === 'img677' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img677')}>
+                                    <img  src='/assets/salesforce_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. In Salesforce’s case, it needs to be set by the organization when configuring Salesforce as an Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Entity ID is a URI used to identify the issuer of a SAML request, response, or assertion. In this case, the entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Salesforce instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Specifically, the ACS URL and SP Entity ID will need to be set in the Connected Apps setup in Salesforce.</p>
+
+                            <div id='img678' className={`enlargable-image-container ${this.state.enlargedImageId === 'img678' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img678')}>
+                                    <img  src='/assets/salesforce_img2.avif' alt="Enlargable" className="image" />
+                            </div>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Salesforce Metadata URL. Normally, the this will come from the organization’s IT Management team when they set up your application’s SAML client in their Salesforce instance. But, should that not be the case during your setup, here’s how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Generate Certificate</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in to your Salesforce Account, click the Settings cog icon on the top right, and select “Setup”.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once in setup mode you can use the search bar to easily navigate around between settings pages. The first page to navigate to is the “Certificate and Key Management” page.</p>
+
+                            <div id='img679' className={`enlargable-image-container ${this.state.enlargedImageId === 'img679' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img679')}>
+                                    <img  src='/assets/salesforce_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once in setup mode you can use the search bar to easily navigate around between settings pages. The first page to navigate to is the “Certificate and Key Management” page. If a key does not exist that you would like to use, click “Create Self-Signed Certificate” to generate a new one.</p>
+
+                            <div id='img680' className={`enlargable-image-container ${this.state.enlargedImageId === 'img680' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img680')}>
+                                    <img  src='/assets/salesforce_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the Certificate a meaningful label and unique name and select the Key Size you’d like to use. It’s not necessary to have an Exportable Private Key, but if you are using a key-certificate store you can choose this option.</p>
+
+                            <div id='img681' className={`enlargable-image-container ${this.state.enlargedImageId === 'img681' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img681')}>
+                                    <img  src='/assets/salesforce_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enable Salesforce as an IdP</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>From the setup search bar browse to the “Identity Provider” portal in Salesforce.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If it has not already been done, select “Enable Identity Provider”.</p>
+
+                            <div id='img682' className={`enlargable-image-container ${this.state.enlargedImageId === 'img682' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img682')}>
+                                    <img  src='/assets/salesforce_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You will need to select the correct certificate from the previous step.</p>
+
+                            <div id='img683' className={`enlargable-image-container ${this.state.enlargedImageId === 'img683' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img683')}>
+                                    <img  src='/assets/salesforce_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Additionally this page will display the Metadata URL. You will need to copy this URL and in a later step it will be uploaded into WorkOS.</p>
+
+                            <div id='img684' className={`enlargable-image-container ${this.state.enlargedImageId === 'img684' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img684')}>
+                                    <img  src='/assets/salesforce_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure SAML Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next from the setup search bar browse to the “App Manager” portal. Once here you will want to select the option for “New Connected App”.</p>
+
+                            <div id='img685' className={`enlargable-image-container ${this.state.enlargedImageId === 'img685' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img685')}>
+                                    <img  src='/assets/salesforce_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Give the App and API a meaningful name and set a contact email that corresponds to who you’d reach out to for support should there be an issue. You can always opt to use <span>support@workos.com</span>.</p>
+
+                                <div id='img686' className={`enlargable-image-container ${this.state.enlargedImageId === 'img686' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img686')}>
+                                    <img  src='/assets/salesforce_img10.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Scroll down further to the “Web App Settings” and check the box for “Enable SAML”. Enter the Entity ID and ACS URL into their respective places within the Settings.</p>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The “Subject Type” should be set to “User ID” and the “Name ID Format” should be set to <span>urn:oasis:names:tv:SAML:1.1:nameid-format:emailAddress</span>. The “Issuer” should populate correctly with your Salesforce subdomain. For the IdP Certificate, select the certificate that matches the one previously used when enabling the Identity Provider, and for the “Signing Algorithm for SAML Messages” choose “SHA256”.</p>
+
+                            </div>
+
+                            <div id='img687' className={`enlargable-image-container ${this.state.enlargedImageId === 'img687' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img687')}>
+                                    <img  src='/assets/salesforce_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Save the configurations and you should now see the new Connected App listed under “App Manager”.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure User Attributes and Claims</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the Setup search bar browse to the “Manage Connected Apps” portal. Click on your application and this will open the view where you can configure the attribute mapping, and later on the user profile access permissions.</p>
+
+                            <div id='img688' className={`enlargable-image-container ${this.state.enlargedImageId === 'img688' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img688')}>
+                                    <img  src='/assets/salesforce_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Viewing the app, scroll down to the “Custom Attributes” section and select “New”.</p>
+
+                            <div id='img689' className={`enlargable-image-container ${this.state.enlargedImageId === 'img689' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img689')}>
+                                    <img  src='/assets/salesforce_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Salesforce automatically includes email as an Attribute so we will need to add three fields:</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span></p></li>
+                                </ul>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Configure the fields so the mapping matches the following:</p>
+
+                            <div id='img690' className={`enlargable-image-container ${this.state.enlargedImageId === 'img690' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img690')}>
+                                    <img  src='/assets/salesforce_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Create a new custom attribute with a key of <span>groups</span>. Map this attribute to a value that contains a user’s group membership or role information, such as <span>$UserRole.Name</span> in the example below.</p>
+
+                            </div>
+
+                            <div id='img691' className={`enlargable-image-container ${this.state.enlargedImageId === 'img691' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img691')}>
+                                    <img  src='/assets/salesforce_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Manage Profiles With Application Access</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Similarly, viewing the app, there is a “Manage Profiles” section for granting access to control who can log into the application. Select “Manage Profiles” and grant access to the appropriate profiles that should have access to the application in the “Application Profile Assignment” wizard. Select “Save” when complete.</p>
+
+                            <div id='img692' className={`enlargable-image-container ${this.state.enlargedImageId === 'img692' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img692')}>
+                                    <img  src='/assets/salesforce_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Here is an example of a successfully configured “Connected Application” allowing access to anyone with an “End User” Profile.</p>
+
+                            <div id='img693' className={`enlargable-image-container ${this.state.enlargedImageId === 'img693' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img693')}>
+                                    <img  src='/assets/salesforce_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, return to the WorkOS dashboard. Within your connection settings, select “Edit Metadata Configuration” under “Identity Provider Configuration” and provide the Metadata URL you obtained from Salesforce. Your connection will then be verified and good to go!</p>
+
+                            <div id='img694' className={`enlargable-image-container ${this.state.enlargedImageId === 'img694' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img694')}>
+                                    <img  src='/assets/salesforce_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
 
                     </div>
                 </CSSTransition>

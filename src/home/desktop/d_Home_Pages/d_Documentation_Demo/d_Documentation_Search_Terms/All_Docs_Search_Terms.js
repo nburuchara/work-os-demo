@@ -16809,6 +16809,62 @@ const results = [
     "subCat1": "Integrations",
     "page": "OneLogin SCIM",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Oracle SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Oracle SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "PingFederate SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "PingFederate SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "PingFederate SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "PingFederate SCIM",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "PingOne SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "PingOne SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "React Native Expo",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "React Native Expo",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Rippling SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Rippling SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Rippling SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Rippling SCIM",
+    "lastCat": "top"
   }
 ];
 export default results;
