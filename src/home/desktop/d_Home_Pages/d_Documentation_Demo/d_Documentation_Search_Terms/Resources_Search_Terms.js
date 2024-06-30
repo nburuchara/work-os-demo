@@ -52,6 +52,9 @@ const results = [
     {"id": "999995", "name": "OneLogin SAML", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SAML", "lastCat": "top"},
     {"id": "999995", "name": "OneLogin SCIM", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SCIM", "lastCat": "top"},
     {"id": "999995", "name": "Oracle SAML", "category": "Resources", "subCat1": "Integrations", "page": "Oracle SAML", "lastCat": "top"},
+    {"id": "999995", "name": "PingFederate SAML", "category": "Resources", "subCat1": "Integrations", "page": "PingFederate SAML", "lastCat": "top"},
+    {"id": "999995", "name": "PingFederate SCIM", "category": "Resources", "subCat1": "Integrations", "page": "PingFederate SCIM", "lastCat": "top"},
+    {"id": "999995", "name": "PingOne SAML", "category": "Resources", "subCat1": "Integrations", "page": "PingOne SAML", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

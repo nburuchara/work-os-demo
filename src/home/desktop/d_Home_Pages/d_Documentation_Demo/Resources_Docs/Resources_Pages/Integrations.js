@@ -58,6 +58,7 @@ export default class Integrations extends Component {
             oracleSaml: false,
             pingFedSaml: false,
             pingFedScim: false,
+            pingOneSaml: false,
 
 
 
@@ -143,6 +144,7 @@ export default class Integrations extends Component {
             "oracleSaml": "oracleSaml",
             "pingFedSaml": "pingFedSaml",
             "pingFedScim": "pingFedScim",
+            "pingOneSaml": "pingOneSaml",
             
         };
       
@@ -224,6 +226,7 @@ export default class Integrations extends Component {
             "oracleSaml": "oracleSaml",
             "pingFedSaml": "pingFedSaml",
             "pingFedScim": "pingFedScim",
+            "pingOneSaml": "pingOneSaml",
 
         };
         const keys = Object.keys(pageMap);
@@ -278,7 +281,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -9073,10 +9076,278 @@ export default class Integrations extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To synchronize an organization’s users and groups provisioned for your application, you’ll need two pieces of information:</p>
+
+                            <ul>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>An <label className='demo-docs-hyperlink'>Endpoint</label> that PingFederate will make requests to</p></li>
+                                <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>Bearer Token</label> for PingFederate to authenticate it’s endpoint requests</p></li>
+                            </ul>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After completing step 1 below, both of these are available in your Endpoint’s Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>The rest of the steps after the first will need to be carried out by the organization when configuring your application in their PingFederate instance.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Set up your directory in the WorkOS Dashboard</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Login to your WorkOS Dashboard and select “Organizations” from the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you’ll be configuring a new Directory Sync with.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click “Add Directory”.</p>
+
+                            <div id='img610' className={`enlargable-image-container ${this.state.enlargedImageId === 'img610' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img610')}>
+                                    <img  src='/assets/pingfed_scim_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “PingFederate“ from the dropdown, and give the connection a descriptive name. Click “Create Directory”.</p>
+
+                            <div id='img611' className={`enlargable-image-container ${this.state.enlargedImageId === 'img611' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img611')}>
+                                    <img  src='/assets/pingfed_scim_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Save the Endpoint and Bearer Token, you’ll need those in the next section when you configure the SCIM Connector application in PingFederate.</p>
+
+                            <div id='img612' className={`enlargable-image-container ${this.state.enlargedImageId === 'img612' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img612')}>
+                                    <img  src='/assets/pingfed_scim_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>We have support for custom labeled URLs for Directory Sync endpoints. <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>Contact us</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more info!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Install the SCIM Connector in PingFederate</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This step will take place in PingFederate. First, download and install the SCIM Connector <label className='demo-docs-hyperlink'>following the setup guide from PingFederate</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, deploy the SCIM Connector files to your PingFederate directory following <label className='demo-docs-hyperlink'>the provider’s documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, enable provisioning in PingFederate using <label className='demo-docs-hyperlink'>the documentation from PingFederate</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once that setup has been completed, continue on to step 3.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Select or create your PingFederate SCIM Connector Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Log in as an admin to your PingFederate instance, and select “Applications” → “SP Connections”.</p>
+
+                            <div id='img613' className={`enlargable-image-container ${this.state.enlargedImageId === 'img613' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img613')}>
+                                    <img  src='/assets/pingfed_scim_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Create Connection”.</p>
+
+                            <div id='img614' className={`enlargable-image-container ${this.state.enlargedImageId === 'img614' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img614')}>
+                                    <img  src='/assets/pingfed_scim_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Connection Template page, select “Use a Template for this Connection” and then select “SCIM Connector” from the dropdown list. If you don’t see the SCIM Connector option, go back to the <label className='demo-docs-hyperlink'>Install SCIM Connector in PingFederate step</label>. Click “Next”.</p>
+
+                            <div id='img615' className={`enlargable-image-container ${this.state.enlargedImageId === 'img615' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img615')}>
+                                    <img  src='/assets/pingfed_scim_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Connection Type page, make sure Outbound Provisioning is checked with the SCIM Connector Type. Click “Next”.</p>
+
+                            <div id='img616' className={`enlargable-image-container ${this.state.enlargedImageId === 'img616' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img616')}>
+                                    <img  src='/assets/pingfed_scim_img7.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the General Info page, give this connection a descriptive name, and click “Next”.</p>
+
+                            <div id='img617' className={`enlargable-image-container ${this.state.enlargedImageId === 'img617' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img617')}>
+                                    <img  src='/assets/pingfed_scim_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Outbound Provisioning for your PingFederate application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Outbound Provisioning page, select the “Configure Provisioning” button.</p>
+
+                            <div id='img618' className={`enlargable-image-container ${this.state.enlargedImageId === 'img618' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img618')}>
+                                    <img  src='/assets/pingfed_scim_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Target page, paste in the Endpoint from your WorkOS Directory Sync Connection in the SCIM URL field. Make sure SCIM Version is set as <span>2.0</span> and the Authentication Method is set as <span>OAuth 2 Bearer Token</span>. Paste in the Bearer Token from your WorkOS Directory Sync Connection in the Access Token field. Select “Next”.</p>
+
+                            </div>
+
+                            <div id='img619' className={`enlargable-image-container ${this.state.enlargedImageId === 'img619' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img619')}>
+                                    <img  src='/assets/pingfed_scim_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Manage Channels page, select “Create”.</p>
+
+                            <div id='img620' className={`enlargable-image-container ${this.state.enlargedImageId === 'img620' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img620')}>
+                                    <img  src='/assets/pingfed_scim_img11.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Channel Info page, add a descriptive name and click “Next”.</p>
+
+                            <div id='img621' className={`enlargable-image-container ${this.state.enlargedImageId === 'img621' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img621')}>
+                                    <img  src='/assets/pingfed_scim_img12.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select an “Active Data Store” from the dropdown menu. In this example, This example uses a PingDirectory LDAP instance, but this may be different depending on the type of data store used in each case. Please refer to the <label className='demo-docs-hyperlink'>PingFederate documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for specific settings on your type of data store. Click “Next”.</p>
+
+                            <div id='img622' className={`enlargable-image-container ${this.state.enlargedImageId === 'img622' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img622')}>
+                                    <img  src='/assets/pingfed_scim_img13.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Source Settings page, make any modifications needed for your data store. In this example, the default values for the LDAP data store did not need to be modified, so the default settings were used. After configuring the source settings specific to your use case, click “Next” to go to the Source Location page.</p>
+
+                            <div id='img623' className={`enlargable-image-container ${this.state.enlargedImageId === 'img623' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img623')}>
+                                    <img  src='/assets/pingfed_scim_img14.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Source Location page, input a Base DN and either a Group DB or Filter for the Users. This tells your application where to look for the users to sync from your active data store. The setup used in each case may be different depending on the type of data store being used and which users and groups are to be provisioned. Please reference <label className='demo-docs-hyperlink'>PingFederate documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for specific steps. When this is complete, click “Next”.</p>
+
+                            <div id='img624' className={`enlargable-image-container ${this.state.enlargedImageId === 'img624' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img624')}>
+                                    <img  src='/assets/pingfed_scim_img15.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure attribute mapping in PingFederate</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Attribute Mapping page, configure the mapping of attributes in the data store to the SCIM attributes. The exact configuration will depend on the specific setup in each unique situation. For this PingDirectory LDAP example, the default settings are used. When finished, Click “Next”.</p>
+
+                            <div id='img625' className={`enlargable-image-container ${this.state.enlargedImageId === 'img625' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img625')}>
+                                    <img  src='/assets/pingfed_scim_img16.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Activation & Summary page, check that the settings are complete, then toggle the “Channel Status” to “Active” and select “Done”.</p>
+
+                            <div id='img626' className={`enlargable-image-container ${this.state.enlargedImageId === 'img626' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img626')}>
+                                    <img  src='/assets/pingfed_scim_img17.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You are directed back to the Manage Channels page, where you can select “Done”.</p>
+
+                            <div id='img627' className={`enlargable-image-container ${this.state.enlargedImageId === 'img627' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img627')}>
+                                    <img  src='/assets/pingfed_scim_img18.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’re then directed to the Outbound Provisioning page, where you can select “Next”.</p>
+
+                            <div id='img628' className={`enlargable-image-container ${this.state.enlargedImageId === 'img628' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img628')}>
+                                    <img  src='/assets/pingfed_scim_img19.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>6</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Activate the SP Connection in PingFederate</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>On the Activation & Summary page, turn on provisioning with the toggle at the top, and then select “Save”.</p>
+
+                            <div id='img629' className={`enlargable-image-container ${this.state.enlargedImageId === 'img629' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img629')}>
+                                    <img  src='/assets/pingfed_scim_img20.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You’ll now see your SCIM application listed in the SP Connections page.</p>
+
+                            <div id='img630' className={`enlargable-image-container ${this.state.enlargedImageId === 'img630' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img630')}>
+                                    <img  src='/assets/pingfed_scim_img21.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The provisioning will automatically begin when the connection is activated through outbound requests from Ping Federate. It may take a few minutes for this process to start. Once it is synced, you’ll see a Linked status in the Directory settings in the WorkOS Dashboard.</p>
+
+                            <div id='img631' className={`enlargable-image-container ${this.state.enlargedImageId === 'img631' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img631')}>
+                                    <img  src='/assets/pingfed_scim_img22.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A detailed guide to integrate the WorkOS API with your application can be found <label className='demo-docs-hyperlink'>here</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={pingOneSaml}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                    <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>PingOne SAML</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to PingOne via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a Connection will differ by Identity Provider.</p>
+
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
 
                         </div>
-
                     </div>
                 </CSSTransition>
 
