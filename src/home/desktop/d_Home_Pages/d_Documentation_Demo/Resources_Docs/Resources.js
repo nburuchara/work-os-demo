@@ -129,6 +129,7 @@ export default class Resources extends Component {
             "PingFederate SAML": "pingFedSaml",
             "PingFederate SCIM": "pingFedScim",
             "PingOne SAML": "pingOneSaml",
+            "React Native Expo": "reactNative",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -331,6 +332,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "PingFederate SAML", "category": "Resources", "subCat1": "Integrations", "page": "PingFederate SAML", "lastCat": "top"},
             {"id": "999995", "name": "PingFederate SCIM", "category": "Resources", "subCat1": "Integrations", "page": "PingFederate SCIM", "lastCat": "top"},
             {"id": "999995", "name": "PingOne SAML", "category": "Resources", "subCat1": "Integrations", "page": "PingOne SAML", "lastCat": "top"},
+            {"id": "999995", "name": "React Native Expo", "category": "Resources", "subCat1": "Integrations", "page": "React Native Expo", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -1061,7 +1063,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('React Native Expo')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>React Native Expo</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to integrate WorkOS SSO into a React Native Expo app.</p>
