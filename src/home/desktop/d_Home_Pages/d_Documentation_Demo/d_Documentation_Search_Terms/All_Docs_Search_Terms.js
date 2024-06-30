@@ -16785,6 +16785,30 @@ const results = [
     "subCat1": "Integrations",
     "page": "Okta SAML",
     "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Okta SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Okta SCIM",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "OneLogin SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "OneLogin SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "OneLogin SCIM",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "OneLogin SCIM",
+    "lastCat": "top"
   }
 ];
 export default results;
