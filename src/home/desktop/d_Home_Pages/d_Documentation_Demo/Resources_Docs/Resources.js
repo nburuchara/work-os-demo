@@ -126,6 +126,7 @@ export default class Resources extends Component {
             "OneLogin SAML": "oneLoginSaml",
             "OneLogin SCIM": "oneLoginScim",
             "Oracle SAML": "oracleSaml",
+            "PingFederate SAML": "pingFedSaml",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -325,6 +326,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "OneLogin SAML", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SAML", "lastCat": "top"},
             {"id": "999995", "name": "OneLogin SCIM", "category": "Resources", "subCat1": "Integrations", "page": "OneLogin SCIM", "lastCat": "top"},
             {"id": "999995", "name": "Oracle SAML", "category": "Resources", "subCat1": "Integrations", "page": "Oracle SAML", "lastCat": "top"},
+            {"id": "999995", "name": "PingFederate SAML", "category": "Resources", "subCat1": "Integrations", "page": "PingFederate SAML", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -1011,7 +1013,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('PingFederate SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>PingFederate SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to PingFederate via SAML.</p>
