@@ -68,6 +68,7 @@ export default class Integrations extends Component {
             simpleSamlPhp: false,
             supabase: false,
             VMWare: false,
+            workday: false,
 
             prevSelectedPage: "",
 
@@ -166,6 +167,7 @@ export default class Integrations extends Component {
             "simpleSamlPhp": "simpleSamlPhp",
             "supabase": "supabase",
             "VMWare": "VMWare",
+            "workday": "workday",
             
         };
       
@@ -257,6 +259,7 @@ export default class Integrations extends Component {
             "simpleSamlPhp": "simpleSamlPhp",
             "supabase": "supabase",
             "VMWare": "VMWare",
+            "workday": "workday",
 
         };
         const keys = Object.keys(pageMap);
@@ -330,7 +333,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric, shibbolethUnsolicited, simpleSamlPhp, supabase, VMWare } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric, shibbolethUnsolicited, simpleSamlPhp, supabase, VMWare, workday } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -11153,7 +11156,177 @@ export default class Integrations extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>SP Metadata</label> link. It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
+                            <div id='img714' className={`enlargable-image-container ${this.state.enlargedImageId === 'img714' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img714')}>
+                                    <img  src='/assets/vmware_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Next, you will provide the Metadata URL from VMware.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s SAML 2.0 configuration in their VMware admin dashboard. But, should that not be the case during your setup, here’s how to obtain it.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Create a new SaaS Application</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In your Workspace ONE Catalog, click “New”. Give your application a descriptive name.</p>
+
+                            <div id='img715' className={`enlargable-image-container ${this.state.enlargedImageId === 'img715' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img715')}>
+                                    <img  src='/assets/vmware_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Basic SAML Configuration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Click the “Configuration” tab from the left sidebar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy the SP Metadata Link from your VMware connection in the WorkOS dashboard and paste it in the URL/XML field under Configuration in Workspace One.</p>
+
+                            <div id='img716' className={`enlargable-image-container ${this.state.enlargedImageId === 'img716' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img716')}>
+                                    <img  src='/assets/vmware_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Advanced SAML Configuration</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Continue scrolling and expand “Advanced Properties”.</p>
+
+                            <div id='img717' className={`enlargable-image-container ${this.state.enlargedImageId === 'img717' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img717')}>
+                                    <img  src='/assets/vmware_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Enable “Sign Assertion” and “Include Assertion Signature”.</p>
+
+                            <div id='img718' className={`enlargable-image-container ${this.state.enlargedImageId === 'img718' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img718')}>
+                                    <img  src='/assets/vmware_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Map</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Continue scrolling until “Custom Attribute Mapping”.</p>
+
+                            <div id='img719' className={`enlargable-image-container ${this.state.enlargedImageId === 'img719' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img719')}>
+                                    <img  src='/assets/vmware_img6.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Fill in the following attribute mappings and select “Next” until you are prompted to “Save”.</p>
+
+                            <div className='api-keys'>
+
+                                <ul>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>id</span> → <span>{'${user.objectGUID}'}</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>firstName</span> → <span>{'${user.firstName}'}</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>lastName</span> → <span>{'${user.lastName}'}</span></p></li>
+                                    <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><span>email</span> → <span>{'${user.email}'}</span></p></li>
+                                </ul>
+
+                                <div id='img720' className={`enlargable-image-container ${this.state.enlargedImageId === 'img720' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img720')}>
+                                    <img  src='/assets/vmware_img7.avif' alt="Enlargable" className="image" />
+                                </div>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Some VMware configurations use <span>user.ExternalId</span> instead of <span>user.objectGUID</span>. In this case, you would map the id attribute to <span>user.ExternalId</span>.</p>
+
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Users can <label className='demo-docs-hyperlink'>automatically be assigned roles within your application</label> by sending their group memberships. To enable this, set up a group attribute statement following the guidance below.</p>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To return this information in the attribute statement, map the groups in your identity provider to a SAML attribute named <span>groups</span>.</p>
+
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>5</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata URL</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>After saving your SaaS Application, click “Settings” then “SAML Metadata”. Click on “Copy URL” next to “Identity Provider (IdP) metadata”.</p>
+
+                            <div id='img721' className={`enlargable-image-container ${this.state.enlargedImageId === 'img721' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img721')}>
+                                    <img  src='/assets/vmware_img8.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Back in the WorkOS Dashboard, click on “Edit Metadata Configuration” in the “Metadata Configuration” section of the Connection.</p>
+
+                            <div id='img722' className={`enlargable-image-container ${this.state.enlargedImageId === 'img722' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img722')}>
+                                    <img  src='/assets/vmware_img9.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Finally, input the Metadata URL and click “Save Metadata Configuration”. Your Connection will then be linked and good to go!</p>
+
+                            <div id='img723' className={`enlargable-image-container ${this.state.enlargedImageId === 'img723' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img723')}>
+                                    <img  src='/assets/vmware_img10.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={workday}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
 
                     </div>
                 </CSSTransition>

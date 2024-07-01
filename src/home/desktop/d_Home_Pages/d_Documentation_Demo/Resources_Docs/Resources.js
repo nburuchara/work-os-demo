@@ -138,6 +138,7 @@ export default class Resources extends Component {
             "SimpleSAMLphp": "simpleSamlPhp",
             "Supabase": "supabase",
             "VMWare": "VMWare",
+            "Workday": "workday",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -349,6 +350,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "SimpleSAMLphp", "category": "Resources", "subCat1": "Integrations", "page": "SimpleSAMLphp", "lastCat": "top"},
             {"id": "999995", "name": "Supabase", "category": "Resources", "subCat1": "Integrations", "page": "Supabase", "lastCat": "top"},
             {"id": "999995", "name": "VMWare", "category": "Resources", "subCat1": "Integrations", "page": "VMWare", "lastCat": "top"},
+            {"id": "999995", "name": "Workday", "category": "Resources", "subCat1": "Integrations", "page": "Workday", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
