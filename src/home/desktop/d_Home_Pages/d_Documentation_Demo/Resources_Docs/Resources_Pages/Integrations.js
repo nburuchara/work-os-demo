@@ -64,6 +64,7 @@ export default class Integrations extends Component {
             ripplingScim: false,
             salesforce: false,
             shibbolethGeneric: false,
+            shibbolethUnsolicited: false,
 
             prevSelectedPage: "",
 
@@ -153,6 +154,7 @@ export default class Integrations extends Component {
             "ripplingScim": "ripplingScim",
             "salesforce": "salesforce",
             "shibbolethGeneric": "shibbolethGeneric",
+            "shibbolethUnsolicited": "shibbolethUnsolicited",
             
         };
       
@@ -240,6 +242,7 @@ export default class Integrations extends Component {
             "ripplingScim": "ripplingScim",
             "salesforce": "salesforce",
             "shibbolethGeneric": "shibbolethGeneric",
+            "shibbolethUnsolicited": "shibbolethUnsolicited",
 
         };
         const keys = Object.keys(pageMap);
@@ -300,7 +303,7 @@ export default class Integrations extends Component {
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric, shibbolethUnsolicited } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -10472,7 +10475,7 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -10490,7 +10493,6 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-
                     </div>
                 </CSSTransition>
 
@@ -10499,7 +10501,7 @@ export default class Integrations extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div className='demo-docs-contianer'>
+                    <div className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Shibboleth Generic SAML</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a Shibboleth Generic connection via SAML.</p>
@@ -10508,9 +10510,147 @@ export default class Integrations extends Component {
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}></p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These instructions are for connecting to Shibboleth using the <label className='demo-docs-hyperlink'>generic SAML 2.0 configuration</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>. If the organization requires the <label className='demo-docs-hyperlink'>UnsolicitedSSOConfiguration</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> instead, please use the Shibboleth <label className='demo-docs-hyperlink'>Unsolicited SAML provider documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a connection will differ by Identity Provider.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To create a Shibboleth Generic SAML connection, you’ll need the Identity Provider metadata that is available from the organization’s Shibboleth instance.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Start by logging in to your WorkOS dashboard and browse to the “Organizations” tab on the left hand navigation bar.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the organization you wish to configure a Shibboleth Generic SAML connection for, and select “Manually Configure Connection” under “Identity Provider”.</p>
+
+                            <div id='img695' className={`enlargable-image-container ${this.state.enlargedImageId === 'img695' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img695')}>
+                                    <img  src='/assets/shibbo_generic_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select “Shibboleth Generic SAML” from the Identity Provider dropdown, enter a descriptive name for the connection, and then select the “Create Connection” button.</p>
+
+                            <div id='img696' className={`enlargable-image-container ${this.state.enlargedImageId === 'img696' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img696')}>
+                                    <img  src='/assets/shibbo_generic_img2.avif' alt="Enlargable" className="image" />
+                            </div>
 
                         </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you’ve created your connection, WorkOS provides the <label className='demo-docs-hyperlink'>ACS URL</label>, <label className='demo-docs-hyperlink'>SP Metadata</label> link, and <label className='demo-docs-hyperlink'>SP Entity ID</label>. It’s readily available in your connection settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+
+                            <div id='img697' className={`enlargable-image-container ${this.state.enlargedImageId === 'img697' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img697')}>
+                                    <img  src='/assets/shibbo_generic_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The ACS URL is the location an Identity Provider redirects its authentication response to. The SP Metadata link contains a metadata file that the organization can use to set up the Shibboleth Generic SAML integration.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SP Entity ID is a URI used to identify the issuer of a SAML request and the audience of a SAML response. In this case, the SP Entity ID is used to communicate that WorkOS will be the party performing SAML requests to the organization’s Shibboleth instance, and that WorkOS is the intended audience of the SAML responses from the Shibboleth instance.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What you’ll need</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In order to integrate you’ll need the Shibboleth IdP metadata.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Normally, this information will come from the organization’s IT Management team when they set up your application’s Shibboleth configuration. But, should that not be the case during your setup, here’s how to obtain them.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Enter Service Provider Details</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy and Paste the “ACS URL” and “SP Entity ID” into the corresponding fields for Service Provider details and configuration. For some Shibboleth setups, you can use the metadata found at the SP Metadata link to configure the Shibboleth connection.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Obtain Identity Provider Metadata</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Download the IdP metadata from the Shibboleth instance. Refer to the <label className='demo-docs-hyperlink'>Shibboleth documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for more information on this metadata file. Keep in mind where the file was saved, as we’ll be uploading it later to configure the Connection.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configure Attribute Mapping</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>At a minimum, the Attribute Statement in the SAML Response should include <span>id</span>, <span>email</span>, <span>firstName</span>, and <span>lastName</span> attributes. Refer to the <label className='demo-docs-hyperlink'>Shibboleth documentation</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for more information on adding and mapping attributes.</p>
+
+                            </div>
+
+                            <div style={{marginTop: "5%"}} className='testing-the-api-info-box'>
+                                <div className='api-info-box-img'>
+                                    <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
+                                </div>
+                                <div className='api-info-box-text'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.3%", marginRight: "2%"}}>This feature is currently in beta, contact <label id='Add an endpoint to initiate SSO' className='demo-docs-hyperlink'>customer support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} style={{ width: "2%", marginLeft: "1%"}} src='/assets/docs_api_text_box_external_link_icon.png' alt='no img available'/></span> for more information.</p>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To return this information in the attribute statement, map the groups in your identity provider to a SAML attribute named <span>groups</span>.</p>
+
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>4</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Upload Metadata File</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the connection settings in the WorkOS Dashboard, click “Edit Metadata Configuration”.</p>
+
+                            <div id='img698' className={`enlargable-image-container ${this.state.enlargedImageId === 'img698' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img698')}>
+                                    <img  src='/assets/shibbo_generic_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Upload the XML metadata file from Shibboleth into the “Metadata File” field and select “Save Metadata Configuration”. Your connection will then be linked and good to go!</p>
+
+                            <div id='img699' className={`enlargable-image-container ${this.state.enlargedImageId === 'img699' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img699')}>
+                                    <img  src='/assets/shibbo_generic_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={shibbolethUnsolicited}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+
                     </div>
                 </CSSTransition>
 
