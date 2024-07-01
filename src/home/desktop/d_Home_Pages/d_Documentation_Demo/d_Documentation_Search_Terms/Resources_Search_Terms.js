@@ -58,6 +58,8 @@ const results = [
     {"id": "999995", "name": "React Native Expo", "category": "Resources", "subCat1": "Integrations", "page": "React Native Expo", "lastCat": "top"},
     {"id": "999995", "name": "Rippling SAML", "category": "Resources", "subCat1": "Integrations", "page": "Rippling SAML", "lastCat": "top"},
     {"id": "999995", "name": "Rippling SCIM", "category": "Resources", "subCat1": "Integrations", "page": "Rippling SCIM", "lastCat": "top"},
+    {"id": "999995", "name": "Salesforce", "category": "Resources", "subCat1": "Integrations", "page": "Salesforce", "lastCat": "top"},
+    {"id": "999995", "name": "Shibboleth Generic SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Generic SAML", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//

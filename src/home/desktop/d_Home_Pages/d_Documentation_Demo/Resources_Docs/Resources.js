@@ -133,6 +133,7 @@ export default class Resources extends Component {
             "Rippling SAML": "ripplingSaml",
             "Rippling SCIM": "ripplingScim",
             "Salesforce": "salesforce",
+            "Shibboleth Generic SAML": "shibbolethGeneric",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -339,6 +340,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Rippling SAML", "category": "Resources", "subCat1": "Integrations", "page": "Rippling SAML", "lastCat": "top"},
             {"id": "999995", "name": "Rippling SCIM", "category": "Resources", "subCat1": "Integrations", "page": "Rippling SCIM", "lastCat": "top"},
             {"id": "999995", "name": "Salesforce", "category": "Resources", "subCat1": "Integrations", "page": "Salesforce", "lastCat": "top"},
+            {"id": "999995", "name": "Shibboleth Generic SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Generic SAML", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -1122,7 +1124,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/salesforce_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('Shibboleth Generic SAML')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Shibboleth Generic SAML</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a Shibboleth Generic connection via SAML.</p>
