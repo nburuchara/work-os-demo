@@ -66,6 +66,8 @@ export default class Integrations extends Component {
             shibbolethGeneric: false,
             shibbolethUnsolicited: false,
             simpleSamlPhp: false,
+            supabase: false,
+            VMWare: false,
 
             prevSelectedPage: "",
 
@@ -93,6 +95,11 @@ export default class Integrations extends Component {
 
                 //* - DROPPDOWN BUTTONS - *//
             hiddenDropdownBtn1: false,
+
+                //* - TWO TAB SELECTIONS - *//
+            usingOption1: true, 
+            usingOption2: false, 
+            usingOption3: false
         }
     }
 
@@ -157,6 +164,8 @@ export default class Integrations extends Component {
             "shibbolethGeneric": "shibbolethGeneric",
             "shibbolethUnsolicited": "shibbolethUnsolicited",
             "simpleSamlPhp": "simpleSamlPhp",
+            "supabase": "supabase",
+            "VMWare": "VMWare",
             
         };
       
@@ -246,6 +255,8 @@ export default class Integrations extends Component {
             "shibbolethGeneric": "shibbolethGeneric",
             "shibbolethUnsolicited": "shibbolethUnsolicited",
             "simpleSamlPhp": "simpleSamlPhp",
+            "supabase": "supabase",
+            "VMWare": "VMWare",
 
         };
         const keys = Object.keys(pageMap);
@@ -303,10 +314,23 @@ export default class Integrations extends Component {
             [`hiddenDropdownBtn${num}`]: !prevState[`hiddenDropdownBtn${num}`]
         }));
     }
+
+    usingOption1Enter = () => { this.setState({usingOption1Hovered: true}) }
+    usingOption1Leave = () => { this.setState({usingOption1Hovered: false}) }
+    
+    usingOption2Enter = () => { this.setState({usingOption2Hovered: true}) }
+    usingOption2Leave = () => { this.setState({usingOption2Hovered: false}) }
+    
+    usingOption3Enter = () => { this.setState({usingOption3Hovered: true}) }
+    usingOption3Leave = () => { this.setState({usingOption3Hovered: false}) }
+
+    usingOption1Clicked = () => { this.setState({usingOption1: true, usingOption2: false, usingOption3: false}) }
+    usingOption2Clicked = () => { this.setState({usingOption1: false, usingOption2: true, usingOption3: false}) }
+    usingOption3Clicked = () => { this.setState({usingOption1: false, usingOption2: false, usingOption3: true}) }
     
     render () {
                 //* - INTEGRATIONS PAGES - *//
-            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric, shibbolethUnsolicited, simpleSamlPhp } = this.state;
+            const { saml, scim, sftp, openIDConnect, accessPeopleHR, adpOpenIDConnect, apple, auth0, awsCognito, bambooHR, breatheHR, bubblePlugin, casSaml, cezanneHR, classLink, cloudflare, cyberarkSaml, cyberarkScim, duo, entraIdSaml, entraIdScim, firebase, fourth, githubOAuth, googleDirectorySync, googleOAuth, googleSaml, hiBob, jumpcloudSaml, jumpcloudScim, keycloak, lastPass, loginGov, microsoftSaml, microsoftOAuth, miniOrange, netIQ, nextAuth, oktaSaml, oktaScim, oneLoginSaml, oneLoginScim, oracleSaml, pingFedSaml, pingFedScim, pingOneSaml, reactNative, ripplingSaml, ripplingScim, salesforce, shibbolethGeneric, shibbolethUnsolicited, simpleSamlPhp, supabase, VMWare } = this.state;
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
             const { sidebarMenuClicked } = this.props;
@@ -315,8 +339,10 @@ export default class Integrations extends Component {
             const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
 
                 //* - - HIDDEN DROPDOWN - - *//
-
             const { hiddenDropdownBtn1 } = this.state;
+
+                //* - THREE TAB SELECTION VAR(S) - *//
+            const { usingOption1, usingOption2, usingOption3, usingOption1Hovered, usingOption2Hovered, usingOption3Hovered } = this.state;
 
         return (
             <Styles>
@@ -10681,7 +10707,6 @@ export default class Integrations extends Component {
                             </div>
 
                         </div>
-
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
@@ -10791,7 +10816,6 @@ export default class Integrations extends Component {
                             </div>
                         
                         </div>
-
                     </div>
                 </CSSTransition>
 
@@ -10931,6 +10955,203 @@ export default class Integrations extends Component {
                             </div>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Connection will then be Active and good to go!</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={supabase}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Supabase</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to use WorkOS with your existing Supabase applications.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This guide outlines the steps to make WorkOS SSO connections available to your Supabase application. It will require a few changes to your existing Supabase application code.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>1</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Copy WorkOS Client ID and API Key</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Supabase uses the WorkOS Client ID and API Key to initiate the authentication flow and to return the SSO user profile. The first step is finding the Client ID and the API Key in the WorkOS dashboard.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>In the WorkOS dashboard, go to <strong>Configuration</strong> and under the “Settings” tab and copy the Client ID.</p>
+
+                            <div id='img709' className={`enlargable-image-container ${this.state.enlargedImageId === 'img709' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img709')}>
+                                    <img  src='/assets/supabase_img1.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select <strong>API Keys</strong> on the left-side navigation bar and either copy an existing API Key or create a new API Key and copy it.</p>
+
+                            <div id='img710' className={`enlargable-image-container ${this.state.enlargedImageId === 'img710' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img710')}>
+                                    <img  src='/assets/supabase_img2.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>2</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add your WorkOS credentials into your Supabase Project and configure the Redirect URL</h1>
+                                </div>
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Sign in to Supabase and then go to your Supabase Project Dashboard. Navigate to <strong>Authentication → Explore Auth</strong>.</p>
+
+                            <div id='img711' className={`enlargable-image-container ${this.state.enlargedImageId === 'img711' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img711')}>
+                                    <img  src='/assets/supabase_img3.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Select the Providers tab and scroll down to WorkOS and enter the WorkOS URL as <strong>https://api.workos.com</strong>. Then enter the Client ID and API Key copied from the WorkOS Dashboard, toggle to enable WorkOS as a provider and click <strong>Save</strong>.</p>
+
+                            <div id='img712' className={`enlargable-image-container ${this.state.enlargedImageId === 'img712' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img712')}>
+                                    <img  src='/assets/supabase_img4.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Copy the Redirect URL from the WorkOS provider section. In the WorkOS dashboard navigate to <strong>Configuration → Settings → Redirect URIs</strong> and click <strong>Edit Redirect URIs</strong> to input the copied Redirect URL.</p>
+
+                            <div id='img713' className={`enlargable-image-container ${this.state.enlargedImageId === 'img713' ? 'enlarged' : ''}`} onClick={() => this.toggleEnlarged('img713')}>
+                                    <img  src='/assets/supabase_img5.avif' alt="Enlargable" className="image" />
+                            </div>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <div className='labeled-header'>
+                                <div className='label-tag'>
+                                    <span className={sidebarMenuClicked ? "label-tag-sidebar-span": ""}>3</span>
+                                </div>
+                                <div className='label-desc'>
+                                    <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Add login code to your client app</h1>
+                                </div>
+                            </div>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When a user signs in, call <span>signInWithOAuth</span> with <span>workos</span> as the provider. Pass in a Connection ID, Organization ID, or provider type (for OAuth) under <span>queryParams</span>.</p>
+
+                            </div>
+
+                            <div style={{marginBottom: "5%"}} className='two-tab-selection'>
+                                <div style={{borderBottom: usingOption1 ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingOption1Clicked}
+                                    onMouseEnter={this.usingOption1Enter}
+                                    onMouseLeave={this.usingOption1Leave}
+                                    style={{fontWeight: usingOption1 ? "bold" : "normal", backgroundColor: usingOption1Hovered ? "#e6e6eb": "", width: "100%"}}
+                                    >Connection</button>
+                                </div>
+                                <div style={{borderBottom: usingOption2 ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingOption2Clicked}
+                                    onMouseEnter={this.usingOption2Enter}
+                                    onMouseLeave={this.usingOption2Leave}
+                                    style={{fontWeight: usingOption2 ? "bold" : "normal", backgroundColor: usingOption2Hovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Organization</button>
+                                </div>
+                                <div style={{borderBottom: usingOption3 ? "2.5px solid #6363f1" : ""}} className={sidebarMenuClicked ? "two-tab-selection-sidebar-tab" : "two-tab-selection-tab"}>
+                                    <button
+                                    onClick={this.usingOption3Clicked}
+                                    onMouseEnter={this.usingOption3Enter}
+                                    onMouseLeave={this.usingOption3Leave}
+                                    style={{fontWeight: usingOption3 ? "bold" : "normal", backgroundColor: usingOption3Hovered ? "#e6e6eb" : "", width: "100%"}}
+                                    >Provider</button>
+                                </div>
+                            </div>
+
+                            {usingOption1 && 
+                                <div>
+                                    <CodeSnippetStruct 
+                                    id={126}
+                                    headerTabs={0}
+                                    dropdownDisabled={true}
+                                    dropdownDisabledAndHidden={true}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Connection" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                </div>
+                            }
+
+                            {usingOption2 && 
+                                <div>
+                                    <CodeSnippetStruct 
+                                    id={127}
+                                    headerTabs={0}
+                                    dropdownDisabled={true}
+                                    dropdownDisabledAndHidden={true}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Organization" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                </div>
+                            }
+
+                            {usingOption3 && 
+                                <div>
+                                    <CodeSnippetStruct 
+                                    id={128}
+                                    headerTabs={0}
+                                    dropdownDisabled={true}
+                                    dropdownDisabledAndHidden={true}
+                                    sideBarOpen={sidebarMenuClicked}
+                                    snippet="Provider" 
+                                    updateSelectedLang={this.newLangSelected}
+                                    selectedLang={this.state.currentSelectedLanguage}/>
+                                </div>
+                            }
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Summary</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>With a few lines of code, you can add WorkOS as an SSO provider and enable features like the admin portal and dozens of integrations within your Supabase application.</p>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={VMWare}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>VMware</h1>
+                            <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to configure a connection to VMware via SAML.</p>
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Each SSO Identity Provider requires specific information to create and configure a new <label className='demo-docs-hyperlink'>Connection</label>. Often, the information required to create a connection will differ by Identity Provider.</p>
+
+                        </div>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What WorkOS provides</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides the <label className='demo-docs-hyperlink'>SP Metadata</label> link. It’s readily available in your Connection Settings in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
 
                         </div>
 

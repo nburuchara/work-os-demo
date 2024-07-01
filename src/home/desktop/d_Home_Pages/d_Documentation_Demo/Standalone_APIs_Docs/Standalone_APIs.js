@@ -700,7 +700,7 @@ export default class StandaloneAPIs extends Component {
     render () {
 
                 //* - STANDALONE APIS SECTIONS VAR(S) - *//
-        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams,       samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs, logStreams, domainVerification, apiDomainVerification} = this.state;
+        const { gettingStarted, testSSO, exampleApps, signInUX, loginFlows, redirectURIs, signingCertificates, jitProvisioning, launchChecklist, faqForItTeams, samlSecurity, directorySync, quickStartDirectorySync, exampleAppsDirectorySync, handleInactieUsers, understandingEvents, userAttributes, roleData, roleArchitecture, adminPortal, exampleAppsAdminPortal, customBranding, auditLogs, exportingEvents, metadataScheme, editingEvents, adminPortalAuditLogs, logStreams, domainVerification, apiDomainVerification} = this.state;
 
             //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
         const { sidebarMenuClicked } = this.props;

@@ -15643,6 +15643,63 @@ const codeSnippets = [
       }
     },
 
+    { //* Connection (126)
+      id: 126,
+      title: "Connection",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">async function</span> <span style="color: #5854c6;">signInWithWorkOS</span>() {',
+          '2   <span style="color: #148a68;">const</span> { data, error } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> supabase.auth.<span style="color: #5854c6;">signInWithOAuth</span>({',
+          '3     provider<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'workos\'</span>,',
+          '4     options<span style="color: #ce3559;">:</span> {',
+          '5       queryParams<span style="color: #ce3559;">:</span> {',
+          '6         connection<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltconnection_id&gt\'</span>,',
+          '7       },',
+          '8     },',
+          '9   });',
+          '10 }',
+        ]
+      }
+    },
+
+    { //* Organization (127)
+      id: 127,
+      title: "Organization",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">async function</span> <span style="color: #5854c6;">signInWithWorkOS</span>() {',
+          '2   <span style="color: #148a68;">const</span> { data, error } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> supabase.auth.<span style="color: #5854c6;">signInWithOAuth</span>({',
+          '3     provider<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'workos\'</span>,',
+          '4     options<span style="color: #ce3559;">:</span> {',
+          '5       queryParams<span style="color: #ce3559;">:</span> {',
+          '6         organization<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltorganization_id&gt\'</span>,',
+          '7       },',
+          '8     },',
+          '9   });',
+          '10 }',
+        ]
+      }
+    },
+
+    { //* Provider (128)
+      id: 128,
+      title: "Provider",
+      code: {
+        javascript: [
+          '1 <span style="color: #148a68;">async function</span> <span style="color: #5854c6;">signInWithWorkOS</span>() {',
+          '2   <span style="color: #148a68;">const</span> { data, error } <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> supabase.auth.<span style="color: #5854c6;">signInWithOAuth</span>({',
+          '3     provider<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'workos\'</span>,',
+          '4     options<span style="color: #ce3559;">:</span> {',
+          '5       queryParams<span style="color: #ce3559;">:</span> {',
+          '6         workos_provider<span style="color: #ce3559;">:</span> <span style="color: #143465;">\'&ltprovider_type&gt\'</span>,',
+          '7       },',
+          '8     },',
+          '9   });',
+          '10 }',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;

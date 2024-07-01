@@ -136,6 +136,8 @@ export default class Resources extends Component {
             "Shibboleth Generic SAML": "shibbolethGeneric",
             "Shibboleth Unsolicited SAML": "shibbolethUnsolicited",
             "SimpleSAMLphp": "simpleSamlPhp",
+            "Supabase": "supabase",
+            "VMWare": "VMWare",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -345,6 +347,8 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Shibboleth Generic SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Generic SAML", "lastCat": "top"},
             {"id": "999995", "name": "Shibboleth Unsolicited SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Unsolicited SAML", "lastCat": "top"},
             {"id": "999995", "name": "SimpleSAMLphp", "category": "Resources", "subCat1": "Integrations", "page": "SimpleSAMLphp", "lastCat": "top"},
+            {"id": "999995", "name": "Supabase", "category": "Resources", "subCat1": "Integrations", "page": "Supabase", "lastCat": "top"},
+            {"id": "999995", "name": "VMWare", "category": "Resources", "subCat1": "Integrations", "page": "VMWare", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -1161,7 +1165,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('Supabase')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>Supabase</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to use WorkOS with your existing Supabase applications.</p>
@@ -1184,7 +1188,7 @@ export default class Resources extends Component {
                             </div>
 
                             <div className='integrationsContainer'>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "2%" : ""}} onClick={() => this.goToIntegrations('VMWare')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>VMware</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a connection to VMware via SAML.</p>
