@@ -179,7 +179,7 @@ export default class Integrations extends Component {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
             }, 1000)
         } else {
-          console.error("Unknown selected page:", selectedPage);
+        //   console.error("Unknown selected page:", selectedPage);
         }
     }
 

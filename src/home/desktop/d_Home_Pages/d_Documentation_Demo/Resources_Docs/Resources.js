@@ -52,7 +52,7 @@ export default class Resources extends Component {
     }
 
     componentDidMount = async () => {
-        window.addEventListener('scroll', this.handleScroll);
+        // window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
@@ -77,9 +77,9 @@ export default class Resources extends Component {
             this.loadSelectedPage(page);
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
+            }, 500)
         } else {
-          console.error("Unknown selected page:", selectedPage);
+        //   console.error("Unknown selected page:", selectedPage);
         }
 
         const integrationsPageMap = {
@@ -148,8 +148,11 @@ export default class Resources extends Component {
                 integrationsSearchedObect: selectedPage
             })
             this.loadSelectedIntegraionsPage("integrationsPages");
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 500)
         } else {
-          console.error("Unknown selected integrations page:", selectedPage);
+        //   console.error("Unknown selected integrations page:", selectedPage);
         }
 
     };
@@ -185,13 +188,26 @@ export default class Resources extends Component {
     }
 
     loadSelectedIntegraionsPage = (selectedPage) => {
-        this.hideAllPages() 
+        this.hideAllPages()
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: true,
+        //     })
+        // }, 600)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 900)
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: false,
+        //     })
+        // }, 1300)
         setTimeout (() => {
             this.setState({
                 currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
             })
-        }, 500)
+        }, 750)
     }
 
     hideAllPages = () => {

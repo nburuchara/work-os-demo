@@ -97,7 +97,7 @@ handleItemClick = (index, item) => {
         let newActiveIndices;
         if (itemIndex !== -1) {
             // Deselect the clicked item
-            newActiveIndices = activeIndices.filter((_, i) => i === itemIndex);
+            newActiveIndices = activeIndices.filter((_, i) => i !== itemIndex);
         } else {
             // Select the clicked item and collapse other items with the same parent
             const parentIndex = this.getParentIndex(index);

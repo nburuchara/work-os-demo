@@ -2908,7 +2908,6 @@ export default class DocsNavigationMenu extends Component {
     }
 
     getSearchedTerm = (category, option, searchedPage, searchingSamePage) => {
-        console.log("did we get here")
         new Promise((resolve) => {
             const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
             setTimeout(() => {
