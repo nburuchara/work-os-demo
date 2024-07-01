@@ -135,6 +135,7 @@ export default class Resources extends Component {
             "Salesforce": "salesforce",
             "Shibboleth Generic SAML": "shibbolethGeneric",
             "Shibboleth Unsolicited SAML": "shibbolethUnsolicited",
+            "SimpleSAMLphp": "simpleSamlPhp",
 
         }
         const integrationsPage = integrationsPageMap[selectedPage];
@@ -343,6 +344,7 @@ export default class Resources extends Component {
             {"id": "999995", "name": "Salesforce", "category": "Resources", "subCat1": "Integrations", "page": "Salesforce", "lastCat": "top"},
             {"id": "999995", "name": "Shibboleth Generic SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Generic SAML", "lastCat": "top"},
             {"id": "999995", "name": "Shibboleth Unsolicited SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Unsolicited SAML", "lastCat": "top"},
+            {"id": "999995", "name": "SimpleSAMLphp", "category": "Resources", "subCat1": "Integrations", "page": "SimpleSAMLphp", "lastCat": "top"},
         ]
         for (let i = 0; i < integrationsPageMap.length; i++) {
             if (integrationsPageMap[i].page === page) {
@@ -1147,7 +1149,7 @@ export default class Resources extends Component {
                                         <img style={{marginTop: sidebarMenuClicked ? "20%" : ""}} className={sidebarMenuClicked ? "" : ""} src='/assets/shibboleth_logo_icon.png'/>
                                     </div>
                                 </div>
-                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} className='integrationsCol'>
+                                <div style={{width: sidebarMenuClicked ? "48%": "", marginRight: sidebarMenuClicked ? "0px" : ""}} onClick={() => this.goToIntegrations('SimpleSAMLphp')} className='integrationsCol'>
                                     <div style={{width: sidebarMenuClicked ? "80%" : ""}} className='integrationsText'>
                                         <h3 className={sidebarMenuClicked ? "integrationsText-sidebar-h3" : ""}>SimpleSAMLphp</h3>
                                         <p style={{fontSize: sidebarMenuClicked ? "" : "60%"}} className={sidebarMenuClicked ? "integrationsText-sidebar-p" : ""}>Learn how to configure a SimpleSAMLphp connection.</p>

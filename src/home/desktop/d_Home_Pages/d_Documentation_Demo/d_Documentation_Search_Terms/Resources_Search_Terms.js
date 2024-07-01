@@ -61,6 +61,7 @@ const results = [
     {"id": "999995", "name": "Salesforce", "category": "Resources", "subCat1": "Integrations", "page": "Salesforce", "lastCat": "top"},
     {"id": "999995", "name": "Shibboleth Generic SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Generic SAML", "lastCat": "top"},
     {"id": "999995", "name": "Shibboleth Unsolicited SAML", "category": "Resources", "subCat1": "Integrations", "page": "Shibboleth Unsolicited SAML", "lastCat": "top"},
+    {"id": "999995", "name": "SimpleSAMLphp", "category": "Resources", "subCat1": "Integrations", "page": "SimpleSAMLphp", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
