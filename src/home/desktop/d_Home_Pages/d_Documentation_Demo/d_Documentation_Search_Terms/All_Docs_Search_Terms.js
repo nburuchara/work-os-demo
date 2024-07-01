@@ -7807,7 +7807,7 @@ const results = [
     "category": "Standalone APIs",
     "subCat1": "Single Sign-On",
     "subCat2": "Quick Start",
-    "subCat3": "Conifigure a redirect URI",
+    "subCat3": "Configure a redirect URI",
     "page": "Quick Start",
     "lastCat": "Configure a redirect URI"
   },
@@ -7819,7 +7819,7 @@ const results = [
     "subCat2": "Quick Start",
     "subCat3": "Configure a redirect URI",
     "page": "Quick Start",
-    "lastCat": "Conifigure a redirect URI"
+    "lastCat": "Configure a redirect URI"
   },
   {
     "id": "999393",
@@ -16864,6 +16864,46 @@ const results = [
     "category": "Resources",
     "subCat1": "Integrations",
     "page": "Rippling SCIM",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Salesforce",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Salesforce",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Shibboleth Generic SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Shibboleth Generic SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Shibboleth Unsolicited SAML",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Shibboleth Unsolicited SAML",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "SimpleSAMLphp",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "SimpleSAMLphp",
+    "lastCat": "top"
+  },
+  {
+    "id": "999995",
+    "name": "Supabase",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "page": "Supabase",
     "lastCat": "top"
   }
 ];
