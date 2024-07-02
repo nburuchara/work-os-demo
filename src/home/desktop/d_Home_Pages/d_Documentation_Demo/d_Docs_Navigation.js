@@ -2339,6 +2339,11 @@ export default class DocsNavigationMenu extends Component {
 
             //* - - DOCS SEARCH RESULTS PROPS - - *//
 
+            usrMgmtScrollID: "",
+            standaloneApisScrollID: "",
+            eventsWebhooksScrollID: "",
+            resourcesScrollID: "",
+
             menuOption1SearchCategory: "",
             menuOption1SearchTermObject: null,
             menuOption2SearchCategory: "",
@@ -2998,6 +3003,23 @@ export default class DocsNavigationMenu extends Component {
     };
 
     clearRecentSearch = async () => {
+        // if (page === 1) {
+        //     this.setState({
+
+        //     })
+        // } else if () {
+        //     this.setState({
+                
+        //     })
+        // } else if () {
+        //     this.setState({
+                
+        //     })
+        // } else if () {
+        //     this.setState({
+                
+        //     })
+        // }
        this.setState({
             menuOption1SearchTermObject: null,
             menuOption2SearchTermObject: null,
@@ -3128,8 +3150,66 @@ export default class DocsNavigationMenu extends Component {
         await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
     }
 
+    navigateToNewPageOption1 = async (page, pageObject) => {
+        await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
+    }
+
+    navigateToNewPageOption2 = async (page, pageObject) => {
+        await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
+    }
+
+    navigateToNewPageOption3 = async (page, pageObject) => {
+        await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
+    }
+
+    navigateToNewPageOption4 = async (page, pageObject) => {
+        await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
+    }
+
     searchInternalPage = () => {
         
+    }
+
+    componentDidUpdate = () => {
+        // const { standaloneAPIsDropdown, standaloneApisScrollID, eventsAndWebhooksDropdown, eventsWebhooksScrollID, resourcesDropdown, resourcesScrollID, usrMgmtScrollID, userManagementDropdown } = this.state;
+        // if (this.state.menuOption1 === false) {
+        //     if (eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || standaloneAPIsDropdown === true || standaloneApisScrollID !== "" ) {
+        //         standaloneAPIsDropdown = false
+        //         standaloneApisScrollID = ""
+        //         eventsAndWebhooksDropdown = false
+        //         eventsWebhooksScrollID = ""
+        //         resourcesDropdown = false
+        //         resourcesScrollID = ""
+        //     }
+        // } else if (this.state.menuOption2 === false) {
+        //     if (eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
+        //         userManagementDropdown = false
+        //         usrMgmtScrollID = ""
+        //         eventsAndWebhooksDropdown = false
+        //         eventsWebhooksScrollID = ""
+        //         resourcesDropdown = false
+        //         resourcesScrollID = ""
+        //     }
+        // } else if (this.state.menuOption3 === false) {
+        //     if (standaloneAPIsDropdown === true || standaloneApisScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
+        //         standaloneAPIsDropdown = false
+        //         standaloneApisScrollID = ""
+        //         userManagementDropdown = false
+        //         usrMgmtScrollID = ""
+        //         resourcesDropdown = false
+        //         resourcesScrollID = ""
+        //     }
+
+        // } else if (this.state.menuOption4 === false) {
+        //     if (standaloneAPIsDropdown === true || standaloneApisScrollID !== "" || eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
+        //         standaloneAPIsDropdown = false
+        //         standaloneApisScrollID = ""
+        //         eventsAndWebhooksDropdown = false
+        //         eventsWebhooksScrollID = ""
+        //         userManagementDropdown = false
+        //         usrMgmtScrollID = ""
+        //     }
+        // }
     }
 
     render () {
@@ -3203,7 +3283,6 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown
-                                            pageSelected={this.state.currentPage} 
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3225,7 +3304,6 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
-                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3247,7 +3325,6 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
-                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3269,7 +3346,6 @@ export default class DocsNavigationMenu extends Component {
                                     >
                                         <div style={{marginTop: "50px"}} className="dropdown-menu">
                                             <NestedDropdown 
-                                            pageSelected={this.state.currentPage}
                                             searchPath={this.state.searchPath} 
                                             setCurrentIndex={this.setCurrentIndex}
                                             setSearchPath={this.setSearchPath}
@@ -3618,13 +3694,13 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
-                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage}/>}
+                    {showUserManagementDoc && <UserManagement sidebarMenuClicked={sidebarMenuClicked} scrollToID={usrMgmtScrollID} ref={this.menuOption1Ref} searchedTerm={this.state.menuOption1SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption1}/>}
 
-                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} searchedTerm={this.state.menuOption2SearchTermObject} clearLatestSearch={this.clearRecentSearch} ref={this.menuOption2Ref} navigateToNewPage={this.navigateToNewPage}/>}
+                    {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} searchedTerm={this.state.menuOption2SearchTermObject} clearLatestSearch={this.clearRecentSearch} ref={this.menuOption2Ref} navigateToNewPage={this.navigateToNewPageOption2}/>}
 
-                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} />}
+                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3} />}
 
-                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPage} selectInternalPage={this.searchedTermClicked} />}
+                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />}
 
             </Styles>
         )

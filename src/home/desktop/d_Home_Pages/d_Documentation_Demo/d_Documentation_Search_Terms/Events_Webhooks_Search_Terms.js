@@ -7,30 +7,30 @@ const results = [
 
     //! - EVENT TYPES - !//                     - - - EVENT TYPES - - - 
 
-    {"id": "998587", "name": "Event Types", "category": "Events and webhooks", "page": "Event types", "lastCat": "top"},
+    {"id": "998573", "name": "Event Types", "category": "Events and webhooks", "page": "Event types", "lastCat": "top"},
 
     //! - OVERVIEW (DATA SYNCING) - !//         - - - DATA SYNCING - - - 
 
-    {"id": "998587", "name": "Data Syncing", "category": "Events and webhooks", "page": "Overview", "lastCat": "top"},
+    {"id": "998572", "name": "Data Syncing", "category": "Events and webhooks", "page": "Overview", "lastCat": "top"},
 
     //! - SYNCING WITH EVENTS API - !//        
 
-    {"id": "998587", "name": "Syncing with events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
-    {"id": "998587", "name": "Sync data using the events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
+    {"id": "998571", "name": "Syncing with events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
+    {"id": "998570", "name": "Sync data using the events API", "category": "Events and webhooks", "page": "Syncing with events API", "lastCat": "top"},
 
     //! - SYNCING WITH WEBHOOKS - !//        
 
-    {"id": "998587", "name": "Syncing with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
-    {"id": "998587", "name": "Sync data with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+    {"id": "998569", "name": "Syncing with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
+    {"id": "998568", "name": "Sync data with webhooks", "category": "Events and webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
 
     //! - DATA RECONCILIATION - !//        
 
-    {"id": "998587", "name": "Data reconciliation", "category": "Events and webhooks", "page": "Data reconciliation", "lastCat": "top"},
+    {"id": "998567", "name": "Data reconciliation", "category": "Events and webhooks", "page": "Data reconciliation", "lastCat": "top"},
 
     //! - STREAMING TO DATADOG - !//        
 
-    {"id": "998587", "name": "Streaming to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
-    {"id": "998587", "name": "Stream events to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998565", "name": "Streaming to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+    {"id": "998564", "name": "Stream events to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
 
     //? - - - - - - - - - - - - - - - ?//
     //? - - H1 (IN-TEXT) HEADERS - - ?//
@@ -55,44 +55,44 @@ const results = [
 
     //! - OVERVIEW (DATA SYNCING) - !// 
 
-    {"id": "998587", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Introduction"},
-    {"id": "998587", "name": "Sync using the events API", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Sync using the events API"},
-    {"id": "998587", "name": "Sync using webhooks", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Sync using webhooks"},
-    {"id": "998587", "name": "API vs. webhooks", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "API vs. webhooks"},
+    {"id": "998563", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Introduction"},
+    {"id": "998562", "name": "Sync using the events API", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Sync using the events API"},
+    {"id": "998561", "name": "Sync using webhooks", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "Sync using webhooks"},
+    {"id": "998560", "name": "API vs. webhooks", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "API vs. webhooks"},
 
     //! - SYNCING WITH EVENTS API - !//        
 
-    {"id": "998587", "name": "What you’ll build", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "What you’ll build"},
-    {"id": "998587", "name": "Before getting started", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Before getting started"},
-    {"id": "998587", "name": "Integrate the events API SDK", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
-    {"id": "998587", "name": "Start consuming events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Start consuming events"},
-    {"id": "998587", "name": "Select event types", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Select event types"},
-    {"id": "998587", "name": "Handle event replay", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Handle event replay"},
-    {"id": "998587", "name": "Migrating from webhooks", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
-    {"id": "998587", "name": "Scaling recommendations", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Scaling recommendations"},
+    {"id": "998559", "name": "What you’ll build", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "What you’ll build"},
+    {"id": "998558", "name": "Before getting started", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Before getting started"},
+    {"id": "998557", "name": "Integrate the events API SDK", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
+    {"id": "998556", "name": "Start consuming events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Start consuming events"},
+    {"id": "998555", "name": "Select event types", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Select event types"},
+    {"id": "998554", "name": "Handle event replay", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Handle event replay"},
+    {"id": "998553", "name": "Migrating from webhooks", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
+    {"id": "998552", "name": "Scaling recommendations", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "Scaling recommendations"},
 
     //! - SYNCING WITH WEBHOOKS - !//        
 
-    {"id": "998587", "name": "What you’ll build", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
-    {"id": "998587", "name": "Set up your webhook endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Set up your webhook endpoint"},
-    {"id": "998587", "name": "Register your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Register your endpoint"},
-    {"id": "998587", "name": "Process the events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Process the events"},
-    {"id": "998587", "name": "Test your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Test your endpoint"},
-    {"id": "998587", "name": "Best practices", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Best practices"},
+    {"id": "998551", "name": "What you’ll build", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "What you’ll build"},
+    {"id": "998550", "name": "Set up your webhook endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Set up your webhook endpoint"},
+    {"id": "998549", "name": "Register your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Register your endpoint"},
+    {"id": "998548", "name": "Process the events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Process the events"},
+    {"id": "998547", "name": "Test your endpoint", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Test your endpoint"},
+    {"id": "998546", "name": "Best practices", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "Best practices"},
 
     //! - DATA RECONCILIATION - !//        
 
-    {"id": "998587", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Introduction"},
-    {"id": "998587", "name": "Definitions", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Definitions"},
-    {"id": "998587", "name": "Reconciling via the events API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the events API"},
-    {"id": "998587", "name": "Reconciling via the WorkOS state API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
+    {"id": "998543", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Introduction"},
+    {"id": "998542", "name": "Definitions", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Definitions"},
+    {"id": "998541", "name": "Reconciling via the events API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the events API"},
+    {"id": "998540", "name": "Reconciling via the WorkOS state API", "category": "Events and webhooks", "subCat1": "Data reconciliation", "page": "Data reconciliation", "lastCat": "Reconciling via the WorkOS state API"},
 
     //! - STREAMING TO DATADOG - !//        
 
-    {"id": "998587", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Introduction"},
-    {"id": "998587", "name": "Create a Datadog API key", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
-    {"id": "998587", "name": "Configure event streaming in WorkOS", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
-    {"id": "998587", "name": "Add the WorkOS Datadog dashboard", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
+    {"id": "998539", "name": "Introduction", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Introduction"},
+    {"id": "998538", "name": "Create a Datadog API key", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Create a Datadog API key"},
+    {"id": "998537", "name": "Configure event streaming in WorkOS", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Configure event streaming in WorkOS"},
+    {"id": "998536", "name": "Add the WorkOS Datadog dashboard", "category": "Events and webhooks", "subCat1": "Streaming to Datadog", "page": "Streaming to Datadog", "lastCat": "Add the WorkOS Datadog dashboard"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - - - H3 HEADERS - - - - ?//
@@ -100,90 +100,90 @@ const results = [
 
     //! - EVENT TYPES - !// 
 
-    {"id": "998574", "name": "Event object", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Event types", "page": "Event types", "lastCat": "Event object"},
+    {"id": "998535", "name": "Event object", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Event types", "page": "Event types", "lastCat": "Event object"},
 
-    {"id": "998574", "name": "authentication.email_verification_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.email_verification_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.magic_auth_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.magic_auth_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.mfa_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.mfa_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.oauth_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.oauth_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.password_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.password_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.sso_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "authentication.sso_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998534", "name": "authentication.email_verification_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "998532", "name": "authentication.email_verification_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "998531", "name": "authentication.magic_auth_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998530", "name": "authentication.magic_auth_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998529", "name": "authentication.mfa_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998528", "name": "authentication.mfa_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998527", "name": "authentication.oauth_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998526", "name": "authentication.oauth_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998525", "name": "authentication.password_failed", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998524", "name": "authentication.password_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
+    {"id": "998523", "name": "authentication.sso_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "998522", "name": "authentication.sso_succeeded", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Authentication events", "lastCat": "Authentication events"},
 
-    {"id": "998574", "name": "connection.activated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
-    {"id": "998574", "name": "connection.deactivated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
-    {"id": "998574", "name": "connection.deleted", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
+    {"id": "998521", "name": "connection.activated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
+    {"id": "998520", "name": "connection.deactivated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
+    {"id": "998519", "name": "connection.deleted", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Connection events", "lastCat": "Connection events"},
 
-    {"id": "998574", "name": "dsync.activated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Directory Sync events", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.deleted", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Directory Sync events", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.group.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.group.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.group.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.group.user_added", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.group.user_removed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.user.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.user.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "dsync.user.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998518", "name": "dsync.activated", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Directory Sync events", "lastCat": "Directory Sync events"},
+    {"id": "998517", "name": "dsync.deleted", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "subCat2": "Directory Sync events", "lastCat": "Directory Sync events"},
+    {"id": "998516", "name": "dsync.group.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998515", "name": "dsync.group.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998514", "name": "dsync.group.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998513", "name": "dsync.group.user_added", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998512", "name": "dsync.group.user_removed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998511", "name": "dsync.user.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998510", "name": "dsync.user.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "998509", "name": "dsync.user.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
 
-    {"id": "998574", "name": "email_verification.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
+    {"id": "998508", "name": "email_verification.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
 
-    {"id": "998574", "name": "magic_auth.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
+    {"id": "998507", "name": "magic_auth.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
 
-    {"id": "998574", "name": "organization.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "organization.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "organization.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "998506", "name": "organization.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "998505", "name": "organization.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "998504", "name": "organization.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
 
-    {"id": "998574", "name": "organization.domain.verified", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
-    {"id": "998574", "name": "organization.domain.verification_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
+    {"id": "998503", "name": "organization.domain.verified", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
+    {"id": "998502", "name": "organization.domain.verification_failed", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
 
-    {"id": "998574", "name": "organization_membership.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
-    {"id": "998574", "name": "organization_membership.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
-    {"id": "998574", "name": "organization_membership.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "998501", "name": "organization_membership.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "998500", "name": "organization_membership.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "998499", "name": "organization_membership.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
 
-    {"id": "998574", "name": "password_reset.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
+    {"id": "9985498", "name": "password_reset.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
 
-    {"id": "998574", "name": "role.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
-    {"id": "998574", "name": "role.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
+    {"id": "998497", "name": "role.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
+    {"id": "9985741", "name": "role.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
 
-    {"id": "998574", "name": "session.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
+    {"id": "9985742", "name": "session.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
 
-    {"id": "998574", "name": "user.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
-    {"id": "998574", "name": "user.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
-    {"id": "998574", "name": "user.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "9985743", "name": "user.created", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "9985744", "name": "user.deleted", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "9985745", "name": "user.updated", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
 
     //! - SYNCING WITH EVENTS API - !//        
 
-    {"id": "998587", "name": "Set secrets", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Set secrets"},
+    {"id": "9985876", "name": "Set secrets", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Set secrets"},
 
-    {"id": "998587", "name": "Keep a cursor", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events",  "page": "Syncing with events API", "lastCat": "Keep a cursor"},
-    {"id": "998587", "name": "Avoid overwriting newer data", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events",  "page": "Syncing with events API", "lastCat": "Avoid overwriting newer data"},
+    {"id": "9985877", "name": "Keep a cursor", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events",  "page": "Syncing with events API", "lastCat": "Keep a cursor"},
+    {"id": "9985878", "name": "Avoid overwriting newer data", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events",  "page": "Syncing with events API", "lastCat": "Avoid overwriting newer data"},
 
-    {"id": "998587", "name": "If your app stops processing events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations",  "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
+    {"id": "9985879", "name": "If your app stops processing events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations",  "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
 
-    {"id": "998587", "name": "Single consumer", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay",  "page": "Syncing with events API", "lastCat": "Single consumer"},
-    {"id": "998587", "name": "Parallel processing", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations",  "page": "Syncing with events API", "lastCat": "Parallel processing"},
+    {"id": "99858710", "name": "Single consumer", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay",  "page": "Syncing with events API", "lastCat": "Single consumer"},
+    {"id": "99858711", "name": "Parallel processing", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations",  "page": "Syncing with events API", "lastCat": "Parallel processing"},
 
     //! - SYNCING WITH WEBHOOKS - !//        
 
-    {"id": "998587", "name": "Respond with HTTP 200 OK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Respond with HTTP 200 OK"},
-    {"id": "998587", "name": "Create an IP allowlist", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
+    {"id": "99858712", "name": "Respond with HTTP 200 OK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Respond with HTTP 200 OK"},
+    {"id": "99858713", "name": "Create an IP allowlist", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Create an IP allowlist"},
 
-    {"id": "998587", "name": "Respond to events immediately", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
-    {"id": "998587", "name": "Recover from failed events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Recover from failed events"},
-    {"id": "998587", "name": "Handle out-of-sequence events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
-    {"id": "998587", "name": "Ignore duplicate events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
-    {"id": "998587", "name": "Obfuscate your endpoint URL", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
+    {"id": "99858714", "name": "Respond to events immediately", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Respond to events immediately"},
+    {"id": "99858715", "name": "Recover from failed events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Recover from failed events"},
+    {"id": "99858716", "name": "Handle out-of-sequence events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Handle out-of-sequence events"},
+    {"id": "99858717", "name": "Ignore duplicate events", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Ignore duplicate events"},
+    {"id": "99858718", "name": "Obfuscate your endpoint URL", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Best practices", "page": "Syncing with webhooks", "lastCat": "Obfuscate your endpoint URL"},
 
     //! - DATA RECONCILIATION - !//        
 
-    {"id": "998587", "name": "Handling side effects in the case of event replay", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "page": "Data reconciliation", "lastCat": "Handling side effects in the case of event replay"},
+    {"id": "99858719", "name": "Handling side effects in the case of event replay", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the events API", "page": "Data reconciliation", "lastCat": "Handling side effects in the case of event replay"},
 
-    {"id": "998587", "name": "Considerations for periodic reconciliation", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Considerations for periodic reconciliation"},
+    {"id": "99858720", "name": "Considerations for periodic reconciliation", "category": "Events and webhooks", "subCat1": "Data reconciliation", "subCat2": "Reconciling via the WorkOS state API", "page": "Data reconciliation", "lastCat": "Considerations for periodic reconciliation"},
 
     //? - - - - - - - - - - - - - - ?//
     //? - - H3 LABELED HEADERS - - !?/
@@ -191,8 +191,8 @@ const results = [
 
     //! - SYNCING WITH WEBHOOKS - !//        
 
-    {"id": "998587", "name": "Validate the requests using the SDK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
-    {"id": "998587", "name": "Validate the requests manually", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
+    {"id": "99858721", "name": "Validate the requests using the SDK", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests using the SDK"},
+    {"id": "99858722", "name": "Validate the requests manually", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "subCat2": "Process the events", "page": "Syncing with webhooks", "lastCat": "Validate the requests manually"},
 
     //? - - - - - - - - - - - - ?//
     //? - - - - P TAGS - - - - ?//
@@ -200,144 +200,144 @@ const results = [
 
     //! - EVENT TYPES - !// 
 
-    {"id": "998574", "name": "Respond to activity that occurs within WorkOS and third-party providers.", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "lastCat": "top"},
-    {"id": "998574", "name": "Events represent activity that has occurred within WorkOS or within third-party identity and directory providers. Your app can sync the data via either the events API or webhooks.", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "lastCat": "top"},
+    {"id": "99857423", "name": "Respond to activity that occurs within WorkOS and third-party providers.", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "lastCat": "top"},
+    {"id": "99857424", "name": "Events represent activity that has occurred within WorkOS or within third-party identity and directory providers. Your app can sync the data via either the events API or webhooks.", "category": "Events and webhooks", "subCat1": "Event types", "page": "Event types", "lastCat": "top"},
 
-    {"id": "998574", "name": "All event objects share a similar structure.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Event object", "page": "Event types", "lastCat": "User events"},
+    {"id": "99857425", "name": "All event objects share a similar structure.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Event object", "page": "Event types", "lastCat": "User events"},
 
-    {"id": "998574", "name": "Each step in the authentication flow emits an authentication event. Authentication success events are emitted even when additional steps, such as MFA, are required to complete the process.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "The authentication failed events aren’t emitted yet, but will be available soon.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to verify their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully verifies their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to authenticate via Magic Auth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully authenticates via Magic Auth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to authenticate with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully authenticates with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to authenticate with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully authenticates via OAuth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to authenticate with password credentials.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully authenticates with password credentials.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user fails to authenticate with Single Sign-On.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
-    {"id": "998574", "name": "Triggered when a user successfully authenticates with Single Sign-On.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857426", "name": "Each step in the authentication flow emits an authentication event. Authentication success events are emitted even when additional steps, such as MFA, are required to complete the process.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857427", "name": "The authentication failed events aren’t emitted yet, but will be available soon.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857428", "name": "Triggered when a user fails to verify their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857429", "name": "Triggered when a user successfully verifies their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857430", "name": "Triggered when a user fails to authenticate via Magic Auth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857431", "name": "Triggered when a user successfully authenticates via Magic Auth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857432", "name": "Triggered when a user fails to authenticate with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857433", "name": "Triggered when a user successfully authenticates with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857434", "name": "Triggered when a user fails to authenticate with a multi-factor authentication code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857435", "name": "Triggered when a user successfully authenticates via OAuth.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857436", "name": "Triggered when a user fails to authenticate with password credentials.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857437", "name": "Triggered when a user successfully authenticates with password credentials.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857438", "name": "Triggered when a user fails to authenticate with Single Sign-On.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
+    {"id": "99857439", "name": "Triggered when a user successfully authenticates with Single Sign-On.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Authentication events", "page": "Event types", "lastCat": "Authentication events"},
 
-    {"id": "998574", "name": "Triggered when a connection is activated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
-    {"id": "998574", "name": "Triggered when a connection is deactivated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
-    {"id": "998574", "name": "Triggered when a connection is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
+    {"id": "99857440", "name": "Triggered when a connection is activated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
+    {"id": "99857441", "name": "Triggered when a connection is deactivated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
+    {"id": "99857442", "name": "Triggered when a connection is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Connection events", "page": "Event types", "lastCat": "Connection events"},
 
-    {"id": "998574", "name": "Events emitted when directory-related resources are changed. To learn what exactly each of these events represents, see the in-depth Directory Sync events guide.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory is activated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory is deleted. The state attribute indicates directory state before deletion.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory group is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory group is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory group is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory group user is added.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory group user is removed.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory user is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory user is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
-    {"id": "998574", "name": "Triggered when a directory user is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857443", "name": "Events emitted when directory-related resources are changed. To learn what exactly each of these events represents, see the in-depth Directory Sync events guide.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857444", "name": "Triggered when a directory is activated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857445", "name": "Triggered when a directory is deleted. The state attribute indicates directory state before deletion.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857446", "name": "Triggered when a directory group is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857447", "name": "Triggered when a directory group is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857448", "name": "Triggered when a directory group is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857449", "name": "Triggered when a directory group user is added.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857450", "name": "Triggered when a directory group user is removed.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857451", "name": "Triggered when a directory user is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857452", "name": "Triggered when a directory user is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
+    {"id": "99857453", "name": "Triggered when a directory user is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Directory Sync events", "page": "Event types", "lastCat": "Directory Sync events"},
 
-    {"id": "998574", "name": "Events emitted when a user is required to verify their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
-    {"id": "998574", "name": "Triggered when a user is required to verify their email and a code is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
+    {"id": "99857454", "name": "Events emitted when a user is required to verify their email.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
+    {"id": "99857455", "name": "Triggered when a user is required to verify their email and a code is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Email verification events", "page": "Event types", "lastCat": "Email verification events"},
 
-    {"id": "998574", "name": "Events emitted when a User Management user is invited to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Invitation events", "page": "Event types", "lastCat": "Invitation events"},
-    {"id": "998574", "name": "Triggered when a user is invited to sign up or to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Invitation events", "page": "Event types", "lastCat": "Invitation events"},
+    {"id": "99857456", "name": "Events emitted when a User Management user is invited to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Invitation events", "page": "Event types", "lastCat": "Invitation events"},
+    {"id": "99857457", "name": "Triggered when a user is invited to sign up or to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Invitation events", "page": "Event types", "lastCat": "Invitation events"},
 
-    {"id": "998574", "name": "Events emitted when a user requests a Magic Auth code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
-    {"id": "998574", "name": "Triggered when a user is invited to sign up or to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
+    {"id": "99857458", "name": "Events emitted when a user requests a Magic Auth code.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
+    {"id": "99857459", "name": "Triggered when a user is invited to sign up or to join an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Magic Auth events", "page": "Event types", "lastCat": "Magic Auth events"},
 
-    {"id": "998574", "name": "Events emitted when WorkOS organizations are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "Events emitted when WorkOS organizations are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "Triggered when an organization is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "Triggered when an organization is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
-    {"id": "998574", "name": "Triggered when an organization is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "99857460", "name": "Events emitted when WorkOS organizations are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "99857461", "name": "Events emitted when WorkOS organizations are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "99857462", "name": "Triggered when an organization is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "99857463", "name": "Triggered when an organization is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
+    {"id": "99857464", "name": "Triggered when an organization is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization events", "page": "Event types", "lastCat": "Organization events"},
 
-    {"id": "998574", "name": "Events emitted when verification status of an organization domain changes.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
-    {"id": "998574", "name": "Triggered when an organization domain is verified.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
-    {"id": "998574", "name": "Triggered when an organization domain verification fails.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
+    {"id": "99857465", "name": "Events emitted when verification status of an organization domain changes.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
+    {"id": "99857466", "name": "Triggered when an organization domain is verified.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
+    {"id": "99857467", "name": "Triggered when an organization domain verification fails.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization domain events", "page": "Event types", "lastCat": "Organization domain events"},
 
-    {"id": "998574", "name": "Events emitted when a User Management user joins or leaves an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
-    {"id": "998574", "name": "Triggered when an organization membership is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
-    {"id": "998574", "name": "Triggered when an organization membership is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
-    {"id": "998574", "name": "Triggered when an organization membership is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "99857468", "name": "Events emitted when a User Management user joins or leaves an organization.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "99857469", "name": "Triggered when an organization membership is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "99857470", "name": "Triggered when an organization membership is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
+    {"id": "99857471", "name": "Triggered when an organization membership is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Organization membership events", "page": "Event types", "lastCat": "Organization membership events"},
 
-    {"id": "998574", "name": "Events emitted when a user requests to reset their password.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
-    {"id": "998574", "name": "Triggered when a user requests to reset their password.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
+    {"id": "99857472", "name": "Events emitted when a user requests to reset their password.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
+    {"id": "99857473", "name": "Triggered when a user requests to reset their password.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Password reset events", "page": "Event types", "lastCat": "Password reset events"},
 
-    {"id": "998574", "name": "Events emitted when roles are created or deleted in the WorkOS dashboard.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
-    {"id": "998574", "name": "Triggered when a role is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
-    {"id": "998574", "name": "Triggered when a role is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
+    {"id": "99857474", "name": "Events emitted when roles are created or deleted in the WorkOS dashboard.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
+    {"id": "99857475", "name": "Triggered when a role is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
+    {"id": "99857476", "name": "Triggered when a role is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Role events", "page": "Event types", "lastCat": "Role events"},
 
-    {"id": "998574", "name": "Events emitted when User Management sessions are created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
-    {"id": "998574", "name": "Triggered when a session is created. Sessions started using impersonation will include an additional impersonator field with data about the impersonator.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
+    {"id": "99857477", "name": "Events emitted when User Management sessions are created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
+    {"id": "99857478", "name": "Triggered when a session is created. Sessions started using impersonation will include an additional impersonator field with data about the impersonator.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "Session events", "page": "Event types", "lastCat": "Session events"},
 
-    {"id": "998574", "name": "Events emitted when User Management users are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
-    {"id": "998574", "name": "Triggered when a user is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
-    {"id": "998574", "name": "Triggered when a user is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
-    {"id": "998574", "name": "Triggered when a user is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "99857479", "name": "Events emitted when User Management users are created, updated, or deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "99857480", "name": "Triggered when a user is created.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "99857481", "name": "Triggered when a user is deleted.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
+    {"id": "99857482", "name": "Triggered when a user is updated.", "category": "Events and webhooks", "subCat1": "Event types", "subCat2": "User events", "page": "Event types", "lastCat": "User events"},
 
 
     //! - OVERVIEW (DATA SYNCING) - !// 
 
-    {"id": "998587", "name": "Keep your app in sync with WorkOS.", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "top"},
+    {"id": "99858783", "name": "Keep your app in sync with WorkOS.", "category": "Events and webhooks", "subCat1": "Data Syncing", "page": "Overview", "lastCat": "top"},
     
-    {"id": "998587", "name": "Syncing your app data with WorkOS is done using events. Events represent activity that has occurred within WorkOS or within third-party identity and directory providers that interact with WorkOS.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
-    {"id": "998587", "name": "When important activity occurs, we record an event. For example, a new SSO connection being activated is an event. A user being created, assigned membership to an organization, or successfully signing in are all events as well. Events are activity that your application might be interested in for the purposes of syncing data or extending your application’s business logic.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
-    {"id": "998587", "name": "Your app can consume events from WorkOS via either the events API or webhooks.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
+    {"id": "99858784", "name": "Syncing your app data with WorkOS is done using events. Events represent activity that has occurred within WorkOS or within third-party identity and directory providers that interact with WorkOS.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
+    {"id": "99858785", "name": "When important activity occurs, we record an event. For example, a new SSO connection being activated is an event. A user being created, assigned membership to an organization, or successfully signing in are all events as well. Events are activity that your application might be interested in for the purposes of syncing data or extending your application’s business logic.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
+    {"id": "99858786", "name": "Your app can consume events from WorkOS via either the events API or webhooks.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Introduction", "page": "Overview", "lastCat": "Introduction"},
 
-    {"id": "998587", "name": "With the events API, your application retrieves events from WorkOS. The events API offers a more robust data synchronization solution compared to webhooks, ensuring seamless synchronization of your system state with WorkOS. To sync data using the events API, continue to the events API guide.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Sync using the events API", "page": "Overview", "lastCat": "Sync using the events API"},
+    {"id": "9985871231", "name": "With the events API, your application retrieves events from WorkOS. The events API offers a more robust data synchronization solution compared to webhooks, ensuring seamless synchronization of your system state with WorkOS. To sync data using the events API, continue to the events API guide.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Sync using the events API", "page": "Overview", "lastCat": "Sync using the events API"},
 
-    {"id": "998587", "name": "With webhooks, WorkOS automatically notifies your app when an event occurs by invoking an endpoint hosted within your application. To sync data using webhooks, continue to the webhooks guide.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Sync using webhooks", "page": "Overview", "lastCat": "Sync using webhooks"},
+    {"id": "998587999", "name": "With webhooks, WorkOS automatically notifies your app when an event occurs by invoking an endpoint hosted within your application. To sync data using webhooks, continue to the webhooks guide.", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "Sync using webhooks", "page": "Overview", "lastCat": "Sync using webhooks"},
 
-    {"id": "998587", "name": "Depending on your constraints, you may want to use the events API or webhooks. Here is a comparison of the two:", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "API vs. webhooks", "page": "Overview", "lastCat": "API vs. webhooks"},
+    {"id": "998587998", "name": "Depending on your constraints, you may want to use the events API or webhooks. Here is a comparison of the two:", "category": "Events and webhooks", "subCat1": "Data Syncing", "subCat2": "API vs. webhooks", "page": "Overview", "lastCat": "API vs. webhooks"},
 
     //! - SYNCING WITH EVENTS API - !//        
 
-    {"id": "998587", "name": "A step-by-step guide on how to start syncing data using the API.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "top"},
+    {"id": "998587997", "name": "A step-by-step guide on how to start syncing data using the API.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "page": "Syncing with events API", "lastCat": "top"},
 
-    {"id": "998587", "name": "In this guide, we will walk you through what you will need to integrate with the events API:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
-    {"id": "998587", "name": "Create a cursor for use with the events API", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
-    {"id": "998587", "name": "Update your cursor", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
-    {"id": "998587", "name": "Choose a cursor if you lose yours", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
-    {"id": "998587", "name": "Handle event replay in your app", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
+    {"id": "998587996", "name": "In this guide, we will walk you through what you will need to integrate with the events API:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
+    {"id": "998587995", "name": "Create a cursor for use with the events API", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
+    {"id": "998587994", "name": "Update your cursor", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
+    {"id": "998587993", "name": "Choose a cursor if you lose yours", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
+    {"id": "998587992", "name": "Handle event replay in your app", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "What you'll build", "page": "Syncing with events API", "lastCat": "What you'll build"},
 
-    {"id": "998587", "name": "To get the most out of this guide, you’ll need:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
-    {"id": "998587", "name": "A WorkOS account", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
-    {"id": "998587", "name": "An SSO or directory connection configured in order to generate events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
+    {"id": "998587991", "name": "To get the most out of this guide, you’ll need:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
+    {"id": "998587990", "name": "A WorkOS account", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
+    {"id": "998587989", "name": "An SSO or directory connection configured in order to generate events", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Before getting started", "page": "Syncing with events API", "lastCat": "Before getting started"},
 
-    {"id": "998587", "name": "WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your app’s language.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
-    {"id": "998587", "name": "Don't see an SDK you need? Contact us to request and SDK!", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
-    {"id": "998587", "name": "Install the SDK using the command below.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
+    {"id": "998587988", "name": "WorkOS offers native SDKs in several popular programming languages. Choose a language below to see instructions in your app’s language.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
+    {"id": "998587987", "name": "Don't see an SDK you need? Contact us to request and SDK!", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
+    {"id": "998587986", "name": "Install the SDK using the command below.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "page": "Syncing with events API", "lastCat": "Integrate the events API SDK"},
 
-    {"id": "998587", "name": "To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as WORKOS_API_KEY and WORKOS_CLIENT_ID, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "subCat3": "Set secrets", "page": "Syncing with events API", "lastCat": "Set secrets"},
-    {"id": "998587", "name": "The code examples use your staging API keys when signed in", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "subCat3": "Set secrets", "page": "Syncing with events API", "lastCat": "Set secrets"},
+    {"id": "998587985", "name": "To make calls to WorkOS, provide the API key and, in some cases, the client ID. Store these values as managed secrets, such as WORKOS_API_KEY and WORKOS_CLIENT_ID, and pass them to the SDKs either as environment variables or directly in your app’s configuration based on your preferences.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "subCat3": "Set secrets", "page": "Syncing with events API", "lastCat": "Set secrets"},
+    {"id": "998587984", "name": "The code examples use your staging API keys when signed in", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Integrate the events API SDK", "subCat3": "Set secrets", "page": "Syncing with events API", "lastCat": "Set secrets"},
 
-    {"id": "998587", "name": "Your app can start consuming events once it integrates the WorkOS SDK. The first thing to do is to pick a starting place in the data set.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "page": "Syncing with events API", "lastCat": "Start consuming events"},
+    {"id": "998587983", "name": "Your app can start consuming events once it integrates the WorkOS SDK. The first thing to do is to pick a starting place in the data set.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "page": "Syncing with events API", "lastCat": "Start consuming events"},
 
-    {"id": "998587", "name": "A cursor is a bookmark to track your app’s position in the events list. The very first call to the events API won’t have a cursor. Subsequent requests to WorkOS should include the updated cursor using the after parameter. You will need to update and store your cursor after processing an event.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "subCat3": "Keep a cursor", "page": "Syncing with events API", "lastCat": "Keep a cursor"},
+    {"id": "998587982", "name": "A cursor is a bookmark to track your app’s position in the events list. The very first call to the events API won’t have a cursor. Subsequent requests to WorkOS should include the updated cursor using the after parameter. You will need to update and store your cursor after processing an event.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "subCat3": "Keep a cursor", "page": "Syncing with events API", "lastCat": "Keep a cursor"},
 
-    {"id": "998587", "name": "To avoid repeating an update, store the updated_at timestamp provided by WorkOS for each object. Extract this tag from the data object in the event. If the updated_at timestamp in the event is newer, update the local state with the latest event data. Otherwise, you can skip processing that event.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "subCat3": "Avoid overwriting newer data", "page": "Syncing with events API", "lastCat": "Avoid overwriting newer data"},
+    {"id": "998587981", "name": "To avoid repeating an update, store the updated_at timestamp provided by WorkOS for each object. Extract this tag from the data object in the event. If the updated_at timestamp in the event is newer, update the local state with the latest event data. Otherwise, you can skip processing that event.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Start consuming events", "subCat3": "Avoid overwriting newer data", "page": "Syncing with events API", "lastCat": "Avoid overwriting newer data"},
 
-    {"id": "998587", "name": "Determine the event types you want to consume. Choose the relevant event types that align with your app’s functionality and integration with WorkOS.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Select event types", "page": "Syncing with events API", "lastCat": "Select event types"},
-    {"id": "998587", "name": "Retrieve events from the API using cursor pagination. To fetch the next set of events, provide the ID of the latest processed event in the after parameter.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Select event types", "page": "Syncing with events API", "lastCat": "Select event types"},
+    {"id": "998587980", "name": "Determine the event types you want to consume. Choose the relevant event types that align with your app’s functionality and integration with WorkOS.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Select event types", "page": "Syncing with events API", "lastCat": "Select event types"},
+    {"id": "998587979", "name": "Retrieve events from the API using cursor pagination. To fetch the next set of events, provide the ID of the latest processed event in the after parameter.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Select event types", "page": "Syncing with events API", "lastCat": "Select event types"},
 
-    {"id": "998587", "name": "In some cases, it may be necessary to go back in time and “replay” the events. When designing your app logic to handle events replay it is important to design your event handling logic in a way that can safely accommodate it without undesired effects.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
-    {"id": "998587", "name": "To achieve this, focus on separating your app’s data handlers from transactional business logic like sending emails, communicating to 3rd party APIs, etc. By implementing separate data handling, you can replay events without side effects.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
-    {"id": "998587", "name": "WorkOS recommends processing events synchronously, handling them in the order they occurred.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
-    {"id": "998587", "name": "The events API returns events up to 30 days old.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
+    {"id": "998587978", "name": "In some cases, it may be necessary to go back in time and “replay” the events. When designing your app logic to handle events replay it is important to design your event handling logic in a way that can safely accommodate it without undesired effects.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
+    {"id": "998587977", "name": "To achieve this, focus on separating your app’s data handlers from transactional business logic like sending emails, communicating to 3rd party APIs, etc. By implementing separate data handling, you can replay events without side effects.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
+    {"id": "998587976", "name": "WorkOS recommends processing events synchronously, handling them in the order they occurred.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
+    {"id": "998587975", "name": "The events API returns events up to 30 days old.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "page": "Syncing with events API", "lastCat": "Handle event replay"},
 
-    {"id": "998587", "name": "When resuming event processing, you have two options to pick up where you left off:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
-    {"id": "998587", "name": "Using the latest known cursor: Retrieve the most recent cursor that was successfully processed and use it as the starting point for event resumption.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
-    {"id": "998587", "name": "Using a timestamp: Alternatively, you can make an API call with the range_start parameter and then use the cursor. Utilize the updated_at timestamp to prevent overwrites.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
+    {"id": "998587974", "name": "When resuming event processing, you have two options to pick up where you left off:", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
+    {"id": "998587973", "name": "Using the latest known cursor: Retrieve the most recent cursor that was successfully processed and use it as the starting point for event resumption.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
+    {"id": "998587972", "name": "Using a timestamp: Alternatively, you can make an API call with the range_start parameter and then use the cursor. Utilize the updated_at timestamp to prevent overwrites.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Handle event replay", "subCat3": "If your app stops processing events", "page": "Syncing with events API", "lastCat": "If your app stops processing events"},
 
-    {"id": "998587", "name": "WorkOS recommends that your app starts with a single worker. Process events in a separate thread or process from your app’s main execution thread. Deploying a single worker responsible for handling events simplifies and streamlines event consumption.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Single consumer", "page": "Syncing with events API", "lastCat": "Single consumer"},
-    {"id": "998587", "name": "This approach ensures serial event processing. After completing the processing of events on the current page, request the next page of events to maintain progress.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Single consumer", "page": "Syncing with events API", "lastCat": "Single consumer"},
+    {"id": "998587971", "name": "WorkOS recommends that your app starts with a single worker. Process events in a separate thread or process from your app’s main execution thread. Deploying a single worker responsible for handling events simplifies and streamlines event consumption.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Single consumer", "page": "Syncing with events API", "lastCat": "Single consumer"},
+    {"id": "998587970", "name": "This approach ensures serial event processing. After completing the processing of events on the current page, request the next page of events to maintain progress.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Single consumer", "page": "Syncing with events API", "lastCat": "Single consumer"},
 
-    {"id": "998587", "name": "For onboarding large organizations, divide events into independent queues for parallel processing when calling the events API from a single worker.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Parallel processing", "page": "Syncing with events API", "lastCat": "Parallel processing"},
-    {"id": "998587", "name": "Concurrently processing events from different organizations is safe, but for consistency and integrity, it is recommended to sequentially process events within a single organization.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Parallel processing", "page": "Syncing with events API", "lastCat": "Parallel processing"},
+    {"id": "998587969", "name": "For onboarding large organizations, divide events into independent queues for parallel processing when calling the events API from a single worker.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Parallel processing", "page": "Syncing with events API", "lastCat": "Parallel processing"},
+    {"id": "998587968", "name": "Concurrently processing events from different organizations is safe, but for consistency and integrity, it is recommended to sequentially process events within a single organization.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Scaling recommendations", "subCat3": "Parallel processing", "page": "Syncing with events API", "lastCat": "Parallel processing"},
 
-    {"id": "998587", "name": "You can migrate to the events API if you already use webhooks. To migrate, start querying the events API using the range_start parameter that corresponds to the time you’d want to start syncing from. The event IDs passed in webhook bodies are the same as those returned by the events API.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Migrating from webhooks", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
+    {"id": "998587967", "name": "You can migrate to the events API if you already use webhooks. To migrate, start querying the events API using the range_start parameter that corresponds to the time you’d want to start syncing from. The event IDs passed in webhook bodies are the same as those returned by the events API.", "category": "Events and webhooks", "subCat1": "Sync data using the events API", "subCat2": "Migrating from webhooks", "page": "Syncing with events API", "lastCat": "Migrating from webhooks"},
 
-    //! - SYNCING WITH WEBHOOKS - !//        
+    //! - SYNCING WITH WEBHOOKS - !//     (stopped numbering)   
 
     {"id": "998587", "name": "A step-by-step guide on how to start syncing data using webhooks.", "category": "Events and webhooks", "subCat1": "Syncing data with webhooks", "page": "Syncing with webhooks", "lastCat": "top"},
 

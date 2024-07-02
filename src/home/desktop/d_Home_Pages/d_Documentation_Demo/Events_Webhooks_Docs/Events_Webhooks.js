@@ -50,20 +50,17 @@ export default class EventsWebhooks extends Component {
     }
 
     componentDidMount = async () => {
-        window.addEventListener('scroll', this.handleScroll);
+        // window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
             this.getSelectedPage(this.props.scrollToID)
-            setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
         }
            
     }
 
     componentWillUnmount = () => {
-        window.removeEventListener('scroll', this.handleScroll);
+        // window.removeEventListener('scroll', this.handleScroll);
     }
 
     openFirstDoc = () => {
@@ -89,7 +86,10 @@ export default class EventsWebhooks extends Component {
       
         const page = pageMap[selectedPage];
         if (page) {
-          this.loadSelectedPage(page);
+            this.loadSelectedPage(page);
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 0)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
@@ -163,7 +163,7 @@ export default class EventsWebhooks extends Component {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
+            }, 0)
         }
     }
 
@@ -220,6 +220,7 @@ export default class EventsWebhooks extends Component {
     }
 
     navigateToNewPage = (page) => {
+        console.log("EAW - navigate to new page")
         let pageObject = null;
         const pageOptions = [
 

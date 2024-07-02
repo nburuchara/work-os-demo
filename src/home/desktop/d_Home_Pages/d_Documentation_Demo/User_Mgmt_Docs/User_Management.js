@@ -59,14 +59,10 @@ export default class UserManagement extends Component {
     }
 
     componentDidMount = () => {
-        window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
             this.getSelectedPage(this.props.scrollToID)
-            setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
         }
     }
 
@@ -123,7 +119,10 @@ export default class UserManagement extends Component {
       
         const page = pageMap[selectedPage];
         if (page) {
-          this.loadSelectedPage(page);
+            this.loadSelectedPage(page);
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
@@ -131,7 +130,6 @@ export default class UserManagement extends Component {
 
     closeAllPagesExceptSelectedPage = (searchedTerm) => {
         const pageMap = {
-            "User Management": "gettingStarted",
             "Quick Start": "gettingStarted",
             "Example Apps": "exampleApps",
             "AuthKit": "authKit",
@@ -236,10 +234,6 @@ export default class UserManagement extends Component {
         }
     }
 
-    componentWillUnmount = () => {
-        this.hideAllPages()
-    }
-
     smoothScrollToId = (id) => {
         const checkElementAndScroll = () => {
             const element = document.getElementById(id);
@@ -299,8 +293,10 @@ export default class UserManagement extends Component {
     codeSnippet1CopyLeave = () => {this.setState({codeSnippet1CopyHovered: false})}
 
     navigateToNewPage = (page) => {
+        console.log("UM - navigate to new page")
         let pageObject = null;
         const pageOptions = [
+            {"id": "999956", "name": "", "category": "User Management",  "page": "Example Apps", "lastCat": "top"},
             {"id": "999956", "name": "Example Apps", "category": "User Management",  "page": "Example Apps", "lastCat": "top"},
             {"id": "999953", "name": "AuthKit", "category": "User Management",  "page": "AuthKit", "lastCat": "top"},
             {"id": "999925", "name": "Email Domains", "category": "User Management",  "page": "Email Domains", "lastCat": "top"},

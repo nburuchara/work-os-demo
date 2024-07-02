@@ -137,7 +137,6 @@ export default class StandaloneAPIs extends Component {
     }
 
     componentDidMount = () => {
-        window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         } else {
@@ -146,7 +145,7 @@ export default class StandaloneAPIs extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
+
     }
 
     openFirstDoc = () => {
@@ -213,7 +212,7 @@ export default class StandaloneAPIs extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: true,
@@ -221,7 +220,7 @@ export default class StandaloneAPIs extends Component {
         // }, 600)
         setTimeout (() => {
             this.scrollToTop('top')
-        }, 900)
+        }, 700)
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: false,
@@ -232,7 +231,7 @@ export default class StandaloneAPIs extends Component {
                 currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
             })
-        }, 750)
+        }, 500)
     }
 
     hideAllPages = () => {
@@ -320,10 +319,6 @@ export default class StandaloneAPIs extends Component {
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
         }
-    }
-
-    componentWillUnmount = () => {
-        this.hideAllPages()
     }
 
     smoothScrollToId = (id) => {
@@ -627,6 +622,7 @@ export default class StandaloneAPIs extends Component {
     }
 
     navigateToNewPage = (page) => {
+        console.log("SA - navigate to new page")
         let pageObject = null;
         const pageOptions = [
             {"id": "999444", "name": "Single Sign-On", "category": "Standalone APIs", "page": "Quick Start", "subCat1": "Single Sign-On", "lastCat": "top"},

@@ -295,6 +295,7 @@ export default class Resources extends Component {
     };
 
     navigateToNewPage = (page) => {
+        console.log("R - navigate to new page")
         let pageObject = null;
         const pageOptions = [
 

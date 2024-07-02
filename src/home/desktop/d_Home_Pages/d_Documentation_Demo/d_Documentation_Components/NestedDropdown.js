@@ -84,7 +84,7 @@ componentDidUpdate(prevProps) {
     if (prevProps.searchPath !== this.props.searchPath) {
         this.setState({ activeIndices: this.props.searchPath || []});
     }
-    console.log(this.props.pageSelected)
+    // console.log(this.props.pageSelected)
 }
 
 handleItemClick = (index, item) => {
@@ -280,17 +280,17 @@ searchMenuItems = (menuItems, searchTerm) => {
     
       search(menuItems, searchTerm);
 
-      if (path.length === 2 && path[0] === 0 && path[1] === 1) {
-        if (this.props.maximumDepth === 3) {
-            for (let i = path[1]; i < this.props.maximumDepth; i++) {
-                path.push(i);
-            }
-        } else if (this.props.maximumDepth === 5) {
-            for (let i = path[1]; i < this.props.maximumDepth-2; i++) {
-                path.push(i);
-            }
-        }
-      }
+    //   if (path.length === 2 && path[0] === 0 && path[1] === 1) {
+    //     if (this.props.maximumDepth === 3) {
+    //         for (let i = path[1]; i < this.props.maximumDepth; i++) {
+    //             path.push(i);
+    //         }
+    //     } else if (this.props.maximumDepth === 5) {
+    //         for (let i = path[1]; i < this.props.maximumDepth-2; i++) {
+    //             path.push(i);
+    //         }
+    //     }
+    //   }
       
       this.props.getMenuItemSelected(searchTerm)
       this.props.setCurrentIndex(path[path.length - 1])
@@ -344,7 +344,6 @@ renderMenuItems = (menuItems, level = 0) => {
                         <div>
                             {activeIndices.includes(item.id) && item.sections && (
                                 <NestedDropdown
-                                pageSelected={this.props.currentPage}
                                 searchPath={this.props.searchPath}
                                 setCurrentIndex={this.props.setCurrentIndex}
                                 setSearchPath={this.setSearchPath}
