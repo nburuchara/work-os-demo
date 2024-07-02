@@ -71,7 +71,10 @@ $('CSSTransition').each((index, element) => {
     const inProp = $(element).attr('in');
     const subCat1 = "Integrations";
 
+    let previousH1 = null;  // Variable to track the previous h1 tag
+    let previousH3 = null;  // Variable to track the previous h1 tag
     let firstH1 = $(element).find('h1').first().text().trim();  // Store the first h1 tag as subCat2
+   
 
     $(element).find('p').each((i, pElement) => {
         const p = $(pElement).text().trim();
@@ -83,12 +86,16 @@ $('CSSTransition').each((index, element) => {
                 category: "Resources",
                 subCat1,
                 subCat2: firstH1,
+                subCat3: previousH1,
+                subCat4: previousH3,
                 page: firstH1,
                 lastCat: $(element).find('h1').first().text().trim() // Link to the first h1 in the same CSSTransition
             });
         } else {
             console.log('no p found');
         }
+        previousH1 = $(pElement).prevAll('h1').first().text().trim();  // Update previous h1
+        previousH3 = $(pElement).prevAll('h3').first().text().trim();  // Update previous h1
     });
 });
 

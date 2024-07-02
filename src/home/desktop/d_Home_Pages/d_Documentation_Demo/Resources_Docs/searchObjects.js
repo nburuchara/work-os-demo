@@ -4590,6 +4590,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4599,6 +4601,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "SAML",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4608,6 +4612,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4617,6 +4623,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4626,6 +4634,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4635,6 +4645,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4644,6 +4656,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4653,6 +4667,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4662,6 +4678,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4671,6 +4689,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4680,6 +4700,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4689,6 +4711,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4698,6 +4722,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4707,6 +4733,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SAML",
     "lastCat": "SAML"
   },
@@ -4716,6 +4744,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4725,6 +4755,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "SCIM",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4734,6 +4766,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4743,6 +4777,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4752,6 +4788,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4761,6 +4799,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4770,6 +4810,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4779,6 +4821,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4788,6 +4832,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4797,6 +4843,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4806,6 +4854,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4815,6 +4865,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4824,6 +4876,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4833,6 +4887,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4842,6 +4898,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4851,15 +4909,19 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
   {
     "id": "p-533",
-    "name": "he Bearer Token from your WorkOS Dashboard.",
+    "name": "The Bearer Token from your WorkOS Dashboard.",
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4869,6 +4931,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4878,6 +4942,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4887,6 +4953,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SCIM",
     "lastCat": "SCIM"
   },
@@ -4896,6 +4964,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": null,
+    "subCat4": null,
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4905,6 +4975,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4914,6 +4986,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4923,6 +4997,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4932,6 +5008,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4941,6 +5019,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4950,6 +5030,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4959,6 +5041,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4968,6 +5052,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4977,6 +5063,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4986,6 +5074,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -4995,6 +5085,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5004,6 +5096,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5013,6 +5107,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5022,6 +5118,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5031,6 +5129,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What you’ll need",
+    "subCat4": "users.csv",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5040,6 +5140,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5049,6 +5151,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5058,6 +5162,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5067,6 +5173,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5076,6 +5184,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5085,6 +5195,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5094,6 +5206,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5103,6 +5217,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5112,6 +5228,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5121,6 +5239,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5130,6 +5250,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5139,6 +5261,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5148,6 +5272,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5157,6 +5283,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5166,6 +5294,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5175,6 +5305,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5184,6 +5316,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5193,6 +5327,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5202,6 +5338,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5211,6 +5349,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5220,6 +5360,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5229,6 +5371,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5238,6 +5382,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5247,6 +5393,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5256,6 +5404,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5265,6 +5415,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5274,6 +5426,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5283,6 +5437,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5292,6 +5448,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5301,6 +5459,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5310,6 +5470,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5319,6 +5481,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5328,6 +5492,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5337,6 +5503,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5346,6 +5514,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5355,6 +5525,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5364,6 +5536,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5373,6 +5547,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5382,6 +5558,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5391,6 +5569,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5400,6 +5580,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5409,6 +5591,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5418,6 +5602,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5427,6 +5613,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5436,6 +5624,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5445,6 +5635,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5454,6 +5646,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5463,6 +5657,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5472,6 +5668,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5481,6 +5679,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5490,6 +5690,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5499,6 +5701,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What you’ll need",
+    "subCat4": "user_groups.csv",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5508,6 +5712,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5517,6 +5723,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5526,6 +5734,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5535,6 +5745,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5544,6 +5756,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5553,6 +5767,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5562,6 +5778,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "What you’ll need",
+    "subCat4": "groups.csv",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5571,6 +5789,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5580,6 +5800,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5589,6 +5811,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5598,6 +5822,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5607,6 +5833,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5616,6 +5844,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5625,6 +5855,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5634,6 +5866,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5643,6 +5877,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5652,6 +5888,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5661,6 +5899,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5670,6 +5910,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5679,6 +5921,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5688,6 +5932,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5697,6 +5943,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5706,6 +5954,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5715,6 +5965,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5724,6 +5976,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5733,6 +5987,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5742,6 +5998,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How is my organization’s data protected in transit?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5751,6 +6009,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How is my organization’s data protected in transit?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5760,6 +6020,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How is my organization’s data protected in transit?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5769,6 +6031,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How is my organization’s data protected at rest?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5778,6 +6042,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How does WorkOS isolate one of my organization’s data from the other?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5787,6 +6053,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "How does WorkOS isolate one of my organization’s data from the other?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5796,6 +6064,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "SFTP Security",
+    "subCat4": "When does WorkOS dispose of the data and how is this done?",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5805,6 +6075,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5814,6 +6086,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SFTP",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SFTP",
     "lastCat": "SFTP"
   },
@@ -5823,6 +6097,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": null,
+    "subCat4": null,
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5832,6 +6108,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "OpenID Connect",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5841,6 +6119,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5850,6 +6130,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5859,6 +6141,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5868,6 +6152,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5877,6 +6163,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5886,6 +6174,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5895,6 +6185,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5904,6 +6196,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5913,6 +6207,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5922,6 +6218,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5931,6 +6229,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5940,6 +6240,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5949,6 +6251,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OpenID Connect",
     "lastCat": "OpenID Connect"
   },
@@ -5958,6 +6262,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -5967,6 +6273,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "Access People HR",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -5976,6 +6284,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -5985,6 +6295,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -5994,6 +6306,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6003,6 +6317,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6012,6 +6328,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6021,6 +6339,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6030,6 +6350,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6039,6 +6361,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6048,6 +6372,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6057,6 +6383,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6066,6 +6394,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6075,6 +6405,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6084,6 +6416,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6093,6 +6427,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6102,6 +6438,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6111,6 +6449,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6120,6 +6460,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Access People HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Access People HR",
     "lastCat": "Access People HR"
   },
@@ -6129,6 +6471,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": null,
+    "subCat4": null,
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6138,6 +6482,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "ADP OpenID Connect",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6147,6 +6493,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6156,6 +6504,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6165,6 +6515,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6174,6 +6526,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6183,6 +6537,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6192,6 +6548,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6201,6 +6559,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6210,6 +6570,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6219,6 +6581,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6228,6 +6592,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6237,6 +6603,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6246,6 +6614,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6255,6 +6625,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6264,6 +6636,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6273,6 +6647,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6282,6 +6658,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6291,6 +6669,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6300,6 +6680,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6309,6 +6691,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6318,6 +6702,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6327,6 +6713,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ADP OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ADP OpenID Connect",
     "lastCat": "ADP OpenID Connect"
   },
@@ -6336,6 +6724,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6345,6 +6735,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "Apple",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6354,6 +6746,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6363,6 +6757,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6372,6 +6768,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "Testing with default credentials in the staging environment",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6381,6 +6779,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6390,6 +6790,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "Testing with default credentials in the staging environment",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6399,6 +6801,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6408,6 +6812,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6417,6 +6823,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6426,6 +6834,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6435,6 +6845,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6444,6 +6856,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6453,6 +6867,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6462,6 +6878,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6471,6 +6889,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6480,6 +6900,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6489,6 +6911,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6498,6 +6922,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6507,6 +6933,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6516,6 +6944,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6525,6 +6955,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6534,6 +6966,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6543,6 +6977,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6552,6 +6988,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6561,6 +6999,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6570,6 +7010,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6579,6 +7021,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6588,6 +7032,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6597,6 +7043,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6606,6 +7054,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6615,6 +7065,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6624,6 +7076,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6633,6 +7087,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6642,6 +7098,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6651,6 +7109,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6660,6 +7120,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6669,6 +7131,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6678,6 +7142,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6687,6 +7153,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6696,6 +7164,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6705,6 +7175,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6714,6 +7186,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6723,6 +7197,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6732,6 +7208,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6741,6 +7219,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6750,6 +7230,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Apple",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Apple",
     "lastCat": "Apple"
   },
@@ -6759,6 +7241,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6768,6 +7252,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Auth0",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6777,6 +7263,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6786,6 +7274,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6795,6 +7285,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6804,6 +7296,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6813,6 +7307,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6822,6 +7318,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6831,6 +7329,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6840,6 +7340,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6849,6 +7351,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6858,6 +7362,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6867,6 +7373,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6876,6 +7384,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6885,6 +7395,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6894,6 +7406,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6903,6 +7417,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Auth0",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Auth0",
     "lastCat": "Auth0"
   },
@@ -6912,6 +7428,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": null,
+    "subCat4": null,
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6921,6 +7439,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "AWS Cognito",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6930,6 +7450,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6939,6 +7461,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6948,6 +7472,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6957,6 +7483,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6966,6 +7494,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6975,6 +7505,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6984,6 +7516,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -6993,6 +7527,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7002,6 +7538,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7011,6 +7549,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7020,6 +7560,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7029,6 +7571,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7038,6 +7582,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7047,6 +7593,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7056,6 +7604,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7065,6 +7615,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7074,6 +7626,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7083,6 +7637,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "AWS Cognito",
+    "subCat3": "",
+    "subCat4": "",
     "page": "AWS Cognito",
     "lastCat": "AWS Cognito"
   },
@@ -7092,6 +7648,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": null,
+    "subCat4": null,
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7101,6 +7659,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "BambooHR",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7110,6 +7670,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7119,6 +7681,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7128,6 +7692,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7137,6 +7703,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7146,6 +7714,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7155,6 +7725,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7164,6 +7736,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7173,6 +7747,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7182,6 +7758,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7191,6 +7769,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7200,6 +7780,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7209,6 +7791,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7218,6 +7802,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7227,6 +7813,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7236,6 +7824,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7245,6 +7835,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7254,6 +7846,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7263,6 +7857,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7272,6 +7868,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7281,6 +7879,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7290,6 +7890,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "BambooHR",
+    "subCat3": "Frequently Asked Questions",
+    "subCat4": "How do I add BambooHR’s custom fields?",
     "page": "BambooHR",
     "lastCat": "BambooHR"
   },
@@ -7299,6 +7901,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7308,6 +7912,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "Breathe HR",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7317,6 +7923,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7326,6 +7934,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7335,6 +7945,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7344,6 +7956,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7353,6 +7967,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7362,6 +7978,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7371,6 +7989,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7380,6 +8000,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7389,6 +8011,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7398,6 +8022,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7407,6 +8033,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7416,6 +8044,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7425,6 +8055,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7434,6 +8066,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7443,6 +8077,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7452,6 +8088,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7461,6 +8099,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7470,6 +8110,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Breathe HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Breathe HR",
     "lastCat": "Breathe HR"
   },
@@ -7479,6 +8121,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7488,6 +8132,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Bubble Plugin",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7497,6 +8143,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7506,6 +8154,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7515,6 +8165,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7524,6 +8176,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7533,6 +8187,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7542,6 +8198,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7551,6 +8209,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7560,6 +8220,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "Use SSO in a Workflow",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7569,6 +8231,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7578,6 +8242,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7587,6 +8253,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7596,6 +8264,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "Use SSO in a Workflow",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7605,6 +8275,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "Use SSO in a Workflow",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7614,6 +8286,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7623,6 +8297,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "Use SSO in a Workflow",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7632,6 +8308,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Single Sign-On",
+    "subCat4": "Use SSO in a Workflow",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7641,6 +8319,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7650,6 +8330,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7659,6 +8341,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Enable backend workflows",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7668,6 +8352,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7677,6 +8363,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7686,6 +8374,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7695,6 +8385,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7704,6 +8396,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7713,6 +8407,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Create a new workflow to receive webhooks",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7722,6 +8418,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Implement the webhook validation action",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7731,6 +8429,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7740,6 +8440,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Implement the webhook validation action",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7749,6 +8451,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Reconcile the users",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7758,6 +8462,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Directory Sync",
+    "subCat4": "Reconcile the users",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7767,6 +8473,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Admin Portal",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7776,6 +8484,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Bubble Plugin",
+    "subCat3": "Admin Portal",
+    "subCat4": "",
     "page": "Bubble Plugin",
     "lastCat": "Bubble Plugin"
   },
@@ -7785,6 +8495,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7794,6 +8506,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "CAS SAML",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7803,6 +8517,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7812,6 +8528,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7821,6 +8539,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7830,6 +8550,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7839,6 +8561,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7848,6 +8572,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7857,6 +8583,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7866,6 +8594,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7875,6 +8605,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7884,6 +8616,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7893,6 +8627,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7902,6 +8638,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CAS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CAS SAML",
     "lastCat": "CAS SAML"
   },
@@ -7911,6 +8649,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7920,6 +8660,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "Cezanne HR",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7929,6 +8671,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7938,6 +8682,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7947,6 +8693,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7956,6 +8704,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7965,6 +8715,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7974,6 +8726,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7983,6 +8737,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -7992,6 +8748,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8001,6 +8759,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8010,6 +8770,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8019,6 +8781,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8028,6 +8792,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8037,6 +8803,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8046,6 +8814,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8055,6 +8825,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8064,6 +8836,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8073,6 +8847,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cezanne HR",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cezanne HR",
     "lastCat": "Cezanne HR"
   },
@@ -8082,6 +8858,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": null,
+    "subCat4": null,
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8091,6 +8869,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "ClassLink",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8100,6 +8880,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8109,6 +8891,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8118,6 +8902,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8127,6 +8913,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8136,6 +8924,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8145,6 +8935,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8154,6 +8946,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8163,6 +8957,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8172,6 +8968,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8181,6 +8979,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8190,6 +8990,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8199,6 +9001,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8208,6 +9012,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8217,6 +9023,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8226,6 +9034,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8235,6 +9045,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8244,6 +9056,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8253,6 +9067,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8262,6 +9078,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8271,6 +9089,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8280,6 +9100,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8289,6 +9111,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8298,6 +9122,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8307,6 +9133,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "ClassLink",
+    "subCat3": "",
+    "subCat4": "",
     "page": "ClassLink",
     "lastCat": "ClassLink"
   },
@@ -8316,6 +9144,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8325,6 +9155,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "Cloudflare",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8334,6 +9166,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8343,6 +9177,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8352,6 +9188,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8361,6 +9199,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8370,6 +9210,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8379,6 +9221,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8388,6 +9232,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8397,6 +9243,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8406,6 +9254,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8415,6 +9265,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8424,6 +9276,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8433,6 +9287,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8442,6 +9298,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8451,6 +9309,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8460,6 +9320,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8469,6 +9331,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8478,6 +9342,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8487,6 +9353,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8496,6 +9364,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8505,6 +9375,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8514,6 +9386,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8523,6 +9397,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8532,6 +9408,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8541,6 +9419,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8550,6 +9430,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8559,6 +9441,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8568,6 +9452,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8577,6 +9463,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8586,6 +9474,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8595,6 +9485,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Cloudflare",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Cloudflare",
     "lastCat": "Cloudflare"
   },
@@ -8604,6 +9496,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8613,6 +9507,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "CyberArk SAML",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8622,6 +9518,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8631,6 +9529,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8640,6 +9540,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8649,6 +9551,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8658,6 +9562,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8667,6 +9573,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8676,6 +9584,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8685,6 +9595,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8694,6 +9606,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8703,6 +9617,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8712,6 +9628,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8721,6 +9639,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8730,6 +9650,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8739,6 +9661,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8748,6 +9672,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8757,6 +9683,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8766,6 +9694,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8775,6 +9705,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8784,6 +9716,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8793,6 +9727,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8802,6 +9738,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8811,6 +9749,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8820,6 +9760,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8829,6 +9771,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8838,6 +9782,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8847,6 +9793,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8856,6 +9804,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8865,6 +9815,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8874,6 +9826,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8883,6 +9837,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SAML",
     "lastCat": "CyberArk SAML"
   },
@@ -8892,6 +9848,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8901,6 +9859,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "CyberArk SCIM",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8910,6 +9870,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8919,6 +9881,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8928,6 +9892,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8937,6 +9903,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8946,6 +9914,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8955,6 +9925,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8964,6 +9936,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8973,6 +9947,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8982,6 +9958,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -8991,6 +9969,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9000,6 +9980,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9009,6 +9991,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9018,6 +10002,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9027,6 +10013,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9036,6 +10024,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9045,6 +10035,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9054,6 +10046,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9063,6 +10057,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9072,6 +10068,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9081,6 +10079,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9090,6 +10090,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9099,6 +10101,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9108,6 +10112,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "CyberArk SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "",
     "page": "CyberArk SCIM",
     "lastCat": "CyberArk SCIM"
   },
@@ -9117,6 +10123,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9126,6 +10134,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Duo",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9135,6 +10145,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9144,6 +10156,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9153,6 +10167,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9162,6 +10178,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9171,6 +10189,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9180,6 +10200,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9189,6 +10211,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9198,6 +10222,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9207,6 +10233,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9216,6 +10244,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9225,6 +10255,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9234,6 +10266,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9243,6 +10277,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9252,6 +10288,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9261,6 +10299,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9270,6 +10310,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9279,6 +10321,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9288,6 +10332,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9297,6 +10343,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9306,6 +10354,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9315,6 +10365,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9324,6 +10376,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9333,6 +10387,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9342,6 +10398,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9351,6 +10409,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9360,6 +10420,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9369,6 +10431,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9378,6 +10442,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9387,6 +10453,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Duo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Duo",
     "lastCat": "Duo"
   },
@@ -9396,6 +10464,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9405,6 +10475,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "Entra ID SAML (formerly Azure AD)",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9414,6 +10486,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9423,6 +10497,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9432,6 +10508,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9441,6 +10519,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9450,6 +10530,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9459,6 +10541,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9468,6 +10552,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What WorkOS Provides",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9477,6 +10563,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9486,6 +10574,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9495,6 +10585,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9504,6 +10596,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9513,6 +10607,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9522,6 +10618,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9531,6 +10629,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9540,6 +10640,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9549,6 +10651,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9558,6 +10662,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9567,6 +10673,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9576,6 +10684,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9585,6 +10695,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9594,6 +10706,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9603,6 +10717,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9612,6 +10728,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9621,6 +10739,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9630,6 +10750,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9639,6 +10761,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9648,6 +10772,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9657,6 +10783,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9666,6 +10794,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9675,6 +10805,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9684,6 +10816,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9693,6 +10827,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9702,6 +10838,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SAML (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SAML (formerly Azure AD)",
     "lastCat": "Entra ID SAML (formerly Azure AD)"
   },
@@ -9711,6 +10849,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9720,6 +10860,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Entra ID SCIM (formerly Azure AD)",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9729,6 +10871,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9738,6 +10882,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9747,6 +10893,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9756,6 +10904,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9765,6 +10915,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9774,6 +10926,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9783,6 +10937,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9792,6 +10948,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9801,6 +10959,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9810,6 +10970,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9819,6 +10981,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9828,6 +10992,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9837,6 +11003,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9846,6 +11014,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9855,6 +11025,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9864,6 +11036,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9873,6 +11047,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9882,6 +11058,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9891,6 +11069,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9900,6 +11080,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9909,6 +11091,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9918,6 +11102,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9927,6 +11113,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9936,6 +11124,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9945,6 +11135,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9954,6 +11146,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9963,6 +11157,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9972,6 +11168,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9981,6 +11179,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9990,6 +11190,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -9999,6 +11201,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10008,6 +11212,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10017,6 +11223,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10026,6 +11234,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10035,6 +11245,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10044,6 +11256,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Sometimes, reactivating “suspended” users does not re-add them to their Azure groups. Why is that and how can I fix it?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10053,6 +11267,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Can profile images be accessed with Azure SCIM?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10062,6 +11278,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Can profile images be accessed with Azure SCIM?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10071,6 +11289,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How often do Entra ID SCIM 2.0 directories perform a sync?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10080,6 +11300,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How often do Entra ID SCIM 2.0 directories perform a sync?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10089,15 +11311,19 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How often do Entra ID SCIM 2.0 directories perform a sync?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
   {
     "id": "p-1115",
-    "name": "There’s also an option for On-demand provisioning which syncs events in real-time.",
+    "name": "There’s also an option for  On-demand provisioning which syncs events in real-time.",
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Entra ID SCIM (formerly Azure AD)",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How often do Entra ID SCIM 2.0 directories perform a sync?",
     "page": "Entra ID SCIM (formerly Azure AD)",
     "lastCat": "Entra ID SCIM (formerly Azure AD)"
   },
@@ -10107,6 +11333,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10116,6 +11344,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "Firebase",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10125,6 +11355,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10134,6 +11366,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10143,6 +11377,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10152,6 +11388,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10161,6 +11399,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10170,6 +11410,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10179,6 +11421,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10188,6 +11432,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10197,6 +11443,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10206,6 +11454,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10215,6 +11465,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10224,6 +11476,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10233,6 +11487,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10242,6 +11498,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10251,6 +11509,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10260,6 +11520,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10269,6 +11531,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10278,6 +11542,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10287,6 +11553,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10296,6 +11564,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10305,6 +11575,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10314,6 +11586,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Firebase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Firebase",
     "lastCat": "Firebase"
   },
@@ -10323,6 +11597,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10332,6 +11608,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "Fourth",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10341,6 +11619,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10350,6 +11630,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10359,15 +11641,19 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
   {
     "id": "p-1145",
-    "name": "Note: The Fourth integration isn’t enabled by default in the WorkOS Dashboard or Admin Portal. Please reach out to support@workos.comor via your team’s WorkOS Slack channel if you would like Fourth enabled.",
+    "name": "Note: The Fourth integration isn’t enabled by default in the WorkOS Dashboard or Admin Portal. Please reach out to support@workos.com or via your team’s WorkOS Slack channel if you would like Fourth enabled.",
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10377,6 +11663,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10386,6 +11674,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10395,6 +11685,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10404,6 +11696,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10413,6 +11707,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10422,6 +11718,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10431,6 +11729,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10440,6 +11740,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10449,6 +11751,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10458,6 +11762,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Fourth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Fourth",
     "lastCat": "Fourth"
   },
@@ -10467,6 +11773,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": null,
+    "subCat4": null,
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10476,6 +11784,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "GitHub OAuth",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10485,6 +11795,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10494,6 +11806,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10503,6 +11817,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10512,6 +11828,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10521,6 +11839,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "Testing with default credentials in the Staging environment",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10530,6 +11850,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10539,6 +11861,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "Testing with default credentials in the Staging environment",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10548,6 +11872,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10557,6 +11883,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10566,6 +11894,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10575,6 +11905,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10584,6 +11916,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10593,6 +11927,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10602,6 +11938,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10611,6 +11949,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10620,6 +11960,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10629,6 +11971,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10638,6 +11982,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10647,6 +11993,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10656,6 +12004,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "GitHub OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "GitHub OAuth",
     "lastCat": "GitHub OAuth"
   },
@@ -10665,6 +12015,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10674,6 +12026,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "Google Directory Sync",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10683,6 +12037,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10692,6 +12048,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10701,6 +12059,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10710,6 +12070,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10719,6 +12081,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10728,6 +12092,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10737,6 +12103,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10746,6 +12114,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10755,6 +12125,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10764,6 +12136,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10773,6 +12147,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10782,6 +12158,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Can you selectively sync users and groups from Google Workspace?",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10791,6 +12169,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "When do users get removed from a directory?",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10800,6 +12180,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10809,6 +12191,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google Directory Sync",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google Directory Sync",
     "lastCat": "Google Directory Sync"
   },
@@ -10818,6 +12202,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10827,6 +12213,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Google OAuth",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10836,6 +12224,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10845,6 +12235,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10854,6 +12246,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10863,6 +12257,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10872,6 +12268,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10881,6 +12279,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Testing with default credentials in the Staging environment",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10890,6 +12290,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10899,6 +12301,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10908,6 +12312,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10917,6 +12323,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10926,6 +12334,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10935,6 +12345,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10944,6 +12356,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10953,6 +12367,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10962,6 +12378,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10971,6 +12389,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10980,6 +12400,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10989,6 +12411,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -10998,6 +12422,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11007,6 +12433,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11016,6 +12444,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Customize Google OAuth Domain",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11025,6 +12455,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Customize Google OAuth Domain",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11034,6 +12466,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11043,6 +12477,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11052,6 +12488,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11061,6 +12499,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11070,6 +12510,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11079,6 +12521,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11088,6 +12532,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11097,6 +12543,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11106,6 +12554,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11115,6 +12565,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11124,6 +12576,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11133,6 +12587,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google OAuth",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How is the WorkOS Google OAuth integration different from implementing regular Google OAuth flow?",
     "page": "Google OAuth",
     "lastCat": "Google OAuth"
   },
@@ -11142,6 +12598,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11151,6 +12609,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Google SAML",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11160,6 +12620,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11169,6 +12631,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11178,6 +12642,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11187,6 +12653,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11196,6 +12664,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11205,6 +12675,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11214,6 +12686,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11223,6 +12697,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11232,6 +12708,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11241,6 +12719,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11250,6 +12730,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11259,6 +12741,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11268,6 +12752,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11277,6 +12763,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11286,6 +12774,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11295,6 +12785,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11304,6 +12796,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11313,6 +12807,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11322,6 +12818,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11331,6 +12829,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11340,6 +12840,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11349,6 +12851,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11358,6 +12862,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11367,6 +12873,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11376,6 +12884,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11385,6 +12895,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Google SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Google SAML",
     "lastCat": "Google SAML"
   },
@@ -11394,6 +12906,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": null,
+    "subCat4": null,
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11403,6 +12917,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "HiBob",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11412,6 +12928,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11421,6 +12939,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11430,6 +12950,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11439,6 +12961,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11448,6 +12972,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11457,6 +12983,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11466,6 +12994,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11475,6 +13005,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11484,6 +13016,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11493,6 +13027,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11502,6 +13038,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11511,6 +13049,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11520,6 +13060,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11529,6 +13071,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11538,6 +13082,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11547,6 +13093,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11556,6 +13104,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11565,6 +13115,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11574,6 +13126,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11583,6 +13137,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11592,6 +13148,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11601,6 +13159,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "",
+    "subCat4": "",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11610,6 +13170,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "HiBob",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "What if the directory user profiles from HiBob aren’t showing all of the expected user attributes, such as the user address?",
     "page": "HiBob",
     "lastCat": "HiBob"
   },
@@ -11619,6 +13181,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11628,6 +13192,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "JumpCloud SAML",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11637,6 +13203,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11646,6 +13214,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11655,6 +13225,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11664,6 +13236,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11673,6 +13247,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11682,6 +13258,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11691,6 +13269,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11700,6 +13280,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11709,6 +13291,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11718,6 +13302,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11727,6 +13313,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11736,6 +13324,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11745,6 +13335,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11754,6 +13346,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11763,6 +13357,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11772,6 +13368,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11781,6 +13379,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11790,6 +13390,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11799,6 +13401,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11808,6 +13412,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11817,6 +13423,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SAML",
     "lastCat": "JumpCloud SAML"
   },
@@ -11826,6 +13434,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11835,6 +13445,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "JumpCloud SCIM",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11844,6 +13456,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11853,6 +13467,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11862,6 +13478,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11871,6 +13489,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11880,6 +13500,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11889,6 +13511,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11898,6 +13522,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11907,6 +13533,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11916,6 +13544,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11925,6 +13555,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11934,6 +13566,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11943,6 +13577,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11952,6 +13588,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11961,6 +13599,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11970,6 +13610,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11979,6 +13621,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11988,6 +13632,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -11997,6 +13643,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12006,6 +13654,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12015,6 +13665,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12024,6 +13676,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12033,6 +13687,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12042,6 +13698,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12051,6 +13709,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12060,6 +13720,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12069,6 +13731,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12078,6 +13742,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "When a group is disconnected from the SCIM application in JumpCloud, I still see users that are a part of that disconnected group in WorkOS and my application – is this expected?",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12087,6 +13753,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "JumpCloud SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "When a group is disconnected from the SCIM application in JumpCloud, I still see users that are a part of that disconnected group in WorkOS and my application – is this expected?",
     "page": "JumpCloud SCIM",
     "lastCat": "JumpCloud SCIM"
   },
@@ -12096,6 +13764,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12105,6 +13775,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "Keycloak",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12114,6 +13786,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12123,6 +13797,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12132,6 +13808,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12141,6 +13819,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12150,6 +13830,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12159,6 +13841,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12168,6 +13852,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12177,6 +13863,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12186,6 +13874,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12195,6 +13885,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12204,6 +13896,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12213,6 +13907,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12222,6 +13918,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12231,6 +13929,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12240,6 +13940,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12249,6 +13951,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12258,6 +13962,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12267,6 +13973,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12276,6 +13984,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12285,6 +13995,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12294,6 +14006,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12303,6 +14017,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12312,6 +14028,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12321,6 +14039,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12330,6 +14050,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12339,6 +14061,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12348,6 +14072,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12357,6 +14083,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Keycloak",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Keycloak",
     "lastCat": "Keycloak"
   },
@@ -12366,6 +14094,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": null,
+    "subCat4": null,
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12375,6 +14105,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "LastPass",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12384,6 +14116,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12393,6 +14127,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12402,6 +14138,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12411,6 +14149,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12420,6 +14160,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12429,6 +14171,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12438,6 +14182,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12447,6 +14193,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12456,6 +14204,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12465,6 +14215,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12474,6 +14226,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12483,6 +14237,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12492,6 +14248,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12501,6 +14259,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12510,6 +14270,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12519,6 +14281,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12528,6 +14292,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12537,6 +14303,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12546,6 +14314,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12555,6 +14325,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12564,6 +14336,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12573,6 +14347,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12582,6 +14358,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12591,6 +14369,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12600,6 +14380,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12609,6 +14391,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12618,6 +14402,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12627,6 +14413,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12636,6 +14424,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12645,6 +14435,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "LastPass",
+    "subCat3": "",
+    "subCat4": "",
     "page": "LastPass",
     "lastCat": "LastPass"
   },
@@ -12654,6 +14446,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12663,6 +14457,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Login.gov OpenID Connect",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12672,6 +14468,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12681,6 +14479,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12690,6 +14490,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12699,6 +14501,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12708,6 +14512,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12717,6 +14523,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12726,6 +14534,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12735,6 +14545,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12744,6 +14556,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12753,6 +14567,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12762,6 +14578,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12771,6 +14589,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12780,6 +14600,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12789,6 +14611,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12798,6 +14622,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12807,6 +14633,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12816,6 +14644,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12825,6 +14655,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12834,6 +14666,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12843,6 +14677,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12852,6 +14688,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Login.gov OpenID Connect",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Login.gov OpenID Connect",
     "lastCat": "Login.gov OpenID Connect"
   },
@@ -12861,6 +14699,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12870,6 +14710,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "Microsoft AD FS SAML",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12879,6 +14721,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12888,6 +14732,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12897,6 +14743,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12906,6 +14754,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12915,6 +14765,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12924,6 +14776,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12933,6 +14787,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12942,6 +14798,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12951,6 +14809,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12960,6 +14820,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12969,6 +14831,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12978,6 +14842,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12987,6 +14853,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -12996,6 +14864,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13005,6 +14875,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13014,6 +14886,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13023,6 +14897,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13032,6 +14908,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13041,6 +14919,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13050,6 +14930,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13059,6 +14941,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft AD FS SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft AD FS SAML",
     "lastCat": "Microsoft AD FS SAML"
   },
@@ -13068,6 +14952,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13077,6 +14963,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "Microsoft OAuth",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13086,6 +14974,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13095,6 +14985,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13104,6 +14996,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13113,6 +15007,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13122,6 +15018,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13131,6 +15029,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "Testing with default credentials in the Staging environment",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13140,6 +15040,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13149,6 +15051,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13158,6 +15062,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13167,6 +15073,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13176,6 +15084,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13185,6 +15095,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13194,6 +15106,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13203,6 +15117,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13212,6 +15128,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13221,6 +15139,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13230,6 +15150,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13239,6 +15161,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13248,6 +15172,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13257,6 +15183,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Microsoft OAuth",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Microsoft OAuth",
     "lastCat": "Microsoft OAuth"
   },
@@ -13266,6 +15194,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": null,
+    "subCat4": null,
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13275,6 +15205,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "miniOrange",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13284,6 +15216,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13293,6 +15227,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13302,6 +15238,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13311,6 +15249,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13320,6 +15260,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13329,6 +15271,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13338,6 +15282,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13347,6 +15293,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13356,6 +15304,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13365,6 +15315,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13374,6 +15326,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13383,6 +15337,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13392,6 +15348,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13401,6 +15359,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13410,6 +15370,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13419,6 +15381,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13428,6 +15392,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13437,6 +15403,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13446,6 +15414,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13455,6 +15425,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13464,6 +15436,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13473,6 +15447,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13482,6 +15458,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13491,6 +15469,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13500,6 +15480,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13509,6 +15491,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13518,6 +15502,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13527,6 +15513,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "miniOrange",
+    "subCat3": "",
+    "subCat4": "",
     "page": "miniOrange",
     "lastCat": "miniOrange"
   },
@@ -13536,6 +15524,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": null,
+    "subCat4": null,
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13545,6 +15535,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "NetIQ",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13554,6 +15546,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13563,6 +15557,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13572,6 +15568,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13581,6 +15579,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13590,6 +15590,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13599,6 +15601,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13608,6 +15612,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13617,6 +15623,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13626,6 +15634,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13635,6 +15645,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13644,6 +15656,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13653,6 +15667,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13662,6 +15678,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13671,6 +15689,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13680,6 +15700,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NetIQ",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NetIQ",
     "lastCat": "NetIQ"
   },
@@ -13689,6 +15711,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": null,
+    "subCat4": null,
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13698,6 +15722,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "NextAuth.js",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13707,6 +15733,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13716,6 +15744,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "Before getting started",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13725,6 +15755,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13734,6 +15766,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13743,6 +15777,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13752,6 +15788,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13761,6 +15799,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13770,6 +15810,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13779,6 +15821,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13788,6 +15832,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13797,6 +15843,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13806,6 +15854,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13815,6 +15865,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13824,6 +15876,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13833,6 +15887,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13842,6 +15898,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13851,6 +15909,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13860,6 +15920,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13869,6 +15931,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13878,6 +15942,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13887,6 +15953,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13896,6 +15964,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "NextAuth.js",
+    "subCat3": "",
+    "subCat4": "",
     "page": "NextAuth.js",
     "lastCat": "NextAuth.js"
   },
@@ -13905,6 +15975,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13914,6 +15986,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Okta SAML",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13923,6 +15997,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13932,6 +16008,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13941,6 +16019,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13950,6 +16030,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13959,6 +16041,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13968,6 +16052,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13977,6 +16063,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13986,6 +16074,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -13995,6 +16085,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14004,6 +16096,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14013,6 +16107,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14022,6 +16118,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14031,6 +16129,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14040,6 +16140,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14049,6 +16151,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14058,6 +16162,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14067,6 +16173,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14076,6 +16184,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14085,6 +16195,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14094,6 +16206,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14103,6 +16217,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14112,6 +16228,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14121,6 +16239,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14130,6 +16250,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14139,6 +16261,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14148,6 +16272,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14157,6 +16283,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14166,6 +16294,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14175,6 +16305,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14184,6 +16316,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14193,6 +16327,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SAML",
     "lastCat": "Okta SAML"
   },
@@ -14202,6 +16338,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14211,6 +16349,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Okta SCIM",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14220,6 +16360,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14229,6 +16371,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14238,6 +16382,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14247,6 +16393,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14256,6 +16404,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14265,6 +16415,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14274,6 +16426,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14283,6 +16437,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14292,6 +16448,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14301,6 +16459,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14310,6 +16470,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14319,6 +16481,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14328,6 +16492,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14337,6 +16503,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14346,6 +16514,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14355,6 +16525,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14364,6 +16536,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14373,6 +16547,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14382,6 +16558,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14391,6 +16569,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14400,6 +16580,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14409,6 +16591,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14418,6 +16602,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14427,6 +16613,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14436,6 +16624,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14445,6 +16635,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14454,6 +16646,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14463,6 +16657,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14472,6 +16668,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14481,6 +16679,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14490,6 +16690,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14499,6 +16701,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14508,6 +16712,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14517,6 +16723,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14526,6 +16734,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14535,6 +16745,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14544,6 +16756,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14553,6 +16767,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14562,6 +16778,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "How often do the Okta SCIM 2.0 directories perform a sync?",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14571,6 +16789,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Why is a user suspended in Okta still active in WorkOS?",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14580,6 +16800,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Okta SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Okta SCIM",
     "lastCat": "Okta SCIM"
   },
@@ -14589,6 +16811,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14598,6 +16822,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "OneLogin SAML",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14607,6 +16833,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14616,6 +16844,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14625,6 +16855,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14634,6 +16866,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14643,6 +16877,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14652,6 +16888,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14661,6 +16899,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14670,6 +16910,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14679,6 +16921,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14688,6 +16932,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14697,6 +16943,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14706,6 +16954,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14715,6 +16965,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14724,6 +16976,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14733,6 +16987,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14742,6 +16998,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14751,6 +17009,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14760,6 +17020,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14769,6 +17031,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14778,6 +17042,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14787,6 +17053,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14796,6 +17064,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14805,6 +17075,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14814,6 +17086,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14823,6 +17097,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14832,6 +17108,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14841,6 +17119,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14850,6 +17130,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14859,6 +17141,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14868,6 +17152,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14877,6 +17163,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14886,6 +17174,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14895,6 +17185,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14904,6 +17196,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SAML",
     "lastCat": "OneLogin SAML"
   },
@@ -14913,6 +17207,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14922,6 +17218,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "OneLogin SCIM",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14931,6 +17229,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14940,6 +17240,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14949,6 +17251,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14958,6 +17262,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14967,6 +17273,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14976,6 +17284,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14985,6 +17295,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -14994,6 +17306,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15003,6 +17317,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15012,6 +17328,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15021,6 +17339,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15030,6 +17350,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15039,6 +17361,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15048,6 +17372,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15057,6 +17383,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15066,6 +17394,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15075,6 +17405,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15084,6 +17416,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15093,6 +17427,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15102,6 +17438,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15111,6 +17449,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15120,6 +17460,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15129,6 +17471,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15138,6 +17482,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15147,6 +17493,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15156,6 +17504,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15165,6 +17515,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15174,6 +17526,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15183,6 +17537,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15192,6 +17548,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15201,6 +17559,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15210,6 +17570,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15219,6 +17581,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15228,6 +17592,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15237,6 +17603,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15246,6 +17614,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15255,6 +17625,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15264,6 +17636,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "OneLogin SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "",
     "page": "OneLogin SCIM",
     "lastCat": "OneLogin SCIM"
   },
@@ -15273,6 +17647,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15282,6 +17658,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "Oracle SAML",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15291,6 +17669,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15300,6 +17680,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15309,6 +17691,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15318,6 +17702,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15327,6 +17713,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15336,6 +17724,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15345,6 +17735,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15354,6 +17746,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15363,6 +17757,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15372,6 +17768,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15381,6 +17779,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15390,6 +17790,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15399,6 +17801,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15408,6 +17812,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15417,6 +17823,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15426,6 +17834,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15435,6 +17845,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15444,6 +17856,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15453,6 +17867,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Oracle SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Oracle SAML",
     "lastCat": "Oracle SAML"
   },
@@ -15462,6 +17878,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15471,6 +17889,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "PingFederate SAML",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15480,6 +17900,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15489,6 +17911,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15498,6 +17922,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15507,6 +17933,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15516,6 +17944,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15525,6 +17955,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15534,6 +17966,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15543,6 +17977,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15552,6 +17988,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15561,6 +17999,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15570,6 +18010,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15579,6 +18021,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15588,6 +18032,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15597,6 +18043,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15606,6 +18054,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15615,6 +18065,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15624,6 +18076,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15633,6 +18087,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15642,6 +18098,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15651,6 +18109,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SAML",
     "lastCat": "PingFederate SAML"
   },
@@ -15660,6 +18120,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15669,6 +18131,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "PingFederate SCIM",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15678,6 +18142,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15687,6 +18153,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15696,6 +18164,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15705,6 +18175,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15714,6 +18186,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15723,6 +18197,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15732,6 +18208,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15741,6 +18219,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15750,6 +18230,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15759,6 +18241,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15768,6 +18252,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15777,6 +18263,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15786,6 +18274,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15795,6 +18285,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15804,6 +18296,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15813,6 +18307,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15822,6 +18318,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15831,6 +18329,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15840,6 +18340,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15849,6 +18351,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15858,6 +18362,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15867,6 +18373,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15876,6 +18384,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15885,6 +18395,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15894,6 +18406,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15903,6 +18417,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15912,6 +18428,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15921,6 +18439,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15930,6 +18450,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15939,6 +18461,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15948,6 +18472,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15957,6 +18483,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15966,6 +18494,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15975,6 +18505,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingFederate SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingFederate SCIM",
     "lastCat": "PingFederate SCIM"
   },
@@ -15984,6 +18516,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -15993,6 +18527,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "PingOne SAML",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16002,6 +18538,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16011,6 +18549,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16020,6 +18560,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16029,6 +18571,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16038,6 +18582,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16047,6 +18593,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16056,6 +18604,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16065,6 +18615,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16074,6 +18626,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16083,6 +18637,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16092,6 +18648,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16101,6 +18659,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16110,6 +18670,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16119,6 +18681,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16128,6 +18692,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16137,6 +18703,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16146,6 +18714,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16155,6 +18725,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16164,6 +18736,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16173,6 +18747,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "PingOne SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "PingOne SAML",
     "lastCat": "PingOne SAML"
   },
@@ -16182,6 +18758,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": null,
+    "subCat4": null,
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16191,6 +18769,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "React Native Expo",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16200,6 +18780,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16209,6 +18791,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16218,6 +18802,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16227,6 +18813,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16236,6 +18824,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16245,6 +18835,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16254,6 +18846,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16263,6 +18857,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16272,6 +18868,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16281,6 +18879,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16290,6 +18890,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16299,6 +18901,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16308,6 +18912,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16317,6 +18923,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16326,6 +18934,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "React Native Expo",
+    "subCat3": "Conclusion",
+    "subCat4": "",
     "page": "React Native Expo",
     "lastCat": "React Native Expo"
   },
@@ -16335,6 +18945,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16344,6 +18956,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Rippling SAML",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16353,6 +18967,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16362,6 +18978,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16371,6 +18989,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16380,6 +19000,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16389,6 +19011,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16398,6 +19022,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16407,6 +19033,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16416,6 +19044,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16425,6 +19055,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16434,6 +19066,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16443,6 +19077,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16452,6 +19088,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16461,6 +19099,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16470,6 +19110,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16479,6 +19121,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16488,6 +19132,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16497,6 +19143,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16506,6 +19154,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16515,6 +19165,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16524,6 +19176,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16533,6 +19187,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16542,6 +19198,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16551,6 +19209,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16560,6 +19220,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16569,6 +19231,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16578,6 +19242,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16587,6 +19253,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16596,6 +19264,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16605,6 +19275,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16614,6 +19286,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16623,6 +19297,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16632,6 +19308,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16641,6 +19319,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16650,6 +19330,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16659,6 +19341,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16668,6 +19352,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16677,6 +19363,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16686,6 +19374,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16695,6 +19385,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16704,6 +19396,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16713,6 +19407,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16722,6 +19418,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SAML",
     "lastCat": "Rippling SAML"
   },
@@ -16731,6 +19429,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16740,6 +19440,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "Rippling SCIM",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16749,6 +19451,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16758,6 +19462,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16767,6 +19473,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16776,6 +19484,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16785,6 +19495,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16794,6 +19506,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16803,6 +19517,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16812,6 +19528,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16821,6 +19539,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16830,6 +19550,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16839,6 +19561,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16848,6 +19572,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16857,6 +19583,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16866,6 +19594,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16875,6 +19605,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16884,6 +19616,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16893,6 +19627,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16902,6 +19638,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16911,6 +19649,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16920,6 +19660,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16929,6 +19671,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16938,6 +19682,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16947,6 +19693,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16956,6 +19704,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16965,6 +19715,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16974,6 +19726,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16983,6 +19737,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -16992,6 +19748,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17001,6 +19759,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17010,6 +19770,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "Frequently asked questions",
+    "subCat4": "Can I add additional custom fields to this SCIM integration?",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17019,6 +19781,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17028,6 +19792,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17037,6 +19803,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17046,6 +19814,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17055,6 +19825,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17064,6 +19836,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17073,6 +19847,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17082,6 +19858,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17091,6 +19869,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17100,6 +19880,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17109,6 +19891,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17118,6 +19902,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17127,6 +19913,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17136,6 +19924,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17145,6 +19935,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17154,6 +19946,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17163,6 +19957,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17172,6 +19968,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17181,6 +19979,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17190,6 +19990,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17199,6 +20001,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17208,6 +20012,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17217,6 +20023,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17226,6 +20034,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17235,6 +20045,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17244,6 +20056,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17253,6 +20067,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17262,6 +20078,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Rippling SCIM",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Rippling SCIM",
     "lastCat": "Rippling SCIM"
   },
@@ -17271,6 +20089,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": null,
+    "subCat4": null,
     "page": "",
     "lastCat": ""
   },
@@ -17280,6 +20100,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17289,6 +20111,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17298,6 +20122,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17307,6 +20133,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17316,6 +20144,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17325,6 +20155,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17334,6 +20166,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17343,6 +20177,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17352,6 +20188,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17361,6 +20199,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17370,6 +20210,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17379,6 +20221,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17388,6 +20232,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17397,6 +20243,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17406,6 +20254,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17415,6 +20265,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17424,6 +20276,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17433,6 +20287,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17442,6 +20298,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17451,6 +20309,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17460,6 +20320,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17469,6 +20331,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17478,6 +20342,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17487,6 +20353,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17496,6 +20364,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17505,6 +20375,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17514,6 +20386,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "",
+    "subCat3": "",
+    "subCat4": "",
     "page": "",
     "lastCat": ""
   },
@@ -17523,6 +20397,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17532,6 +20408,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "Salesforce",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17541,6 +20419,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17550,6 +20430,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17559,6 +20441,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17568,6 +20452,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17577,6 +20463,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17586,6 +20474,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17595,6 +20485,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17604,6 +20496,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17613,6 +20507,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17622,6 +20518,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17631,6 +20529,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17640,6 +20540,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17649,6 +20551,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17658,6 +20562,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17667,6 +20573,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17676,6 +20584,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17685,6 +20595,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17694,6 +20606,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17703,6 +20617,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17712,6 +20628,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17721,6 +20639,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17730,6 +20650,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17739,6 +20661,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17748,6 +20672,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17757,6 +20683,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17766,6 +20694,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17775,6 +20705,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17784,6 +20716,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17793,6 +20727,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17802,6 +20738,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17811,6 +20749,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17820,6 +20760,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Salesforce",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Salesforce",
     "lastCat": "Salesforce"
   },
@@ -17829,6 +20771,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17838,6 +20782,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Shibboleth Generic SAML",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17847,6 +20793,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17856,6 +20804,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17865,6 +20815,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17874,6 +20826,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17883,6 +20837,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17892,6 +20848,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17901,6 +20859,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17910,6 +20870,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17919,6 +20881,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17928,6 +20892,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17937,6 +20903,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17946,6 +20914,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17955,6 +20925,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17964,6 +20936,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17973,6 +20947,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17982,6 +20958,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -17991,6 +20969,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Generic SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Generic SAML",
     "lastCat": "Shibboleth Generic SAML"
   },
@@ -18000,6 +20980,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18009,6 +20991,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Shibboleth Unsolicited SAML",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18018,6 +21002,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18027,6 +21013,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18036,6 +21024,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18045,6 +21035,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18054,6 +21046,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18063,6 +21057,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18072,6 +21068,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18081,6 +21079,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18090,6 +21090,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18099,6 +21101,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18108,6 +21112,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18117,6 +21123,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18126,6 +21134,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18135,6 +21145,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18144,6 +21156,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18153,6 +21167,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18162,6 +21178,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Shibboleth Unsolicited SAML",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Shibboleth Unsolicited SAML",
     "lastCat": "Shibboleth Unsolicited SAML"
   },
@@ -18171,6 +21189,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": null,
+    "subCat4": null,
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18180,6 +21200,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "SimpleSAMLphp",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18189,6 +21211,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18198,6 +21222,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18207,6 +21233,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18216,6 +21244,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18225,6 +21255,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18234,6 +21266,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18243,6 +21277,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18252,6 +21288,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18261,6 +21299,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18270,6 +21310,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18279,6 +21321,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18288,6 +21332,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18297,6 +21343,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18306,6 +21354,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18315,6 +21365,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18324,6 +21376,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18333,6 +21387,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18342,6 +21398,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18351,6 +21409,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18360,6 +21420,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "SimpleSAMLphp",
+    "subCat3": "",
+    "subCat4": "",
     "page": "SimpleSAMLphp",
     "lastCat": "SimpleSAMLphp"
   },
@@ -18369,6 +21431,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18378,6 +21442,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "Supabase",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18387,6 +21453,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18396,6 +21464,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18405,6 +21475,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18414,6 +21486,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18423,6 +21497,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18432,6 +21508,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18441,6 +21519,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18450,6 +21530,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Supabase",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Supabase",
     "lastCat": "Supabase"
   },
@@ -18459,6 +21541,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": null,
+    "subCat4": null,
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18468,6 +21552,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "VMware",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18477,6 +21563,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18486,6 +21574,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "What WorkOS provides",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18495,6 +21585,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18504,6 +21596,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "What you’ll need",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18513,6 +21607,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18522,6 +21618,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18531,6 +21629,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18540,6 +21640,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18549,6 +21651,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18558,6 +21662,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18567,6 +21673,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18576,6 +21684,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18585,6 +21695,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18594,6 +21706,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18603,6 +21717,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18612,6 +21728,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18621,6 +21739,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18630,6 +21750,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18639,6 +21761,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18648,6 +21772,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18657,6 +21783,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "VMware",
+    "subCat3": "",
+    "subCat4": "",
     "page": "VMware",
     "lastCat": "VMware"
   },
@@ -18666,6 +21794,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": null,
+    "subCat4": null,
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18675,6 +21805,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "Workday",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18684,6 +21816,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18693,6 +21827,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "Introduction",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18702,6 +21838,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18711,6 +21849,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18720,6 +21860,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18729,6 +21871,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18738,6 +21882,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18747,6 +21893,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18756,6 +21904,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18765,6 +21915,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18774,6 +21926,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18783,6 +21937,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18792,6 +21948,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18801,6 +21959,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18810,6 +21970,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18819,6 +21981,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18828,6 +21992,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18837,6 +22003,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18846,6 +22014,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18855,6 +22025,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18864,6 +22036,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18873,6 +22047,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18882,6 +22058,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18891,6 +22069,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18900,6 +22080,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18909,6 +22091,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18918,6 +22102,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18927,6 +22113,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18936,6 +22124,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18945,6 +22135,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18954,6 +22146,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18963,6 +22157,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18972,6 +22168,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18981,6 +22179,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18990,6 +22190,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -18999,6 +22201,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19008,6 +22212,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19017,6 +22223,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19026,6 +22234,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19035,6 +22245,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19044,6 +22256,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19053,6 +22267,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19062,6 +22278,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19071,6 +22289,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19080,6 +22300,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19089,6 +22311,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19098,6 +22322,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19107,6 +22333,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19116,6 +22344,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19125,6 +22355,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19134,6 +22366,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19143,6 +22377,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19152,6 +22388,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19161,6 +22399,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19170,6 +22410,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19179,6 +22421,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19188,6 +22432,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19197,6 +22443,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19206,6 +22454,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19215,6 +22465,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19224,6 +22476,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19233,6 +22487,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19242,6 +22498,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19251,6 +22509,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19260,6 +22520,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19269,6 +22531,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19278,6 +22542,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19287,6 +22553,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19296,6 +22564,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19305,6 +22575,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19314,6 +22586,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19323,6 +22597,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19332,6 +22608,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19341,6 +22619,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19350,6 +22630,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19359,6 +22641,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19368,6 +22652,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19377,6 +22663,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19386,6 +22674,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19395,6 +22685,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19404,6 +22696,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19413,6 +22707,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19422,6 +22718,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19431,6 +22729,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19440,6 +22740,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19449,6 +22751,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19458,6 +22762,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19467,6 +22773,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19476,6 +22784,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19485,6 +22795,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19494,6 +22806,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19503,6 +22817,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19512,6 +22828,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19521,6 +22839,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   },
@@ -19530,6 +22850,8 @@
     "category": "Resources",
     "subCat1": "Integrations",
     "subCat2": "Workday",
+    "subCat3": "",
+    "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
   }
