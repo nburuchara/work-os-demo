@@ -7,14 +7,19 @@ const $ = cheerio.load(htmlContent);
 
 const searchObjects = [];
 
-// Collect and process all h1 tags first
+// First pass: Collect and process all h1 tags
 $('CSSTransition').each((index, element) => {
     const inProp = $(element).attr('in');
-    const subCat1 = inProp || "Default SubCat1";
+    const subCat1 = "Integrations";
     const page = "Default Page";
+
+    let firstH1 = null;  // Variable to store the first h1 tag
 
     $(element).find('h1').each((i, h1Element) => {
         const h1 = $(h1Element).text().trim();
+        if (i === 0) {
+            firstH1 = h1;  // Store the first h1 tag as subCat2
+        }
         console.log("h1: ", h1);
         if (h1) {
             searchObjects.push({
@@ -22,7 +27,8 @@ $('CSSTransition').each((index, element) => {
                 name: h1,
                 category: "Resources",
                 subCat1,
-                page: inProp,
+                subCat2: firstH1,
+                page: firstH1,
                 lastCat: h1
             });
         } else {
@@ -31,11 +37,13 @@ $('CSSTransition').each((index, element) => {
     });
 });
 
-// Collect and process all h3 tags next
+// Second pass: Collect and process all h3 tags
 $('CSSTransition').each((index, element) => {
     const inProp = $(element).attr('in');
-    const subCat1 = inProp || "Default SubCat1";
-    const page = "Default Page";
+    const subCat1 = "Integrations";
+
+    let previousH1 = null;  // Variable to track the previous h1 tag
+    let firstH1 = $(element).find('h1').first().text().trim();  // Store the first h1 tag as subCat2
 
     $(element).find('h3').each((i, h3Element) => {
         const h3 = $(h3Element).text().trim();
@@ -46,20 +54,24 @@ $('CSSTransition').each((index, element) => {
                 name: h3,
                 category: "Resources",
                 subCat1,
-                page: inProp,
+                subCat2: firstH1,
+                subCat3: previousH1,
+                page: firstH1,
                 lastCat: h3
             });
         } else {
             console.log("no h3 found");
         }
+        previousH1 = $(h3Element).prevAll('h1').first().text().trim();  // Update previous h1
     });
 });
 
-// Collect and process all p tags last
+// Third pass: Collect and process all p tags
 $('CSSTransition').each((index, element) => {
     const inProp = $(element).attr('in');
-    const subCat1 = inProp || "Default SubCat1";
-    const page = "Default Page";
+    const subCat1 = "Integrations";
+
+    let firstH1 = $(element).find('h1').first().text().trim();  // Store the first h1 tag as subCat2
 
     $(element).find('p').each((i, pElement) => {
         const p = $(pElement).text().trim();
@@ -70,7 +82,8 @@ $('CSSTransition').each((index, element) => {
                 name: p,
                 category: "Resources",
                 subCat1,
-                page: inProp,
+                subCat2: firstH1,
+                page: firstH1,
                 lastCat: $(element).find('h1').first().text().trim() // Link to the first h1 in the same CSSTransition
             });
         } else {
