@@ -236,6 +236,10 @@ export default class UserManagement extends Component {
         }
     }
 
+    componentWillUnmount = () => {
+        this.hideAllPages()
+    }
+
     smoothScrollToId = (id) => {
         const checkElementAndScroll = () => {
             const element = document.getElementById(id);

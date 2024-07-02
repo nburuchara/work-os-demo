@@ -287,6 +287,70 @@ export default class Integrations extends Component {
         // }
     }
 
+    hideAllPages = () => {
+        this.setState({
+            saml: false,
+            scim: false,
+            sftp: false,
+            openIDConnect: false,
+            accessPeopleHR: false,
+            adpOpenIDConnect: false,
+            apple: false,
+            auth0: false,
+            awsCognito: false,
+            bambooHR: false,
+            breatheHR: false,
+            bubblePlugin: false,
+            casSaml: false,
+            cezanneHR: false,
+            classLink: false,
+            cloudflare: false,
+            cyberarkSaml: false,
+            cyberarkScim: false,
+            duo: false,
+            entraIdSaml: false,
+            entraIdScim: false,
+            firebase: false,
+            fourth: false,
+            githubOAuth: false,
+            googleDirectorySync: false,
+            googleOAuth: false,
+            googleSaml: false,
+            hibob: false,
+            jumpcloudSaml: false,
+            jumpcloudScim: false,
+            keycloak: false,
+            lastPass: false,
+            loginGov: false,
+            microsoftSaml: false,
+            miniOrange: false,
+            netIQ: false,
+            nextAuth: false,
+            oktaSaml: false,
+            oktaScim: false,
+            oneLoginSaml: false,
+            oneLoginScim: false,
+            oracleSaml: false,
+            pingFedSaml: false,
+            pingFedScim: false,
+            pingOneSaml: false,
+            reactNative: false,
+            ripplingSaml: false,
+            ripplingScim: false,
+            salesforce: false,
+            shibbolethGeneric: false,
+            shibbolethUnsolicited: false,
+            simpleSamlPhp: false,
+            supabase: false,
+            VMWare: false,
+            workday: false,
+        })
+    }
+
+    componentWillUnmount = () => {
+        this.hideAllPages()
+    }
+
     newLangSelected = (currentLang) => {
         if (this.state.currentSelectedLanguage === "") {
             this.setState({ 

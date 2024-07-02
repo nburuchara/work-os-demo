@@ -245,6 +245,10 @@ export default class EventsWebhooks extends Component {
         }
     }
 
+    componentWillUnmount = () => {
+        this.hideAllPages()
+    }
+
     render () {
 
                 //* - EVENTS AND WEBHOOKS SECTION VAR(S) - *//

@@ -383,6 +383,10 @@ export default class Resources extends Component {
         }
     }
 
+    componentWillUnmount = () => {
+        this.hideAllPages()
+    }
+
     render () {
 
                 //* - RESOURCES SECTION VAR(S) - *//
