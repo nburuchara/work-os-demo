@@ -219,12 +219,24 @@ export default class APIReference extends Component {
             }, 1000)
         }
         if (this.props.sidebarMenuClicked !== prevProps.sidebarMenuClicked) {
-            this.sectionIds.forEach(id => {
+            if (this.props.sidebarMenuClicked === true) {
+                this.sectionIds.forEach(id => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        this.originalHeights[id] = element.scrollHeight;
+                        element.style.height = element.scrollHeight + 'px';
+                        this.observer.observe(element);
+                        console.log(`Observing element with id: ${id}`);
+                    }
+                });
+            } else {
+                this.sectionIds.forEach(id => {
                 const element = document.getElementById(id);
                 if (element && this.originalHeights[id] !== undefined) {
                     element.style.height = 'auto';
                 }
             });
+            }
         }
     }
 
