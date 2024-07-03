@@ -422,7 +422,6 @@ export default class CodeSnippet extends Component {
     componentDidMount = () => {
       document.addEventListener('click', this.handleClickOutside);
       if (this.props.languagesToRemove) {
-        console.log(this.props.languagesToRemove)
         this.updateOptions(this.props.languagesToRemove)
       }
     }
@@ -433,7 +432,6 @@ export default class CodeSnippet extends Component {
 
     componentDidUpdate(prevProps) {
       if (prevProps.languagesToRemove !== this.props.languagesToRemove) {
-        console.log('Languages to remove updated:', this.props.languagesToRemove);
         this.updateOptions(this.props.languagesToRemove);
       }
       // Check if selectedLang prop has changed
@@ -837,7 +835,7 @@ export default class CodeSnippet extends Component {
                           <SelectButtonResponse>JSON</SelectButtonResponse>
                         }
                         {this.props.showOnlyJSONTab && 
-                          <SelectButtonResponse>{this.props.showOnlyHTMLTab ? "HTML" : "JSON"}</SelectButtonResponse>
+                          <SelectButtonResponse>{this.props.showOnlyCustomTab ? this.props.showOnlyCustomTab : "JSON"}</SelectButtonResponse>
                         }
                       </div>
                       <div style={{float: sideBarOpen ? "right" : "left", textAlign: sideBarOpen ? "right" : "center"}} className='code-snippet-copy'>

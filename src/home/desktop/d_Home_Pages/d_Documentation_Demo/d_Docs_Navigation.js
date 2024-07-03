@@ -3003,23 +3003,7 @@ export default class DocsNavigationMenu extends Component {
     };
 
     clearRecentSearch = async () => {
-        // if (page === 1) {
-        //     this.setState({
-
-        //     })
-        // } else if () {
-        //     this.setState({
-                
-        //     })
-        // } else if () {
-        //     this.setState({
-                
-        //     })
-        // } else if () {
-        //     this.setState({
-                
-        //     })
-        // }
+    
        this.setState({
             menuOption1SearchTermObject: null,
             menuOption2SearchTermObject: null,
@@ -3171,45 +3155,7 @@ export default class DocsNavigationMenu extends Component {
     }
 
     componentDidUpdate = () => {
-        // const { standaloneAPIsDropdown, standaloneApisScrollID, eventsAndWebhooksDropdown, eventsWebhooksScrollID, resourcesDropdown, resourcesScrollID, usrMgmtScrollID, userManagementDropdown } = this.state;
-        // if (this.state.menuOption1 === false) {
-        //     if (eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || standaloneAPIsDropdown === true || standaloneApisScrollID !== "" ) {
-        //         standaloneAPIsDropdown = false
-        //         standaloneApisScrollID = ""
-        //         eventsAndWebhooksDropdown = false
-        //         eventsWebhooksScrollID = ""
-        //         resourcesDropdown = false
-        //         resourcesScrollID = ""
-        //     }
-        // } else if (this.state.menuOption2 === false) {
-        //     if (eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
-        //         userManagementDropdown = false
-        //         usrMgmtScrollID = ""
-        //         eventsAndWebhooksDropdown = false
-        //         eventsWebhooksScrollID = ""
-        //         resourcesDropdown = false
-        //         resourcesScrollID = ""
-        //     }
-        // } else if (this.state.menuOption3 === false) {
-        //     if (standaloneAPIsDropdown === true || standaloneApisScrollID !== "" || resourcesDropdown === true || resourcesScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
-        //         standaloneAPIsDropdown = false
-        //         standaloneApisScrollID = ""
-        //         userManagementDropdown = false
-        //         usrMgmtScrollID = ""
-        //         resourcesDropdown = false
-        //         resourcesScrollID = ""
-        //     }
-
-        // } else if (this.state.menuOption4 === false) {
-        //     if (standaloneAPIsDropdown === true || standaloneApisScrollID !== "" || eventsAndWebhooksDropdown === true || eventsWebhooksScrollID !== "" || userManagementDropdown === true || usrMgmtScrollID !== "" ) {
-        //         standaloneAPIsDropdown = false
-        //         standaloneApisScrollID = ""
-        //         eventsAndWebhooksDropdown = false
-        //         eventsWebhooksScrollID = ""
-        //         userManagementDropdown = false
-        //         usrMgmtScrollID = ""
-        //     }
-        // }
+       
     }
 
     render () {

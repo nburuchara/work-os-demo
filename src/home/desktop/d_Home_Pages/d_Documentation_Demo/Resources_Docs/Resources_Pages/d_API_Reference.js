@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component, createRef} from 'react'
 import styled from 'styled-components'
 import CodeSnippetStruct from '../../d_Documentation_Components/d_Code_Snippet_Structure'
+import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div `
 
@@ -11,12 +12,24 @@ export default class APIReference extends Component {
         super(props)
         this.state = {
 
-            //* - - DOCUMENTATION CONTENT - - *//
+                //* - - DOCUMENTATION CONTENT - - *//
+
             
-            codeSnippet1CopyHovered: false,
+            overview: true,
+            clientLibraries: true,
+            testing: true,
+            apiKeys: true,
+            errors: true,
+            pagination: true,
+            idempotency: true,
+            rateLimits: true,
+            
 
-            //* - - LANGUAGES (for code snippets) - - *//
+                //* - TRACKING SCROLLING  - *//
+            // inView: {},
+            // sectionsVisible: {},
 
+                //* - - LANGUAGES (for code snippets) - - *//
             currentSelectedLanguage: "javascript",
             curlSelected: false,
             javascriptSelected: false,
@@ -32,23 +45,19 @@ export default class APIReference extends Component {
             bundlerSelected: false,
             gradleSelected: false,
 
-            //* - - ERRORS - - *//
-
+                //* - - ERRORS - - *//
             error_2xx: true,
             error_4xx: true,
             error_5xx: true,
 
-            //* - - ADJUSTABLE DIMENSIONS - - *//
-
+                //* - - ADJUSTABLE DIMENSIONS - - *//
             sidebarMenuClicked: false,
 
         }
 
+        this.sectionIds = ['overview', 'clientLibraries', 'testing', 'apiKeys', 'errors', 'pagination', 'idempotency', 'rateLimits'];
+
     }
-
-    codeSnippet1CopyEnter = () => {this.setState({codeSnippet1CopyHovered: true})}
-
-    codeSnippet1CopyLeave = () => {this.setState({codeSnippet1CopyHovered: false})}
 
     newLangSelected = (currentLang) => {
         if (this.state.currentSelectedLanguage === "") {
@@ -69,40 +78,308 @@ export default class APIReference extends Component {
         }
     }
 
+    componentDidMount = async () => {
+        // window.addEventListener('scroll', this.handleScroll);
+        if (this.props.searchedTerm) {
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+        } else {
+            console.log('selected page: ', this.props.scrollToID)
+            this.getSelectedPage(this.props.scrollToID)
+        }   
+
+        if (this.props.sidebarMenuClicked === true) {
+            console.log("sibebar is")
+        }
+
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+
+        this.originalHeights = {};
+
+        // Initialize the Intersection Observer
+        this.observer = new IntersectionObserver(this.handleIntersection, {
+            root: null, // Use the viewport as the container
+            rootMargin: '5%',
+            threshold: 0.6,  // Adjust as needed
+        });
+
+        // Observe each section
+        this.sectionIds.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                this.originalHeights[id] = element.scrollHeight;
+                element.style.height = element.scrollHeight + 'px';
+                this.observer.observe(element);
+                console.log(`Observing element with id: ${id}`);
+            }
+        });
+
+    }
+
+    getSelectedPage = (selectedPage) => {
+        
+        const pageMap = {
+          "Overview": "overview",
+          "Client libraries" : "clientLibraries",
+          "Testing" : "testing",
+          "API Keys" : "apiKeys",
+          "Errors" : "errors",
+          "Pagination" : "pagination",
+          "Idempotency" : "idempotency",
+          "Rate limits" : "rateLimits",
+        };
+      
+        const page = pageMap[selectedPage];
+        if (page) {
+            if (this.state.integrationsPages === true) {
+                this.setState({integrationsPages: false})
+            }
+            // this.loadSelectedPage(page);
+            setTimeout(() => {
+                // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 500)
+        } else {
+        //   console.error("Unknown selected page:", selectedPage);
+        }
+
+    }
+
+    scrollToTop = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'auto' }); // Use 'auto' for instant scroll, or 'smooth' for smooth scroll
+        }
+    }
+
+    loadSelectedPage = (selectedPage) => {
+        this.hideAllPages()
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: true,
+        //     })
+        // }, 600)
+        setTimeout (() => {
+            this.scrollToTop('top')
+        }, 900)
+        // setTimeout (() => {
+        //     this.setState({
+        //         loadingScreen: false,
+        //     })
+        // }, 1300)
+        setTimeout (() => {
+            this.setState({
+                currentSelectedLanguage: "javascript",
+                [`${selectedPage}`]: true
+            })
+        }, 750)
+    }
+
+    hideAllPages = () => {
+        this.setState({
+            overview: false,
+            clientLibraries: false,
+            testing: false,
+            apiKeys: false,
+            errors: false,
+            pagination: false,
+            idempotency: false,
+            rateLimits: false,
+        })
+    }
+
+    closeAllPagesExceptSelectedPage = (searchedTerm) => {
+        const pageMap = {
+            "Overview": "overview",
+            "Client libraries" : "clientLibraries",
+            "Testing" : "testing",
+            "API Keys" : "apiKeys",
+            "Errors" : "errors",
+            "Pagination" : "pagination",
+            "Idempotency" : "idempotency",
+            "Rate limits" : "rateLimits",
+        };
+        const keys = Object.keys(pageMap);
+        for (let i = 0; i < keys.length; i++) {
+            if (searchedTerm !== keys[i]) {
+                this.setState({
+                    [`${pageMap[keys[i]]}`]: false
+                })
+            }
+        }
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if (this.props.scrollToID !== prevProps.scrollToID) {
+            this.getSelectedPage(this.props.scrollToID)
+        }
+        if (this.props.searchedTerm) {
+            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            setTimeout(() => {
+                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 1000)
+        }
+        if (this.props.sidebarMenuClicked !== prevProps.sidebarMenuClicked) {
+            this.sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element && this.originalHeights[id] !== undefined) {
+                    element.style.height = 'auto';
+                }
+            });
+        }
+    }
+
+    smoothScrollToId = (id) => {
+        const checkElementAndScroll = () => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+    
+                setTimeout(() => {
+                    this.props.clearLatestSearch();
+                }, 1000);
+            } else {
+                // If the element is not yet in the DOM, keep checking
+                requestAnimationFrame(checkElementAndScroll);
+            }
+        };
+    
+        // Add a small delay before starting the checking loop
+        setTimeout(() => {
+            requestAnimationFrame(checkElementAndScroll);
+        }, 500); // You can adjust the delay as needed
+    };
+
+
+    toggleEnlarged = (imageId) => {
+        this.setState(prevState => ({
+            enlargedImageId: prevState.enlargedImageId === imageId ? null : imageId
+        }));
+    };
+
+    navigateToNewPage = (page) => {
+        
+        let pageObject = null;
+        const pageOptions = [
+            {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "top"},
+            {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Client libraries", "lastCat": "top"},
+            {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Testing", "lastCat": "top"},
+            {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "API Keys", "lastCat": "top"},
+            {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "page": "Errors", "lastCat": "top"},
+            {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Pagination", "lastCat": "top"},
+            {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Idempotency", "lastCat": "top"},
+            {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Rate limits", "lastCat": "top"},
+        ]
+        for (let i = 0; i < pageOptions.length; i++) {
+            if (page === pageOptions[i].page) {
+                pageObject = pageOptions[i]
+            }
+        }
+        if (pageObject !== null) {
+            this.props.navigateToNewPage(page, pageObject)
+        }
+    }
+
+    componentWillUnmount = () => {
+        // window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+        // Unobserve all sections
+        if (this.observer) {
+            this.sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    this.observer.unobserve(element);
+                }
+            });
+        }
+    }
+
+    handleIntersection = (entries) => {
+        entries.forEach(entry => {
+            const targetId = entry.target.id;
+            if (entry.isIntersecting) {
+                alert(`Section "${targetId}" is now in view.`);
+
+                // Show a notification or perform any other actions needed for the section in view
+            } else {
+                // alert(`Section "${targetId}" is no longer in view.`);
+                // Show a notification or perform any other actions needed for the section out of view
+            }
+        });
+    }
+
+    handleResize = () => {
+        if (window.innerWidth >= 768) {
+            // Reset heights to original values
+            this.sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element && this.originalHeights[id] !== undefined) {
+                    element.style.height = 'auto';
+                }
+            });
+        } else {
+            // Adjust heights for small screens
+            this.sectionIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.style.height = element.scrollHeight + 'px';
+                }
+            });
+        }
+    };
+
+    handleScroll = () => {
+        // Handle the scroll event
+        console.log('Scroll position:', window.scrollY);
+    }
+
     render () {
 
-        const { codeSnippet1CopyHovered } = this.state;
+            //* - API REFERENCE PAGES VAR(S - *//
+        const { overview, clientLibraries, testing, apiKeys, errors, pagination, idempotency, rateLimits } = this.state;
+
+            //* - LANGUAGE SELECTION VAR(S) - *//
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
         const { error_2xx, error_4xx, error_5xx } = this.state;
 
             //* - UI ADJUSTABLE VARS - *//
-
         const { sidebarMenuClicked } = this.props;
-        
+
         return(
             <Styles>
-                    <div className='demo-docs-container'>
+                
+                <CSSTransition in={overview}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='overview' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
-                            <div className='demo-docs-code-container'>
-                                <div style={{display: "flex", justifyContent: "space-between"}} className='demo-docs-code-container-header'>
-                                    <h5 className={sidebarMenuClicked ? "demo-docs-code-container-sidebar-h5" : ""}>API Base URL</h5>
-                                    <span 
-                                    className={sidebarMenuClicked ? "demo-docs-code-container-sidebar-span" : ""}
-                                    onMouseEnter={this.codeSnippet1CopyEnter}
-                                    onMouseLeave={this.codeSnippet1CopyLeave}
-                                    style={{backgroundColor: codeSnippet1CopyHovered ? "#e9e9f0": "transparent"}}>
-                                        <img className={sidebarMenuClicked ? "demo-docs-code-container-header-sidebar-img" : ""} src='/assets/demo_doc_copy_icon.png' alt='no img available'/>
-                                    </span>
-                                </div>
-                                <div className='demo-docs-code-container-body'>
-                                    <p className={sidebarMenuClicked ? "demo-docs-code-container-body-sidebar-p" : ""}>https://api.workos.com</p>
-                                </div>
-                            </div>
+                            
+                            <CodeSnippetStruct
+                            id={0.5}
+                            headerTabs={2}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="API Base URL"
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}
+                            />
+
                         </div>
-                        <div className='demo-docs-separator'></div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={clientLibraries}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='clientLibraries' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}}className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Client libraries</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.</p>
@@ -227,7 +504,8 @@ export default class APIReference extends Component {
 
                             <CodeSnippetStruct
                             id={0}
-                            headerTabs={2}
+                            headerTabs={2}l
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
@@ -235,7 +513,15 @@ export default class APIReference extends Component {
                             />
                             
                         </div>
-                        <div className='demo-docs-separator'></div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={testing}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='testing' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the API</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
@@ -246,35 +532,52 @@ export default class APIReference extends Component {
                                 <div className='api-info-box-text'>
                                     <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
                                 </div>
-                               
+                                
                             </div>
                         </div>
-                        <div className='demo-docs-separator'></div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
-                            <div className='api-keys'>
-                                <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API Keys</h1>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
-                            </div>
+                    </div>
+                </CSSTransition>
 
-                            <CodeSnippetStruct 
-                            id={1}
-                            headerTabs={0}
-                            sideBarOpen={sidebarMenuClicked}
-                            snippet="Set API Key" 
-                            updateSelectedLang={this.newLangSelected}
-                            selectedLang={this.state.currentSelectedLanguage}/>
-                            
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view and manage your API keys in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
-                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Secure your API Keys</h3>
-                            <div className='api-keys'>
-                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with <span>sk_</span>.</p>
-                            </div>
-                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Staging</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
-                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Production</h3>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
+                <CSSTransition in={apiKeys}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='apiKeys' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div className='api-keys'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API Keys</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
                         </div>
-                        <div className='demo-docs-separator'></div>
+
+                        <CodeSnippetStruct 
+                        id={1}
+                        headerTabs={0}
+                        sideBarOpen={sidebarMenuClicked}
+                        languagesToRemove={['cURL']}
+                        snippet="Set API Key" 
+                        updateSelectedLang={this.newLangSelected}
+                        selectedLang={this.state.currentSelectedLanguage}/>
+                        
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view and manage your API keys in the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Secure your API Keys</h3>
+                        <div className='api-keys'>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with <span>sk_</span>.</p>
+                        </div>
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Staging</h3>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
+                        <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Production</h3>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={errors}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='errors' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Errors</h1>
                             <p>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
@@ -305,26 +608,112 @@ export default class APIReference extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className='demo-docs-separator'></div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={pagination}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='pagination' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Pagination</h1>
                             <div className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Many top-level resources have support for bulk fetches via list API methods. For instance, you can <label className='demo-docs-hyperlink'>list connections</label>, <label className='demo-docs-hyperlink'>list directory users</label>, and <label className='demo-docs-hyperlink'>list directory groups</label>. These list API methods share a common structure, taking at least these four parameters: <span>limit</span>, <span>order</span>, <span>after</span>, and  <span>before</span></p>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS utilizes pagination via the <span>after</span> and <span>before</span> Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.</p>
                             </div>
+
                             <CodeSnippetStruct 
                             id={2}
                             headerTabs={0}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Pagination" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
                         </div>
-                        <div  className='demo-docs-separator'></div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>rest of the docs ...</h1>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={idempotency}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='idempotency' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Idempotency</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API supports idempotency which guarantees that performing the same operation multiple times will have the same result as if the operation were performed only once. This is handy in situations where you may need to retry a request due to a failure or prevent accidental duplicate requests from creating more than one resource.</p>
+
+                            <div className='api-keys'>
+
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To achieve idempotency, you can add <span>Idempotency-Key</span> request header to any WorkOS API request with a unique string as the value. Each subsequent request matching this unique string will return the same response. We suggest using <label className='demo-docs-hyperlink'>v4 UUIDs</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for idempotency keys to avoid collisions.</p>
+
+                            </div>
+
+                            <CodeSnippetStruct 
+                            id={129}
+                            headerTabs={0}
+                            dropdownDisabled={true}
+                            dropdownDisabledAndHidden={true}
+                            showOnlyJSONTab={true}
+                            showOnlyCustomTab={'cURL'}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Idempotency Key Example" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Idempotency keys expire after 24 hours. The WorkOS API will generate a new response if you submit a request with an expired key.</p>
+
                         </div>
                     </div>
+                </CSSTransition>
+
+                <CSSTransition in={rateLimits}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='rateLimits' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Rate limits</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS APIs are rate limited to ensure that they are fast for everyone. If you find yourself getting 429 errors, double check your integration to make sure you aren’t making unnecessary requests.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>General</h3>
+
+                            <div className='complex-table-header'>
+                                <div className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Name</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "" : "20%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Path</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "" : "60%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Limit</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>All requests</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "" : "20%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>*</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "" : "60%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>6,000 requests per 60 seconds per IP address</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </CSSTransition>
+                    
             </Styles>
         )
     }

@@ -2,6 +2,16 @@ const codeSnippets = [
 
         //! - - API REFERENCE - - !//
 
+    { //* API Base URL
+      id: 0.5,
+      title: "API Base URL",
+      code: {
+        javascript: [
+          '1 https://api.workos.com'
+        ]
+      }
+    },
+
     { //* Install the WorkOS SDK 
       id: 0,
         title: "Install the WorkOS SDK",
@@ -15696,6 +15706,24 @@ const codeSnippets = [
           '8     },',
           '9   });',
           '10 }',
+        ]
+      }
+    },
+
+      //! - - API REFERENCE CONTINUED - - !//
+
+
+    { //* Idempotency Key Example (129)
+      id: 129,
+      title: "Idempotency Key Example",
+      code: {
+        javascript: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
         ]
       }
     },

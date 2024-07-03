@@ -166,19 +166,11 @@ export default class Resources extends Component {
 
     loadSelectedPage = (selectedPage) => {
         this.hideAllPages()
-        // setTimeout (() => {
-        //     this.setState({
-        //         loadingScreen: true,
-        //     })
-        // }, 600)
+        
         setTimeout (() => {
             this.scrollToTop('top')
         }, 900)
-        // setTimeout (() => {
-        //     this.setState({
-        //         loadingScreen: false,
-        //     })
-        // }, 1300)
+       
         setTimeout (() => {
             this.setState({
                 currentSelectedLanguage: "javascript",
@@ -189,19 +181,11 @@ export default class Resources extends Component {
 
     loadSelectedIntegraionsPage = (selectedPage) => {
         this.hideAllPages()
-        // setTimeout (() => {
-        //     this.setState({
-        //         loadingScreen: true,
-        //     })
-        // }, 600)
+       
         setTimeout (() => {
             this.scrollToTop('top')
         }, 900)
-        // setTimeout (() => {
-        //     this.setState({
-        //         loadingScreen: false,
-        //     })
-        // }, 1300)
+      
         setTimeout (() => {
             this.setState({
                 currentSelectedLanguage: "javascript",
@@ -295,7 +279,6 @@ export default class Resources extends Component {
     };
 
     navigateToNewPage = (page) => {
-        console.log("R - navigate to new page")
         let pageObject = null;
         const pageOptions = [
 
@@ -391,7 +374,7 @@ export default class Resources extends Component {
     render () {
 
                 //* - RESOURCES SECTION VAR(S) - *//
-            const { apiReference, integrations, integrationsPages } = this.state;
+            const { apiReference, overview, integrations, integrationsPages } = this.state;
 
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
@@ -410,7 +393,7 @@ export default class Resources extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <APIReference sidebarMenuClicked={sidebarMenuClicked}/>
+                    <APIReference scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked}/>
                 </CSSTransition>
 
                 <CSSTransition in={integrations}

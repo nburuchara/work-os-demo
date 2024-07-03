@@ -22854,5 +22854,351 @@
     "subCat4": "",
     "page": "Workday",
     "lastCat": "Workday"
+  },
+  {
+    "id": "h1-2164",
+    "name": "API Reference",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Reference",
+    "page": "API Reference",
+    "lastCat": "API Reference"
+  },
+  {
+    "id": "h1-2165",
+    "name": "Client libraries",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "h1-2166",
+    "name": "Testing the API",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Testing the API",
+    "page": "Testing the API",
+    "lastCat": "Testing the API"
+  },
+  {
+    "id": "h1-2167",
+    "name": "API Keys",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "h1-2168",
+    "name": "Errors",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Errors",
+    "page": "Errors",
+    "lastCat": "Errors"
+  },
+  {
+    "id": "h1-2169",
+    "name": "Pagination",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Pagination",
+    "page": "Pagination",
+    "lastCat": "Pagination"
+  },
+  {
+    "id": "h1-2170",
+    "name": "rest of the docs ...",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "rest of the docs ...",
+    "page": "rest of the docs ...",
+    "lastCat": "rest of the docs ..."
+  },
+  {
+    "id": "h3-2171",
+    "name": "Secure your API Keys",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": null,
+    "page": "API Keys",
+    "lastCat": "Secure your API Keys"
+  },
+  {
+    "id": "h3-2172",
+    "name": "In Staging",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "",
+    "page": "API Keys",
+    "lastCat": "In Staging"
+  },
+  {
+    "id": "h3-2173",
+    "name": "In Production",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "",
+    "page": "API Keys",
+    "lastCat": "In Production"
+  },
+  {
+    "id": "p-2174",
+    "name": "The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Reference",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "API Reference",
+    "lastCat": "API Reference"
+  },
+  {
+    "id": "p-2175",
+    "name": "Sign in to see code examples customized with your API keys and data.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Reference",
+    "subCat3": "API Reference",
+    "subCat4": "",
+    "page": "API Reference",
+    "lastCat": "API Reference"
+  },
+  {
+    "id": "p-2176",
+    "name": "WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2177",
+    "name": "Node.js",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "Client libraries",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2178",
+    "name": "Ruby",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2179",
+    "name": "Laravel",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2180",
+    "name": "Python",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2181",
+    "name": "PHP",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2182",
+    "name": "Go",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2183",
+    "name": "Java",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2184",
+    "name": ".NET",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2185",
+    "name": "Don't see an SDK you need? Contact us to request and SDK!",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2186",
+    "name": "Install the SDK using the command below.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Client libraries",
+    "subCat3": "Client libraries",
+    "subCat4": "",
+    "page": "Client libraries",
+    "lastCat": "Client libraries"
+  },
+  {
+    "id": "p-2187",
+    "name": "You can test the API directly with cURL, or use the Postman collection for convenience.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Testing the API",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "Testing the API",
+    "lastCat": "Testing the API"
+  },
+  {
+    "id": "p-2188",
+    "name": "Check out the guide about the WorkOS API Postman collection to learn more about it.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Testing the API",
+    "subCat3": "Testing the API",
+    "subCat4": "",
+    "page": "Testing the API",
+    "lastCat": "Testing the API"
+  },
+  {
+    "id": "p-2189",
+    "name": "WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a 401 error. Requests using a valid key but with insufficient permissions will return a 403 error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "p-2190",
+    "name": "You can view and manage your API keys in the WorkOS Dashboard.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "API Keys",
+    "subCat4": "",
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "p-2191",
+    "name": "API keys can perform any API request to WorkOS. They should be kept secure and private! Be sure to prevent API keys from being made publicly accessible, such as in client-side code, GitHub, unsecured S3 buckets, and so forth. API keys are prefixed with sk_.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "p-2192",
+    "name": "Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "p-2193",
+    "name": "Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "API Keys",
+    "subCat3": "",
+    "subCat4": "In Staging",
+    "page": "API Keys",
+    "lastCat": "API Keys"
+  },
+  {
+    "id": "p-2194",
+    "name": "WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Errors",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "Errors",
+    "lastCat": "Errors"
+  },
+  {
+    "id": "p-2195",
+    "name": "Many top-level resources have support for bulk fetches via list API methods. For instance, you can list connections, list directory users, and list directory groups. These list API methods share a common structure, taking at least these four parameters: limit, order, after, and  before",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Pagination",
+    "subCat3": null,
+    "subCat4": null,
+    "page": "Pagination",
+    "lastCat": "Pagination"
+  },
+  {
+    "id": "p-2196",
+    "name": "WorkOS utilizes pagination via the after and before Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.",
+    "category": "Resources",
+    "subCat1": "Integrations",
+    "subCat2": "Pagination",
+    "subCat3": "",
+    "subCat4": "",
+    "page": "Pagination",
+    "lastCat": "Pagination"
   }
 ]

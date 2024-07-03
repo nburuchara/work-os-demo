@@ -285,6 +285,8 @@ export default class Integrations extends Component {
         //         this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
         //     }, 1000)
         // }
+
+        // code above unchanged
     }
 
     hideAllPages = () => {
@@ -4723,7 +4725,7 @@ export default class Integrations extends Component {
                             dropdownDisabled={true}
                             dropdownDisabledAndHidden={true}
                             showOnlyJSONTab={true}
-                            showOnlyHTMLTab={true}
+                            showOnlyCustomTab={'HTML'}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Update Firebase Profile" 
                             updateSelectedLang={this.newLangSelected}

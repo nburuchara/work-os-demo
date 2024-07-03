@@ -8,6 +8,18 @@ const results = [
     {"id": "999990", "name": "Integrations", "category": "Resources", "subCat1": "Integrations", "page": "Integrations", "lastCat": "top"},
 
 
+        //! - - API REFERENCE - - !//
+
+    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "top"},
+    {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Client libraries", "lastCat": "top"},
+    {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Testing", "lastCat": "top"},
+    {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "API Keys", "lastCat": "top"},
+    {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "page": "Errors", "lastCat": "top"},
+    {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Pagination", "lastCat": "top"},
+    {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Idempotency", "lastCat": "top"},
+    {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Rate limits", "lastCat": "top"},
+
+
         //! - - INTEGRATIONS - - !//
 
     {"id": "999995", "name": "SAML", "category": "Resources", "subCat1": "Integrations", "page": "SAML", "lastCat": "top"},
