@@ -149,7 +149,14 @@ export default class APIReference extends Component {
     scrollToTop = (id) => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'auto' }); // Use 'auto' for instant scroll, or 'smooth' for smooth scroll
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        if (id === "Client libraries") {
+            setTimeout(() => {
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 1000)
         }
     }
 
@@ -212,7 +219,8 @@ export default class APIReference extends Component {
 
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
-            this.getSelectedPage(this.props.scrollToID)
+            // this.getSelectedPage(this.props.scrollToID)
+            this.scrollToTop(this.props.scrollToID)
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
@@ -386,6 +394,8 @@ export default class APIReference extends Component {
                             selectedLang={this.state.currentSelectedLanguage}
                             />
 
+                            <div style={{marginBottom: "5%"}}></div>
+
                         </div>
                     </div>
                 </CSSTransition>
@@ -527,6 +537,8 @@ export default class APIReference extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}
                             />
+
+                            <div style={{marginBottom: sidebarMenuClicked ? "5%" : ""}}></div>
                             
                         </div>
                     </div>
@@ -539,6 +551,7 @@ export default class APIReference extends Component {
                 >
                     <div id='Testing' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the API</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
                             <div className='testing-the-api-info-box'>
