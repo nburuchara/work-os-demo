@@ -78,6 +78,8 @@ export default class APIReference extends Component {
         }
     }
 
+    currentSectionInView = null;
+
     componentDidMount = async () => {
         // window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
@@ -310,12 +312,14 @@ export default class APIReference extends Component {
         entries.forEach(entry => {
             const targetId = entry.target.id;
             if (entry.isIntersecting) {
-                alert(`Section "${targetId}" is now in view.`);
-
-                // Show a notification or perform any other actions needed for the section in view
+                if (this.currentSectionInView !== targetId) {
+                    this.currentSectionInView = targetId;
+                    alert(`Section "${targetId}" is now in view.`);
+                }
             } else {
-                // alert(`Section "${targetId}" is no longer in view.`);
-                // Show a notification or perform any other actions needed for the section out of view
+                if (this.currentSectionInView === targetId) {
+                    this.currentSectionInView = null;
+                }
             }
         });
     }
