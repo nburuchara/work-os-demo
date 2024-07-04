@@ -281,7 +281,14 @@ export default class Resources extends Component {
     navigateToNewPage = (page) => {
         let pageObject = null;
         const pageOptions = [
-
+            {"id": "999999", "name": "API Reference", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "top"},
+            {"id": "999999", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Client libraries", "lastCat": "top"},
+            {"id": "999999", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Testing", "lastCat": "top"},
+            {"id": "999999", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "API Keys", "lastCat": "top"},
+            {"id": "999999", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Errors", "lastCat": "top"},
+            {"id": "999999", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Pagination", "lastCat": "top"},
+            {"id": "999999", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Idempotency", "lastCat": "top"},
+            {"id": "999999", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Rate limits", "lastCat": "top"},
         ]
         for (let i = 0; i < pageOptions.length; i++) {
             if (page === pageOptions[i].page) {
@@ -371,6 +378,10 @@ export default class Resources extends Component {
         this.hideAllPages()
     }
 
+    nextSectionScrolled = (section) => {
+        this.navigateToNewPage(section)
+    }
+
     render () {
 
                 //* - RESOURCES SECTION VAR(S) - *//
@@ -393,7 +404,7 @@ export default class Resources extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <APIReference scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked}/>
+                    <APIReference nextSectionScrolled={this.nextSectionScrolled} scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked}/>
                 </CSSTransition>
 
                 <CSSTransition in={integrations}

@@ -55,7 +55,7 @@ export default class APIReference extends Component {
 
         }
 
-        this.sectionIds = ['overview', 'clientLibraries', 'testing', 'apiKeys', 'errors', 'pagination', 'idempotency', 'rateLimits'];
+        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits'];
 
     }
 
@@ -314,7 +314,7 @@ export default class APIReference extends Component {
             if (entry.isIntersecting) {
                 if (this.currentSectionInView !== targetId) {
                     this.currentSectionInView = targetId;
-                    alert(`Section "${targetId}" is now in view.`);
+                    this.props.nextSectionScrolled(targetId)
                 }
             } else {
                 if (this.currentSectionInView === targetId) {
@@ -369,7 +369,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='overview' className='demo-docs-container'>
+                    <div id='Overview' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
@@ -395,7 +395,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='clientLibraries' className='demo-docs-container'>
+                    <div id='Client libraries' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}}className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Client libraries</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.</p>
@@ -537,7 +537,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='testing' className='demo-docs-container'>
+                    <div id='Testing' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the API</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
@@ -559,7 +559,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='apiKeys' className='demo-docs-container'>
+                    <div id='API Keys' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                         <div className='api-keys'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API Keys</h1>
@@ -593,7 +593,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='errors' className='demo-docs-container'>
+                    <div id='Errors' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Errors</h1>
                             <p>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
@@ -632,7 +632,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='pagination' className='demo-docs-container'>
+                    <div id='Pagination' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Pagination</h1>
                             <div className='api-keys'>
@@ -657,7 +657,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='idempotency' className='demo-docs-container'>
+                    <div id='Idempotency' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Idempotency</h1>
@@ -693,7 +693,7 @@ export default class APIReference extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <div id='rateLimits' className='demo-docs-container'>
+                    <div id='Rate limits' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Rate limits</h1>

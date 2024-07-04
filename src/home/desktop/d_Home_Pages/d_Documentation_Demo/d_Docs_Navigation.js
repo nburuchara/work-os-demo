@@ -2836,6 +2836,13 @@ export default class DocsNavigationMenu extends Component {
 
     searchedTermClicked = async (category, option, searchedPage) => {
         const { currentPage, currentSection } = this.state;
+
+            //* Handle edge case for API Reference page
+        if (option.subCat1 === "API Reference") {
+            this.handleSearchWithinNested(option.page, 4);
+            return;
+        }
+
         let searchingSamePage= false, searchingSameSection = false;
         if (currentPage === searchedPage) {
             searchingSamePage = true;
