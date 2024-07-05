@@ -13,8 +13,7 @@ export default class APIReference extends Component {
         this.state = {
 
                 //* - - DOCUMENTATION CONTENT - - *//
-
-            
+                
             overview: true,
             clientLibraries: true,
             testing: true,
@@ -57,6 +56,11 @@ export default class APIReference extends Component {
 
         this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits'];
 
+        // Initialize scroll debounce variables
+        this.scrollTimeout = null;
+        this.scrollDelay = 200; // Adjust as needed
+        this.initializeDebouncedNextSectionScrolled();
+
     }
 
     newLangSelected = (currentLang) => {
@@ -79,19 +83,23 @@ export default class APIReference extends Component {
     }
 
     currentSectionInView = null;
+    observer = null;
+
+    // Separate method to initialize debounced function
+    initializeDebouncedNextSectionScrolled() {
+        this.debouncedNextSectionScrolled = debounce((sectionId) => {
+            this.props.nextSectionScrolled(sectionId);
+        }, 2000);
+    }
 
     componentDidMount = async () => {
         // window.addEventListener('scroll', this.handleScroll);
         if (this.props.searchedTerm) {
-            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            // this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            // console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.scrollToID)
         } else {
-            console.log('selected page: ', this.props.scrollToID)
-            this.getSelectedPage(this.props.scrollToID)
+            // this.scrollToTop(this.props.scrollToID)
         }   
-
-        if (this.props.sidebarMenuClicked === true) {
-            console.log("sibebar is")
-        }
 
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
@@ -112,7 +120,7 @@ export default class APIReference extends Component {
                 this.originalHeights[id] = element.scrollHeight;
                 element.style.height = element.scrollHeight + 'px';
                 this.observer.observe(element);
-                console.log(`Observing element with id: ${id}`);
+                // console.log(`Observing element with id: ${id}`);
             }
         });
 
@@ -133,10 +141,9 @@ export default class APIReference extends Component {
       
         const page = pageMap[selectedPage];
         if (page) {
-            if (this.state.integrationsPages === true) {
-                this.setState({integrationsPages: false})
-            }
-            // this.loadSelectedPage(page);
+            
+            this.loadSelectedPage(page);
+
             setTimeout(() => {
                 // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
             }, 500)
@@ -146,8 +153,8 @@ export default class APIReference extends Component {
 
     }
 
-    scrollToTop = (id) => {
-        const element = document.getElementById(id);
+    scrollToId = (id) => {
+        let element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -160,27 +167,35 @@ export default class APIReference extends Component {
         }
     }
 
+    scrollToTop = (id) => {
+        let element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.hideAllPages()
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: true,
         //     })
         // }, 600)
         setTimeout (() => {
-            this.scrollToTop('top')
-        }, 900)
+            // this.scrollToTop(selectedPage)
+        }, 750)
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: false,
         //     })
         // }, 1300)
         setTimeout (() => {
+            this.scrollToTop("Overview")
             this.setState({
                 currentSelectedLanguage: "javascript",
-                [`${selectedPage}`]: true
+                // [`${selectedPage}`]: true
             })
-        }, 750)
+        }, 500)
     }
 
     hideAllPages = () => {
@@ -220,13 +235,15 @@ export default class APIReference extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             // this.getSelectedPage(this.props.scrollToID)
-            this.scrollToTop(this.props.scrollToID)
+            // this.scrollToTop(this.props.scrollToID)
+            console.log("componentDidUpdate props.scrollToID: PRESENT - ", this.props.scrollToID)
         }
         if (this.props.searchedTerm) {
+            console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.searchedTerm)
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
             setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
+                // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            }, 2000)
         }
         if (this.props.sidebarMenuClicked !== prevProps.sidebarMenuClicked) {
             if (this.props.sidebarMenuClicked === true) {
@@ -236,7 +253,7 @@ export default class APIReference extends Component {
                         this.originalHeights[id] = element.scrollHeight;
                         element.style.height = element.scrollHeight + 'px';
                         this.observer.observe(element);
-                        console.log(`Observing element with id: ${id}`);
+                        // console.log(`Observing element with id: ${id}`);
                     }
                 });
             } else {
@@ -270,7 +287,6 @@ export default class APIReference extends Component {
             requestAnimationFrame(checkElementAndScroll);
         }, 500); // You can adjust the delay as needed
     };
-
 
     toggleEnlarged = (imageId) => {
         this.setState(prevState => ({
@@ -322,15 +338,21 @@ export default class APIReference extends Component {
             if (entry.isIntersecting) {
                 if (this.currentSectionInView !== targetId) {
                     this.currentSectionInView = targetId;
-                    this.props.nextSectionScrolled(targetId)
+                    this.debouncedNextSectionScrolled(targetId);
                 }
             } else {
                 if (this.currentSectionInView === targetId) {
                     this.currentSectionInView = null;
+                    
                 }
             }
         });
     }
+
+    // Debounce function for nextSectionScrolled
+    debouncedNextSectionScrolled = debounce((sectionId) => {
+        this.props.nextSectionScrolled(sectionId);
+    }, 2000); // Adjust debounce delay as needed
 
     handleResize = () => {
         if (window.innerWidth >= 768) {
@@ -353,8 +375,33 @@ export default class APIReference extends Component {
     };
 
     handleScroll = () => {
-        // Handle the scroll event
-        console.log('Scroll position:', window.scrollY);
+        // Clear any existing timeout to debounce scroll events
+        if (this.scrollTimeout) {
+            clearTimeout(this.scrollTimeout);
+        }
+
+        // Set a timeout to check if scrolling has stopped
+        this.scrollTimeout = setTimeout(() => {
+            // Perform actions when scrolling has stopped
+            console.log('Scrolling has stopped');
+            // Trigger the function after scroll has stopped
+            if (this.currentSectionInView) {
+                this.props.nextSectionScrolled(this.currentSectionInView);
+            }
+        }, this.scrollDelay);
+    }
+
+    showAllPages = () => {
+        this.setState({
+            overview: true,
+            clientLibraries: true,
+            testing: true,
+            apiKeys: true,
+            errors: true,
+            pagination: true,
+            idempotency: true,
+            rateLimits: true,
+        })
     }
 
     render () {
@@ -373,7 +420,7 @@ export default class APIReference extends Component {
             <Styles>
                 
                 <CSSTransition in={overview}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -394,14 +441,12 @@ export default class APIReference extends Component {
                             selectedLang={this.state.currentSelectedLanguage}
                             />
 
-                            <div style={{marginBottom: "5%"}}></div>
-
                         </div>
                     </div>
                 </CSSTransition>
 
                 <CSSTransition in={clientLibraries}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -538,14 +583,14 @@ export default class APIReference extends Component {
                             selectedLang={this.state.currentSelectedLanguage}
                             />
 
-                            <div style={{marginBottom: sidebarMenuClicked ? "5%" : ""}}></div>
+                            {/* <div style={{marginBottom: sidebarMenuClicked ? "5%" : ""}}></div> */}
                             
                         </div>
                     </div>
                 </CSSTransition>
 
                 <CSSTransition in={testing}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -568,7 +613,7 @@ export default class APIReference extends Component {
                 </CSSTransition>
 
                 <CSSTransition in={apiKeys}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -602,14 +647,14 @@ export default class APIReference extends Component {
                 </CSSTransition>
 
                 <CSSTransition in={errors}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
                     <div id='Errors' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Errors</h1>
-                            <p>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "2%" : "0%"}} className='errors'>
                                 <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
                                     <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_2xx ? "#d8eaed" : "", color: error_2xx ? "#00815c" : ""}}>200</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Successful request.</label>
@@ -641,7 +686,7 @@ export default class APIReference extends Component {
                 </CSSTransition>
 
                 <CSSTransition in={pagination}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -666,7 +711,7 @@ export default class APIReference extends Component {
                 </CSSTransition>
 
                 <CSSTransition in={idempotency}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -702,7 +747,7 @@ export default class APIReference extends Component {
                 </CSSTransition>
 
                 <CSSTransition in={rateLimits}
-                timeout={500}
+                timeout={0}
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
@@ -746,4 +791,15 @@ export default class APIReference extends Component {
             </Styles>
         )
     }
+}
+
+// Debounce utility function
+function debounce(func, delay) {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
 }

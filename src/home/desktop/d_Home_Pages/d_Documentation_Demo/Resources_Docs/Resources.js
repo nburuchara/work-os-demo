@@ -65,8 +65,15 @@ export default class Resources extends Component {
 
     getSelectedPage = (selectedPage) => {
         const pageMap = {
-          "Overview": "apiReference",
-          "Integrations" : "integrations",
+            "Overview": "apiReference",
+            "Integrations" : "integrations",
+            // "Client libraries": "apiReference",
+            // "Testing": "apiReference",
+            // "API Keys": "apiReference",
+            // "Errors": "apiReference",
+            // "Pagination": "apiReference",
+            // "Idempotency": "apiReference",
+            // "Rate limits": "apiReference",
         };
       
         const page = pageMap[selectedPage];
@@ -226,9 +233,12 @@ export default class Resources extends Component {
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
-            setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 1000)
+            if (!this.state.apiReference) {
+
+                setTimeout(() => {
+                    this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+                }, 1000)
+            }
         }
     }
 
@@ -403,7 +413,7 @@ export default class Resources extends Component {
                 timeout={500}
                 classNames="docs-side-panel"
                 unmountOnExit    
-                >
+                >   
                     <APIReference nextSectionScrolled={this.nextSectionScrolled} scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked}/>
                 </CSSTransition>
 

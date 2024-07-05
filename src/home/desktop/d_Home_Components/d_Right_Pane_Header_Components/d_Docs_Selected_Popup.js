@@ -71,6 +71,8 @@ export default class Popup extends Component {
         const popupContainer = this.popupContainerRef.current;
         if (popupContainer) {
             popupContainer.addEventListener('scroll', this.handleScroll);
+            popupContainer.addEventListener('touchend', this.handleScrollEnd);
+            popupContainer.addEventListener('mouseup', this.handleScrollEnd);
         }
     }
 
@@ -78,6 +80,8 @@ export default class Popup extends Component {
         const popupContainer = this.popupContainerRef.current;
         if (popupContainer) {
             popupContainer.removeEventListener('scroll', this.handleScroll);
+            popupContainer.removeEventListener('touchend', this.handleScrollEnd);
+            popupContainer.removeEventListener('mouseup', this.handleScrollEnd);
         }
     }
 
@@ -90,11 +94,18 @@ export default class Popup extends Component {
         }
     };
 
+    handleScrollEnd = () => {
+        const popupContainer = this.popupContainerRef.current;
+        popupContainer.style.overflowY = 'hidden';
+        setTimeout(() => {
+            popupContainer.style.overflowY = 'auto';
+        }, 0); // Adjust the timeout duration as needed
+    };
+
 
     handleSidePanelOpened = () => {
         const container = this.popupContainerRef.current;
         if (container) {
-            // Check if we're not already at the top of the container
             if (container.scrollTop > 0) {
                 // If not, decrement the scrollTop value by 10 pixels
                 container.scrollTop -= 1;
@@ -111,7 +122,7 @@ export default class Popup extends Component {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }
+    }
     
         
     

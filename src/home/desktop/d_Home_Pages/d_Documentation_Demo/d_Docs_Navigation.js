@@ -33,6 +33,7 @@ const Styles = styled.div `
     position: absolute; 
     bottom: 0; 
     height: 100%;
+    float: left;
     top: 0; /* Align to the top of the viewport */
     left: 0; /* Align to the left of the viewport */
     width: 35%; /* Set the width as desired */
@@ -2316,6 +2317,7 @@ export default class DocsNavigationMenu extends Component {
             standaloneAPIsDropdown: false,
             eventsAndWebhooksDropdown: false,
             resourcesDropdown: false,
+            highlightedNode: false,
             
             indexReselecting: 0,
             aIndices: [],
@@ -2709,18 +2711,6 @@ export default class DocsNavigationMenu extends Component {
         const { searchFilterSelected, menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
         let currentSectionSearching; 
 
-        // if (menuOption1 === true) {
-        //     currentSectionSearching = UserManagementFullSearch
-        // } else if (menuOption2 === true) {
-        //     currentSectionSearching = StandaloneAPIsFullSearch
-        // } else if (menuOption3 === true) {
-        //     currentSectionSearching = EventsWebhooksFullSearch
-        // } else if (menuOption4 === true) {
-        //     currentSectionSearching = AllDocsFullSearch
-        // } else {
-        //     currentSectionSearching = AllDocsFullSearch
-        // }
-
         if (searchFilterSelected === "User Management") {
             currentSectionSearching = UserManagementFullSearch
         } else if (searchFilterSelected === "Standalone APIs") {
@@ -2839,7 +2829,7 @@ export default class DocsNavigationMenu extends Component {
 
             //* Handle edge case for API Reference page
         if (option.subCat1 === "API Reference" && menuOption4 === true) {
-            this.handleSearchWithinNested(option.page, 4);
+                this.handleSearchWithinNested(option.page, 4);
             return;
         }
 
@@ -3313,6 +3303,12 @@ export default class DocsNavigationMenu extends Component {
                                 </div>
                             </div>
                     </CSSTransition>
+
+                    {/* {this.state.showDocsMenu && 
+                        <div style={{zIndex: 0.1}} className='demo-docs-sidebar'>
+                            
+                        </div>
+                    } */}
 
                         {/* - - EXPANDED SEARCH BAR - - */}
 
