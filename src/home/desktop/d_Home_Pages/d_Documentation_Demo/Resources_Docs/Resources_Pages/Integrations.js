@@ -184,6 +184,7 @@ export default class Integrations extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
+        this.hideAllPages()
         setTimeout (() => {
             this.scrollToTop('top')
         }, 900)
@@ -275,9 +276,9 @@ export default class Integrations extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
-            setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 0)
+            // setTimeout(() => {
+            //     this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+            // }, 0)
         }
         // if (this.props.searchedTerm) {
         //     this.smoothScrollToId(this.props.searchedTerm.lastCat)

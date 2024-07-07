@@ -163,7 +163,7 @@ const docs_sidebar_options = [
                             },
                             {
                                 id: 37,
-                                levelName: "Magic Auth",
+                                levelName: "Magic Auth (Auth)",
                             },
                             {
                                 id: 38,
@@ -251,19 +251,19 @@ const docs_sidebar_options = [
                         sections: [
                             {
                                 id: 57,
-                                levelName: "Authentication factor",
+                                levelName: "Authentication factor (UM)",
                             }, 
                             {
                                 id: 58,
-                                levelName: "Authentication challenge",
+                                levelName: "Authentication challenge (UM)",
                             },
                             {
                                 id: 59,
-                                levelName: "Enroll an auth factor",
+                                levelName: "Enroll an auth factor (UM)",
                             },
                             {
                                 id: 60,
-                                levelName: "List auth factors",
+                                levelName: "List auth factors (UM)",
                             }
                         ]
                     },
@@ -341,7 +341,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 77,
-                        levelName: "Overview",
+                        levelName: "Overview (SSO)",
                     },
                     {
                         id: 78,
@@ -397,7 +397,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 89,
-                        levelName: "Overview",
+                        levelName: "Overview (DS)",
                     },
                     {
                         id: 90,
@@ -453,7 +453,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 101,
-                        levelName: "Overview",
+                        levelName: "Overview (AP)",
                     },
                     {
                         id: 102,
@@ -471,7 +471,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 105,
-                        levelName: "Overview",
+                        levelName: "Overview (AL)",
                     }, 
                     {
                         id: 106,

@@ -25,8 +25,7 @@ export default class APIReference extends Component {
             
 
                 //* - TRACKING SCROLLING  - *//
-            // inView: {},
-            // sectionsVisible: {},
+            cancelAutoScroll: false,
 
                 //* - - LANGUAGES (for code snippets) - - *//
             currentSelectedLanguage: "javascript",
@@ -98,8 +97,10 @@ export default class APIReference extends Component {
             // this.smoothScrollToId(this.props.searchedTerm.lastCat)
             // console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.scrollToID)
         } else {
-            // this.scrollToTop(this.props.scrollToID)
+            
         }   
+
+        this.scrollToTop("top")
 
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
@@ -120,7 +121,6 @@ export default class APIReference extends Component {
                 this.originalHeights[id] = element.scrollHeight;
                 element.style.height = element.scrollHeight + 'px';
                 this.observer.observe(element);
-                // console.log(`Observing element with id: ${id}`);
             }
         });
 
@@ -170,7 +170,7 @@ export default class APIReference extends Component {
     scrollToTop = (id) => {
         let element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'auto' });
         }
     }
 
@@ -190,7 +190,7 @@ export default class APIReference extends Component {
         //     })
         // }, 1300)
         setTimeout (() => {
-            this.scrollToTop("Overview")
+            // this.scrollToTop("Overview")
             this.setState({
                 currentSelectedLanguage: "javascript",
                 // [`${selectedPage}`]: true
@@ -233,10 +233,13 @@ export default class APIReference extends Component {
     }
 
     componentDidUpdate = (prevProps) => {
-        if (this.props.scrollToID !== prevProps.scrollToID) {
+        if (this.props.scrollToID !== prevProps.scrollToID) { 
             // this.getSelectedPage(this.props.scrollToID)
             // this.scrollToTop(this.props.scrollToID)
             console.log("componentDidUpdate props.scrollToID: PRESENT - ", this.props.scrollToID)
+            
+            this.smoothScrollToId(this.props.scrollToID.toLowerCase())
+            
         }
         if (this.props.searchedTerm) {
             console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.searchedTerm)
@@ -253,7 +256,6 @@ export default class APIReference extends Component {
                         this.originalHeights[id] = element.scrollHeight;
                         element.style.height = element.scrollHeight + 'px';
                         this.observer.observe(element);
-                        // console.log(`Observing element with id: ${id}`);
                     }
                 });
             } else {
@@ -272,16 +274,14 @@ export default class APIReference extends Component {
             const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
-    
                 setTimeout(() => {
-                    this.props.clearLatestSearch();
+                    // this.props.clearLatestSearch();
                 }, 1000);
             } else {
                 // If the element is not yet in the DOM, keep checking
                 requestAnimationFrame(checkElementAndScroll);
             }
         };
-    
         // Add a small delay before starting the checking loop
         setTimeout(() => {
             requestAnimationFrame(checkElementAndScroll);
@@ -338,6 +338,7 @@ export default class APIReference extends Component {
             if (entry.isIntersecting) {
                 if (this.currentSectionInView !== targetId) {
                     this.currentSectionInView = targetId;
+                    // this.setState({cancelAutoScroll: true})
                     this.debouncedNextSectionScrolled(targetId);
                 }
             } else {
@@ -418,7 +419,7 @@ export default class APIReference extends Component {
 
         return(
             <Styles>
-                
+                <div id='top'></div>
                 <CSSTransition in={overview}
                 timeout={0}
                 classNames="docs-side-panel"
@@ -426,10 +427,11 @@ export default class APIReference extends Component {
                 >
                     <div id='Overview' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
-                            <h1 style={{paddingTop: sidebarMenuClicked ? "0%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
+                            <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
                             
+                            <i id='client libraries'></i>
                             <CodeSnippetStruct
                             id={0.5}
                             headerTabs={2}
@@ -440,11 +442,10 @@ export default class APIReference extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}
                             />
-
+                        
                         </div>
                     </div>
                 </CSSTransition>
-
                 <CSSTransition in={clientLibraries}
                 timeout={0}
                 classNames="docs-side-panel"
@@ -573,6 +574,7 @@ export default class APIReference extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""} style={{color: "#5e626a", fontSize: "80%"}}>Don't see an SDK you need? <label className='client-library-contact-us'>Contact us</label> to request and SDK!</p>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Install the SDK using the command below.</p>
 
+                            <i id='testing'></i>
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}l
@@ -606,8 +608,8 @@ export default class APIReference extends Component {
                                 <div className='api-info-box-text'>
                                     <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
                                 </div>
-                                
                             </div>
+                            <i id='api keys'></i>
                         </div>
                     </div>
                 </CSSTransition>
@@ -641,7 +643,7 @@ export default class APIReference extends Component {
                         <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Staging</h3>
                         <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your Staging Environment comes with an API key already generated for you. Staging API keys may be viewed as often as they are needed and will appear inline throughout our documentation in code examples if you are logged in to your WorkOS account. API requests will be scoped to the provided key’s Environment.</p>
                         <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>In Production</h3>
-                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon creation of them.</p>
+                        <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Once you unlock Production access you will need to generate an API Key for it. Production API keys may only be viewed once and will need to be saved in a secure location upon<i id='errors'></i> creation of them.</p>
                         </div>
                     </div>
                 </CSSTransition>
@@ -678,7 +680,7 @@ export default class APIReference extends Component {
                                     <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_4xx ? "#fcf5c0" : "", color: error_2xx ? "#a06e00" : ""}}>422</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Too many requests. Refer to the <span className='inline-errors-cell-span'>Rate Limits</span> section.</label>
                                 </div>
                                 <div className={sidebarMenuClicked ? "errors-cell-sidebar" : "errors-cell"}>
-                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_5xx ? "#feeaed" : "", color: error_2xx ? "#ce3358" : ""}}>5xx</span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Indicates an error with WorkOS servers</label>
+                                    <span className={sidebarMenuClicked ? "errors-cell-sidebar-span" : ""} style={{backgroundColor: error_5xx ? "#feeaed" : "", color: error_2xx ? "#ce3358" : ""}}>5xx<i id='pagination'></i></span><label style={{fontSize: sidebarMenuClicked ? "62.5%": "70%", fontFamily: "poppins", color: "#5e626a"}}>Indicates an error with WorkOS servers</label>
                                 </div>
                             </div>
                         </div>
@@ -698,6 +700,7 @@ export default class APIReference extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS utilizes pagination via the <span>after</span> and <span>before</span> Both parameters take an existing object ID value and return objects in either descending or ascending order by creation time.</p>
                             </div>
 
+    
                             <CodeSnippetStruct 
                             id={2}
                             headerTabs={0}
@@ -706,6 +709,8 @@ export default class APIReference extends Component {
                             snippet="Pagination" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
+
+                            <i id='idempotency'></i>
                         </div>
                     </div>
                 </CSSTransition>
@@ -740,7 +745,7 @@ export default class APIReference extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Idempotency keys expire after 24 hours. The WorkOS API will generate a new response if you submit a request with an expired key.</p>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i id='rate limits'></i>Idempotency keys expire after 24 hours. The WorkOS API will generate a new response if you submit a request with an expired key.</p>
 
                         </div>
                     </div>

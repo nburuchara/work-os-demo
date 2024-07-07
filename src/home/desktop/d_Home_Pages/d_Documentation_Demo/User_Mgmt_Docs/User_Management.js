@@ -172,7 +172,7 @@ export default class UserManagement extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.hideAllPages()
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: true,

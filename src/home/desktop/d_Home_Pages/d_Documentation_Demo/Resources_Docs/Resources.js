@@ -233,8 +233,8 @@ export default class Resources extends Component {
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
+                //! Fix this...
             if (!this.state.apiReference) {
-
                 setTimeout(() => {
                     this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
                 }, 1000)
@@ -414,7 +414,7 @@ export default class Resources extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >   
-                    <APIReference nextSectionScrolled={this.nextSectionScrolled} scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked}/>
+                    <APIReference nextSectionScrolled={this.nextSectionScrolled} scrollToID={this.props.scrollToID} sidebarMenuClicked={sidebarMenuClicked} searchedTerm={this.props.searchedTerm ? this.props.searchedTerm : null}/>
                 </CSSTransition>
 
                 <CSSTransition in={integrations}

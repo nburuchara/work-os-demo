@@ -212,6 +212,7 @@ export default class StandaloneAPIs extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
+        // this.hideAllPages()
         // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
         // setTimeout (() => {
         //     this.setState({
@@ -220,7 +221,7 @@ export default class StandaloneAPIs extends Component {
         // }, 600)
         setTimeout (() => {
             this.scrollToTop('top')
-        }, 700)
+        }, 900)
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: false,
@@ -231,7 +232,7 @@ export default class StandaloneAPIs extends Component {
                 currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
             })
-        }, 500)
+        }, 750)
     }
 
     hideAllPages = () => {

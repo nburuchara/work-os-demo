@@ -2355,6 +2355,10 @@ export default class DocsNavigationMenu extends Component {
             menuOption4SearchCategory: "",
             menuOption4SearchTermObject: null,
 
+            //* - - RESOURCES PAGE SECTIONS - - *//
+
+            resourcesPageSection: "",
+
         }
 
             //* - TRIE NODE (for search functionality) - *//
@@ -2830,6 +2834,7 @@ export default class DocsNavigationMenu extends Component {
             //* Handle edge case for API Reference page
         if (option.subCat1 === "API Reference" && menuOption4 === true) {
                 this.handleSearchWithinNested(option.page, 4);
+                this.setState({resourcesPageSection: option.name})
             return;
         }
 
@@ -2950,7 +2955,7 @@ export default class DocsNavigationMenu extends Component {
                     this.setState({
                         menuOption3SearchCategory: category,
                         menuOption3SearchTermObject: option,
-                        currentPage: searchedPage
+                        currentPage: searchedPage,
                     }, () => {
                         // Call the callback function to perform search
                         this.setState({
@@ -2965,7 +2970,8 @@ export default class DocsNavigationMenu extends Component {
                     this.setState({
                         menuOption4SearchCategory: category,
                         menuOption4SearchTermObject: option,
-                        currentPage: searchedPage
+                        currentPage: searchedPage,
+                        resourcesPageSection: option.name
                     }, () => {
                         // Call the callback function to perform search
                         this.setState({
@@ -3303,12 +3309,6 @@ export default class DocsNavigationMenu extends Component {
                                 </div>
                             </div>
                     </CSSTransition>
-
-                    {/* {this.state.showDocsMenu && 
-                        <div style={{zIndex: 0.1}} className='demo-docs-sidebar'>
-                            
-                        </div>
-                    } */}
 
                         {/* - - EXPANDED SEARCH BAR - - */}
 

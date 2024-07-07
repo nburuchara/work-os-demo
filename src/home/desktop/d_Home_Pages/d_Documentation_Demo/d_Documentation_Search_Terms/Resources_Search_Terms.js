@@ -10,14 +10,14 @@ const results = [
 
         //! - - API REFERENCE - - !//
 
-    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "top"},
-    {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Client libraries", "lastCat": "top"},
-    {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Testing", "lastCat": "top"},
-    {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "API Keys", "lastCat": "top"},
-    {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "page": "Errors", "lastCat": "top"},
-    {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Pagination", "lastCat": "top"},
-    {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Idempotency", "lastCat": "top"},
-    {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Rate limits", "lastCat": "top"},
+    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "Overview"},
+    {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "client libraries"},
+    {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "testing"},
+    {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "api keys"},
+    {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "errors"},
+    {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "pagination"},
+    {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "idempotency"},
+    {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "rate limits"},
 
 
         //! - - INTEGRATIONS - - !//

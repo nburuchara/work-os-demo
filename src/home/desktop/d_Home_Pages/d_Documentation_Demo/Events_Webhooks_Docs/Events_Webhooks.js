@@ -89,7 +89,7 @@ export default class EventsWebhooks extends Component {
             this.loadSelectedPage(page);
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 0)
+            }, 1000)
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
@@ -103,7 +103,7 @@ export default class EventsWebhooks extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.hideAllPages()
         // setTimeout (() => {
         //     this.setState({
         //         loadingScreen: true,
