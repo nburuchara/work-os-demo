@@ -789,6 +789,136 @@ export default class APIReference extends Component {
                                 </div>
                             </div>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This rate limits applies to all environments, staging and production. Exceptions to the general rate limit are listed below.</p>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Single Sign-On</h3>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Name</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Path</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "50%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Limit</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Get Authorization URL</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/sso/authorize</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "50%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>1,000 requests per 60 seconds per connection</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Directory Sync</h3>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Name</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Path</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "50%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Limit</h5>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/directory_users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "40%" : "50%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>User Management</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Rate limiting for User Management APIs are enforced on an account basis.</p>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Name</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Path</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-header3'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Limit</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+                            
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "20%" : "20%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "45%" : "55%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/directory_users</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </CSSTransition>
