@@ -5,6 +5,17 @@ import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div `
 
+    // - - COMPLEX HEADER P TAG - - //
+
+.table-cell-p {
+    color: #6363f1;
+}
+
+.table-cell-p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 `
 
 export default class APIReference extends Component {
@@ -22,6 +33,7 @@ export default class APIReference extends Component {
             pagination: true,
             idempotency: true,
             rateLimits: true,
+            events: true,
             
 
                 //* - TRACKING SCROLLING  - *//
@@ -53,7 +65,7 @@ export default class APIReference extends Component {
 
         }
 
-        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits'];
+        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Events'];
 
         // Initialize scroll debounce variables
         this.scrollTimeout = null;
@@ -100,7 +112,7 @@ export default class APIReference extends Component {
             
         }   
 
-        this.scrollToTop("top")
+        this.scrollToTop("overview")
 
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
@@ -111,7 +123,7 @@ export default class APIReference extends Component {
         this.observer = new IntersectionObserver(this.handleIntersection, {
             root: null, // Use the viewport as the container
             rootMargin: '5%',
-            threshold: 0.5,  // Adjust as needed
+            threshold: 0.4,  // Adjust as needed
         });
 
         // Observe each section
@@ -142,7 +154,7 @@ export default class APIReference extends Component {
         const page = pageMap[selectedPage];
         if (page) {
             
-            this.loadSelectedPage(page);
+            // this.loadSelectedPage(page);
 
             setTimeout(() => {
                 // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
@@ -208,6 +220,7 @@ export default class APIReference extends Component {
             pagination: false,
             idempotency: false,
             rateLimits: false,
+            events: false
         })
     }
 
@@ -306,6 +319,7 @@ export default class APIReference extends Component {
             {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Pagination", "lastCat": "top"},
             {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Idempotency", "lastCat": "top"},
             {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Rate limits", "lastCat": "top"},
+            {"id": "999995", "name": "Events", "category": "Resources", "subCat1": "API Reference", "page": "Events", "lastCat": "top"},
         ]
         for (let i = 0; i < pageOptions.length; i++) {
             if (page === pageOptions[i].page) {
@@ -408,7 +422,7 @@ export default class APIReference extends Component {
     render () {
 
             //* - API REFERENCE PAGES VAR(S - *//
-        const { overview, clientLibraries, testing, apiKeys, errors, pagination, idempotency, rateLimits } = this.state;
+        const { overview, clientLibraries, testing, apiKeys, errors, pagination, idempotency, rateLimits, events } = this.state;
 
             //* - LANGUAGE SELECTION VAR(S) - *//
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
@@ -426,7 +440,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Overview' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API Reference</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The WorkOS API enables adding Enterprise Ready features to your application. This REST API provides programmatic access to User Management, Single Sign-On, Directory Sync, and Audit Log resources.</p>  
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Sign in</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to see code examples customized with your API keys and data.</p>   
@@ -452,7 +466,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Client libraries' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}}className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}}className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Client libraries</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS offers native SDKs in several popular programming languages. Choose one language below to see our API Reference in your application’s language.</p>
                             <div className='demo-docs-languages'>
@@ -597,7 +611,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Testing' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing the API</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can test the API directly with cURL, or use the <label className='demo-docs-hyperlink'>Postman collection</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> for convenience.</p>
@@ -620,7 +634,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='API Keys' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                         <div className='api-keys'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API Keys</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS authenticates your API requests using your account’s API keys. API requests made without authentication or using an incorrect key will return a <span>401</span> error. Requests using a valid key but with insufficient permissions will return a <span>403</span> error. All API requests must be made over HTTPS. Any requests made over plain HTTP will fail.</p>
@@ -654,7 +668,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Errors' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Errors</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS uses standard HTTP response codes to indicate the success or failure of your API requests.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "2%" : "0%"}} className='errors'>
@@ -693,7 +707,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Pagination' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Pagination</h1>
                             <div className='api-keys'>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Many top-level resources have support for bulk fetches via list API methods. For instance, you can <label className='demo-docs-hyperlink'>list connections</label>, <label className='demo-docs-hyperlink'>list directory users</label>, and <label className='demo-docs-hyperlink'>list directory groups</label>. These list API methods share a common structure, taking at least these four parameters: <span>limit</span>, <span>order</span>, <span>after</span>, and  <span>before</span></p>
@@ -721,7 +735,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Idempotency' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Idempotency</h1>
 
@@ -758,7 +772,7 @@ export default class APIReference extends Component {
                 unmountOnExit    
                 >
                     <div id='Rate limits' className='demo-docs-container'>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Rate limits</h1>
 
@@ -808,7 +822,7 @@ export default class APIReference extends Component {
 
                             <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Get Authorization URL</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}><label className='table-cell-p'>Get Authorization URL</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-cell2'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/sso/authorize</p>
@@ -834,7 +848,7 @@ export default class APIReference extends Component {
 
                             <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "30%" : "30%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}><label className='table-cell-p'>Directory Users</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "30%" : "20%"}} className='c-table-cell2'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/directory_users</p>
@@ -886,7 +900,7 @@ export default class APIReference extends Component {
 
                             <div className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Authentication</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}><label className='table-cell-p'>Authentication</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "40%" : "55%"}} className='c-table-cell2'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/{sidebarMenuClicked ? <br/> : ""}authenticate</p>
@@ -898,41 +912,135 @@ export default class APIReference extends Component {
 
                             <div className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}><label className='table-cell-p'>Magic Auth</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "40%" : "55%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/{sidebarMenuClicked ? <br/> : ""}magic_auth/send</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>3 requests per 60 seconds per email</p>
                                 </div>
                             </div>
 
                             <div className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}><label className='table-cell-p'>Email verification</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "40%" : "55%"}} className='c-table-cell2'>
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/:id/{sidebarMenuClicked ? <br/> : ""}email_verification/send</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>3 requests per 60 seconds per user</p>
                                 </div>
                             </div>
 
                             <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
                                 <div style={{width: sidebarMenuClicked ? "25%" : "20%"}} className='c-table-cell1'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Directory Users</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}><label className='table-cell-p'>Password reset</label></p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "40%" : "55%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/directory_users</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>/user_management/{sidebarMenuClicked ? <br/> : ""}password_reset/send</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "35%" : "25%"}} className='c-table-cell3'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>4 requests per second per directory</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>3 requests per 60 seconds per email</p>
+                                </div>
+                            </div>
+
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Hosted AuthKit</h3>
+
+                            <div className='complex-table-header'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-header1'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Name</h5>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-header2'>
+                                    <h5 style={{fontSize: sidebarMenuClicked ? "60%" : "85%"}}>Limits</h5>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Reads</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>1,000 requests per 10 seconds</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Writes</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>500 requests per 10 seconds</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Sign-ins</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>3 requests per 60 seconds per IP address</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Email sign-ins</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>3 requests per 60 seconds per IP address</p>
+                                </div>
+                            </div>
+
+                            <div className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>Magic Auth sign-ins</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}>10 requests per 60 seconds per IP address and challenge ID</p>
+                                </div>
+                            </div>
+
+                            <div style={{borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}} className='complex-table'>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "40%"}} className='c-table-cell1'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Magic Auth code requests</p>
+                                </div>
+                                <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}><i id='events'></i>3 requests per 60 seconds per IP address and email</p>
                                 </div>
                             </div>
 
                         </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={events}
+                timeout={0}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='Overview (Events)' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Overview (Events)</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Events represent activity that has occurred within WorkOS or within third-party identity and directory providers. They are used to keep your app in sync with WorkOS data. For more details on consuming events in your app, check out the <label className='demo-docs-hyperlink'>data syncing</label> guide.</p>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Refer to the <label className='
+                            demo-docs-hyperlink'>Events</label> page for a full list of events that WorkOS emits.</p>
+
+                            <CodeSnippetStruct 
+                            id={2}
+                            headerTabs={0}
+                            languagesToRemove={['cURL']}
+                            sideBarOpen={sidebarMenuClicked}
+                            snippet="Pagination" 
+                            updateSelectedLang={this.newLangSelected}
+                            selectedLang={this.state.currentSelectedLanguage}/>
+
+                        </div>
+
                     </div>
                 </CSSTransition>
                     

@@ -47,7 +47,7 @@ const docs_sidebar_options = [
                 sections: [
                     {
                         id: 11,
-                        levelName: "Overview (E)",
+                        levelName: "Overview (Events)",
                     },
                     {
                         id: 12,

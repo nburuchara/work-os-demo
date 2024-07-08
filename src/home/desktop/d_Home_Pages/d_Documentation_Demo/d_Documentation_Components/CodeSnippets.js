@@ -15728,6 +15728,45 @@ const codeSnippets = [
       }
     },
 
+    { //* List events (130)
+      id: 130,
+      title: "List events",
+      doubleHeaders: {
+        javascript: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        curl: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        ruby: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        python: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        go: [
+          {lang1: "Request", lang2: "Response"},
+        ],
+        json: [
+          {lang1: "Request", lang2: "Response"},
+        ]
+      },
+      code: {
+        curl: [
+          '$ <span style="color: #5854c6;">curl</span> --request GET --url <span style="color: #143465;">"https://api.workos.com/events"</span> \\',
+          '>   --header <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"'
+        ],
+        javascript: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ]
+      }
+    },
+
 ]
 
 export default codeSnippets;
