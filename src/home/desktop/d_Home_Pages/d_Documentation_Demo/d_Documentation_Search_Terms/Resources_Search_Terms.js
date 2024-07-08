@@ -18,7 +18,7 @@ const results = [
     {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "pagination"},
     {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "idempotency"},
     {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "rate limits"},
-    {"id": "999995", "name": "Overview (Events)", "category": "Resources", "subCat1": "API Reference", "page": "overview (events)", "lastCat": "rate limits"},
+    {"id": "999995", "name": "Overview (Events)", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "overview (events)"},
 
 
         //! - - INTEGRATIONS - - !//

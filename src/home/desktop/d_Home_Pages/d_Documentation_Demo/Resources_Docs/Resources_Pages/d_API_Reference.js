@@ -65,7 +65,7 @@ export default class APIReference extends Component {
 
         }
 
-        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Events'];
+        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Overview (Events)'];
 
         // Initialize scroll debounce variables
         this.scrollTimeout = null;
@@ -122,7 +122,7 @@ export default class APIReference extends Component {
         // Initialize the Intersection Observer
         this.observer = new IntersectionObserver(this.handleIntersection, {
             root: null, // Use the viewport as the container
-            rootMargin: '5%',
+            rootMargin: '3%',
             threshold: 0.4,  // Adjust as needed
         });
 
@@ -1007,7 +1007,7 @@ export default class APIReference extends Component {
                                     <p style={{fontSize: sidebarMenuClicked ? "50%" : "", color: ""}}>Magic Auth code requests</p>
                                 </div>
                                 <div style={{width: sidebarMenuClicked ? "50%" : "60%"}} className='c-table-cell2'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}><i id='events'></i>3 requests per 60 seconds per IP address and email</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "50%" : ""}}><i id='overview (events)'></i>3 requests per 60 seconds per IP address and email</p>
                                 </div>
                             </div>
 
@@ -1030,12 +1030,16 @@ export default class APIReference extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Refer to the <label className='
                             demo-docs-hyperlink'>Events</label> page for a full list of events that WorkOS emits.</p>
 
+                            <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>List events</h3>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Get a list of all of events up to 30 days old.</p>
+
                             <CodeSnippetStruct 
-                            id={2}
+                            id={130}
                             headerTabs={0}
-                            languagesToRemove={['cURL']}
+                            languagesToRemove={['PHP', 'Laravel', 'Java', '.NET']}
                             sideBarOpen={sidebarMenuClicked}
-                            snippet="Pagination" 
+                            snippet="List events" 
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 

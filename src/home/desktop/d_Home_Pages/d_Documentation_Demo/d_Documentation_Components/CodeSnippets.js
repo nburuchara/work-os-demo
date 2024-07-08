@@ -8,6 +8,51 @@ const codeSnippets = [
       code: {
         javascript: [
           '1 https://api.workos.com'
+        ],
+        npm: [
+          '1 https://api.workos.com'
+        ],
+        yarn: [
+          '1 https://api.workos.com'
+        ],
+        ruby: [
+          '1 https://api.workos.com'
+        ],
+        terminal: [
+          '1 https://api.workos.com'
+        ],
+        bundler: [
+          '1 https://api.workos.com'
+        ],
+        curl: [
+          '1 https://api.workos.com'
+        ],
+        python: [
+          '1 https://api.workos.com'
+        ],
+        go: [
+          '1 https://api.workos.com'
+        ],
+        java: [
+          '1 https://api.workos.com'
+        ],
+        maven: [
+          '1 https://api.workos.com'
+        ],
+        gradle: [
+          '1 https://api.workos.com'
+        ],
+        laravel: [
+          '1 https://api.workos.com'
+        ],
+        php: [
+          '1 https://api.workos.com'
+        ],
+        json: [
+          '1 https://api.workos.com'
+        ],
+        dotnet: [
+          '1 https://api.workos.com'
         ]
       }
     },
@@ -15724,7 +15769,127 @@ const codeSnippets = [
           '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
           '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
           '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
-        ]
+        ],
+        npm: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        yarn: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        ruby: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        terminal: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        bundler: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        python: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        go: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        php: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        laravel: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        java: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        maven: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        gradle: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        curl: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        dotnet: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
+        json: [
+          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
+          '>   --url https://api.workos.com/organizations \\',
+          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
+          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
+          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
+          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+        ],
       }
     },
 
@@ -15757,12 +15922,278 @@ const codeSnippets = [
           '>   --header <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"'
         ],
         javascript: [
-          '$ <span style="color: #5854c6;">curl</span> --request POST \\',
-          '>   --url https://api.workos.com/organizations \\',
-          '>   -H <span style="color: #143465;">"Authorization: Bearer</span> <span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>" \\',
-          '>   -H <span style="color: #143465;">"Idempotency-Key: cd320c5c-e928-4212-a5bd-986c29362867"</span> \\',
-          '>   -d <span style="color: #143465;">\'name="Foo Corp"\'</span> \\',
-          '>   -d <span style="color: #143465;">\'domains[]="foo-corp.com"\'</span>',
+          '1 <span style="color: #148a68;">import</span> { <span style="color: #5854c6;">WorkOS</span> } <span style="color: #148a68;">from</span> <span style="color: #143465;">\'@workos-inc/node\'</span>;',
+          '2 ',
+          '3 <span style="color: #148a68;">const</span> workos <span style="color: #ce3559;">=</span> <span style="color: #148a68;">new</span> WorkOS(process.env.<span style="color: #0072dd;">WORKOS_API_KEY</span>);',
+          '4 ',
+          '5 <span style="color: #148a68;">const</span> <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listOfEvents</span> <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> workos.events.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">listEvents</span>({',
+          '6   events<span style="color: #ce3559;">:</span> [',
+          '7     <span style="color: #143465;">\'dsync.activated\'</span>,',
+          '8     <span style="color: #143465;">\'dsync.deleted\'</span>,',
+          '9     <span style="color: #143465;">\'dsync.user.created\'</span>,',
+          '10     <span style="color: #143465;">\'dsync.user.updated\'</span>,',
+          '11     <span style="color: #143465;">\'dsync.user.deleted\'</span>,',
+          '12   ],',
+          '13 });',
+        ],
+        ruby: [
+          '1 <span style="color: #148a68;">require</span> <span style="color: #143465;">"workos"</span>',
+          '2 ',
+          '3 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">events</span> <span style="color: #ce3559;">=</span> WorkOS::Events.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_events</span>(',
+          '4   events<span style="color: #ce3559;">:</span> [',
+          '5     <span style="color: #143465;">"dsync.activated"</span>,',
+          '6     <span style="color: #143465;">"dsync.deleted"</span>,',
+          '7     <span style="color: #143465;">"dsync.user.created"</span>,',
+          '8     <span style="color: #143465;">"dsync.user.updated"</span>,',
+          '9     <span style="color: #143465;">"dsync.user.deleted"</span>',
+          '10   ]',
+          '11 )',
+        ],
+        python: [
+          '1 <span style="color: #148a68;">import</span> workos',
+          '2 ',
+          '3 workos.api_key <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">sk_example_123456789</span>"',
+          '4 workos.client_id <span style="color: #ce3559;">=</span> "<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>"',
+          '5 ',
+          '6 <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">events</span> <span style="color: #ce3559;">=</span> workos.client.events.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">list_events</span>(',
+          '6     events<span style="color: #ce3559;">=</span>[',
+          '7         <span style="color: #143465;">"dsync.activated"</span>,',
+          '8         <span style="color: #143465;">"dsync.deleted"</span>,',
+          '9         <span style="color: #143465;">"dsync.user.created"</span>,',
+          '10         <span style="color: #143465;">"dsync.user.updated"</span>,',
+          '11         <span style="color: #143465;">"dsync.user.deleted"</span>,',
+          '12     ],',
+          '13 )'
+        ],
+        go: [
+          '1 <span style="color: #148a68;">package</span> main',
+          '2 ',
+          '3 <span style="color: #148a68;">import</span> (',
+          '4         <span style="color: #143465;">"context"</span>',
+          '5         <span style="color: #143465;">"fmt"</span>',
+          '6         <span style="color: #143465;">"os"</span>',
+          '7 ',
+          '8         <span style="color: #143465;">"github.com/workos/workos-go/v3/pkg/sso"</span>',
+          '9 )',
+          '10 ',
+          '11 <span style="color: #148a68;">func</span> <span style="color: #5854c6;">main</span>() {',
+          '12         events.<span style="color: #5854c6;">SetAPIKey</span>(os.<span style="color: #5854c6;">Getenv</span>(<span style="color: #143465;">"WORKOS_API_KEY"</span>))',
+          '13 ',
+          '14         eventTypes <span style="color: #ce3559;">:=</span> []<span style="color: #148a68;">string</span>{',
+          '15                 <span style="color: #143465;">"dsync.activated"</span>,',
+          '16                 <span style="color: #143465;">"dsync.deleted"</span>,',
+          '17                 <span style="color: #143465;">"dsync.user.created"</span>,',
+          '18                 <span style="color: #143465;">"dsync.user.updated"</span>,',
+          '19                 <span style="color: #143465;">"dsync.user.deleted"</span>,',
+          '20        }',
+          '21 ',
+          '22        <span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">events</span>, err <span style="color: #ce3559;">:=</span> events.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">ListEvents</span>(context.<span style="color: #5854c6;">Background</span>(), events.ListEventsOpts{',
+          '23                Events: eventTypes,',
+          '24        })',
+          '25        <span style="color: #148a68;">if</span> err <span style="color: #ce3559;">!=</span> <span style="color: #0072dd;">nil</span> {',
+          '26                <span style="color: #5854c6;">panic</span>(err)',
+          '27        }',
+          '28 ',
+          '29        fmt.<span style="color: #5854c6;">Printf</span>(<span style="color: #143465;">"%#v\\n"</span>, events)',
+          '30 }'
+        ],
+        json: [
+          '1 {',
+          '2   <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.user_added"</span>,',
+          '3   <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> [',
+          '4     {',
+          '5       <span style="color: #0072dd;">"object"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event"</span>,',
+          '6       <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_01H2GNQD5D7ZE06FDDS75NFPHY"</span>,',
+          '7       <span style="color: #0072dd;">"event"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"dsync.group.user_added"</span>,',
+          '8       <span style="color: #0072dd;">"data"</span><span style="color: #ce3559;">:</span> {',
+          '9         <span style="color: #0072dd;">"user"</span><span style="color: #ce3559;">:</span> {',
+          '10           <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_user_01E1X56GH84T3FB41SD6PZGDBX"</span>,',
+          '11           <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74</span>",',
+          '12           <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '13           <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2936"</span>,',
+          '14           <span style="color: #0072dd;">"emails"</span><span style="color: #ce3559;">:</span> [',
+          '15             {',
+          '16               <span style="color: #0072dd;">"primary"</span><span style="color: #ce3559;">:</span> <span style="color: #0072dd;">true</span>,',
+          '17               <span style="color: #0072dd;">"type"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"work"</span>,',
+          '18               <span style="color: #0072dd;">"value"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>',
+          '19             }',
+          '20           ]',
+          '21           <span style="color: #0072dd;">"first_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Eric"</span>,',
+          '22           <span style="color: #0072dd;">"last_name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Schneider"</span>,',
+          '23           <span style="color: #0072dd;">"job_title"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Software Engineer"</span>,',
+          '24           <span style="color: #0072dd;">"username"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"eric@example.com"</span>,',
+          '25           <span style="color: #0072dd;">"state"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"active"</span>,',
+          '26           <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '27           <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '28           <span style="color: #0072dd;">"custom_attributes"</span><span style="color: #ce3559;">:</span> {',
+          '29             <span style="color: #0072dd;">"department"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Engineering"</span>',
+          '30           },',
+          '31           <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '32         },',
+          '33         <span style="color: #0072dd;">"group"</span><span style="color: #ce3559;">:</span> {',
+          '34           <span style="color: #0072dd;">"id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_group_01E1X5GPMMXF4T1DCERMVEEPVW"</span>,',
+          '35           <span style="color: #0072dd;">"idp_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"02grqrue4294w24"</span>,',
+          '36           <span style="color: #0072dd;">"directory_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"directory_01ECAZ4NV9QMV47GW873HDCX74"</span>,',
+          '37           <span style="color: #0072dd;">"organization_id"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"org_01EZTR6WYX1A0DSE2CYMGXQ24Y"</span>,',
+          '38           <span style="color: #0072dd;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"Developers"</span>,',
+          '39           <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '40           <span style="color: #0072dd;">"updated_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>,',
+          '41           <span style="color: #0072dd;">"raw_attributes"</span><span style="color: #ce3559;">:</span> {}',
+          '42         }',
+          '43       },',
+          '44       <span style="color: #0072dd;">"created_at"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"2021-06-25T19:07:33.155Z"</span>',
+          '45     }',
+          '46   ],',
+          '47   <span style="color: #0072dd;">"list_metadata"</span><span style="color: #ce3559;">:</span> {',
+          '48     <span style="color: #0072dd;">"after"</span><span style="color: #ce3559;">:</span> <span style="color: #143465;">"event_01H2GQNMQNH8VRXVR7AEYG9XCJ"</span>',
+          '49   }',
+          '50 }',
+        ]
+      },
+      apiEpxlainers: {
+        listOfEvents_javascript: [
+          '<span style="color: #148a68;">const</span> <span style="color: #5854c6;">listOfEvents</span><span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        listOfEvents_npm: [
+          '<span style="color: #148a68;">const</span> <span style="color: #5854c6;">listOfEvents</span><span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        listOfEvents_yarn: [
+          '<span style="color: #148a68;">const</span> <span style="color: #5854c6;">listOfEvents</span><span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}'
+        ],
+        listEvents_javascript: [
+          'events.<span style="color: #5854c6;">listEvents</span><span style="color: #ce3559;">:</span> (',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">EventNames</span><span style="color: #ce3559;">[]</span>,',
+          '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>,',
+          '  rangeStart<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  rangeEnd<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>',
+          ') <span style="color: #ce3559;">=></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}',
+        ],
+        listEvents_npm: [
+          'events.<span style="color: #5854c6;">listEvents</span><span style="color: #ce3559;">:</span> (',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">EventNames</span><span style="color: #ce3559;">[]</span>,',
+          '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>,',
+          '  rangeStart<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  rangeEnd<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>',
+          ') <span style="color: #ce3559;">=></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}',
+        ],
+        listEvents_yarn: [
+          'events.<span style="color: #5854c6;">listEvents</span><span style="color: #ce3559;">:</span> (',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">EventNames</span><span style="color: #ce3559;">[]</span>,',
+          '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>,',
+          '  rangeStart<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  rangeEnd<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>,',
+          '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>',
+          ') <span style="color: #ce3559;">=></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">Event</span><span style="color: #ce3559;">[]</span>;',
+          '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
+          '}',
+        ],
+        events_ruby: [
+          'events<span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        events_terminal: [
+          'events<span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        events_bundler: [
+          'events<span style="color: #ce3559;">:</span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        list_events_ruby: [
+          'Events.<span style="color: #5854c6;">list_events</span>(',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">String</span><span style="color: #ce3559;">]</span>,',
+          '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
+          '  <span style="color: #ce3559;">?</span>range_start<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>range_end<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        list_events_terminal: [
+          'Events.<span style="color: #5854c6;">list_events</span>(',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">String</span><span style="color: #ce3559;">]</span>,',
+          '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
+          '  <span style="color: #ce3559;">?</span>range_start<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>range_end<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        list_events_bundler: [
+          'Events.<span style="color: #5854c6;">list_events</span>(',
+          '  events<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">String</span><span style="color: #ce3559;">]</span>,',
+          '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
+          '  <span style="color: #ce3559;">?</span>range_start<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>range_end<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> {',
+          '  data<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">Event</span><span style="color: #ce3559;">]</span>,',
+          '  list_metadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Struct</span>',
+          '}'
+        ],
+        events_python: [
+          'events<span style="color: #ce3559;">:</span> {',
+          '    <span style="color: #143465;">"data"</span><span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span>dict<span style="color: #ce3559;">]</span>,',
+          '    <span style="color: #143465;">"list_metadata"</span><span style="color: #ce3559;">:</span> dict',
+          '}'
+        ],
+        list_events_python: [
+          'events.<span style="color: #5854c6;">list_events</span><span style="color: #ce3559;">:</span> (',
+          '    events<span style="color: #ce3559;">:</span> <span style="color: #148a68;">list</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">str</span><span style="color: #ce3559;">]</span>,',
+          '    limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">int</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    range_start<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    range_end<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> {',
+          '    <span style="color: #143465;">"data"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">list</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span>,',
+          '    <span style="color: #143465;">"list_metadata"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">dict</span>',
+          ')',
+        ],
+        events_go: [
+          'events <span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsResponse</span>{',
+          '        Data <span style="color: #ce3559;">[]</span><span style="color: #148a68;">events</span>.<span style="color: #148a68;">Event</span>',
+          '        ListMetadata <span style="color: #148a68;">common</span>.<span style="color: #148a68;">ListMetadata</span>',
+          '}'
+        ],
+        ListEvents_go: [
+          'events.<span style="color: #5854c6;">ListEvents</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsOpts</span>{',
+          '                Events <span style="color: #ce3559;">[]</span><span style="color: #148a68;">string</span>',
+          '                Limit<span style="color: #ce3559;">?</span> <span style="color: #148a68;">int</span>',
+          '                RangeStart<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                RangeEnd<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                After<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">events</span>.<span style="color: #148a68;">ListEventsResponse</span>, <span style="color: #148a68;">error</span>)',
         ]
       }
     },

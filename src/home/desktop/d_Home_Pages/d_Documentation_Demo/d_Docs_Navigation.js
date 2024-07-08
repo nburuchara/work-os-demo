@@ -2834,7 +2834,7 @@ export default class DocsNavigationMenu extends Component {
             //* Handle edge case for API Reference page
         if (option.subCat1 === "API Reference" && menuOption4 === true) {
                 this.handleSearchWithinNested(option.page, 4);
-                this.setState({resourcesPageSection: option.name})
+                this.setState({menuOption4SearchTermObject: option})
             return;
         }
 
@@ -3649,7 +3649,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3} />}
 
-                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />}
+                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} />}
 
             </Styles>
         )

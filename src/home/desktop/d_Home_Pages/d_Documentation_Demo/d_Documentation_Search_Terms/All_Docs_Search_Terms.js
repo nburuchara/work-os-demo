@@ -16551,8 +16551,8 @@ const results = [
     "name": "Overview (Events)",
     "category": "Resources",
     "subCat1": "API Reference",
-    "page": "overview (events)",
-    "lastCat": "rate limits"
+    "page": "Overview",
+    "lastCat": "overview (events)"
   },
   {
     "id": "999995",

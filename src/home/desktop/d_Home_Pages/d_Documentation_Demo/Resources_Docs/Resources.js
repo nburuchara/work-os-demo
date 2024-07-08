@@ -84,7 +84,7 @@ export default class Resources extends Component {
             this.loadSelectedPage(page);
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 500)
+            }, 1000)
         } else {
         //   console.error("Unknown selected page:", selectedPage);
         }
@@ -234,7 +234,7 @@ export default class Resources extends Component {
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
                 //! Fix this...
-            if (!this.state.apiReference) {
+            if (this.props.searchedTerm.subCat1 !== "API Reference") {
                 setTimeout(() => {
                     this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
                 }, 1000)
@@ -299,6 +299,7 @@ export default class Resources extends Component {
             {"id": "999999", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Pagination", "lastCat": "top"},
             {"id": "999999", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Idempotency", "lastCat": "top"},
             {"id": "999999", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Rate limits", "lastCat": "top"},
+            {"id": "999995", "name": "Overview (Events)", "category": "Resources", "subCat1": "API Reference", "page": "Overview (Events)", "lastCat": "overview (events)"},
         ]
         for (let i = 0; i < pageOptions.length; i++) {
             if (page === pageOptions[i].page) {

@@ -177,14 +177,14 @@ export default class Integrations extends Component {
             this.props.hideIntegrationsPage()
             setTimeout(() => {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
-            }, 0)
+            }, 1000)
         } else {
         //   console.error("Unknown selected page:", selectedPage);
         }
     }
 
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.hideAllPages()
         setTimeout (() => {
             this.scrollToTop('top')
         }, 900)
