@@ -111,7 +111,7 @@ export default class APIReference extends Component {
         this.observer = new IntersectionObserver(this.handleIntersection, {
             root: null, // Use the viewport as the container
             rootMargin: '5%',
-            threshold: 0.6,  // Adjust as needed
+            threshold: 0.5,  // Adjust as needed
         });
 
         // Observe each section
@@ -606,10 +606,10 @@ export default class APIReference extends Component {
                                     <img style={{width: sidebarMenuClicked ? "55.5%" : "35%", marginTop: sidebarMenuClicked ? "7.5%" : "12.5%"}} src='/assets/docs_testing_the_api_info_icon.png' alt='no img available'/>
                                 </div>
                                 <div className='api-info-box-text'>
-                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>Check out the <label>guide</label> about the WorkOS API Postman collection to learn more about it.</p>
+                                    <p style={{fontSize: sidebarMenuClicked ? "64.5%" : "65%", marginTop: sidebarMenuClicked ? "1%" : "1.65%"}}>Check out the <label>guide</label> about the WorkOS <i id='api keys'></i> API Postman collection to learn more about it.</p>
                                 </div>
                             </div>
-                            <i id='api keys'></i>
+                        
                         </div>
                     </div>
                 </CSSTransition>
@@ -745,8 +745,9 @@ export default class APIReference extends Component {
                             updateSelectedLang={this.newLangSelected}
                             selectedLang={this.state.currentSelectedLanguage}/>
 
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><i id='rate limits'></i>Idempotency keys expire after 24 hours. The WorkOS API will generate a new response if you submit a request with an expired key.</p>
 
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Idempotency keys expire after 24 hours. The WorkOS API will generate a new response if you submit a <i id='rate limits'></i>request with an expired key.</p>
+                            
                         </div>
                     </div>
                 </CSSTransition>
