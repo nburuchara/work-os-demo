@@ -248,14 +248,12 @@ export default class APIReference extends Component {
         if (this.props.scrollToID !== prevProps.scrollToID) { 
             // this.getSelectedPage(this.props.scrollToID)
             // this.scrollToTop(this.props.scrollToID) 
-            if (this.props.scrollToID !== "Overview") {
-                this.smoothScrollToId(this.props.scrollToID.toLowerCase())
-            } else {
-                this.scrollToTop('overview')
-            }
+           
+            this.smoothScrollToId(this.props.scrollToID.toLowerCase())
+           
         }
         if (this.props.searchedTerm) {
-            this.smoothScrollToId(this.props.searchedTerm.lastCat)
+            // this.smoothScrollToId(this.props.searchedTerm.lastCat)
             setTimeout(() => {
                 // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
             }, 2000)
@@ -1058,7 +1056,8 @@ export default class APIReference extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
-
+                            
+                            <i id='end of demo'></i>
                         </div>
                     </div>
                 </CSSTransition>

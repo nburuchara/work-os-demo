@@ -16488,7 +16488,7 @@ const results = [
     "category": "Resources",
     "subCat1": "API Reference",
     "page": "Overview",
-    "lastCat": "Overview"
+    "lastCat": "overview"
   },
   {
     "id": "999995",
@@ -16553,6 +16553,94 @@ const results = [
     "subCat1": "API Reference",
     "page": "Overview",
     "lastCat": "overview (events)"
+  },
+  {
+    "id": "999995",
+    "name": "List events",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get an Organization",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Organizations",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create an Organization",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Update an Organization",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Delete an Organization",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Organization Domain",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Overview (UM)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "User",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Identity",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authentication",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
   },
   {
     "id": "999995",

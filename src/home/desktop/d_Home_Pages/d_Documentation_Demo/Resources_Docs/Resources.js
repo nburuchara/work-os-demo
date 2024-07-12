@@ -58,7 +58,7 @@ export default class Resources extends Component {
         } else {
             this.getSelectedPage(this.props.scrollToID)
             setTimeout(() => {
-                this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
+                // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
             }, 1000)
         }   
     }
@@ -171,7 +171,7 @@ export default class Resources extends Component {
     }
 
     loadSelectedPage = (selectedPage) => {
-        this.hideAllPages()
+        // this.hideAllPages()
         
         setTimeout (() => {
             this.scrollToTop('top')
