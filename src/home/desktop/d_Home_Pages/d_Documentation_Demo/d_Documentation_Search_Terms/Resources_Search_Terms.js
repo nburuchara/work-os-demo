@@ -57,17 +57,20 @@ const results = [
         //* - - AUTHENTICATION - - *//
 
     {"id": "999995", "name": "Authentication", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Get authorization URL", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Redirect URI", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Authkit, OAuth, SSO", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Password", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Password", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    
-    {"id": "999995", "name": "Error codes", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Session tokens", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Authentication errors", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Magic Auth", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    
+    {"id": "999995", "name": "Get authorization URL", "category": "Resources", "subCat1": "API Reference", "subCat2": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Redirect URI", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "subCat4": "Get authorization URL", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Error codes", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "subCat4": "Get authorization URL", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Authkit, OAuth, SSO", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Password", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Magic Auth (Auth)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Refresh token", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Email verification code", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "TOTP code", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Organization selection", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Authentication", "page": "Overview", "lastCat": "end of demo"},
+
+
+    {"id": "999995", "name": "Session tokens", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Authentication errors", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Multi-Factor Auth", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
 
         //! - - INTEGRATIONS - - !//
