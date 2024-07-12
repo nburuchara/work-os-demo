@@ -1226,7 +1226,7 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>This test simulates a generic <label className='demo-docs-hyperlink'>error response</label> from the user’s identity provider. In this scenario, SSO authentication has failed for the user. Below is an example of the error-related parameters passed to the <label className='demo-docs-hyperlink'>redirect URI</label> in your application<i id='Testing with other identity providers'></i>.</p>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Testing with other identity providers</h1>
                             
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Test Identity Provider saves time by providing an out of the box experience compared to the configuration process that someone using a real identity provider would have to go through to enable Single Sign-On for your app.</p>
@@ -1359,7 +1359,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample Single Sign-On apps for each SDK.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to authenticate users via SSO:</p>
 
                             <div className='example-apps-container' style={{marginBottom: "5%"}}>
@@ -1441,7 +1441,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>User experience considerations for Single Sign-On.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Now that we’ve seen how the Single Sign-On (SSO) APIs work, you may want to consider how to best integrate this new flow in the sign-in experience for your users. This guide will walk you through a few different approaches you could take in your application:</p>
 
@@ -1822,7 +1822,7 @@ export default class StandaloneAPIs extends Component {
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The Redirect URI can also be included directly in the Get Authorization URL call as a redirect_uri parameter. When the Redirect URI is set in this fashion, it will override the default Redirect URI that is set in the WorkOS Dashboard<i id='Wildcard characters'></i>.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Wildcard characters</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports using wildcard characters in Redirect URIs for staging environments.</p>
                         
@@ -1934,7 +1934,7 @@ export default class StandaloneAPIs extends Component {
                             </div>
                            
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                         
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>SAML Request Signing Certificate</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>When the SP sends a SAML request, the IdP must verify that the request is actually coming from the SP and has not been tampered with by an unauthorized third party. IdP’s choose to handle this verification in different ways, and some use a SAML request signing certificate. Microsoft AD FS SAML uses a relying party trust, which is similar to a SAML request signing certificate, and the concepts covered in this article are applicable. In WorkOS, Connections that take advantage of a request certificate will expose an SP metadata URL that can<i id='Sample scenario request'></i> be sent to the IdP in order to give it access to the signing certificate.</p>
@@ -2001,7 +2001,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to provision users in your app using Just-In-Time user provisioning.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>User provisioning is the process of creating a user account and associated identity information. There are various ways for an application to provision users. This guide explores user provisioning strategies and<i id='Definitions'></i> offers a deep dive into SSO-based just-in-time (JIT) user provisioning.</p>
@@ -2187,7 +2187,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Make sure you’re ready to take your app to production.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Implement complementary enterprise features' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Implement complementary enterprise features</h1>
                             <ul>
                                 <li><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Integrate the WorkOS <label className='demo-docs-hyperlink'>Admin Portal</label> to enable your users to onboard and set up SSO themselves. </p></li>
@@ -2357,7 +2357,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Answers to common questions from your customer’s IT team.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='What is WorkOS?' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>What is WorkOS?</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS is a software company that provides a suite of products to make an app enterprise-ready. These products include Single Sign-On, Directory Sync, and User Management, among others.</p>
@@ -2473,7 +2473,7 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS supports SAML request signing for all compatible connection types. Please <label className='demo-docs-hyperlink'>contact WorkOS support</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span> to enable it.<i id='IdP to SP security features'></i></p>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>IdP to SP security features</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The SAML response is an XML document provided by an IdP containing details about a user so that an SP can authenticate them. It is relayed to the SP via the user agent.</p>
@@ -2724,7 +2724,7 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Directory Sync makes this integration easy by providing APIs your app interfaces with. All updates for this directory will automatically be sent to your app from WorkOS<i id='API overview'></i>.</p>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>API overview</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><label className='demo-docs-hyperlink'>Directory</label>, <label className='demo-docs-hyperlink'>directory group</label>,<i id='Directory'></i> and <label className='demo-docs-hyperlink'>directory user</label> are the main components your app interfaces with.</p>
@@ -3179,7 +3179,7 @@ export default class StandaloneAPIs extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             
                             <div className='labeled-header'>
                                 <div className='label-tag'>
@@ -3223,7 +3223,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample Directory Sync apps for each SDK.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power Directory Sync:</p>
 
@@ -3316,7 +3316,7 @@ export default class StandaloneAPIs extends Component {
                             </div>
                     
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Configuration</h1>
 
@@ -3948,7 +3948,7 @@ export default class StandaloneAPIs extends Component {
 
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Data reconciliation techniques</h1>
 
@@ -4746,7 +4746,7 @@ export default class StandaloneAPIs extends Component {
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>These are unfiltered and unstructured attributes that are unique to each directory provider. These attributes are included as fields in the <span>raw_attributes</span> object that is included in<i id='Frequently asked questions'></i> the <label className='demo-docs-hyperlink'>Directory User</label>.</p>
                             </div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'><i id='Are existing directories required to update the attribute mapping when new required custom attributes are added?'></i>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'><i id='Are existing directories required to update the attribute mapping when new required custom attributes are added?'></i>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
 
@@ -4783,7 +4783,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to map role data from directory providers to roles in your app.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             
@@ -5013,7 +5013,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn about common app architectures and edge cases for mapping roles.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             
@@ -5183,7 +5183,7 @@ export default class StandaloneAPIs extends Component {
                             </div>
 
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                             
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Before getting started</h1>
                             
@@ -5579,7 +5579,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample Admin Portal apps for each SDK.</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use the WorkOS SDKs to power the Admin Portal:</p>
 
@@ -5662,7 +5662,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Use your own logo and colors in the Admin Portal.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
 
@@ -5785,7 +5785,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Ingest and export Audit Log Events from your application.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                             
@@ -6073,7 +6073,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Export Audit Log Events through the WorkOS Dashboard and API.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Exporting Events' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Exporting Events</h1>
                             
@@ -6160,7 +6160,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Define strict JSON Schema for validating event metadata.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Metadata Schema' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Metadata Schema</h1>
 
@@ -6226,7 +6226,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Modify existing event configuration with backwards compatibility.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Editing Events' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Editing Events</h1>
 
@@ -6299,7 +6299,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View Audit Log events for an organization in the WorkOS Admin Portal.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Creating Admin Portal Link' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Creating Admin Portal Link</h1>
 
@@ -6351,7 +6351,7 @@ export default class StandaloneAPIs extends Component {
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Stream Audit Log Events to your customers’ SIEM providers.</p>
                             <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Understanding Log Streams' ></div>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Understanding Log Streams</h1>
 
@@ -6543,7 +6543,7 @@ export default class StandaloneAPIs extends Component {
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Please refer to the <label className='demo-docs-hyperlink'>Admin Portal Integration Guide</label> for additional integration details<i id='Admin Portal domain verification'></i>.</p>
                             
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Admin Portal domain verification</h1>
 
@@ -6590,7 +6590,7 @@ export default class StandaloneAPIs extends Component {
                             <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>API</h1>
                             <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Programmatic domain verification</p>
                         </div>
-                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Instead of leveraging the Admin Portal, the Domain Verification API can be used to verify domains programmatically.</p>
 

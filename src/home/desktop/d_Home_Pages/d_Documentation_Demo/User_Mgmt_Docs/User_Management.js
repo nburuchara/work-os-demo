@@ -644,7 +644,7 @@ export default class UserManagement extends Component {
                                 <div id='For illustration purposes'></div>
                                 
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 
                                 <div className='labeled-header'>
                                     <div className='label-tag'>
@@ -767,11 +767,11 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Example Apps</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>View sample User Management apps.</p>
                             </div>
-                            <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div id='Example apps' style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can view minimal example apps that demonstrate how to use WorkOS User Management and AuthKit to authenticate users:</p>
 
@@ -813,7 +813,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>AuthKit</h1>
                                 
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}} >Customizable sign-in UI that abstracts away all of the complexity associated with building secure authentication flows.</p>
@@ -923,7 +923,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email Domains</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Guidance on configuring domains for emails.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Configuring a domain'></div>
@@ -1019,12 +1019,12 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Branding</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Customize AuthKit to fit natively with your app’s unique design.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>You can customize the look and feel of AuthKit via the Branding section of the <label className='demo-docs-hyperlink'>WorkOS Dashboard</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span>.</p>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>The brand editor allows you to:</p>
@@ -1111,12 +1111,12 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Migrations</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Guidance on moving your existing users to WorkOS.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section'>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Introduction</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>WorkOS provides a <label className='demo-docs-hyperlink'>range of guides</label> to help you migrate your existing integration <i id='Migrate from another service'></i>to WorkOS User Management.</p>
 
@@ -1175,7 +1175,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Single Sign-On</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Facilitate greater security, easier account management, and accelerated application onboarding and adoption.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1351,7 +1351,7 @@ export default class UserManagement extends Component {
                                 </div>
                             
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’d prefer to build and manage your own authentication UI, you can do so via the User Management <label className='demo-docs-hyperlink'>Authentication API</label>.</p>
                             
@@ -1377,7 +1377,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email + Password</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Configuring email and password authentication and requirements</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1411,7 +1411,7 @@ export default class UserManagement extends Component {
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Disabling Email + Password</h3>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Disabling this method entirely will prevent users from signing up or signing in using a password. This is useful when you want to restrict access to your application to only those users who have been provisioned via SSO.</p><i id='Integrating via the API'></i>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’d prefer to build and manage your own authentication UI, you can do so via the User Management <label className='demo-docs-hyperlink'>Authentication API</label>.</p>
                             
@@ -1436,7 +1436,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Social Login</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Quickly and easily integrate with social OAuth providers.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1481,7 +1481,7 @@ export default class UserManagement extends Component {
                                 <i id='Integrating via the API'></i>
 
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’d prefer to build and manage your own authentication UI, you can do so via the User Management <label className='demo-docs-hyperlink'>Authentication API</label>.</p>
                             
@@ -1507,7 +1507,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Multi-Factor Authentication</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Add an additional layer of security to your application.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1541,7 +1541,7 @@ export default class UserManagement extends Component {
                                 </div>
                                 <i id='Integrating via the API'></i>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’d prefer to build and manage your own authentication UI, you can do so via the User Management <label className='demo-docs-hyperlink'>Authentication API</label>.</p>
                             
@@ -1566,7 +1566,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Magic Auth</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Maximize user experience and security with passwordless authentication.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1607,7 +1607,7 @@ export default class UserManagement extends Component {
                                 <i id='Integrating via the API'></i>
                                 
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Integrating via the API</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If you’d prefer to build and manage your own authentication UI, you can do so via the User Management <label className='demo-docs-hyperlink'>Authentication API</label>.</p>
                             
@@ -1633,7 +1633,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Users and Organizations</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Flexible application modeling with user and membership features.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Users'></div>
@@ -1666,7 +1666,7 @@ export default class UserManagement extends Component {
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Domain-captured users</h3>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user’s email domain matches an organization domain, they will <label className='demo-docs-hyperlink'>automatically be considered verified</label> and will not need to go through the email verification flow.</p><i id='Organizations'></i>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "3.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Organizations</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Organizations represent both a collection of users that your customer’s IT admin has control over and a workspace within which members collaborate. Organizations are a first-class concept in WorkOS and support a suite of features<i id='Organization memberships'></i> around organizational management.</p>
                         
@@ -1720,7 +1720,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Sessions</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn more about integrating sessions.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Inroduction'></div>
@@ -1832,7 +1832,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Invitations</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Easily add users as members to an organization.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1895,7 +1895,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Email Verification</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn more about the email verification process.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -1942,7 +1942,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Domain Capture</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Understanding domain verification and domain-captured users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2012,7 +2012,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Identity Linking</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Automatic deduplication of user credentials across identity providers.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2106,7 +2106,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>JIT Provisioning</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Provision organization membership using Just-In-Time user provisioning.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2169,7 +2169,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Roles</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Manage and assign roles to users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2236,7 +2236,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Directory Provisioning</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Manage users and organization memberships via directory sync providers.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='This feature is currently in preview'></div>
@@ -2304,7 +2304,7 @@ export default class UserManagement extends Component {
                                     <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>If a user is re-provisioned in the directory, the corresponding organization membership will be reactivated and the <label className='demo-docs-hyperlink'>status for the membership</label> will be <span>active</span>. The organization membership's pre-existing role will be retained.</p>
                                 </div>
                             </div>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                             <i id='Frequently asked questions'></i>
                                 <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>Frequently asked questions</h1>
                                 <strong><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>I am using directory provisioning, but some directory users aren't being provisioned in user management. Why would a directory user not be provisioned in user management?</p></strong>
@@ -2330,7 +2330,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Organization Policies</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Customize available authentication methods per organization.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2384,7 +2384,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Impersonation</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to sign into your application as one of your users.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>
@@ -2498,7 +2498,7 @@ export default class UserManagement extends Component {
                     unmountOnExit    
                     >
                         <div id='top' className='demo-docs-container'>
-                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "2px solid #6363f1"}} className='demo-docs-section' >
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section' >
                                 <h1 style={{paddingTop: sidebarMenuClicked ? "1.5%" : "7%", fontSize: sidebarMenuClicked? "120%" : "150%"}}>Custom Emails</h1>
                                 <p style={{fontSize: sidebarMenuClicked ? "90%" : "100%", marginBottom: "0px", color: "#5e626a"}}>Learn how to send your own emails for user lifecycle events.</p>
                                 <div style={{paddingBottom: sidebarMenuClicked ? "4.5%" : ""}} id='Introduction'></div>

@@ -146,7 +146,6 @@ export default class Resources extends Component {
             "Supabase": "supabase",
             "VMWare": "VMWare",
             "Workday": "workday",
-
         }
         const integrationsPage = integrationsPageMap[selectedPage];
         if (integrationsPage) {
@@ -203,12 +202,8 @@ export default class Resources extends Component {
 
     hideAllPages = () => {
         this.setState({
-            eventTypes: false,
-            dataSyncing: false,
-            dataSyncingWithApi: false,
-            dataSyncingWithWebhooks: false,
-            dataReconciliation: false,
-            observabilityStreamToDatadog: false,
+            apiReference: false,
+            integrations: false,
         })
     }
 

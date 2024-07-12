@@ -105,9 +105,7 @@ export default class Integrations extends Component {
     }
 
     componentDidMount = () => {
-        // console.log('selected page: ', this.props.integrationsPage)
         this.getSelectedPage(this.props.scrollToID)
-        console.log('scrollID', this.props.scrollToID)
     }
 
     getSelectedPage = (selectedPage) => {
@@ -168,7 +166,6 @@ export default class Integrations extends Component {
             "supabase": "supabase",
             "VMWare": "VMWare",
             "workday": "workday",
-            
         };
       
         const page = pageMap[selectedPage];
