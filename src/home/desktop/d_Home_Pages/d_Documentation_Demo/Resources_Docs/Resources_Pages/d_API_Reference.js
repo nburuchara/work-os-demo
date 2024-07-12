@@ -34,6 +34,7 @@ export default class APIReference extends Component {
             idempotency: true,
             rateLimits: true,
             events: true,
+            endOfDemo: true,
             
 
                 //* - TRACKING SCROLLING  - *//
@@ -65,7 +66,7 @@ export default class APIReference extends Component {
 
         }
 
-        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Overview (Events)'];
+        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Overview (Events)', 'End of Demo'];
 
         // Initialize scroll debounce variables
         this.scrollTimeout = null;
@@ -109,10 +110,8 @@ export default class APIReference extends Component {
             // this.smoothScrollToId(this.props.searchedTerm.lastCat)
             // console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.scrollToID)
         } else {
-            
+            this.scrollToTop("overview")
         }   
-
-        this.scrollToTop("overview")
 
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
@@ -248,14 +247,14 @@ export default class APIReference extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) { 
             // this.getSelectedPage(this.props.scrollToID)
-            // this.scrollToTop(this.props.scrollToID)
-            console.log("componentDidUpdate props.scrollToID: PRESENT - ", this.props.scrollToID)
-            
-            this.smoothScrollToId(this.props.scrollToID.toLowerCase())
-            
+            // this.scrollToTop(this.props.scrollToID) 
+            if (this.props.scrollToID !== "Overview") {
+                this.smoothScrollToId(this.props.scrollToID.toLowerCase())
+            } else {
+                this.scrollToTop('overview')
+            }
         }
         if (this.props.searchedTerm) {
-            console.log("componentDidUpdate props.searchedTerm: PRESENT - ", this.props.searchedTerm)
             this.smoothScrollToId(this.props.searchedTerm.lastCat)
             setTimeout(() => {
                 // this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
@@ -320,6 +319,7 @@ export default class APIReference extends Component {
             {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Idempotency", "lastCat": "top"},
             {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Rate limits", "lastCat": "top"},
             {"id": "999995", "name": "Events", "category": "Resources", "subCat1": "API Reference", "page": "Events", "lastCat": "top"},
+            {"id": "999995", "name": "End of Demo", "category": "Resources", "subCat1": "API Reference", "page": "End of Demo", "lastCat": "top"},
         ]
         for (let i = 0; i < pageOptions.length; i++) {
             if (page === pageOptions[i].page) {
@@ -398,7 +398,6 @@ export default class APIReference extends Component {
         // Set a timeout to check if scrolling has stopped
         this.scrollTimeout = setTimeout(() => {
             // Perform actions when scrolling has stopped
-            console.log('Scrolling has stopped');
             // Trigger the function after scroll has stopped
             if (this.currentSectionInView) {
                 this.props.nextSectionScrolled(this.currentSectionInView);
@@ -422,7 +421,7 @@ export default class APIReference extends Component {
     render () {
 
             //* - API REFERENCE PAGES VAR(S - *//
-        const { overview, clientLibraries, testing, apiKeys, errors, pagination, idempotency, rateLimits, events } = this.state;
+        const { overview, clientLibraries, testing, apiKeys, errors, pagination, idempotency, rateLimits, events, endOfDemo } = this.state;
 
             //* - LANGUAGE SELECTION VAR(S) - *//
         const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected } = this.state;
@@ -1045,6 +1044,22 @@ export default class APIReference extends Component {
 
                         </div>
 
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={endOfDemo}
+                timeout={0}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='End of Demo' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "6%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+
+                        </div>
                     </div>
                 </CSSTransition>
                     

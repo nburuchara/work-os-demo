@@ -10,7 +10,7 @@ const results = [
 
         //! - - API REFERENCE - - !//
 
-    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "Overview"},
+    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "overview"},
     {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "client libraries"},
     {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "testing"},
     {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "api keys"},

@@ -204,6 +204,7 @@ export default class Resources extends Component {
         this.setState({
             apiReference: false,
             integrations: false,
+            integrationsPages: false
         })
     }
 
@@ -211,9 +212,10 @@ export default class Resources extends Component {
         const pageMap = {
             "Overview": "apiReference",
             "Integrations" : "integrations",
+            "Integrations" : "integrationsPages",
         };
         const keys = Object.keys(pageMap);
-        for (let i = 0; i < keys.length; i++) {
+        for (let i = 0; i < keys.length; i++) { 
             if (searchedTerm !== keys[i]) {
                 this.setState({
                     [`${pageMap[keys[i]]}`]: false
@@ -1254,7 +1256,7 @@ export default class Resources extends Component {
                 classNames="docs-side-panel"
                 unmountOnExit    
                 >
-                    <Integrations hideIntegrationsPage={this.hideIntegrationsPage} scrollToID={this.state.integrationsPage} searchedTerm={this.state.integrationsSearchedObect} sidebarMenuClicked={sidebarMenuClicked} />
+                    <Integrations hideIntegrationsPage={this.hideIntegrationsPage} scrollToID={this.state.integrationsPage} searchedTerm={this.state.integrationsSearchedObect} sidebarMenuClicked={sidebarMenuClicked} ref={(ref) => { this.integrationsRef = ref; }}  />
                 </CSSTransition>
 
 
