@@ -10,37 +10,59 @@ const results = [
 
         //! - - API REFERENCE - - !//
 
-    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "overview"},
-    {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "client libraries"},
-    {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "testing"},
-    {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "api keys"},
-    {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "errors"},
-    {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "pagination"},
-    {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "idempotency"},
-    {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "rate limits"},
-    {"id": "999995", "name": "Overview (Events)", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "overview (events)"},
-    {"id": "999995", "name": "List events", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Get an Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "List Organizations", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Create an Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Update an Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Delete an Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Organization Domain", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Overview (UM)", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Get a User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "List User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Create a User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Update a User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "Delete a User", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+        //* - - INTRODUCTION - - *//
+
+    {"id": "999995", "name": "Overview", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "overview"},
+    {"id": "999995", "name": "Client libraries", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "client libraries"},
+    {"id": "999995", "name": "Testing", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "testing"},
+    {"id": "999995", "name": "API Keys", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "api keys"},
+    {"id": "999995", "name": "Errors", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "errors"},
+    {"id": "999995", "name": "Pagination", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "pagination"},
+    {"id": "999995", "name": "Idempotency", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "idempotency"},
+    {"id": "999995", "name": "Rate limits", "category": "Resources", "subCat1": "API Reference", "subCat2": "Introduction", "page": "Overview", "lastCat": "rate limits"},
+
+        //* - - EVENTS - - *//
+
+    {"id": "999995", "name": "Events", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "overview (events)"},
+    {"id": "999995", "name": "Overview (Events)", "category": "Resources", "subCat1": "API Reference", "subCat2": "Events", "page": "Overview", "lastCat": "overview (events)"},
+    {"id": "999995", "name": "List events", "category": "Resources", "subCat1": "API Reference", "subCat2": "Events", "page": "Overview", "lastCat": "end of demo"},
+
+        //* - - ORGANIZATION - - *//
+
+    {"id": "999995", "name": "Organizations", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Organization", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Get an Organization", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "subCat3": "Organization", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "List Organizations", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "subCat3": "Organization", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Create an Organization", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "subCat3": "Organization", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Update an Organization", "subCat2": "Organizations", "subCat3": "Organization", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Delete an Organization", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "subCat3": "Organization",  "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Organization Domain", "category": "Resources", "subCat1": "API Reference", "subCat2": "Organizations", "page": "Overview", "lastCat": "end of demo"},
+
+        //* - - USER MANAGEMENT - - *//
+
+    {"id": "999995", "name": "User Management", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Overview (UM)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Get a User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "User", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "List User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "User", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Create a User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "User", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Update a User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "User", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Delete a User", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "User", "page": "Overview", "lastCat": "end of demo"},
+
+        //* - - IDENTITY - - *//
+
     {"id": "999995", "name": "Identity", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
-    {"id": "999995", "name": "List identities", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "List identities", "category": "Resources", "subCat1": "API Reference", "subCat2": "Identity", "page": "Overview", "lastCat": "end of demo"},
+
+        //* - - AUTHENTICATION - - *//
+
     {"id": "999995", "name": "Authentication", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Get authorization URL", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Redirect URI", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Authkit, OAuth, SSO", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Password", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Password", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    
     {"id": "999995", "name": "Error codes", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Session tokens", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Authentication errors", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
