@@ -3649,7 +3649,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3} />}
 
-                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} />}
+                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />}
 
             </Styles>
         )

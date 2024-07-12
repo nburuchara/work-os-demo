@@ -433,7 +433,7 @@ export default class APIReference extends Component {
 
         return(
             <Styles>
-                <div id='top'></div>
+                <div id='overview'></div>
                 <CSSTransition in={overview}
                 timeout={0}
                 classNames="docs-side-panel"
