@@ -1240,8 +1240,8 @@ export default class APIReference extends Component {
                                     {/* - - MAGIC LINK - - */}
 
                                 <i id='magic link'></i>
-                                <i id='passwordless sessions'></i>
-                                <i id='create a passwordless sessions'></i>
+                                <i id='passwordless session'></i>
+                                <i id='create passwordless sessions'></i>
                                 <i id='email a magic link'></i>
 
                             </span>
