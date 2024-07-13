@@ -239,7 +239,26 @@ export default class Resources extends Component {
             "Integrations" : "integrations",
             // "Integrations" : "integrationsPages",
             "Migrate to WorkOS" : "migrateToWorkos",
+            "AuthO (M)" : "authOM",
+            "AWS Cognito (M)" : "awsCognitoM",
+            "Firebase (M)" : "firebaseM",
+            "Other Services (M)" : "otherServicesM",
+            "Single Sign-On (M)" : "singleSignOnM",
+
             "SDKs" : "sdks",
+            "Node.js" : "nodejs",
+            "Go" : "go",
+            "Ruby" : "ruby",
+            "Python" : "python",
+            "PHP" : "php",
+            "Laravel" : "laravel",
+            "Java" : "java",
+            ".NET" : "dotNet",
+            "Elixir" : "elixir",
+            "Django" : "django",
+            "OmniAuth" : "omniauth",
+            "Ueberauth" : "ueberauth",
+
             "Email delivery" : "emailDelivery",
             "Dashboard" : "dashboard",
             "Glossary" : "glossary",
@@ -1301,7 +1320,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1314,7 +1333,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1327,7 +1346,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1340,7 +1359,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1353,7 +1372,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1366,7 +1385,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1383,7 +1402,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1396,7 +1415,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1409,7 +1428,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1422,7 +1441,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1435,7 +1454,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1448,7 +1467,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1461,7 +1480,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1474,7 +1493,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1487,7 +1506,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1500,7 +1519,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1513,7 +1532,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1526,7 +1545,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1539,7 +1558,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1555,7 +1574,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1568,7 +1587,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1581,7 +1600,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
@@ -1594,7 +1613,7 @@ export default class Resources extends Component {
                 >
                     <div id='top' className='demo-docs-container'>
                         <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <h1 style={{paddingTop: "1.5%"}} className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
                         </div>
                     </div>
