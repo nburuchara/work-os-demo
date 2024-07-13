@@ -16762,6 +16762,7 @@ const results = [
     "name": "Get authorization URL",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "Authentication",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16770,30 +16771,9 @@ const results = [
     "name": "Redirect URI",
     "category": "Resources",
     "subCat1": "API Reference",
-    "page": "Overview",
-    "lastCat": "end of demo"
-  },
-  {
-    "id": "999995",
-    "name": "Authkit, OAuth, SSO",
-    "category": "Resources",
-    "subCat1": "API Reference",
-    "page": "Overview",
-    "lastCat": "end of demo"
-  },
-  {
-    "id": "999995",
-    "name": "Password",
-    "category": "Resources",
-    "subCat1": "API Reference",
-    "page": "Overview",
-    "lastCat": "end of demo"
-  },
-  {
-    "id": "999995",
-    "name": "Password",
-    "category": "Resources",
-    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "subCat4": "Get authorization URL",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16802,6 +16782,79 @@ const results = [
     "name": "Error codes",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "subCat4": "Get authorization URL",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authkit, OAuth, SSO",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Password",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Magic Auth (Auth)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Refresh token",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Email verification code",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "TOTP code",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Organization selection",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16810,6 +16863,37 @@ const results = [
     "name": "Session tokens",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "JWKS",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Session tokens",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Access token",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Session tokens",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Refresh token",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Session tokens",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16818,6 +16902,57 @@ const results = [
     "name": "Authentication errors",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Email verification",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication errors",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "MFA enrollments",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication errors",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "MFA challenge",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication errors",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "SSO required",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication errors",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Organization auth. required",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Authentication errors",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16826,6 +16961,37 @@ const results = [
     "name": "Magic Auth",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Magic Auth code",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Magic Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create a Magic Auth code",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Magic Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Send Magic Auth code",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Magic Auth",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -16834,6 +17000,46 @@ const results = [
     "name": "Multi-Factor Auth",
     "category": "Resources",
     "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authentication factor (UM)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authentication challenge (UM)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Enroll an auth factor (UM)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List auth factors (UM)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Multi-Factor Auth",
     "page": "Overview",
     "lastCat": "end of demo"
   },

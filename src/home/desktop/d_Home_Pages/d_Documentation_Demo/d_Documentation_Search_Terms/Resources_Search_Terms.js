@@ -93,13 +93,16 @@ const results = [
 
         //* - - MULTI-FACTOR AUTH - - *//
 
-    {"id": "999995", "name": "Multi-Factor Auth", "category": "Resources", "subCat1": "API Reference", "page": "Overview", "lastCat": "end of demo"},
+    {"id": "999995", "name": "Multi-Factor Auth", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Authentication factor (UM)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Multi-Factor Auth", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Authentication challenge (UM)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Multi-Factor Auth", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "Enroll an auth factor (UM)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Multi-Factor Auth", "page": "Overview", "lastCat": "end of demo"},
     {"id": "999995", "name": "List auth factors (UM)", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Multi-Factor Auth", "page": "Overview", "lastCat": "end of demo"},
 
-     //* - - MULTI-FACTOR AUTH - - *//
+     //* - - PASSWORD RESET - - *//
+
+     {"id": "999995", "name": "Password reset", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "page": "Overview", "lastCat": "end of demo"},
+     {"id": "999995", "name": "Send email", "category": "Resources", "subCat1": "API Reference", "subCat2": "User Management", "subCat3": "Password reset", "page": "Overview", "lastCat": "end of demo"},
 
         //! - - INTEGRATIONS - - !//
 
