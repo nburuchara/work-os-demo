@@ -66,7 +66,7 @@ export default class APIReference extends Component {
 
         }
 
-        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Overview (Events)', 'End of Demo'];
+        this.sectionIds = ['Overview', 'Client libraries', 'Testing', 'API Keys', 'Errors', 'Pagination', 'Idempotency', 'Rate limits', 'Overview (Events)', 'End of Demo',];
 
         // Initialize scroll debounce variables
         this.scrollTimeout = null;
@@ -1056,6 +1056,12 @@ export default class APIReference extends Component {
                             <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
 
                             <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                            
+                            
+                            <span>
+                                <i id='list events'></i>
+                            </span>
+                           
                             
                             <i id='end of demo'></i>
                         </div>

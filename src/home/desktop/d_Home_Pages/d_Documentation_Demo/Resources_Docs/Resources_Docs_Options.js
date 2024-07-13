@@ -345,15 +345,15 @@ const docs_sidebar_options = [
                     },
                     {
                         id: 78,
-                        levelName: "Get authorization URL",
+                        levelName: "Get authorization URL (SSO)",
                         sections: [
                             {
                                 id: 79,
-                                levelName: "Redirect URI",
+                                levelName: "Redirect URI (SSO)",
                             },
                             {
                                 id: 80,
-                                levelName: "Error codes",
+                                levelName: "Error codes (SSO)",
                             }
                         ]
                     },
