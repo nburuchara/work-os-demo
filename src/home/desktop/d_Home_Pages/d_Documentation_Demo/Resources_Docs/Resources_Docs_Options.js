@@ -831,23 +831,23 @@ const docs_sidebar_options = [
         sections: [
             {
                 id: 190,
-                levelName: "AuthO"
+                levelName: "AuthO (M)"
             },
             {
                 id: 191,
-                levelName: "AWS Cognito"
+                levelName: "AWS Cognito (M)"
             },
             {
                 id: 192,
-                levelName: "Firebase"
+                levelName: "Firebase (M)"
             },
             {
                 id: 193,
-                levelName: "Other Services"
+                levelName: "Other Services (M)"
             },
             {
                 id: 194,
-                levelName: "Single Sign-On"
+                levelName: "Single Sign-On (M)"
             }
         ]
     },

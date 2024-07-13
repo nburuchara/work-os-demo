@@ -18,6 +18,12 @@ export default class Resources extends Component {
             apiReference: false,
             integrations: false,
             integrationsPages: false,
+            migrateToWorkos: false, 
+            sdks: false, 
+            emailDelivery: false, 
+            dashboard: false, 
+            glossary: false, 
+            changelog: false,
 
                 //* - INTEGRATIONS COMPONENTS - *//
             integrationsPage: "",
@@ -67,13 +73,19 @@ export default class Resources extends Component {
         const pageMap = {
             "Overview": "apiReference",
             "Integrations" : "integrations",
-            // "Client libraries": "apiReference",
-            // "Testing": "apiReference",
-            // "API Keys": "apiReference",
-            // "Errors": "apiReference",
-            // "Pagination": "apiReference",
-            // "Idempotency": "apiReference",
-            // "Rate limits": "apiReference",
+            "Migrate to WorkOS" : "migrateToWorkos",
+            "AuthO (M)" : "authOM",
+            "AWS Cognito (M)" : "awsCognitoM",
+            "Firebase (M)" : "firebaseM",
+            "Other Services (M)" : "otherServicesM",
+            "Single Sign-On (M)" : "singleSignOnM",
+            
+            "SDKs" : "sdks",
+            "Email delivery" : "emailDelivery",
+            "Dashboard" : "dashboard",
+            "Glossary" : "glossary",
+            "Changelog" : "changelog",
+
         };
       
         const page = pageMap[selectedPage];
@@ -86,7 +98,7 @@ export default class Resources extends Component {
                 this.closeAllPagesExceptSelectedPage(this.props.scrollToID)
             }, 1000)
         } else {
-        //   console.error("Unknown selected page:", selectedPage);
+            
         }
 
         const integrationsPageMap = {
@@ -212,7 +224,13 @@ export default class Resources extends Component {
         const pageMap = {
             "Overview": "apiReference",
             "Integrations" : "integrations",
-            "Integrations" : "integrationsPages",
+            // "Integrations" : "integrationsPages",
+            "Migrate to WorkOS" : "migrateToWorkos",
+            "SDKs" : "sdks",
+            "Email delivery" : "emailDelivery",
+            "Dashboard" : "dashboard",
+            "Glossary" : "glossary",
+            "Changelog" : "changelog",
         };
         const keys = Object.keys(pageMap);
         for (let i = 0; i < keys.length; i++) { 
@@ -393,7 +411,7 @@ export default class Resources extends Component {
     render () {
 
                 //* - RESOURCES SECTION VAR(S) - *//
-            const { apiReference, overview, integrations, integrationsPages } = this.state;
+            const { apiReference, overview, integrations, integrationsPages, migrateToWorkos, sdks, emailDelivery, dashboard, glossary, changelog, authOM, awsCognitoM, firebaseM, otherServicesM, singleSignOnM, nodejs, go, ruby, python, php, laravel, java, dotNet, elixir, django, omniauth, ueberauth } = this.state;
 
 
                 //* - DOCS UI SIZE ADJUSTMENT VAR(S) - *//
@@ -1259,6 +1277,315 @@ export default class Resources extends Component {
                     <Integrations hideIntegrationsPage={this.hideIntegrationsPage} scrollToID={this.state.integrationsPage} searchedTerm={this.state.integrationsSearchedObect} sidebarMenuClicked={sidebarMenuClicked} ref={(ref) => { this.integrationsRef = ref; }}  />
                 </CSSTransition>
 
+
+                {/* - - MIGRATE TO WORKOS - - */}
+
+
+                <CSSTransition in={migrateToWorkos}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={authOM}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={awsCognitoM}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={firebaseM}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={otherServicesM}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={singleSignOnM}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+            
+                {/* - - SDKs - - */}
+
+
+                <CSSTransition in={sdks}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={nodejs}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={go}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={ruby}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={python}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={php}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+            
+                <CSSTransition in={laravel}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={java}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={dotNet}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={elixir}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={django}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={omniauth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={ueberauth}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                    {/* - - EMAIL DELIVERY - - */}
+
+
+                <CSSTransition in={emailDelivery}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={dashboard}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={glossary}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition in={changelog}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit    
+                >
+                    <div id='top' className='demo-docs-container'>
+                        <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>End of API Reference demo</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>To access the full version - consider hiring Norman ;)</p>
+                        </div>
+                    </div>
+                </CSSTransition>
 
             </Styles>
         )
