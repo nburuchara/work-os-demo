@@ -1059,7 +1059,191 @@ export default class APIReference extends Component {
                             
                             
                             <span>
+
+                                    {/* - - - - - - - - EVENTS - - - - - - - - */}
+
                                 <i id='list events'></i>
+
+                                    {/* - - - - - - - - ORGANIZATION - - - - - - - - */}
+
+                                <i id='organization'></i>
+                                <i id='organization domain'></i>
+
+                                    {/* - - - - - - - - USER MANAGEMENT - - - - - - - - */}
+
+                                    {/* - - USER - - */}
+
+                                <i id='user'></i>
+                                <i id='get a user'></i>
+                                <i id='list users'></i>
+                                <i id='create a user'></i>
+                                <i id='update a user'></i>
+                                <i id='delete a user'></i>
+
+                                    {/* - - IDENTITY - - */}
+
+                                <i id='identity'></i>
+                                <i id='list identites'></i>
+
+                                    {/* - - AUTHENTICATION - - */}
+
+                                <i id='authentication'></i>
+                                <i id='get authorization url'></i>
+                                <i id='redirect uri'></i>
+                                <i id='error codes'></i>
+                                <i id='authkit, oauth, sso'></i>
+                                <i id='password'></i>
+                                <i id='magic auth (auth)'></i>
+                                <i id='refresh token'></i>
+                                <i id='email verification code'></i>
+                                <i id='totp code'></i>
+
+                                    {/* - - SESSION TOKENS - - */}
+
+                                <i id='sessions tokens'></i>
+                                <i id='jwks'></i>
+                                <i id='access token'></i>
+                                <i id='refresh token'></i>
+
+                                    {/* - - AUTHENTICATION ERRORS - - */}
+
+                                <i id='authentication errors'></i>
+                                <i id='email verification'></i>
+                                <i id='mfa enrollments'></i>
+                                <i id='mfa challenge'></i>
+                                <i id='sso required'></i>
+                                <i id='organization auth. required'></i>
+
+                                    {/* - - MAGIC AUTH - - */}
+
+                                <i id='magic auth'></i>
+                                <i id='get a magic auth code'></i>
+                                <i id='create a magic auth code'></i>
+                                <i id='send magic auth code'></i>
+
+                                    {/* - - MULTI-FACTOR AUTH - - */}
+
+                                <i id='multi-factor auth (um)'></i>
+                                <i id='authentication factor (um)'></i>
+                                <i id='authentication challenge (um)'></i>
+                                <i id='enroll an auth factor (um)'></i>
+                                <i id='list auth factors (um)'></i>
+
+                                    {/* - - PASSWORD RESET - - */}
+
+                                <i id='password reset'></i>
+                                <i id='send email'></i>
+                                <i id='reset password'></i>
+
+                                    {/* - - ORGANIZATION MEMBERSHIP - - */}
+
+                                <i id='organization membership'></i>
+                                <i id='get membership'></i>
+                                <i id='list memberships'></i>
+                                <i id='create membership'></i>
+                                <i id='update membership'></i>
+                                <i id='delete membership'></i>
+
+                                    {/* - - INVITATION - - */}
+
+                                <i id='get an invitation'></i>
+                                <i id='list invitations'></i>
+                                <i id='send an invitation'></i>
+                                <i id='invitation'></i>
+                                <i id='revoke an invitation'></i>
+
+                                    {/* - - LOGOUT - - */}
+
+                                <i id='logout'></i>
+
+                                    {/* - - - - - - - - SINGLE SIGN-ON - - - - - - - - */}
+
+                                <i id='overview (sso)'></i>
+                                <i id='get authorization url (sso)'></i>
+                                <i id='redirect uri (sso)'></i>
+                                <i id='error codes (sso)'></i>
+
+                                    {/* - - PROFILE - - */}
+
+                                <i id='profile'></i>
+                                <i id='get a profile and token'></i>
+                                <i id='get a user profile'></i>
+
+                                    {/* - - CONNECTIONS - - */}
+
+                                <i id='connections'></i>
+                                <i id='get a connection'></i>
+                                <i id='list connections'></i>
+                                <i id='delete a connection'></i>
+
+                                    {/* - - - - - - - - DIRECTORY SYNC - - - - - - - - */}
+
+                                <i id='overview (ds)'></i>
+
+                                    {/* - - DIRECTORY - - */}
+
+                                <i id='directory'></i>
+                                <i id='get a directory'></i>
+                                <i id='list directories'></i>
+                                <i id='delete directories'></i>
+
+                                    {/* - - DIRECTORY USER - - */}
+
+                                <i id='directory user'></i>
+                                <i id='get a directory user'></i>
+                                <i id='list directory users'></i>
+
+                                    {/* - - DIRECTORY GROUP - - */}
+
+                                <i id='directory group'></i>
+                                <i id='get a directory group'></i>
+                                <i id='list directory groups'></i>
+
+                                    {/* - - - - - - - - ADMIN PORTAL - - - - - - - - */}
+
+                                <i id='overview (ap)'></i>
+                                <i id='portal link'></i>
+                                <i id='generate a portal link'></i>
+
+                                    {/* - - - - - - - - AUDIT LOGS - - - - - - - - */}
+
+                                <i id='overview (al)'></i>
+                                <i id='create event'></i>
+                                <i id='create schema'></i>
+                                <i id='list schemas'></i>
+                                <i id='list actions'></i>
+                                <i id='audit log export'></i>
+                                <i id='create export'></i>
+                                <i id='get export'></i>
+                                <i id='get retention'></i>
+                                <i id='set retention'></i>
+
+                                    {/* - - - - - - - - DOMAIN VERIFICATION - - - - - - - - */}
+
+                                <i id='organization domain'></i>
+                                <i id='get'></i>
+                                <i id='create'></i>
+                                <i id='verify'></i>
+
+                                    {/* - - - - - - - - MULTI-FACTOR AUTH - - - - - - - - */}
+
+                                <i id='authentication factor'></i>
+                                <i id='authentication challenge'></i>
+                                <i id='enroll factor'></i>
+                                <i id='challenge factor'></i>
+                                <i id='verify challenge'></i>
+                                <i id='get authentication factor'></i>
+                                <i id='delete authentication factor'></i>
+
+                                    {/* - - - - - - - - DEPRECATED APIs - - - - - - - - */}
+
+                                    {/* - - MAGIC LINK - - */}
+
+                                <i id='magic link'></i>
+                                <i id='passwordless sessions'></i>
+                                <i id='create a passwordless sessions'></i>
+                                <i id='email a magic link'></i>
+
                             </span>
                            
                             
