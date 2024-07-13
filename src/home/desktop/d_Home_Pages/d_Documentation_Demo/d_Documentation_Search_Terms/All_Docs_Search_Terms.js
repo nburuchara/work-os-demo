@@ -17000,6 +17000,7 @@ const results = [
     "name": "Multi-Factor Auth",
     "category": "Resources",
     "subCat1": "API Reference",
+    "subCat2": "User Management",
     "page": "Overview",
     "lastCat": "end of demo"
   },
@@ -17040,6 +17041,675 @@ const results = [
     "subCat1": "API Reference",
     "subCat2": "User Management",
     "subCat3": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Password reset",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Send email",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Password reset",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Reset password",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Password reset",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Organization membership",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get membership",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Organization membership",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List memberships",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Organization membership",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create membership",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Organization membership",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Update membership",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Organization membership",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Delete membership",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Organization membership",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Invitation",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get an invitation",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Invitation",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List invitations",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Invitation",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Send an invitation",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Invitation",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Revoke an invitation",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "subCat3": "Invitation",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Logout",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "User Management",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Single Sign-On",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Overview (SSO)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get authorization URL (SSO)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Redirect URI (SSO)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Get authorization URL (SSO)",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Error codes (SSO)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Get authorization URL (SSO)",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Profile",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Profile and Token",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Profile",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a User Profile",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Profile",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Connections",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Connection",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Connections",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Connections",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Connections",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Delete a Connection",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Single Sign-On",
+    "subCat3": "Connections",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Directory Sync",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Overview (DS)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Directory",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Directory",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Directories",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Delete directories",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Directory User",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Directory User",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory User",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Directory Users",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory User",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Directory Group",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get a Directory Group",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory Group",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Directory Groups",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Directory Sync",
+    "subCat3": "Directory Group",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Admin Portal",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Overview (AP)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Admin Portal",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Portal Link",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Admin Portal",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Generate a Portal Link",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Admin Portal",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Audit Logs",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Overview (AL)",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create Event",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create Schema",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Schemas",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "List Actions",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Audit Log Export",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create Export",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get Export",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get Retention",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Set Retention",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Audit Logs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Domain Verification",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Organization Domain",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Domain Verification",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Domain Verification",
+    "subCat3": "Organization Domain",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Domain Verification",
+    "subCat3": "Organization Domain",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Verify",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Domain Verification",
+    "subCat3": "Organization Domain",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Multi-Factor Auth",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authentication Factor",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Authentication Challenge",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Enroll Factor",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Challenge Factor",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Verify Challenge",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Get Authentication Factor",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Delete Authentication Factor",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Multi-Factor Auth",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Deprecated APIs",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Magic Link",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Deprecated APIs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Passwordless Session",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Deprecated APIs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Create Passwordless Sessions",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Deprecated APIs",
+    "page": "Overview",
+    "lastCat": "end of demo"
+  },
+  {
+    "id": "999995",
+    "name": "Email a Magic Link",
+    "category": "Resources",
+    "subCat1": "API Reference",
+    "subCat2": "Deprecated APIs",
     "page": "Overview",
     "lastCat": "end of demo"
   },

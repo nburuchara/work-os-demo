@@ -247,7 +247,7 @@ const docs_sidebar_options = [
                     },
                     {
                         id: 56,
-                        levelName: "Multi-Factor Auth",
+                        levelName: "Multi-Factor Auth (UM)",
                         sections: [
                             {
                                 id: 57,
