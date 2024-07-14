@@ -3691,7 +3691,7 @@ export default class DocsNavigationMenu extends Component {
                     >
                         <div className='docs-home-container'>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : ""}}>User Management</h1>
+                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
                                 <h2>Authentication</h2>
                                 <div className='usrBtns'>
@@ -3704,15 +3704,15 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo2.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Enterprise auth</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo2.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Enterprise auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo3.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Email + Password</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Email + Password</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Simple and secure sign-in experience or your users.</p>
                                         </div>
                                     </div>
@@ -3720,22 +3720,22 @@ export default class DocsNavigationMenu extends Component {
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo3.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Social login</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Social login</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Authenticate users with providers like Google or Microsoft OAuth.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo5.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Multi-Factor Auth</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo5.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Multi-Factor Auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Unlock additional authentication factors such as TOTP or SMS.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo6.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Magic Auth</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo6.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Magic Auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Allows passwordless sign-in with a six-digit code sent via email.</p>
                                         </div>
                                     </div>
@@ -3744,40 +3744,41 @@ export default class DocsNavigationMenu extends Component {
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo7.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Just-in-Time</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo7.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Just-in-Time</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/docs_home_logo8.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Directory</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo8.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Directory</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Create and manage user accounts synced from a directory source.</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <h1 style={{marginTop: "5%", marginBottom: "2%"}}>Standalone APIs</h1>
+                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Standalone APIs</h1>
+
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/sso_home_logo.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Single Sign-On</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/sso_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Single Sign-On</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Integrate your existing auth stack with any SAML or OIDC identity provider.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/ds_home_logo.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Directory Sync</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/ds_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Directory Sync</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/ap_home_logo.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Admin Portal</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/ap_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Admin Portal</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Enable IT admins to have a self-serve onboarding experience.</p>
                                         </div>
                                     </div>
@@ -3785,40 +3786,41 @@ export default class DocsNavigationMenu extends Component {
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/al_home_logo.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Audit Logs</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/al_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Audit Logs</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/dv_home_logo.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Domain Verification</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/dv_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Domain Verification</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Create and manage user accounts synced from a directory source.</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <h1 style={{marginTop: "5%", marginBottom: "2%"}}>Events and webhooks</h1>
+                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
+
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/eweb_home_logo1.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Event types</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/eweb_home_logo1.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Event types</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/eweb_home_logo2.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Data syncing</strong></p>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Data syncing</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Learn to keep your app in sync using the events API and webhooks.</p>
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/eweb_home_logo3.png'/>
-                                            <p style={{marginBottom: "2.5%"}}><strong>Observability</strong></p>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/eweb_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Observability</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Stream and analyze WorkOS activity in Datadog.</p>
                                         </div>
                                     </div>
