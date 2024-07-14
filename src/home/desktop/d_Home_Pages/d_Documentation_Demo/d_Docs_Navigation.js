@@ -3800,7 +3800,7 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
 
-                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
+                                <h1 style={{ marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
 
                                 <div className='usrBtns'>
                                     <div className='usrBtn'>
@@ -3812,7 +3812,7 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
-                                            <img src='/assets/eweb_home_logo2.png'/>
+                                            <img style={{width: "11%"}} src='/assets/eweb_home_logo2.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Data syncing</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Learn to keep your app in sync using the events API and webhooks.</p>
                                         </div>
