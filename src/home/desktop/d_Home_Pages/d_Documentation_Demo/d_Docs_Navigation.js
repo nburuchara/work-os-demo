@@ -2206,10 +2206,65 @@ const Styles = styled.div `
 
 .docs-home-container h1 {
     margin-top: 10%;
+    margin-bottom: 1%;
     font-family: Poppins;
     font-size: 170%;
     font-weight: bold;
 }
+
+.docs-home-container p {
+    margin-top: 1.5%;
+}
+
+.docs-home-container h2 {
+    font-family: Poppins;
+    font-size: 120%;
+}
+
+    // - - DOCS HOME BUTTONS - - //
+
+.usrBtns {
+    margin-bottom: 2%;
+}
+
+.usrBtns:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.usrBtn {
+    float: left;
+    width: 32%;
+    text-align: left;
+}
+
+.usrBtn div {
+    height: 12.5vh;
+    width: 95%;
+    border: 1px solid #ccc;
+    padding: 1%;
+    border-radius: 8px;
+}
+
+.usrBtn div:hover {
+    border: 1px solid #999999;
+    cursor: pointer;
+}
+
+.usrBtn img {
+    width: 12.5%;
+    margin-left: 3.5%;
+    margin-top: 1.5%;
+}
+
+.usrBtn p {
+    margin-top: 0px;
+    margin-left: 3.5%;
+    font-size: 80%;
+}
+
+
 
 `
 
@@ -3153,12 +3208,47 @@ export default class DocsNavigationMenu extends Component {
         await this.searchedTermClicked(pageObject.category, pageObject, pageObject.page)
     }
 
-    searchInternalPage = () => {
-        
-    }
-
     componentDidUpdate = () => {
        
+    }
+
+    homeOptionSelected = (page) => {
+
+        let pageObject = null;
+
+        const pageOptions = [
+
+            {"id": "999953", "name": "AuthKit", "category": "User Management", "page": "AuthKit", "lastCat": "top"},
+            {"id": "999860", "name": "Single Sign-On", "category": "User Management", "page": "Single Sign-On", "lastCat": "top"},
+            {"id": "999815", "name": "Email + Password", "category": "User Management", "page": "Email + Password", "lastCat": "top"},
+            {"id": "999797", "name": "Social Login", "category": "User Management", "page": "Social Login", "lastCat": "top"},
+            {"id": "999783", "name": "Multi-Factor Authentication", "category": "User Management", "page": "Multi-Factor Auth", "lastCat": "top"},
+            {"id": "999770", "name": "Magic Auth", "category": "User Management", "page": "Magic Auth", "lastCat": "top"},
+            {"id": "999621", "name": "JIT Provisioning", "category": "User Management", "page": "JIT Provisioning", "lastCat": "top"},
+            {"id": "999586", "name": "Directory Provisioning", "category": "User Management", "page": "Directory Provisioning", "lastCat": "top"},
+
+            {"id": "999444", "name": "Single Sign-On", "category": "Standalone APIs", "page": "Quick Start", "subCat1": "Single Sign-On", "lastCat": "top"},
+            {"id": "999129", "name": "Fundamentals", "category": "Standalone APIs", "subCat1": "Directory Sync", "page": "Fundamentals", "lastCat": "top"},
+            {"id": "998815", "name": "Quick Start", "category": "Standalone APIs", "subCat1": "Admin Portal", "page": "Quick Start (AP)", "lastCat": "top"},
+            {"id": "998722", "name": "Audit Logs", "category": "Standalone APIs", "subCat1": "Audit Logs", "page": "Quick Start (AL)", "lastCat": "top"},
+            {"id": "998636", "name": "Quick Start", "category": "Standalone APIs", "subCat1": "Domain Verification", "page": "Quick Start (DV)", "lastCat": "top"},
+
+            {"id": "998573", "name": "Event Types", "category": "Events and webhooks", "page": "Event types", "lastCat": "top"},
+            {"id": "998572", "name": "Data Syncing", "category": "Events and webhooks", "page": "Overview", "lastCat": "top"},
+            {"id": "998565", "name": "Streaming to Datadog", "category": "Events and webhooks", "page": "Streaming to Datadog", "lastCat": "top"},
+
+        ]
+
+        for (let i = 0; i < pageOptions.length; i++) {
+            if (page === pageOptions[i].page) {
+                pageObject = pageOptions[i]
+            }
+        }
+
+        if (pageObject !== null) {
+            this.searchedTermClicked(pageObject.category, pageObject, pageObject.page);
+        }
+
     }
 
     render () {
@@ -3594,52 +3684,148 @@ export default class DocsNavigationMenu extends Component {
 
                     {/* - - DOCUMENTATION HOME SCREEN & LOADING PAGE - -  */}
 
-                    {showDocsHome && 
+                    <CSSTransition in={showDocsHome}
+                    timeout={500}
+                    classNames="docs-side-panel"
+                    unmountOnExit    
+                    >
                         <div className='docs-home-container'>
-                            <h1>User Management</h1>
+                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>User Management</h1>
+                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
                             <h2>Authentication</h2>
-                            <div>
-                                <div>
-                                    <button>AuthKit</button>
+                            <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                                <div className='usrBtns'>
+                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} onClick={() => this.homeOptionSelected('AuthKit')} className='usrBtn'>
+                                        <div>
+                                            <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo1.png'/>
+                                            <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>AuthKit</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Fully custimizable hosted UI for authentication at any size.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo2.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Enterprise auth</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Email + Password</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Simple and secure sign-in experience or your users.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <button>Enterprise auth</button>
+                                <div className='usrBtns'>
+                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Social login</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Authenticate users with providers like Google or Microsoft OAuth.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo5.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Multi-Factor Auth</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Unlock additional authentication factors such as TOTP or SMS.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo6.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Magic Auth</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Allows passwordless sign-in with a six-digit code sent via email.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <button>Email + Password</button>
+                                <h2>Provisioning</h2>
+                                <div className='usrBtns'>
+                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo7.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Just-in-Time</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/docs_home_logo8.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Directory</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Create and manage user accounts synced from a directory source.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div>
-                                    <button>Social login</button>
-                                </div>
-                                <div>
-                                    <button>Multi-Factor Auth</button>
-                                </div>
-                                <div>
-                                    <button>Magic Auth</button>
-                                </div>
-                            </div>
-                            <h2>Provisioning</h2>
-                            <div>
-                                <div>
-                                    <button>Just-in-Time</button>
-                                </div>
-                                <div>
-                                    <button>Directory</button>
-                                </div>
-                                <div>
 
+                                <h1 style={{marginTop: "5%", marginBottom: "2%"}}>Standalone APIs</h1>
+                                <div className='usrBtns'>
+                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
+                                        <div>
+                                            <img src='/assets/sso_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Single Sign-On</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Integrate your existing auth stack with any SAML or OIDC identity provider.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/ds_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Directory Sync</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/ap_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Admin Portal</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Enable IT admins to have a self-serve onboarding experience.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='usrBtns'>
+                                    <div className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/al_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Audit Logs</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/dv_home_logo.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Domain Verification</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Create and manage user accounts synced from a directory source.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h1 style={{marginTop: "5%", marginBottom: "2%"}}>Events and webhooks</h1>
+                                <div className='usrBtns'>
+                                    <div className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/eweb_home_logo1.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Event types</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/eweb_home_logo2.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Data syncing</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Learn to keep your app in sync using the events API and webhooks.</p>
+                                        </div>
+                                    </div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                            <img src='/assets/eweb_home_logo3.png'/>
+                                            <p style={{marginBottom: "2.5%"}}><strong>Observability</strong></p>
+                                            <p style={{fontSize: "60%", marginRight: "3.5%"}}>Stream and analyze WorkOS activity in Datadog.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    }
-
-                    {showDocsLoadingScreen && 
-                        <div>
-
-                        </div>
-                    }
+                    </CSSTransition>
 
                     {/* - - DOCUMENTATION PAGES - -  */}
 
