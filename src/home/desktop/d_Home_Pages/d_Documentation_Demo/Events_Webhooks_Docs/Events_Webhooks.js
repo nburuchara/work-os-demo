@@ -2935,7 +2935,7 @@ export default class EventsWebhooks extends Component {
                                         <img  src='/assets/stream_datadogs_img6.avif' alt="Enlargable" className="image" />
                             </div>
 
-                            <div className='demo-next-section-container'>
+                            {/* <div className='demo-next-section-container'>
                                 <div className='demo-next-section-container-left'>
                                     <h4 className={sidebarMenuClicked ? "demo-next-section-container-left-sidebar-h4" : ""}>API Reference</h4>
                                     <p style={{fontSize: sidebarMenuClicked ? "60%" : ""}}>Every SDK method and API endpoint documented.</p>
@@ -2943,7 +2943,7 @@ export default class EventsWebhooks extends Component {
                                 <div className={sidebarMenuClicked ? "demo-next-section-container-sidebar-right" : "demo-next-section-container-right"}>
                                     <p className={sidebarMenuClicked ? "demo-next-section-container-right-sidebar-p" : ""}>Up next <span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-next-section-container-right-sidebar-img" : ""} style={{ width: sidebarMenuClicked ? "20%" : "15%", marginLeft: sidebarMenuClicked ? "0px" : "4%"}} src='/assets/docs_next_section_icon.png' alt='no img available'/></span></p>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                         </div>

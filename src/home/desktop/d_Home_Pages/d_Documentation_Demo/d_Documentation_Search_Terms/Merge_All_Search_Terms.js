@@ -6,7 +6,7 @@ const files = [
    path.join(__dirname, './User_Management_Search_Terms.js'),
    path.join(__dirname, './Standalone_APIs_Search_Terms.js'),
    path.join(__dirname, './Events_Webhooks_Search_Terms.js'),
-   path.join(__dirname, './Resources_Search_Terms.js')
+//    path.join(__dirname, './Resources_Search_Terms.js')
 ];
 
 // Path to the output file

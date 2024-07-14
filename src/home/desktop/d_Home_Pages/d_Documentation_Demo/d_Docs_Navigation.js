@@ -3207,7 +3207,7 @@ export default class DocsNavigationMenu extends Component {
                                                 <div style={{top: mOption1Gap, zIndex: menuOption1 ? 1 : 0, backgroundColor: menuOption1 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption1'><p><label onClick={(() => {this.menuOptionClicked(1) } )}>User Management</label></p></div>
                                                 <div style={{top: mOption2Gap, zIndex: menuOption2 ? 1 : 0, backgroundColor: menuOption2 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption2'><p><label onClick={(() => this.menuOptionClicked(2))}>Standalone APIs</label></p></div>
                                                 <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
-                                                <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>     
+                                                {/* <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>      */}
                                             </div>
                                             <CSSTransition
                                             in={showCloseSelectedOptionBtn}
@@ -3372,7 +3372,7 @@ export default class DocsNavigationMenu extends Component {
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "User Management" ? "#6363f1": "", textDecoration: searchFilterSelected === "User Management" ? "underline": ""}} onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Standalone APIs" ? "#6363f1": "", textDecoration: searchFilterSelected === "Standalone APIs" ? "underline": ""}} onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Events and webhooks" ? "#6363f1": "", textDecoration: searchFilterSelected === "Events and webhooks" ? "underline": ""}} onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
-                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
+                                            {/* <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div> */}
                                         </div>
                                     </CSSTransition>
                                     {isSearchLoading && 
@@ -3513,7 +3513,7 @@ export default class DocsNavigationMenu extends Component {
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "User Management" ? "#6363f1": "", textDecoration: searchFilterSelected === "User Management" ? "underline": ""}} onClick={() => this.searchFilterClicked(1)}>User Management</label></p></div>
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Standalone APIs" ? "#6363f1": "", textDecoration: searchFilterSelected === "Standalone APIs" ? "underline": ""}} onClick={() => this.searchFilterClicked(2)}>Standalone APIs</label></p></div>
                                             <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Events and webhooks" ? "#6363f1": "", textDecoration: searchFilterSelected === "Events and webhooks" ? "underline": ""}} onClick={() => this.searchFilterClicked(3)}>Events and webhooks</label></p></div>
-                                            <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div>
+                                            {/* <div className='filterSearchOption'><p><label style={{color: searchFilterSelected === "Resources" ? "#6363f1": "", textDecoration: searchFilterSelected === "Resources" ? "underline": ""}} onClick={() => this.searchFilterClicked(4)}>Resources</label></p></div> */}
                                         </div>
                                     </CSSTransition>
                                     {isSearchLoading && 
@@ -3649,7 +3649,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3} />}
 
-                    {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />}
+                    {/* {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />} */}
 
             </Styles>
         )

@@ -72,7 +72,7 @@ export default class Resources extends Component {
     getSelectedPage = (selectedPage) => {
         const pageMap = {
             "Overview": "apiReference",
-            "Integrations" : "integrations",
+            "Integrations" : "integrationsPages",
             "Migrate to WorkOS" : "migrateToWorkos",
             "AuthO (M)" : "authOM",
             "AWS Cognito (M)" : "awsCognitoM",
@@ -237,7 +237,7 @@ export default class Resources extends Component {
         const pageMap = {
             "Overview": "apiReference",
             "Integrations" : "integrations",
-            // "Integrations" : "integrationsPages",
+            "Integrations" : "integrationsPages",
             "Migrate to WorkOS" : "migrateToWorkos",
             "AuthO (M)" : "authOM",
             "AWS Cognito (M)" : "awsCognitoM",

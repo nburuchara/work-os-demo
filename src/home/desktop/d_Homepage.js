@@ -299,28 +299,47 @@ export default class DesktopHome extends Component {
         //* - - MORE DESKTOP VIEWS - - *//
 
     renderLargerDesktopView = () => {
-
+        return (
+            <div style={{textAlign: "center", paddingTop: "3%", fontFamily: "poppins", paddingLeft: "5%", paddingRight: "5%"}}>
+                <h1>Please use a device with a min screen width of 1300px :)</h1>
+                <p>You can adjust the screen width in the Google Chrome browser.</p>
+            </div>
+        )
     }
 
     renderLargeDesktopView = () => {
-
+        return (
+            <div style={{textAlign: "center", paddingTop: "3%", fontFamily: "poppins", paddingLeft: "5%", paddingRight: "5%"}}>
+                <h1>Please use a device with a min screen width of 1300px :)</h1>
+                <p>You can adjust the screen width in the Google Chrome browser.</p>
+            </div>
+        )
     }
 
     renderLargestDesktopView = () => {
-
+        return (
+            <div style={{textAlign: "center", paddingTop: "3%", fontFamily: "poppins", paddingLeft: "5%", paddingRight: "5%"}}>
+                <h1>Please use a device with a min screen width of 1300px :)</h1>
+                <p>You can adjust the screen width in the Google Chrome browser.</p>
+            </div>
+        )
     }
 
     renderFinalDesktopView = () => {
-
+        return (
+            <div style={{textAlign: "center", paddingTop: "3%", fontFamily: "poppins", paddingLeft: "5%", paddingRight: "5%"}}>
+                <h1>Please use a device with a min screen width of 1300px :)</h1>
+                <p>You can adjust the screen width in the Google Chrome browser.</p>
+            </div>
+        )
     }
 
     render () {
         
-        const computerMediaQuery = `(min-width: 1076px)`
-        const computerFinallMediaQuery = `(min-width: 1361px) and (max-width: 1455px)`
-        const computerLargestlMediaQuery = `(min-width: 1266px) and (max-width: 1360px)`
-        const computerLargeMediaQuery = `(min-width: 1171px) and (max-width: 1265px)`
-        const computerLargerMediaQuery = `(min-width: 1076px) and (max-width: 1170px)`
+        const computerMediaQuery = `(min-width: 1300px)`
+       
+        const computerLargeMediaQuery = `(min-width: 1171px) and (max-width: 1299px)`
+        const computerLargerMediaQuery = `(min-width: 320px) and (max-width: 1170px)`
 
         return (
             <Styles>
@@ -342,14 +361,14 @@ export default class DesktopHome extends Component {
                 </MediaQuery>
 
 
-                <MediaQuery query={computerLargestlMediaQuery}>
+                {/* <MediaQuery query={computerLargestlMediaQuery}>
                     {this.renderLargestDesktopView()}
                 </MediaQuery>
 
 
                 <MediaQuery query={computerFinallMediaQuery}>
                     {this.renderFinalDesktopView()}
-                </MediaQuery>
+                </MediaQuery> */}
 
             </Styles>
         )
