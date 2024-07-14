@@ -3690,27 +3690,27 @@ export default class DocsNavigationMenu extends Component {
                     unmountOnExit    
                     >
                         <div className='docs-home-container'>
-                            <h1 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h1" : ""}>User Management</h1>
-                            <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
-                            <h2>Authentication</h2>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
+                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : ""}}>User Management</h1>
+                                <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
+                                <h2>Authentication</h2>
                                 <div className='usrBtns'>
-                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} onClick={() => this.homeOptionSelected('AuthKit')} className='usrBtn'>
-                                        <div>
+                                    <div onClick={() => this.homeOptionSelected('AuthKit')} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo1.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>AuthKit</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Fully custimizable hosted UI for authentication at any size.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo2.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Enterprise auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo3.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Email + Password</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Simple and secure sign-in experience or your users.</p>
@@ -3718,22 +3718,22 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
                                 <div className='usrBtns'>
-                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo3.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Social login</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Authenticate users with providers like Google or Microsoft OAuth.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo5.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Multi-Factor Auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Unlock additional authentication factors such as TOTP or SMS.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo6.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Magic Auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Allows passwordless sign-in with a six-digit code sent via email.</p>
@@ -3742,15 +3742,15 @@ export default class DocsNavigationMenu extends Component {
                                 </div>
                                 <h2>Provisioning</h2>
                                 <div className='usrBtns'>
-                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo7.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Just-in-Time</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%", height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/docs_home_logo8.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Directory</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Create and manage user accounts synced from a directory source.</p>
@@ -3760,8 +3760,8 @@ export default class DocsNavigationMenu extends Component {
 
                                 <h1 style={{marginTop: "5%", marginBottom: "2%"}}>Standalone APIs</h1>
                                 <div className='usrBtns'>
-                                    <div style={{height: sidebarMenuClicked ? "auto" : ""}} className='usrBtn'>
-                                        <div>
+                                    <div className='usrBtn'>
+                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img src='/assets/sso_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%"}}><strong>Single Sign-On</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Integrate your existing auth stack with any SAML or OIDC identity provider.</p>
