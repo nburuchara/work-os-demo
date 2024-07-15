@@ -936,9 +936,79 @@ const codeSnippets = [
         ]
       },
       apiEpxlainers: {
-        sk_javascript: [
+        sk_example_123456789_javascript: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_nodesdk: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_nextjs: [
+          'Replace this with your secret key found on the <span style="color: #6363f1";>API Keys</span> page in the dashboard.'
+        ],
+        sk_example_123456789_openssl: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_npm: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_yarn: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_gradle: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_maven: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_terminal: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_bundler: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_rails: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_sinatra: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_django: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_flask: [
+          'Replace this with your secret key found on the <span style="color: #6363f1";>API Keys</span> page in the dashboard.'
+        ],
+        sk_example_123456789_java: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_flask: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_php: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_laravel: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_python: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_ruby: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_go: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_dotnet: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_express: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
 
-        ]
+        client_123456789_javascript: [
+          'Replace this with your client ID found on the API Keys page in the dashboard.'
+        ],
       }
     },
 
@@ -974,6 +1044,81 @@ const codeSnippets = [
           '> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"http://localhost:3000/callback"</span> <span style="color: #8b8d98;"># configured in the WorkOS dashboard</span>',
           '> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span><span style="color: #143465;">"&ltyour password&gt"</span> <span style="color: #8b8d98;"># generate a secure password here</span>'
         ]
+      },
+      apiEpxlainers: {
+        sk_example_123456789_javascript: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_nodesdk: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_nextjs: [
+          'Replace this with your secret key found on the <span style="color: #6363f1";>API Keys</span> page in the dashboard.'
+        ],
+        sk_example_123456789_openssl: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_npm: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_yarn: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_gradle: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_maven: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_terminal: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_bundler: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_rails: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_sinatra: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_django: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_flask: [
+          'Replace this with your secret key found on the <span style="color: #6363f1";>API Keys</span> page in the dashboard.'
+        ],
+        sk_example_123456789_java: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_flask: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_php: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_laravel: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_python: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_ruby: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_go: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_dotnet: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        sk_example_123456789_express: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+
+        client_123456789_javascript: [
+          'Replace this with your client ID found on the API Keys page in the dashboard.'
+        ],
       }
     },
 

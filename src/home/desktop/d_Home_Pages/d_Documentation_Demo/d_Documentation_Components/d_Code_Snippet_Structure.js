@@ -8,19 +8,6 @@ const DropdownContainer = styled.div`
   z-index: 2;
 `;
 
-const SelectButtonResponse = styled.button`
-  background-color: transparent;
-  margin-top: 5%;
-  border: none;
-  padding: 5%;
-  padding-left: 8.5%;
-  padding-right: 8.5%;
-  cursor: default;
-  font-family: poppins;
-  border-radius: 7px;
-  font-size: 75%;
-`;
-
 const DropdownContent = styled.div`
   width: 100%;
   display: ${props => (props.isOpen ? 'block' : 'none')};
@@ -752,6 +739,19 @@ export default class CodeSnippet extends Component {
           return <div><p style={{color: "#6363f1", fontWeight: "bold"}}>Code snippet not available for: <label style={{color: "black"}}>{this.props.selectedLang.charAt(0).toUpperCase() + this.props.selectedLang.slice(1)}</label>.</p></div>;
         } 
 
+        const SelectButtonResponse = styled.button`
+          background-color: transparent;
+          margin-top: ${sideBarOpen ? "6%" : "5%"};
+          border: none;
+          padding: 5%;
+          padding-left: 8.5%;
+          padding-right: 8.5%;
+          cursor: default;
+          font-family: poppins;
+          border-radius: 7px;
+          font-size: ${sideBarOpen ? "65%" : "75%"};
+      `;
+
         return (
             <Styles>
                 <div className='code-snippet-container'>
@@ -857,7 +857,7 @@ export default class CodeSnippet extends Component {
                     }
                     <div style={{borderTopLeftRadius: this.props.showCodeSnippetHeader ? "10px" : "", borderTopRightRadius: this.props.showCodeSnippetHeader ? "10px" : ""}} className='code-snippet-body'>
                         {replaceApiPopup && 
-                          <div id="code-snippet-body" className='replace-api-popup'>
+                          <div style={{width: sideBarOpen ? "80%" : ""}} id="code-snippet-body" className='replace-api-popup'>
                             <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
                             {secretKeyApiPopup && <p>Replace this with your secret key found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>}
                             {apiExplainerPopup && 
@@ -877,7 +877,7 @@ export default class CodeSnippet extends Component {
                           </div>
                         }
                         {replaceApiClientPopup && 
-                          <div id="code-snippet-body" className='replace-api-popup'>
+                          <div style={{width: sideBarOpen ? "80%" : ""}} id="code-snippet-body" className='replace-api-popup'>
                             <img onClick={this.handleApiKeyLeave} style={{float: "right", cursor: "pointer"}} src='assets/docs_popup_exit_search_icon.png' alt='no img avilable'/>
                             <p>Replace this with your client ID found on the <label onMouseEnter={this.handleApiLabelEnter} onMouseLeave={this.handleApiLabelLeave} style={{color: "#6363f1", textDecoration: apiLabelHovered ? "underline": "none", cursor: apiLabelHovered ? 'pointer': 'default'}}>API Keys</label> page in the dashboard.</p>
                           </div>

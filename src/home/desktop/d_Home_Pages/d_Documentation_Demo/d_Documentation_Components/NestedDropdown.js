@@ -280,18 +280,18 @@ searchMenuItems = (menuItems, searchTerm) => {
     
       search(menuItems, searchTerm);
 
-      if (path.length === 2 && path[0] === 0 && path[1] === 1) {
-        if (this.props.maximumDepth === 3) {
-            for (let i = path[1]; i < this.props.maximumDepth; i++) {
-                path.push(i);
-            }
-        } 
-        // else if (this.props.maximumDepth === 5) {
-        //     for (let i = path[1]; i < this.props.maximumDepth-2; i++) {
-        //         path.push(i);
-        //     }
-        // }
-      }
+    //   if (path.length === 2 && path[0] === 0 && path[1] === 1) {
+    //     if (this.props.maximumDepth === 3) {
+    //         for (let i = path[1]; i < this.props.maximumDepth; i++) {
+    //             path.push(i);
+    //         }
+    //     } 
+    //     // else if (this.props.maximumDepth === 5) {
+    //     //     for (let i = path[1]; i < this.props.maximumDepth-2; i++) {
+    //     //         path.push(i);
+    //     //     }
+    //     // }
+    //   }
 
     this.props.getMenuItemSelected(searchTerm)
     this.props.setCurrentIndex(path[path.length - 1])

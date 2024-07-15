@@ -209,7 +209,7 @@ const Styles = styled.div `
     font-size: 75%;
 }
 
-.sidebar-back-to-home p:hover {
+.sidebar-back-to-home label:hover {
     text-decoration: underline;
     cursor: pointer;
     color: #6363f1;
@@ -493,10 +493,6 @@ const Styles = styled.div `
     text-decoration: underline;
     cursor: pointer;
 }
-
-    //! - - BULLET POINTS - - !//
-
-
 
     //! - - Loading Screen - - !//
 
@@ -2475,7 +2471,8 @@ export default class DocsNavigationMenu extends Component {
                             [`menuOption${i}`]: true,
                             prevSelectedOption: `menuOption${i}`,
                             showCloseSelectedOptionBtn: true,
-                            indexReselecting: 0
+                            indexReselecting: 0,
+                            showBackToHome: false
                         })
                         if (this.state.transitioningMenu === false) {
                             setTimeout(() => {
@@ -2563,6 +2560,7 @@ export default class DocsNavigationMenu extends Component {
                 eventsAndWebhooksDropdown: false,
                 resourcesDropdown: false,
                 showCloseSelectedOptionBtn: false,
+                showBackToHome: true
             })
             resolve();
         });
@@ -3327,7 +3325,7 @@ export default class DocsNavigationMenu extends Component {
                                             unmountOnExit
                                             >
                                                 <div className='sidebar-back-to-home'>
-                                                    <p>Back to home</p>
+                                                    <p><label>Back to home</label></p>
                                                 </div>
                                             </CSSTransition>
 

@@ -47,6 +47,21 @@ export default class UserManagement extends Component {
             currentSelectedLanguage: "javascript",
             codeSnippet1CopyHovered: false,
 
+                //* - - LANGUAGES (for code snippets) - - *//
+            curlSelected: false,
+            javascriptSelected: false,
+            phpSelected: false,
+            rubySelected: false,
+            laravelSelected: false,
+            pythonSelected: false,
+            javaSelected: false,
+            goSelected: false,
+            dotnetSelected: false,
+            jsonSelected: false,
+            yarnSelected: false,
+            bundlerSelected: false,
+            gradleSelected: false,
+
                 //* - IMAGE - *//
             enlargedImageId: null, // No image is enlarged initially
 
@@ -350,16 +365,12 @@ export default class UserManagement extends Component {
             //* - CODE SNIPPET VAR(S) - *//
         const  { codeSnippet1CopyHovered } = this.state;
 
+            //* - LANGUAGE SELECTION VAR(S) - *//
+        const { javascriptSelected, yarnSelected, phpSelected, rubySelected, bundlerSelected, laravelSelected, pythonSelected, javaSelected, gradleSelected, goSelected, dotnetSelected, nodesdkSelected, nextjsSelected } = this.state;
+
         const styles = {
             scrollInfo: {
-                // position: 'sticky',
-                // top: 0,
-                // left: 0,
-                // background: 'rgba(0, 0, 0, 0.7)',
-                // color: 'white',
-                // padding: '10px',
-                // fontSize: '16px',
-                // zIndex: 1000,
+               
             }
         };
         return (
@@ -402,7 +413,7 @@ export default class UserManagement extends Component {
                                 <div></div>
                                 <ul>
                                     <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>A <label className='demo-docs-hyperlink'>WorkOS account</label><span className='demo-docs-hyperlink-icon'><img className={ sidebarMenuClicked ? "demo-docs-hyperlink-icon-sidebar-img" : ""} src='/assets/external_link_color.png' alt='no img available'/></span></p></li>
-                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your WorkOS <label className='demo-docs-hyperlink'>API Key</label> and <label className='demo-docs-hyperlink'>Client ID</label><i id='Configure your project' ></i>.</p></li>
+                                    <li className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}><p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Your WorkOS <label className='demo-docs-hyperlink'>API Key</label> and <label className='demo-docs-hyperlink'>Client ID</label><i id='Configure your project' ></i></p></li>
                                 </ul>
                             </div>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "5%" : "7.5%"}} className='demo-docs-section'>
@@ -426,11 +437,13 @@ export default class UserManagement extends Component {
                                 id={3}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Install dependencies" 
                                 updateSelectedLang={this.newLangSelected}
                                 selectedLang={this.state.currentSelectedLanguage}/>
-
 
                                 <h3 className={sidebarMenuClicked ? "demo-docs-section-sidebar-h3" : ""}>Configure a redirect URI</h3>
                         
@@ -551,6 +564,9 @@ export default class UserManagement extends Component {
                                 id={7}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Redirect users to AuthKit" 
                                 updateSelectedLang={this.newLangSelected}
