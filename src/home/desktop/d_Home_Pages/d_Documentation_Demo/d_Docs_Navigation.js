@@ -197,6 +197,25 @@ const Styles = styled.div `
     margin-bottom: 10%;
 }
 
+    //! - - 'BACK TO HOME' BUTTON - - !//
+
+.sidebar-back-to-home {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+}
+
+.sidebar-back-to-home p {
+    font-size: 75%;
+}
+
+.sidebar-back-to-home p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #6363f1;
+    font-weight: bold;
+ }
+
         //? - - - - - END OF SIDEBAR CSS - - - - - //?
 
 
@@ -2355,6 +2374,7 @@ export default class DocsNavigationMenu extends Component {
             //* - - SIDEBAR - - *//
 
             showDocsMenu: false,
+            showBackToHome: true,
             sidePaneWidth: "0%", //* - - Goes to 35%
             menuSubsections: true,
             menuOption1: false,
@@ -3253,7 +3273,7 @@ export default class DocsNavigationMenu extends Component {
 
     render () {
             //* - SIDE BAR MENU VARS - *//
-        const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn } = this.state;
+        const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
             
             //* - DOCK SEARCH BAR VARS - *//
         const { menuDocsHovered, externalDocsHovered, exitDocsHovered, dockSearchBarWidth, dockMenuBtnsPaddingTop, dockSearchBarInputWidth, dockMenuBtnWidth, dockExternalBtnWidth, dockExitBtnWidth } = this.state
@@ -3299,6 +3319,18 @@ export default class DocsNavigationMenu extends Component {
                                                 <div style={{top: mOption3Gap, zIndex: menuOption3 ? 1 : 0, backgroundColor: menuOption3 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption3'><p><label onClick={(() => this.menuOptionClicked(3))}>Events and webhooks</label></p></div>
                                                 {/* <div style={{top: mOption4Gap, zIndex: menuOption4 ? 1 : 0, backgroundColor: menuOption4 ? "#ECEDFE" : "#f9f9fb" }} className='menuOption4'><p><label onClick={(() => this.menuOptionClicked(4))}>Resources</label></p></div>      */}
                                             </div>
+
+                                            <CSSTransition
+                                            in={this.state.showBackToHome}
+                                            timeout={500}
+                                            classNames="mini-search-bar"
+                                            unmountOnExit
+                                            >
+                                                <div className='sidebar-back-to-home'>
+                                                    <p>Back to home</p>
+                                                </div>
+                                            </CSSTransition>
+
                                             <CSSTransition
                                             in={showCloseSelectedOptionBtn}
                                             timeout={500}
@@ -3395,7 +3427,6 @@ export default class DocsNavigationMenu extends Component {
                                             />
                                         </div>
                                     </CSSTransition>
-
                                 </div>
                             </div>
                     </CSSTransition>
@@ -3691,7 +3722,7 @@ export default class DocsNavigationMenu extends Component {
                     >
                         <div className='docs-home-container'>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
+                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
                                 <h2>Authentication</h2>
                                 <div className='usrBtns'>
@@ -3702,14 +3733,14 @@ export default class DocsNavigationMenu extends Component {
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Fully custimizable hosted UI for authentication at any size.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Single Sign-On')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo2.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Enterprise auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Email + Password')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo3.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Email + Password</strong></p>
@@ -3718,7 +3749,7 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
                                 <div className='usrBtns'>
-                                    <div className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Social Login')} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo3.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Social login</strong></p>
@@ -3726,13 +3757,13 @@ export default class DocsNavigationMenu extends Component {
                                         </div>
                                     </div>
                                     <div style={{marginLeft: "1.5%"}} className='usrBtn'>
-                                        <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
+                                        <div onClick={() => this.homeOptionSelected('Multi-Factor Auth')} style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo5.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Multi-Factor Auth</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Unlock additional authentication factors such as TOTP or SMS.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Magic Auth')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo6.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Magic Auth</strong></p>
@@ -3742,14 +3773,14 @@ export default class DocsNavigationMenu extends Component {
                                 </div>
                                 <h2>Provisioning</h2>
                                 <div className='usrBtns'>
-                                    <div className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('JIT Provisioning')} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo7.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Just-in-Time</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Directory Provisioning')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/docs_home_logo8.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Directory</strong></p>
@@ -3758,24 +3789,24 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
 
-                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Standalone APIs</h1>
+                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Standalone APIs</h1>
 
                                 <div className='usrBtns'>
-                                    <div className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Quick Start')} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/sso_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Single Sign-On</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Integrate your existing auth stack with any SAML or OIDC identity provider.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Fundamentals')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/ds_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Directory Sync</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Single sign-on with email verification, identity linking, and auth policies.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Quick Start (AP)')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/ap_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Admin Portal</strong></p>
@@ -3784,14 +3815,14 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
                                 <div className='usrBtns'>
-                                    <div className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Quick Start (AL)')} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/al_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Audit Logs</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Automatically create user accounts during the first authentication.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Quick Start (DV)')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/dv_home_logo.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Domain Verification</strong></p>
@@ -3800,24 +3831,24 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
 
-                                <h1 style={{ marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
+                                <h1 style={{ marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
 
                                 <div className='usrBtns'>
-                                    <div className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Event types')} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/eweb_home_logo1.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Event types</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Respond to activity that occurs within WorkOS and third-party providers.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Overview')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: "11%"}} src='/assets/eweb_home_logo2.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Data syncing</strong></p>
                                             <p style={{fontSize: "60%", marginRight: "3.5%"}}>Learn to keep your app in sync using the events API and webhooks.</p>
                                         </div>
                                     </div>
-                                    <div style={{marginLeft: "1.5%"}} className='usrBtn'>
+                                    <div onClick={() => this.homeOptionSelected('Streaming to Datadog')} style={{marginLeft: "1.5%"}} className='usrBtn'>
                                         <div style={{height: sidebarMenuClicked ? "auto" : ""}}>
                                             <img style={{width: sidebarMenuClicked ? "15%" : ""}} src='/assets/eweb_home_logo3.png'/>
                                             <p style={{marginBottom: "2.5%", fontSize: sidebarMenuClicked ? "70%" : ""}}><strong>Observability</strong></p>
