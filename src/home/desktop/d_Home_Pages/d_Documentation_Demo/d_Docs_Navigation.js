@@ -3269,6 +3269,15 @@ export default class DocsNavigationMenu extends Component {
 
     }
 
+    goBackToHome = () => {
+        this.setState({
+            showUserManagementDoc: false,
+            showStandAloneApis: false,
+            showEventsWebhooks: false,
+            showDocsHome: true
+        })
+    }
+
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
@@ -3325,7 +3334,7 @@ export default class DocsNavigationMenu extends Component {
                                             unmountOnExit
                                             >
                                                 <div className='sidebar-back-to-home'>
-                                                    <p><label>Back to home</label></p>
+                                                    <p onClick={this.goBackToHome}><label>Back to home</label></p>
                                                 </div>
                                             </CSSTransition>
 

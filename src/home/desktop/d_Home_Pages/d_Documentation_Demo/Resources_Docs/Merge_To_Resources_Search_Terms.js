@@ -108,7 +108,7 @@ function processFile(filePath) {
 
 // Process each file
 filePaths.forEach(filePath => {
-    processFile(filePath);
+    // processFile(filePath);
 });
 
 // Save the search objects to a JSON file
