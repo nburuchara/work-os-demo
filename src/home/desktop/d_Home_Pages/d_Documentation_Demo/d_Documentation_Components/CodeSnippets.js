@@ -5660,6 +5660,17 @@ const codeSnippets = [
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $domainHint',
           ')<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>'
         ],
+        getAuthorizationUrl_laravel: [
+          '$sso<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getAuthorizationUrl</span>(',
+          '    string $redirectUri,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $connection,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $provider <span style="color: #143465;">"GoogleOAuth"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"MicrosoftOAuth"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"GitHubOAuth"</span>,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $state,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $loginHint,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $domainHint',
+          ')<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>'
+        ],
         getAuthorizationUrl_java: [
           '<span style="color: #5854c6;">AuthorizationUrlOptionsBuilder</span> sso.<span style="color: #5854c6;">getAuthorizationUrl</span>(<span style="color: #148a68;">String</span> clientId, <span style="color: #148a68;">String</span> redirectUri)'
         ],
@@ -6550,6 +6561,17 @@ const codeSnippets = [
           ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
         ],
         getAuthorizationUrl_php: [
+          '$sso<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getAuthorizationUrl</span>(',
+          '    string $redirectUri,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $connection,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $provider <span style="color: #143465;">"GoogleOAuth"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"MicrosoftOAuth"</span><span style="color: #ce3559;">|</span><span style="color: #143465;">"GitHubOAuth"</span>,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $state,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $loginHint,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $domainHint',
+          ')<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>'
+        ],
+        getAuthorizationUrl_laravel: [
           '$sso<span style="color: #ce3559;">-></span><span style="color: #5854c6;">getAuthorizationUrl</span>(',
           '    string $redirectUri,',
           '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $connection,',
