@@ -5,6 +5,7 @@ import { ColorRing } from 'react-loader-spinner'
 import { Grid } from 'react-loader-spinner'
 import { CSSTransition } from 'react-transition-group';
 
+
 const Styles = styled.div  `
 
 `
