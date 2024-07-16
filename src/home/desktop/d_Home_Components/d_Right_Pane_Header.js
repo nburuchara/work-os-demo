@@ -300,7 +300,7 @@ const Styles = styled.div `
 }
 
 .close-notification p {
-    margin-top: 0px;
+    margin-top: 1%;
     margin-bottom: 0px;
     font-size: 110%;
     font-family: rubik;
@@ -330,7 +330,7 @@ const Styles = styled.div `
 
 .main-notification-text {
     // margin-top: %;
-    font-size: 90%;
+    font-size: 92%;
     color: black;
     font-family: rubik;
     // font-weight: bold;
@@ -366,10 +366,7 @@ export default class Header extends Component {
             showHelpPopup: false,
             showFeedbackPopup: false,
             showDocsPopup: false,
-
-                //* - - NOTIFICATION - - *//
-
-            notificationType: "",
+            showNotification: false,
 
         }
     }
@@ -413,13 +410,20 @@ export default class Header extends Component {
                     <div className='rightPaneLeftSide'>
                         {/* Don't remove */}
                         <p></p> 
-                        <div className='floating-notification'>
-                            <div className='close-notification' style={{justifyContent: "space-between", display: "flex"}}>
-                                <p>FEATURE UNAVAILABLE</p>
-                                <span><label>Close</label></span>
+                        <CSSTransition
+                        in={this.state.showHelpPopup}
+                        timeout={500}
+                        classNames="docs-side-panel"
+                        unmountOnExit
+                        >
+                            <div className='floating-notification'>
+                                <div className='close-notification' style={{justifyContent: "space-between", display: "flex"}}>
+                                    <p>FEATURE UNAVAILABLE</p>
+                                    <span><label>Close</label></span>
+                                </div>
+                                <p className='main-notification-text'>Unfortunately, this feature has not been implemented in this demo. Consider hiring Norman to access a full version 😄</p>
                             </div>
-                            <p className='main-notification-text'>Unfortunately, the {this.state.notificationType} feature has not been implemented in this demo. Consider hiring Norman to access a full version 😄</p>
-                        </div>
+                        </CSSTransition>
                     </div>
                     <div className='rightPaneRightSide'>
                         <div className='rightSideCol1'>
