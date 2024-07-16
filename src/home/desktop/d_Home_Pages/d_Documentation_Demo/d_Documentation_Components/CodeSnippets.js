@@ -11759,7 +11759,7 @@ const codeSnippets = [
           '  <span style="color: #148a68;">attr_accessor</span> id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
           '  <span style="color: #148a68;">attr_accessor</span> created_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
           '  <span style="color: #148a68;">attr_accessor</span> updated_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
-          '  <span style="color: #148a68;">attr_accessor</span> state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"error"</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"error"</span>',
           '  <span style="color: #148a68;">attr_accessor</span> url<span style="color: #ce3559;">:</span> String<span style="color: #ce3559;">?</span>',
           '<span style="color: #148a68;">end</span>'
         ],
@@ -12010,7 +12010,7 @@ const codeSnippets = [
           '  <span style="color: #148a68;">attr_accessor</span> id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
           '  <span style="color: #148a68;">attr_accessor</span> created_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
           '  <span style="color: #148a68;">attr_accessor</span> updated_at<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
-          '  <span style="color: #148a68;">attr_accessor</span> state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">:</span> <span style="color: #143465;">"error"</span>',
+          '  <span style="color: #148a68;">attr_accessor</span> state<span style="color: #ce3559;">:</span> <span style="color: #143465;">"pending"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"ready"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"error"</span>',
           '  <span style="color: #148a68;">attr_accessor</span> url<span style="color: #ce3559;">:</span> String<span style="color: #ce3559;">?</span>',
           '<span style="color: #148a68;">end</span>'
         ],
@@ -12410,7 +12410,7 @@ const codeSnippets = [
       },
       apiEpxlainers: {
         createEvent_javascript: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -12440,7 +12440,7 @@ const codeSnippets = [
           ') <span style="color: #ce3559;">=> void</span>'
         ],
         createEvent_npm: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -12665,7 +12665,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'
@@ -12693,7 +12693,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'
@@ -13040,7 +13040,7 @@ const codeSnippets = [
       },
       apiEpxlainers: {
         createEvent_javascript: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -13070,7 +13070,7 @@ const codeSnippets = [
           ') <span style="color: #ce3559;">=> void</span>'
         ],
         createEvent_npm: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -13295,7 +13295,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'
@@ -13323,7 +13323,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'
@@ -13936,6 +13936,174 @@ const codeSnippets = [
           '15 ',
           '16 <span style="color: #8b8d98;">// Redirect to the portal link</span>',
         ]
+      },
+      apiEpxlainers: {
+        generateLink_javascript: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_npm: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_yarn: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_nextjs: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_express: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generate_link_ruby: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_rails: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_terminal: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_bundler: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_sinatra: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_python: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        generate_link_django: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        generate_link_flask: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        portalLink_php: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        portalLink_laravel: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        generateLink_php: [
+          '$portal<span style="color: #ce3559;">-></span><span style="color: #5854c6;">generateLink</span>(',
+          '    <span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #148a68;">string</span> $intent,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
+          ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        generateLink_laravel: [
+          '$portal<span style="color: #ce3559;">-></span><span style="color: #5854c6;">generateLink</span>(',
+          '    <span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #148a68;">string</span> $intent,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
+          ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
+          '    "link" <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        GenerateLink_go: [
+          'portal.<span style="color: #5854c6;">GenerateLink</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkOpts</span>{',
+          '                Organization <span style="color: #148a68;">string</span>',
+          '                Intent <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkIntent</span>',
+          '                ReturnURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                SuccessURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">string</span>, <span style="color: #148a68;">error</span>)',
+        ],
+        GenerateLink_dotnet: [
+          '<span style="color: #5854c6;">Task</span><span style="color: #ce3559;"><</span><span style="color: #148a68;">string</span><span style="color: #ce3559;">></span> portalService.<span style="color: #5854c6;">GenerateLink</span>(',
+          '    <span style="color: #5854c6;">GenerateLinkOptions</span> options {',
+          '        <span style="color: #148a68;">string</span> Organization;',
+          '        <span style="color: #5854c6;">Intent</span> Intent;',
+          '        <span style="color: #148a68;">string</span><span style="color: #ce3559;">?</span> ReturnURL;',
+          '        <span style="color: #148a68;">string</span><span style="color: #ce3559;">?</span> SuccessURL;',
+          '    },',
+          '    <span style="color: #5854c6;">CancellationToken</span><span style="color: #ce3559;">?</span> cancellationToken',
+          ')'
+        ]
       }
     },
 
@@ -14077,6 +14245,174 @@ const codeSnippets = [
           '14 <span style="color: #148a68;">var</span> link <span style="color: #ce3559;">=</span> <span style="color: #148a68;">await</span> portalService.<span style="background-color: #f5f5ff; color: #6e6bce; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">GenerateLink</span>(options);',
           '15 ',
           '16 <span style="color: #8b8d98;">// Redirect to the portal link</span>',
+        ]
+      },
+      apiEpxlainers: {
+        generateLink_javascript: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_npm: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_yarn: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_nextjs: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generateLink_express: [
+          'portal.<span style="color: #5854c6;">generateLink</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;', 
+          '  returnUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '  successUrl<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
+          '}) <span style="color: #ce3559;">=></span> {',
+          '  link<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
+          '}'
+        ],
+        generate_link_ruby: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_rails: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_terminal: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_bundler: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_sinatra: [
+          'Portal.<span style="color: #5854c6;">generate_link</span>(',
+          '  organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
+          '  <span style="color: #ce3559;">?</span>success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">String</span>'
+        ],
+        generate_link_python: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        generate_link_django: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        generate_link_flask: [
+          'portal.<span style="color: #5854c6;">generate_link</span><span style="color: #ce3559;">:</span> (',
+          '    organization<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    intent<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
+          '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        portalLink_php: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        portalLink_laravel: [
+          '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        generateLink_php: [
+          '$portal<span style="color: #ce3559;">-></span><span style="color: #5854c6;">generateLink</span>(',
+          '    <span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #148a68;">string</span> $intent,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
+          ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
+          '    <span style="color: #143465;">"link"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        generateLink_laravel: [
+          '$portal<span style="color: #ce3559;">-></span><span style="color: #5854c6;">generateLink</span>(',
+          '    <span style="color: #148a68;">string</span> $organization,',
+          '    <span style="color: #148a68;">string</span> $intent,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $return_url,',
+          '    <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span> $success_url',
+          ')<span style="color: #ce3559;">:</span> array <span style="color: #ce3559;">[</span>',
+          '    "link" <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>',
+          '<span style="color: #ce3559;">]</span>'
+        ],
+        GenerateLink_go: [
+          'portal.<span style="color: #5854c6;">GenerateLink</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkOpts</span>{',
+          '                Organization <span style="color: #148a68;">string</span>',
+          '                Intent <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkIntent</span>',
+          '                ReturnURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                SuccessURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">string</span>, <span style="color: #148a68;">error</span>)',
+        ],
+        GenerateLink_dotnet: [
+          '<span style="color: #5854c6;">Task</span><span style="color: #ce3559;"><</span><span style="color: #148a68;">string</span><span style="color: #ce3559;">></span> portalService.<span style="color: #5854c6;">GenerateLink</span>(',
+          '    <span style="color: #5854c6;">GenerateLinkOptions</span> options {',
+          '        <span style="color: #148a68;">string</span> Organization;',
+          '        <span style="color: #5854c6;">Intent</span> Intent;',
+          '        <span style="color: #148a68;">string</span><span style="color: #ce3559;">?</span> ReturnURL;',
+          '        <span style="color: #148a68;">string</span><span style="color: #ce3559;">?</span> SuccessURL;',
+          '    },',
+          '    <span style="color: #5854c6;">CancellationToken</span><span style="color: #ce3559;">?</span> cancellationToken',
+          ')'
         ]
       }
     },
