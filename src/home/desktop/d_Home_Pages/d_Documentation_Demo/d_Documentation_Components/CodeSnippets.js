@@ -11150,7 +11150,7 @@ const codeSnippets = [
       },
       apiEpxlainers: {
         createEvent_javascript: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -11180,7 +11180,7 @@ const codeSnippets = [
           ') <span style="color: #ce3559;">=> void</span>'
         ],
         createEvent_npm: [
-          'auditLogs.<span style="color: #5854c6;">createEvent</span>: (',
+          'auditLogs.<span style="color: #5854c6;">createEvent</span><span style="color: #ce3559;">:</span> (',
           '  organizationId<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>,',
           '  event<span style="color: #ce3559;">:</span> {',
           '    action<span style="color: #ce3559;">:</span> <span style="color: #148a68;">string</span>;',
@@ -11405,7 +11405,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'
@@ -11433,7 +11433,7 @@ const codeSnippets = [
           '            <span style="color: #143465;">"location"</span> <span style="color: #ce3559;">=></span> <span style="color: #148a68;">string</span>,',
           '            <span style="color: #143465;">"userAgent"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">string</span>',
           '        <span style="color: #ce3559;">]</span>,',
-          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">:</span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
+          '       <span style="color: #143465;">"metadata"</span> <span style="color: #ce3559;">=></span> <span style="color: #ce3559;">?</span><span style="color: #148a68;">array</span>',
           '    <span style="color: #ce3559;">]</span>,',
           '    <span style="color: #148a68;">string</span> $idempotencyKey',
           ')'

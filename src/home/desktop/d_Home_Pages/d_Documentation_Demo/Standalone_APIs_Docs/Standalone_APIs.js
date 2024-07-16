@@ -5119,6 +5119,8 @@ export default class StandaloneAPIs extends Component {
                     </div>
                 </CSSTransition>
 
+                    {/* - -  ADMIN PORTAL - -  */}
+
                 <CSSTransition in={adminPortal}
                 timeout={500}
                 classNames="docs-side-panel"
@@ -5789,6 +5791,8 @@ export default class StandaloneAPIs extends Component {
                         </div>
                     </div>
                 </CSSTransition>
+
+                    {/* - -  AUDIT LOGS - -  */}
 
                 <CSSTransition in={auditLogs}
                 timeout={500}
