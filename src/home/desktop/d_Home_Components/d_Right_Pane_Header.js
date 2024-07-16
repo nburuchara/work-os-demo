@@ -366,7 +366,7 @@ export default class Header extends Component {
                             </button>
                             {/* <HelpPopup/> */}
                             {/* <FeedbackPopup/> */}
-                            <DocsPopup/>
+                            {/* <DocsPopup/> */}
                         </div>
                         <div className='rightSideCol2'>
                             <button

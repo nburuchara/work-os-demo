@@ -3738,7 +3738,7 @@ export default class DocsNavigationMenu extends Component {
                     >
                         <div id='top' className='docs-home-container'>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
-                                <h1 style={{fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
+                                <h1 style={{fontSize: sidebarMenuClicked ? "140%" : "160%", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
                                 <h2>Authentication</h2>
                                 <div className='usrBtns'>
@@ -3805,7 +3805,7 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
 
-                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Standalone APIs</h1>
+                                <h1 style={{marginBottom: "2%", fontSize: sidebarMenuClicked ? "140%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Standalone APIs</h1>
 
                                 <div className='usrBtns'>
                                     <div onClick={() => this.homeOptionSelected('Quick Start')} className='usrBtn'>
@@ -3847,7 +3847,7 @@ export default class DocsNavigationMenu extends Component {
                                     </div>
                                 </div>
 
-                                <h1 style={{ marginBottom: "2%", fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
+                                <h1 style={{ marginBottom: "2%", fontSize: sidebarMenuClicked ? "140%" : "160%", marginTop: sidebarMenuClicked ? "3%": "5%"}}>Events and webhooks</h1>
 
                                 <div className='usrBtns'>
                                     <div onClick={() => this.homeOptionSelected('Event types')} className='usrBtn'>
