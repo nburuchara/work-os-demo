@@ -300,12 +300,13 @@ const Styles = styled.div `
 }
 
 .close-notification p {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 0px;
-    font-size: 110%;
+    font-size: 85%;
     font-family: rubik;
     color: #6363f1;
     font-weight: bold;
+    padding-left: 3%;
 }
 
 .close-notification span {
@@ -330,9 +331,11 @@ const Styles = styled.div `
 
 .main-notification-text {
     // margin-top: %;
-    font-size: 92%;
+    font-size: 82%;
     color: black;
     font-family: rubik;
+    padding-left: 3%;
+    padding-right: 3%;
     // font-weight: bold;
 }
 
@@ -366,7 +369,7 @@ export default class Header extends Component {
             showHelpPopup: false,
             showFeedbackPopup: false,
             showDocsPopup: false,
-            showNotification: false,
+            showNotification: true,
 
         }
     }
@@ -411,7 +414,7 @@ export default class Header extends Component {
                         {/* Don't remove */}
                         <p></p> 
                         <CSSTransition
-                        in={this.state.showHelpPopup}
+                        in={this.state.showNotification}
                         timeout={500}
                         classNames="docs-side-panel"
                         unmountOnExit
