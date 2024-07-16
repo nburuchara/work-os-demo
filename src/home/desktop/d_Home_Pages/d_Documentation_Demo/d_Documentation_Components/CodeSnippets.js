@@ -1005,7 +1005,6 @@ const codeSnippets = [
         sk_example_123456789_express: [
           'Replace this with your secret key found on the API Keys page in the dashboard.'
         ],
-
         client_123456789_javascript: [
           'Replace this with your client ID found on the API Keys page in the dashboard.'
         ],
@@ -1660,6 +1659,14 @@ const codeSnippets = [
           '> WORKOS_CLIENT_ID<span style="color: #ce3559;">=</span>\'<span style="background-color: #ededf1; color: #2c333b; padding: 0.2%; border-radius: 5px;" onmouseover="this.style.textDecoration=\'underline\'; this.style.cursor=\'pointer\';" onmouseout="this.style.textDecoration=\'none\';">client_123456789</span>\'',
           '>',
           '> <span style="display: inline-block; width: calc(100% - 15px); background-color: #e6f7ed; border-top: 1px solid #c3e8d7; border-bottom: 1px solid #c3e8d7; color: #000; padding: 2px 4px;"> WORKOS_COOKIE_PASSWORD<span style="color: #ce3559;">=</span><span style="color: #143465;">\'&ltyour password&gt\'</span></span>'        ]
+      },
+      apiEpxlainers: {
+        sk_example_123456789_javascript: [
+          'Replace this with your secret key found on the API Keys page in the dashboard.'
+        ],
+        client_123456789_javascript: [
+          'Replace this with your client ID found on the API Keys page in the dashboard.'
+        ],
       }
     },
 

@@ -488,17 +488,19 @@ export default class UserManagement extends Component {
                                 
                                 {usingNode && 
                                     <div>
+
                                         <CodeSnippetStruct 
                                         id={4}
                                         headerTabs={0}
                                         dropdownDisabled={true}
                                         dropdownDisabledAndHidden={true}
+                                        showOnlyJSONTab={true}
+                                        showOnlyCustomTab={'JavaScript'}
                                         sideBarOpen={sidebarMenuClicked}
                                         snippet="Environment variables" 
                                         updateSelectedLang={this.newLangSelected}
                                         selectedLang={this.state.currentSelectedLanguage}/>
                                     
-                                        
                                     </div>
                                 }
                                 {usingNextJs && 
@@ -508,6 +510,8 @@ export default class UserManagement extends Component {
                                         headerTabs={0}
                                         dropdownDisabled={true}
                                         dropdownDisabledAndHidden={true}
+                                        showOnlyJSONTab={true}
+                                        showOnlyCustomTab={'JavaScript'}
                                         sideBarOpen={sidebarMenuClicked}
                                         snippet="Environment variables" 
                                         updateSelectedLang={this.newLangSelected}
@@ -615,6 +619,9 @@ export default class UserManagement extends Component {
                                         id={8}
                                         headerTabs={0}
                                         dropdownDisabled={true}
+                                        dropdownDisabledAndHidden={true}
+                                        showOnlyJSONTab={true}
+                                        showOnlyCustomTab={'JavaScript'}
                                         sideBarOpen={sidebarMenuClicked}
                                         snippet="Callback endpoint" 
                                         updateSelectedLang={this.newLangSelected}
@@ -628,6 +635,9 @@ export default class UserManagement extends Component {
                                         id={9}
                                         headerTabs={0}
                                         dropdownDisabled={true}
+                                        dropdownDisabledAndHidden={true}
+                                        showOnlyJSONTab={true}
+                                        showOnlyCustomTab={'JavaScript'}
                                         sideBarOpen={sidebarMenuClicked}
                                         snippet="middleware.ts" 
                                         updateSelectedLang={this.newLangSelected}
@@ -641,6 +651,9 @@ export default class UserManagement extends Component {
                                         id={10}
                                         headerTabs={0}
                                         dropdownDisabled={true}
+                                        dropdownDisabledAndHidden={true}
+                                        showOnlyJSONTab={true}
+                                        showOnlyCustomTab={'JavaScript'}
                                         sideBarOpen={sidebarMenuClicked}
                                         snippet="/app/callback/route.ts" 
                                         updateSelectedLang={this.newLangSelected}
@@ -713,6 +726,9 @@ export default class UserManagement extends Component {
                                 id={11}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Create a session password" 
                                 updateSelectedLang={this.newLangSelected}
@@ -737,6 +753,9 @@ export default class UserManagement extends Component {
                                 id={13}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Encrypt session" 
                                 updateSelectedLang={this.newLangSelected}
@@ -748,6 +767,9 @@ export default class UserManagement extends Component {
                                 id={14}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Secure route with middleware" 
                                 updateSelectedLang={this.newLangSelected}
@@ -759,6 +781,9 @@ export default class UserManagement extends Component {
                                 id={15}
                                 headerTabs={0}
                                 dropdownDisabled={true}
+                                dropdownDisabledAndHidden={true}
+                                showOnlyJSONTab={true}
+                                showOnlyCustomTab={'JavaScript'}
                                 sideBarOpen={sidebarMenuClicked}
                                 snippet="Add middleware to route" 
                                 updateSelectedLang={this.newLangSelected}

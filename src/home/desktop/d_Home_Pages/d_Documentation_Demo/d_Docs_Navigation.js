@@ -2370,7 +2370,7 @@ export default class DocsNavigationMenu extends Component {
             //* - - SIDEBAR - - *//
 
             showDocsMenu: false,
-            showBackToHome: true,
+            showBackToHome: false,
             sidePaneWidth: "0%", //* - - Goes to 35%
             menuSubsections: true,
             menuOption1: false,
@@ -3276,6 +3276,14 @@ export default class DocsNavigationMenu extends Component {
             showEventsWebhooks: false,
             showDocsHome: true
         })
+        this.scrollToTop('top')
+    }
+
+    scrollToTop = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'auto' }); // Use 'auto' for instant scroll, or 'smooth' for smooth scroll
+        }
     }
 
     render () {
@@ -3727,7 +3735,7 @@ export default class DocsNavigationMenu extends Component {
                     classNames="docs-side-panel"
                     unmountOnExit    
                     >
-                        <div className='docs-home-container'>
+                        <div id='top' className='docs-home-container'>
                             <div style={{width: sidebarMenuClicked ? "63%" : "auto", float: sidebarMenuClicked ? "right" : "none", marginBottom: sidebarMenuClicked ? "1%" : "4%", paddingBottom: sidebarMenuClicked ? "2.5%" : "5%", borderBottom: "1.3px solid #6363f1"}} className='demo-docs-section'>
                                 <h1 style={{fontSize: sidebarMenuClicked ? "150%" : "160%", marginTop: sidebarMenuClicked ? "3%": ""}}>User Management</h1>
                                 <p className={sidebarMenuClicked ? "demo-docs-section-sidebar-p" : ""}>Full-fledged authentication platform, from your first user to enterprise single sign-on.</p>
