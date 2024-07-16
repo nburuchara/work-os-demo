@@ -284,6 +284,25 @@ const Styles = styled.div `
 }
 
 
+    // - - FLOATING NOTIFICATION - - //
+
+.floating-notification {
+    position: fixed;
+    float: left;
+    border: 1px solid black;
+    left: 1.35%;
+    background-color: white;
+    width: 21%;
+    padding: 0.5%;
+    border-radius: 5px;
+    top: 2%;
+}
+
+.floating-notification p {
+    
+}
+
+
 `
 
 export default class Header extends Component {
@@ -356,6 +375,9 @@ export default class Header extends Component {
                     <div className='rightPaneLeftSide'>
                         {/* Don't remove */}
                         <p></p> 
+                        <div className='floating-notification'>
+                            <p>tester</p>
+                        </div>
                     </div>
                     <div className='rightPaneRightSide'>
                         <div className='rightSideCol1'>
