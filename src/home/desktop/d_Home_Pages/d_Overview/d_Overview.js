@@ -14,7 +14,8 @@ const Styles = styled.div `
 }
 
 .pageHeader h1 {
-    margin-
+    margin-top: 1%;
+    font-family: poppins;
 }
 
 `

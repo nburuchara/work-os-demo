@@ -4,6 +4,7 @@ import HelpPopup from './d_Right_Pane_Header_Components/d_Help_Popup'
 import FeedbackPopup from './d_Right_Pane_Header_Components/d_Feedback_Popup'
 import DocsPopup from './d_Right_Pane_Header_Components/d_Docs_Popup'
 import DocsSelected from './d_Right_Pane_Header_Components/d_Docs_Selected_Popup'
+import { CSSTransition } from 'react-transition-group';
 
 const Styles = styled.div `
 
@@ -364,8 +365,26 @@ export default class Header extends Component {
                                     <p style={{color: this.state.helpTxtColor}}>Help</p>
                                 </div>
                             </button>
-                            {/* <HelpPopup/> */}
-                            {/* <FeedbackPopup/> */}
+                            <CSSTransition
+                            in={this.state.showSmallSearchFilterOptions}
+                            timeout={500}
+                            classNames="docs-side-panel"
+                            unmountOnExit
+                            >
+                                <div>
+                                    <HelpPopup/>
+                                </div>
+                            </CSSTransition>
+                            <CSSTransition
+                            in={this.state.showSmallSearchFilterOptions}
+                            timeout={500}
+                            classNames="docs-side-panel"
+                            unmountOnExit
+                            >
+                                <div>
+                                    <FeedbackPopup/>
+                                </div>
+                            </CSSTransition>
                             {/* <DocsPopup/> */}
                         </div>
                         <div className='rightSideCol2'>
@@ -415,9 +434,16 @@ export default class Header extends Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <DocsSelected/>
-                </div>
+                <CSSTransition
+                in={this.state.showSmallSearchFilterOptions}
+                timeout={500}
+                classNames="docs-side-panel"
+                unmountOnExit
+                >
+                    <div>
+                        <DocsSelected/>
+                    </div>
+                </CSSTransition>
             </Styles>
         )
     }
