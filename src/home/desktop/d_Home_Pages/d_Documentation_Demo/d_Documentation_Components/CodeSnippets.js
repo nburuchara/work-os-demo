@@ -9753,20 +9753,20 @@ const codeSnippets = [
         ],
         create_organization_python: [
           'organizations.<span style="color: #5854c6;">create_organization</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
-          '    "name"<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
-          '    "domain_data"<span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          '    <span style="color: #143465;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"domain_data"</span><span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
           '}) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
         ],
         create_organization_django: [
           'organizations.<span style="color: #5854c6;">create_organization</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
-          '    "name"<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
-          '    "domain_data"<span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          '    <span style="color: #143465;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"domain_data"</span><span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
           '}) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
         ],
         create_organization_flask: [
           'organizations.<span style="color: #5854c6;">create_organization</span><span style="color: #ce3559;">:</span> (options<span style="color: #ce3559;">:</span> {',
-          '    "name"<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
-          '    "domain_data"<span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
+          '    <span style="color: #143465;">"name"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>,',
+          '    <span style="color: #143465;">"domain_data"</span><span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
           '}) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
         ],
         organization_go: [
@@ -10419,6 +10419,17 @@ const codeSnippets = [
           '    return_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>,',
           '    success_url<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span> <span style="color: #ce3559;">|</span> <span style="color: #5854c6;">None</span>',
           ') <span style="color: #ce3559;">-></span> <span style="color: #148a68;">str</span>'
+        ],
+        GenerateLink_go: [
+          'portal.<span style="color: #5854c6;">GenerateLink</span>(',
+          '        ctx <span style="color: #148a68;">context</span>.<span style="color: #148a68;">Context</span>,',
+          '        opts <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkOpts</span>{',
+          '                Organization <span style="color: #148a68;">string</span>',
+          '                Intent <span style="color: #148a68;">portal</span>.<span style="color: #148a68;">GenerateLinkIntent</span>',
+          '                ReturnURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '                SuccessURL<span style="color: #ce3559;">?</span> <span style="color: #148a68;">string</span>',
+          '        }',
+          ') (<span style="color: #148a68;">string</span>, <span style="color: #148a68;">error</span>)',
         ],
         portalLink_php: [
           '<span style="color: #148a68;">array</span> $portalLink <span style="color: #ce3559;">[</span>',
