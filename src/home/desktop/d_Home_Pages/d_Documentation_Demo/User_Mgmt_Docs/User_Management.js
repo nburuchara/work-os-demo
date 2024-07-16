@@ -1369,8 +1369,8 @@ export default class UserManagement extends Component {
                                 <div className='sso-manual-btns-container'>
                                     <div className={sidebarMenuClicked ? "sso-manual-sidebar-btn-container" : "sso-manual-btn-container"}>
                                     <div className={sidebarMenuClicked ? "sso-manual-btn-sidebar-text" : "sso-manual-btn-text"}>
-                                            <h4>Google Workplace</h4>
-                                            <p>Configure a Google Workplace SAML connection.</p>
+                                            <h4>Google Workspace</h4>
+                                            <p>Configure a Google Workspace SAML connection.</p>
                                     </div>
                                     <div className={sidebarMenuClicked ? "sso-manual-btn-sidebar-logo" : "sso-manual-btn-logo"}>
                                             <button>
