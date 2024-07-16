@@ -7008,7 +7008,7 @@ const codeSnippets = [
           '<span style="color: #148a68;">end</span>'
         ],
         get_user_ruby: [
-          'UserManagement.<span style="color: #5854c6;">get_user</span>(id: String) -> User'
+          'UserManagement.<span style="color: #5854c6;">get_user</span>(id<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>) <span style="color: #ce3559;">-></span> <span style="color: #5854c6;">User</span>'
         ],
         user_terminal: [
           '<span style="color: #148a68;">class</span> <span style="color: #5854c6;">User</span>',
@@ -7495,7 +7495,7 @@ const codeSnippets = [
           '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>before<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
-          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>',
+          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>',
           ') <span style="color: #ce3559;">-></span> {',
           '  data: <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">User</span><span style="color: #ce3559;">]</span>,',
           '  list_metadata<span style="color: #ce3559;">?</span> <span style="color: #148a68;">Hash</span>',
@@ -7508,7 +7508,7 @@ const codeSnippets = [
           '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>before<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
-          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>',
+          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>',
           ') <span style="color: #ce3559;">-></span> {',
           '  data: <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">User</span><span style="color: #ce3559;">]</span>,',
           '  list_metadata<span style="color: #ce3559;">?</span> <span style="color: #148a68;">Hash</span>',
@@ -7521,7 +7521,7 @@ const codeSnippets = [
           '  <span style="color: #ce3559;">?</span>after<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>before<span style="color: #ce3559;">:</span> <span style="color: #148a68;">String</span>,',
           '  <span style="color: #ce3559;">?</span>limit<span style="color: #ce3559;">:</span> <span style="color: #148a68;">Integer</span>,',
-          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>',
+          '  <span style="color: #ce3559;">?</span>order<span style="color: #ce3559;">:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>',
           ') <span style="color: #ce3559;">-></span> {',
           '  data: <span style="color: #148a68;">Array</span><span style="color: #ce3559;">[</span><span style="color: #5854c6;">User</span><span style="color: #ce3559;">]</span>,',
           '  list_metadata<span style="color: #ce3559;">?</span> <span style="color: #148a68;">Hash</span>',
@@ -7889,7 +7889,7 @@ const codeSnippets = [
           '}',
         ],
         get_group_python: [
-          'directory_sync.<span style="color: #5854c6;">get_group</span><span style="color: #ce3559;">:</span> (group<span style="color: #5854c6;">:</span> <span style="color: #148a68;">str</span>) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
+          'directory_sync.<span style="color: #5854c6;">get_group</span><span style="color: #ce3559;">:</span> (group<span style="color: #ce3559;">:</span> <span style="color: #148a68;">str</span>) <span style="color: #ce3559;">-></span> <span style="color: #148a68;">dict</span>'
         ],
         group_go: [
           'group <span style="color: #148a68;">directorysync</span>.<span style="color: #148a68;">Group</span>{',
@@ -8220,7 +8220,7 @@ const codeSnippets = [
           '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>;',
           '  before<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
           '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
-          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>;',
+          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>;',
           '}) <span style="color: #ce3559;">=></span> {',
           '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">DirectoryGroup</span><span style="color: #ce3559;">[]</span>;',
           '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
@@ -8233,7 +8233,7 @@ const codeSnippets = [
           '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>;',
           '  before<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
           '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
-          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>;',
+          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>;',
           '}) <span style="color: #ce3559;">=></span> {',
           '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">DirectoryGroup</span><span style="color: #ce3559;">[]</span>;',
           '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
@@ -8246,7 +8246,7 @@ const codeSnippets = [
           '  limit<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">number</span>;',
           '  before<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
           '  after<span style="color: #ce3559;">?:</span> <span style="color: #148a68;">string</span>;',
-          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> | <span style="color: #143465;">"desc"</span>;',
+          '  order<span style="color: #ce3559;">?:</span> <span style="color: #143465;">"asc"</span> <span style="color: #ce3559;">|</span> <span style="color: #143465;">"desc"</span>;',
           '}) <span style="color: #ce3559;">=></span> {',
           '  data<span style="color: #ce3559;">:</span> <span style="color: #5854c6;">DirectoryGroup</span><span style="color: #ce3559;">[]</span>;',
           '  listMetadata<span style="color: #ce3559;">:</span> <span style="color: #148a68;">object</span>;',
@@ -8437,6 +8437,39 @@ const codeSnippets = [
           '<span style="color: #ce3559;">]</span>'
         ],
         listDirectoryGroups_java: [
+          '<span style="color: #5854c6;">DirectoryGroupList</span> directorySync.<span style="color: #5854c6;">listDirectoryGroups</span>(<span style="color: #5854c6;">ListDirectoryGroupOptions</span> options {',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> directory',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> user',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> after',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> before',
+          '    <span style="color: #148a68;">Int</span><span style="color: #ce3559;">?</span> limit',
+          '    <span style="color: #5854c6;">Order</span><span style="color: #ce3559;">?</span> order',
+          '    <span style="color: #5854c6;">ListDirectoryGroupOptionsBuilder</span> builder()',
+          '})',
+        ],
+        listDirectoryGroups_maven: [
+          '<span style="color: #5854c6;">DirectoryGroupList</span> directorySync.<span style="color: #5854c6;">listDirectoryGroups</span>(<span style="color: #5854c6;">ListDirectoryGroupOptions</span> options {',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> directory',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> user',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> after',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> before',
+          '    <span style="color: #148a68;">Int</span><span style="color: #ce3559;">?</span> limit',
+          '    <span style="color: #5854c6;">Order</span><span style="color: #ce3559;">?</span> order',
+          '    <span style="color: #5854c6;">ListDirectoryGroupOptionsBuilder</span> builder()',
+          '})',
+        ],
+        listDirectoryGroups_gradle: [
+          '<span style="color: #5854c6;">DirectoryGroupList</span> directorySync.<span style="color: #5854c6;">listDirectoryGroups</span>(<span style="color: #5854c6;">ListDirectoryGroupOptions</span> options {',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> directory',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> user',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> after',
+          '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> before',
+          '    <span style="color: #148a68;">Int</span><span style="color: #ce3559;">?</span> limit',
+          '    <span style="color: #5854c6;">Order</span><span style="color: #ce3559;">?</span> order',
+          '    <span style="color: #5854c6;">ListDirectoryGroupOptionsBuilder</span> builder()',
+          '})',
+        ],
+        listDirectoryUsers_java: [
           '<span style="color: #5854c6;">DirectoryGroupList</span> directorySync.<span style="color: #5854c6;">listDirectoryGroups</span>(<span style="color: #5854c6;">ListDirectoryGroupOptions</span> options {',
           '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> directory',
           '    <span style="color: #148a68;">String</span><span style="color: #ce3559;">?</span> user',

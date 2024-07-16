@@ -550,6 +550,7 @@ export default class CodeSnippet extends Component {
         usersByGroupRegex: /\busersByGroup\w*/,
         groupsByUserRegex: /\bgroupsByUser\w*/,
         users_from_groupRegex: /\busers_from_group\w*/,
+        usersFromGroupRegex: /\busersFromGroup\w*/,
         groupsFromDirectoryRegex: /\bgroupsFromDirectory\w*/,
         groups_from_directoryRegex: /\bgroups_from_directory\w*/,
         groupsFromUserRegex: /\bgroupsFromUser\w*/,
