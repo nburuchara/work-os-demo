@@ -302,7 +302,7 @@ const Styles = styled.div `
 .close-notification p {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 95%;
+    font-size: 110%;
     font-family: rubik;
     color: #6363f1;
     font-weight: bold;
@@ -310,7 +310,7 @@ const Styles = styled.div `
 
 .close-notification span {
     border-radius: 10px;
-    border: 1px solid transparent;
+    border: 1px solid #6363f1;
     background-color: #6363f1;
     color: white;
     font-family: poppins;
@@ -326,6 +326,16 @@ const Styles = styled.div `
 
 .floating-notification p {
     margin-
+}
+
+    // - - MAIN NOTIFICATION TEXT - - //
+
+.main-notification-text {
+    // margin-top: %;
+    font-size: 85%;
+    color: black;
+    font-family: rubik;
+    font-weight: bold;
 }
 
 
@@ -357,7 +367,11 @@ export default class Header extends Component {
 
             showHelpPopup: false,
             showFeedbackPopup: false,
-            showDocsPopup: false
+            showDocsPopup: false,
+
+                //* - - NOTIFICATION - - *//
+
+            notificationType: "",
 
         }
     }
@@ -406,7 +420,7 @@ export default class Header extends Component {
                                 <p>FEATURE UNAVAILABLE</p>
                                 <span><label>Close</label></span>
                             </div>
-                            <p>tester</p>
+                            <p className='main-notification-text'>Unfortunateyly, the {this.state.notificationType} feature has not been implemented.</p>
                         </div>
                     </div>
                     <div className='rightPaneRightSide'>
