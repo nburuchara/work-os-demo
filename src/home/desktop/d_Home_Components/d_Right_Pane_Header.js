@@ -308,6 +308,12 @@ export default class Header extends Component {
             toggleThemeHovered: false,
             toggleThemeBtnBgColor: "",
 
+                //* - - POPUPS - - *//
+
+            showHelpPopup: false,
+            showFeedbackPopup: false,
+            showDocsPopup: false
+
         }
     }
 
@@ -366,7 +372,7 @@ export default class Header extends Component {
                                 </div>
                             </button>
                             <CSSTransition
-                            in={this.state.showSmallSearchFilterOptions}
+                            in={this.state.showHelpPopup}
                             timeout={500}
                             classNames="docs-side-panel"
                             unmountOnExit
@@ -376,7 +382,7 @@ export default class Header extends Component {
                                 </div>
                             </CSSTransition>
                             <CSSTransition
-                            in={this.state.showSmallSearchFilterOptions}
+                            in={this.state.showFeedbackPopup}
                             timeout={500}
                             classNames="docs-side-panel"
                             unmountOnExit
@@ -435,7 +441,7 @@ export default class Header extends Component {
                     </div>
                 </div>
                 <CSSTransition
-                in={this.state.showSmallSearchFilterOptions}
+                in={this.state.showDocsPopup}
                 timeout={500}
                 classNames="docs-side-panel"
                 unmountOnExit
