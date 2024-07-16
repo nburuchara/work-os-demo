@@ -289,17 +289,43 @@ const Styles = styled.div `
 .floating-notification {
     position: fixed;
     float: left;
-    border: 1px solid black;
+    border: 1px solid white;
     left: 1.35%;
     background-color: white;
     width: 21%;
     padding: 0.5%;
-    border-radius: 5px;
+    border-radius: 10px;
     top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close-notification p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 95%;
+    font-family: rubik;
+    color: #6363f1;
+    font-weight: bold;
+}
+
+.close-notification span {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: #6363f1;
+    color: white;
+    font-family: poppins;
+    font-size: 70%;
+    padding: 1%;
+    width: 13%;
+    text-align: center;
+}
+
+.close-notification label {
+    
 }
 
 .floating-notification p {
-    
+    margin-
 }
 
 
@@ -376,6 +402,10 @@ export default class Header extends Component {
                         {/* Don't remove */}
                         <p></p> 
                         <div className='floating-notification'>
+                            <div className='close-notification' style={{justifyContent: "space-between", display: "flex"}}>
+                                <p>FEATURE UNAVAILABLE</p>
+                                <span><label>Close</label></span>
+                            </div>
                             <p>tester</p>
                         </div>
                     </div>
