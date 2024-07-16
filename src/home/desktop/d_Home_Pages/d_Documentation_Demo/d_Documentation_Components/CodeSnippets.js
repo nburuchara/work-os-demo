@@ -16073,8 +16073,8 @@ const codeSnippets = [
         ],
         events_python: [
           'events<span style="color: #ce3559;">:</span> {',
-          '    <span style="color: #143465;">"data"</span><span style="color: #ce3559;">:</span> list<span style="color: #ce3559;">[</span>dict<span style="color: #ce3559;">]</span>,',
-          '    <span style="color: #143465;">"list_metadata"</span><span style="color: #ce3559;">:</span> dict',
+          '    <span style="color: #143465;">"data"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">list</span><span style="color: #ce3559;">[</span><span style="color: #148a68;">dict</span><span style="color: #ce3559;">]</span>,',
+          '    <span style="color: #143465;">"list_metadata"</span><span style="color: #ce3559;">:</span> <span style="color: #148a68;">dict</span>',
           '}'
         ],
         list_events_python: [

@@ -3274,7 +3274,8 @@ export default class DocsNavigationMenu extends Component {
             showUserManagementDoc: false,
             showStandAloneApis: false,
             showEventsWebhooks: false,
-            showDocsHome: true
+            showDocsHome: true,
+            showBackToHome: false
         })
         this.scrollToTop('top')
     }
