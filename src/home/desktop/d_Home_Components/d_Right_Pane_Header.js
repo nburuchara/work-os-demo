@@ -293,7 +293,7 @@ const Styles = styled.div `
     left: 1.35%;
     background-color: white;
     width: 21%;
-    padding: 0.5%;
+    padding: 0.6%;
     border-radius: 10px;
     top: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -318,24 +318,22 @@ const Styles = styled.div `
     padding: 1%;
     width: 13%;
     text-align: center;
+    cursor: pointer;
 }
 
 .close-notification label {
-    
-}
-
-.floating-notification p {
-    margin-
+    font-weight: bold;
+    cursor: pointer;
 }
 
     // - - MAIN NOTIFICATION TEXT - - //
 
 .main-notification-text {
     // margin-top: %;
-    font-size: 85%;
+    font-size: 90%;
     color: black;
     font-family: rubik;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 
@@ -420,7 +418,7 @@ export default class Header extends Component {
                                 <p>FEATURE UNAVAILABLE</p>
                                 <span><label>Close</label></span>
                             </div>
-                            <p className='main-notification-text'>Unfortunateyly, the {this.state.notificationType} feature has not been implemented.</p>
+                            <p className='main-notification-text'>Unfortunately, the {this.state.notificationType} feature has not been implemented in this demo. Consider hiring Norman to access a full version 😄</p>
                         </div>
                     </div>
                     <div className='rightPaneRightSide'>
