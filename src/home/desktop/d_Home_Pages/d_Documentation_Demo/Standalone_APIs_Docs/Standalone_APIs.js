@@ -131,8 +131,6 @@ export default class StandaloneAPIs extends Component {
             //* - - HIDDEN DROPDOWN TOGGLE(S) VAR(S) - *//
             hiddenDropdownBtn1: false,
 
-
-
         }
     }
 
@@ -202,6 +200,7 @@ export default class StandaloneAPIs extends Component {
         } else {
           console.error("Unknown selected page:", selectedPage);
         }
+        
     };
 
     scrollToTop = (id) => {
@@ -228,6 +227,7 @@ export default class StandaloneAPIs extends Component {
         //     })
         // }, 1300)
         setTimeout (() => {
+            this.deselectNonJsLanguages()
             this.setState({
                 currentSelectedLanguage: "javascript",
                 [`${selectedPage}`]: true
@@ -366,6 +366,18 @@ export default class StandaloneAPIs extends Component {
                 })
             })
         }
+    }
+
+    deselectNonJsLanguages = () => {
+        this.setState({
+            phpSelected: false, 
+            rubySelected: false, 
+            laravelSelected: false, 
+            pythonSelected: false, 
+            javaSelected: false, 
+            goSelected: false, 
+            dotnetSelected: false
+        })
     }
 
     usingOption1Enter = () => { this.setState({usingOption1Hovered: true}) }
@@ -694,6 +706,10 @@ export default class StandaloneAPIs extends Component {
             }
         }
         if (pageObject !== null) {
+            // this.setState({ 
+            //     [`javascriptSelected`]: true,
+            //     currentSelectedLanguage: "javascript",
+            // })
             this.props.navigateToNewPage(page, pageObject)
         }
     }

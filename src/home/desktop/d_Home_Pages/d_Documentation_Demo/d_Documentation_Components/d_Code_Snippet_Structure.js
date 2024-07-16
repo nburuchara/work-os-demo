@@ -539,7 +539,7 @@ export default class CodeSnippet extends Component {
         get_authorization_urlRegex: /\bget_authorization_url\w*/,
         LoginRegex: /\bLogin\w*/,
         GetAuthorizationURLRegex: /\bGetAuthorizationURL\w*/,
-        authorizationUrllRegex: /\bauthorization_url\w*/,
+        authorization_urlRegex: /\bauthorization_url\w*/,
         profile_and_tokenRegex: /\bprofile_and_token\w*/, 
         profileAndTokenRegex: /\bprofileAndToken\w*/,
         GetProfileAndTokenRegex: /\bGetProfileAndToken\w*/,
