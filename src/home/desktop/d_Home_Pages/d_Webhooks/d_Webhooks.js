@@ -18,7 +18,12 @@ const Styles = styled.div `
     font-family: poppins;
 }   
 
-.pageHeader h2 {
+.pageHeader h3 {
+    margin-top: 1%;
+    font-family: poppins;
+}  
+
+.pageHeader p {
     margin-top: 1%;
     font-family: poppins;
 }  
@@ -39,7 +44,8 @@ export default class DesktopWebhooks extends Component {
                 <div className='parent_container'>
                     <div className='pageHeader'>
                         <h1 className=''>Webhooks</h1>
-                        <h2>[Placeholder]</h2>
+                        <h3>[Empty page]</h3>
+                        <p>Click "Docs" to see the quick access documentation demo.</p>
                     </div>
                 </div>
             </Styles>

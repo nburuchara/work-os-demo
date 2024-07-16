@@ -3,6 +3,31 @@ import styled from 'styled-components'
 
 const Styles = styled.div `
 
+    // - - - - - - - PARENT CONTAINER - - - - - - - //
+
+    // - - PAGE HEADER - - //
+
+.pageHeader {
+    text-align: left;
+    margin-left: 5%;
+    // margin-top: 7.25%;
+}
+
+.pageHeader h1 {
+    margin-top: 1%;
+    font-family: poppins;
+}   
+
+.pageHeader h3 {
+    margin-top: 1%;
+    font-family: poppins;
+}  
+
+.pageHeader p {
+    margin-top: 1%;
+    font-family: poppins;
+}
+
 `
 
 export default class DesktopRedirects extends Component {
@@ -16,7 +41,13 @@ export default class DesktopRedirects extends Component {
     render () {
         return (
             <Styles>
-                
+                <div className='parent_container'>
+                    <div className='pageHeader'>
+                        <h1 className=''>Redirects</h1>
+                        <h3>[Empty page]</h3>
+                        <p>Click "Docs" to see the quick access documentation demo.</p>
+                    </div>
+                </div>
             </Styles>
         )
     }

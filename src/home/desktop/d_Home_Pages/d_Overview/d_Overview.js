@@ -18,6 +18,16 @@ const Styles = styled.div `
     font-family: poppins;
 }
 
+.pageHeader h3 {
+    margin-top: 1%;
+    font-family: poppins;
+}  
+
+.pageHeader p {
+    margin-top: 1%;
+    font-family: poppins;
+}  
+
 `
 
 export default class DesktopOverview extends Component {
@@ -38,6 +48,8 @@ export default class DesktopOverview extends Component {
                 <div className='parent_container'>
                     <div className='pageHeader'>
                         <h1 className=''>Getting Started</h1>
+                        <h3>[Empty page]</h3>
+                        <p>Click "Docs" to see the quick access documentation demo.</p>
                     </div>
                 </div>
             </Styles>
