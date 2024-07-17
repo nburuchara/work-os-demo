@@ -339,6 +339,56 @@ const Styles = styled.div `
     // font-weight: bold;
 }
 
+    // - - VIBRATING ANIMATION - - //
+
+.vibrate {
+    display: inline-block;
+    animation: vibrate 0.5s linear;
+    position: fixed;
+    float: left;
+    border: 1px solid white;
+    left: 1.35%;
+    background-color: white;
+    width: 21%;
+    padding: 0.6%;
+    border-radius: 10px;
+    top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+  
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+    // - - CSS Transition Definitions - - //
+
+.docs-side-panel-enter {
+    transform: translateX(-100%) !important;
+    opacity: 0 !important;
+}
+
+.docs-side-panel-enter-active {
+    transform: translate(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.docs-side-panel-exit {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.docs-side-panel-exit-active {
+    transform: translateX(-10%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
 
 `
 
@@ -361,15 +411,19 @@ export default class Header extends Component {
 
                 //* - - TOGGLE THEME / USER PROFILE BUTTONS - - *//
 
+            nightModeToggled: false,
             toggleThemeHovered: false,
             toggleThemeBtnBgColor: "",
+            profileBtnToggled: false,
+            profileBtnBgColor: "#5e626a",
 
                 //* - - POPUPS - - *//
 
             showHelpPopup: false,
             showFeedbackPopup: false,
             showDocsPopup: false,
-            showNotification: true,
+            showNotification: false,
+            toggleNotificationVibration: false
 
         }
     }
@@ -403,7 +457,86 @@ export default class Header extends Component {
     }
 
     toggleThemeLeave = () => {
-        this.setState({toggleThemeHovered: false, toggleThemeBtnBgColor: ""})
+        if (!this.state.nightModeToggled) {
+            this.setState({toggleThemeHovered: false, toggleThemeBtnBgColor: ""})
+        }
+    }
+
+    toggleProfileEnter = () => {
+        this.setState({ profileBtnBgColor: "#2e2eff" })
+    }
+
+    toggleProfileLeave = () => {
+        if (!this.state.profileBtnToggled) {
+            this.setState({ profileBtnBgColor: "#5e626a" })
+        }
+    }
+
+    nightModeClicked = () => {
+        if (this.state.profileBtnToggled) {
+            this.setState({
+                toggleNotificationVibration: true
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        toggleNotificationVibration: false
+                    })
+                }, 500)
+            })
+        } else if (this.state.nightModeToggled === false && this.state.profileBtnToggled === false) {
+            this.setState({
+                nightModeToggled: true,
+                toggleThemeHovered: true, 
+                toggleThemeBtnBgColor: "#F6F7FF",
+                showNotification: true
+            })
+        } else if (this.state.nightModeToggled) {
+            this.setState({
+                nightModeToggled: false,
+                toggleThemeHovered: false, 
+                toggleThemeBtnBgColor: "",
+                showNotification: false
+            })
+        }
+    }
+
+    hideNotification = () => {
+        this.setState({
+            toggleThemeHovered: false, 
+            toggleThemeBtnBgColor: "",
+            showNotification: false,
+            nightModeToggled: false,
+            toggleThemeHovered: false, 
+            toggleThemeBtnBgColor: "",
+            profileBtnToggled: false,
+            profileBtnBgColor: "#5e626a", 
+        })
+    }
+
+    profileClicked = () => {
+        if (this.state.nightModeToggled) {
+            this.setState({
+                toggleNotificationVibration: true
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        toggleNotificationVibration: false
+                    })
+                }, 500)
+            })
+        } else if (this.state.nightModeToggled === false && this.state.profileBtnToggled === false) {
+            this.setState({
+                profileBtnToggled: true,
+                profileBtnBgColor: "#2e2eff", 
+                showNotification: true
+            })
+        } else if (this.state.profileBtnToggled) {
+            this.setState({
+                profileBtnToggled: false,
+                profileBtnBgColor: "#5e626a", 
+                showNotification: false
+            })
+        }
     }
 
     render () {
@@ -419,10 +552,10 @@ export default class Header extends Component {
                         classNames="docs-side-panel"
                         unmountOnExit
                         >
-                            <div className='floating-notification'>
+                            <div className={this.state.toggleNotificationVibration ? "vibrate" : "floating-notification"}>
                                 <div className='close-notification' style={{justifyContent: "space-between", display: "flex"}}>
                                     <p>FEATURE UNAVAILABLE</p>
-                                    <span><label>Close</label></span>
+                                    <span onClick={this.hideNotification}><label>Close</label></span>
                                 </div>
                                 <p className='main-notification-text'>Unfortunately, this feature has not been implemented in this demo. Consider hiring Norman to access a full version 😄</p>
                             </div>
@@ -498,6 +631,7 @@ export default class Header extends Component {
                             style={{backgroundColor: this.state.toggleThemeBtnBgColor}}
                             onMouseEnter={this.toggleThemeEnter}
                             onMouseLeave={this.toggleThemeLeave}
+                            onClick={this.nightModeClicked}
                             >
                                 <img 
                                 className={this.state.toggleThemeHovered ? 'toggleThemeIcon toggleThemeIconRotated' : 'toggleThemeIcon'}
@@ -505,7 +639,12 @@ export default class Header extends Component {
                             </button>
                         </div> 
                         <div className='rightSideCol5'>
-                            <button>
+                            <button
+                            style={{backgroundColor: this.state.profileBtnBgColor}}
+                            onMouseEnter={this.toggleProfileEnter}
+                            onMouseLeave={this.toggleProfileLeave}
+                            onClick={this.profileClicked}
+                            >
                                 <h2>N</h2>
                             </button>
                         </div>

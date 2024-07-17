@@ -121,7 +121,8 @@ const Styles = styled.div `
 }
 
 
-/* CSS Transition Definitions */
+    /* CSS Transition Definitions */
+
 .docs-side-panel-enter {
     transform: translateX(-100%) !important;
     opacity: 0 !important;
