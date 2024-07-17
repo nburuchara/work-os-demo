@@ -9,5 +9,5 @@ Instead of having to open up another window to browse the docs - you can view th
 
 # Issues
 
-- Navigating between different sections of the documentation from the search bar causes the docs popup to stall - on the hosted demo. Clone the repository and run it on your local machine and you won't encounter this problem. 
+- Navigating between different sections of the docs from the search bar causes the docs popup to stall - on the hosted demo. Clone the repository and run it on your local machine and you won't encounter this problem. 
 - Left side bar glitches slightly when scrolling docs 
