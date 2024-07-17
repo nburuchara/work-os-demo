@@ -5,7 +5,7 @@ WorkOS Quick Access (QuAc) Docs Demo
 # About
 
 This is a demo for a quick access documentation feature for WorkOS' dashboard. 
-Instead of having to open up another window to browse the docs - you can view them from your dashboard.
+Instead of having to open up another window to browse the docs - you can view the docs directly from your dashboard.
 
 # Issues
 
