@@ -3340,11 +3340,11 @@ export default class DocsNavigationMenu extends Component {
             {"page": "API", "category": "Standalone APIs", "URL": "https://workos.com/docs/domain-verification/api"},
 
             {"page": "Event types", "category": "Events and webhooks", "URL": "https://workos.com/docs/events"},
-            {"page": "", "category": "Events and webhooks", "URL": ""},
-            {"page": "", "category": "Events and webhooks", "URL": ""},
-            {"page": "", "category": "Events and webhooks", "URL": ""},
-            {"page": "", "category": "Events and webhooks", "URL": ""},
-            {"page": "", "category": "Events and webhooks", "URL": ""},
+            {"page": "Overview", "category": "Events and webhooks", "URL": "https://workos.com/docs/events/data-syncing"},
+            {"page": "Syncing with events API", "category": "Events and webhooks", "URL": "https://workos.com/docs/events/data-syncing/events-api"},
+            {"page": "Syncing with webhooks", "category": "Events and webhooks", "URL": "https://workos.com/docs/events/data-syncing/webhooks"},
+            {"page": "Data reconciliation", "category": "Events and webhooks", "URL": "https://workos.com/docs/events/data-syncing/data-reconciliation"},
+            {"page": "Streaming to Datadog", "category": "Events and webhooks", "URL": "https://workos.com/docs/events/observability/datadog"},
 
 
             
@@ -3371,7 +3371,8 @@ export default class DocsNavigationMenu extends Component {
             showStandAloneApis: false,
             showEventsWebhooks: false,
             showDocsHome: true,
-            showBackToHome: false
+            showBackToHome: false,
+            currentPage: ""
         })
         this.scrollToTop('top')
     }
