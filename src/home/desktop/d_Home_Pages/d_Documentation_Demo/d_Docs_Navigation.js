@@ -3291,6 +3291,10 @@ export default class DocsNavigationMenu extends Component {
         this.props.closeDocsClicked();
     }
 
+    goToExternalDocs = () => {
+        
+    }
+
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
@@ -3487,7 +3491,8 @@ export default class DocsNavigationMenu extends Component {
                                     {/* MINIMIZE DOCS */}
                                     <span><img
                                     onMouseEnter={this.externalDocsEnter}
-                                    onMouseLeave={this.externalDocsLeave} 
+                                    onMouseLeave={this.externalDocsLeave}
+                                    onClick={this.goToExternalDocs} 
                                     style={{width: dockExternalBtnWidth, paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
                                 </div>
                                 <div className='dd-search-bar-btn'>
@@ -3630,6 +3635,7 @@ export default class DocsNavigationMenu extends Component {
                                     <span><img
                                     onMouseEnter={this.externalDocsEnter}
                                     onMouseLeave={this.externalDocsLeave} 
+                                    onClick={this.goToExternalDocs}
                                     style={{width: "45.5%", paddingBottom: "6%"}} src={externalDocsHovered ? '/assets/docs_search_bar_external_link_icon_color.png' : '/assets/docs_search_bar_external_link_icon.png' } alt='no img available'/></span>
                                 </div>
                                 <div className='dd-search-bar-btn'>
