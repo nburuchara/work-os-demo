@@ -50,7 +50,7 @@ const Styles = styled.div  `
 
 .popup-container textarea {
     margin-top: 1%;
-    width: 92.5%;
+    width: 95.5%;
     resize: none;
     padding: 2%;
     font-family: poppins;
@@ -186,7 +186,7 @@ export default class Popup extends Component {
                             <div>
                                 <textarea 
                                 placeholder='Help us improve the dashboard'
-                                style={{border: `${textareaBorderSize} solid ${textareaBorderColor}` }}
+                                style={{border: `${textareaBorderSize} solid ${textareaBorderColor}`}}
                                 className='popup-textarea'
                                 />
                                 <p className='textarea-err-msg'>{this.state.feedbackErrMsg}</p>

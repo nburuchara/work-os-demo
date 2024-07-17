@@ -3292,7 +3292,9 @@ export default class DocsNavigationMenu extends Component {
     }
 
     goToExternalDocs = () => {
-        
+        const externalLinksMap = [
+            
+        ]
     }
 
     render () {
