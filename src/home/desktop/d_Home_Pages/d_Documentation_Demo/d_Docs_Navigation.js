@@ -2348,6 +2348,7 @@ export default class DocsNavigationMenu extends Component {
             dockExternalBtnWidth: "34.5%",
             dockExitBtnWidth: "45.5%",
             miniSearchBarTransitioning: false,
+            URLPage: "",
 
             //* - SEARCH RESULTS COMPONENTS - *//
 
@@ -2449,6 +2450,10 @@ export default class DocsNavigationMenu extends Component {
         this.setState({
             searchFilterSelected: "All docs"
         })
+    }
+
+    componentDidUpdate = () => {
+        
     }
 
         //* - - SIDEBAR FUNCS - - *//
@@ -2568,7 +2573,7 @@ export default class DocsNavigationMenu extends Component {
 
     handleMenuItemSelected = (item) => {
         const { menuOption1, menuOption2, menuOption3, menuOption4 } = this.state;
-        this.setState({currentPage: item})
+        this.setState({ currentPage: item, URLPage: item })
         if (menuOption1 === true) {
             this.setState({
                 usrMgmtScrollID: item,
@@ -2579,11 +2584,11 @@ export default class DocsNavigationMenu extends Component {
             })
         } else if (menuOption3 === true) {
             this.setState({
-                eventsWebhooksScrollID: item
+                eventsWebhooksScrollID: item,
             })
         } else if (menuOption4 === true) {
             this.setState({
-                resourcesScrollID: item
+                resourcesScrollID: item,
             })
         }
     }
@@ -3060,6 +3065,7 @@ export default class DocsNavigationMenu extends Component {
 
     handleSearchWithinNested = (searchTerm, searchID) => {
         let searchPath
+        // this.setState({currentPage: searchTerm})
         if (this.nestedDropdownRef) {
             if (searchID === 1) {
                 searchPath = this.nestedDropdownRef.searchMenuItems(UserManagementOptions, searchTerm);
@@ -3282,6 +3288,13 @@ export default class DocsNavigationMenu extends Component {
             {"page": "Social Login", "URL": "https://workos.com/docs/user-management/social-login"},
             {"page": "Multi-Factor Authentication", "URL": "https://workos.com/docs/user-management/mfa"},
             {"page": "Magic Auth", "URL": "https://workos.com/docs/user-management/magic-auth"},
+            {"page": "Users and Organizations", "URL": "https://workos.com/docs/user-management/users-organizations"},
+            {"page": "Sessions", "URL": "https://workos.com/docs/user-management/sessions"},
+            {"page": "Invitations", "URL": "https://workos.com/docs/user-management/invitations"},
+            {"page": "Email Verification", "URL": "https://workos.com/docs/user-management/email-verification"},
+            {"page": "Domain Capture", "URL": "https://workos.com/docs/user-management/domain-capture"},
+            {"page": "Identity Linking", "URL": "https://workos.com/docs/user-management/identity-linking"},
+            {"page": "JIT Provisioning", "URL": "https://workos.com/docs/user-management/jit-provisioning"},
             {"page": "", "URL": ""},
             {"page": "", "URL": ""},
             {"page": "", "URL": ""},
@@ -3294,8 +3307,9 @@ export default class DocsNavigationMenu extends Component {
         //         pageObject = pageOptions[i]
         //     }
         // }
-
-        alert("current page: ", this.state.currentPage)
+        if (this.state.currentPage !== "") {
+            console.log(`current page: ${this.state.URLPage}`)
+        }
 
     }
 
@@ -3320,7 +3334,7 @@ export default class DocsNavigationMenu extends Component {
     closeDocsDemo = () => {
         this.props.closeDocsClicked();
     }
-
+    
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
@@ -3920,7 +3934,7 @@ export default class DocsNavigationMenu extends Component {
 
                     {showStandAloneApis && <StandaloneAPIs sidebarMenuClicked={sidebarMenuClicked} scrollToID={standaloneApisScrollID} searchedTerm={this.state.menuOption2SearchTermObject} clearLatestSearch={this.clearRecentSearch} ref={this.menuOption2Ref} navigateToNewPage={this.navigateToNewPageOption2}/>}
 
-                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3} />}
+                    {showEventsWebhooks && <EventsWebhooks sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption3Ref} scrollToID={eventsWebhooksScrollID} searchedTerm={this.state.menuOption3SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption3}/>}
 
                     {/* {showResources && <Resources sidebarMenuClicked={sidebarMenuClicked} ref={this.menuOption4Ref} scrollToID={resourcesScrollID} searchedTerm={this.state.menuOption4SearchTermObject} clearLatestSearch={this.clearRecentSearch} navigateToNewPage={this.navigateToNewPageOption4} selectInternalPage={this.searchedTermClicked} />} */}
 

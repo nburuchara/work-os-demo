@@ -241,6 +241,7 @@ export default class UserManagement extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.scrollToID !== prevProps.scrollToID) {
             this.getSelectedPage(this.props.scrollToID)
+            // this.props.setCurrentPage()
         }
         if (this.props.searchedTerm) {
             this.smoothScrollToId(this.props.searchedTerm.lastCat)

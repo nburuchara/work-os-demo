@@ -882,7 +882,7 @@ export default class Header extends Component {
                 classNames="docs-top-panel"
                 unmountOnExit
                 >
-                    <div style={{width: "122.5%"}}>
+                    <div style={{width: "120%"}}>
                         <DocsSelected hideDocsBtnClicked={this.hideDocsBtnClicked}/>
                     </div>
                 </CSSTransition>
