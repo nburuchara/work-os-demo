@@ -3266,6 +3266,36 @@ export default class DocsNavigationMenu extends Component {
         if (pageObject !== null) {
             this.searchedTermClicked(pageObject.category, pageObject, pageObject.page);
         }
+    }
+
+    goToExternalDocs = () => {
+        let targetURL = null;
+        const externalLinksMap = [
+            {"page": "Quick Start", "URL": "https://workos.com/docs/user-management"},
+            {"page": "Example Apps", "URL": "https://workos.com/docs/user-management/example-apps"},
+            {"page": "AuthKit", "URL": "https://workos.com/docs/user-management/authkit"},
+            {"page": "Email Domains", "URL": "https://workos.com/docs/user-management/email-domains"},
+            {"page": "Branding", "URL": "https://workos.com/docs/user-management/branding"},
+            {"page": "Migrations", "URL": "https://workos.com/docs/user-management/migrations"},
+            {"page": "Single Sign-On", "URL": "https://workos.com/docs/user-management/sso"},
+            {"page": "Email + Password", "URL": "https://workos.com/docs/user-management/email-password"},
+            {"page": "Social Login", "URL": "https://workos.com/docs/user-management/social-login"},
+            {"page": "Multi-Factor Authentication", "URL": "https://workos.com/docs/user-management/mfa"},
+            {"page": "Magic Auth", "URL": "https://workos.com/docs/user-management/magic-auth"},
+            {"page": "", "URL": ""},
+            {"page": "", "URL": ""},
+            {"page": "", "URL": ""},
+            {"page": "", "URL": ""},
+            {"page": "", "URL": ""},
+        ]
+
+        // for (let i = 0; i < pageOptions.length; i++) {
+        //     if (page === pageOptions[i].page) {
+        //         pageObject = pageOptions[i]
+        //     }
+        // }
+
+        alert("current page: ", this.state.currentPage)
 
     }
 
@@ -3289,12 +3319,6 @@ export default class DocsNavigationMenu extends Component {
 
     closeDocsDemo = () => {
         this.props.closeDocsClicked();
-    }
-
-    goToExternalDocs = () => {
-        const externalLinksMap = [
-            
-        ]
     }
 
     render () {
