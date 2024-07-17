@@ -480,7 +480,9 @@ export default class Header extends Component {
     }
 
     docsBtnLeave = () => {
-        this.setState({docsBtnHovered: false, docsTxtColor: "#5e626a", docsBgColor: "transparent"})
+        if (!this.state.docsPopupToggled) {
+            this.setState({docsBtnHovered: false, docsTxtColor: "#5e626a", docsBgColor: "transparent"})
+        }
     }
 
     toggleThemeEnter = () => {
@@ -573,21 +575,37 @@ export default class Header extends Component {
     helpPopupClicked = () => {
         if (this.state.showFeedbackPopup === true) {
             this.setState({
-                showFeedbackPopup: false
+                showFeedbackPopup: false,
+                feedbackPopupToggled: false,
+                feedbackBtnHovered: false, 
+                feedbackTxtColor: "#5e626a",
+                feedbackBgColor: "transparent",
+                helpPopupToggled: true,
+                helpBtnHovered: true, 
+                helpTxtColor: "#2e2eff",
+                helpBgColor: "#F6F7FF"
             }, () => {
                 setTimeout(() => {
                     this.setState({
-                        showHelpPopup: true
+                        showHelpPopup: true,
                     })
                 }, 500)
             })
         } else if (this.state.showDocsPopup === true) {
             this.setState({
-                showDocsPopup: false
+                showDocsPopup: false,
+                docsPopupToggled: false,
+                docsBtnHovered: false, 
+                docsTxtColor: "#5e626a",
+                docsBgColor: "transparent",
+                helpPopupToggled: true,
+                helpBtnHovered: true, 
+                helpTxtColor: "#2e2eff",
+                helpBgColor: "#F6F7FF"
             }, () => {
                 setTimeout(() => {
                     this.setState({
-                        showHelpPopup: true
+                        showHelpPopup: true,
                     })
                 }, 500)
             })
@@ -613,21 +631,37 @@ export default class Header extends Component {
     feedbackPopupClicked = () => {
         if (this.state.showHelpPopup === true) {
             this.setState({
-                showHelpPopup: false
+                showHelpPopup: false,
+                helpPopupToggled: false,
+                helpBtnHovered: false, 
+                helpTxtColor: "#5e626a",
+                helpBgColor: "transparent",
+                feedbackPopupToggled: true,
+                feedbackBtnHovered: true, 
+                feedbackTxtColor: "#2e2eff",
+                feedbackBgColor: "#F6F7FF"
             }, () => {
                 setTimeout(() => {
                     this.setState({
-                        showFeedbackPopup: true
+                        showFeedbackPopup: true,
                     })
                 }, 500)
             })
         } else if (this.state.showDocsPopup === true) {
             this.setState({
-                showDocsPopup: false
+                showDocsPopup: false,
+                docsPopupToggled: false,
+                docsBtnHovered: false, 
+                docsTxtColor: "#5e626a",
+                docsBgColor: "transparent",
+                feedbackPopupToggled: true,
+                feedbackBtnHovered: true, 
+                feedbackTxtColor: "#2e2eff",
+                feedbackBgColor: "#F6F7FF"
             }, () => {
                 setTimeout(() => {
                     this.setState({
-                        showFeedbackPopup: true
+                        showFeedbackPopup: true,
                     })
                 }, 500)
             })
@@ -661,7 +695,59 @@ export default class Header extends Component {
     }
 
     docsPopupClicked = () => {
-
+        if (this.state.showHelpPopup === true) {
+            this.setState({
+                showHelpPopup: false,
+                helpPopupToggled: false,
+                helpBtnHovered: false, 
+                helpTxtColor: "#5e626a",
+                helpBgColor: "transparent",
+                docsPopupToggled: true,
+                docsBtnHovered: true, 
+                docsTxtColor: "#2e2eff",
+                docsBgColor: "#F6F7FF"
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showDocsPopup: true,
+                    })
+                }, 500)
+            })
+        } else if (this.state.showFeedbackPopup === true) {
+            this.setState({
+                showFeedbackPopup: false,
+                feedbackPopupToggled: false,
+                feedbackBtnHovered: false, 
+                feedbackTxtColor: "#5e626a",
+                feedbackBgColor: "transparent",
+                docsPopupToggled: true,
+                docsBtnHovered: true, 
+                docsTxtColor: "#2e2eff",
+                docsBgColor: "#F6F7FF"
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showDocsPopup: true,
+                    })
+                }, 500)
+            })
+        } else if (this.state.showDocsPopup) {
+            this.setState({
+                showDocsPopup: false,
+                docsPopupToggled: false,
+                docsBtnHovered: false, 
+                docsTxtColor: "#5e626a",
+                docsBgColor: "transparent"
+            })
+        } else {
+            this.setState({
+                showDocsPopup: true,
+                docsPopupToggled: true,
+                docsBtnHovered: true, 
+                docsTxtColor: "#2e2eff",
+                docsBgColor: "#F6F7FF"
+            })
+        }
     }
 
     render () {
@@ -783,10 +869,10 @@ export default class Header extends Component {
                 <CSSTransition
                 in={this.state.showDocsPopup}
                 timeout={500}
-                classNames="docs-side-panel"
+                classNames="docs-top-panel"
                 unmountOnExit
                 >
-                    <div>
+                    <div style={{width: "122.5%"}}>
                         <DocsSelected/>
                     </div>
                 </CSSTransition>
