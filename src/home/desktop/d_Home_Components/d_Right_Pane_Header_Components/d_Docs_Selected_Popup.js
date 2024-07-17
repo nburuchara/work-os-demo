@@ -133,7 +133,7 @@ export default class Popup extends Component {
             <Styles>
                 <div ref={this.popupContainerRef} className='popup-container' style={{overflow: scrollEnabled ? "auto" : "hidden"}}>
                     {/* <span id='popup-container-header'></span> */}
-                    <DocsNavigationMenu sidebarPanelRef={this.sidebarPanelRef} sidePanelOpened={this.handleSidePanelOpened}/>
+                    <DocsNavigationMenu closeDocsClicked={() => this.props.hideDocsBtnClicked()} sidebarPanelRef={this.sidebarPanelRef} sidePanelOpened={this.handleSidePanelOpened}/>
                 </div>
             </Styles>
         )

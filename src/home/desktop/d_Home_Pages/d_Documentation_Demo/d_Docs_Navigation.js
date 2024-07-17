@@ -3287,6 +3287,10 @@ export default class DocsNavigationMenu extends Component {
         }
     }
 
+    closeDocsDemo = () => {
+        this.props.closeDocsClicked();
+    }
+
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
@@ -3491,6 +3495,7 @@ export default class DocsNavigationMenu extends Component {
                                     <span><img 
                                     onMouseEnter={this.exitDocsEnter}
                                     onMouseLeave={this.exitDocsLeave}
+                                    onClick={this.closeDocsDemo}
                                     style={{width: dockExitBtnWidth}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
                                 </div>
                             </div>
@@ -3632,6 +3637,7 @@ export default class DocsNavigationMenu extends Component {
                                     <span><img 
                                     onMouseEnter={this.exitDocsEnter}
                                     onMouseLeave={this.exitDocsLeave}
+                                    onClick={this.closeDocsDemo}
                                     style={{width: "56.5%"}} src={exitDocsHovered ? '/assets/docs_search_bar_exit_icon_color.png' : '/assets/docs_search_bar_exit_icon.png' } alt='no img available'/></span>
                                 </div>
                             </div>

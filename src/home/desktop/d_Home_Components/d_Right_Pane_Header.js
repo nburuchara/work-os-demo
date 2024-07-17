@@ -750,6 +750,16 @@ export default class Header extends Component {
         }
     }
 
+    hideDocsBtnClicked = () => {
+        this.setState({
+            showDocsPopup: false,
+            docsPopupToggled: false,
+            docsBtnHovered: false, 
+            docsTxtColor: "#5e626a",
+            docsBgColor: "transparent"
+        })
+    }
+
     render () {
         return(
             <Styles>
@@ -873,7 +883,7 @@ export default class Header extends Component {
                 unmountOnExit
                 >
                     <div style={{width: "122.5%"}}>
-                        <DocsSelected/>
+                        <DocsSelected hideDocsBtnClicked={this.hideDocsBtnClicked}/>
                     </div>
                 </CSSTransition>
             </Styles>
