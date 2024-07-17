@@ -130,6 +130,10 @@ const Styles = styled.div  `
     background-color: #6363f1 !important;
     font-family: poppins;
     color: white;
+    border: 2px solid #6363f1;
+    border-radius: 5px;
+    padding: 2%;
+    cursor: pointer;
 }
 
 `
@@ -164,6 +168,7 @@ export default class Popup extends Component {
 
     closeFeedbackBox = () => {
         //* close feedback box ('Cancel' & 'Close')
+        this.props.cancelFeedbackBtnClicked();
     }
 
     render () {
@@ -199,7 +204,7 @@ export default class Popup extends Component {
                         }
                         {this.state.showFeedbackLoading && 
                             <div>
-                                <div style={{marginTop: "19%", marginBottom: "19%"}}>
+                                <div style={{marginTop: "19%", marginBottom: "19%", textAlign: "center"}}>
                                     <ColorRing
                                     visible={true}
                                     height="30"
@@ -218,8 +223,8 @@ export default class Popup extends Component {
                             </div>
                         } 
                         {this.state.showFeedbackConfirmation && 
-                            <div className='feedbackConfirmation'>
-                                <h5>Thanks for sharing your feedback!</h5>
+                            <div className='feedbackConfirmation' style={{textAlign: "center"}}>
+                                <h5 style={{textAlign: "center"}}>Thanks for sharing your feedback!</h5>
                                 <button
                                 onClick={this.closeFeedbackBox}
                                 >Close</button>

@@ -384,7 +384,31 @@ const Styles = styled.div `
 }
 
 .docs-side-panel-exit-active {
-    transform: translateX(-10%) !important;
+    transform: translateX(10%) !important;
+    opacity: 0 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+// - - CSS Transition Definitions - - //
+
+.docs-top-panel-enter {
+    transform: translateX(100%) !important;
+    opacity: 0 !important;
+}
+
+.docs-top-panel-enter-active {
+    transform: translate(0) !important;
+    opacity: 1 !important;
+    transition: transform 500ms, opacity 500ms !important;
+}
+
+.docs-top-panel-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.docs-top-panel-exit-active {
+    transform: translateX(10%) !important;
     opacity: 0 !important;
     transition: transform 500ms, opacity 500ms !important;
 }
@@ -423,7 +447,10 @@ export default class Header extends Component {
             showFeedbackPopup: false,
             showDocsPopup: false,
             showNotification: false,
-            toggleNotificationVibration: false
+            toggleNotificationVibration: false,
+            helpPopupToggled: false,
+            feedbackPopupToggled: false,
+            docsPopupToggled: false
 
         }
     }
@@ -433,7 +460,9 @@ export default class Header extends Component {
     }
 
     helpBtnLeave = () => {
-        this.setState({helpBtnHovered: false, helpTxtColor: "#5e626a", helpBgColor: "transparent"})
+        if (!this.state.helpPopupToggled) {
+            this.setState({helpBtnHovered: false, helpTxtColor: "#5e626a", helpBgColor: "transparent"})
+        }
     }
 
     feedbackBtnEnter = () => {
@@ -441,7 +470,9 @@ export default class Header extends Component {
     }
 
     feedbackBtnLeave = () => {
-        this.setState({feedbackBtnHovered: false, feedbackTxtColor: "#5e626a", feedbackBgColor: "transparent"})
+        if (!this.state.feedbackPopupToggled) {
+            this.setState({feedbackBtnHovered: false, feedbackTxtColor: "#5e626a", feedbackBgColor: "transparent"})
+        }
     }
 
     docsBtnEnter = () => {
@@ -539,6 +570,100 @@ export default class Header extends Component {
         }
     }
 
+    helpPopupClicked = () => {
+        if (this.state.showFeedbackPopup === true) {
+            this.setState({
+                showFeedbackPopup: false
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showHelpPopup: true
+                    })
+                }, 500)
+            })
+        } else if (this.state.showDocsPopup === true) {
+            this.setState({
+                showDocsPopup: false
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showHelpPopup: true
+                    })
+                }, 500)
+            })
+        } else if (this.state.showHelpPopup) {
+            this.setState({
+                showHelpPopup: false,
+                helpPopupToggled: false,
+                helpBtnHovered: false, 
+                helpTxtColor: "#5e626a",
+                helpBgColor: "transparent"
+            })
+        } else {
+            this.setState({
+                showHelpPopup: true,
+                helpPopupToggled: true,
+                helpBtnHovered: true, 
+                helpTxtColor: "#2e2eff",
+                helpBgColor: "#F6F7FF"
+            })
+        }
+    }
+
+    feedbackPopupClicked = () => {
+        if (this.state.showHelpPopup === true) {
+            this.setState({
+                showHelpPopup: false
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showFeedbackPopup: true
+                    })
+                }, 500)
+            })
+        } else if (this.state.showDocsPopup === true) {
+            this.setState({
+                showDocsPopup: false
+            }, () => {
+                setTimeout(() => {
+                    this.setState({
+                        showFeedbackPopup: true
+                    })
+                }, 500)
+            })
+        } else if (this.state.showFeedbackPopup) {
+            this.setState({
+                showFeedbackPopup: false,
+                feedbackPopupToggled: false,
+                feedbackBtnHovered: false, 
+                feedbackTxtColor: "#5e626a",
+                feedbackBgColor: "transparent"
+            })
+        } else {
+            this.setState({
+                showFeedbackPopup: true,
+                feedbackPopupToggled: true,
+                feedbackBtnHovered: true, 
+                feedbackTxtColor: "#2e2eff",
+                feedbackBgColor: "#F6F7FF"
+            })
+        }
+    }
+
+    cancelFeedbackBtnClicked = () => {
+        this.setState({
+            showFeedbackPopup: false,
+            feedbackPopupToggled: false,
+            feedbackBtnHovered: false, 
+            feedbackTxtColor: "#5e626a",
+            feedbackBgColor: "transparent"
+        })
+    }
+
+    docsPopupClicked = () => {
+
+    }
+
     render () {
         return(
             <Styles>
@@ -567,6 +692,7 @@ export default class Header extends Component {
                             style={{backgroundColor: this.state.helpBgColor}}
                             onMouseEnter={this.helpBtnEnter}
                             onMouseLeave={this.helpBtnLeave}
+                            onClick={this.helpPopupClicked}
                             >
                                 <div className='rightSideCol1Icon'>
                                     <img src={this.state.helpBtnHovered ? '/assets/right_pane_header_help_icon_color.png' : '/assets/right_pane_header_help_icon.png'} alt='img not available'/>
@@ -575,26 +701,6 @@ export default class Header extends Component {
                                     <p style={{color: this.state.helpTxtColor}}>Help</p>
                                 </div>
                             </button>
-                            <CSSTransition
-                            in={this.state.showHelpPopup}
-                            timeout={500}
-                            classNames="docs-side-panel"
-                            unmountOnExit
-                            >
-                                <div>
-                                    <HelpPopup/>
-                                </div>
-                            </CSSTransition>
-                            <CSSTransition
-                            in={this.state.showFeedbackPopup}
-                            timeout={500}
-                            classNames="docs-side-panel"
-                            unmountOnExit
-                            >
-                                <div>
-                                    <FeedbackPopup/>
-                                </div>
-                            </CSSTransition>
                             {/* <DocsPopup/> */}
                         </div>
                         <div className='rightSideCol2'>
@@ -602,6 +708,7 @@ export default class Header extends Component {
                             style={{backgroundColor: this.state.feedbackBgColor}}
                             onMouseEnter={this.feedbackBtnEnter}
                             onMouseLeave={this.feedbackBtnLeave}
+                            onClick={this.feedbackPopupClicked}
                             >
                                 <div className='rightSideCol2Icon'>
                                     <img src={this.state.feedbackBtnHovered ? '/assets/right_pane_header_feedback_icon_color.png' : '/assets/right_pane_header_feedback_icon.png'} alt='img not available'/>
@@ -616,6 +723,7 @@ export default class Header extends Component {
                             style={{backgroundColor: this.state.docsBgColor}}
                             onMouseEnter={this.docsBtnEnter}
                             onMouseLeave={this.docsBtnLeave}
+                            onClick={this.docsPopupClicked}
                             >
                                 <div className='rightSideCol3Icon'>
                                     <img src={this.state.docsBtnHovered ? '/assets/right_pane_header_docs_icon_color.png' : '/assets/right_pane_header_docs_icon.png'} alt='img not available'/>
@@ -650,6 +758,28 @@ export default class Header extends Component {
                         </div>
                     </div>
                 </div>
+                <CSSTransition
+                in={this.state.showHelpPopup}
+                timeout={500}
+                classNames="docs-top-panel"
+                unmountOnExit
+                >
+                    <div style={{textAlign: "right", marginLeft: "70%", width: "122.5%"}}>
+                        <HelpPopup/>
+                    </div>
+                </CSSTransition>
+
+                <CSSTransition
+                in={this.state.showFeedbackPopup}
+                timeout={500}
+                classNames="docs-top-panel"
+                unmountOnExit
+                >
+                    <div style={{textAlign: "right", marginLeft: "70%", width: "122.5%"}}>
+                        <FeedbackPopup cancelFeedbackBtnClicked={this.cancelFeedbackBtnClicked}/>
+                    </div>
+                </CSSTransition>
+
                 <CSSTransition
                 in={this.state.showDocsPopup}
                 timeout={500}
