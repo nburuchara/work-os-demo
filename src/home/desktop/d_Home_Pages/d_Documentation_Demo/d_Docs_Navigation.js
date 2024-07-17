@@ -2349,6 +2349,7 @@ export default class DocsNavigationMenu extends Component {
             dockExitBtnWidth: "45.5%",
             miniSearchBarTransitioning: false,
             URLPage: "",
+            URLCategory: "",
 
             //* - SEARCH RESULTS COMPONENTS - *//
 
@@ -2577,14 +2578,17 @@ export default class DocsNavigationMenu extends Component {
         if (menuOption1 === true) {
             this.setState({
                 usrMgmtScrollID: item,
+                URLCategory: "User Management"
             })
         } else if (menuOption2 === true) {
             this.setState({
                 standaloneApisScrollID: item,
+                URLCategory: "Standalone APIs"
             })
         } else if (menuOption3 === true) {
             this.setState({
                 eventsWebhooksScrollID: item,
+                URLCategory: "Events and webhooks"
             })
         } else if (menuOption4 === true) {
             this.setState({
@@ -3276,41 +3280,89 @@ export default class DocsNavigationMenu extends Component {
 
     goToExternalDocs = () => {
         let targetURL = null;
-        const externalLinksMap = [
-            {"page": "Quick Start", "URL": "https://workos.com/docs/user-management"},
-            {"page": "Example Apps", "URL": "https://workos.com/docs/user-management/example-apps"},
-            {"page": "AuthKit", "URL": "https://workos.com/docs/user-management/authkit"},
-            {"page": "Email Domains", "URL": "https://workos.com/docs/user-management/email-domains"},
-            {"page": "Branding", "URL": "https://workos.com/docs/user-management/branding"},
-            {"page": "Migrations", "URL": "https://workos.com/docs/user-management/migrations"},
-            {"page": "Single Sign-On", "URL": "https://workos.com/docs/user-management/sso"},
-            {"page": "Email + Password", "URL": "https://workos.com/docs/user-management/email-password"},
-            {"page": "Social Login", "URL": "https://workos.com/docs/user-management/social-login"},
-            {"page": "Multi-Factor Authentication", "URL": "https://workos.com/docs/user-management/mfa"},
-            {"page": "Magic Auth", "URL": "https://workos.com/docs/user-management/magic-auth"},
-            {"page": "Users and Organizations", "URL": "https://workos.com/docs/user-management/users-organizations"},
-            {"page": "Sessions", "URL": "https://workos.com/docs/user-management/sessions"},
-            {"page": "Invitations", "URL": "https://workos.com/docs/user-management/invitations"},
-            {"page": "Email Verification", "URL": "https://workos.com/docs/user-management/email-verification"},
-            {"page": "Domain Capture", "URL": "https://workos.com/docs/user-management/domain-capture"},
-            {"page": "Identity Linking", "URL": "https://workos.com/docs/user-management/identity-linking"},
-            {"page": "JIT Provisioning", "URL": "https://workos.com/docs/user-management/jit-provisioning"},
-            {"page": "", "URL": ""},
-            {"page": "", "URL": ""},
-            {"page": "", "URL": ""},
-            {"page": "", "URL": ""},
-            {"page": "", "URL": ""},
-        ]
+        const pageOptions = [
+            {"page": "Quick Start", "category": "User Management", "URL": "https://workos.com/docs/user-management"},
+            {"page": "Example Apps", "category": "User Management", "URL": "https://workos.com/docs/user-management/example-apps"},
+            {"page": "AuthKit", "category": "User Management", "URL": "https://workos.com/docs/user-management/authkit"},
+            {"page": "Email Domains", "category": "User Management", "URL": "https://workos.com/docs/user-management/email-domains"},
+            {"page": "Branding", "category": "User Management", "URL": "https://workos.com/docs/user-management/branding"},
+            {"page": "Migrations", "category": "User Management", "category": "User Management", "URL": "https://workos.com/docs/user-management/migrations"},
+            {"page": "Single Sign-On", "category": "User Management", "URL": "https://workos.com/docs/user-management/sso"},
+            {"page": "Email + Password", "category": "User Management", "URL": "https://workos.com/docs/user-management/email-password"},
+            {"page": "Social Login", "category": "User Management", "URL": "https://workos.com/docs/user-management/social-login"},
+            {"page": "Multi-Factor Auth", "category": "User Management", "URL": "https://workos.com/docs/user-management/mfa"},
+            {"page": "Magic Auth", "category": "User Management", "URL": "https://workos.com/docs/user-management/magic-auth"},
+            {"page": "Users and Organizations", "category": "User Management", "URL": "https://workos.com/docs/user-management/users-organizations"},
+            {"page": "Sessions", "category": "User Management", "URL": "https://workos.com/docs/user-management/sessions"},
+            {"page": "Invitations", "category": "User Management", "URL": "https://workos.com/docs/user-management/invitations"},
+            {"page": "Email Verification", "category": "User Management", "URL": "https://workos.com/docs/user-management/email-verification"},
+            {"page": "Domain Capture", "category": "User Management", "URL": "https://workos.com/docs/user-management/domain-capture"},
+            {"page": "Identity Linking", "category": "User Management", "URL": "https://workos.com/docs/user-management/identity-linking"},
+            {"page": "JIT Provisioning", "category": "User Management", "URL": "https://workos.com/docs/user-management/jit-provisioning"},
+            {"page": "Roles", "category": "User Management", "URL": "https://workos.com/docs/user-management/roles-and-permissions"},
+            {"page": "Directory Provisioning", "category": "User Management", "URL": "https://workos.com/docs/user-management/directory-provisioning"},
+            {"page": "Organization Policies", "category": "User Management", "URL": "https://workos.com/docs/user-management/organization-policies"},
+            {"page": "Impersonation", "category": "User Management", "URL": "https://workos.com/docs/user-management/impersonation"},
+            {"page": "Custom Emails", "category": "User Management", "URL": "https://workos.com/docs/user-management/custom-emails"},
 
-        // for (let i = 0; i < pageOptions.length; i++) {
-        //     if (page === pageOptions[i].page) {
-        //         pageObject = pageOptions[i]
-        //     }
-        // }
+            {"page": "Quick Start", "category": "Standalone APIs", "URL": "https://workos.com/docs/sso"},
+            {"page": "Test SSO", "category": "Standalone APIs", "URL": ""},
+            {"page": "Example Apps", "category": "Standalone APIs", "URL": ""},
+            {"page": "Sign-In", "category": "Standalone APIs", "URL": ""},
+            {"page": "Login Flows", "category": "Standalone APIs", "URL": ""},
+            {"page": "Redirect URIs", "category": "Standalone APIs", "URL": ""},
+            {"page": "Signing Certificates", "category": "Standalone APIs", "URL": ""},
+            {"page": "JIT Provisioning", "category": "Standalone APIs", "URL": ""},
+            {"page": "Launch Checklist", "category": "Standalone APIs", "URL": ""},
+            {"page": "FAQ for IT teams", "category": "Standalone APIs", "URL": ""},
+            {"page": "SAML Security", "category": "Standalone APIs", "URL": ""},
+
+
+            {"page": "Fundamentals", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync"},
+            {"page": "Quick Start (DS)", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/quick-start"},
+            {"page": "Example Apps (DS)", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/example-apps"},
+            {"page": "Handle Inactive Users", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/handle-inactive-users"},
+            {"page": "Understanding Events", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/understanding-events"},
+            {"page": "User Attributes", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/attributes"},
+            {"page": "Role Data", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/identity-provider-role-assignment"},
+            {"page": "Role Architecture", "category": "Standalone APIs", "URL": "https://workos.com/docs/directory-sync/identity-provider-role-assignment"},
+            {"page": "Quick Start (AP)", "category": "Standalone APIs", "URL": "https://workos.com/docs/admin-portal"},
+            {"page": "Example Apps (AP)", "category": "Standalone APIs", "URL": "https://workos.com/docs/admin-portal/example-apps"},
+            {"page": "Custom Branding", "category": "Standalone APIs", "URL": "https://workos.com/docs/admin-portal/custom-branding"},
+            {"page": "Quick Start (AL)", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs"},
+            {"page": "Exporting Events", "category": "Standalone APIs", "URL": ""},
+            {"page": "Exporting Events", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs/exporting-events"},
+            {"page": "Metadata Schema", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs/metadata-schema"},
+            {"page": "Editing Events", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs/editing-events"},
+            {"page": "Admin Portal (AL)", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs/admin-portal"},
+            {"page": "Log Streams", "category": "Standalone APIs", "URL": "https://workos.com/docs/audit-logs/log-streams"},
+            {"page": "Quick Start (DV)", "category": "Standalone APIs", "URL": "https://workos.com/docs/domain-verification"},
+            {"page": "API", "category": "Standalone APIs", "URL": "https://workos.com/docs/domain-verification/api"},
+
+            {"page": "Event types", "category": "Events and webhooks", "URL": "https://workos.com/docs/events"},
+            {"page": "", "category": "Events and webhooks", "URL": ""},
+            {"page": "", "category": "Events and webhooks", "URL": ""},
+            {"page": "", "category": "Events and webhooks", "URL": ""},
+            {"page": "", "category": "Events and webhooks", "URL": ""},
+            {"page": "", "category": "Events and webhooks", "URL": ""},
+
+
+            
+        ]
+        
         if (this.state.currentPage !== "") {
-            console.log(`current page: ${this.state.URLPage}`)
+            for (let i = 0; i < pageOptions.length; i++) {
+                if (this.state.URLPage === pageOptions[i].page && this.state.URLCategory === pageOptions[i].category) {
+                    targetURL = pageOptions[i].URL
+                }
+            }
+        } else {
+            targetURL = "https://workos.com/docs"
         }
 
+        if (targetURL !== null) {
+            window.open(targetURL, '_blank');
+        }
     }
 
     goBackToHome = () => {
@@ -3334,7 +3386,7 @@ export default class DocsNavigationMenu extends Component {
     closeDocsDemo = () => {
         this.props.closeDocsClicked();
     }
-    
+
     render () {
             //* - SIDE BAR MENU VARS - *//
         const { showDocsMenu, menuSubsections, menuOption1, menuOption2, menuOption3, menuOption4, mOption1Gap, mOption2Gap, mOption3Gap, mOption4Gap, showCloseSelectedOptionBtn, showBackToHome } = this.state;
