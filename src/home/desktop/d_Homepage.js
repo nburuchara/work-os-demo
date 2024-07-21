@@ -337,7 +337,6 @@ export default class DesktopHome extends Component {
     render () {
         
         const computerMediaQuery = `(min-width: 1300px)`
-       
         const computerLargeMediaQuery = `(min-width: 1171px) and (max-width: 1299px)`
         const computerLargerMediaQuery = `(min-width: 320px) and (max-width: 1170px)`
 
