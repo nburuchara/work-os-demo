@@ -2203,6 +2203,7 @@ export default class EventsWebhooks extends Component {
                             <CodeSnippetStruct
                             id={0}
                             headerTabs={2}
+                            languagesToRemove={['cURL']}
                             sideBarOpen={sidebarMenuClicked}
                             snippet="Install the WorkOS SDK"
                             updateSelectedLang={this.newLangSelected}
